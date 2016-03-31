@@ -4,6 +4,17 @@ Talented Europe is a platform that connects top european students, validated by 
 
 The web application will serve two fronts. First allow students register, institutions validate and companies to search. And second, serve as an API for the iOS/Android applications.
 
+## Installing
+
+Installing it in a few simple steps:
+
+- Setup your webserver to be able serve the site, for example [using this guide](https://www.digitalocean.com/community/tutorials/how-to-install-laravel-with-an-nginx-web-server-on-ubuntu-14-04)
+- Clone the repository
+- Run *composer install*
+- Copy */.env.example* to */.env*  and set up it's settings
+- Run *php artisan key:generate* if you haven't set up a key on .env
+- Run *php artisan migrate*
+
 ## Official Documentation
 
 Documentation for the entire project (including the mobile applications) can be found in the [documentation repository](https://github.com/TalentedEurope/te-docs).
