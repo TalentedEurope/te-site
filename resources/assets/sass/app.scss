@@ -1,2 +1,8 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "resources/assets/sass/variables";
+@import "resources/assets/sass/base";
 
+
+/* Landing-Home page */
+@import "resources/assets/sass/components/landing/navbar";
+@import "resources/assets/sass/components/landing/hero-unit";

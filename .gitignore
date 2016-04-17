@@ -4,3 +4,8 @@
 Homestead.yaml
 Homestead.json
 .env
+clamp.json
+.clamp/*
+/public/build
+
+.DS_Store
