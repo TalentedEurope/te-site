@@ -17,5 +17,6 @@ elixir(function(mix) {
     .copy(bootstrapPath + '/fonts', 'public/fonts')
     .copy(bootstrapPath + '/javascripts/bootstrap.min.js', 'public/js')
     .styles(['vendor/*.css', 'app.css'], 'public/css/style.css', 'public/css')
-    .version("public/css/style.css")
+    .version("public/css/style.css");
+  mix.phpUnit();    
 });

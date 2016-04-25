@@ -23,6 +23,22 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        if ($this->app->environment() == 'local') {
+            if ( ! empty( $providers = config( 'app.dev_providers' ) ) )
+            {
+                foreach ( $providers as $provider )
+                {
+                    $this->app->register( $provider );
+                }
+            }
+
+            if ( ! empty( $aliases = config( 'app.dev_aliases' ) ) )
+            {
+                foreach ( $aliases as $alias => $facade )
+                {
+                    $this->app->alias( $alias, $facade );
+                }
+            }
+        }
     }
 }
