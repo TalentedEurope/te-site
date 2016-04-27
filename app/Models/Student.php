@@ -20,11 +20,33 @@ class Student extends Model
 
     public function user()
     {
-        return $this->morphOne('User', 'userable');
+        return $this->morphOne('\App\Models\User', 'userable');
     } 
+
+    public function studies()
+    {
+        return $this->hasMany('App\Models\StudentStudy');
+    }
+
+    public function languages()
+    {
+        return $this->hasMany('App\Models\StudentLanguage');
+    }
 
     public function validationRequest()
     {
         return $this->hasOne('App\Models\ValidationRequest');
     }
+
+    public function knowledgeSkills()
+    {
+        return $this->belongsToMany('\App\Models\KnowledgeSkill');
+    }
+
+    public function personalSkills()
+    {
+        return $this->belongsToMany('\App\Models\PersonalSkill');
+    }
+
+
 }

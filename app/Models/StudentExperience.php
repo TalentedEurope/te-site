@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class StudentExperience extends Model
 {
-    public $timestamps = false;
-
     public static $rules = array(
             'company' => 'required',
             'from' => 'required',
@@ -18,5 +16,5 @@ class StudentExperience extends Model
 	public function student()
 	{
 		return $this->belongsTo('App\Models\Student');
-	}    
+	}
 }

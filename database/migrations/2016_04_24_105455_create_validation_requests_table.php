@@ -16,7 +16,7 @@ class CreateValidationRequestsTable extends Migration
             $table->increments('id');
             $table->integer('student_id')->unsigned();
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
-            $table->integer('validator_id')->unsigned();
+            $table->integer('validator_id')->unsigned()->nullable();
             $table->foreign('validator_id')->references('id')->on('validators')->onDelete('cascade');
             $table->string('validator_name');
             $table->string('validator_email');

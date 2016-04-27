@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateKnowledgeSkillsStudentPivotTable extends Migration
+class CreatePersonalSkillStudentPivotTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,12 @@ class CreateKnowledgeSkillsStudentPivotTable extends Migration
      */
     public function up()
     {
-        Schema::create('knowledge_skills_student', function (Blueprint $table) {
-            $table->integer('knowledge_skill_id')->unsigned()->index();
-            $table->foreign('knowledge_skill_id')->references('id')->on('knowledge_skills')->onDelete('cascade');
+        Schema::create('personal_skill_student', function (Blueprint $table) {
+            $table->integer('personal_skill_id')->unsigned()->index();
+            $table->foreign('personal_skill_id')->references('id')->on('personal_skills')->onDelete('cascade');
             $table->integer('student_id')->unsigned()->index();
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
-            $table->primary(['knowledge_skill_id', 'student_id']);
+            $table->primary(['personal_skill_id', 'student_id']);
         });
     }
 
@@ -28,6 +28,6 @@ class CreateKnowledgeSkillsStudentPivotTable extends Migration
      */
     public function down()
     {
-        Schema::drop('knowledge_skills_student');
+        Schema::drop('personal_skill_student');
     }
 }

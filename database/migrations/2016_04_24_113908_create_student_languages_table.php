@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use App\Models\StudentLanguage;
 
 class CreateStudentLanguagesTable extends Migration
 {
@@ -15,11 +16,12 @@ class CreateStudentLanguagesTable extends Migration
         Schema::create('student_languages', function (Blueprint $table) {
             $table->increments('id');
             $table-> string('name');
-            $table->enum('level', ['Lang_level_A1','Lang_level_A2','Lang_level_B1','Lang_level_B2','Lang_level_C1','Lang_level_C2']);
+            $table->enum('level', StudentLanguage::$levels);
             $table->string('certificate');
             $table->boolean('first_language');
             $table->integer('student_id')->unsigned();
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
+            $table->timestamps();            
         });
     }
 

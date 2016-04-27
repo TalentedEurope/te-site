@@ -14,7 +14,7 @@ class CreateKnowledgeSkillsTable extends Migration
     {
         Schema::create('knowledge_skills', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name')->unique();    
         });
     }
 
