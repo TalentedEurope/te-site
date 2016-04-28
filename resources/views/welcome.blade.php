@@ -1,87 +1,160 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Talented Europe</title>
-        <link rel="stylesheet" type="text/css" href="{{ elixir("css/style.css") }}">
-        <link href='https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700,400italic,200italic,700italic,900' rel='stylesheet' type='text/css'>
+  <head>
+    <title>Talented Europe</title>
+    <link rel="stylesheet" type="text/css" href="{{ elixir("css/style.css") }}">
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700,400italic,200italic,700italic,900' rel='stylesheet' type='text/css'>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    </head>
-    <body>
-        <nav class="navbar navbar-inverse navbar-landing navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#"><img src="{{ URL::asset('img/logo-header-alt.png') }}" alt="Talented Europe"></a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="#about">About</a></li>
-                <li><a href="#subscribe">Subscribe</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-        <header class="hero">
-            <div class="hero-video">
-              <div class="hero-video-overlay"></div>
-              <div class="video-bg cover">
-                <div class="video-fg">
-                    <iframe width="100%" height="100%" src="http://www.youtube.com/embed/E8Cnjb4w3x0?version=3&autoplay=1&loop=1&playlist=E8Cnjb4w3x0&rel=0&controls=0" 
-                        frameborder="0" allowfullscreen></iframe>
-                </div>
-              </div>              
-            </div>
-            <div class="container">
-                <div class="row content">
-                      <h1>Linking <strong>young talent</strong> to <strong>employers</strong> across <strong>europe</strong></h1>
-                      <p><a href="#about" class="btn btn-primary">Find more</a></p>
-                </div>
-            </div>
-        </header>
-
-
-        <div class="container">
-
-            <div class="about content">
-                <div class="row xs12">
-                    <h1>What is Talented Europe</h1>
-                    <p>Can you imagine being able to hire the best students in whichever European country? Would you like to be part of the elite student sector in Europe? Thousands of companies will have direct access to your contact information, and the better marks you get the greater choices you will have to get a nice job.</p>
-
-                    <p>That is what Talented Europe offers. A showcase with a ranking of the best students in Europe. A simple idea which joins employers and students. The meeting point of excellence.</p>
-
-                    <p><a href="" class="btn btn-primary">Download the brochure</a></p>
-                </div>
-            </div>
-
-            <div class="subscribe content">
-                <div class="row xs12">
-                    <h1>Subscribe</h1>
-                    <div id="mc_embed_signup">
-                    <form action="//talentedeurope.us13.list-manage.com/subscribe/post?u=b4e15aa0a9873bc5785280c76&amp;id=2854c91856" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll">
-                        
-                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b4e15aa0a9873bc5785280c76_2854c91856" tabindex="-1" value=""></div>
-                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                        </div>
-                    </form>
-                    </div>
-                </div>
-            </div>
-
-
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-landing navbar-static-top">
+      <div class="container">
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="https://www.facebook.com/Talented-Europe-839419182764068/">
+                <i class="fi flaticon-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/talentedeurope">
+                <i class="fi flaticon-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCkj5UUptbZnQ5kvxVpDfkBw">
+                <i class="fi flaticon-youtube"></i>
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-video">
+        <div class="hero-video-overlay"></div>
+        <div class="video-bg cover">
+          <div class="video-fg">
+              <iframe width="100%" height="100%" src="http://www.youtube.com/embed/E8Cnjb4w3x0?version=3&autoplay=1&loop=1&playlist=E8Cnjb4w3x0&rel=0&controls=0"
+                  frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row content">
+          <img class="logo" src="{{ URL::asset('img/logo-header-alt.png') }}" alt="Talented Europe">
+          <h1>Linking <strong>young talent</strong> to <strong>employers</strong> across <strong>europe</strong></h1>
+
+          <ul class="countdown">
+            <li>
+              <span id="days" class="days">00</span>
+              <p class="days_ref">days</p>
+            </li>
+            <li>
+              <span id="hours" class="hours">00</span>
+              <p class="hours_ref">hours</p>
+            </li>
+            <li>
+              <span id="mins" class="minutes">00</span>
+              <p class="minutes_ref">minutes</p>
+            </li>
+            <li>
+              <span id="secs" class="seconds last">00</span>
+              <p class="seconds_ref">seconds</p>
+            </li>
+          </ul>
+
+          <p>
+            <a href="#about" class="btn btn-primary">
+              Find more
+              <i class="fi flaticon-dragdown"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </header>
 
 
+    <section id="about" class="about content-box col-md-6">
+      <div class="content">
+        <div class="vertical-centered">
+          <h1>What is Talented Europe</h1>
+          <p>Can you imagine being able to hire the best students in whichever European country? Would you like to be part of the elite student sector in Europe? <strong>Thousands of companies will have direct access to your contact information</strong>, and the better marks you get the greater choices you will have to get a nice job.</p>
+          <p>That is what Talented Europe offers. A showcase with a ranking of the best students in Europe. A simple idea which joins employers and students. <strong>The meeting point of excellence.</strong></p>
+          <button class="btn"><i class="fi flaticon-cloud-download"></i><strong>Discover more!</strong> Get the brochure</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-box content-image first-image col-md-6">
+      <div class="overlay"></div>
+    </section>
+
+    <section class="content-box content-image second-image col-md-6">
+      <div class="overlay"></div>
+    </section>
+
+    <section id="subscribe" class="subscribe content-box col-md-6">
+      <div class="content">
+        <div class="vertical-centered">
+          <h1>Subscribe to follow our updates</h1>
+          <p>Get notified about all the events and news happening around Talented Europe</p>
+          <div id="mc_embed_signup">
+            <form action="//talentedeurope.us13.list-manage.com/subscribe/post?u=b4e15aa0a9873bc5785280c76&amp;id=2854c91856" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll" class="subscribe-action">
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b4e15aa0a9873bc5785280c76_2854c91856" tabindex="-1" value=""></div>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter email address" required>
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+              </div>
+            </form>
+          </div>
+          <div class="social">
+            <p>
+              or follow us on:
+            </p>
+            <ul class="nav">
+              <li>
+                <a class="facebook" href="https://www.facebook.com/Talented-Europe-839419182764068/">
+                  <i class="fi flaticon-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a class="twitter" href="https://twitter.com/talentedeurope" style="color: #13A4FF;">
+                  <i class="fi flaticon-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a class="youtube" href="https://www.youtube.com/channel/UCkj5UUptbZnQ5kvxVpDfkBw" style="color: #D01717;">
+                  <i class="fi flaticon-youtube"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
-    </body>
+    <div class="footer">
+      <div class="ue-logos row xs12">
+        <div class="logo">
+          <img src="{{ URL::asset('img/logo-footer-erasmus.png') }}" width="174" alt="Erasmus+">
+        </div>
+        <div class="logo">
+          <img src="{{ URL::asset('img/logo-footer-cofunded-ue.png') }}" width="160" alt="Co-funded by the Erasmus+ Programme of the European Union">
+        </div>
+        <div class="logo">
+          <img src="{{ URL::asset('img/logo-footer-gob-espana-y-sepie.svg') }}" width="240" alt="Gobierno de españa and Sepie">
+        </div>
+      </div>
+    </div>
+
+
+    <script src="{{ URL::asset('js/jdoom.min.js') }}"></script>
+    <script src="{{ URL::asset('js/landing.js') }}"></script>
+
+  </body>
 </html>

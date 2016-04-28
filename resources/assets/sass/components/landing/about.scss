@@ -1,0 +1,31 @@
+.about {
+    padding: 50px;
+    color: #3C4652;
+
+    p {
+        font-size: 16px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        color: #fff;
+        background-color: $blue;
+        border-radius: 0;
+        font-size: 15px;
+        padding: 4px 18px;
+        margin-top: 20px;
+
+        i {
+            margin-right: 16px;
+            font-size: 22px;
+            vertical-align: middle;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .about {
+        padding: 40px 85px;
+    }
+}
