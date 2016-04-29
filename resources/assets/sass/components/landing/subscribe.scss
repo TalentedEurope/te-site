@@ -1,0 +1,86 @@
+.subscribe {
+    padding: 100px 20px;
+    text-align: center;
+
+    .subscribe-action {
+        display: table;
+        text-align: center;
+        width: 100%;
+    }
+
+    .email {
+        margin-top: 8px;
+        padding: 12px;
+        border-radius: 0;
+        border: 0;
+        width: 60%;
+        max-width: 80vw;
+        background: #F6F9FF;
+        border: 1px solid #D3DAEF;
+        border-right: 0;
+
+        &::placeholder {
+            color: #7D8490;
+        }
+
+        &:hover, &:active, &:focus {
+            background-color: $white;
+        }
+    }
+
+    .button {
+        padding: 13px 10px;
+        border: 0;
+        color: $white;
+        background: $yellow;
+        border-radius: 0;
+        width: 40%;
+        transition: 0.3s all;
+        text-transform: uppercase;
+
+        &:hover, &:active, &:focus {
+            background-color: $yellow-light;
+        }
+    }
+
+    .social {
+        margin-top: 48px;
+
+        .nav {
+            font-size: 18px;
+
+            li {
+                display: inline-block;
+            }
+
+            .facebook {
+                color: #3b5998;
+            }
+            .twitter {
+                color: #00aced;
+            }
+            .youtube {
+                color: #bb0000;
+            }
+        }
+    }
+}
+
+@media (min-width: 500px) {
+    .subscribe {
+
+        .email {
+            width: 300px;
+        }
+
+        .button {
+            width: 140px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .subscribe {
+        padding: 20px;
+    }
+}
