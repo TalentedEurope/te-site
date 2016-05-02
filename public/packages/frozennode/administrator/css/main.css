@@ -1037,12 +1037,12 @@ a {}
   padding: 7px 13px;
   margin: 0;
   border: none;
-  background: #818181;
+  background: #FCBD0F;
   /* Old browsers */
-  border: 1px solid #444444;
+  border: none;
   color: #fff;
   font-size: 13px;
-  font-weight: normal;
+  font-weight: bold;
   cursor: pointer;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -1058,7 +1058,7 @@ a {}
 #admin_page #content div.table_container div.results_header div.actions input:hover,
 #admin_page #content div.table_container div.results_header div.actions a:focus,
 #admin_page #content div.table_container div.results_header div.actions input:focus {
-  background: #929292;
+  background: #FCBD0F;
   /* Old browsers */
 }
 #admin_page #content div.table_container div.results_header div.actions a:active,
