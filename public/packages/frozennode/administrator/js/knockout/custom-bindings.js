@@ -240,10 +240,7 @@
 					var data = [],
 						val = $(element).val();
 
-					// If the select2 field has a default value,
-					// initSelection will be called before the admin object
-					// is correctly initialized. 
-					if (!val || typeof admin === 'undefined')
+					if (!val)
 						return callback(null);
 
 					//if this is a multi-select, set up the data as an array
@@ -251,15 +248,13 @@
 					{
 						$(element.val().split(',')).each(function(ind, el)
 						{
-							if(this in admin.viewModel[options.field + '_autocomplete'])
-								data.push({id: this, text: admin.viewModel[options.field + '_autocomplete'][this].text});
+							data.push({id: this, text: admin.viewModel[options.field + '_autocomplete'][this].text});
 						});
 					}
 					//otherwise make the data a simple object
 					else
 					{
-						if(val in admin.viewModel[options.field + '_autocomplete'])
-							data = {id: val, text: admin.viewModel[options.field + '_autocomplete'][val].text};
+						data = {id: val, text: admin.viewModel[options.field + '_autocomplete'][val].text};
 					}
 
 					callback(data);

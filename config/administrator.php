@@ -21,14 +21,14 @@ return array(
 	 *
 	 *  @type array
 	 */
-	'middleware' => array(),
+	'middleware' => array('web'),
 
 	/**
 	 * Page title
 	 *
 	 * @type string
 	 */
-	'title' => 'Admin',
+	'title' => 'Talented Europe',
 
 	/**
 	 * The path to your model config directory
@@ -65,7 +65,12 @@ return array(
 	 * 		'Analytics' => array('E-Commerce' => 'page.ecommerce.analytics'),
 	 *	)
 	 */
-	'menu' => array(),
+	'menu' => array(
+			'Students' => array('students', 'disabledstudents'),			
+			'Companies' => array('companies', 'bannedcompanies'),			
+			'personalSkills'
+		),
+
 
 	/**
 	 * The permission option is the highest-level authentication check that lets you define a closure that should return true if the current user
@@ -75,7 +80,13 @@ return array(
 	 */
 	'permission'=> function()
 	{
-		return Auth::check();
+        if (Auth::check())
+        {
+        	if (Auth::user()->is_admin == true) {
+        		return true;
+        	}
+        }
+        return false;
 	},
 
 	/**
@@ -98,7 +109,7 @@ return array(
 	 *
 	 * @type string
 	 */
-	'home_page' => '',
+	'home_page' => 'students',
 
 	/**
 	 * The route to which the user will be taken when they click the "back to site" button
@@ -112,14 +123,14 @@ return array(
 	 *
 	 * @type string
 	 */
-	'login_path' => 'auth/login',
+	'login_path' => 'login',
 
 	/**
 	 * The logout path is the path where Administrator will send the user when they click the logout link
 	 *
 	 * @type string
 	 */
-	'logout_path' => false,
+	'logout_path' => 'logout',
 
 	/**
 	 * This is the key of the return path that is sent with the redirection to your login_action. Session::get('redirect') will hold the return URL.
