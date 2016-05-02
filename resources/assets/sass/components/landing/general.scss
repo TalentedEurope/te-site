@@ -4,7 +4,7 @@
     h1 {
         font-size: 28px;
         margin-top: 0;
-        margin-bottom: 40px;
+        margin-bottom: 25px;
         color: $blue;
         text-transform: uppercase;
         font-weight: 800;
@@ -32,7 +32,7 @@
     background-repeat-y: no-repeat;
 
     &.first-image {
-        height: 300px;
+        height: 250px;
         background-image: url('../../img/landing/background-1.png');
     }
 
@@ -49,6 +49,15 @@
         bottom: 0;
         background: rgba(19, 10, 99, 0.26);
     }
+}
+
+@media (min-width: 500px) {
+    .content-box {
+        h1 {
+            margin-bottom: 40px;
+        }
+    }
+
 }
 
 @media (min-width: 992px) {
