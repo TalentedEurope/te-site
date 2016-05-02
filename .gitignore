@@ -7,8 +7,8 @@ Homestead.json
 clamp.json
 .clamp/*
 /public/build
-/public/css/*
-!/public/css/vendor/
+/public/css
+
 
 
 .DS_Store
