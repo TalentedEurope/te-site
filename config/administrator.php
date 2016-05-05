@@ -68,7 +68,8 @@ return array(
 	'menu' => array(
 			'Students' => array('students', 'disabledstudents'),			
 			'Companies' => array('companies', 'bannedcompanies'),			
-			'personalSkills'
+			'personalskills',
+			''
 		),
 
 
