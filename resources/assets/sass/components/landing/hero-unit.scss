@@ -79,9 +79,10 @@
         h1 {
             text-transform: uppercase;
             font-style: normal;
-            padding: 0 20px;
+            padding: 0 10px;
             font-weight: 300;
-            font-size: 22px;
+            font-size: 18px;
+            line-height: 1.3em;
             max-width: 22em;
             margin: 25px auto;
 
@@ -159,6 +160,17 @@
         }
     }
 
+}
+
+@media (min-width: 450px) {
+    .hero {
+        .container {
+
+            h1 {
+                font-size: 22px;
+            }
+        }
+    }
 }
 
 @media (min-width: 550px) {

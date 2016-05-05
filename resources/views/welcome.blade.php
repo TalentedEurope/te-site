@@ -68,7 +68,12 @@
       <div class="container">
         <div class="row content">
           <img class="logo" src="{{ URL::asset('img/logo-header-alt.png') }}" alt="Talented Europe">
-          <h1>Linking <strong>young talent</strong> to <strong>employers</strong> across <strong>europe</strong></h1>
+          <h1>
+            Links
+            <br/>
+            <strong>young talent</strong> to <strong>employers</strong>
+            <br/>
+            across <strong>europe</strong></h1>
 
           <ul class="countdown">
             <li>
@@ -103,7 +108,7 @@
     <section id="about" class="about content-box col-md-6">
       <div class="content">
         <div class="vertical-centered">
-          <h1>What is Talented Europe</h1>
+          <h1>What is Talented Europe ?</h1>
           <p>Can you imagine being able to hire the best students in whichever European country? Would you like to be part of the elite student sector in Europe? <strong>Thousands of companies will have direct access to your contact information</strong>, and the better marks you get the greater choices you will have to get a nice job.</p>
           <p>That is what Talented Europe offers. A showcase with a ranking of the best students in Europe. A simple idea which joins employers and students. <strong>The meeting point of excellence.</strong></p>
           <a href="{{ URL::asset('docs/TalentedEuropeBrochure_en.pdf') }}" target="_blank" class="btn">
