@@ -91,6 +91,15 @@
             }
         }
 
+        h2 {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 15px;
+            margin-top: 33px;
+            margin-bottom: 16px;
+            letter-spacing: 0.1em;
+            word-spacing: 0.4em;
+        }
 
         .countdown {
             list-style: none;
@@ -169,6 +178,10 @@
             h1 {
                 font-size: 22px;
             }
+
+            h2 {
+                font-size: 18px;
+            }
         }
     }
 }
@@ -183,6 +196,10 @@
 
             h1 {
                 font-size: 28px;
+            }
+
+            h2 {
+                font-size: 24px;
             }
 
             .countdown li {
