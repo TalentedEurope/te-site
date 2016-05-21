@@ -131,16 +131,9 @@
       <div class="content">
         <div class="vertical-centered">
           <h1>Subscribe to follow our updates</h1>
-          <p>Get notified about all the events and news happening around Talented Europe</p>
-          <div id="mc_embed_signup">
-            <form action="//talentedeurope.us13.list-manage.com/subscribe/post?u=b4e15aa0a9873bc5785280c76&amp;id=2854c91856" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-              <div id="mc_embed_signup_scroll" class="subscribe-action">
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b4e15aa0a9873bc5785280c76_2854c91856" tabindex="-1" value=""></div>
-                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter email address" required>
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-              </div>
-            </form>
-          </div>
+          <p>Get Talented Europe news into your inbox.<br/>Feel free to give us your answer for: What is talent for you?</p>
+          <a class="button" href="http://talentedeurope.us13.list-manage.com/subscribe?u=b4e15aa0a9873bc5785280c76&id=2854c91856">Subscribe</a>
+
           <div class="social">
             <p>
               or follow us on:

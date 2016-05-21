@@ -1,6 +1,6 @@
 window.onload = function(){
     var counter = Doom({
-        targetDate: '08/31/2018'
+        targetDate: '02/28/2017'
     });
 
     counter.doom();
