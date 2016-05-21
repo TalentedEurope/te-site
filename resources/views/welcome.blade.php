@@ -73,7 +73,10 @@
             <br/>
             <strong>young talent</strong> to <strong>employers</strong>
             <br/>
-            across <strong>europe</strong></h1>
+            across <strong>europe</strong>
+          </h1>
+
+          <h2>Coming Soon</h2>
 
           <ul class="countdown">
             <li>
