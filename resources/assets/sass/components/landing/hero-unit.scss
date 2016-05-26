@@ -1,5 +1,6 @@
 .hero {
     height: 100vh;
+    min-height: 670px;
     overflow: hidden;
 
     .hero-video {
@@ -7,6 +8,7 @@
         top: 0;
         left: 0%;
         height: 100vh;
+        min-height: 670px;
         right: 0%;
         bottom: 0%;
 
@@ -225,9 +227,8 @@
     }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 600px) and (min-height: 670px) {
     .hero .hero-video {
-
         .video-bg {
             background-image: none;
         }

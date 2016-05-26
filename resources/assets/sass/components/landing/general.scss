@@ -1,10 +1,11 @@
 .content-box {
+    width: 100%;
     padding: 40px;
 
     h1 {
-        font-size: 28px;
+        font-size: 24px;
         margin-top: 0;
-        margin-bottom: 25px;
+        margin-bottom: 21px;
         color: $blue;
         text-transform: uppercase;
         font-weight: 800;
@@ -54,20 +55,22 @@
 @media (min-width: 500px) {
     .content-box {
         h1 {
-            margin-bottom: 40px;
+            font-size: 28px;
+            margin-bottom: 30px;
         }
     }
-
 }
 
-@media (min-width: 992px) {
+
+@media (min-width: 1100px) {
     .content-box {
-        height: 450px;
+        height: 480px;
+        width: 50%;
     }
 
     .content-image {
         &.first-image {
-            height: 450px;
+            height: 480px;
         }
 
         &.second-image {
