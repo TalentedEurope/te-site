@@ -1,6 +1,6 @@
 .hero {
     height: 100vh;
-    min-height: 670px;
+    min-height: 490px;
     overflow: hidden;
 
     .hero-video {
@@ -8,7 +8,7 @@
         top: 0;
         left: 0%;
         height: 100vh;
-        min-height: 670px;
+        min-height: 490px;
         right: 0%;
         bottom: 0%;
 
@@ -29,7 +29,7 @@
             pointer-events: none;
         }
 
-        .video-bg {
+        .video-bg, html.ios & .video-bg, html.android & .video-bg {
             background: white;
             position: absolute;
             top: 0;
@@ -46,7 +46,7 @@
             background-image: url('../../img/landing/video-background.png');
         }
 
-        iframe {
+        iframe, html.ios & iframe, html.android & iframe{
             display: none;
         }
 
@@ -175,6 +175,12 @@
 
 @media (min-width: 450px) {
     .hero {
+        min-height: 510px;
+
+        .hero-video {
+            min-height: 510px;
+        }
+
         .container {
 
             h1 {
@@ -190,6 +196,12 @@
 
 @media (min-width: 550px) {
     .hero {
+        min-height: 670px;
+
+        .hero-video {
+            min-height: 670px;
+        }
+
         .container {
 
             .logo {
