@@ -13,10 +13,13 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
   var bootstrapPath = 'node_modules/bootstrap-sass/assets';
+  var conditionizrPath = 'node_modules/conditionizr';
   mix.sass('app.scss')
     .copy(bootstrapPath + '/fonts', 'public/fonts')
     .copy(bootstrapPath + '/javascripts/bootstrap.min.js', 'public/js')
+    .copy(conditionizrPath + '/dist/conditionizr.js', 'public/js/conditionizr')
+    .copy(conditionizrPath + '/detects/ios.js', 'public/js/conditionizr')
     .styles(['vendor/*.css', 'app.css'], 'public/css/style.css', 'public/css')
     .version("public/css/style.css");
-  mix.phpUnit();    
+  mix.phpUnit();
 });

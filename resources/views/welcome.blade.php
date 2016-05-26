@@ -30,6 +30,7 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
   </head>
+
   <body>
     <nav class="navbar navbar-inverse navbar-landing navbar-static-top">
       <div class="container">
@@ -178,7 +179,8 @@
       </div>
     </div>
 
-
+    <script src="{{ URL::asset('js/conditionizr/conditionizr.js') }}"></script>
+    <script src="{{ URL::asset('js/conditionizr/ios.js') }}"></script>
     <script src="{{ URL::asset('js/jdoom.min.js') }}"></script>
     <script src="{{ URL::asset('js/landing.js') }}"></script>
 
