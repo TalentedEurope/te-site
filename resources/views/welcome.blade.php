@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="Talented Europe | Linking young talent to employers across Europe" property="og:title" />
-    <meta content="An Erasmus Plus project which will make the business of matching top students to job and internship opportunities across Europe much easier" />
+    <meta content="An Erasmus Plus project which will make the business of matching top students to job and internship opportunities across Europe much easier" name="description" />
     <meta content="{{ URL::to('/') }}" name="url" property="og:url" />
     <meta content="website" name="type" property="og:type" />
     <meta content="{{ URL::asset('img/logo-header.png') }}" name="image" property="og:image" />
