@@ -1,5 +1,6 @@
 .hero {
     height: 100vh;
+    min-height: 490px;
     overflow: hidden;
 
     .hero-video {
@@ -7,6 +8,7 @@
         top: 0;
         left: 0%;
         height: 100vh;
+        min-height: 490px;
         right: 0%;
         bottom: 0%;
 
@@ -27,7 +29,7 @@
             pointer-events: none;
         }
 
-        .video-bg {
+        .video-bg, html.ios & .video-bg, html.android & .video-bg {
             background: white;
             position: absolute;
             top: 0;
@@ -44,7 +46,7 @@
             background-image: url('../../img/landing/video-background.png');
         }
 
-        iframe {
+        iframe, html.ios & iframe, html.android & iframe{
             display: none;
         }
 
@@ -91,6 +93,15 @@
             }
         }
 
+        h2 {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 15px;
+            margin-top: 33px;
+            margin-bottom: 16px;
+            letter-spacing: 0.1em;
+            word-spacing: 0.4em;
+        }
 
         .countdown {
             list-style: none;
@@ -164,10 +175,20 @@
 
 @media (min-width: 450px) {
     .hero {
+        min-height: 510px;
+
+        .hero-video {
+            min-height: 510px;
+        }
+
         .container {
 
             h1 {
                 font-size: 22px;
+            }
+
+            h2 {
+                font-size: 18px;
             }
         }
     }
@@ -175,6 +196,12 @@
 
 @media (min-width: 550px) {
     .hero {
+        min-height: 670px;
+
+        .hero-video {
+            min-height: 670px;
+        }
+
         .container {
 
             .logo {
@@ -183,6 +210,10 @@
 
             h1 {
                 font-size: 28px;
+            }
+
+            h2 {
+                font-size: 24px;
             }
 
             .countdown li {
@@ -208,9 +239,8 @@
     }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 600px) and (min-height: 670px) {
     .hero .hero-video {
-
         .video-bg {
             background-image: none;
         }
