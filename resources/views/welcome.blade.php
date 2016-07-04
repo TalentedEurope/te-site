@@ -6,7 +6,7 @@
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700,400italic,200italic,700italic,900' rel='stylesheet' type='text/css'>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="{{ trans('landing.meta_title')}}" property="og:title" />
+    <meta content="{{ trans('landing.meta_title') }}" property="og:title" />
     <meta content="{{ trans('landing.meta_description') }}" name="description" />
     <meta content="{{ URL::to('/') }}" name="url" property="og:url" />
     <meta content="website" name="type" property="og:type" />
@@ -70,10 +70,10 @@
         <div class="row content">
           <img class="logo" src="{{ URL::asset('img/logo-header-alt.png') }}" alt="Talented Europe">
           <h1>
-            {{trans('landing.tagline') }}
+            {!! trans('landing.tagline') !!}
           </h1>
 
-          <h2>{{ trans('landing.coming_soon') }}</h2>
+          <h2>{!! trans('landing.coming_soon') !!}</h2>
 
           <ul class="countdown">
             <li>
@@ -109,11 +109,11 @@
       <div class="content">
         <div class="vertical-centered">
           <h1>{{ trans('landing.what_is_title') }}</h1>
-          <p>{{ trans('landing.what_is_text_1') }}</p>
-          <p>{{ trans('landing.what_is_text_2') }}</p>
+          <p>{!! trans('landing.what_is_text_1') !!}</p>
+          <p>{!! trans('landing.what_is_text_2') !!}</p>
           <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochure_en.pdf') }}" target="_blank" class="btn">
             <i class="fi flaticon-cloud-download"></i>
-            {{ trans('landing.what_is_cta') }}
+            {!! trans('landing.what_is_cta') !!}
           </a>
         </div>
       </div>
@@ -131,7 +131,7 @@
       <div class="content">
         <div class="vertical-centered">
           <h1>{{ trans('landing.subscribe_title') }}</h1>
-          <p>{{ trans('landing.subscribe_text_question') }}</p>
+          <p>{!! trans('landing.subscribe_text_question') !!}</p>
           <a class="button" href="http://talentedeurope.us13.list-manage.com/subscribe?u=b4e15aa0a9873bc5785280c76&id=2854c91856">{{ trans('landing.subscribe_btn_text') }}</a>
 
           <div class="social">
