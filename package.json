@@ -6,6 +6,7 @@
   "dependencies": {
     "bootstrap-sass": "^3.0.0",
     "conditionizr": "^4.5.0",
-    "laravel-elixir": "^4.0.0"
+    "laravel-elixir": "^4.0.0",
+    "te-translation-builder": "^1.0.0"
   }
 }

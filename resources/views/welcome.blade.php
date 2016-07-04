@@ -6,8 +6,8 @@
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700,400italic,200italic,700italic,900' rel='stylesheet' type='text/css'>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="Talented Europe | Linking young talent to employers across Europe" property="og:title" />
-    <meta content="An Erasmus Plus project which will make the business of matching top students to job and internship opportunities across Europe much easier" />
+    <meta content="{{ trans('landing.meta_title') }}" property="og:title" />
+    <meta content="{{ trans('landing.meta_description') }}" name="description" />
     <meta content="{{ URL::to('/') }}" name="url" property="og:url" />
     <meta content="website" name="type" property="og:type" />
     <meta content="{{ URL::asset('img/logo-header.png') }}" name="image" property="og:image" />
@@ -70,37 +70,33 @@
         <div class="row content">
           <img class="logo" src="{{ URL::asset('img/logo-header-alt.png') }}" alt="Talented Europe">
           <h1>
-            Links
-            <br/>
-            <strong>young talent</strong> to <strong>employers</strong>
-            <br/>
-            across <strong>europe</strong>
+            {!! trans('landing.tagline') !!}
           </h1>
 
-          <h2>Coming Soon</h2>
+          <h2>{!! trans('landing.coming_soon') !!}</h2>
 
           <ul class="countdown">
             <li>
               <span id="days" class="days">00</span>
-              <p class="days_ref">days</p>
+              <p class="days_ref">{{ trans('landing.days') }}</p>
             </li>
             <li>
               <span id="hours" class="hours">00</span>
-              <p class="hours_ref">hours</p>
+              <p class="hours_ref">{{ trans('landing.hours') }}</p>
             </li>
             <li>
               <span id="mins" class="minutes">00</span>
-              <p class="minutes_ref">minutes</p>
+              <p class="minutes_ref">{{ trans('landing.minutes') }}</p>
             </li>
             <li>
               <span id="secs" class="seconds last">00</span>
-              <p class="seconds_ref">seconds</p>
+              <p class="seconds_ref">{{ trans('landing.seconds') }}</p>
             </li>
           </ul>
 
           <p>
             <a href="#about" class="btn btn-primary">
-              Find more
+              {{ trans('landing.more') }}
               <i class="fi flaticon-dragdown"></i>
             </a>
           </p>
@@ -112,12 +108,12 @@
     <section id="about" class="about content-box col-md-6">
       <div class="content">
         <div class="vertical-centered">
-          <h1>What is Talented Europe ?</h1>
-          <p>Can you imagine being able to hire the best students in whichever European country? Would you like to be part of the elite student sector in Europe? <strong>Thousands of companies will have direct access to your contact information</strong>, and the better marks you get the greater choices you will have to get a nice job.</p>
-          <p>That is what Talented Europe offers. A showcase with a ranking of the best students in Europe. A simple idea which joins employers and students. <strong>The meeting point of excellence.</strong></p>
-          <a href="{{ URL::asset('docs/TalentedEuropeBrochure_en.pdf') }}" target="_blank" class="btn">
+          <h1>{{ trans('landing.what_is_title') }}</h1>
+          <p>{!! trans('landing.what_is_text_1') !!}</p>
+          <p>{!! trans('landing.what_is_text_2') !!}</p>
+          <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochure_en.pdf') }}" target="_blank" class="btn">
             <i class="fi flaticon-cloud-download"></i>
-            <strong>Discover more!</strong> Get the brochure
+            {!! trans('landing.what_is_cta') !!}
           </a>
         </div>
       </div>
@@ -134,13 +130,13 @@
     <section id="subscribe" class="subscribe content-box col-md-6">
       <div class="content">
         <div class="vertical-centered">
-          <h1>Subscribe to follow our updates</h1>
-          <p>Get Talented Europe news into your inbox.<br/>Feel free to give us your answer for: What is talent for you?</p>
-          <a class="button" href="http://talentedeurope.us13.list-manage.com/subscribe?u=b4e15aa0a9873bc5785280c76&id=2854c91856">Subscribe</a>
+          <h1>{{ trans('landing.subscribe_title') }}</h1>
+          <p>{!! trans('landing.subscribe_text_question') !!}</p>
+          <a class="button" href="http://talentedeurope.us13.list-manage.com/subscribe?u=b4e15aa0a9873bc5785280c76&id=2854c91856">{{ trans('landing.subscribe_btn_text') }}</a>
 
           <div class="social">
             <p>
-              or follow us on:
+              {{ trans('landing.subscribe_follow_text') }}
             </p>
             <ul class="nav">
               <li>
