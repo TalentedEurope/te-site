@@ -1,4 +1,5 @@
 var elixir = require('laravel-elixir');
+var trans = require('te-translation-builder');
 
 /*
  |--------------------------------------------------------------------------
@@ -14,6 +15,7 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
   var bootstrapPath = 'node_modules/bootstrap-sass/assets';
   var conditionizrPath = 'node_modules/conditionizr';
+  mix.task('translate');
   mix.sass('app.scss')
     .copy(bootstrapPath + '/fonts', 'public/fonts')
     .copy(bootstrapPath + '/javascripts/bootstrap.min.js', 'public/js')
