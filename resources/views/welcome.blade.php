@@ -34,8 +34,17 @@
   <body>
     <nav class="navbar navbar-inverse navbar-landing navbar-static-top">
       <div class="container">
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
+        <div id="navbar">
+          <ul class="nav navbar-nav navbar-right languages-nav">
+            <li><a href="?lang=en">EN</a></li>
+            <li><a href="?lang=es">ES</a></li>
+            <li><a href="?lang=it">IT</a></li>
+            <li><a href="?lang=de">DE</a></li>
+            <li><a href="?lang=fr">FR</a></li>
+            <li><a href="?lang=sk">SK</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right social-nav">
             <li>
               <a href="https://www.facebook.com/Talented-Europe-839419182764068/">
                 <i class="fi flaticon-facebook"></i>
