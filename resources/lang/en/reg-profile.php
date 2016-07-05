@@ -95,7 +95,7 @@ return [
     
         'student_study_scanned_document' => 'Scanned document',
     
-        'student_validator' => 'If you don't specify a validator it will be automatically asigned',
+        'student_validator' => 'If you don&apos;t specify a validator it will be automatically asigned',
     
         'surname' => 'Surname',
     
