@@ -3,9 +3,9 @@
 
 return [
     
-        'meta_title' => 'Talented Europe | Unisce i talenti giovani e i datori di lavoro di tutta l'Europa',
+        'meta_title' => 'Talented Europe | Unisce i talenti giovani e i datori di lavoro di tutta l&apos;Europa',
     
-        'tagline' => 'Unisce<br/> <strong>i talenti giovani</strong> e <strong>i datori di lavoro</strong><br/> di tutta <strong>l'Europa</strong>',
+        'tagline' => 'Unisce<br/> <strong>i talenti giovani</strong> e <strong>i datori di lavoro</strong><br/> di tutta <strong>l&apos;Europa</strong>',
     
         'days' => 'giorni',
     
@@ -17,7 +17,7 @@ return [
     
         'more' => 'per saperne di più',
     
-        'what_is_title' => 'Che cos'è l'Europa dei Talenti?',
+        'what_is_title' => 'Che cos&apos;è l&apos;Europa dei Talenti?',
     
         'what_is_cta' => '<strong>Scopri di più!</strong> Richiedi opuscolo!',
     
