@@ -9,13 +9,13 @@
 server {
     #Change to 443 when ssl cert is running
     listen 80;
-    root "pwd/wordpress";
+    root "pwd/public";
     server_name deploydomain;
 
     index index.html index.htm index.php;
 
     charset utf-8;
-    
+
     # Uncomment when ssl cert is running correctly.
     # ssl_certificate /etc/letsencrypt/live/deploydomain/fullchain.pem;
     # ssl_certificate_key /etc/letsencrypt/live/deploydomain/privkey.pem;

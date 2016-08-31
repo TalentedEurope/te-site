@@ -27,4 +27,4 @@ sudo service php7.0-fpm restart
 composer install
 
 # Run lets encrypt to secure the server
-sudo letsencrypt certonly --webroot -w ${PWD}/wordpress -d ${DOMAIN} -d www.${DOMAIN}
+sudo letsencrypt certonly --webroot -w ${PWD}/public -d ${DOMAIN}
