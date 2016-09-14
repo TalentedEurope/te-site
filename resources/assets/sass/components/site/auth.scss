@@ -1,0 +1,76 @@
+.auth-box {
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    .avatar-placeholder .fa {
+        background: $light-gray;
+        font-size: 60px;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        border-radius: 80px;
+        color: darken($light-gray, 20%);
+    }
+    input {
+        width: 100%;
+        margin-bottom: 17px;
+        padding: 15px;
+        background-color: $light-gray;
+        border: none;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+        width: auto;
+    }
+    input.has-error {
+        background: lighten($red, 35%);
+    }
+    .form-horizontal .checkbox {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    h2 {
+        margin-bottom: 20px;
+        font-weight: bold;
+        color: darken($light-gray, 20%);
+    }
+    .btn {
+        padding: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 0;
+        font-size: 15px;
+        padding: 10px 30px;
+    }
+    .btn-link {
+        padding: 0;
+    }
+    .g-recaptcha {
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    .user-type {
+        margin-bottom: 10px;
+        .radio-check {
+            display: inline-block;
+            .fa {
+                color: darken($light-gray, 40%);
+                background: $light-gray;
+                padding: 10px
+            }
+            input {
+                display: none;
+            }
+            input:checked + label .fa {
+                background: $blue;
+                color: $white;
+                padding: 10px
+            }
+        }
+    }
+}

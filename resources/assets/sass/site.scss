@@ -1,0 +1,17 @@
+@import "resources/assets/sass/variables";
+@import "resources/assets/sass/bs-overrides";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "resources/assets/sass/base";
+@import "resources/assets/sass/icons-font";
+
+// Structure
+@import "resources/assets/sass/components/global/page";
+@import "resources/assets/sass/components/global/footer";
+// uncomment for 1440px size
+// @import "resources/assets/sass/components/global/col-xl";
+
+
+// Pages
+@import "resources/assets/sass/components/site/auth";
+@import "resources/assets/sass/components/site/edit-profile";
+@import "resources/assets/sass/components/site/search";
