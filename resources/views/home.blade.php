@@ -70,11 +70,10 @@
         <div class="hero-video-overlay"></div>
         <div class="video-bg cover">
           <div class="video-fg">
-
-                <video autoplay loop="true" width="1280" height="720">
-                  <source src="video/home-video.mp4" type='video/mp4' />
-                  <source src="video/home-video.webm" type='video/webm' />
-                </video>
+              <video autoplay loop="true" width="1280" height="720">
+                <source src="video/home-video.mp4" type='video/mp4' />
+                <source src="video/home-video.webm" type='video/webm' />
+              </video>
           </div>
         </div>
       </div>
@@ -106,12 +105,12 @@
             </li>
           </ul>
 
-          <p>
+          <div>
             <a href="#about" class="btn btn-primary">
               {{ trans('landing.more') }}
               <i class="fi flaticon-dragdown"></i>
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </header>
