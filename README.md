@@ -8,9 +8,9 @@ The web application will serve two fronts. First allow students register, instit
 
 Installing it in a few simple steps:
 
-- Setup your webserver to be able serve the site, for example [using this guide](https://www.digitalocean.com/community/tutorials/how-to-install-laravel-with-an-nginx-web-server-on-ubuntu-14-04)
+- Setup your webserver to be able serve the site, for example using our [Provisioner](https://github.com/TalentedEurope/Provisioner)
 - Clone the repository
-- Run *composer install*
+- Run *bash first-deploy.sh*
 - Copy */.env.example* to */.env*  and set up it's settings
 - Run *php artisan key:generate* if you haven't set up a key on .env
 - Run *php artisan migrate*

@@ -66,8 +66,8 @@ return [
     */
 
     'locale' => 'en',
-    
-    'languages' => array('en','es','it','de','fr','sk'),
+
+    'languages' => array('en', 'es', 'it', 'de', 'fr', 'sk'),
 
     /*
     |--------------------------------------------------------------------------
@@ -155,7 +155,7 @@ return [
          */
         Intervention\Image\ImageServiceProvider::class,
         Frozennode\Administrator\AdministratorServiceProvider::class,
-
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -223,7 +223,6 @@ return [
         Laracasts\Generators\GeneratorsServiceProvider::class,
     ],
 
-
     /*
     |--------------------------------------------------------------------------
     | Development aliases
@@ -232,6 +231,5 @@ return [
     'dev_aliases' => [
 
     ],
-
 
 ];
