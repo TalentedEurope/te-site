@@ -8,7 +8,7 @@ conditionizr.config({
 
 window.onload = function(){
     var counter = Doom({
-        targetDate: '02/28/2017'
+        targetDate: '11/03/2016'
     });
 
     counter.doom();
