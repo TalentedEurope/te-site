@@ -46,12 +46,12 @@
             background-image: url('../../img/landing/video-background.png');
         }
 
-        iframe, html.ios & iframe, html.android & iframe{
+        video, html.ios & video, html.android & video{
             display: none;
         }
 
         .video-bg,
-        .video-bg iframe {
+        .video-bg video {
             position: absolute;
             top: 0;
             left: 0;
@@ -101,6 +101,7 @@
 
         .logo {
             height: 83px;
+            margin-top: 25px;
         }
 
 
@@ -139,6 +140,14 @@
             li {
                 display: inline-block;
                 padding: 0 12px;
+                max-width: 25%;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    padding-right: 0;
+                }
 
                 span {
                     font-size: 16px;
@@ -265,13 +274,13 @@
     }
 }
 
-@media (min-width: 600px) and (min-height: 670px) {
+@media (min-width: 600px) and (min-height: 640px) {
     .hero .hero-video {
         .video-bg {
             background-image: none;
         }
 
-        iframe {
+        video {
             display: block;
         }
     }
