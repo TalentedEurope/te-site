@@ -1,0 +1,79 @@
+.pre-footer {
+    background: $white;
+    margin-top: 20px;
+
+    img.te-logo {
+        margin-top: 20px;
+        max-width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .navigation {
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: inline-block;
+        }
+
+        li a:after {
+            content: " | ";
+        }
+
+        li:last-child a:after {
+            content: "";
+        }
+
+    }
+
+    .partner-list {
+        list-style: none;
+        padding: 0;
+
+        a {
+            background: $blue;
+            color: $white;
+            display: inline-block;
+            padding: 6px 12px;
+
+            &:hover {
+                background: darken($blue, 10%);
+                text-decoration: none;
+            }
+        }
+
+        li {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+
+.footer {
+    background-color: $dark-blue;
+    color: $white;
+    padding: 30px 10px;
+    overflow: hidden;
+    text-align: center;
+
+    .ue-logos {
+
+        .logo {
+            display:block;
+            margin: 25px 40px;
+        }
+    }
+}
+
+@media (min-width: 450px) {
+    .footer {
+        .ue-logos {
+
+            .logo {
+                display: inline-block;
+            }
+        }
+    }
+}

@@ -1,0 +1,153 @@
+.search {
+    .search-bar {
+        background: $blue;
+        input {
+            background: $white;
+        }
+        .select-holder {
+            background: $white;
+        }
+        .btn-primary {
+            width: 100%;
+            background: $yellow;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 15px;
+            font-size: 15px;
+            border: none;
+            .fa {
+                padding-right: 5px;
+            }
+        }
+        .form-group {
+            margin-bottom: 0;
+        }
+    }
+    .result-info {
+        background: $dark-blue;
+        color: white;
+    }
+    .results {
+        list-style: none;
+        padding: 0;
+        .profile {
+            h2.title {
+                font-weight: bold;
+            }
+            .view-more {
+                margin-top: 15px;
+                font-weight: bold;
+                background: $blue;
+                text-transform: uppercase;
+                border: none;
+                &:hover {
+                    background: darken($blue, 10%)
+                }
+            }
+            .skills {
+                padding: 0;
+                li {
+                    display: inline-block;
+                    padding: 5px 15px;
+                    background: $dark-blue;
+                    color: $white;
+                }
+            }
+            ul.social {
+                list-style: none;
+                padding: 0;
+                li {
+                    display: inline;
+                    font-size: 20px;
+                    padding: 0 5px;
+                    & a:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+            .ratings {
+                margin-top: 10px;
+                font-size: 16px;
+                text-transform: uppercase;
+                .fa {
+                    margin-right: 5px;
+                }
+            }
+            img.img-responsive {
+                display: inline-block;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                border: 6px solid $light-gray;
+            }
+            .btn-nudge .fa {
+                color: yellow;
+                padding-right: 5px;
+            }
+            .btn-tooltip {
+                border-radius: 40px;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                background: $yellow;
+                font-weight: bold;
+                font-size: 18px;
+                padding: 0;
+                border: none;
+                margin-left: 10px;
+            }
+        }
+    }
+    .options-title {
+        box-shadow: none;
+        text-transform: uppercase;
+        span {
+            font-weight: bold;
+        }
+        .fa {
+            padding-right: 10px;
+        }
+    }
+    .current-search {
+        ul {
+            padding: 0;
+            list-style: none;
+            li {
+                display: inline-block;
+                padding: 5px 10px;
+                background: $blue;
+                color: $white;
+                margin-bottom: 3px;
+                button {
+                    border: none;
+                    background: none;
+                }
+            }
+        }
+    }
+    .search-options .filter-list {
+        ul {
+            list-style: none;
+            padding-left: 10px;
+            border-left: 2px solid $blue;
+            li {
+                font-size: 16px;
+                padding: 5px 0;
+                label {
+                    font-weight: normal;
+                }
+            }
+        }
+        .more button {
+            background: none;
+            border: none;
+            font-size: 14px;
+            color: $blue;
+            &:hover {
+                text-decoration: underline;
+            }
+            .fa {
+                padding-right: 5px;
+            }
+        }
+    }
+}
