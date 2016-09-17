@@ -28,3 +28,6 @@ composer install
 
 # Run lets encrypt to secure the server
 sudo letsencrypt certonly --webroot -w ${PWD}/public -d ${DOMAIN}
+
+echo All done, enjoy Talented Europe
+echo Remember to edit .vhost and uncomment the lines mentioned in the file and reset nginx.
