@@ -1,59 +1,78 @@
-# Uncomment when ssl cert is running correctly.
-# server {
-#     listen   80;
-#     rewrite        ^ https://$server_name$request_uri? permanent;
+server {
+  listen                80;
+  server_name           www.deploydomain deploydomain;
+  root "pwd/public";
 
-#     server_name deploydomain;
+  # Necessary for Let's Encrypt Domain Name ownership validation
+  location /.well-known/acme-challenge/ {
+    try_files $uri /dev/null =404;
+  }
+
+  # Redirect everything else to https://
+  location / {
+    return 301 https://$host/$request_uri;
+  }
+}
+
+# Uncomment all the following lines when ssl cert is running correctly.
+# server {
+#      listen   443;
+#      rewrite        ^ https://deploydomain$request_uri? permanent;
+
+#      ssl_certificate /etc/letsencrypt/live/www.deploydomain/fullchain.pem;
+#      ssl_certificate_key /etc/letsencrypt/live/www.deploydomain/privkey.pem;
+#      ssl on;
+
+#      server_name www.deploydomain;
 # }
 
-server {
-    #Change to 443 when ssl cert is running
-    listen 80;
-    root "pwd/public";
-    server_name deploydomain;
+# server {
 
-    index index.html index.htm index.php;
+#     listen 443;
+#     root "pwd/public";
+#     server_name deploydomain;
 
-    charset utf-8;
+#     index index.html index.htm index.php;
 
-    # Uncomment when ssl cert is running correctly.
-    # ssl_certificate /etc/letsencrypt/live/deploydomain/fullchain.pem;
-    # ssl_certificate_key /etc/letsencrypt/live/deploydomain/privkey.pem;
-    # ssl on;
+#     charset utf-8;
 
-    location / {
-        try_files $uri $uri/ /index.php?$query_string;
-    }
+#     ssl_certificate /etc/letsencrypt/live/deploydomain/fullchain.pem;
+#     ssl_certificate_key /etc/letsencrypt/live/deploydomain/privkey.pem;
+#     ssl on;
 
-    location = /favicon.ico { access_log off; log_not_found off; }
-    location = /robots.txt  { access_log off; log_not_found off; }
+#     location / {
+#         try_files $uri $uri/ /index.php?$query_string;
+#     }
 
-    access_log /var/log/nginx/site1-acccess.log;
-    error_log  /var/log/nginx/site1-error.log error;
+#     location = /favicon.ico { access_log off; log_not_found off; }
+#     location = /robots.txt  { access_log off; log_not_found off; }
 
-    client_max_body_size 32m;
+#     access_log /var/log/nginx/site1-acccess.log;
+#     error_log  /var/log/nginx/site1-error.log error;
 
-    location ~ \.php$ {
-        fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass unix:/var/run/php5-fpm-site1.sock;
-        fastcgi_index index.php;
-        include fastcgi_params;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        fastcgi_intercept_errors off;
-        fastcgi_buffer_size 16k;
-        fastcgi_buffers 4 16k;
-    	fastcgi_read_timeout 600;
-    }
+#     client_max_body_size 32m;
 
-    location ~ /\.ht {
-        deny all;
-    }
+#     location ~ \.php$ {
+#         fastcgi_split_path_info ^(.+\.php)(/.+)$;
+#         fastcgi_pass unix:/var/run/php5-fpm-site1.sock;
+#         fastcgi_index index.php;
+#         include fastcgi_params;
+#         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+#         fastcgi_intercept_errors off;
+#         fastcgi_buffer_size 16k;
+#         fastcgi_buffers 4 16k;
+#     	fastcgi_read_timeout 600;
+#     }
 
-    location ~ /\.vhost {
-        deny all;
-    }
+#     location ~ /\.ht {
+#         deny all;
+#     }
 
-    location ~ /\.fpm {
-        deny all;
-    }
-}
+#     location ~ /\.vhost {
+#         deny all;
+#     }
+
+#     location ~ /\.fpm {
+#         deny all;
+#     }
+# }
