@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace app\Http\Controllers;
 
 use Illuminate\Http\Request;
 
@@ -8,13 +8,6 @@ class ProfileController extends Controller
 {
     public function index(Request $request)
     {
-        if ($request->has('company')) {
-            return view('profile.company-view');
-        }
-        if ($request->has('validator')) {
-            return view('profile.validator-view');
-        }
-
         return view('profile.student-view');
     }
 
