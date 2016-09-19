@@ -96,6 +96,21 @@
               </div>
 
               <hr>
+              <h4>Social networks</h4>
+              <div class="form-group{{ $errors->has('facebook') ? ' has-error' : '' }}">
+                <!-- <label for="facebook">Facebook page url</label> -->
+                <input type="text" class="form-control" id="facebook" name="facebook" placeholder="Facebook page url" value=""> @if ($errors->has('facebook'))
+                <span class="help-block">
+                  <strong>{{ $errors->first('facebook') }}</strong>
+                </span> @endif
+              </div>
+              <div class="form-group{{ $errors->has('twitter') ? ' has-error' : '' }}">
+                <!-- <label for="twitter">Twitter page url</label> -->
+                <input type="text" class="form-control" id="twitter" name="twitter" placeholder="Twitter page url" value=""> @if ($errors->has('twitter'))
+                <span class="help-block">
+                  <strong>{{ $errors->first('twitter') }}</strong>
+                </span> @endif
+              </div>
               <p><span class="h4">Address</span></p>
               <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
                 <!-- <label for="address">Address</label> -->

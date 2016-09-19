@@ -20,7 +20,7 @@
             <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#profile') }}">
               {{ csrf_field() }}
               <!-- company_name -->
-              <label>About</label>
+              <h4>About</h4>
               <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                 <!-- <label for="name">Name</label> -->
                 <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="">
@@ -52,14 +52,12 @@
               </div>
 
               <hr>
-              <label>My Institution</label>
 
-
+              <h4>My Institution</h4>
               <div class="form-group">
                 <!-- <label for="department">Institution</label> -->
                 <input id="institution" class="form-control" readonly="true" required name="institution"  class="{{ $errors->has('email') ? ' has-error' : '' }}" type="text" placeholder="Institution" value="Institution: IES Puerto de la Cruz">
               </div>
-
 
               <div class="form-group{{ $errors->has('department') ? ' has-error' : '' }}">
                 <!-- <label for="department">department</label> -->
@@ -70,7 +68,6 @@
                 </span>
                 @endif
               </div>
-
 
               <div class="form-group{{ $errors->has('position') ? ' has-error' : '' }}">
                 <!-- <label for="position">position</label> -->
