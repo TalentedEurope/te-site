@@ -1,5 +1,7 @@
 var elixir = require('laravel-elixir');
 var trans = require('te-translation-builder');
+require('laravel-elixir-vue');
+require('laravel-elixir-webpack-official');
 
 /*
  |--------------------------------------------------------------------------
@@ -13,22 +15,26 @@ var trans = require('te-translation-builder');
  */
 
 elixir(function(mix) {
-  var bootstrapPath = 'node_modules/bootstrap-sass/assets';
-  var conditionizrPath = 'node_modules/conditionizr';
-  mix.task('translate');
+    var bootstrapPath = 'node_modules/bootstrap-sass/assets';
+    var conditionizrPath = 'node_modules/conditionizr';
+    mix.task('translate');
 
-  mix.copy(bootstrapPath + '/fonts', 'public/fonts')
-     .copy(bootstrapPath + '/javascripts/bootstrap.min.js', 'public/js');
+    mix.copy(bootstrapPath + '/fonts', 'public/fonts')
+        .copy(bootstrapPath + '/javascripts/bootstrap.min.js', 'public/js');
 
 
-  mix.sass('landing.scss')
-    .copy(conditionizrPath + '/dist/conditionizr.js', 'public/js/conditionizr')
-    .copy(conditionizrPath + '/detects/ios.js', 'public/js/conditionizr')
-    .styles(['vendor/*.css', 'app.css'], 'public/css/landing.css', 'public/css')
+    mix.sass('landing.scss')
+        .copy(conditionizrPath + '/dist/conditionizr.js', 'public/js/conditionizr')
+        .copy(conditionizrPath + '/detects/ios.js', 'public/js/conditionizr')
+        .styles(['vendor/*.css', 'app.css'], 'public/css/landing.css', 'public/css')
 
-  mix.sass('site.scss')
-    .styles(['vendor/*.css', 'app.css'], 'public/css/site.css', 'public/css')
+    mix.sass('site.scss')
+        .styles(['vendor/*.css', 'app.css'], 'public/css/site.css', 'public/css')
 
-  mix.version('public/css/*.css');
-  mix.phpUnit();
+
+    mix.webpack('main.js');
+
+    mix.version('public/css/*.css');
+    mix.version('public/js/*.js');
+    mix.phpUnit();
 });
