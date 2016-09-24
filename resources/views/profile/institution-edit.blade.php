@@ -23,7 +23,7 @@
           <div class="tab-pane active in" id="profile">
             <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#profile') }}">
               {{ csrf_field() }}
-              <label>About</label>
+              <h4>About</h4>
               <div class="row">
                 <div class="col-sm-4 form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                   <div class="select-holder">
@@ -104,7 +104,7 @@
 
 
               <hr>
-              <label>Address</label>
+              <h4>Address</h4>
               <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
                 <!-- <label for="address">Address</label> -->
                 <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="">
@@ -157,6 +157,7 @@
             </form>
           </div>
           <div class="tab-pane fade" id="contact">
+            <h4>Alternative contact</h4>
             <label>Setup an alternative contact user that will receive all the notifications instead of the main account</label>
             <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#password') }}">
               {{ csrf_field() }}

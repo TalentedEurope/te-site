@@ -23,7 +23,7 @@
             <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#profile') }}">
               {{ csrf_field() }}
               <!-- company_name -->
-              <label>About</label>
+              <h4>About</h4>
               <div class="form-group{{ $errors->has('company_name') ? ' has-error' : '' }}">
                 <!-- <label for="company_name">Name</label> -->
                 <input type="text" class="form-control" id="company_name" name="company_name" placeholder="Name" value="">
@@ -68,7 +68,7 @@
                 <input type="file" id="logo" name="logo">
               </div>
               <hr>
-              <label>Social networks</label>
+              <h4>Social networks</h4>
               <div class="form-group{{ $errors->has('facebook') ? ' has-error' : '' }}">
                 <!-- <label for="facebook">Facebook page url</label> -->
                 <input type="text" class="form-control" id="facebook" name="facebook" placeholder="Facebook page url" value=""> @if ($errors->has('facebook'))
@@ -84,7 +84,7 @@
                 </span> @endif
               </div>
               <hr>
-              <label>Address</label>
+              <h4>Address</h4>
               <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
                 <!-- <label for="address">Address</label> -->
                 <input type="text" class="form-control" id="address" name="address" placeholder="Address" value=""> @if ($errors->has('address'))
@@ -146,6 +146,7 @@
             </form>
           </div>
           <div class="tab-pane fade" id="contact">
+            <h4>Alternative contact</h4>
             <label>Setup an alternative contact user that will receive all the notifications instead of the main account</label>
             <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#contact') }}">
               {{ csrf_field() }}
