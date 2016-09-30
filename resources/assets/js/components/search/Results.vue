@@ -20,7 +20,7 @@ export default {
         'student-profile': StudentProfile,
         'company-profile': CompanyProfile,
     },
-    data () {
+    data() {
         return {
             students: [],
             companies: []
@@ -30,7 +30,7 @@ export default {
         this.fetchResults();
     },
     methods: {
-        fetchResults: function () {
+        fetchResults() {
             if (TE.companies_page) {
                 companiesResultsResource.get().then((response) => {
                     this.companies = response;

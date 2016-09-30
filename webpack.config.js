@@ -1,4 +1,12 @@
+var path = require('path');
+
 module.exports = {
+    resolve: {
+        modules: [
+            path.resolve('./resources/assets/js'),
+            path.resolve('./node_modules')
+        ]
+    },
     entry: './resources/assets/js/main.js',
     output: {
         path: '/public/js',
