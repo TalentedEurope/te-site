@@ -1,7 +1,6 @@
 <template>
     <div class="well result-info">
         <span class="h4">We found 30 students matching your needs</span>
-        {{companies_page}}
         <p v-if="companies_page">
             <label class="h5" for="magic-matching">
                 <input type="checkbox" name="magic-matching" id="magic-matching" value="1">

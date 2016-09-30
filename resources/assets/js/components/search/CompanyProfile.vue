@@ -2,7 +2,7 @@
     <li class="well profile clearfix">
         <div class="col-sm-12">
             <div class="col-xs-12 col-sm-8 col-md-9">
-                <h2 class="title">{{company.title}}</h2>
+                <h2 class="title">{{company.name}}</h2>
                 <p><em class="h4">{{company.info}}</em></p>
                 <hr>
                 <p class="h4">

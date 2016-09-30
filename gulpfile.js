@@ -34,7 +34,7 @@ elixir(function(mix) {
 
     mix.webpack('main.js');
 
-    mix.version('public/css/*.css');
-    mix.version('public/js/*.js');
+    mix.version(['public/css/*.css', 'public/js/*.js']);
+
     mix.phpUnit();
 });

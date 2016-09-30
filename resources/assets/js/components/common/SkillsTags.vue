@@ -19,6 +19,7 @@ export default {
         padding: 5px 20px;
         background: $light-gray;
         margin-right: 5px;
+        margin-bottom: 5px;
     }
     li.important {
         background: $dark-blue;
