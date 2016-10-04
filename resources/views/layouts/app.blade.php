@@ -24,6 +24,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('img/favicon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{ URL::asset('img/favicon/favicon-96x96.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('img/favicon/favicon-16x16.png') }}">
+
+    <script type="text/javascript">
+      TE = {}
+    </script>
 </head>
 
 <body id="app-layout" class="@yield('page-class') ">
@@ -111,6 +115,10 @@
     {{--
     <script src="{{ elixir('js/app.js') }}"></script> --}}
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
+
+
+    <script src="{{ elixir('js/build.js') }}"></script>
+
     <script type="text/javascript">
     $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip();
