@@ -57,19 +57,18 @@ export default {
         fetchValidators() {
             validatorsResource.get()
                 .then((response) => {
-                    this.validators = response;
+                    this.validators = response.body;
                 }, (errorResponse) => {
                     console.log(errorResponse);
                 });
         },
         toggleValidatorStatus(validator) {
-            if (validator.active) {
-                // TODO: Call api
-                validator.active = false;
-            } else {
-                // TODO: Call api
-                validator.active = true;
-            }
+            validatorsResource.put(validator.id)
+                .then((response) => {
+                    validator.active = !validator.active;
+                }, (errorResponse) => {
+                    console.log(errorResponse);
+                });
         }
     }
 };

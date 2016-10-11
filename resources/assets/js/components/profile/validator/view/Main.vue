@@ -17,7 +17,7 @@
 <script>
 import ProfileHeader from '../../common/ProfileHeader.vue';
 import ProfileSection from '../../common/ProfileSection.vue';
-import { validatorResource } from 'helpers/resources';
+import { validatorProfileResource } from 'helpers/resources';
 
 export default {
     components: {
@@ -34,9 +34,9 @@ export default {
     },
     methods: {
         fetchValidator() {
-            validatorResource.get()
+            validatorProfileResource.get()
                 .then((response) => {
-                    this.validator = response;
+                    this.validator = response.body;
                 }, (errorResponse) => {
                     console.log(errorResponse);
                 });
