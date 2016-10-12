@@ -26,7 +26,7 @@ import ProfileHeader from '../../common/ProfileHeader.vue'
 import ProfileSection from '../../common/ProfileSection.vue';
 import ContactInfo from '../../common/ContactInfo.vue'
 import SkillsTags from 'components/common/SkillsTags.vue'
-import { companyResource } from 'helpers/resources';
+import { companyProfileResource } from 'helpers/resources';
 
 export default {
     components: {
@@ -45,9 +45,9 @@ export default {
     },
     methods: {
         fetchCompany() {
-            companyResource.get()
+            companyProfileResource.get()
                 .then((response) => {
-                    this.company = response;
+                    this.company = response.body;
                 }, (errorResponse) => {
                     console.log(errorResponse);
                 });

@@ -1,6 +1,6 @@
 <template>
     <div class="col-sm-8 col-md-9">
-        <result-info></result-info>
+        <result-info :collective="collective"></result-info>
         <ul class="results">
             <student-profile v-if="students" v-for="student in students" :student="student"></student-profile>
             <company-profile v-if="companies" v-for="company in companies" :company="company"></company-profile>
@@ -15,6 +15,7 @@ import CompanyProfile from './CompanyProfile.vue'
 import { studentsResultsResource, companiesResultsResource } from '../../helpers/resources'
 
 export default {
+    props: ['collective'],
     components: {
         'result-info': ResultInfo,
         'student-profile': StudentProfile,
@@ -31,15 +32,15 @@ export default {
     },
     methods: {
         fetchResults() {
-            if (TE.companies_page) {
+            if (this.collective == 'company') {
                 companiesResultsResource.get().then((response) => {
-                    this.companies = response;
+                    this.companies = response.body;
                 }, (errorResponse) => {
                     console.log(errorResponse);
                 });
             } else {
                 studentsResultsResource.get().then((response) => {
-                    this.students = response;
+                    this.students = response.body;
                 }, (errorResponse) => {
                     console.log(errorResponse);
                 });

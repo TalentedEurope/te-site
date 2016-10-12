@@ -14,13 +14,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="nudge in nudges">
+                <tr v-for="nudge in orderedNudges">
                     <td>
                         <a href="">{{nudge.student}}</a>
                     </td>
                     <td>{{nudge.country}}</td>
                     <td>{{nudge.study_level}}</td>
-                    <td>{{nudge.when_nudged}}</td>
+                    <td>{{nudge.when_nudged_relative}}</td>
                     <td>
                         <button v-on:click="removeNudge(nudge)" class="btn btn-primary" title="Remove nudge">
                             <i class="fa fa-trash-o" aria-hidden="true"></i>
@@ -48,7 +48,7 @@ export default {
         fetchNudges() {
             nudgesResource.get()
                 .then((response) => {
-                    this.nudges = response;
+                    this.nudges = response.body;
                 }, (errorResponse) => {
                     console.log(errorResponse);
                 });
@@ -56,6 +56,11 @@ export default {
         removeNudge(nudge) {
             var index = this.nudges.indexOf(nudge);
             this.nudges.splice(index, 1);
+        }
+    },
+    computed: {
+        orderedNudges() {
+            return _.orderBy(this.nudges, [function (nudge) { return new Date(nudge.when_nudged); }]);
         }
     }
 }

@@ -11,7 +11,38 @@ class ValidatorController extends Controller
         return view('institution.validators');
     }
 
-    public function toggle(Request $request, $id)
+    public function getJSONValidators(Request $request)
     {
+        return array(
+            array(
+                'id' => 1,
+                'full_name' => 'John Doe',
+                'email' => 'johndoe@gmail.com',
+                'department' => 'Information Technology',
+                'position' => 'Teacher',
+                'active' => false
+            ),
+            array(
+                'id' => 2,
+                'full_name' => 'John Doe',
+                'email' => 'johndoe@gmail.com',
+                'department' => 'Information Technology',
+                'position' => 'Teacher',
+                'active' => true
+            ),
+            array(
+                'id' => 3,
+                'full_name' => 'John Doe',
+                'email' => 'johndoe@gmail.com',
+                'department' => 'Information Technology',
+                'position' => 'Teacher',
+                'active' => true
+            )
+        );
+    }
+
+    public function toggleStatus(Request $request, $id)
+    {
+        return array();
     }
 }

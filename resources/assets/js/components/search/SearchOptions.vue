@@ -11,38 +11,28 @@
                 </li>
           </ul>
         </div>
-        <multi-options-filter v-if="students_page" :items="level_of_studies" prefix="level_of_study" title="Level of studies"></multi-options-filter>
-        <multi-options-filter v-if="students_page" :items="field_of_studies" prefix="field_of_study" title="Field of studies"></multi-options-filter>
-        <multi-options-filter v-if="students_page" :items="languages" prefix="language" title="Languages"></multi-options-filter>
-        <multi-options-filter v-if="companies_page" :items="activities" prefix="activity" title="Activity Sector"></multi-options-filter>
-        <multi-options-filter :items="countries" prefix="country" title="Country"></multi-options-filter>
+        <multi-options-filter v-for="filter in filters" :items="filter.items" :prefix="filter.code" :title="filter.title"></multi-options-filter>
+
     </div>
 </template>
 
 <script>
 import MultiOptionsFilter from './MultiOptionsFilter.vue'
-import {
-    levelOfStudiesResource, fieldOfStudiesResource, activitiesResource, languagesResource, countriesResource
-} from '../../helpers/resources'
+import { companiesFiltersResource, studentsFiltersResource } from '../../helpers/resources'
 
 export default {
+    props: ['collective'],
     components: {
         'multi-options-filter': MultiOptionsFilter,
     },
     data () {
         return {
-            students_page: TE.students_page,
-            companies_page: TE.companies_page,
             current_search: [
                 {code: '1', name: 'Item 1'},
                 {code: '2', name: 'Item 2'},
                 {code: '3', name: 'Item 3'},
             ],
-            level_of_studies: [],
-            field_of_studies: [],
-            activities: [],
-            languages: [],
-            countries: []
+            filters: []
         }
     },
     mounted () {
@@ -54,25 +44,15 @@ export default {
                 console.log(errorResponse);
             }
 
-            levelOfStudiesResource.get().then((response) => {
-                this.level_of_studies = response;
-            }, errorCallback);
-
-            fieldOfStudiesResource.get().then((response) => {
-                this.field_of_studies = response;
-            }, errorCallback);
-
-            activitiesResource.get().then((response) => {
-                this.activities = response;
-            }, errorCallback);
-
-            languagesResource.get().then((response) => {
-                this.languages = response;
-            }, errorCallback);
-
-            countriesResource.get().then((response) => {
-                this.countries = response;
-            }, errorCallback);
+            if (this.collective == 'company') {
+                companiesFiltersResource.get().then((response) => {
+                    this.filters = response.body;
+                }, errorCallback);
+            } else {
+                studentsFiltersResource.get().then((response) => {
+                    this.filters = response.body;
+                }, errorCallback);
+            }
         }
     },
 }

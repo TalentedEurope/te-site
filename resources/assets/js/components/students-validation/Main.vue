@@ -42,7 +42,7 @@ export default {
         fetchStudents() {
             studentsValidationResource.get()
                 .then((response) => {
-                    this.students = response;
+                    this.students = response.body;
                 }, (errorResponse) => {
                     console.log(errorResponse);
                 });
