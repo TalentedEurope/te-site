@@ -17,7 +17,7 @@
 <script>
 import ProfileHeader from '../../common/ProfileHeader.vue';
 import ProfileSection from '../../common/ProfileSection.vue';
-import { validatorProfileResource } from 'helpers/resources';
+import { validatorProfileResource } from 'resources/profile';
 
 export default {
     components: {

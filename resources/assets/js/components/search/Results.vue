@@ -12,7 +12,7 @@
 import ResultInfo from './ResultInfo.vue'
 import StudentProfile from './StudentProfile.vue'
 import CompanyProfile from './CompanyProfile.vue'
-import { studentsResultsResource, companiesResultsResource } from '../../helpers/resources'
+import { studentsResultsResource, companiesResultsResource } from '../../resources/search'
 
 export default {
     props: ['collective'],

@@ -18,7 +18,7 @@
 
 <script>
 import MultiOptionsFilter from './MultiOptionsFilter.vue'
-import { companiesFiltersResource, studentsFiltersResource } from '../../helpers/resources'
+import { companiesFiltersResource, studentsFiltersResource } from '../../resources/search'
 
 export default {
     props: ['collective'],
