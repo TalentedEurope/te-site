@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Silber\Bouncer\Database\HasRolesAndAbilities;
 
 class User extends Authenticatable
 {
+    use HasRolesAndAbilities;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -28,5 +31,4 @@ class User extends Authenticatable
     {
         return $this->morphTo();
     }
-
 }

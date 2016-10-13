@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class ProfileController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => array('index')]);
+    }
+
     public function index(Request $request)
     {
         if ($request->has('company')) {
@@ -18,26 +24,23 @@ class ProfileController extends Controller
         return view('profile.student-view');
     }
 
-    public function edit(Request $request)
+    public function get_edit(Request $request)
     {
-        if ($request->has('student')) {
+        $user = Auth::user();
+        if ($user->isA('student')) {
             return view('profile.student-edit');
         }
 
-        if ($request->has('company')) {
+        if ($user->isA('company')) {
             return view('profile.company-edit');
         }
 
-        if ($request->has('institution')) {
+        if ($user->isA('institution')) {
             return view('profile.institution-edit');
         }
 
-        if ($request->has('validator')) {
+        if ($user->isA('validator')) {
             return view('profile.validator-edit');
         }
-    }
-
-    public function update(Request $request, $id)
-    {
     }
 }

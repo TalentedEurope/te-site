@@ -156,6 +156,9 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Frozennode\Administrator\AdministratorServiceProvider::class,
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+        Silber\Bouncer\BouncerServiceProvider::class,
+        Jrean\UserVerification\UserVerificationServiceProvider::class,
+        'Tymon\JWTAuth\Providers\JWTAuthServiceProvider',
 
         /*
          * Application Service Providers...
@@ -211,7 +214,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Image' => Intervention\Image\Facades\Image::class,
-
+        'JWTAuth' => 'Tymon\JWTAuth\Facades\JWTAuth',
+        'JWTFactory' => 'Tymon\JWTAuth\Facades\JWTFactory',
+        'Bouncer' => Silber\Bouncer\BouncerFacade::class,
+        'UserVerification' => Jrean\UserVerification\Facades\UserVerification::class,
     ],
 
     /*

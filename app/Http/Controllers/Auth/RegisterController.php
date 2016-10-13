@@ -1,11 +1,19 @@
 <?php
 
-namespace app\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use App\User;
+use Bouncer;
+use App\Models\User;
+use App\Models\Institution;
+use App\Models\Student;
+use App\Models\Company;
 use Validator;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Auth\Events\Registered;
+use Jrean\UserVerification\Traits\VerifiesUsers;
+use Jrean\UserVerification\Facades\UserVerification;
 
 class RegisterController extends Controller
 {
@@ -21,20 +29,24 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
+    use VerifiesUsers;
 
     /**
      * Where to redirect users after login / registration.
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/login';
+
+    protected $redirectIfVerified = '/login';
+    protected $redirectAfterVerification = '/login?success=true';
 
     /**
      * Create a new controller instance.
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('guest', ['except' => ['getVerification', 'getVerificationError']]);
     }
 
     /**
@@ -47,10 +59,27 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
+            'type' => 'required',
         ]);
+    }
+
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+        $data = $request->all();
+
+        return view('auth.register-success', $data);
     }
 
     /**
@@ -62,10 +91,36 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
+        $user = User::create([
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+        UserVerification::generate($user);
+        UserVerification::send(
+            $user,
+            'Registration confirmation at Talented Europe',
+            env('MAIL_ADDRESS', 'noreply@talentedeurope.eu'),
+            env('MAIL_NAME', 'Talented Europe')
+        );
+
+        switch ($data['type']) {
+            case 'student':
+                $student = Student::create();
+                $student->user()->save($user);
+                Bouncer::assign('student')->to($user);
+                break;
+            case 'company':
+                $company = Company::create();
+                $company->user()->save($user);
+                Bouncer::assign('company')->to($user);
+                break;
+            case 'institution':
+                $institution = Institution::create();
+                $institution->user()->save($user);
+                Bouncer::assign('institution')->to($user);
+                break;
+        }
+
+        return $user;
     }
 }

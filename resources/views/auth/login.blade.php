@@ -29,8 +29,9 @@
                 </div>
             </form>
             <div>
+                <br/>
                 <p>
-                    <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a> | <a class="btn btn-link" href="{{ url('/auth/register') }}">Sign up</a>
+                    <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a> | <a class="btn btn-link" href="{{ url('/register') }}">Sign up</a>
                 </p>
             </div>
         </div>
