@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class ProfileController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => array('index')]);
+    }
+
     public function index(Request $request)
     {
         if ($request->has('company')) {
@@ -18,21 +24,22 @@ class ProfileController extends Controller
         return view('profile.student-view');
     }
 
-    public function edit(Request $request)
+    public function get_edit(Request $request)
     {
-        if ($request->has('student')) {
+        $user = Auth::user();
+        if ($user->isA('student')) {
             return view('profile.student-edit');
         }
 
-        if ($request->has('company')) {
+        if ($user->isA('company')) {
             return view('profile.company-edit');
         }
 
-        if ($request->has('institution')) {
+        if ($user->isA('institution')) {
             return view('profile.institution-edit');
         }
 
-        if ($request->has('validator')) {
+        if ($user->isA('validator')) {
             return view('profile.validator-edit');
         }
     }
@@ -51,7 +58,7 @@ class ProfileController extends Controller
             'skills' => array(
                 array('name' => 'Lorem ipsum', 'important' => true),
                 array('name' => 'Dolor sit amet', 'important' => false),
-                array('name' => 'Consectetur adipiscing elit', 'important' => false)
+                array('name' => 'Consectetur adipiscing elit', 'important' => false),
             ),
             'languages' => array('Spanish', 'English', 'French'),
             'photo' => 'http://placekitten.com/g/150/150',
@@ -59,7 +66,7 @@ class ProfileController extends Controller
             'email' => 'john@doe.com',
             'phone' => '317-456-2564',
             'address' => '32 Reading rd, Birmingham B26 3QJ, United Kingdom',
-            'twitter' => 'http://twitter.com'
+            'twitter' => 'http://twitter.com',
         );
     }
 
@@ -74,13 +81,13 @@ class ProfileController extends Controller
             'skills' => array(
                 array('name' => 'Lorem ipsum'),
                 array('name' => 'Dolor sit amet'),
-                array('name' => 'Consectetur adipiscing elit')
+                array('name' => 'Consectetur adipiscing elit'),
             ),
             'photo' => 'http://placebear.com/g/150/150',
             'email' => 'john@doe.com',
             'phone' => '317-456-2564',
             'address' => '32 Reading rd, Birmingham B26 3QJ, United Kingdom',
-            'twitter' => 'http://twitter.com'
+            'twitter' => 'http://twitter.com',
         );
     }
 
@@ -95,7 +102,7 @@ class ProfileController extends Controller
                 array('full_name' => 'Lorem ipsum dolor sit amet'),
                 array('full_name' => 'Lorem ipsum dolor sit amet'),
                 array('full_name' => 'Lorem ipsum dolor sit amet'),
-            )
+            ),
         );
     }
 

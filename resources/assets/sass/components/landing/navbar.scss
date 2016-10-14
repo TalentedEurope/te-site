@@ -43,6 +43,19 @@
             }
         }
     }
+
+    .navbar-right.login {
+        clear: both;
+        margin-top: 15px;
+
+        a {
+            padding: 0 10px;
+            border: 1px solid;
+            margin: 0 5px;
+            border-radius: 0;
+            width: auto;
+        }
+    }
 }
 
 
