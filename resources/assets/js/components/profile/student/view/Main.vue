@@ -43,7 +43,7 @@ import TrainingProfileSection from './TrainingProfileSection.vue';
 import LanguagesProfileSection from './LanguagesProfileSection.vue';
 import ExperienceProfileSection from './ExperienceProfileSection.vue';
 import ContactInfo from '../../common/ContactInfo.vue';
-import { studentResource } from 'helpers/resources';
+import { studentProfileResource } from 'helpers/resources';
 
 export default {
     components: {
@@ -66,9 +66,9 @@ export default {
     },
     methods: {
         fetchStudent() {
-            studentResource.get()
+            studentProfileResource.get()
                 .then((response) => {
-                    this.student = response;
+                    this.student = response.body;
                 }, (errorResponse) => {
                     console.log(errorResponse);
                 });

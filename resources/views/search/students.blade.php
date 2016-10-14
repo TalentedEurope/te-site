@@ -5,6 +5,6 @@
 
 @section('content')
 <div class="container v-container">
-  <search></search>
+  <search collective="student"></search>
 </div>
 @endsection

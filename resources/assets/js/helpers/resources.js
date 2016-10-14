@@ -1,12 +1,11 @@
 import Vue from 'vue';
 import VueResource from 'vue-resource';
 
-const API_BASE = 'http://te-site.dev';
-
 Vue.use(VueResource);
 
-Vue.http.options = {
-    root: API_BASE
+Vue.http.options.root = '/api';
+Vue.http.options.headers =  {
+    Authorization: 'Basic TMPYXBpOnBhc3N3b3Jk'
 };
 
 Vue.http.interceptors.push((request, next) => {
@@ -18,249 +17,76 @@ Vue.http.interceptors.push((request, next) => {
 });
 
 var StudentsResultsResource = {
-    get: () => {
-        return new Promise((resolve, reject) => {
-            var student = {
-                full_name: 'John Doe',
-                lives_in: 'Spain',
-                studied: 'Doctorate in Lorem ipsum dolor sit amet Consectetuor',
-                studied_in: 'IES Puerto de la Cruz Telesforo Bravo',
-                skills: [
-                    {name: 'Lorem ipsum', important: true},
-                    {name: 'Dolor sit amet', important: false},
-                    {name: 'Consectetur adipiscing elit', important: false}],
-                languages: ['Spanish', 'English', 'French'],
-                photo: 'http://placekitten.com/g/150/150',
-                validated: true
-            }
-            resolve([student, student, student, student]);
-        })
+    get: (filters) => {
+        return Vue.http.get('search/students');
     }
 };
 
 var CompaniesResultsResource = {
     get: () => {
-        return new Promise((resolve, reject) => {
-            var company = {
-                name: 'John Doe LLC.',
-                info: 'Company Sector',
-                we_are_in: 'Santa Cruz de Tenerife, Spain.',
-                talent_is: 'Jelly apple pie icing. Jelly cupcake tiramisu jelly beans marzipan. Cheesecake jelly-o jelly tootsie roll biscuit chocolate macaroon marshmallow. Jelly-o marshmallow tart donut brownie chocolate topping chocolate cake.',
-                skills: [
-                    {name: 'Lorem ipsum'},
-                    {name: 'Dolor sit amet'},
-                    {name: 'Consectetur adipiscing elit'}],
-                photo: 'http://placebear.com/g/150/150',
-            }
-            resolve([company, company, company, company]);
-        })
+        return Vue.http.get('search/companies');
     }
 };
 
-var LevelOfStudiesResource = {
-    get: () => {
-        return new Promise((resolve, reject) => {
-            resolve([
-                {code: '1', name: 'Study level 1'},
-                {code: '2', name: 'Study level 2'},
-                {code: '3', name: 'Study level 3'},
-            ]);
-        })
+var StudentsFiltersResource = {
+    get: (filters) => {
+        return Vue.http.get('search/students/filters');
     }
 };
 
-var FieldOfStudiesResource = {
+var CompaniesFiltersResource = {
     get: () => {
-        return new Promise((resolve, reject) => {
-            resolve([
-                {code: '1', name: 'Field of studies 1'},
-                {code: '2', name: 'Field of studies 2'},
-                {code: '3', name: 'Field of studies 3'},
-            ]);
-        })
-    }
-};
-
-var ActivitiesResource = {
-    get: () => {
-        return new Promise((resolve, reject) => {
-            resolve([
-                {code: '1', name: 'Activity 1'},
-                {code: '2', name: 'Activity 2'},
-                {code: '3', name: 'Activity 3'},
-            ]);
-        })
-    }
-};
-
-var LanguagesResource = {
-    get: () => {
-        return new Promise((resolve, reject) => {
-            resolve([
-                {code: 'spanish', name: 'Spanish'},
-                {code: 'english', name: 'English'},
-                {code: 'french', name: 'French'},
-                {code: 'italian', name: 'Italian'},
-                {code: 'slovak', name: 'Slovak'}
-            ]);
-        })
-    }
-};
-
-var CountriesResource = {
-    get: () => {
-        return new Promise((resolve, reject) => {
-            resolve([
-                {code: 'spain', name: 'Spain'},
-                {code: 'united_kingdom', name: 'United Kingdom'},
-                {code: 'france', name: 'France'},
-                {code: 'italy', name: 'Italy'},
-                {code: 'slovenia', name: 'Slovenia'}
-            ]);
-        })
+        return Vue.http.get('search/companies/filters');
     }
 };
 
 
 var NudgesResource = {
     get: () => {
-        return new Promise((resolve, reject) => {
-            var nudge = {
-                id: 1,
-                student: 'John Doe',
-                country: 'Spain',
-                study_level: 'Bachelor’s or equivalent',
-                when_nudged: 'One days ago'
-            };
-            resolve([nudge, nudge, nudge, nudge]);
-        })
+        return Vue.http.get('nudges');
     }
 };
 
 
 var ValidatorsResource = {
     get: () => {
-        return new Promise((resolve, reject) => {
-            resolve([{
-                full_name: 'John Doe',
-                email: 'johndoe@gmail.com',
-                department: 'Information Technology',
-                position: 'Teacher',
-                active: false
-            }, {
-                full_name: 'John Doe',
-                email: 'johndoe@gmail.com',
-                department: 'Information Technology',
-                position: 'Teacher',
-                active: true
-            }, {
-                full_name: 'John Doe',
-                email: 'johndoe@gmail.com',
-                department: 'Information Technology',
-                position: 'Teacher',
-                active: true
-            }]);
-        })
+        return Vue.http.get('validators');
+    },
+    put: (validator_id) => {
+        return Vue.http.put('validators{/id}', null, {params: {id: validator_id}});
     }
 };
-
 
 var StudentsValidationResource = {
     get: () => {
-        return new Promise((resolve, reject) => {
-            resolve([{
-                full_name: 'Pol Cámara Solé',
-                date_of_request: 'Two days ago',
-                status: 'Pending'
-            }, {
-                full_name: 'Pol Cámara Solé',
-                date_of_request: 'Two days ago',
-                status: 'Validated'
-            }, {
-                full_name: 'Pol Cámara Solé',
-                date_of_request: 'Two days ago',
-                status: 'Not validated'
-            }]);
-        })
+        return Vue.http.get('validation');
     }
 };
 
-var StudentResource = {
+var StudentProfileResource = {
     get: () => {
-        return new Promise((resolve, reject) => {
-            resolve({
-                id: 1,
-                full_name: 'John Doe',
-                studied: 'Doctorate in Lorem ipsum dolor sit amet Consectetuor',
-                lives_in: 'Puerto de la Cruz, Spain',
-                nationality: 'United Kingdom',
-                studied_in: 'IES Puerto de la Cruz Telesforo Bravo',
-                born_on: '17 september 1993',
-                my_talent: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut arcu sed odio vestibulum rhoncus et vel est. Ut id odio eu lorem iaculis posuere quis a elit. Nunc dictum placerat eros, eget pulvinar felis tristique eget. Curabitur fermentum purus vel lorem blandit fringilla. Mauris',
-                skills: [
-                    {name: 'Lorem ipsum', important: true},
-                    {name: 'Dolor sit amet', important: false},
-                    {name: 'Consectetur adipiscing elit', important: false}],
-                languages: ['Spanish', 'English', 'French'],
-                photo: 'http://placekitten.com/g/150/150',
-                validated: true,
-                email: 'john@doe.com',
-                phone: '317-456-2564',
-                address: '32 Reading rd, Birmingham B26 3QJ, United Kingdom',
-                twitter: 'http://twitter.com'
-            })
-        })
+        return Vue.http.get('profile/student');
     }
 };
 
-var CompanyResource = {
+var CompanyProfileResource = {
     get: () => {
-        return new Promise((resolve, reject) => {
-            resolve({
-                id: 1,
-                name: 'John Doe',
-                sector: 'Company sector',
-                we_are_in: 'Santa Cruz de Tenerife, Spain.',
-                talent_is: 'Jelly apple pie icing. Jelly cupcake tiramisu jelly beans marzipan. Cheesecake jelly-o jelly tootsie roll biscuit chocolate macaroon marshmallow. Jelly-o marshmallow tart donut brownie chocolate topping chocolate cake.',
-                skills: [
-                    {name: 'Lorem ipsum'},
-                    {name: 'Dolor sit amet'},
-                    {name: 'Consectetur adipiscing elit'}],
-                photo: 'http://placebear.com/g/150/150',
-                email: 'john@doe.com',
-                phone: '317-456-2564',
-                address: '32 Reading rd, Birmingham B26 3QJ, United Kingdom',
-                twitter: 'http://twitter.com'
-            })
-        })
+        return Vue.http.get('profile/company');
     }
 };
 
-var ValidatorResource = {
+var ValidatorProfileResource = {
     get: () => {
-        return new Promise((resolve, reject) => {
-            resolve({
-                id: 1,
-                full_name: 'John Doe',
-                institution_name: 'Institution name',
-                validated_students: [
-                    {full_name: 'Lorem ipsum dolor sit amet'},
-                    {full_name: 'Lorem ipsum dolor sit amet'},
-                    {full_name: 'Lorem ipsum dolor sit amet'},
-                    {full_name: 'Lorem ipsum dolor sit amet'},
-                ],
-            })
-        })
+        return Vue.http.get('profile/validator');
     }
 };
 
 export const studentsResultsResource = StudentsResultsResource;
 export const companiesResultsResource = CompaniesResultsResource;
-export const levelOfStudiesResource = LevelOfStudiesResource;
-export const fieldOfStudiesResource = FieldOfStudiesResource;
-export const activitiesResource = ActivitiesResource;
-export const languagesResource = LanguagesResource;
-export const countriesResource = CountriesResource;
+
+export const studentsFiltersResource = StudentsFiltersResource;
+export const companiesFiltersResource = CompaniesFiltersResource;
+
 
 export const nudgesResource = NudgesResource;
 
@@ -268,6 +94,6 @@ export const validatorsResource = ValidatorsResource;
 
 export const studentsValidationResource = StudentsValidationResource;
 
-export const studentResource = StudentResource;
-export const companyResource = CompanyResource;
-export const validatorResource = ValidatorResource;
+export const studentProfileResource = StudentProfileResource;
+export const companyProfileResource = CompanyProfileResource;
+export const validatorProfileResource = ValidatorProfileResource;
