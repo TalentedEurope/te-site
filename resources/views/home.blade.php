@@ -61,6 +61,11 @@
               </a>
             </li>
           </ul>
+          <ul class="nav navbar-nav navbar-right login">
+            <li><a href="{{ URL::to('/login') }}">{!! trans('landing.login') !!}</a></li>
+            <li><a href="{{ URL::to('/register') }}">{!! trans('landing.joinbeta') !!}</a></li>
+          </ul>
+
         </div>
       </div>
     </nav>
@@ -105,7 +110,7 @@
             </li>
           </ul>
 
-          <div>
+          <div class="hidden-xs">
             <a href="#about" class="btn btn-primary">
               {{ trans('landing.more') }}
               <i class="fi flaticon-dragdown"></i>
@@ -119,7 +124,7 @@
     <section id="about" class="about content-box col-md-6">
       <div class="content">
         <div class="vertical-centered">
-          <h1>{{ trans('landing.what_is_title') }}</h1>
+          <h1>{!! trans('landing.what_is_title') !!}</h1>
           <p>{!! trans('landing.what_is_text_1') !!}</p>
           <p>{!! trans('landing.what_is_text_2') !!}</p>
           <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochure.pdf') }}" target="_blank" class="btn">
