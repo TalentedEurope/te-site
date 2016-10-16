@@ -9,16 +9,16 @@
                 <li v-for="item in current_search">
                     {{item.name}} <button class="remove-item"><i class="fa fa-close" aria-hidden="true"></i></button>
                 </li>
-          </ul>
+            </ul>
         </div>
-        <multi-options-filter v-for="filter in filters" :items="filter.items" :prefix="filter.code" :title="filter.title"></multi-options-filter>
-
+        <multi-options-filter v-for="filter in filters" @onselectfilter="setFilters" :items="filter.items" :code="filter.code" :title="filter.title"></multi-options-filter>
     </div>
 </template>
 
 <script>
-import MultiOptionsFilter from './MultiOptionsFilter.vue'
-import { companiesFiltersResource, studentsFiltersResource } from '../../helpers/resources'
+import EventBus from 'event-bus.js'
+import MultiOptionsFilter from './MultiOptionsFilter.vue';
+import { companiesFiltersResource, studentsFiltersResource } from 'resources/search';
 
 export default {
     props: ['collective'],
@@ -32,27 +32,30 @@ export default {
                 {code: '2', name: 'Item 2'},
                 {code: '3', name: 'Item 3'},
             ],
-            filters: []
+            filters: [],
+            applied_filters: {}
         }
     },
     mounted () {
         this.fetchFilters();
     },
     methods: {
+        setFilters: function (filter) {
+            this.applied_filters[filter.code] = filter.selected;
+            EventBus.$emit('onChangeFilters', this.applied_filters);
+        },
         fetchFilters: function () {
-            var errorCallback = (errorResponse) => {
-                console.log(errorResponse);
+            if (this.collective == 'company') {
+                var resource = companiesFiltersResource;
+            } else {
+                var resource = studentsFiltersResource;
             }
 
-            if (this.collective == 'company') {
-                companiesFiltersResource.get().then((response) => {
-                    this.filters = response.body;
-                }, errorCallback);
-            } else {
-                studentsFiltersResource.get().then((response) => {
-                    this.filters = response.body;
-                }, errorCallback);
-            }
+            resource.get().then((response) => {
+                this.filters = response.body;
+            }, (errorResponse) => {
+                console.log(errorResponse);
+            });
         }
     },
 }

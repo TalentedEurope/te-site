@@ -9,10 +9,11 @@
 </template>
 
 <script>
+import EventBus from 'event-bus.js'
 import ResultInfo from './ResultInfo.vue'
 import StudentProfile from './StudentProfile.vue'
 import CompanyProfile from './CompanyProfile.vue'
-import { studentsResultsResource, companiesResultsResource } from '../../helpers/resources'
+import { studentsResultsResource, companiesResultsResource } from 'resources/search'
 
 export default {
     props: ['collective'],
@@ -27,19 +28,26 @@ export default {
             companies: []
         }
     },
+    created () {
+        var that = this;
+        EventBus.$on('onChangeFilters', function(filters) {
+            that.fetchResults(filters);
+        });
+
+    },
     mounted () {
         this.fetchResults();
     },
     methods: {
-        fetchResults() {
+        fetchResults(filters) {
             if (this.collective == 'company') {
-                companiesResultsResource.get().then((response) => {
+                companiesResultsResource.get(filters).then((response) => {
                     this.companies = response.body;
                 }, (errorResponse) => {
                     console.log(errorResponse);
                 });
             } else {
-                studentsResultsResource.get().then((response) => {
+                studentsResultsResource.get(filters).then((response) => {
                     this.students = response.body;
                 }, (errorResponse) => {
                     console.log(errorResponse);

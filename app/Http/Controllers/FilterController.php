@@ -29,7 +29,7 @@ class FilterController extends Controller
             )
         );
         $languages = array(
-            'code' => 'Languages',
+            'code' => 'languages',
             'title' => 'Languages',
             'items' => array(
                 array('code' => 'spanish', 'name' => 'Spanish'),
@@ -40,7 +40,7 @@ class FilterController extends Controller
             )
         );
         $countries = array(
-            'code' => 'Countries',
+            'code' => 'countries',
             'title' => 'Countries',
             'items' => array(
                 array('code' => 'spain', 'name' => 'Spain'),
@@ -66,7 +66,7 @@ class FilterController extends Controller
             )
         );
         $countries = array(
-            'code' => 'Countries',
+            'code' => 'countries',
             'title' => 'Countries',
             'items' => array(
                 array('code' => 'spain', 'name' => 'Spain'),

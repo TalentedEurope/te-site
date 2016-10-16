@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { studentsValidationResource } from '../../helpers/resources'
+import { studentsValidationResource } from '../../resources/students-validation'
 
 export default {
     data() {

@@ -26,7 +26,7 @@ import ProfileHeader from '../../common/ProfileHeader.vue'
 import ProfileSection from '../../common/ProfileSection.vue';
 import ContactInfo from '../../common/ContactInfo.vue'
 import SkillsTags from 'components/common/SkillsTags.vue'
-import { companyProfileResource } from 'helpers/resources';
+import { companyProfileResource } from 'resources/profile';
 
 export default {
     components: {
