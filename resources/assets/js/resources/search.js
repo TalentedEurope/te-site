@@ -2,18 +2,26 @@ import http from './http';
 
 var StudentsResultsResource = {
     get: (filters) => {
-        return http.get('search/students');
+        var filters_params = '';
+        if (filters) {
+            filters_params = decodeURIComponent($.param(filters));
+        }
+        return http.get(`search/students?${filters_params}`);
     }
 };
 
 var CompaniesResultsResource = {
-    get: () => {
-        return http.get('search/companies');
+    get: (filters) => {
+        var filters_params = '';
+        if (filters) {
+            filters_params = decodeURIComponent($.param(filters));
+        }
+        return http.get(`search/companies?${filters_params}`);
     }
 };
 
 var StudentsFiltersResource = {
-    get: (filters) => {
+    get: () => {
         return http.get('search/students/filters');
     }
 };
