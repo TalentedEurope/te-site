@@ -4,12 +4,12 @@
         <ul>
             <li v-for="item in getItems">
                 <label v-bind:for="getInputId(code, item.code)">
-                    <input type="checkbox" name="checkboxes" v-bind:id="getInputId(code, item.code)" :value="item.code" v-model="selected_items">
+                    <input type="checkbox" v-bind:id="getInputId(code, item.code)" :checked="item.selected" @change="change(item)">
                     {{item.name}}
                 </label>
             </li>
             <li class="more" v-if="displayViewMore">
-                <button @click="viewMore()"><i class="fa fa-plus-square" aria-hidden="true"></i> View More</button>
+                <button @click.prevent="viewMore()"><i class="fa fa-plus-square" aria-hidden="true"></i> View More</button>
             </li>
         </ul>
     </div>
@@ -22,7 +22,6 @@ export default {
         return {
             'view_more': false,
             'max_items': 4,
-            'selected_items': []
         }
     },
     methods: {
@@ -31,7 +30,15 @@ export default {
         },
         viewMore: function () {
             this.view_more = true;
-            return;
+        },
+        change: function (item) {
+            this.$set(item, 'selected', !item.selected);
+            var data = {code: this.code, item_id: this.getInputId(this.code, item.code), item: item};
+            if (item.selected) {
+                this.$emit('onselectfilter', data);
+            } else {
+                this.$emit('onremovefilter', data);
+            }
         }
     },
     computed: {
@@ -44,11 +51,6 @@ export default {
         displayViewMore() {
             return !(this.view_more || this.items.length <= this.max_items);
         }
-    },
-    watch: {
-        selected_items: function () {
-            this.$emit('onselectfilter', {code: this.code, selected: this.selected_items});
-        },
     }
 }
 </script>
