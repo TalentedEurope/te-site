@@ -3,15 +3,15 @@
         <div class="options-title">
             <span class="h3"><i class="fa fa-filter" aria-hidden="true"></i>Filters</span>
         </div>
-        <div class="current-search">
+        <div class="current-search" v-if="current_search.length > 0">
             <h3>Current Search</h3>
             <ul>
-                <li v-for="item in current_search">
-                    {{item.name}} <button class="remove-item"><i class="fa fa-close" aria-hidden="true"></i></button>
+                <li v-for="filter in current_search">
+                    {{filter.item.name}} <button class="remove-item" @click.prevent="removeCurrentSearchFilter(filter)"><i class="fa fa-close" aria-hidden="true"></i></button>
                 </li>
             </ul>
         </div>
-        <multi-options-filter v-for="filter in filters" @onselectfilter="setFilters" :items="filter.items" :code="filter.code" :title="filter.title"></multi-options-filter>
+        <multi-options-filter v-for="filter in filters" @onselectfilter="selectFilter" @onremovefilter="removeFilter" :items="filter.items" :code="filter.code" :title="filter.title"></multi-options-filter>
     </div>
 </template>
 
@@ -27,11 +27,7 @@ export default {
     },
     data () {
         return {
-            current_search: [
-                {code: '1', name: 'Item 1'},
-                {code: '2', name: 'Item 2'},
-                {code: '3', name: 'Item 3'},
-            ],
+            current_search: [],
             filters: [],
             applied_filters: {}
         }
@@ -40,10 +36,6 @@ export default {
         this.fetchFilters();
     },
     methods: {
-        setFilters: function (filter) {
-            this.applied_filters[filter.code] = filter.selected;
-            EventBus.$emit('onChangeFilters', this.applied_filters);
-        },
         fetchFilters: function () {
             if (this.collective == 'company') {
                 var resource = companiesFiltersResource;
@@ -56,8 +48,39 @@ export default {
             }, (errorResponse) => {
                 console.log(errorResponse);
             });
+        },
+        removeCurrentSearchFilter: function (filter) {
+            var e_filter = this.filters.find(x => x.code === filter.code);
+            var item = e_filter.items.find(x => x.code === filter.item.code);
+            this.$set(item, 'selected', false);
+
+            this.removeFilter(filter);
+        },
+        selectFilter: function (filter) {
+            this.current_search.push(filter);
+
+            if (!this.applied_filters[filter.code]) {
+                this.applied_filters[filter.code] = [];
+            }
+            this.applied_filters[filter.code].push(filter.item.code);
+
+            EventBus.$emit('onChangeFilters', this.applied_filters);
+        },
+        removeFilter: function (filter) {
+            var current_search_filter = this.current_search.find(x => x.item_id === filter.item_id);
+            var index = this.current_search.indexOf(current_search_filter);
+            if (index > -1) {
+                this.current_search.splice(index, 1);
+            }
+
+            index = this.applied_filters[filter.code].indexOf(filter.item.code);
+            if (index > -1) {
+                this.applied_filters[filter.code].splice(index, 1);
+            }
+
+            EventBus.$emit('onChangeFilters', this.applied_filters);
         }
-    },
+    }
 }
 </script>
 
