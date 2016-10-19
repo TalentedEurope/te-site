@@ -28,8 +28,18 @@ class ProfileController extends Controller
     public function getUserProfile(Request $request, $slug, $id)
     {
         $user = User::findOrFail($id);
+        if ($user->visible == false || $user->force_disable == true || $user->is_filled == false) {
+            App::abort(404, 'Not found');
+        }
+
         if ($slug != $user->getSlug()) {
-            return redirect()->route('get_profile', ['id' => $id, 'slug' => $user->getSlug()]);
+            return redirect()->route(
+                'get_profile',
+                [
+                    'id' => $id,
+                    'slug' => $user->getSlug(),
+                ]
+            );
         }
 
         $public = Auth::user() == null;

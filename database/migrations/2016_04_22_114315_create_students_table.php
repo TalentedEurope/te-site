@@ -21,7 +21,6 @@ class CreateStudentsTable extends Migration
             $table->string('curriculum');
             $table->string('talent');
             $table->boolean('valid')->default(false);
-            $table->boolean('visible')->default(false);
             $table->boolean('private')->default(false);
             $table->date('renewed_at');
         });

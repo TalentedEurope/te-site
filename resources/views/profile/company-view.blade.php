@@ -43,8 +43,10 @@
         </figure>
         <div class="contact">
           <h3>Get in contact</h3>
+            @if (Auth::user() && Auth::user()->isA('student'))
             <a href="#" class="btn btn-primary btn-nudge btn-lg"><i class="fa fa-bell" aria-hidden="true"></i> I'm here!</a>
             <a href="#" class="btn btn-primary btn-tooltip btn-lg" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tell the company that you may be interested to work for them"> ? </a>
+            @endif
           <hr>
           @if (!$public)
           <p><i class="fa icon fa-envelope"></i> Email: <a href="mailto:{{ $company->notification_email ? $company->notification_email : $user->email }}">

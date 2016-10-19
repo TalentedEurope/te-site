@@ -29,6 +29,8 @@ class CreateUsersTable extends Migration
             $table->integer('userable_id');
             $table->string('userable_type');
             $table->boolean('notify_me')->default(true);
+            $table->boolean('visible')->default(false);
+            $table->boolean('is_filled')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });
