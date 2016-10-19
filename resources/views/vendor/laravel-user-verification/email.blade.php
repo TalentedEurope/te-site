@@ -60,6 +60,11 @@
         </table>
       </td>
     </tr>
+    <tr>
+      <td style="font-size: 12px">
+      <p>DISCLAIMER: This message is intended exclusively for its address and may contain information that is CONFIDENTIAL, and protected by professional privilege. If you are not the intended recipient you are hereby notified that any dissemination, copy or disclosure of this communication is strictly prohibited by law. If this message has been received in error, please immediately notify us via e-mail to TALENTED EUROPE and delete it.</p>
+      </td>
+    </tr>
   </table>
 </body>
 

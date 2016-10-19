@@ -114,7 +114,7 @@
         <ul class="navigation" role="nav">
           <li><a href="{{ url('/') }}">Home</a></li>
           <li><a href="{{ url('/cookies') }}">Cookies</a></li>
-          <li><a href="{{ url('/cookies') }}">Privacy Policy</a></li>
+          <li><a href="{{ url('/privacy-policy') }}">Privacy Policy</a></li>
         </ul>
         <ul class="navigation">
           <li>
@@ -139,12 +139,13 @@
       </div>
       <div class="col-sm-6">
         <h3>Partners</h3>
-        <ul class="partner-list" class="menu">
-          <li><a href="http://erasmusplus.iespuertodelacruz.es">IES Puerto de la Cruz</a></li>
-          <li><a href="http://cifpcesarmanrique.es/">CIFP César Manrique</a></li>
-          <li><a href="http://europeanprojects.org/">European Projects Association</a></li>
-          <li><a href="http://web.tuke.sk/kj/english_version.htm">Technical University of Kosice</a></li>
-          <li><a href="http://www.beds.ac.uk/">University of Bedfordshire</a></li>
+
+        <ul class="partner-list">
+          <li><a target="_blank" href="http://erasmusplus.iespuertodelacruz.es"><img src="/img/logo-iespto.png" alt="IES Puerto de la Cruz"></a></li>
+          <li><a target="_blank" href="http://cifpcesarmanrique.es/"><img src="/img/logo-cifpcesar.png" alt="CIFP César Manrique"></a></li>
+          <li><a target="_blank" href="http://europeanprojects.org/"><img src="/img/logo-epa.png" alt="European Projects Association"></a></li>
+          <li><a target="_blank" href="http://web.tuke.sk/kj/english_version.htm"><img src="/img/logo-tuke.png" alt="Technical University of Kosice"></a></li>
+          <li><a target="_blank" href="http://www.beds.ac.uk/"><img src="/img/logo-ubbs.png" alt="University of Bedfordshire"></a></li>
         </ul>
       </div>
     </div>

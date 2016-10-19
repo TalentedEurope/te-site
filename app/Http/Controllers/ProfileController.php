@@ -28,6 +28,20 @@ class ProfileController extends Controller
     public function getUserProfile(Request $request, $slug, $id)
     {
         $user = User::findOrFail($id);
+        if ($user->visible == false || $user->force_disable == true || $user->is_filled == false) {
+            App::abort(404, 'Not found');
+        }
+
+        if ($slug != $user->getSlug()) {
+            return redirect()->route(
+                'get_profile',
+                [
+                    'id' => $id,
+                    'slug' => $user->getSlug(),
+                ]
+            );
+        }
+
         $public = Auth::user() == null;
 
         return $this->showProfile($user, $public);
@@ -158,9 +172,18 @@ class ProfileController extends Controller
         return $data;
     }
 
-    public function getCompanyPublicData($user)
+    public function getCompanyPublicData($user, $public = false)
     {
-        return $this->getCompanyPrivateData($user);
+        $data = $this->getCompanyPrivateData($user);
+        $data['public'] = $public;
+        if ($public) {
+            $user->email = preg_replace('/./', '■', $user->email);
+            if ($data['company']->notification_email) {
+                $data['company']->notification_email = preg_replace('/./', '■', $data['company']->notification_email);
+            }
+        }
+
+        return $data;
     }
 
     public function getCompanyPrivateData($user)

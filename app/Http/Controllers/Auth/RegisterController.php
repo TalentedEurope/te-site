@@ -7,13 +7,14 @@ use App\Models\User;
 use App\Models\Institution;
 use App\Models\Student;
 use App\Models\Company;
-use Validator;
+use App\Notifications\AccountActivated;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Auth\Events\Registered;
 use Jrean\UserVerification\Traits\VerifiesUsers;
 use Jrean\UserVerification\Facades\UserVerification;
+use Validator;
 
 class RegisterController extends Controller
 {
@@ -96,12 +97,7 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
         UserVerification::generate($user);
-        UserVerification::send(
-            $user,
-            'Registration confirmation at Talented Europe',
-            env('MAIL_ADDRESS', 'noreply@talentedeurope.eu'),
-            env('MAIL_NAME', 'Talented Europe')
-        );
+        $user->notify(new AccountActivated($user));
 
         switch ($data['type']) {
             case 'student':

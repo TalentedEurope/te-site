@@ -41,7 +41,7 @@
         <div class="row">
           @if ($student->valid && $student->validationRequest)
             @if ($student->validationRequest)
-              <p class="validated-by col-sm-6"><span class="btn btn-lg"><strong><i class="fa fa-star icon"></i> Validated by:
+              <p class="validated-by col-sm-6"><span class="btn btn-lg"><strong><i class="fa fa-star icon"></i> Refereed by:
                </strong>
                <a href="{{
                   route('get_profile',
@@ -56,7 +56,8 @@
             @endif
 
           @else
-            <p class="validated-by col-sm-6"><span class="btn btn-lg"><strong><em>Validation pending</em></strong></span></p>
+            <p class="validated-by col-sm-6"><span class="btn btn-lg"><strong><em>Refereeing
+ pending</em></strong></span></p>
           @endif
           @if ($student->curriculum && !$public)
           <p class="col-sm-6"><a class="btn btn-lg btn-primary pull-right"
@@ -92,7 +93,7 @@
             <h5>Legend</h5>
             <ul class="skills">
               <li class="important">Set by both parties</li>
-              <li>Set by either the validator or the student</li>
+              <li>Set by either the referee or the student</li>
             </ul>
           </div>
         </div>

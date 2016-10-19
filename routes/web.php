@@ -11,6 +11,12 @@
 |
 */
 
+// Static pages
+Route::get('/', 'StaticController@getHome');
+Route::get('/cookies', 'StaticController@getCookies');
+Route::get('/privacy-policy', 'StaticController@getPrivacyPolicy');
+
+// Auth related
 Auth::routes();
 Route::get('email-verification/error', 'Auth\RegisterController@getVerificationError')
         ->name('email-verification.error');
@@ -18,34 +24,42 @@ Route::get('email-verification/check/{token}', 'Auth\RegisterController@getVerif
         ->name('email-verification.check');
 Route::get('/logout', 'Auth\LoginController@logout');
 
-Route::get('/', 'HomeController@index');
-
+// Profiles
 Route::group(['prefix' => 'profile'], function () {
+    // Private URIS
     Route::get('/', 'ProfileController@index')->name('view_profile');
+    Route::get('edit', 'ProfileController@getEdit')->name('edit_profile');
+    Route::post('edit', 'ProfileController@postEdit')->name('update_profile');
+
+    // Profile file downloads.
     Route::get('/curriculum/{id}', 'ProfileController@getCurriculum')->name('get_curriculum');
     Route::get('/gradecard/{id}/study/{studyId}', 'ProfileController@getStudyGradeCard')->name('get_study_gradecard');
     Route::get('/certificate/{id}/study/{studyId}', 'ProfileController@getStudyCertificate')->name('get_study_certificate');
     Route::get('/certificate/{id}/training/{studyId}', 'ProfileController@getTrainingCertificate')->name('get_training_certificate');
     Route::get('/certificate/{id}/language/{studyId}', 'ProfileController@getLanguageCertificate')->name('get_language_certificate');
-    Route::get('edit', 'ProfileController@getEdit')->name('edit_profile');
-    Route::post('edit', 'ProfileController@postEdit')->name('update_profile');
+
+    // Public URIS
     Route::get('/{slug}/{id}', 'ProfileController@getUserProfile')->name('get_profile');
 });
 
+// Nudge-Alert
 Route::group(['prefix' => 'nudges'], function () {
     Route::get('/', 'NudgeController@index')->name('view_nudges');
     Route::get('/{id}', 'NudgeController@delete')->name('delete_nudge');
 });
 
+// Referees
 Route::group(['prefix' => 'validators'], function () {
     Route::get('/', 'ValidatorController@index')->name('view_validators');
     Route::get('/{id}', 'ValidatorController@toggle')->name('toggle_validator');
 });
 
+// Referee
 Route::group(['prefix' => 'validate'], function () {
     Route::get('/', 'ValidationController@index')->name('view_validate_students');
 });
 
+// Search
 Route::group(['prefix' => 'search'], function () {
     Route::get('/', 'SearchController@index')->name('search');
     Route::get('/students', 'SearchController@searchStudents')->name('searchStudents');

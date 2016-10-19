@@ -4,8 +4,8 @@
     box-shadow: 0px 0px 6px darken($light-gray, 10%);
 
     img.te-logo {
-        margin-top: 20px;
-        max-width: 150px;
+        margin-top: 25px;
+        max-width: 200px;
         margin-bottom: 20px;
     }
 
@@ -15,6 +15,11 @@
 
         li {
             display: inline-block;
+        }
+
+        li a:hover {
+            text-decoration: none;
+            color: darken($dark-blue,10%);
         }
 
         li a:after {
@@ -32,13 +37,17 @@
         padding: 0;
 
         a {
-            background: $blue;
+            background: $light-gray;
             color: $white;
             display: inline-block;
             padding: 6px 12px;
 
+            img {
+                max-height: 75px;
+            }
+
             &:hover {
-                background: darken($blue, 10%);
+                background: lighten($light-gray, 10%);
                 text-decoration: none;
             }
         }
