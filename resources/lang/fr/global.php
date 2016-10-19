@@ -57,22 +57,23 @@ return [
     
         'UK' => 'le Royaume-Uni',
     
-        'login_btn' => '',
+        'login_btn' => 'le logiciel',
     
-        'register_button' => '',
+        'register_btn' => 'connectez-vous',
     
-        'search_info' => '',
+        'search_info' => 'recherche',
     
-        'company' => '',
+        'company' => 'la société/ les sociétés',
     
-        'institution' => '',
+        'institution' => 'l&apos;institution / les institutions',
     
-        'student' => '',
+        'student' => 'l&apos; étudiant / les étudiants
+',
     
-        'more_btn' => '',
+        'more_btn' => 'voir plus',
     
         'cookie_text' => '',
     
-        'cookie_accept' => '',
+        'cookie_accept' => 'fermer',
     
 ];

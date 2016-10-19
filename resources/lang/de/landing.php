@@ -21,34 +21,34 @@ return [
     
         'what_is_cta' => '<strong>Erfahre mehr!</strong> Eine Broschühre anfordern!',
     
-        'what_is_text_1' => '',
+        'what_is_text_1' => 'Können Sie sich vorstellen, die besten Studenten aus einem beliebigen europäische Land einzustellen? Möchten Sie ein Teil der europäischen Top-Studenten sein? Tausende Unternehmen gewinnen einen direkten Zugang zu Informationen über Sie und je besser Ihre Bewertung, desto mehr Möglichkeiten haben Sie, eine bessere Arbeit zu finden.',
     
-        'what_is_text_2' => '',
+        'what_is_text_2' => 'Genau das bietet Talentiertes Europa an. Ein Ausstellfenster voller besten Studenten in Europa. Eine einfache Idee, die Arbeitgeber mit Studenten verbindet. Der Treffpunkt für die Besten.',
     
-        'subscribe_title' => '',
+        'subscribe_title' => 'Registriere dich und verfolge unsere Neuigkeiten.',
     
-        'subscribe_text' => '',
+        'subscribe_text' => 'Alle Benachrichtigungen über die Ereignisse und Neuigkeiten auf Talented Europe. ',
     
         'subscribe_form_placeholder' => 'Bitte E-mailadresse angeben.',
     
-        'subscribe_btn_text' => '',
+        'subscribe_btn_text' => 'Registrieren',
     
         'subscribe_follow_text' => 'Bitte folgen auf:',
     
-        'subscribe_text_question' => '',
+        'subscribe_text_question' => 'Neuigkeiten über Talented Europe per E-Mail bekommen',
     
-        'meta_description' => '',
+        'meta_description' => 'Erasmus plus Projekt, das die Verbindung von exzellenten Studenten mit der Arbeit und Praktika in Europa verbindet.',
     
-        'coming_soon' => '',
+        'coming_soon' => 'Inhalt in Bearbeitung',
     
-        'search_placeholder' => '',
+        'search_placeholder' => 'Was suchen Sie?',
     
-        'search_where' => '',
+        'search_where' => 'Wo',
     
-        'search_btn' => '',
+        'search_btn' => 'suchen',
     
-        'statistics_title' => '',
+        'statistics_title' => 'Statistik',
     
-        'students_title' => '',
+        'students_title' => 'talentierte Studenten',
     
 ];

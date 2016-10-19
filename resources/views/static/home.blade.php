@@ -62,8 +62,8 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right login">
-            <li><a href="{{ URL::to('/login') }}">{!! trans('landing.login_btn') !!}</a></li>
-            <li><a href="{{ URL::to('/register') }}">{!! trans('landing.register_btn') !!}</a></li>
+            <li><a href="{{ URL::to('/login') }}">{!! trans('global.login_btn') !!}</a></li>
+            <li><a href="{{ URL::to('/register') }}">{!! trans('global.register_btn') !!}</a></li>
           </ul>
         </div>
       </div>

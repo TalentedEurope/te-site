@@ -59,7 +59,7 @@ return [
     
         'login_btn' => 'Login',
     
-        'register_button' => 'Sign up',
+        'register_btn' => 'Sign up',
     
         'search_info' => 'Search for',
     

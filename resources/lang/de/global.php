@@ -57,22 +57,22 @@ return [
     
         'UK' => 'Vereinigtes Königreich',
     
-        'login_btn' => '',
+        'login_btn' => 'Anmelden',
     
-        'register_button' => '',
+        'register_btn' => 'Bitte anmelden',
     
-        'search_info' => '',
+        'search_info' => 'suchen',
     
-        'company' => '',
+        'company' => 'Unternehmen',
     
-        'institution' => '',
+        'institution' => 'Institution',
     
-        'student' => '',
+        'student' => 'Student/Studenten',
     
-        'more_btn' => '',
+        'more_btn' => 'mehr erfahren',
     
         'cookie_text' => '',
     
-        'cookie_accept' => '',
+        'cookie_accept' => 'Schliessen',
     
 ];
