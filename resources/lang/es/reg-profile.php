@@ -3,6 +3,14 @@
 
 return [
     
+        'studies_level_5' => 'Educación terciaria de ciclo corto',
+    
+        'studies_level_6' => 'Grado en educación terciaria o nivel equivalente ',
+    
+        'studies_level_7' => 'Nivel de maestría, especialización o equivalente',
+    
+        'studies_level_8' => 'Nivel de doctorado o equivalente',
+    
         'company_activity' => 'Sector de actividad',
     
         'company_contact_person' => 'Persona de contacto',

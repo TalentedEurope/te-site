@@ -3,6 +3,14 @@
 
 return [
     
+        'studies_level_5' => 'Short-cycle tertiary education',
+    
+        'studies_level_6' => 'Bachelor’s or equivalent',
+    
+        'studies_level_7' => 'Master’s or equivalent',
+    
+        'studies_level_8' => 'Doctoral or equivalent',
+    
         'company_activity' => 'Activity sector',
     
         'company_contact_person' => 'Contact person',

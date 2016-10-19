@@ -3,6 +3,14 @@
 
 return [
     
+        'studies_level_5' => 'istruzione terziaria di ciclo breve',
+    
+        'studies_level_6' => 'laurea di primo grado o equivalente',
+    
+        'studies_level_7' => 'laurea magistrale o equivalente',
+    
+        'studies_level_8' => 'dottorato di ricerca o equivalente',
+    
         'company_activity' => 'Settore di attività',
     
         'company_contact_person' => 'Persona di contatto',
