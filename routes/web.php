@@ -21,9 +21,6 @@ Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/', 'HomeController@index');
 
 Route::group(['prefix' => 'profile'], function () {
-    // Public URIS
-    Route::get('/{slug}/{id}', 'ProfileController@getUserProfile')->name('get_profile');
-
     // Private URIS
     Route::get('/', 'ProfileController@index')->name('view_profile');
     Route::get('edit', 'ProfileController@getEdit')->name('edit_profile');
@@ -35,6 +32,9 @@ Route::group(['prefix' => 'profile'], function () {
     Route::get('/certificate/{id}/study/{studyId}', 'ProfileController@getStudyCertificate')->name('get_study_certificate');
     Route::get('/certificate/{id}/training/{studyId}', 'ProfileController@getTrainingCertificate')->name('get_training_certificate');
     Route::get('/certificate/{id}/language/{studyId}', 'ProfileController@getLanguageCertificate')->name('get_language_certificate');
+
+    // Public URIS
+    Route::get('/{slug}/{id}', 'ProfileController@getUserProfile')->name('get_profile');
 });
 
 Route::group(['prefix' => 'nudges'], function () {
