@@ -44,6 +44,11 @@ class User extends Authenticatable
         return $route;
     }
 
+    public function getSlug()
+    {
+        return str_slug($this->name.' '.$this->surname);
+    }
+
     public function userable()
     {
         return $this->morphTo();

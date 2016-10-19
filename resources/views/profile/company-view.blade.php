@@ -46,8 +46,10 @@
             <a href="#" class="btn btn-primary btn-nudge btn-lg"><i class="fa fa-bell" aria-hidden="true"></i> I'm here!</a>
             <a href="#" class="btn btn-primary btn-tooltip btn-lg" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tell the company that you may be interested to work for them"> ? </a>
           <hr>
+          @if (!$public)
           <p><i class="fa icon fa-envelope"></i> Email: <a href="mailto:{{ $company->notification_email ? $company->notification_email : $user->email }}">
           {{ $company->notification_email ? $company->notification_email : $user->email }}</a></p>
+          @endif
           @if ($user->phone)
           <p><i class="fa icon fa-phone"></i> Phone:  <a href="tel:{{ $user->phone }}">{{ $user->phone }}</a></p>
           @endif

@@ -18,7 +18,7 @@
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">
           <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
           <li><a href="#contact" data-toggle="tab">Career and Skills</a></li>
-          <li><a href="#validation" data-toggle="tab">Validate your profile</a></li>
+          <li><a href="#refer" data-toggle="tab">Get your profile refereed</a></li>
           <li><a href="#password" data-toggle="tab">Change your password</a></li>
         </ul>
         <div id="profileTab" class="tab-content well">
@@ -31,9 +31,9 @@
                 <!-- <label for="name">Name</label> -->
                 <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="{{ old('name', $user->name) }}">
                 @if ($errors->has('name'))
-                <span class="help-block">
-                <strong>{{ $errors->first('name') }}</strong>
-                </span>
+                  <span class="help-block">
+                    <strong>{{ $errors->first('name') }}</strong>
+                  </span>
                 @endif
               </div>
 
@@ -570,9 +570,9 @@
             </form>
           </div>
 
-          <div class="tab-pane fade" id="validation">
-            <h4>Validate your profile</h4>
-            <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#validation') }}">
+          <div class="tab-pane fade" id="refer">
+            <h4>Get your profile refereed</h4>
+            <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#refer') }}">
               {{ csrf_field() }}
               <div class="form-group{{ $errors->has('validator_name') ? ' has-error' : '' }}">
                 <!-- <label for="validator_name">New validator_name</label> -->
@@ -585,7 +585,7 @@
               </div>
               <div class="form-group{{ $errors->has('validator_email') ? ' has-error' : '' }}">
                 <!-- <label for="validator_email">New validator_email</label> -->
-                <input type="email" class="form-control" id="validator_email" name="validator_email" placeholder="Validator email">
+                <input type="email" class="form-control" id="validator_email" name="validator_email" placeholder="Referee email">
                 @if ($errors->has('validator_email'))
                 <span class="help-block">
                 <strong>{{ $errors->first('validator_email') }}</strong>
@@ -593,7 +593,7 @@
                 @endif
               </div>
               <hr>
-              <button type="submit" class="btn btn-primary">Request a profile validation</button>
+              <button type="submit" class="btn btn-primary">Get your profile refereed</button>
             </form>
           </div>
 
