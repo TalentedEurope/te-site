@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('page-title') Log in @endsection
+@section('page-title') Error 403: Not allowed @endsection
 
 @section('content')
 <div class="container">

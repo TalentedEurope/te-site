@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('page-title') Log in @endsection
+@section('page-title') Error 404: Page not found @endsection
 
 @section('content')
 <div class="container">
