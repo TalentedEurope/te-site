@@ -40,7 +40,7 @@ class User extends Authenticatable
         if ($this->image) {
             $route .= $this->image;
         } else {
-            $route .= 'default.jpg';
+            $route .= 'default.png';
         }
 
         return $route;

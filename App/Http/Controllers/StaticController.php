@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
+
 class StaticController extends Controller
 {
     /**
@@ -18,6 +20,19 @@ class StaticController extends Controller
      */
     public function getHome()
     {
+        $user = Auth::user();
+        if ($user) {
+            if ($user->isA('student')) {
+                if ($user->is_filled) {
+                    return redirect(route('view_profile'));
+                } else {
+                    return redirect(route('edit_profile'));
+                }
+            } elseif ($user->isA('company')) {
+                return redirect(route('search'));
+            }
+        }
+
         return view('static.home');
     }
 

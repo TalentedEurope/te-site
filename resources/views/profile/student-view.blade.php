@@ -205,9 +205,11 @@
 
     <div class="col-xs-12 col-sm-4 col-md-3 text-center contact-info">
       <div class="well">
+        @if ($user->image && !$public)
         <figure>
           <img src="{{ $user->getPhoto() }}" alt="{{ $user->name }} {{ $user->surname }}" class="img-circle img-responsive">
         </figure>
+        @endif
         <div class="contact">
           <h3>Get in contact</h3>
           <hr>

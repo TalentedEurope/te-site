@@ -75,4 +75,6 @@ return [
     
         'cookie_accept' => 'Schliessen',
     
+        'logout_btn' => 'Ausloggen',
+    
 ];

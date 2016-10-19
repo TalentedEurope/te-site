@@ -3,6 +3,14 @@
 
 return [
     
+        'studies_level_5' => 'l´enseignement supérieur de type court',
+    
+        'studies_level_6' => 'le Baccalauréat ou équivalent',
+    
+        'studies_level_7' => 'la Maîtrise ou équivalent',
+    
+        'studies_level_8' => 'le Doctorat ou équivalent',
+    
         'company_activity' => 'le domaine de l&apos; activité',
     
         'company_contact_person' => 'la personne do contact',

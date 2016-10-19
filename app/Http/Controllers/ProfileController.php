@@ -145,13 +145,13 @@ class ProfileController extends Controller
         $languages = array();
 
         foreach (StudentStudy::$levels as $item) {
-            $studyLevels[$item] = trans('regprofile.'.$item);
+            $studyLevels[$item] = trans('reg-profile.'.$item);
         }
         foreach (StudentStudy::$fields as $item) {
-            $studyFields[$item] = trans('regprofile.'.$item);
+            $studyFields[$item] = trans('reg-profile.'.$item);
         }
         foreach (StudentLanguage::$levels as $item) {
-            $languageLevels[$item] = trans('regprofile.'.$item);
+            $languageLevels[$item] = trans('reg-profile.'.$item);
         }
 
         $data = array(

@@ -3,6 +3,14 @@
 
 return [
     
+        'studies_level_5' => 'kurzfristige tertiäre Ausbildung',
+    
+        'studies_level_6' => 'Bachelor oder Ekvivalent',
+    
+        'studies_level_7' => 'Magister oder Ekvivalent',
+    
+        'studies_level_8' => 'Doktor oder Ekvivalent',
+    
         'company_activity' => 'Feld',
     
         'company_contact_person' => 'Kontaktperson',

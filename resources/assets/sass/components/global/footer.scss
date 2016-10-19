@@ -37,7 +37,7 @@
         padding: 0;
 
         a {
-            background: $light-gray;
+            background: $white;
             color: $white;
             display: inline-block;
             padding: 6px 12px;
@@ -47,7 +47,7 @@
             }
 
             &:hover {
-                background: lighten($light-gray, 10%);
+                background: $light-gray;
                 text-decoration: none;
             }
         }

@@ -3,6 +3,14 @@
 
 return [
     
+        'studies_level_5' => 'krátkodobé terciálne vzdelanie ',
+    
+        'studies_level_6' => 'bakalár alebo ekvivalent',
+    
+        'studies_level_7' => 'magister alebo ekvivalent',
+    
+        'studies_level_8' => 'doktor/át alebo ekvivalent',
+    
         'company_activity' => 'oblasť aktivity',
     
         'company_contact_person' => 'Kontaktná osoba',
