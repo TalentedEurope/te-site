@@ -13,6 +13,7 @@ class CompaniesTableSeeder extends Seeder
             'email' => 'test@company',
         ]);
         $user->password = Hash::make('secret');
+        $user->verified = 1;
         $user->save();
         Bouncer::assign('company')->to($user);
 
@@ -26,7 +27,7 @@ class CompaniesTableSeeder extends Seeder
             $company = Company::create([
                 'fiscal_id' => $faker->randomNumber(8),
                 'overseer' => $faker->unique()->name,
-                'address' => $faker->address,
+                 //'address' => $faker->address,
                 'activity' => $faker->word,
 
             ]);

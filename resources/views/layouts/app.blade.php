@@ -76,10 +76,10 @@
           @else
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              {{ Auth::user()->name ? Auth::user()->name : Auth::user()->email }} <span class="caret"></span>
+              {{ Auth::user()->name ? Auth::user()->name . " " . Auth::user()->surname : Auth::user()->email }} <span class="caret"></span>
             </a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-user"></i> Profile</a></li>
+              <li><a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i> Profile</a></li>
 
               <li><a href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i> Settings</a></li>
 

@@ -14,6 +14,7 @@ class InstitutionsTableSeeder extends Seeder
             'email' => 'test@institution',
         ]);
         $user->password = Hash::make('secret');
+        $user->verified = 1;
         $user->save();
         Bouncer::assign('institution')->to($user);
 
@@ -29,10 +30,10 @@ class InstitutionsTableSeeder extends Seeder
                             rand(0, sizeOf(Institution::$types) - 1)
                           ],
                 'overseer' => $faker->unique()->name,
-                'address' => $faker->address,
-                'country' => Institution::$countries[
-                               rand(0, sizeOf(Institution::$countries) - 1)
-                             ],
+                // 'address' => $faker->address,
+                // 'country' => Institution::$countries[
+                //                rand(0, sizeOf(Institution::$countries) - 1)
+                //              ],
             ]);
             $institution->user()->save($user);
         }

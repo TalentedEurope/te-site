@@ -22,8 +22,14 @@ Route::get('/', 'HomeController@index');
 
 Route::group(['prefix' => 'profile'], function () {
     Route::get('/', 'ProfileController@index')->name('view_profile');
-    Route::get('edit', 'ProfileController@get_edit')->name('edit_profile');
-    Route::post('edit', 'ProfileController@post_edit')->name('update_profile');
+    Route::get('/curriculum/{id}', 'ProfileController@getCurriculum')->name('get_curriculum');
+    Route::get('/gradecard/{id}/study/{studyId}', 'ProfileController@getStudyGradeCard')->name('get_study_gradecard');
+    Route::get('/certificate/{id}/study/{studyId}', 'ProfileController@getStudyCertificate')->name('get_study_certificate');
+    Route::get('/certificate/{id}/training/{studyId}', 'ProfileController@getTrainingCertificate')->name('get_training_certificate');
+    Route::get('/certificate/{id}/language/{studyId}', 'ProfileController@getLanguageCertificate')->name('get_language_certificate');
+    Route::get('edit', 'ProfileController@getEdit')->name('edit_profile');
+    Route::post('edit', 'ProfileController@postEdit')->name('update_profile');
+    Route::get('/{slug}/{id}', 'ProfileController@getUserProfile')->name('get_profile');
 });
 
 Route::group(['prefix' => 'nudges'], function () {

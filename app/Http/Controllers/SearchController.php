@@ -10,7 +10,8 @@ class SearchController extends Controller
 {
     public function index(Request $request)
     {
-        if (Auth::user()) {
+        $user = Auth::user();
+        if ($user) {
             if ($user->isA('student')) {
                 return $this->showSearch($request, 'companies');
             }
@@ -55,12 +56,13 @@ class SearchController extends Controller
             'skills' => [
                 array('name' => 'Lorem ipsum', 'important' => true),
                 array('name' => 'Dolor sit amet', 'important' => false),
-                array('name' => 'Consectetur adipiscing elit', 'important' => false)
+                array('name' => 'Consectetur adipiscing elit', 'important' => false),
             ],
             'languages' => ['Spanish', 'English', 'French'],
             'photo' => 'http://placekitten.com/g/150/150',
-            'validated' => true
+            'validated' => true,
         );
+
         return [$student, $student, $student, $student];
     }
 
@@ -74,10 +76,11 @@ class SearchController extends Controller
             'skills' => [
                 array('name' => 'Lorem ipsum'),
                 array('name' => 'Dolor sit amet'),
-                array('name' => 'Consectetur adipiscing elit')
+                array('name' => 'Consectetur adipiscing elit'),
             ],
             'photo' => 'http://placebear.com/g/150/150',
         );
+
         return [$company, $company, $company, $company];
     }
 }

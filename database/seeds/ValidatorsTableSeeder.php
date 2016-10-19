@@ -15,6 +15,7 @@ class ValidatorsTableSeeder extends Seeder
         ]);
         Bouncer::assign('validator')->to($user);
         $user->password = Hash::make('secret');
+        $user->verified = 1;
         $user->save();
 
         $faker = Faker\Factory::create();
