@@ -8,8 +8,8 @@ use App\Models\StudentExperience;
 use App\Models\StudentStudy;
 use App\Models\StudentLanguage;
 use App\Models\ValidationRequest;
-use App\Models\KnowledgeSkill;
 use App\Models\PersonalSkill;
+use App\Models\ProfessionalSkill;
 
 class StudentsTableSeeder extends Seeder
 {
@@ -24,7 +24,10 @@ class StudentsTableSeeder extends Seeder
         ]);
         Bouncer::assign('student')->to($user);
         $user->password = Hash::make('secret');
+        $user->verified = 1;
         $user->save();
+
+        $country_codes = Student::$nationalities;
 
         foreach ($institutions as $institution) {
             foreach ((range(1, 3)) as $index) {
@@ -32,12 +35,11 @@ class StudentsTableSeeder extends Seeder
                     'name' => $faker->unique()->name,
                     'email' => $faker->unique()->email,
                 ]);
+                $nationality = $country_codes[rand(0, sizeOf($country_codes) - 1)];
                 Bouncer::assign('student')->to($user);
                 $student = Student::create([
-                    'address' => $faker->address,
-                    'nationality' => Institution::$countries[
-                                   rand(0, sizeOf(Institution::$countries) - 1)
-                                 ],
+                    // 'address' => $faker->address,
+                    'nationality' => $nationality,
                     'birthdate' => $faker->dateTimeThisCentury->format('Y-m-d'),
                     'institution_id' => $institution->id,
                     'valid' => false,
@@ -84,12 +86,12 @@ class StudentsTableSeeder extends Seeder
                     ]);
                 }
 
-                // Student knowledge skills
-                foreach (range(1, 5) as $knowledgeSkillsIndex) {
+                // Student professional skills
+                foreach (range(1, 5) as $professionalSkillsIndex) {
                     $skillName = $faker->word;
-                    $skill = KnowledgeSkill::firstOrCreate(array('name' => $skillName));
-                    if ($student->knowledgeSkills()->where('name', '=', $skillName)->count() == 0) {
-                        $student->knowledgeSkills()->attach($skill);
+                    $skill = ProfessionalSkill::firstOrCreate(array('name' => $skillName, 'language_code' => $nationality));
+                    if ($student->professionalSkills()->where('name', '=', $skillName)->count() == 0) {
+                        $student->professionalSkills()->attach($skill);
                     }
                 }
 

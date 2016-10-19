@@ -8,8 +8,6 @@ class CreateInstitutionsTable extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
@@ -18,16 +16,11 @@ class CreateInstitutionsTable extends Migration
             $table->enum('type', Institution::$types);
             $table->string('overseer');
             $table->string('fiscal_id');
-            $table->string('address');
-            // For more info: https://countrycode.org/
-            $table->enum('country', Institution::$countries);  
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down()
     {

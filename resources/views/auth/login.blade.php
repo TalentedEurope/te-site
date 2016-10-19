@@ -1,4 +1,7 @@
-@extends('layouts.app') @section('content')
+@extends('layouts.app')
+@section('page-title') Log in @endsection
+
+@section('content')
 <div class="container">
     <div class="row">
         <div class="well auth-box col-sm-6 col-sm-offset-2  col-md-4 col-md-offset-4">

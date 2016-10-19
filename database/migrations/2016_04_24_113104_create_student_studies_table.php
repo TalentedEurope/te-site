@@ -8,15 +8,15 @@ class CreateStudentStudiesTable extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
         Schema::create('student_studies', function (Blueprint $table) {
             $table->increments('id');
-            $table-> string('name');
-            $table->enum('level', StudentStudy::$levels);  
+            $table->string('name');
+            $table->string('institution_name');
+            $table->enum('level', StudentStudy::$levels);
+            $table->enum('field', StudentStudy::$fields);
             $table->string('certificate');
             $table->string('gradecard');
             $table->integer('student_id')->unsigned();
@@ -27,8 +27,6 @@ class CreateStudentStudiesTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down()
     {

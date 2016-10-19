@@ -3,29 +3,26 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateKnowledgeSkillsTable extends Migration
+class CreateProfessionalSkillsTable extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
     public function up()
     {
-        Schema::create('knowledge_skills', function (Blueprint $table) {
+        Schema::create('professional_skills', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique();    
+            $table->string('language_code');
+            $table->string('name');
+            $table->unique(array('language_code', 'name'));
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down()
     {
-        Schema::drop('knowledge_skills');
+        Schema::drop('professional_skills');
     }
 }
-
