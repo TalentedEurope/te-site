@@ -131,7 +131,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'it' => 'commerciale',                    
                 
-                    'de' => '',                    
+                    'de' => 'kommerziell',                    
                 
                     'fr' => 'qui a l´esprit d´entreprise',                    
                 

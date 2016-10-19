@@ -17,38 +17,38 @@ return [
     
         'more' => 'per saperne di più',
     
-        'what_is_title' => 'Che cos&apos;è l&apos;Europa dei Talenti?',
+        'what_is_title' => 'Che cos&apos;è la Talented Europe?',
     
         'what_is_cta' => '<strong>Scopri di più!</strong> Richiedi opuscolo!',
     
-        'what_is_text_1' => 'Sapete immaginare la possibilità di assumere i migliori studenti da qualsiasi paese europeo? Vorreste far parte del settore degli studenti d’élite d’Europa? Migliaia di compagnie avranno accesso diretto alle vostre informazioni di contatto. Migliore valutazione ottenete, più grandi possibilità avrete di trovare un bel lavoro.',
+        'what_is_text_1' => 'Sai immaginare di essere capace di assumere i migliori studenti da qualsiasi paese europeo? Vorresti far parte del settore degli studenti d’élite d’Europa? Migliaia di compagnie avranno accesso diretto all tue informazioni di contatto. Migliore valutazione ottieni, più grandi possibilità avrai di trovare un bel lavoro.',
     
-        'what_is_text_2' => 'E‘ proprio quello che offre l‘Europa dei Talenti. Una vitrina piena dei migliori studenti d‘Europa. Una semplice idea che unisce i datori di lavoro e gli studenti. Punto di ritrovo per eccellenza.',
+        'what_is_text_2' => 'E‘ proprio quello che offre la Talented Europe. Una vitrina piena dei migliori studenti d‘Europa. Una semplice idea che unisce i datori di lavoro e gli studenti. Punto di ritrovo per eccellenza.',
     
         'subscribe_title' => 'Registrati e segui i nostri aggiornamenti.',
     
-        'subscribe_text' => 'Ricevere notifiche su tutti gli eventi e novità su Talented Europe',
+        'subscribe_text' => 'Ricevi notifiche circa tutti gli eventi e novità su Talented Europe',
     
-        'subscribe_form_placeholder' => 'Inserire indirizzo email.',
+        'subscribe_form_placeholder' => 'Inserisci indirizzo email',
     
         'subscribe_btn_text' => 'registrati',
     
         'subscribe_follow_text' => 'oppure seguici su',
     
-        'subscribe_text_question' => '',
+        'subscribe_text_question' => 'Ricevi news circa Talented Europe nella tua casella di posta elettronica. <br/> Non esitare a darci la tua risposta a: Che cosa significa talento per te?',
     
-        'meta_description' => '',
+        'meta_description' => 'Un progetto Erasmus Plus che permette di facilitare l‘accesso degli studenti eccellenti alle opportunità di lavoro e di stage in tutta l’Europa.',
     
-        'coming_soon' => '',
+        'coming_soon' => 'prossimamentP',
     
-        'search_placeholder' => '',
+        'search_placeholder' => 'Che cosa stai cercando?',
     
-        'search_where' => '',
+        'search_where' => 'dove',
     
-        'search_btn' => '',
+        'search_btn' => 'Cerca',
     
-        'statistics_title' => '',
+        'statistics_title' => 'Statistiche',
     
-        'students_title' => '',
+        'students_title' => 'Studenti di talento',
     
 ];

@@ -59,7 +59,7 @@ return [
     
         'login_btn' => 'Login',
     
-        'register_button' => 'Prihláste sa',
+        'register_btn' => 'Prihláste sa',
     
         'search_info' => 'vyhľadávaj',
     

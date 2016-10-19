@@ -57,22 +57,22 @@ return [
     
         'UK' => 'Regno Unito',
     
-        'login_btn' => '',
+        'login_btn' => 'Accedi',
     
-        'register_button' => '',
+        'register_btn' => 'Registrati',
     
-        'search_info' => '',
+        'search_info' => 'Cerca',
     
-        'company' => '',
+        'company' => 'Compagnia/compagnie',
     
-        'institution' => '',
+        'institution' => 'Istituzione/istituzioni',
     
-        'student' => '',
+        'student' => 'Studente/studenti',
     
-        'more_btn' => '',
+        'more_btn' => 'Scopri di più',
     
-        'cookie_text' => '',
+        'cookie_text' => 'Questo sito web utilizza i cookie per garantire il corretto funzionamento delle procedure e migliorare l&apos;esperienza di utilizzazione dei servizi offerti online. Continuando la navigazione sul sito, si acconsente all&apos;utilizzo dei cookie. Per sapere di più sull‘uso dei cookie e sulla loro gestione, leggi <a href="/privacy-policy">cookie notice</a>',
     
-        'cookie_accept' => '',
+        'cookie_accept' => 'chiudere',
     
 ];

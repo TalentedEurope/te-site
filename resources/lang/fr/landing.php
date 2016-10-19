@@ -35,20 +35,20 @@ return [
     
         'subscribe_follow_text' => 'ou suivez-nous sur',
     
-        'subscribe_text_question' => '',
+        'subscribe_text_question' => 'Recevez des nouvelles sur Talented Europe dans votre boîte de mail',
     
-        'meta_description' => '',
+        'meta_description' => 'Erasmus Plus est un projet qui permet de faciliter l&apos; accès des excellents étudiants au travail et aux stages en Europe',
     
-        'coming_soon' => '',
+        'coming_soon' => 'le contenu sera bientot ajouté',
     
-        'search_placeholder' => '',
+        'search_placeholder' => 'Qu&apos; est-ce que vous cherchez? ',
     
-        'search_where' => '',
+        'search_where' => 'où',
     
-        'search_btn' => '',
+        'search_btn' => 'recherche',
     
-        'statistics_title' => '',
+        'statistics_title' => 'les statistiques',
     
-        'students_title' => '',
+        'students_title' => 'les étudiants doués',
     
 ];

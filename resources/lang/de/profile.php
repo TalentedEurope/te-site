@@ -3,12 +3,12 @@
 
 return [
     
-        'studies_level_5' => '',
+        'studies_level_5' => 'kurzfristige tertiäre Ausbildung',
     
-        'studies_level_6' => '',
+        'studies_level_6' => 'Bachelor oder Ekvivalent',
     
-        'studies_level_7' => '',
+        'studies_level_7' => 'Magister oder Ekvivalent',
     
-        'studies_level_8' => '',
+        'studies_level_8' => 'Doktor oder Ekvivalent',
     
 ];
