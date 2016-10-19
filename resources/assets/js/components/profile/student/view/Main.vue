@@ -43,7 +43,7 @@ import TrainingProfileSection from './TrainingProfileSection.vue';
 import LanguagesProfileSection from './LanguagesProfileSection.vue';
 import ExperienceProfileSection from './ExperienceProfileSection.vue';
 import ContactInfo from '../../common/ContactInfo.vue';
-import { studentProfileResource } from 'helpers/resources';
+import { studentProfileResource } from 'resources/profile';
 
 export default {
     components: {

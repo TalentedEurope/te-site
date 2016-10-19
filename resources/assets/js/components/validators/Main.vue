@@ -39,7 +39,7 @@
 
 <script>
 import NewValidator from './NewValidator.vue'
-import { validatorsResource } from '../../helpers/resources'
+import { validatorsResource } from '../../resources/validators'
 
 export default {
     components: {

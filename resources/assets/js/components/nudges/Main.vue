@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import { nudgesResource } from '../../helpers/resources';
+import { nudgesResource } from '../../resources/nudges';
 
 export default {
     data() {
