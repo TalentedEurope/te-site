@@ -6,6 +6,12 @@
 @section('content')
 <div class="container">
   <div class="row profile">
+    @if($public)
+    <div class="col-xs-12 alert alert-danger">
+        <p>Do you want to show this company how talented are you? <a href="{{ url('/register') }}">Sign up</a></p>
+    </div>
+    @endif
+
     <div class="col-xs-12 col-sm-8 col-md-9">
       <div class="well student-name">
         <h2 class="title">{{ $user->name }} </h2>
@@ -38,9 +44,11 @@
 
     <div class="col-xs-12 col-sm-4 col-md-3 text-center contact-info">
       <div class="well">
+        @if ($user->image)
         <figure>
           <img src="{{ $user->getPhoto() }}" alt="{{ $user->name }}" class="img-circle img-responsive">
         </figure>
+        @endif
         <div class="contact">
           <h3>Get in contact</h3>
             @if (Auth::user() && Auth::user()->isA('student'))

@@ -76,4 +76,6 @@ return [
     
         'cookie_accept' => 'fermer',
     
+        'logout_btn' => 'Se déconnecter',
+    
 ];

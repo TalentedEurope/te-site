@@ -75,4 +75,6 @@ return [
     
         'cookie_accept' => 'Zatvoriť',
     
+        'logout_btn' => 'Odhlásiť sa',
+    
 ];
