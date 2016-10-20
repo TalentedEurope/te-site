@@ -2,8 +2,8 @@
     <div class="col-sm-8 col-md-9">
         <result-info :collective="collective"></result-info>
         <ul class="results">
-            <student-profile v-if="students" v-for="student in students" :student="student"></student-profile>
-            <company-profile v-if="companies" v-for="company in companies" :company="company"></company-profile>
+            <student-profile v-if="collective == 'students'" v-for="student in results" :student="student"></student-profile>
+            <company-profile v-if="collective == 'companies'" v-for="company in results" :company="company"></company-profile>
         </ul>
     </div>
 </template>
@@ -24,35 +24,36 @@ export default {
     },
     data() {
         return {
-            students: [],
-            companies: []
+            results: [],
+            filters: null,
+            search_text: null
         }
     },
     created () {
         var that = this;
         EventBus.$on('onChangeFilters', function(filters) {
-            that.fetchResults(filters);
+            this.filters = filters;
+            that.fetchResults(this.filters, this.search_text);
         });
-
+        EventBus.$on('onSearch', function(search_text) {
+            this.search_text = search_text;
+            that.fetchResults(this.filters, this.search_text);
+        });
     },
     mounted () {
         this.fetchResults();
     },
     methods: {
-        fetchResults(filters) {
-            if (this.collective == 'company') {
-                companiesResultsResource.get(filters).then((response) => {
-                    this.companies = response.body;
-                }, (errorResponse) => {
-                    console.log(errorResponse);
-                });
-            } else {
-                studentsResultsResource.get(filters).then((response) => {
-                    this.students = response.body;
-                }, (errorResponse) => {
-                    console.log(errorResponse);
-                });
+        fetchResults(filters, search_text) {
+            var resource = studentsResultsResource;
+            if (this.collective == 'companies') {
+                resource = companiesResultsResource;
             }
+            resource.get(filters, search_text).then((response) => {
+                this.results = response.body;
+            }, (errorResponse) => {
+                console.log(errorResponse);
+            });
         }
     },
 }

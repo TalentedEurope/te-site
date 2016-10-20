@@ -1,22 +1,26 @@
 import http from './http';
 
 var StudentsResultsResource = {
-    get: (filters) => {
-        var filters_params = '';
-        if (filters) {
-            filters_params = decodeURIComponent($.param(filters));
+    get: (filters={}, search_text) => {
+        var params = '';
+        if (search_text) {
+            filters["search_text"] = search_text;
         }
-        return http.get(`search/students?${filters_params}`);
+        params = decodeURIComponent($.param(filters));
+
+        return http.get(`search/students?${params}`);
     }
 };
 
 var CompaniesResultsResource = {
-    get: (filters) => {
-        var filters_params = '';
-        if (filters) {
-            filters_params = decodeURIComponent($.param(filters));
+    get: (filters={}, search_text) => {
+        var params = '';
+        if (search_text) {
+            filters["search_text"] = search_text;
         }
-        return http.get(`search/companies?${filters_params}`);
+        params = decodeURIComponent($.param(filters));
+
+        return http.get(`search/companies?${params}`);
     }
 };
 
