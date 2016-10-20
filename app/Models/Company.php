@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Company extends Model
 {
     public $timestamps = false;
-    public static $activities = ['activity.administration', 'activity.architecture-amp-construction', 'activity.art-amp-culture', 'activity.banking-and-or-finance-amp-insurance', 'activity.business-amp-consulting', 'activity.communication-amp-media-amp-pr', 'activity.consumer-goods', 'activity.customer-service', 'activity.design', 'activity.education-amp-training', 'activity.engineering', 'activity.hospitality-amp-tourism', 'activity.human-resources', 'activity.it-amp-web', 'activity.legal', 'activity.logistics', 'activity.manufacturing', 'activity.marketing-amp-advertising', 'activity.medicine-amp-pharmaceutics', 'activity.politics', 'activity.quality-assurance-amp-safety', 'activity.real-estate', 'activity.research-amp-development', 'activity.retail-amp-wholesale', 'activity.sales', 'activity.social-work', 'activity.sport-and-or-health-amp-wellness', 'activity.technology-amp-telecommunications'];
+    public static $activities = ['administration', 'architecture-amp-construction', 'art-amp-culture', 'banking-and-or-finance-amp-insurance', 'business-amp-consulting', 'communication-amp-media-amp-pr', 'consumer-goods', 'customer-service', 'design', 'education-amp-training', 'engineering', 'hospitality-amp-tourism', 'human-resources', 'it-amp-web', 'legal', 'logistics', 'manufacturing', 'marketing-amp-advertising', 'medicine-amp-pharmaceutics', 'politics', 'quality-assurance-amp-safety', 'real-estate', 'research-amp-development', 'retail-amp-wholesale', 'sales', 'social-work', 'sport-and-or-health-amp-wellness', 'activity.technology-amp-telecommunications'];
 
     public static $rules = array(
             'overseer' => 'required',

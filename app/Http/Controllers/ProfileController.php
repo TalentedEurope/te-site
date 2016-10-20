@@ -10,6 +10,7 @@ use App\Models\ValidationRequest;
 use App\Models\StudentStudy;
 use App\Models\StudentLanguage;
 use Auth;
+use Validator;
 
 class ProfileController extends Controller
 {
@@ -28,20 +29,6 @@ class ProfileController extends Controller
     public function getUserProfile(Request $request, $slug, $id)
     {
         $user = User::findOrFail($id);
-        if ($user->visible == false || $user->force_disable == true || $user->is_filled == false) {
-            App::abort(404, 'Not found');
-        }
-
-        if ($slug != $user->getSlug()) {
-            return redirect()->route(
-                'get_profile',
-                [
-                    'id' => $id,
-                    'slug' => $user->getSlug(),
-                ]
-            );
-        }
-
         $public = Auth::user() == null;
 
         return $this->showProfile($user, $public);
@@ -71,11 +58,7 @@ class ProfileController extends Controller
         }
 
         if ($user->isA('company')) {
-            if ($user->userable) {
-                $data['company'] = $user->userable;
-            } else {
-                $data['company'] = new Company();
-            }
+            $data = $this->getCompanyPrivateData($user);
 
             return view('profile.company-edit', $data);
         }
@@ -87,6 +70,34 @@ class ProfileController extends Controller
         if ($user->isA('validator')) {
             return view('profile.validator-edit');
         }
+    }
+
+    public function postEdit(Request $request)
+    {
+        $errors = Validator::make($request->all(), array());
+
+        // Generic functions that may run on multiple profiles
+        if ($request->has('password')) {
+            $errors = $errors->messages()->merge($this->doPasswordChange($request));
+        }
+
+        return back()->withErrors($errors);
+    }
+
+    private function doPasswordChange(Request $request)
+    {
+        $user = Auth::User();
+        $rules = array(
+                'password' => 'required|min:8',
+                'password_confirm' => 'required|min:8|same:password',
+        );
+        $v = Validator::make($request->all(), $rules);
+        if ($v->passes()) {
+            $user->password = \Hash::make($request->input('password'));
+            $user->save();
+        }
+
+        return $v;
     }
 
     public function getStudentPublicData($user, $public = false)
@@ -145,13 +156,13 @@ class ProfileController extends Controller
         $languages = array();
 
         foreach (StudentStudy::$levels as $item) {
-            $studyLevels[$item] = trans('reg-profile.'.$item);
+            $studyLevels[$item] = trans('regprofile.'.$item);
         }
         foreach (StudentStudy::$fields as $item) {
-            $studyFields[$item] = trans('reg-profile.'.$item);
+            $studyFields[$item] = trans('regprofile.'.$item);
         }
         foreach (StudentLanguage::$levels as $item) {
-            $languageLevels[$item] = trans('reg-profile.'.$item);
+            $languageLevels[$item] = trans('regprofile.'.$item);
         }
 
         $data = array(
@@ -174,14 +185,11 @@ class ProfileController extends Controller
 
     public function getCompanyPublicData($user, $public = false)
     {
-        $data = $this->getCompanyPrivateData($user);
-        $data['public'] = $public;
+        $data = $this->getCompanyPrivateData($user, $public);
         if ($public) {
             $user->email = preg_replace('/./', '■', $user->email);
-            if ($data['company']->notification_email) {
-                $data['company']->notification_email = preg_replace('/./', '■', $data['company']->notification_email);
-            }
         }
+        $data['public'] = $public;
 
         return $data;
     }
@@ -190,7 +198,7 @@ class ProfileController extends Controller
     {
         $activities = array();
         foreach (Company::$activities as $item) {
-            $activities[$item] = trans('regprofile.'.$item);
+            $activities[$item] = trans('reg-profile.'.$item);
         }
 
         $data = array(
