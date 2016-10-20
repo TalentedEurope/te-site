@@ -14,6 +14,8 @@ require('laravel-elixir-webpack-official');
  |
  */
 
+elixir.config.muted = true;
+
 elixir(function(mix) {
     var bootstrapPath = 'node_modules/bootstrap-sass/assets';
     var conditionizrPath = 'node_modules/conditionizr';
@@ -35,6 +37,4 @@ elixir(function(mix) {
     mix.webpack('main.js');
 
     mix.version(['public/css/*.css', 'public/js/*.js']);
-
-    mix.phpUnit();
 });

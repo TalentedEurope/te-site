@@ -20,10 +20,6 @@ module.exports = {
                 loader: 'babel',
                 exclude: /node_modules/
             },
-            {
-                test: /\.vue$/,
-                loader: 'vue'
-            }
         ]
     },
     vue: {
