@@ -71,7 +71,6 @@ class StudentsTableSeeder extends Seeder
                         ],
                         'student_id' => $student->id,
                         'certificate' => '/uploads/certificate/sample.pdf',
-                        'first_language' => rand(0, 1) == 1 ? true : false,
                     ]);
                 }
                 $student->user()->save($user);

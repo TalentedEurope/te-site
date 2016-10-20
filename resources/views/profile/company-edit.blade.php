@@ -9,13 +9,13 @@
     <div class="col-md-12 col-xs-12">
       <h1 class="page-title">My profile</h1>
       <div class="col-sm-4 col-md-4 col-xs-12">
-        <img src="http://placehold.it/400x400" alt="" class="img-responsive" />
+        <img src="{{ asset($user->getPhoto()) }}" alt="" class="img-responsive" />
       </div>
       <div class="col-sm-8 col-md-8 col-xs-12">
         <!-- Content -->
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">
           <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
-          <li><a href="#contact" data-toggle="tab">Alternative Contact</a></li>
+          <li><a href="#contact" data-toggle="tab">Contact Person</a></li>
           <li><a href="#password" data-toggle="tab">Change your password</a></li>
         </ul>
         <div id="profileTab" class="tab-content well">
@@ -23,10 +23,19 @@
             <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#profile') }}">
               {{ csrf_field() }}
               <!-- company_name -->
+              <h4>Profile Visibility</h4>
+              <div class="radio">
+                <label><input type="radio" @if ($user->visible == true) checked @endif name="visible" value="1">Visible. Can be searched, viewed</label>
+              </div>
+              <div class="radio">
+                <label><input @if ($user->visible != true) checked @endif type="radio" name="visible" value="0">Hidden. Cannot be searched or viewed</label>
+              </div>
+              <hr class="separator">
               <h4>About</h4>
+
               <div class="form-group{{ $errors->has('company_name') ? ' has-error' : '' }}">
                 <!-- <label for="company_name">Name</label> -->
-                <input type="text" class="form-control" id="company_name" name="company_name" placeholder="Name" value="">
+                <input type="text" class="form-control" id="company_name" name="company_name" placeholder="Name" value="{{ old('company_name', $user->name) }}">
                 @if ($errors->has('company_name'))
                 <span class="help-block">
                   <strong>{{ $errors->first('company_name') }}</strong>
@@ -36,29 +45,41 @@
               <div class="row">
                 <div class="col-sm-6 form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                   <!-- <label for="email">Email</label> -->
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Email" value=""> @if ($errors->has('email'))
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Email" readonly value="{{ old('email', $user->email) }}"> @if ($errors->has('email'))
                   <span class="help-block">
                     <strong>{{ $errors->first('email') }}</strong>
                   </span> @endif
                 </div>
                 <div class="col-sm-6 form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
                   <!-- <label for="phone">Phone</label> -->
-                  <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" value=""> @if ($errors->has('phone'))
+                  <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" value="{{ old('phone', $user->phone) }}">
+                  @if ($errors->has('phone'))
                   <span class="help-block">
                     <strong>{{ $errors->first('phone') }}</strong>
-                  </span> @endif
+                  </span>
+                  @endif
                 </div>
               </div>
-              <div class="form-group{{ $errors->has('sector') ? ' has-error' : '' }}">
-                <!-- <label for="Activity sector">Name</label> -->
-                <input type="text" class="form-control" id="sector" name="sector" placeholder="Activity Sector" value=""> @if ($errors->has('sector'))
+
+              <div class="form-group{{ $errors->has('activity') ? ' has-error' : '' }}">
+                <!-- <label for="activity">activity</label> -->
+                <div class="select-holder">
+                  <select class="form-control" id="activity" name="activity">
+                    <option value="" selected>Activity Sector</option>
+                    @foreach ($activities as $code => $activity)
+                      <option value="{{ $code }}" @if($user->activity == $code) selected @endif >{{ $activity }}</option>
+                    @endforeach
+                  </select>
+                </div>
+                @if ($errors->has('activity'))
                 <span class="help-block">
-                  <strong>{{ $errors->first('sector') }}</strong>
+                  <strong>{{ $errors->first('activity') }}</strong>
                 </span> @endif
               </div>
+
               <div class="form-group{{ $errors->has('person_in_charge') ? ' has-error' : '' }}">
                 <!-- <label for="Legal representative">Name</label> -->
-                <input type="text" class="form-control" id="person_in_charge" name="person_in_charge" placeholder="Legal representative" value=""> @if ($errors->has('person_in_charge'))
+                <input type="text" class="form-control" id="person_in_charge" name="person_in_charge" placeholder="Legal representative" value="{{ old('person_in_charge', $company->overseer) }}"> @if ($errors->has('person_in_charge'))
                 <span class="help-block">
                   <strong>{{ $errors->first('person_in_charge') }}</strong>
                 </span> @endif
@@ -67,27 +88,34 @@
                 <label for="logo">Company Logo</label>
                 <input type="file" id="logo" name="logo">
               </div>
-              <hr>
-              <h4>Social networks</h4>
+              <hr class="separator">
+              <h4>Social networks and website</h4>
               <div class="form-group{{ $errors->has('facebook') ? ' has-error' : '' }}">
                 <!-- <label for="facebook">Facebook page url</label> -->
-                <input type="text" class="form-control" id="facebook" name="facebook" placeholder="Facebook page url" value=""> @if ($errors->has('facebook'))
+                <input type="text" class="form-control" id="facebook" name="facebook" placeholder="Facebook page url" value="{{ old('facebook', $user->facebook) }}"> @if ($errors->has('facebook'))
                 <span class="help-block">
                   <strong>{{ $errors->first('facebook') }}</strong>
                 </span> @endif
               </div>
               <div class="form-group{{ $errors->has('twitter') ? ' has-error' : '' }}">
                 <!-- <label for="twitter">Twitter page url</label> -->
-                <input type="text" class="form-control" id="twitter" name="twitter" placeholder="Twitter page url" value=""> @if ($errors->has('twitter'))
+                <input type="text" class="form-control" id="twitter" name="twitter" placeholder="Twitter page url" value="{{ old('twitter', $user->twitter) }}"> @if ($errors->has('twitter'))
                 <span class="help-block">
                   <strong>{{ $errors->first('twitter') }}</strong>
                 </span> @endif
               </div>
-              <hr>
+              <div class="form-group{{ $errors->has('website') ? ' has-error' : '' }}">
+                <!-- <label for="website">website page url</label> -->
+                <input type="text" class="form-control" id="website" name="website" placeholder="Website url" value="{{ old('website', $company->website) }}"> @if ($errors->has('website'))
+                <span class="help-block">
+                  <strong>{{ $errors->first('website') }}</strong>
+                </span> @endif
+              </div>
+              <hr class="separator">
               <h4>Address</h4>
               <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
                 <!-- <label for="address">Address</label> -->
-                <input type="text" class="form-control" id="address" name="address" placeholder="Address" value=""> @if ($errors->has('address'))
+                <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="{{ old('address', $user->address) }}"> @if ($errors->has('address'))
                 <span class="help-block">
                   <strong>{{ $errors->first('address') }}</strong>
                 </span> @endif
@@ -95,14 +123,14 @@
               <div class="row">
                 <div class="col-sm-4 form-group{{ $errors->has('postal_code') ? ' has-error' : '' }}">
                   <!-- <label for="postal_code">Postal Code</label> -->
-                  <input type="text" class="form-control" id="postal_code" name="postal_code" placeholder="Postal Code" value=""> @if ($errors->has('postal_code'))
+                  <input type="text" class="form-control" id="postal_code" name="postal_code" placeholder="Postal Code" value="{{ old('postal_code', $user->postal_code) }}"> @if ($errors->has('postal_code'))
                   <span class="help-block">
                     <strong>{{ $errors->first('postal_code') }}</strong>
                   </span> @endif
                 </div>
                 <div class="col-sm-8 form-group{{ $errors->has('city') ? ' has-error' : '' }}">
                   <!-- <label for="city">City</label> -->
-                  <input type="text" class="form-control" id="city" name="city" placeholder="City" value=""> @if ($errors->has('city'))
+                  <input type="text" class="form-control" id="city" name="city" placeholder="City" value="{{ old('city', $user->city) }}"> @if ($errors->has('city'))
                   <span class="help-block">
                     <strong>{{ $errors->first('city') }}</strong>
                   </span> @endif
@@ -113,10 +141,9 @@
                 <div class="select-holder">
                   <select class="form-control" id="country" name="country">
                     <option value="" selected>Country</option>
-                    <option>Spain</option>
-                    <option>United Kingdom</option>
-                    <option>France</option>
-                    <option>Italy</option>
+                    @foreach ($countries as $code => $country)
+                      <option value="{{ $code }}" @if($user->country == $code) selected @endif >{{ $country }}</option>
+                    @endforeach
                   </select>
                 </div>
                 @if ($errors->has('country'))
@@ -124,10 +151,10 @@
                   <strong>{{ $errors->first('country') }}</strong>
                 </span> @endif
               </div>
-              <hr>
+              <hr class="separator">
               <div class="form-group{{ $errors->has('what_is_talent') ? ' has-error' : '' }}">
                 <label for="what_is_talent">What is talent for you?</label>
-                <textarea class="form-control" id="what_is_talent" name="what_is_talent" placeholder="Explain us what is talent for you in a few words (max 300)."></textarea>
+                <textarea class="form-control" id="what_is_talent" name="what_is_talent" placeholder="Explain us what is talent for you in a few words (max 300).">{{ old('talent', $company->talent) }}</textarea>
                 @if ($errors->has('what_is_talent'))
                 <span class="help-block">
                   <strong>{{ $errors->first('what_is_talent') }}</strong>
@@ -146,20 +173,20 @@
             </form>
           </div>
           <div class="tab-pane fade" id="contact">
-            <h4>Alternative contact</h4>
+            <h4>Contact person</h4>
             <label>Setup an alternative contact user that will receive all the notifications instead of the main account</label>
             <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#contact') }}">
               {{ csrf_field() }}
               <div class="form-group{{ $errors->has('contact_name') ? ' has-error' : '' }}">
                 <!-- <label for="contact_name">Name</label> -->
-                <input type="text" class="form-control" id="contact_name" name="contact_name" placeholder="Name" value=""> @if ($errors->has('contact_name'))
+                <input type="text" class="form-control" id="contact_name" name="contact_name" placeholder="Name" value="{{ old('contact_name', $company->notification_name) }}"> @if ($errors->has('contact_name'))
                 <span class="help-block">
                   <strong>{{ $errors->first('contact_name') }}</strong>
                 </span> @endif
               </div>
               <div class="form-group{{ $errors->has('contact_email') ? ' has-error' : '' }}">
                 <!-- <label for="email">Email</label> -->
-                <input type="email" class="form-control" id="contact_email" name="contact_email" placeholder="Contact email" value=""> @if ($errors->has('contact_email'))
+                <input type="email" class="form-control" id="contact_email" name="contact_email" placeholder="Contact email" value="{{ old('contact_name', $company->notification_email) }}"> @if ($errors->has('contact_email'))
                 <span class="help-block">
                   <strong>{{ $errors->first('contact_email') }}</strong>
                 </span> @endif
@@ -170,7 +197,7 @@
           </div>
           <div class="tab-pane fade" id="password">
             <p><span class="h4">Change your password</span></p>
-            <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#password') }}">
+            <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#password' }}">
               {{ csrf_field() }}
               <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                 <!-- <label for="password">New Password</label> -->

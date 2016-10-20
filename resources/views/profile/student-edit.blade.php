@@ -4,8 +4,6 @@
 @section('page-class') my-profile @endsection
 
 @section('content')
-
-
 <div class="container edit-profile">
   <div class="row">
     <div class="col-md-12 col-xs-12">
@@ -167,7 +165,14 @@
           <div class="tab-pane fade" id="contact">
             <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#contact') }}">
             {{ csrf_field() }}
-
+            <h4>Profile Visibility</h4>
+            <div class="radio">
+              <label><input type="radio" @if ($user->visible == true) checked @endif name="visible" value="1">Visible. Can be searched, viewed</label>
+            </div>
+            <div class="radio">
+              <label><input @if ($user->visible != true) checked @endif type="radio" name="visible" value="0">Hidden. Cannot be searched or viewed</label>
+            </div>
+            <hr class="separator">
             <h4>Academic information</h4>
             <hr>
             <div class="form-group">
