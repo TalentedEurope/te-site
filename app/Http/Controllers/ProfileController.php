@@ -10,6 +10,7 @@ use App\Models\ValidationRequest;
 use App\Models\StudentStudy;
 use App\Models\StudentLanguage;
 use Auth;
+use Illuminate\Support\MessageBag;
 use Validator;
 
 class ProfileController extends Controller
@@ -74,19 +75,28 @@ class ProfileController extends Controller
 
     public function postEdit(Request $request)
     {
-        $errors = Validator::make($request->all(), array());
+        $user = Auth::User();
+        $errors = new MessageBag();
+        // Process common information for all profiles.
 
-        // Generic functions that may run on multiple profiles
-        if ($request->has('password')) {
-            $errors = $errors->messages()->merge($this->doPasswordChange($request));
+        $errors = $errors->merge($this->doProcessCommon($request, $user));
+
+        /*
+        // Process specific profiles
+        if (Auth::user()->isA('company')) {
+            $errors = $errors->messages()->merge($this->doProcessCompany($request));
+        } elseif (Auth::user()->isA('student')) {
+            $errors = $errors->messages()->merge($this->doProcessCompany($request));
         }
-
+        */
         return back()->withErrors($errors);
     }
 
-    private function doPasswordChange(Request $request)
+    private function doProcessCommon(Request $request, User $user)
     {
-        $user = Auth::User();
+        $errors = new MessageBag();
+
+        // Password reset.
         $rules = array(
                 'password' => 'required|min:8',
                 'password_confirm' => 'required|min:8|same:password',
@@ -96,15 +106,32 @@ class ProfileController extends Controller
             $user->password = \Hash::make($request->input('password'));
             $user->save();
         }
+        // Profile visibility.
 
-        return $v;
+        $errors = $errors->merge($v);
+
+        return $errors;
+    }
+
+    private function doProcessCompany(Request $request)
+    {
+        $errors = Validator::make($request->all(), array());
+
+        return errors;
+    }
+
+    private function doProcessStudent(Request $request)
+    {
+        $errors = Validator::make($request->all(), array());
+
+        return errors;
     }
 
     public function getStudentPublicData($user, $public = false)
     {
         $data = $this->getStudentPrivateData($user);
         $data['public'] = $public;
-        if ($user->userable->studies->count()) {
+        if ($user->userable && $user->userable->studies->count()) {
             $data['mainStudy'] = array('name' => $user->userable->studies[0]->name);
             if ($user->userable->studies[0]->level) {
                 $data['mainStudy']['level'] = $data['studyLevels'][$user->userable->studies[0]->level];
