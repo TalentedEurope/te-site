@@ -1,23 +1,23 @@
 <template>
-    <form class="form-vertical" role="form" method="POST" action="http://te-site.dev/search">
-        <search-bar></search-bar>
+    <div>
+        <search-bar :show-type-selector="showTypeSelector"></search-bar>
         <div class="row">
-            <search-options :collective="collective"></search-options>
+            <search-filters :collective="collective"></search-filters>
             <results :collective="collective"></results>
         </div>
-    </form>
+    </div>
 </template>
 
 <script>
 import SearchBar from './SearchBar.vue'
-import SearchOptions from './SearchOptions.vue'
+import SearchFilters from './SearchFilters.vue'
 import Results from './Results.vue'
 
 export default {
-    props: ['collective'],
+    props: ['collective', 'showTypeSelector'],
     components: {
         'search-bar': SearchBar,
-        'search-options': SearchOptions,
+        'search-filters': SearchFilters,
         'results': Results,
     }
 }
