@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import EventBus from 'event-bus.js'
+import EventBus from 'event-bus.js';
 import MultiOptionsFilter from './MultiOptionsFilter.vue';
 import { companiesFiltersResource, studentsFiltersResource } from 'resources/search';
 
@@ -37,7 +37,7 @@ export default {
     },
     methods: {
         fetchFilters: function () {
-            if (this.collective == 'company') {
+            if (this.collective == 'companies') {
                 var resource = companiesFiltersResource;
             } else {
                 var resource = studentsFiltersResource;
