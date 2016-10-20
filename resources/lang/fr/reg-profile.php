@@ -3,122 +3,228 @@
 
 return [
     
-        'company_activity' => '',
+        'studies_level_5' => 'l´enseignement supérieur de type court',
     
-        'company_contact_person' => '',
+        'studies_level_6' => 'le Baccalauréat ou équivalent',
     
-        'company_representative' => '',
+        'studies_level_7' => 'la Maîtrise ou équivalent',
     
-        'company_what_is_talent' => '',
+        'studies_level_8' => 'le Doctorat ou équivalent',
     
-        'institution_certificate' => '',
+        'company_activity' => 'le domaine de l&apos; activité',
     
-        'city' => '',
+        'company_contact_person' => 'la personne do contact',
     
-        'country' => '',
+        'company_representative' => 'le représentant légitime',
     
-        'institution_certificate_template_download' => '',
+        'company_what_is_talent' => 'Qu&apos; est-ce que pour vous le talent?',
     
-        'fiscal_id' => '',
+        'institution_certificate' => 'le certificat d &apos;originalité',
     
-        'institution_hei' => '',
+        'city' => 'la ville',
     
-        'institution_ufa' => '',
+        'country' => 'le pays',
     
-        'insitution_his' => '',
+        'institution_certificate_template_download' => 'téléchargez le modèle',
     
-        'legal_representative' => '',
+        'fiscal_id' => 'le numéro national d&apos;identification',
     
-        'institution_pic' => '',
+        'institution_hei' => 'l&apos;institution de l&apos; éducation supérieure',
     
-        'postal_code' => '',
+        'institution_ufa' => 'l&apos;université, la faculté',
     
-        'institution_sig_stamp_text' => '',
+        'insitution_his' => 'l&apos; école secondaire',
     
-        'institution_vet' => '',
+        'legal_representative' => 'le représentant légitime',
     
-        'student_academic_info' => '',
+        'institution_pic' => 'la photo',
     
-        'address' => '',
+        'postal_code' => 'le code postal',
     
-        'student_certificate' => '',
+        'institution_sig_stamp_text' => 'la signature et le cachet',
     
-        'clear_btn' => '',
+        'institution_vet' => 'la formation professionnelle et les activités professionnelles',
     
-        'student_experience_company' => '',
+        'student_academic_info' => 'les informations académiques',
     
-        'student_completed_studies' => '',
+        'address' => 'l&apos; adresse',
     
-        'student_course' => '',
+        'student_certificate' => 'le certificat ',
     
-        'student_date' => '',
+        'clear_btn' => 'supprimer',
     
-        'student_birthdate' => '',
+        'student_experience_company' => 'la société/ les sociétés',
     
-        'student_study_level' => '',
+        'student_completed_studies' => 'le niveau d&apos; instruction',
     
-        'student_describe_talent' => '',
+        'student_course' => 'le cours',
     
-        'email' => '',
+        'student_date' => 'la date',
     
-        'student_europass' => '',
+        'student_birthdate' => 'le lieu de naissance',
     
-        'student_study_field' => '',
+        'student_study_level' => 'le niveau',
     
-        'student_study_from' => '',
+        'student_describe_talent' => 'Présentez en bref de votre talent.',
     
-        'student_study_grade_card' => '',
+        'email' => 'le mél / le mail',
     
-        'student_languages' => '',
+        'student_europass' => 'le passeport européen',
     
-        'load_btn' => '',
+        'student_study_field' => 'la branche d&apos; études',
     
-        'input_max_characters' => '',
+        'student_study_from' => 'de',
     
-        'name' => '',
+        'student_study_grade_card' => 'le bulletin scolaire',
     
-        'nationality' => '',
+        'student_languages' => 'les langues',
     
-        'student_personal_information' => '',
+        'load_btn' => 'chargement',
     
-        'student_personal_skills' => '',
+        'input_max_characters' => 'au maximum',
     
-        'phone' => '',
+        'name' => 'le nom',
     
-        'position' => '',
+        'nationality' => 'la nationalité',
     
-        'student_professional_skills' => '',
+        'student_personal_information' => 'les coordonnées',
     
-        'student_proposed_validator' => '',
+        'student_personal_skills' => 'les capacités personnelles',
     
-        'save_btn' => '',
+        'phone' => 'le tétéphone',
     
-        'student_study_scanned_document' => '',
+        'position' => 'la position',
     
-        'student_validator' => '',
+        'student_professional_skills' => 'les capacités professionnelles',
     
-        'surname' => '',
+        'student_proposed_validator' => 'l&apos; évaluateur proposé',
     
-        'student_study_to' => '',
+        'save_btn' => 'sauvegarde /sauvegardez',
     
-        'student_training' => '',
+        'student_study_scanned_document' => 'le document numérisé',
     
-        'upload_btn' => '',
+        'student_validator' => 'Si vous ne présentez aucun évaluateur, il vous sera automatiquement incorporé',
     
-        'student_work_experience' => '',
+        'surname' => 'le nom',
     
-        'validator_department' => '',
+        'student_study_to' => ' qui',
     
-        'password' => '',
+        'student_training' => 'l&apos;expérience',
     
-        'confirm_password' => '',
+        'upload_btn' => 'enregistrez',
     
-        'captcha' => '',
+        'student_work_experience' => 'les expériences de travail',
     
-        'terms_of_use' => '',
+        'validator_department' => 'la section / la chaire',
     
-        'create_account' => '',
+        'password' => 'le mot de passe',
     
-        'forgot_password' => '',
+        'confirm_password' => 'Validez le mot de passe',
+    
+        'captcha' => 'Captcha',
+    
+        'terms_of_use' => 'Je suis d&apos;&apos; accord avel les conditions',
+    
+        'create_account' => 'créer un nouveau compte',
+    
+        'forgot_password' => 'Avez-vous oublié votre mot de passe?',
+    
+        'administration' => '',
+    
+        'architecture-amp-construction' => '',
+    
+        'art-amp-culture' => '',
+    
+        'banking-and-or-finance-amp-insurance' => '',
+    
+        'business-amp-consulting' => '',
+    
+        'communication-amp-media-amp-pr' => '',
+    
+        'consumer-goods' => '',
+    
+        'customer-service' => '',
+    
+        'design' => '',
+    
+        'education-amp-training' => '',
+    
+        'engineering' => '',
+    
+        'hospitality-amp-tourism' => '',
+    
+        'human-resources' => '',
+    
+        'it-amp-web' => '',
+    
+        'legal' => '',
+    
+        'logistics' => '',
+    
+        'manufacturing' => '',
+    
+        'marketing-amp-advertising' => '',
+    
+        'medicine-amp-pharmaceutics' => '',
+    
+        'politics' => '',
+    
+        'quality-assurance-amp-safety' => '',
+    
+        'real-estate' => '',
+    
+        'research-amp-development' => '',
+    
+        'retail-amp-wholesale' => '',
+    
+        'sales' => '',
+    
+        'social-work' => '',
+    
+        'sport-and-or-health-amp-wellness' => '',
+    
+        'technology-amp-telecommunications' => '',
+    
+        'business-studies-and-or-management-science' => '',
+    
+        'engineering-and-or-technology' => '',
+    
+        'social-sciences' => '',
+    
+        'languages-and-philological-sciences' => '',
+    
+        'communication-and-information-sciences' => '',
+    
+        'humanities' => '',
+    
+        'education-and-or-teacher-training' => '',
+    
+        'law' => '',
+    
+        'art-and-design' => '',
+    
+        'architecture-and-or-urban-and-regional-planning' => '',
+    
+        'natural-sciences' => '',
+    
+        'mathematics-and-or-informatics' => '',
+    
+        'medical-sciences' => '',
+    
+        'geography-and-or-geology' => '',
+    
+        'agriculture-sciences' => '',
+    
+        'Lang_level_A1' => '',
+    
+        'Lang_level_A2' => '',
+    
+        'Lang_level_B1' => '',
+    
+        'Lang_level_B2' => '',
+    
+        'Lang_level_C1' => '',
+    
+        'Lang_level_C2' => '',
     
 ];

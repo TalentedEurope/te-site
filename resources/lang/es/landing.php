@@ -35,20 +35,20 @@ return [
     
         'subscribe_follow_text' => 'o síguenos en ',
     
-        'subscribe_text_question' => '',
+        'subscribe_text_question' => 'Recibe las noticias de Talented Europe en tu buzón de correo electrónico .<br/>Feel free to give us your answer for: What is talent for you?',
     
-        'meta_description' => '',
+        'meta_description' => 'Un proyecto Erasmus Plus, que enlaza más fácilmente a los mejores estudiantes con las oportunidades de empleo y prácticas en toda Europa',
     
-        'coming_soon' => '',
+        'coming_soon' => 'Próximamente',
     
-        'search_placeholder' => '',
+        'search_placeholder' => '¿Qué estás buscando?',
     
-        'search_where' => '',
+        'search_where' => '¿Dónde?',
     
-        'search_btn' => '',
+        'search_btn' => 'Buscar',
     
-        'statistics_title' => '',
+        'statistics_title' => 'Estadística',
     
-        'students_title' => '',
+        'students_title' => 'Estudiantes talentosos',
     
 ];

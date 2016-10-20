@@ -61,11 +61,17 @@
               </a>
             </li>
           </ul>
+          @if (Auth::user())
           <ul class="nav navbar-nav navbar-right login">
-            <li><a href="{{ URL::to('/login') }}">{!! trans('landing.login') !!}</a></li>
-            <li><a href="{{ URL::to('/register') }}">{!! trans('landing.joinbeta') !!}</a></li>
+            <li><a href="{{ URL::to('/register') }}">{!! trans('landing.search_btn') !!}</a></li>
+            <li><a href="{{ URL::to('/logout') }}">{!! trans('global.logout_btn') !!}</a></li>
           </ul>
-
+          @else
+          <ul class="nav navbar-nav navbar-right login">
+            <li><a href="{{ URL::to('/login') }}">{!! trans('global.login_btn') !!}</a></li>
+            <li><a href="{{ URL::to('/register') }}">{!! trans('global.register_btn') !!}</a></li>
+          </ul>
+          @endif;
         </div>
       </div>
     </nav>

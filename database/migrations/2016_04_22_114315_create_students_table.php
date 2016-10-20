@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use App\Models\Student;
 
 class CreateStudentsTable extends Migration
 {
@@ -12,15 +13,14 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('address');
-            $table->enum('nationality', ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'SP', 'SE', 'UK']);
+            $table->enum('nationality', Student::$nationalities);
             $table->string('photo');
             $table->date('birthdate');
             $table->integer('institution_id')->unsigned()->nullable();
             $table->foreign('institution_id')->references('id')->on('institutions')->onDelete('cascade');
             $table->string('curriculum');
+            $table->string('talent');
             $table->boolean('valid')->default(false);
-            $table->boolean('visible')->default(false);
             $table->boolean('private')->default(false);
             $table->date('renewed_at');
         });

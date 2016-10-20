@@ -57,22 +57,24 @@ return [
     
         'UK' => 'Reino Unido',
     
-        'login_btn' => '',
+        'login_btn' => 'Iniciar sesión',
     
-        'register_button' => '',
+        'register_btn' => 'Regístrate',
     
-        'search_info' => '',
+        'search_info' => 'Buscar',
     
-        'company' => '',
+        'company' => 'Empresa|Empresas',
     
-        'institution' => '',
+        'institution' => 'Institución|Instituciones',
     
-        'student' => '',
+        'student' => 'Estudiante|Estudiantes',
     
-        'more_btn' => '',
+        'more_btn' => 'Ver más',
     
-        'cookie_text' => '',
+        'cookie_text' => 'Este sitio web utiliza cookies para ayudarnos a darle la mejor experiencia al visitar nuestro sitio web. Al continuar utilizando este sitio web, usted da su consentimiento a nuestro uso de estas cookies . Para saber más sobre cómo utilizamos las cookies y cómo manejarlas  lea <a href="/privacy-policy">cookie notice</a>',
     
-        'cookie_accept' => '',
+        'cookie_accept' => 'cerrar',
+    
+        'logout_btn' => 'Cerrar Sesión',
     
 ];

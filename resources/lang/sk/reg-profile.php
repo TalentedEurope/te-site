@@ -3,7 +3,15 @@
 
 return [
     
-        'company_activity' => '',
+        'studies_level_5' => 'krátkodobé terciálne vzdelanie ',
+    
+        'studies_level_6' => 'bakalár alebo ekvivalent',
+    
+        'studies_level_7' => 'magister alebo ekvivalent',
+    
+        'studies_level_8' => 'doktor/át alebo ekvivalent',
+    
+        'company_activity' => 'oblasť aktivity',
     
         'company_contact_person' => 'Kontaktná osoba',
     
@@ -11,7 +19,7 @@ return [
     
         'company_what_is_talent' => 'Čo je pre vás talent?',
     
-        'institution_certificate' => '',
+        'institution_certificate' => 'certifikát originality',
     
         'city' => 'Mesto',
     
@@ -19,9 +27,9 @@ return [
     
         'institution_certificate_template_download' => 'Stiahnite si šablónu',
     
-        'fiscal_id' => '',
+        'fiscal_id' => 'IČO',
     
-        'institution_hei' => '',
+        'institution_hei' => 'vyššia vzdelávacia inštitúcia',
     
         'institution_ufa' => 'Univerzita, fakulta',
     
@@ -29,21 +37,21 @@ return [
     
         'legal_representative' => 'Zákonný zástupca (oprávnená osoba)',
     
-        'institution_pic' => '',
+        'institution_pic' => 'foto',
     
         'postal_code' => 'PSČ',
     
         'institution_sig_stamp_text' => 'Podpis a pečiatka',
     
-        'institution_vet' => '',
+        'institution_vet' => 'odborné vzdelanie a prax',
     
-        'student_academic_info' => '',
+        'student_academic_info' => 'akademické informácie',
     
         'address' => 'Adresa',
     
         'student_certificate' => 'Certifikát',
     
-        'clear_btn' => '',
+        'clear_btn' => 'vymazať',
     
         'student_experience_company' => 'Spoločnosť',
     
@@ -101,7 +109,7 @@ return [
     
         'student_study_to' => 'Komu',
     
-        'student_training' => '',
+        'student_training' => 'prax',
     
         'upload_btn' => 'Nahraj(te)',
     
@@ -120,5 +128,103 @@ return [
         'create_account' => 'Vytvoriť nový účet',
     
         'forgot_password' => 'Zabudli ste heslo?',
+    
+        'administration' => '',
+    
+        'architecture-amp-construction' => '',
+    
+        'art-amp-culture' => '',
+    
+        'banking-and-or-finance-amp-insurance' => '',
+    
+        'business-amp-consulting' => '',
+    
+        'communication-amp-media-amp-pr' => '',
+    
+        'consumer-goods' => '',
+    
+        'customer-service' => '',
+    
+        'design' => '',
+    
+        'education-amp-training' => '',
+    
+        'engineering' => '',
+    
+        'hospitality-amp-tourism' => '',
+    
+        'human-resources' => '',
+    
+        'it-amp-web' => '',
+    
+        'legal' => '',
+    
+        'logistics' => '',
+    
+        'manufacturing' => '',
+    
+        'marketing-amp-advertising' => '',
+    
+        'medicine-amp-pharmaceutics' => '',
+    
+        'politics' => '',
+    
+        'quality-assurance-amp-safety' => '',
+    
+        'real-estate' => '',
+    
+        'research-amp-development' => '',
+    
+        'retail-amp-wholesale' => '',
+    
+        'sales' => '',
+    
+        'social-work' => '',
+    
+        'sport-and-or-health-amp-wellness' => '',
+    
+        'technology-amp-telecommunications' => '',
+    
+        'business-studies-and-or-management-science' => '',
+    
+        'engineering-and-or-technology' => '',
+    
+        'social-sciences' => '',
+    
+        'languages-and-philological-sciences' => '',
+    
+        'communication-and-information-sciences' => '',
+    
+        'humanities' => '',
+    
+        'education-and-or-teacher-training' => '',
+    
+        'law' => '',
+    
+        'art-and-design' => '',
+    
+        'architecture-and-or-urban-and-regional-planning' => '',
+    
+        'natural-sciences' => '',
+    
+        'mathematics-and-or-informatics' => '',
+    
+        'medical-sciences' => '',
+    
+        'geography-and-or-geology' => '',
+    
+        'agriculture-sciences' => '',
+    
+        'Lang_level_A1' => '',
+    
+        'Lang_level_A2' => '',
+    
+        'Lang_level_B1' => '',
+    
+        'Lang_level_B2' => '',
+    
+        'Lang_level_C1' => '',
+    
+        'Lang_level_C2' => '',
     
 ];

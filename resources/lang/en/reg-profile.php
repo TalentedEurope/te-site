@@ -3,6 +3,14 @@
 
 return [
     
+        'studies_level_5' => 'Short-cycle tertiary education',
+    
+        'studies_level_6' => 'Bachelor’s or equivalent',
+    
+        'studies_level_7' => 'Master’s or equivalent',
+    
+        'studies_level_8' => 'Doctoral or equivalent',
+    
         'company_activity' => 'Activity sector',
     
         'company_contact_person' => 'Contact person',
@@ -120,5 +128,103 @@ return [
         'create_account' => 'Create a new account',
     
         'forgot_password' => 'Forgot your password?',
+    
+        'administration' => 'Administration',
+    
+        'architecture-amp-construction' => 'Architecture &amp; Construction',
+    
+        'art-amp-culture' => 'Art &amp; Culture',
+    
+        'banking-and-or-finance-amp-insurance' => 'Banking and/or Finance &amp; Insurance',
+    
+        'business-amp-consulting' => 'Business &amp; Consulting',
+    
+        'communication-amp-media-amp-pr' => 'Communication &amp; Media &amp; PR',
+    
+        'consumer-goods' => 'Consumer Goods',
+    
+        'customer-service' => 'Customer Service',
+    
+        'design' => 'Design',
+    
+        'education-amp-training' => 'Education &amp; Training',
+    
+        'engineering' => 'Engineering',
+    
+        'hospitality-amp-tourism' => 'Hospitality &amp; tourism',
+    
+        'human-resources' => 'Human Resources',
+    
+        'it-amp-web' => 'IT &amp; Web',
+    
+        'legal' => 'Legal',
+    
+        'logistics' => 'Logistics',
+    
+        'manufacturing' => 'Manufacturing',
+    
+        'marketing-amp-advertising' => 'Marketing &amp; Advertising',
+    
+        'medicine-amp-pharmaceutics' => 'Medicine &amp; Pharmaceutics',
+    
+        'politics' => 'Politics',
+    
+        'quality-assurance-amp-safety' => 'Quality Assurance &amp; Safety',
+    
+        'real-estate' => 'Real Estate',
+    
+        'research-amp-development' => 'Research &amp; Development',
+    
+        'retail-amp-wholesale' => 'Retail &amp; Wholesale',
+    
+        'sales' => 'Sales',
+    
+        'social-work' => 'Social Work',
+    
+        'sport-and-or-health-amp-wellness' => 'Sport and/or Health &amp; Wellness',
+    
+        'technology-amp-telecommunications' => 'Technology &amp; Telecommunications',
+    
+        'business-studies-and-or-management-science' => 'Business Studies and/or Management Science',
+    
+        'engineering-and-or-technology' => 'Engineering and/or Technology',
+    
+        'social-sciences' => 'Social Sciences',
+    
+        'languages-and-philological-sciences' => 'Languages and Philological Sciences',
+    
+        'communication-and-information-sciences' => 'Communication and Information Sciences',
+    
+        'humanities' => 'Humanities',
+    
+        'education-and-or-teacher-training' => 'Education and/or Teacher Training',
+    
+        'law' => 'Law',
+    
+        'art-and-design' => 'Art and Design',
+    
+        'architecture-and-or-urban-and-regional-planning' => 'Architecture and/or Urban and Regional Planning',
+    
+        'natural-sciences' => 'Natural Sciences',
+    
+        'mathematics-and-or-informatics' => 'Mathematics and/or Informatics',
+    
+        'medical-sciences' => 'Medical Sciences',
+    
+        'geography-and-or-geology' => 'Geography and/or Geology',
+    
+        'agriculture-sciences' => 'Agriculture Sciences',
+    
+        'Lang_level_A1' => 'A1: Breakthrough or beginner',
+    
+        'Lang_level_A2' => 'A2: Waystage or elementary',
+    
+        'Lang_level_B1' => 'B1: Threshold or intermediate        ',
+    
+        'Lang_level_B2' => 'B2: Vantage or upper intermediate',
+    
+        'Lang_level_C1' => 'C1: Effective operational proficiency or advanced',
+    
+        'Lang_level_C2' => 'C2: Mastery or proficiency',
     
 ];

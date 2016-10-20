@@ -3,122 +3,228 @@
 
 return [
     
-        'company_activity' => '',
+        'studies_level_5' => 'kurzfristige tertiäre Ausbildung',
     
-        'company_contact_person' => '',
+        'studies_level_6' => 'Bachelor oder Ekvivalent',
     
-        'company_representative' => '',
+        'studies_level_7' => 'Magister oder Ekvivalent',
     
-        'company_what_is_talent' => '',
+        'studies_level_8' => 'Doktor oder Ekvivalent',
     
-        'institution_certificate' => '',
+        'company_activity' => 'Feld',
     
-        'city' => '',
+        'company_contact_person' => 'Kontaktperson',
     
-        'country' => '',
+        'company_representative' => 'Erziehungsberechtigte',
     
-        'institution_certificate_template_download' => '',
+        'company_what_is_talent' => 'Was verstehen Sie unter Talent?',
     
-        'fiscal_id' => '',
+        'institution_certificate' => 'Originalitätsbecheinigung',
     
-        'institution_hei' => '',
+        'city' => 'Stadt',
     
-        'institution_ufa' => '',
+        'country' => 'Land',
     
-        'insitution_his' => '',
+        'institution_certificate_template_download' => 'Muster herunterladen',
     
-        'legal_representative' => '',
+        'fiscal_id' => 'Steueridentifikationsnummer',
     
-        'institution_pic' => '',
+        'institution_hei' => 'Höhere Bildungsinstitution',
     
-        'postal_code' => '',
+        'institution_ufa' => 'Universität, Fakultät',
     
-        'institution_sig_stamp_text' => '',
+        'insitution_his' => 'Mittelschule',
     
-        'institution_vet' => '',
+        'legal_representative' => 'Erziehungsberechtigte',
     
-        'student_academic_info' => '',
+        'institution_pic' => 'Bild',
     
-        'address' => '',
+        'postal_code' => 'PLZ',
     
-        'student_certificate' => '',
+        'institution_sig_stamp_text' => 'Unterschrift und Stempel',
     
-        'clear_btn' => '',
+        'institution_vet' => 'Fachausbildung und Praktikum',
     
-        'student_experience_company' => '',
+        'student_academic_info' => 'akademische Informationen',
     
-        'student_completed_studies' => '',
+        'address' => 'Anschrift',
     
-        'student_course' => '',
+        'student_certificate' => 'Zertifikat',
     
-        'student_date' => '',
+        'clear_btn' => 'löschen',
     
-        'student_birthdate' => '',
+        'student_experience_company' => 'Unternehmen',
     
-        'student_study_level' => '',
+        'student_completed_studies' => 'abgeschlossene Ausbildung',
     
-        'student_describe_talent' => '',
+        'student_course' => 'Kurs',
     
-        'email' => '',
+        'student_date' => 'Datum',
     
-        'student_europass' => '',
+        'student_birthdate' => 'Geburtsdatum',
     
-        'student_study_field' => '',
+        'student_study_level' => 'Niveau',
     
-        'student_study_from' => '',
+        'student_describe_talent' => 'Beschreiben Sie kurz euer Talent',
     
-        'student_study_grade_card' => '',
+        'email' => 'E-mail',
     
-        'student_languages' => '',
+        'student_europass' => 'Europass',
     
-        'load_btn' => '',
+        'student_study_field' => 'Studienrichtung',
     
-        'input_max_characters' => '',
+        'student_study_from' => 'aus',
     
-        'name' => '',
+        'student_study_grade_card' => 'Zeugnis',
     
-        'nationality' => '',
+        'student_languages' => 'Sprachen',
     
-        'student_personal_information' => '',
+        'load_btn' => 'Laden',
     
-        'student_personal_skills' => '',
+        'input_max_characters' => 'max.',
     
-        'phone' => '',
+        'name' => 'Name',
     
-        'position' => '',
+        'nationality' => 'Nationalität',
     
-        'student_professional_skills' => '',
+        'student_personal_information' => 'Persönliche Angaben',
     
-        'student_proposed_validator' => '',
+        'student_personal_skills' => 'Persönliche Fähigkeiten',
     
-        'save_btn' => '',
+        'phone' => 'Telefon',
     
-        'student_study_scanned_document' => '',
+        'position' => 'Position',
     
-        'student_validator' => '',
+        'student_professional_skills' => 'Professionelle  Fähigkeite',
     
-        'surname' => '',
+        'student_proposed_validator' => 'Vorgeschlagener Gutachter',
     
-        'student_study_to' => '',
+        'save_btn' => 'Speichern',
     
-        'student_training' => '',
+        'student_study_scanned_document' => 'Gescannte Dokument',
     
-        'upload_btn' => '',
+        'student_validator' => 'Falls Sie den Gutachter nich angeben, wird Ihnen ein Gutachter automatisch zugeteilt',
     
-        'student_work_experience' => '',
+        'surname' => 'Nachname',
     
-        'validator_department' => '',
+        'student_study_to' => 'Wem',
     
-        'password' => '',
+        'student_training' => 'Praktikum',
     
-        'confirm_password' => '',
+        'upload_btn' => 'Hochladen',
     
-        'captcha' => '',
+        'student_work_experience' => 'Arbeitserfahrungen',
     
-        'terms_of_use' => '',
+        'validator_department' => 'Abteilung/ Lehrstuhl',
     
-        'create_account' => '',
+        'password' => 'Password',
     
-        'forgot_password' => '',
+        'confirm_password' => 'Password bestätigen',
+    
+        'captcha' => 'Captcha',
+    
+        'terms_of_use' => 'Ich bin mit den Bedingungen einverstanden',
+    
+        'create_account' => 'Ein Konto erstellen',
+    
+        'forgot_password' => 'Password vergessen?',
+    
+        'administration' => '',
+    
+        'architecture-amp-construction' => '',
+    
+        'art-amp-culture' => '',
+    
+        'banking-and-or-finance-amp-insurance' => '',
+    
+        'business-amp-consulting' => '',
+    
+        'communication-amp-media-amp-pr' => '',
+    
+        'consumer-goods' => '',
+    
+        'customer-service' => '',
+    
+        'design' => '',
+    
+        'education-amp-training' => '',
+    
+        'engineering' => '',
+    
+        'hospitality-amp-tourism' => '',
+    
+        'human-resources' => '',
+    
+        'it-amp-web' => '',
+    
+        'legal' => '',
+    
+        'logistics' => '',
+    
+        'manufacturing' => '',
+    
+        'marketing-amp-advertising' => '',
+    
+        'medicine-amp-pharmaceutics' => '',
+    
+        'politics' => '',
+    
+        'quality-assurance-amp-safety' => '',
+    
+        'real-estate' => '',
+    
+        'research-amp-development' => '',
+    
+        'retail-amp-wholesale' => '',
+    
+        'sales' => '',
+    
+        'social-work' => '',
+    
+        'sport-and-or-health-amp-wellness' => '',
+    
+        'technology-amp-telecommunications' => '',
+    
+        'business-studies-and-or-management-science' => '',
+    
+        'engineering-and-or-technology' => '',
+    
+        'social-sciences' => '',
+    
+        'languages-and-philological-sciences' => '',
+    
+        'communication-and-information-sciences' => '',
+    
+        'humanities' => '',
+    
+        'education-and-or-teacher-training' => '',
+    
+        'law' => '',
+    
+        'art-and-design' => '',
+    
+        'architecture-and-or-urban-and-regional-planning' => '',
+    
+        'natural-sciences' => '',
+    
+        'mathematics-and-or-informatics' => '',
+    
+        'medical-sciences' => '',
+    
+        'geography-and-or-geology' => '',
+    
+        'agriculture-sciences' => '',
+    
+        'Lang_level_A1' => '',
+    
+        'Lang_level_A2' => '',
+    
+        'Lang_level_B1' => '',
+    
+        'Lang_level_B2' => '',
+    
+        'Lang_level_C1' => '',
+    
+        'Lang_level_C2' => '',
     
 ];
