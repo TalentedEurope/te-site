@@ -61,7 +61,8 @@ class ProfileController extends Controller
 
         if ($user->isA('company')) {
             $data = $this->getCompanyPrivateData($user);
-
+            //$errors = $this->checkForErrors($request, $user);
+            //$data['errors'] = $errors;
             return view('profile.company-edit', $data);
         }
 
@@ -77,20 +78,35 @@ class ProfileController extends Controller
     public function postEdit(Request $request)
     {
         $user = Auth::User();
+        $errors = $this->doProcessUser($request, $user);
+        $request->session()->flash('success_message', 'Changes saved succesfully');
+        $request->session()->flash('error_message', 'Warning: Some fields couldn\'t be saved because there were errors, check each field to see the issues');
+        return back()->withInput()->withErrors($errors);
+    }
+
+    private function doProcessUser(Request $request, User $user)
+    {
         $errors = new MessageBag();
 
         // Process common information for all profiles.
         $errors = $errors->merge($this->doProcessCommon($request, $user));
 
-        /*
         // Process specific profiles
         if (Auth::user()->isA('company')) {
-            $errors = $errors->messages()->merge($this->doProcessCompany($request));
+            $errors = $errors->merge($this->doProcessCompany($request, $user));
         } elseif (Auth::user()->isA('student')) {
-            $errors = $errors->messages()->merge($this->doProcessCompany($request));
+            //$errors = $errors->merge($this->doProcessCompany($request));
         }
-        */
-        return back()->withInput()->withErrors($errors);
+        // Make sure that the only errors shown are from the fields we passed.
+        $reqErrors = new MessageBag();
+        foreach ($errors->messages() as $key => $value) {
+            if (isset($request->all()[$key])) {
+                foreach ($value as $message) {
+                    $reqErrors->add($key, $message);
+                }
+            }
+        }
+        return $reqErrors;
     }
 
     private function doProcessCommon(Request $request, User $user)
@@ -111,72 +127,19 @@ class ProfileController extends Controller
             $errors = $errors->merge($v);
         }
 
-        // Profile visible
-        $rules = array( 'visible' => 'required|boolean');
-        $v = Validator::make($request->all(), $rules);
-        if ($v->passes()) {
-            $user->visible = $request->input('visible');
-        }
-        $errors = $errors->merge($v);
+        $v = Validator::make($request->all(), User::rules());
+        $v->setAttributeNames(User::$niceNames);
 
-        // Name
-        $rules = array( 'name' => 'required' );
-        $v = Validator::make($request->all(), $rules);
-        if ($v->passes()) {
-            $user->name = $request->input('name');
-        }
         $errors = $errors->merge($v);
-
-        // Phone
-        $rules = array( 'phone' => 'alpha_dash' );
-        $v = Validator::make($request->all(), $rules);
-        if ($v->passes()) {
-            $user->phone = $request->input('phone');
+        foreach ($v->valid() as $key => $value) {
+            if (array_has($user['attributes'], $key)) {
+                $user[$key] = $value;
+            }
         }
-        $errors = $errors->merge($v);
 
-        // Facebook
-        $rules = array( 'facebook' => 'active_url' );
-        $v = Validator::make($request->all(), $rules);
-        if ($v->passes()) {
-            $user->facebook = $request->input('facebook');
-        }
-        $errors = $errors->merge($v);
-
-        // Twitter
-        $rules = array( 'twitter' => 'active_url' );
-        $v = Validator::make($request->all(), $rules);
-        if ($v->passes()) {
-            $user->twitter = $request->input('twitter');
-        }
-        $errors = $errors->merge($v);
-
-        // Linkedin
-        $rules = array( 'linkedin' => 'active_url' );
-        $v = Validator::make($request->all(), $rules);
-        if ($v->passes()) {
-            $user->linkedin = $request->input('linkedin');
-        }
-        $errors = $errors->merge($v);
-
-        // City
-        $rules = array( 'city' => 'required' );
-        $v = Validator::make($request->all(), $rules);
-        if ($v->passes()) {
-            $user->city = $request->input('city');
-        }
-        $errors = $errors->merge($v);
-
-        // Country
-        $rules = array( 'country' => 'required|in:'.implode(',', array_keys(User::$countries)));
-        $v = Validator::make($request->all(), $rules);
-        if ($v->passes()) {
-            $user->city = $request->input('city');
-        }
-        $errors = $errors->merge($v);
-
-        $rules = array( 'image' => 'image' );
-        $v = Validator::make($request->all(), $rules);
+        // Images don't appear on valid() but since it has a different parse logic
+        // we do it aside.
+        $v = Validator::make($request->all(), array_filter(User::rules('image')));
 
         if ($v->passes() && $request->hasFile('image')) {
             $fname = tempnam(public_path() . User::$photoPath, $user->id).'.jpg';
@@ -188,23 +151,31 @@ class ProfileController extends Controller
         }
         $errors = $errors->merge($v);
 
-        $user->save();
         return $errors;
     }
 
-    private function doProcessCompany(Request $request)
+    private function doProcessCompany(Request $request, User $user)
     {
         $errors = new MessageBag();
+        $company = null;
 
-        // Website
-        $rules = array( 'website' => 'active_url' );
-        $v = Validator::make($request->all(), $rules);
-        if ($v->passes()) {
-            $user->website = $request->input('website');
+        if ($user->userable()) {
+            $company = $user->userable()->first();
+        } else {
+            $company = Company::create();
+            $company->user()->save($user);
         }
-        $errors = $errors->merge($v);
+        $v = Validator::make($request->all(), Company::rules($company));
 
-        return errors;
+        foreach ($v->valid() as $key => $value) {
+            if (array_has($company['attributes'], $key)) {
+                $company[$key] = $value;
+            }
+        }
+        $company->save();
+        $user->save();
+        $errors = $errors->merge($v);
+        return $errors;
     }
 
     private function doProcessStudent(Request $request)
