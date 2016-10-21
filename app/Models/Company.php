@@ -21,8 +21,8 @@ class Company extends Model
         return $this->morphOne('\App\Models\User', 'userable');
     }
 
-    public function professionalSkills()
+    public function personalSkills()
     {
-        return $this->belongsToMany('\App\Models\ProfessionalSkill');
+        return $this->belongsToMany('\App\Models\PersonalSkill');
     }
 }

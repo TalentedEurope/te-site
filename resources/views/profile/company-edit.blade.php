@@ -20,9 +20,9 @@
         </ul>
         <div id="profileTab" class="tab-content well">
           <div class="tab-pane active in" id="profile">
-            <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#profile') }}">
+          <form enctype='multipart/form-data'  class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#profile' }}" >
               {{ csrf_field() }}
-              <!-- company_name -->
+              <!-- name -->
               <h4>Profile Visibility</h4>
               <div class="radio">
                 <label><input type="radio" @if ($user->visible == true) checked @endif name="visible" value="1">Visible. Can be searched, viewed</label>
@@ -33,15 +33,34 @@
               <hr class="separator">
               <h4>About</h4>
 
-              <div class="form-group{{ $errors->has('company_name') ? ' has-error' : '' }}">
-                <!-- <label for="company_name">Name</label> -->
-                <input type="text" class="form-control" id="company_name" name="company_name" placeholder="Name" value="{{ old('company_name', $user->name) }}">
-                @if ($errors->has('company_name'))
+              <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                <!-- <label for="name">Name</label> -->
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="{{ old('name', $user->name) }}">
+                @if ($errors->has('name'))
                 <span class="help-block">
-                  <strong>{{ $errors->first('company_name') }}</strong>
+                  <strong>{{ $errors->first('name') }}</strong>
                 </span>
                 @endif
               </div>
+
+              <div class="row">
+                <div class="col-sm-6 form-group{{ $errors->has('fiscal_id') ? ' has-error' : '' }}">
+                    <!-- <label for="Legal representative">Name</label> -->
+                    <input type="text" class="form-control" id="fiscal_id" name="fiscal_id" placeholder="Legal representative" value="{{ old('fiscal_id', $company->fiscal_id) }}"> @if ($errors->has('fiscal_id'))
+                    <span class="help-block">
+                      <strong>{{ $errors->first('fiscal_id') }}</strong>
+                    </span> @endif
+                </div>
+
+                <div class="col-sm-6 form-group{{ $errors->has('person_in_charge') ? ' has-error' : '' }}">
+                  <!-- <label for="Legal representative">Name</label> -->
+                  <input type="text" class="form-control" id="person_in_charge" name="person_in_charge" placeholder="Legal representative" value="{{ old('person_in_charge', $company->overseer) }}"> @if ($errors->has('person_in_charge'))
+                  <span class="help-block">
+                    <strong>{{ $errors->first('person_in_charge') }}</strong>
+                  </span> @endif
+                </div>
+              </div>
+
               <div class="row">
                 <div class="col-sm-6 form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                   <!-- <label for="email">Email</label> -->
@@ -76,17 +95,9 @@
                   <strong>{{ $errors->first('activity') }}</strong>
                 </span> @endif
               </div>
-
-              <div class="form-group{{ $errors->has('person_in_charge') ? ' has-error' : '' }}">
-                <!-- <label for="Legal representative">Name</label> -->
-                <input type="text" class="form-control" id="person_in_charge" name="person_in_charge" placeholder="Legal representative" value="{{ old('person_in_charge', $company->overseer) }}"> @if ($errors->has('person_in_charge'))
-                <span class="help-block">
-                  <strong>{{ $errors->first('person_in_charge') }}</strong>
-                </span> @endif
-              </div>
               <div class="form-group">
-                <label for="logo">Company Logo</label>
-                <input type="file" id="logo" name="logo">
+                <label for="image">Company Logo</label>
+                <input type="file" id="image" name="image">
               </div>
               <hr class="separator">
               <h4>Social networks and website</h4>
@@ -100,6 +111,13 @@
               <div class="form-group{{ $errors->has('twitter') ? ' has-error' : '' }}">
                 <!-- <label for="twitter">Twitter page url</label> -->
                 <input type="text" class="form-control" id="twitter" name="twitter" placeholder="Twitter page url" value="{{ old('twitter', $user->twitter) }}"> @if ($errors->has('twitter'))
+                <span class="help-block">
+                  <strong>{{ $errors->first('twitter') }}</strong>
+                </span> @endif
+              </div>
+              <div class="form-group{{ $errors->has('linkedin') ? ' has-error' : '' }}">
+                <!-- <label for="linkedin">linkedin page url</label> -->
+                <input type="text" class="form-control" id="linkedin" name="linkedin" placeholder="linkedin page url" value="{{ old('linkedin', $user->linkedin) }}"> @if ($errors->has('linkedin'))
                 <span class="help-block">
                   <strong>{{ $errors->first('twitter') }}</strong>
                 </span> @endif
@@ -175,7 +193,7 @@
           <div class="tab-pane fade" id="contact">
             <h4>Contact person</h4>
             <label>Setup an alternative contact user that will receive all the notifications instead of the main account</label>
-            <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#contact') }}">
+            <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#contact' }}" >
               {{ csrf_field() }}
               <div class="form-group{{ $errors->has('contact_name') ? ' has-error' : '' }}">
                 <!-- <label for="contact_name">Name</label> -->
