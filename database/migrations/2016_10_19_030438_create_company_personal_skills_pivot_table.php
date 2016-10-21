@@ -4,19 +4,19 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProfessionalSkillCompanyPivotTable extends Migration
+class CreateCompanyPersonalSkillsPivotTable extends Migration
 {
     /**
      * Run the migrations.
      */
     public function up()
     {
-        Schema::create('company_professional_skill', function (Blueprint $table) {
-            $table->integer('professional_skill_id')->unsigned()->index();
-            $table->foreign('professional_skill_id', 'psc_id_foreign')->references('id')->on('professional_skills')->onDelete('cascade');
+        Schema::create('company_personal_skill', function (Blueprint $table) {
+            $table->integer('personal_skill_id')->unsigned()->index();
+            $table->foreign('personal_skill_id', 'psc_id_foreign')->references('id')->on('personal_skills')->onDelete('cascade');
             $table->integer('company_id')->unsigned()->index();
             $table->foreign('company_id', 'ps_cp_id_foreign')->references('id')->on('companies')->onDelete('cascade');
-            $table->primary(['professional_skill_id', 'company_id'], 'pk_key');
+            $table->primary(['personal_skill_id', 'company_id'], 'pk_key');
         });
     }
 
@@ -25,6 +25,6 @@ class CreateProfessionalSkillCompanyPivotTable extends Migration
      */
     public function down()
     {
-        Schema::drop('company_professional_skill');
+        Schema::drop('company_personal_skill');
     }
 }
