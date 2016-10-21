@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Company;
-use App\Models\ProfessionalSkill;
+use App\Models\PersonalSkill;
 
 class CompaniesTableSeeder extends Seeder
 {
@@ -41,11 +41,10 @@ class CompaniesTableSeeder extends Seeder
         ]);
         $company_activity = Company::$activities[rand(0, sizeof(Company::$activities))];
         $company->user()->save($user);
-        foreach (range(1, 5) as $professionalSkillsIndex) {
-            $skillName = $faker->word;
-            $skill = ProfessionalSkill::firstOrCreate(array('name' => $skillName, 'language_code' => Config::get('app.locale')));
-            if ($company->professionalSkills()->where('name', $skillName)->count() == 0) {
-                $company->professionalSkills()->attach($skill);
+        foreach (range(1, 5) as $personalSkillsIndex) {
+            $skill = PersonalSkill::orderByRaw('RAND()')->get()->first();
+            if ($company->personalSkills()->where('id', '=', $skill->id)->count() == 0) {
+                $company->personalSkills()->attach($skill);
             }
         }
 

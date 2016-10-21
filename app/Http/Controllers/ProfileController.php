@@ -12,6 +12,7 @@ use App\Models\StudentLanguage;
 use Auth;
 use Illuminate\Support\MessageBag;
 use Validator;
+use Image;
 
 class ProfileController extends Controller
 {
@@ -77,8 +78,8 @@ class ProfileController extends Controller
     {
         $user = Auth::User();
         $errors = new MessageBag();
-        // Process common information for all profiles.
 
+        // Process common information for all profiles.
         $errors = $errors->merge($this->doProcessCommon($request, $user));
 
         /*
@@ -89,7 +90,7 @@ class ProfileController extends Controller
             $errors = $errors->messages()->merge($this->doProcessCompany($request));
         }
         */
-        return back()->withErrors($errors);
+        return back()->withInput()->withErrors($errors);
     }
 
     private function doProcessCommon(Request $request, User $user)
@@ -97,25 +98,111 @@ class ProfileController extends Controller
         $errors = new MessageBag();
 
         // Password reset.
-        $rules = array(
-                'password' => 'required|min:8',
-                'password_confirm' => 'required|min:8|same:password',
-        );
+        // Unlike the other fields we only check them if they're passed
+        if ($request->has('password') || $request->has('password_confirm')) {
+            $rules = array(
+                    'password' => 'required|min:8',
+                    'password_confirm' => 'required|min:8|same:password',
+            );
+            $v = Validator::make($request->all(), $rules);
+            if ($v->passes()) {
+                $user->password = \Hash::make($request->input('password'));
+            }
+            $errors = $errors->merge($v);
+        }
+
+        // Profile visible
+        $rules = array( 'visible' => 'required|boolean');
         $v = Validator::make($request->all(), $rules);
         if ($v->passes()) {
-            $user->password = \Hash::make($request->input('password'));
-            $user->save();
+            $user->visible = $request->input('visible');
         }
-        // Profile visibility.
-
         $errors = $errors->merge($v);
 
+        // Name
+        $rules = array( 'name' => 'required' );
+        $v = Validator::make($request->all(), $rules);
+        if ($v->passes()) {
+            $user->name = $request->input('name');
+        }
+        $errors = $errors->merge($v);
+
+        // Phone
+        $rules = array( 'phone' => 'alpha_dash' );
+        $v = Validator::make($request->all(), $rules);
+        if ($v->passes()) {
+            $user->phone = $request->input('phone');
+        }
+        $errors = $errors->merge($v);
+
+        // Facebook
+        $rules = array( 'facebook' => 'active_url' );
+        $v = Validator::make($request->all(), $rules);
+        if ($v->passes()) {
+            $user->facebook = $request->input('facebook');
+        }
+        $errors = $errors->merge($v);
+
+        // Twitter
+        $rules = array( 'twitter' => 'active_url' );
+        $v = Validator::make($request->all(), $rules);
+        if ($v->passes()) {
+            $user->twitter = $request->input('twitter');
+        }
+        $errors = $errors->merge($v);
+
+        // Linkedin
+        $rules = array( 'linkedin' => 'active_url' );
+        $v = Validator::make($request->all(), $rules);
+        if ($v->passes()) {
+            $user->linkedin = $request->input('linkedin');
+        }
+        $errors = $errors->merge($v);
+
+        // City
+        $rules = array( 'city' => 'required' );
+        $v = Validator::make($request->all(), $rules);
+        if ($v->passes()) {
+            $user->city = $request->input('city');
+        }
+        $errors = $errors->merge($v);
+
+        // Country
+        $rules = array( 'country' => 'required|in:'.implode(',', array_keys(User::$countries)));
+        $v = Validator::make($request->all(), $rules);
+        if ($v->passes()) {
+            $user->city = $request->input('city');
+        }
+        $errors = $errors->merge($v);
+
+        $rules = array( 'image' => 'image' );
+        $v = Validator::make($request->all(), $rules);
+
+        if ($v->passes() && $request->hasFile('image')) {
+            $fname = tempnam(public_path() . User::$photoPath, $user->id).'.jpg';
+            $img = Image::make($request->file('image'))
+            ->resize(User::$photoWidth, User::$photoHeight, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($fname);
+            $user->image = basename($fname);
+        }
+        $errors = $errors->merge($v);
+
+        $user->save();
         return $errors;
     }
 
     private function doProcessCompany(Request $request)
     {
-        $errors = Validator::make($request->all(), array());
+        $errors = new MessageBag();
+
+        // Website
+        $rules = array( 'website' => 'active_url' );
+        $v = Validator::make($request->all(), $rules);
+        if ($v->passes()) {
+            $user->website = $request->input('website');
+        }
+        $errors = $errors->merge($v);
 
         return errors;
     }

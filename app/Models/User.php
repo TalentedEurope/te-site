@@ -10,6 +10,8 @@ class User extends Authenticatable
 {
     use HasRolesAndAbilities;
     use Notifiable;
+    protected $with = ['userable'];
+    protected $appends = ['slug'];
 
     /**
      * The attributes that are mass assignable.
@@ -20,7 +22,10 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
-    protected $photoPath = '/uploads/photo/';
+    public static $photoPath = '/uploads/photo/';
+
+    public static $photoWidth = 500;
+    public static $photoHeight = 500;
 
     public static $nationalities = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'SP', 'SE', 'UK'];
 
@@ -36,7 +41,7 @@ class User extends Authenticatable
 
     public function getPhoto()
     {
-        $route = $this->photoPath;
+        $route = User::$photoPath;
         if ($this->image) {
             $route .= $this->image;
         } else {
@@ -49,6 +54,11 @@ class User extends Authenticatable
     public function getSlug()
     {
         return str_slug($this->name.' '.$this->surname);
+    }
+
+    public function getSlugAttribute()
+    {
+        return $this->getSlug();
     }
 
     public function userable()
