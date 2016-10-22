@@ -11,6 +11,7 @@ use App\Models\StudentStudy;
 use App\Models\StudentLanguage;
 use App\Models\PersonalSkill;
 use App\Http\Controllers\Api\LoginController;
+use App;
 use Auth;
 use Illuminate\Support\MessageBag;
 use Validator;
@@ -29,7 +30,9 @@ class ProfileController extends Controller
     public function getMyProfile(Request $request)
     {
         $user = Auth::user();
-
+        if (!$user->is_filled) {
+            return view('profile.empty');
+        }
         return $this->showProfile($user);
     }
 
@@ -37,7 +40,9 @@ class ProfileController extends Controller
     {
         $user = User::findOrFail($id);
         $public = Auth::user() == null;
-
+        if (!$user->is_filled || !$user->visible || $user->banned) {
+            App::abort(404, 'Not found.');
+        }
         return $this->showProfile($user, $public);
     }
 
