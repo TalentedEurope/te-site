@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Config;
 use Illuminate\Database\Eloquent\Model;
 
 class PersonalSkill extends Model
@@ -12,12 +13,21 @@ class PersonalSkill extends Model
             'name_en' => 'required',
             'name_sp' => 'required',
             'name_it' => 'required',
-            'name_de' => 'required',            
-            'name_fr' => 'required', 
+            'name_de' => 'required',
+            'name_fr' => 'required',
     );
 
     public function students()
     {
         return $this->belongsToMany('\App\Models\Student');
-    }    
+    }
+
+    public function getNameAttribute()
+    {
+        $name = $this->en;
+        if (isset($this->attributes[Config::get('app.locale')])) {
+            $name = $this->attributes[Config::get('app.locale')];
+        }
+        return $name;
+    }
 }

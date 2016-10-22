@@ -19,7 +19,7 @@ class CreateCompaniesTable extends Migration
             $table->string('talent');
             $table->string('notification_email');
             $table->string('notification_name');
-            $table->enum('activity', Company::$activities);
+            $table->enum('activity', Company::$activities)->nullable();
         });
     }
 
