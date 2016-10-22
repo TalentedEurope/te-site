@@ -26,7 +26,7 @@ class ProfileController extends SiteProfileController
     public function update(Request $request)
     {
         $user = Auth::User();
-        $errors = parent::doProcessUser($request, $user);
+        $errors = parent::processUser($request, $user);
 
         if ($request->has('validate')) {
             return $errors;
