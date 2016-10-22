@@ -3,12 +3,16 @@
 @section('page-title') Company Profile @endsection
 @section('page-class') unique-profile company @endsection
 
+@section('meta')
+  <meta id="token" content="{{ $token }}" />
+@endsection
+
 @section('content')
 <div class="container">
   <div class="row profile">
     @if($public)
     <div class="col-xs-12 alert alert-danger">
-        <p>Do you want to show this company how talented are you? <a href="{{ url('/register') }}">Sign up</a></p>
+        <p>Do you want to show this company how talented you are? <a href="{{ url('/register') }}">Sign up</a></p>
     </div>
     @endif
 
@@ -25,10 +29,10 @@
         <ul class="student-specs">
         <li><strong><i class="icon fa fa-map-marker"></i>  We are in: </strong> {{ $user->city }}
         @if ($user->country) , <em>{{ $countries[$user->country] }}</em></li> @endif
-        @if ($company->professionalSkills)
+        @if ($company->personalSkills)
         <li><strong><i class="icon fa fa-cogs"></i> We're looking for people skilled in: </strong>
               <ul class="skills">
-                @foreach ($company->professionalSkills as $skill)
+                @foreach ($company->personalSkills as $skill)
                   <li>{{ $skill->name }}</li>
                 @endforeach
               </ul>

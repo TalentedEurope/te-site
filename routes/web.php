@@ -27,7 +27,7 @@ Route::get('/logout', 'Auth\LoginController@logout');
 // Profiles
 Route::group(['prefix' => 'profile'], function () {
     // Private URIS
-    Route::get('/', 'ProfileController@index')->name('view_profile');
+    Route::get('/', 'ProfileController@getMyProfile')->name('view_profile');
     Route::get('edit', 'ProfileController@getEdit')->name('edit_profile');
     Route::post('edit', 'ProfileController@postEdit')->name('update_profile');
 
@@ -39,7 +39,7 @@ Route::group(['prefix' => 'profile'], function () {
     Route::get('/certificate/{id}/language/{studyId}', 'ProfileController@getLanguageCertificate')->name('get_language_certificate');
 
     // Public URIS
-    Route::get('/{slug}/{id}', 'ProfileController@getUserProfile')->name('get_profile');
+    Route::get('/{slug}/{id}', 'ProfileController@getProfile')->name('get_profile');
 });
 
 // Nudge-Alert
