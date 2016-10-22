@@ -3,12 +3,16 @@
 @section('page-title') Company Profile @endsection
 @section('page-class') unique-profile company @endsection
 
+@section('meta')
+  <meta id="token" content="{{ $token }}" />
+@endsection
+
 @section('content')
 <div class="container">
   <div class="row profile">
     @if($public)
     <div class="col-xs-12 alert alert-danger">
-        <p>Do you want to show this company how talented are you? <a href="{{ url('/register') }}">Sign up</a></p>
+        <p>Do you want to show this company how talented you are? <a href="{{ url('/register') }}">Sign up</a></p>
     </div>
     @endif
 

@@ -3,6 +3,10 @@
 @section('page-title') My Profile @endsection
 @section('page-class') my-profile @endsection
 
+@section('meta')
+  <meta id="token" content="{{ $token }}" />
+@endsection
+
 @section('content')
 <div class="container edit-profile">
   <div class="row">
@@ -179,12 +183,19 @@
                   <strong>{{ $errors->first('talent') }}</strong>
                 </span> @endif
               </div>
-              <div class="form-group{{ $errors->has('desired_skills') ? ' alert alert-danger' : '' }}">
-                <label for="desired_skills">Desired Skills</label>
+              <div class="form-group{{ $errors->has('personalSkills') ? ' alert alert-danger' : '' }}">
+                <label for="personalSkills">Desired personal skills max: 6</label>
+                <ul class="selected-skills list-unstyled">
+                  @foreach ($company->personalSkills as $skill)
+                    <li class="btn btn-default"><input type="hidden" name="personalSkills[]" value="{{ $skill->id }}" > {{ $skill[App::getLocale()] }}
+                    <a title="remove" href="javascript:void(0)"><i class="fa fa-close" aria-hidden="true"></i></a>
+                    </li>
+                  @endforeach
+                </ul>
                 <textarea class="form-control" id="desired_skills" name="desired_skills" placeholder="A list of the most valuable skills for the company"></textarea>
-                @if ($errors->has('desired_skills'))
+                @if ($errors->has('personalSkills'))
                 <span class="help-block">
-                  <strong>{{ $errors->first('desired_skills') }}</strong>
+                  <strong>{{ $errors->first('personalSkills') }}</strong>
                 </span> @endif
               </div>
               <hr>

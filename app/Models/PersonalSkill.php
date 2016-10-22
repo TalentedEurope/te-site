@@ -24,7 +24,7 @@ class PersonalSkill extends Model
 
     public function getNameAttribute()
     {
-        $name = $en;
+        $name = $this->en;
         if (isset($this->attributes[Config::get('app.locale')])) {
             $name = $this->attributes[Config::get('app.locale')];
         }

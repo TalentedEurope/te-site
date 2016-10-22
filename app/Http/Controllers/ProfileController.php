@@ -9,26 +9,31 @@ use App\Models\User;
 use App\Models\ValidationRequest;
 use App\Models\StudentStudy;
 use App\Models\StudentLanguage;
+use App\Models\PersonalSkill;
+use App\Http\Controllers\Api\LoginController;
 use Auth;
 use Illuminate\Support\MessageBag;
 use Validator;
 use Image;
+use JWTAuth;
 
 class ProfileController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', ['except' => array('getUserProfile')]);
+        $this->middleware('auth', ['except' => array('getProfile')]);
     }
 
-    public function index(Request $request)
+    /* Routes */
+
+    public function getMyProfile(Request $request)
     {
         $user = Auth::user();
 
         return $this->showProfile($user);
     }
 
-    public function getUserProfile(Request $request, $slug, $id)
+    public function getProfile(Request $request, $slug, $id)
     {
         $user = User::findOrFail($id);
         $public = Auth::user() == null;
@@ -36,33 +41,19 @@ class ProfileController extends Controller
         return $this->showProfile($user, $public);
     }
 
-    private function showProfile($user, $public = false)
-    {
-        if ($user->isA('student')) {
-            $data = $this->getStudentPublicData($user, $public);
-
-            return view('profile.student-view', $data);
-        }
-        if ($user->isA('company')) {
-            $data = $this->getCompanyPublicData($user, $public);
-
-            return view('profile.company-view', $data);
-        }
-    }
-
     public function getEdit(Request $request)
     {
         $user = Auth::user();
         if ($user->isA('student')) {
             $data = $this->getStudentPrivateData($user);
+            $data['token'] = LoginController::userToken();
 
             return view('profile.student-edit', $data);
         }
 
         if ($user->isA('company')) {
             $data = $this->getCompanyPrivateData($user);
-            //$errors = $this->checkForErrors($request, $user);
-            //$data['errors'] = $errors;
+            $data['token'] = LoginController::userToken();
             return view('profile.company-edit', $data);
         }
 
@@ -78,24 +69,42 @@ class ProfileController extends Controller
     public function postEdit(Request $request)
     {
         $user = Auth::User();
-        $errors = $this->doProcessUser($request, $user);
+        $errors = $this->processUser($request, $user);
         $request->session()->flash('success_message', 'Changes saved succesfully');
-        $request->session()->flash('error_message', 'Warning: Some fields couldn\'t be saved because there were errors, check each field to see the issues');
+        if (sizeof($errors)) {
+            $request->session()->flash('error_message', 'Warning: Some fields couldn\'t be saved because there were errors, check each field to see the issues');
+        }
         return back()->withInput()->withErrors($errors);
     }
 
-    private function doProcessUser(Request $request, User $user)
+    private function showProfile($user, $public = false)
+    {
+        if ($user->isA('student')) {
+            $data = $this->getStudentPublicData($user, $public);
+
+            return view('profile.student-view', $data);
+        }
+        if ($user->isA('company')) {
+            $data = $this->getCompanyPublicData($user, $public);
+            $data['token'] = LoginController::userToken();
+
+            return view('profile.company-view', $data);
+        }
+    }
+
+    protected function processUser(Request $request, User $user)
     {
         $errors = new MessageBag();
 
         // Process common information for all profiles.
-        $errors = $errors->merge($this->doProcessCommon($request, $user));
+        $errors = $errors->merge($this->processCommon($request, $user));
+        $user->is_filled = true;
 
         // Process specific profiles
         if (Auth::user()->isA('company')) {
-            $errors = $errors->merge($this->doProcessCompany($request, $user));
+            $errors = $errors->merge($this->processCompany($request, $user));
         } elseif (Auth::user()->isA('student')) {
-            //$errors = $errors->merge($this->doProcessCompany($request));
+            //$errors = $errors->merge($this->processCompany($request));
         }
         // Make sure that the only errors shown are from the fields we passed.
         $reqErrors = new MessageBag();
@@ -109,9 +118,20 @@ class ProfileController extends Controller
         return $reqErrors;
     }
 
-    private function doProcessCommon(Request $request, User $user)
+    protected function processCommon(Request $request, User $user)
     {
         $errors = new MessageBag();
+
+        $v = Validator::make($request->all(), User::rules());
+        $v->setAttributeNames(User::$niceNames);
+
+        $errors = $errors->merge($v);
+        foreach ($v->valid() as $key => $value) {
+            if (array_has($user['attributes'], $key) && !$request->has('validate')) {
+                $user->$key = $value;
+            }
+        }
+        $user->is_filled = $this->checkFill($v, $errors);
 
         // Password reset.
         // Unlike the other fields we only check them if they're passed
@@ -121,27 +141,18 @@ class ProfileController extends Controller
                     'password_confirm' => 'required|min:8|same:password',
             );
             $v = Validator::make($request->all(), $rules);
-            if ($v->passes()) {
+            if ($v->passes() && !$request->has('validate')) {
                 $user->password = \Hash::make($request->input('password'));
             }
             $errors = $errors->merge($v);
         }
 
-        $v = Validator::make($request->all(), User::rules());
-        $v->setAttributeNames(User::$niceNames);
-
-        $errors = $errors->merge($v);
-        foreach ($v->valid() as $key => $value) {
-            if (array_has($user['attributes'], $key)) {
-                $user[$key] = $value;
-            }
-        }
 
         // Images don't appear on valid() but since it has a different parse logic
         // we do it aside.
         $v = Validator::make($request->all(), array_filter(User::rules('image')));
 
-        if ($v->passes() && $request->hasFile('image')) {
+        if ($v->passes() && $request->hasFile('image') && !$request->has('validate')) {
             $fname = tempnam(public_path() . User::$photoPath, $user->id).'.jpg';
             $img = Image::make($request->file('image'))
             ->resize(User::$photoWidth, User::$photoHeight, function ($constraint) {
@@ -151,10 +162,11 @@ class ProfileController extends Controller
         }
         $errors = $errors->merge($v);
 
+        $user->save();
         return $errors;
     }
 
-    private function doProcessCompany(Request $request, User $user)
+    protected function processCompany(Request $request, User $user)
     {
         $errors = new MessageBag();
         $company = null;
@@ -168,17 +180,50 @@ class ProfileController extends Controller
         $v = Validator::make($request->all(), Company::rules($company));
 
         foreach ($v->valid() as $key => $value) {
-            if (array_has($company['attributes'], $key)) {
-                $company[$key] = $value;
+            if (array_has($company['attributes'], $key) && !$request->has('validate')) {
+                $company->$key = $value;
             }
         }
+
+        $this->is_filled = $this->checkFill($v, $errors);
+        $errors = $errors->merge($v);
+
+        // Related columns
+        $v = Validator::make($request->all(), Company::rulesRelated('personalSkills'));
+        if ($v->passes()) {
+            $skills = $request->input('personalSkills');
+            $company->personalSkills()->whereNotIn('id', $skills)->detach();
+            foreach ($request->input('personalSkills') as $skillID) {
+                $skill = PersonalSkill::find($skillID);
+                if ($skill && !$company->personalSkills()->find($skillID)) {
+                    $company->personalSkills()->attach($skill);
+                }
+            }
+        }
+
         $company->save();
         $user->save();
         $errors = $errors->merge($v);
         return $errors;
     }
 
-    private function doProcessStudent(Request $request)
+    protected function checkFill($v, $errors)
+    {
+        $filled = true;
+
+        foreach ($v->getRules() as $key => $rule) {
+            foreach ($rule as $check) {
+                if (is_string($check) && $check == 'required' && in_array($key, array_keys($errors->messages()))) {
+                    $filled = false;
+                    break;
+                }
+            }
+        }
+
+        return $filled;
+    }
+
+    private function processStudent(Request $request)
     {
         $errors = Validator::make($request->all(), array());
 
@@ -405,9 +450,5 @@ class ProfileController extends Controller
                 array('full_name' => 'Lorem ipsum dolor sit amet'),
             ),
         );
-    }
-
-    public function update(Request $request, $id)
-    {
     }
 }

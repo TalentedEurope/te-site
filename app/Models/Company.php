@@ -29,6 +29,22 @@ class Company extends Model
         }
     }
 
+    public static function rulesRelated($related, $only_key = false)
+    {
+        $relatedRules = array(
+            'personalSkills' => array(
+                'personalSkills' => 'array|max:6'
+            ),
+        );
+        $filter = $relatedRules[$related];
+        if ($only_key) {
+            return array($only_key => $filter[$only_key]);
+        } else {
+            return $filter;
+        }
+    }
+
+
     public static $niceNames = array(
                         'fiscal_id' => 'Fiscal ID',
                         'overseer' => 'Person in charge',
