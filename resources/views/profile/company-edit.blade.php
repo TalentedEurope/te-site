@@ -34,6 +34,15 @@
               <div class="radio">
                 <label><input @if ($user->visible != true) checked @endif type="radio" name="visible" value="0">Hidden. Cannot be searched or viewed</label>
               </div>
+              <hr>
+              <h4>Notifications</h4>
+              <div class="radio">
+                <label><input type="radio" @if ($user->notify_me == true) checked @endif name="notify_me" value="1">Enabled. You'll receive emails once a day if a student wants to get in contact with you</label>
+              </div>
+              <div class="radio">
+                <label><input @if ($user->notify_me != true) checked @endif type="radio" name="notify_me" value="0">Disabled. You won't receive any emails, except for announcements about the service</label>
+              </div>
+
               <hr class="separator">
               <h4>About</h4>
 
@@ -121,7 +130,7 @@
               </div>
               <div class="form-group{{ $errors->has('linkedin') ? ' alert alert-danger' : '' }}">
                 <!-- <label for="linkedin">linkedin page url</label> -->
-                <input type="text" class="form-control" id="linkedin" name="linkedin" placeholder="linkedin page url" value="{{ old('linkedin', $user->linkedin) }}"> @if ($errors->has('linkedin'))
+                <input type="text" class="form-control" id="linkedin" name="linkedin" placeholder="Linkedin page url" value="{{ old('linkedin', $user->linkedin) }}"> @if ($errors->has('linkedin'))
                 <span class="help-block">
                   <strong>{{ $errors->first('linkedin') }}</strong>
                 </span> @endif
