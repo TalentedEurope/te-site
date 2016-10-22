@@ -34,6 +34,7 @@ class User extends Authenticatable
     public static function rules($only_key = false)
     {
         $filter = array( 'visible' => 'required|boolean',
+                        'notify_me' => 'required|boolean',
                         'name' => 'required' ,
                         'phone' => 'regex:/^[\pL\s\d\-]+$/u' ,
                         'facebook' => 'active_url' ,
@@ -54,6 +55,7 @@ class User extends Authenticatable
 
     public static $niceNames = array(
                         'visible' => 'Profile visibility',
+                        'notify_me' => 'Notifications',
                         'name' => 'Name',
                         'phone' => 'Phone',
                         'facebook' => 'Facebook URL',
