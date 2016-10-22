@@ -192,11 +192,13 @@ class ProfileController extends Controller
         $v = Validator::make($request->all(), Company::rulesRelated('personalSkills'));
         if ($v->passes()) {
             $skills = $request->input('personalSkills');
-            $company->personalSkills()->whereNotIn('id', $skills)->detach();
-            foreach ($request->input('personalSkills') as $skillID) {
-                $skill = PersonalSkill::find($skillID);
-                if ($skill && !$company->personalSkills()->find($skillID)) {
-                    $company->personalSkills()->attach($skill);
+            if ($skills) {
+                $company->personalSkills()->whereNotIn('id', $skills)->detach();
+                foreach ($skills as $skillID) {
+                    $skill = PersonalSkill::find($skillID);
+                    if ($skill && !$company->personalSkills()->find($skillID)) {
+                        $company->personalSkills()->attach($skill);
+                    }
                 }
             }
         }
