@@ -28,23 +28,32 @@ class StudentsTableSeeder extends Seeder
         $user->save();
 
         $country_codes = Student::$nationalities;
+        $languages = array_keys(StudentLanguage::$languages);
 
         foreach ($institutions as $institution) {
             foreach ((range(1, 3)) as $index) {
                 $user = User::create([
                     'name' => $faker->unique()->name,
                     'email' => $faker->unique()->email,
+                    'image' => rand(0, 1) % 2 == 0? 'sample.jpg': '',
+                    'phone' => $faker->phoneNumber,
+                    'facebook' => $faker->url,
+                    'twitter' => $faker->url,
+                    'address' => $faker->streetAddress,
+                    'postal_code' => $faker->postcode,
+                    'city' => $faker->city,
+                    'is_filled' => true,
+                    'country' => array_keys(User::$countries)[rand(0, sizeof(array_keys(User::$countries)) - 1)],
                 ]);
                 $nationality = $country_codes[rand(0, sizeOf($country_codes) - 1)];
+
                 Bouncer::assign('student')->to($user);
                 $student = Student::create([
-                    // 'address' => $faker->address,
                     'nationality' => $nationality,
                     'birthdate' => $faker->dateTimeThisCentury->format('Y-m-d'),
                     'institution_id' => $institution->id,
                     'valid' => false,
-                    'curriculum' => '/uploads/curriculum/sample.pdf',
-                    'photo' => '/uploads/curriculum/sample.jpg',
+                    'curriculum' => 'sample.pdf',
                     'renewed_at' => date('Y-m-d'),
                 ]);
 
@@ -56,8 +65,9 @@ class StudentsTableSeeder extends Seeder
                             rand(0, sizeOf(StudentStudy::$levels) - 1)
                         ],
                         'student_id' => $student->id,
-                        'certificate' => '/uploads/certificate/sample.pdf',
-                        'gradecard' => '/uploads/gradecard/sample.pdf',
+                        'certificate' => 'sample.pdf',
+                        'institution_name' => $faker->company,
+                        'gradecard' => 'sample.pdf',
                     ]);
                 }
                 $student->user()->save($user);
@@ -65,12 +75,12 @@ class StudentsTableSeeder extends Seeder
                 // Student languages
                 foreach (range(1, rand(2, 3)) as $languagesIndex) {
                     $study = StudentLanguage::create([
-                        'name' => $faker->word,
+                        'name' => $languages[rand(0, sizeOf($languages) - 1)],
                         'level' => StudentLanguage::$levels[
                             rand(0, sizeOf(StudentLanguage::$levels) - 1)
                         ],
                         'student_id' => $student->id,
-                        'certificate' => '/uploads/certificate/sample.pdf',
+                        'certificate' => 'sample.pdf',
                     ]);
                 }
                 $student->user()->save($user);
