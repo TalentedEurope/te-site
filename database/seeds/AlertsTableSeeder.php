@@ -14,7 +14,6 @@ class AlertsTableSeeder extends Seeder
             $alert = Alert::create([
                 'origin_id' => Company::all()->random(1)->user->id,
                 'target_id' => Student::all()->random(1)->user->id,
-                'message' => $faker->sentence(6,true)
             ]);
         }
     }

@@ -18,7 +18,7 @@ class CreateAlertsTable extends Migration
             $table->foreign('origin_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('target_id')->unsigned();
             $table->foreign('target_id')->references('id')->on('users')->onDelete('cascade');
-            $table->string('message');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

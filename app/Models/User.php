@@ -93,6 +93,15 @@ class User extends Authenticatable
         return $route;
     }
 
+    public function getImageAttribute()
+    {
+        $image = $this->attributes['image'];
+        if ($this->attributes['image'] == "") {
+            $image = 'default.png';
+        }
+        return $image;
+    }
+
     public function getSlug()
     {
         return str_slug($this->name.' '.$this->surname);
