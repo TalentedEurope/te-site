@@ -30,4 +30,17 @@ class PersonalSkill extends Model
         }
         return $name;
     }
+
+    public static function getFormattedArray()
+    {
+        $skills = PersonalSkill::all();
+        $personalSkills = array();
+        foreach ($skills as $item) {
+            $personalSkills[] = array(
+                'code' => $item->id,
+                'name' => $item->name
+            );
+        }
+        return $personalSkills;
+    }
 }

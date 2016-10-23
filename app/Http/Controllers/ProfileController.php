@@ -342,6 +342,7 @@ class ProfileController extends Controller
             'user' => $user,
             'activities' => $activities,
             'countries' => User::$countries,
+            'personalSkills' => PersonalSkill::getFormattedArray()
         );
         if ($user->userable) {
             $data['company'] = $user->userable;
