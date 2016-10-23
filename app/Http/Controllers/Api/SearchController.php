@@ -65,7 +65,7 @@ class SearchController extends SiteSearchController
             $results->whereIn('activity', $v->valid()['activities']);
         }
 
-        $results = $results->get();
+        $results = $results->paginate(env('PAGINATE_ENTRIES', 10));
 
         $students = array();
         foreach ($results as $student) {
@@ -124,7 +124,15 @@ class SearchController extends SiteSearchController
                 'languages' => $languages,
             );
         }
-        return $students;
+
+        return array(
+            'data' => $students,
+            'per_page' => $results->perPage(),
+            'total' => $results->total(),
+            'current_page' => $results->currentPage(),
+            'prev_page_url' => $results->previousPageUrl(),
+            'next_page_url' => $results->nextPageUrl(),
+        );
     }
 
     public function getCompanies(Request $request)
@@ -151,7 +159,7 @@ class SearchController extends SiteSearchController
             $results->whereIn('activity', $v->valid()['activities']);
         }
 
-        $results = $results->get();
+        $results = $results->paginate(env('PAGINATE_ENTRIES', 10));
 
         $companies = array();
         foreach ($results as $company) {
@@ -176,7 +184,14 @@ class SearchController extends SiteSearchController
                 'photo' => $company->user->image,
             );
         }
-        return $companies;
+        return array(
+            'data' => $companies,
+            'per_page' => $results->perPage(),
+            'total' => $results->total(),
+            'current_page' => $results->currentPage(),
+            'prev_page_url' => $results->previousPageUrl(),
+            'next_page_url' => $results->nextPageUrl(),
+        );
     }
 
     public function getStudentFilters(Request $request)
