@@ -39,7 +39,7 @@ class CompaniesTableSeeder extends Seeder
             'notification_email' => $faker->unique()->email,
             'notification_name' => $faker->company,
         ]);
-        $company_activity = Company::$activities[rand(0, sizeof(Company::$activities))];
+        $company_activity = Company::$activities[rand(0, sizeof(Company::$activities)) - 1];
         $company->user()->save($user);
         foreach (range(1, 5) as $personalSkillsIndex) {
             $skill = PersonalSkill::orderByRaw('RAND()')->get()->first();
@@ -76,7 +76,7 @@ class CompaniesTableSeeder extends Seeder
                 'notification_email' => $faker->unique()->email,
                 'notification_name' => $faker->company,
             ]);
-            $company_activity = Company::$activities[rand(0, sizeof(Company::$activities))];
+            $company_activity = Company::$activities[rand(0, sizeof(Company::$activities)) - 1];
             $company->user()->save($user);
         }
     }

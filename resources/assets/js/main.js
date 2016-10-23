@@ -9,9 +9,15 @@ import StudentsValidation from './components/students-validation/Main.vue';
 import CompanyProfileView from './components/profile/company/view/Main.vue';
 import StudentProfileView from './components/profile/student/view/Main.vue';
 import ValidatorProfileView from './components/profile/validator/view/Main.vue';
+import SelectForm from './components/profile/SelectForm.vue'
+import TextAreaForm from './components/profile/TextAreaForm.vue'
+import TextBoxForm from './components/profile/TextBoxForm.vue'
 
 
 new Vue({
     el: '.v-container',
-    components: { Search, Nudges, StudentsValidation, Validators, CompanyProfileView, StudentProfileView, ValidatorProfileView },
+    components: {
+        Search, Nudges, StudentsValidation, Validators,
+        CompanyProfileView, StudentProfileView, ValidatorProfileView,
+        SelectForm, TextAreaForm, TextBoxForm },
 })

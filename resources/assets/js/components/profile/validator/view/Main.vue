@@ -3,7 +3,7 @@
         <div class="col-xs-12">
             <profile-header :title="validator.full_name" :subtitle="validator.institution_name"></profile-header>
 
-            <profile-section :title="'Validated students'" :icon-class="'fa fa-users'">
+            <profile-section :title="'Refereed students'" :icon-class="'fa fa-users'">
                 <ul class="cards clearfix">
                     <li v-for="student in validator.validated_students">
                         <strong><i class="icon fa fa-user"></i>  <a href="">{{student.full_name}}</a> </strong>

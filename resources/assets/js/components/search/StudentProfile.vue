@@ -22,7 +22,7 @@
                     <img :src="student.photo" alt="" class="img-circle img-responsive">
                     <figcaption class="ratings" v-if="student.validated">
                         <span class="label label-success">
-                            <i class="fa fa-star"></i> Validated
+                            <i class="fa fa-star"></i> Refereed
                         </span>
                     </figcaption>
                 </figure>
