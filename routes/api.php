@@ -13,17 +13,18 @@
 
 Route::post('login', 'Api\LoginController@getToken');
 
-Route::group(['prefix' => 'search'], function () {
+Route::group(['prefix' => 'search', 'namespace' => 'api'], function () {
     Route::group(['prefix' => 'students'], function () {
-        Route::get('/', 'SearchController@getJSONStudentsResults');
-        Route::get('filters', 'FilterController@getJSONStudentsFilters');
+        Route::get('/', 'SearchController@getStudents');
+        Route::get('filters', 'SearchController@getStudentFilters');
     });
 
     Route::group(['prefix' => 'companies'], function () {
-        Route::get('/', 'SearchController@getJSONCompaniesResults');
-        Route::get('filters', 'FilterController@getJSONCompaniesFilters');
+        Route::get('/', 'SearchController@getCompanies');
+        Route::get('filters', 'SearchController@getCompanyFilters');
     });
 });
+
 
 Route::group(['prefix' => 'profile', 'namespace' => 'api'], function () {
     Route::put('/', 'ProfileController@update');
