@@ -3,9 +3,11 @@ import VueResource from 'vue-resource';
 
 Vue.use(VueResource);
 
+var token = $("meta[id='token']").attr('content');
+
 Vue.http.options.root = '/api';
 Vue.http.options.headers = {
-    Authorization: 'Basic TMPYXBpOnBhc3N3b3Jk'
+    Authorization: `Bearer ${token}`,
 }
 
 Vue.http.interceptors.push((request, next) => {
