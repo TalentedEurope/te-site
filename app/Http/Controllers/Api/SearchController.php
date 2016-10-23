@@ -13,6 +13,7 @@ use App\Models\StudentStudy;
 use App\Models\StudentLanguage;
 use App\Http\Requests;
 use JWTAuth;
+use Validator;
 
 class SearchController extends SiteSearchController
 {
@@ -38,20 +39,52 @@ class SearchController extends SiteSearchController
 
     public function getCompanies(Request $request)
     {
-        $company = array(
-            'name' => 'John Doe LLC.',
-            'info' => 'Company Sector',
-            'we_are_in' => 'Santa Cruz de Tenerife, Spain.',
-            'talent_is' => 'Jelly apple pie icing. Jelly cupcake tiramisu jelly beans marzipan. Cheesecake jelly-o jelly tootsie roll biscuit chocolate macaroon marshmallow. Jelly-o marshmallow tart donut brownie chocolate topping chocolate cake.',
-            'skills' => [
-                array('name' => 'Lorem ipsum'),
-                array('name' => 'Dolor sit amet'),
-                array('name' => 'Consectetur adipiscing elit'),
-            ],
-            'photo' => 'http://placebear.com/g/150/150',
+        $rules = array(
+                        'search_text' => 'string|nullable',
+                        'activities.*' => 'required|in:'.implode(',', Company::$activities),
+                        'countries.*' => 'required|in:'.implode(',', array_keys(User::$countries)),
         );
+        $v = Validator::make($request->all(), $rules);
+        $results = Company::whereNotNull("activity")
+                ->whereHas('user', function ($q) use ($v) {
+                    $q->where('visible', true);
+                    $q->where('is_filled', true);
+                    $q->where('banned', false);
+                    if (isset($v->valid()['search_text'])) {
+                        $q->search($v->valid()['search_text'], ['name','email']);
+                    }
+                    if (isset($v->valid()['countries'])) {
+                        $q->whereIn('country', $v->valid()['countries']);
+                    }
+                });
+        if (isset($v->valid()['activities'])) {
+            $results->whereIn('activity', $v->valid()['activities']);
+        }
 
-        return [$company, $company, $company, $company];
+        $results = $results->get();
+
+        $companies = array();
+        foreach ($results as $company) {
+            $skills = array();
+            foreach ($company->personalSkills as $item) {
+                $skills[] = array(
+                    'code' => $item->id,
+                    'name' => $item->name
+                );
+            }
+
+            $companies[] = array(
+                'name' => $company->user->name,
+                'info' => trans('reg-profile.'.$company->activity),
+                'country' => User::$countries[$company->user->country],
+                'city' => $company->user->city,
+                'we_are_in' => $company->user->city . ', ' . User::$countries[$company->user->country],
+                'talent_is' => $company->talent,
+                'skills' => $skills,
+                'photo' => $company->user->image,
+            );
+        }
+        return $companies;
     }
 
     public function getStudentFilters(Request $request)

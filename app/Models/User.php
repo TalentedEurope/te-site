@@ -5,11 +5,14 @@ namespace App\Models;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Silber\Bouncer\Database\HasRolesAndAbilities;
 use Illuminate\Notifications\Notifiable;
+use Sofa\Eloquence\Eloquence;
 
 class User extends Authenticatable
 {
     use HasRolesAndAbilities;
     use Notifiable;
+    use Eloquence;
+
     protected $with = ['userable'];
     protected $appends = ['slug'];
 
