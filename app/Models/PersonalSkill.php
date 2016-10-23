@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class PersonalSkill extends Model
 {
     public $timestamps = false;
+    protected $appends = ['name'];
 
     public static $rules = array(
             'name_en' => 'required',
