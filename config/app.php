@@ -170,6 +170,7 @@ return [
         Silber\Bouncer\BouncerServiceProvider::class,
         Jrean\UserVerification\UserVerificationServiceProvider::class,
         'Tymon\JWTAuth\Providers\JWTAuthServiceProvider',
+        'Sofa\Eloquence\ServiceProvider',
 
         /*
          * Application Service Providers...
