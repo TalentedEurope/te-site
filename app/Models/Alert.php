@@ -3,15 +3,16 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Alert extends Model
 {
+    use SoftDeletes;
+
     public static $rules = array(
             'origin' => 'required',
             'target' => 'required',
-            'message' => 'required',
     );
-
 
     public function origin()
     {
@@ -22,6 +23,4 @@ class Alert extends Model
     {
         return $this->belongsTo('App\Models\User');
     }
-
-
 }
