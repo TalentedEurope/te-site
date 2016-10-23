@@ -4,6 +4,7 @@
 @section('page-class') search students @endsection
 @section('meta')
   <meta id="token" content="{{ $token }}" />
+  <meta id="user_type" content="{{ $userType }}" />
 @endsection
 
 @section('content')

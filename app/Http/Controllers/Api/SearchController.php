@@ -19,22 +19,112 @@ class SearchController extends SiteSearchController
 {
     public function getStudents(Request $request)
     {
-        $student = array(
-            'full_name' => 'John Doe',
-            'lives_in' => 'Spain',
-            'studied' => 'Doctorate in Lorem ipsum dolor sit amet Consectetuor',
-            'studied_in' => 'IES Puerto de la Cruz Telesforo Bravo',
-            'skills' => [
-                array('name' => 'Lorem ipsum', 'important' => true),
-                array('name' => 'Dolor sit amet', 'important' => false),
-                array('name' => 'Consectetur adipiscing elit', 'important' => false),
-            ],
-            'languages' => ['Spanish', 'English', 'French'],
-            'photo' => 'http://placekitten.com/g/150/150',
-            'validated' => true,
+        $rules = array(
+                        'search_text' => 'string|nullable',
+                        'level_of_studies.*' => 'required|in:'.implode(',', StudentStudy::$levels),
+                        'field_of_studies.*' => 'required|in:'.implode(',', StudentStudy::$fields),
+                        'languages.*' => 'required|in:'.implode(',', array_keys(StudentLanguage::$languages)),
+                        'countries.*' => 'required|in:'.implode(',', array_keys(User::$countries)),
         );
 
-        return [$student, $student, $student, $student];
+        $v = Validator::make($request->all(), $rules);
+        $results = Student::whereHas('user', function ($q) use ($v) {
+                        $q->where('visible', true);
+                        $q->where('is_filled', true);
+                        $q->where('banned', false);
+            if (isset($v->valid()['search_text'])) {
+                $q->search($v->valid()['search_text'], ['name','email']);
+            }
+            if (isset($v->valid()['countries'])) {
+                $q->whereIn('country', $v->valid()['countries']);
+            }
+        });
+
+
+        if (isset($v->valid()['level_of_studies']) ||
+                isset($v->valid()['field_of_studies'])) {
+            $results->whereHas('studies', function ($q) use ($v) {
+
+                if (isset($v->valid()['level_of_studies'])) {
+                    $q->whereIn('level', $v->valid()['level_of_studies']);
+                }
+
+                if (isset($v->valid()['field_of_studies'])) {
+                    $q->whereIn('field', $v->valid()['field_of_studies']);
+                }
+            });
+        }
+
+        if (isset($v->valid()['languages'])) {
+            $results->whereHas('languages', function ($q) use ($v) {
+                $q->whereIn('name', $v->valid()['languages']);
+            });
+        }
+
+        if (isset($v->valid()['activities'])) {
+            $results->whereIn('activity', $v->valid()['activities']);
+        }
+
+        $results = $results->get();
+
+        $students = array();
+        foreach ($results as $student) {
+            $skills = array();
+            $languages = array();
+            $firstStudy = $student->studies->first();
+            $firstStudyName = "";
+            $firstStudyLevel = "";
+            $firstStudyInstitution = "";
+            if ($firstStudy) {
+                $firstStudyName = $firstStudy->name;
+                $firstStudyLevel = trans('reg-profile.' . $firstStudy->level);
+                $firstStudyInstitution = $firstStudy->institution_name;
+            }
+
+            foreach ($student->personalSkills as $item) {
+                $skills[] = array(
+                    'code' => $item->id,
+                    'name' => $item->name,
+                    'important' => false
+                );
+            }
+
+            foreach ($student->professionalSkills as $item) {
+                $skills[] = array(
+                    'code' => $item->id,
+                    'name' => $item->name,
+                    'important' => false
+                );
+            }
+
+            foreach ($student->languages as $item) {
+                if ($item->name) {
+                    $languages[] = StudentLanguage::$languages[$item->name]['name'];
+                }
+            }
+
+            $students[] = array(
+                'id' => $student->id,
+                'slug' => $student->user->slug,
+                'full_name' => $student->user->name . " " . $student->user->surname,
+                'name' => $student->user->name,
+                'surname' => $student->user->surname,
+                'lives_in' => $student->user->city . ', ' . User::$countries[$student->user->country],
+                'country' => User::$countries[$student->user->country],
+                'city' => $student->user->city,
+                'info' => trans('reg-profile.'.$student->activity),
+                'skills' => $skills,
+                'photo' => asset(User::$photoPath.$student->user->image),
+                'validated' => $student->valid,
+                'first_study_name' => $firstStudyName,
+                'first_study_level' => $firstStudyLevel,
+                'first_study_institution' => $firstStudyInstitution,
+                'studied' => $firstStudyInstitution . ' at ' . $firstStudyName,
+                'studied_in' => $firstStudyInstitution,
+                'languages' => $languages,
+            );
+        }
+        return $students;
     }
 
     public function getCompanies(Request $request)
@@ -74,6 +164,8 @@ class SearchController extends SiteSearchController
             }
 
             $companies[] = array(
+                'id' => $company->id,
+                'slug' => $company->user->slug,
                 'name' => $company->user->name,
                 'info' => trans('reg-profile.'.$company->activity),
                 'country' => User::$countries[$company->user->country],
