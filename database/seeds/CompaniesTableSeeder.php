@@ -76,7 +76,8 @@ class CompaniesTableSeeder extends Seeder
                 'notification_email' => $faker->unique()->email,
                 'notification_name' => $faker->company,
             ]);
-            $company_activity = Company::$activities[rand(0, sizeof(Company::$activities)) - 1];
+            $rand =
+            $company_activity = Company::$activities[rand(0, sizeof(Company::$activities) -1)];
             $company->user()->save($user);
         }
     }
