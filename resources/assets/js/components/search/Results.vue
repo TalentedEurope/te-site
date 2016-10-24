@@ -50,7 +50,7 @@ export default {
                 resource = companiesResultsResource;
             }
             resource.get(filters, search_text).then((response) => {
-                this.results = response.body;
+                this.results = response.body.data;
             }, (errorResponse) => {
                 console.log(errorResponse);
             });

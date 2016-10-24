@@ -21,5 +21,9 @@ export default {
 .result-info {
     background: $dark-blue;
     color: white;
+
+    p {
+        margin-bottom: 0;
+    }
 }
 </style>
