@@ -11,7 +11,7 @@
                 </li>
             </ul>
         </div>
-        <multi-options-filter v-for="filter in filters" @onselectfilter="selectFilter" @onremovefilter="removeFilter" :items="filter.items" :code="filter.code" :title="filter.title"></multi-options-filter>
+        <multi-options-filter v-for="filter in filters" @onselectfilter="selectFilter" @onremovefilter="removeFilter" :items="filter.items" :id="filter.id" :title="filter.title"></multi-options-filter>
     </div>
 </template>
 
@@ -50,8 +50,8 @@ export default {
             });
         },
         removeCurrentSearchFilter: function (filter) {
-            var e_filter = this.filters.find(x => x.code === filter.code);
-            var item = e_filter.items.find(x => x.code === filter.item.code);
+            var e_filter = this.filters.find(x => x.id === filter.id);
+            var item = e_filter.items.find(x => x.id === filter.item.id);
             this.$set(item, 'selected', false);
 
             this.removeFilter(filter);
@@ -59,10 +59,10 @@ export default {
         selectFilter: function (filter) {
             this.current_search.push(filter);
 
-            if (!this.applied_filters[filter.code]) {
-                this.applied_filters[filter.code] = [];
+            if (!this.applied_filters[filter.id]) {
+                this.applied_filters[filter.id] = [];
             }
-            this.applied_filters[filter.code].push(filter.item.code);
+            this.applied_filters[filter.id].push(filter.item.id);
 
             EventBus.$emit('onChangeFilters', this.applied_filters);
         },
@@ -73,9 +73,9 @@ export default {
                 this.current_search.splice(index, 1);
             }
 
-            index = this.applied_filters[filter.code].indexOf(filter.item.code);
+            index = this.applied_filters[filter.id].indexOf(filter.item.id);
             if (index > -1) {
-                this.applied_filters[filter.code].splice(index, 1);
+                this.applied_filters[filter.id].splice(index, 1);
             }
 
             EventBus.$emit('onChangeFilters', this.applied_filters);

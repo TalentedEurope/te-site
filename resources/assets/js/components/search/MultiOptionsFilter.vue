@@ -3,8 +3,8 @@
         <h3>{{title}}</h3>
         <ul>
             <li v-for="item in getItems">
-                <label v-bind:for="getInputId(code, item.code)">
-                    <input type="checkbox" v-bind:id="getInputId(code, item.code)" :checked="item.selected" @change="change(item)">
+                <label v-bind:for="getInputId(id, item.id)">
+                    <input type="checkbox" v-bind:id="getInputId(id, item.id)" :checked="item.selected" @change="change(item)">
                     {{item.name}}
                 </label>
             </li>
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-    props: ['items', 'code', 'title'],
+    props: ['items', 'id', 'title'],
     data() {
         return {
             'view_more': false,
@@ -25,15 +25,15 @@ export default {
         }
     },
     methods: {
-        getInputId: function (filter_code, item_code) {
-            return filter_code + item_code;
+        getInputId: function (filter_id, item_id) {
+            return filter_id + item_id;
         },
         viewMore: function () {
             this.view_more = true;
         },
         change: function (item) {
             this.$set(item, 'selected', !item.selected);
-            var data = {code: this.code, item_id: this.getInputId(this.code, item.code), item: item};
+            var data = {id: this.id, item_id: this.getInputId(this.id, item.id), item: item};
             if (item.selected) {
                 this.$emit('onselectfilter', data);
             } else {
