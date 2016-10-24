@@ -26,7 +26,7 @@
           <div class="tab-pane active in" id="profile">
           <form enctype='multipart/form-data'  class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#profile' }}" >
               {{ csrf_field() }}
-              <!-- name -->
+
               <h4>Profile Visibility</h4>
               <div class="radio">
                 <label><input type="radio" @if ($user->visible == true) checked @endif name="visible" value="1">Visible. Can be searched, viewed</label>
@@ -58,7 +58,7 @@
                 <text-box-form class="col-sm-6" code="phone" label="Phone" placeholder="Phone" value="{{ old('phone', $user->phone) }}" has-error="{{ $errors->has('phone') }}" error="{{ $errors->first('phone') }}"></text-box-form>
               </div>
 
-              <select-form code="activity" label="Activity Sector" placeholder="Activity Sector" values='{!! json_encode($activities, JSON_HEX_APOS) !!}' selected="{{ old('activity', $user->activity) }}" has-error="{{ $errors->has('activity') }}" error="{{ $errors->first('activity') }}"></select-form>
+              <select-form code="activity" label="Activity Sector" placeholder=" - Activity Sector - " values='{!! json_encode($activities, JSON_HEX_APOS) !!}' value="{{ old('activity', $company->activity) }}" has-error="{{ $errors->has('activity') }}" error="{{ $errors->first('activity') }}"></select-form>
 
               <div class="form-group">
                 <label for="image">Company Logo</label>
@@ -83,28 +83,16 @@
                 <text-box-form class="col-sm-8" code="city" label="City" placeholder="City" value="{{ old('city', $user->city) }}" has-error="{{ $errors->has('city') }}" error="{{ $errors->first('city') }}"></text-box-form>
               </div>
 
-              <select-form code="country" label="Country" placeholder="Country" values='{!! json_encode($countries, JSON_HEX_APOS) !!}' selected="{{ old('country', $user->country) }}" has-error="{{ $errors->has('country') }}" error="{{ $errors->first('country') }}"></select-form>
+              <select-form code="country" label="Country" placeholder=" - Country - " values='{!! json_encode($countries, JSON_HEX_APOS) !!}' value="{{ old('country', $user->country) }}" has-error="{{ $errors->has('country') }}" error="{{ $errors->first('country') }}"></select-form>
 
               <hr class="separator">
 
               <text-area-form code="talent" label="What is talent for you? (Max 300 characters)" placeholder="Explain us what is talent for you in a few words (max 300)."
-                    value="{{ old('talent', $user->talent) }}" has-error="{{ $errors->has('talent') }}" error="{{ $errors->first('talent') }}"></text-area-form>
+                    value="{{ old('talent', $company->talent) }}" has-error="{{ $errors->has('talent') }}" error="{{ $errors->first('talent') }}"></text-area-form>
 
-              <div class="form-group{{ $errors->has('personalSkills') ? ' alert alert-danger' : '' }}">
-                <label for="personalSkills">Desired personal skills max: 6</label>
-                <ul class="selected-skills list-unstyled">
-                  @foreach ($company->personalSkills as $skill)
-                    <li class="btn btn-default"><input type="hidden" name="personalSkills[]" value="{{ $skill->id }}" > {{ $skill[App::getLocale()] }}
-                    <a title="remove" href="javascript:void(0)"><i class="fa fa-close" aria-hidden="true"></i></a>
-                    </li>
-                  @endforeach
-                </ul>
-                <textarea class="form-control" id="desired_skills" name="desired_skills" placeholder="A list of the most valuable skills for the company"></textarea>
-                @if ($errors->has('personalSkills'))
-                <span class="help-block">
-                  <strong>{{ $errors->first('personalSkills') }}</strong>
-                </span> @endif
-              </div>
+
+              <personal-skills-form code="personal" max-personal-skills="6" values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}' value='{!! json_encode($company->personalSkills, JSON_HEX_APOS) !!}' has-error="{{ $errors->has('name') }}" error="{{ $errors->first('name') }}">
+              </personal-skills-form>
 
               <hr>
 
