@@ -83,7 +83,7 @@ class SearchController extends SiteSearchController
 
             foreach ($student->personalSkills as $item) {
                 $skills[] = array(
-                    'code' => $item->id,
+                    'id' => $item->id,
                     'name' => $item->name,
                     'important' => false
                 );
@@ -91,7 +91,7 @@ class SearchController extends SiteSearchController
 
             foreach ($student->professionalSkills as $item) {
                 $skills[] = array(
-                    'code' => $item->id,
+                    'id' => $item->id,
                     'name' => $item->name,
                     'important' => false
                 );
@@ -166,7 +166,7 @@ class SearchController extends SiteSearchController
             $skills = array();
             foreach ($company->personalSkills as $item) {
                 $skills[] = array(
-                    'code' => $item->id,
+                    'id' => $item->id,
                     'name' => $item->name
                 );
             }
@@ -243,21 +243,21 @@ class SearchController extends SiteSearchController
 
         foreach ($availableStudyLevels as $study) {
             $studyLevels[] = array(
-                'code' => $study->level,
+                'id' => $study->level,
                 'name' => trans('reg-profile.'.$study->level)
             );
         }
 
         foreach ($availableStudyFields as $study) {
             $studyFields[] = array(
-                'code' => $study->field,
+                'id' => $study->field,
                 'name' => trans('reg-profile.'.$study->field)
             );
         }
 
         foreach ($availableStudyLanguages as $language) {
             $languages[] = array(
-                'code' => $language->level,
+                'id' => $language->level,
                 'name' => trans('reg-profile.'.$language->level)
             );
         }
@@ -265,28 +265,28 @@ class SearchController extends SiteSearchController
 
         foreach ($availableCountries as $country) {
             $countries[] = array(
-                'code' => $country->country,
+                'id' => $country->country,
                 'name' => User::$countries[$country->country]
             );
         }
 
         $data[] = array(
-            'code' => 'level_of_studies',
+            'id' => 'level_of_studies',
             'title' => trans('reg-profile.student_study_level'),
             'items' => $studyLevels
         );
         $data[] = array(
-            'code' => 'field_of_studies',
+            'id' => 'field_of_studies',
             'title' => trans('reg-profile.student_study_field'),
             'items' => $studyFields
         );
         $data[] = array(
-            'code' => 'languages',
+            'id' => 'languages',
             'title' => trans('reg-profile.student_languages'),
             'items' => $languages
         );
         $data[] = array(
-            'code' => 'countries',
+            'id' => 'countries',
             'title' => trans('reg-profile.country'),
             'items' => $countries
         );
@@ -313,26 +313,26 @@ class SearchController extends SiteSearchController
                                         ->get();
         foreach ($availableSectors as $sector) {
             $companySectors[] = array(
-                'code' => $sector->activity,
+                'id' => $sector->activity,
                 'name' => trans('reg-profile.' . $sector->activity)
             );
         }
 
         foreach ($availableCountries as $country) {
             $countries[] = array(
-                'code' => $country->country,
+                'id' => $country->country,
                 'name' => User::$countries[$country->country]
             );
         }
 
         $data[] = array(
-            'code' => 'activities',
+            'id' => 'activities',
             'title' => trans('reg-profile.company_activity'),
             'items' => $companySectors
         );
 
         $data[] = array(
-            'code' => 'countries',
+            'id' => 'countries',
             'title' => 'Countries',
             'items' => $countries
         );
