@@ -15,15 +15,32 @@
         <!-- Content -->
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">
           <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
-          <li><a href="#contact" data-toggle="tab">Career and Skills</a></li>
+          <li><a href="#career" data-toggle="tab">Career and Skills</a></li>
           <li><a href="#refer" data-toggle="tab">Get your profile refereed</a></li>
           <li><a href="#password" data-toggle="tab">Change your password</a></li>
         </ul>
         <div id="profileTab" class="tab-content well">
           <div class="tab-pane active in" id="profile">
-            <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#profile') }}">
+            <form enctype='multipart/form-data' class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#profile' }}">
               {{ csrf_field() }}
-              <!-- company_name -->
+
+              <h4>Profile Visibility</h4>
+              <div class="radio">
+                <label><input type="radio" @if ($user->visible == true) checked @endif name="visible" value="1">Visible. Can be searched, viewed</label>
+              </div>
+              <div class="radio">
+                <label><input @if ($user->visible != true) checked @endif type="radio" name="visible" value="0">Hidden. Cannot be searched or viewed</label>
+              </div>
+              <hr>
+              <h4>Notifications</h4>
+              <div class="radio">
+                <label><input type="radio" @if ($user->notify_me == true) checked @endif name="notify_me" value="1">Enabled. You'll receive emails once a day if a student wants to get in contact with you</label>
+              </div>
+              <div class="radio">
+                <label><input @if ($user->notify_me != true) checked @endif type="radio" name="notify_me" value="0">Disabled. You won't receive any emails, except for announcements about the service</label>
+              </div>
+
+              <hr class="separator">
               <h4>About me</h4>
               <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                 <!-- <label for="name">Name</label> -->
@@ -89,10 +106,9 @@
                 @endif
               </div>
 
-
               <div class="form-group">
-                <label for="photo">My Photo</label>
-                <input type="file" id="photo" name="photo">
+                <label for="image">My Photo</label>
+                <input type="file" id="image" name="image">
               </div>
 
               <hr class="separator">
@@ -109,6 +125,13 @@
                 <input type="text" class="form-control" id="twitter" name="twitter" placeholder="Twitter page url" value="{{ old('twitter', $user->twitter) }}"> @if ($errors->has('twitter'))
                 <span class="help-block">
                   <strong>{{ $errors->first('twitter') }}</strong>
+                </span> @endif
+              </div>
+              <div class="form-group{{ $errors->has('linkedin') ? ' has-error' : '' }}">
+                <!-- <label for="linkedin">linkedin page url</label> -->
+                <input type="text" class="form-control" id="linkedin" name="linkedin" placeholder="Linkedin page url" value="{{ old('linkedin', $user->linkedin) }}"> @if ($errors->has('linkedin'))
+                <span class="help-block">
+                  <strong>{{ $errors->first('linkedin') }}</strong>
                 </span> @endif
               </div>
               <h4>Address</h4>
@@ -162,17 +185,9 @@
               <button type="submit" class="btn btn-primary">Update settings</button>
             </form>
           </div>
-          <div class="tab-pane fade" id="contact">
+          <div class="tab-pane fade" id="career">
             <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#contact') }}">
             {{ csrf_field() }}
-            <h4>Profile Visibility</h4>
-            <div class="radio">
-              <label><input type="radio" @if ($user->visible == true) checked @endif name="visible" value="1">Visible. Can be searched, viewed</label>
-            </div>
-            <div class="radio">
-              <label><input @if ($user->visible != true) checked @endif type="radio" name="visible" value="0">Hidden. Cannot be searched or viewed</label>
-            </div>
-            <hr class="separator">
             <h4>Academic information</h4>
             <hr>
             <div class="form-group">
@@ -577,11 +592,15 @@
 
           <div class="tab-pane fade" id="refer">
             <h4>Get your profile refereed</h4>
-            <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#refer') }}">
+            <div class="alert alert-danger">
+              Profile refereeing will be available soon
+            </div>
+
+            <form class="form-vertical" role="form" style="display:none" method="POST" action="{{ url('/profile#refer') }}">
               {{ csrf_field() }}
               <div class="form-group{{ $errors->has('validator_name') ? ' has-error' : '' }}">
                 <!-- <label for="validator_name">New validator_name</label> -->
-                <input type="text" class="form-control" id="validator_name" name="validator_name" placeholder="Validator name">
+                <input type="text" class="form-control" id="validator_name" name="validator_name" placeholder="Referee name">
                 @if ($errors->has('validator_name'))
                 <span class="help-block">
                 <strong>{{ $errors->first('validator_name') }}</strong>
