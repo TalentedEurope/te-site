@@ -43,9 +43,8 @@ Route::group(['prefix' => 'profile'], function () {
 });
 
 // Nudge-Alert
-Route::group(['prefix' => 'nudges'], function () {
-    Route::get('/', 'NudgeController@index')->name('view_nudges');
-    Route::get('/{id}', 'NudgeController@delete')->name('delete_nudge');
+Route::group(['prefix' => 'alerts'], function () {
+    Route::get('/', 'AlertController@getAlerts')->name('view_alerts');
 });
 
 // Referees

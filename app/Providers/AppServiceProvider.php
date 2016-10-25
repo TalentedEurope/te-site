@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Models\Alert;
+use Auth;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('layouts.navbar', function ($view) {
+            if (Auth::user() && Auth::user()->isA("company")) {
+                $view->with('alertCount', Alert::getUnreadAlertCount(Auth::user()));
+            }
+        });
     }
 
     /**
@@ -24,19 +30,15 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         if ($this->app->environment() == 'local') {
-            if ( ! empty( $providers = config( 'app.dev_providers' ) ) )
-            {
-                foreach ( $providers as $provider )
-                {
-                    $this->app->register( $provider );
+            if (! empty($providers = config('app.dev_providers'))) {
+                foreach ($providers as $provider) {
+                    $this->app->register($provider);
                 }
             }
 
-            if ( ! empty( $aliases = config( 'app.dev_aliases' ) ) )
-            {
-                foreach ( $aliases as $alias => $facade )
-                {
-                    $this->app->alias( $alias, $facade );
+            if (! empty($aliases = config('app.dev_aliases'))) {
+                foreach ($aliases as $alias => $facade) {
+                    $this->app->alias($alias, $facade);
                 }
             }
         }

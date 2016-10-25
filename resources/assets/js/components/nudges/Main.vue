@@ -1,7 +1,7 @@
 <template>
-    <div class="panel panel-default col-sm-12">
+    <div class="well col-sm-12">
         <div v-if="nudges.length == 0">
-            Mensaje no Nudges
+            No alerts found
         </div>
         <table v-if="nudges.length > 0" class="table table-striped table-hover table-responsive">
             <thead>
@@ -9,7 +9,7 @@
                     <th>Student</th>
                     <th>Country</th>
                     <th>Study Level</th>
-                    <th>When nudged</th>
+                    <th>When it was sent?</th>
                     <th></th>
                 </tr>
             </thead>

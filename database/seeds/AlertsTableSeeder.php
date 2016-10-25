@@ -10,10 +10,10 @@ class AlertsTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create();
-        foreach (range(0, 50) as $index) {
+        foreach (range(0, 100) as $index) {
             $alert = Alert::create([
-                'origin_id' => Company::all()->random(1)->user->id,
-                'target_id' => Student::all()->random(1)->user->id,
+                'origin_id' => Student::all()->random(1)->user->id,
+                'target_id' => Company::all()->random(1)->user->id,
             ]);
         }
     }

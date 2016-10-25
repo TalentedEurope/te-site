@@ -25,10 +25,11 @@ Route::group(['prefix' => 'search', 'namespace' => 'api'], function () {
     });
 });
 
-
 Route::group(['prefix' => 'profile', 'namespace' => 'api'], function () {
     Route::put('/', 'ProfileController@update');
 });
+
+Route::resource('alert', 'Api\AlertController');
 
 Route::group(['prefix' => 'profile'], function () {
     Route::get('/student', 'ProfileController@getJSONStudentProfile');
