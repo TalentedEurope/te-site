@@ -22,22 +22,14 @@ class StaticController extends Controller
     {
         $user = Auth::user();
         if ($user) {
-            if ($user->isA('student')) {
-                if ($user->is_filled) {
-                    return redirect(route('view_profile'));
-                } else {
-                    return redirect(route('edit_profile'));
-                }
-            } elseif ($user->isA('company')) {
-                return redirect(route('search'));
-            }
+            return redirect(route('view_profile'));
         }
 
         return view('static.home');
     }
 
     /**
-     * Show the application dashboard.
+     * Show the cookies page.
      *
      * @return \Illuminate\Http\Response
      */
@@ -47,12 +39,17 @@ class StaticController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the privacy policy.
      *
      * @return \Illuminate\Http\Response
      */
     public function getPrivacyPolicy()
     {
         return view('static.privacy_policy');
+    }
+
+    public function getTerms()
+    {
+        return view('static.terms');
     }
 }
