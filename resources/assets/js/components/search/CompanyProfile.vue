@@ -1,6 +1,6 @@
 <template>
     <li class="well profile clearfix">
-        <div class="col-sm-12">
+        <div>
             <div class="col-xs-12 col-sm-8 col-md-9">
                 <h2 class="title">{{company.name}}</h2>
                 <p><em class="h4">{{company.info}}</em></p>
@@ -19,9 +19,11 @@
                     {{company.talent_is}}
                 </p>
 
-                <a href="#" class="btn btn-primary btn-nudge btn-lg" ><i class="fa fa-bell" aria-hidden="true"></i> I'm here!</a>
+                <div v-if="showImHereButton()">
+                    <a href="#" class="btn btn-primary btn-nudge btn-lg"><i class="fa fa-bell" aria-hidden="true"></i> I'm here!</a>
 
-                <a href="#" class="btn btn-primary btn-tooltip btn-lg" data-toggle="tooltip" data-placement="right" title="Explanation text about what the Hey listen! button does" > ? </a>
+                    <a href="#" class="btn btn-primary btn-tooltip btn-lg" data-toggle="tooltip" data-placement="right" title="Explanation text about what the Hey listen! button does" > ? </a>
+                </div>
 
             </div>
             <div class="col-xs-12 col-sm-4 col-md-3 text-center">
@@ -58,6 +60,12 @@ export default {
         'skills-tags': SkillsTags,
     },
     props: ['company'],
+    methods: {
+        showImHereButton: function () {
+            var user_type = $("meta[id='user_type']").attr('content');
+            return user_type == 'student';
+        }
+    }
 }
 </script>
 

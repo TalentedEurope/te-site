@@ -1,9 +1,18 @@
 @import "resources/assets/sass/variables";
 
 .profile {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
     h2.title {
         font-weight: bold;
+        margin-top: 0;
     }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
     .languages {
         padding: 0;
         li {

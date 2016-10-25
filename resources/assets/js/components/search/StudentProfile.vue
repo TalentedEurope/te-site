@@ -1,6 +1,6 @@
 <template>
     <li class="well profile clearfix">
-        <div class="col-sm-12">
+        <div>
             <div class="col-xs-12 col-sm-8 col-md-9">
                 <h2 class="title">{{student.full_name}}</h2>
                 <p><em class="h4">{{student.studied}}</em></p>
@@ -26,7 +26,7 @@
                         </span>
                     </figcaption>
                 </figure>
-                <a class="btn-primary btn view-more">View more</a>
+                <a class="btn-primary btn view-more" :href="profileUrl">View more</a>
             </div>
         </div>
     </li>
@@ -40,6 +40,11 @@ export default {
         'skills-tags': SkillsTags,
     },
     props: ['student'],
+    computed: {
+        profileUrl: function () {
+            return `/profile/${this.student.slug}/${this.student.id}`;
+        }
+    }
 }
 </script>
 
