@@ -103,14 +103,19 @@ class SearchController extends SiteSearchController
                 }
             }
 
+            $studentCountry = "";
+            if (isset(User::$countries[$student->user->country])) {
+                $studentCountry = User::$countries[$student->user->country];
+            }
+
             $students[] = array(
                 'id' => $student->user->id,
                 'slug' => $student->user->slug,
                 'full_name' => $student->user->name . " " . $student->user->surname,
                 'name' => $student->user->name,
                 'surname' => $student->user->surname,
-                'lives_in' => $student->user->city . ', ' . User::$countries[$student->user->country],
-                'country' => User::$countries[$student->user->country],
+                'lives_in' => $student->user->city . ', ' . $studentCountry,
+                'country' => $studentCountry,
                 'city' => $student->user->city,
                 'info' => trans('reg-profile.'.$student->activity),
                 'skills' => $skills,
@@ -230,7 +235,7 @@ class SearchController extends SiteSearchController
                     ->where('is_filled', true)
                     ->where('banned', false)
                     ->where('userable_type', Student::class);
-        })->select('student_languages.level')
+        })->select('student_languages.name')
           ->groupBy('student_languages.level')
           ->whereNotNull('student_languages.level')
           ->get();
@@ -258,7 +263,7 @@ class SearchController extends SiteSearchController
         foreach ($availableStudyLanguages as $language) {
             $languages[] = array(
                 'id' => $language->level,
-                'name' => trans('reg-profile.'.$language->level)
+                'name' => StudentLanguage::$languages[$language->name]["eng"]
             );
         }
 
