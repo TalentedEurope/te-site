@@ -13,9 +13,9 @@ class CreateCompanyPersonalSkillsPivotTable extends Migration
     {
         Schema::create('company_personal_skill', function (Blueprint $table) {
             $table->integer('personal_skill_id')->unsigned()->index();
-            $table->foreign('personal_skill_id', 'psc_id_foreign')->references('id')->on('personal_skills')->onDelete('cascade');
+            $table->foreign('personal_skill_id', 'pscp-foreign')->references('id')->on('personal_skills')->onDelete('cascade');
             $table->integer('company_id')->unsigned()->index();
-            $table->foreign('company_id', 'ps_cp_id_foreign')->references('id')->on('companies')->onDelete('cascade');
+            $table->foreign('company_id', 'pscc-foreign')->references('id')->on('companies')->onDelete('cascade');
             $table->primary(['personal_skill_id', 'company_id'], 'pk_key');
         });
     }
