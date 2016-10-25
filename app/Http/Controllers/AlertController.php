@@ -3,16 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
+use App\Http\Controllers\Api\LoginController;
 
-class NudgeController extends Controller
+class AlertController extends Controller
 {
-    public function index(Request $request)
+    public function __construct()
     {
-        return view('company.nudges');
+        $this->middleware('auth');
     }
 
-    public function delete(Request $request, $id)
+    public function getAlerts(Request $request)
     {
+        if (!Auth::user()->isA('company')) {
+            App::abort(403, 'Unauthorized action.');
+        }
+        $data = array('token' => LoginController::userToken());
+        return view('company.alerts', $data);
     }
 
     public function getJSONNudges(Request $request)

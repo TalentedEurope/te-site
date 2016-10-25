@@ -2,7 +2,7 @@ import http from './http';
 
 var NudgesResource = {
     get: () => {
-        return http.get('nudges');
+        return http.get('alert');
     }
 };
 
