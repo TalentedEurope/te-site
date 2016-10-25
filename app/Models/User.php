@@ -102,6 +102,11 @@ class User extends Authenticatable
         return $image;
     }
 
+    public function getFullNameAttribute()
+    {
+        return $this->attributes['name']  . ' ' . $this->attributes['surname'];
+    }
+
     public function getSlug()
     {
         return str_slug($this->name.' '.$this->surname);

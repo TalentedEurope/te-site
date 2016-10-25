@@ -181,7 +181,7 @@ class SearchController extends SiteSearchController
                 'we_are_in' => $company->user->city . ', ' . User::$countries[$company->user->country],
                 'talent_is' => $company->talent,
                 'skills' => $skills,
-                'photo' => $company->user->image,
+                'photo' => asset(User::$photoPath.$company->user->image),
             );
         }
         return array(

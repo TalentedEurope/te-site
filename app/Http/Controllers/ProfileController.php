@@ -109,7 +109,7 @@ class ProfileController extends Controller
         if (Auth::user()->isA('company')) {
             $errors = $errors->merge($this->processCompany($request, $user));
         } elseif (Auth::user()->isA('student')) {
-            //$errors = $errors->merge($this->processCompany($request));
+            $errors = $errors->merge($this->processStudent($request, $user));
         }
         // Make sure that the only errors shown are from the fields we passed.
         $reqErrors = new MessageBag();
@@ -176,7 +176,7 @@ class ProfileController extends Controller
         $errors = new MessageBag();
         $company = null;
 
-        if ($user->userable()) {
+        if ($user->userable) {
             $company = $user->userable()->first();
         } else {
             $company = Company::create();
@@ -214,6 +214,35 @@ class ProfileController extends Controller
         return $errors;
     }
 
+    protected function processStudent(Request $request, User $user)
+    {
+        $errors = new MessageBag();
+        $student = null;
+
+        if ($user->userable) {
+            $student = $user->userable()->first();
+        } else {
+            $student = Student::create();
+            $student->user()->save($user);
+        }
+        $v = Validator::make($request->all(), Company::rules($student));
+
+        foreach ($v->valid() as $key => $value) {
+            if (array_has($student['attributes'], $key) && !$request->has('validate')) {
+                $student->$key = $value;
+            }
+        }
+
+        // Not yet implemented
+        //$this->is_filled = $this->checkFill($v, $errors);
+        $errors = $errors->merge($v);
+
+        $student->save();
+        $user->save();
+        $errors = $errors->merge($v);
+        return $errors;
+    }
+
     protected function checkFill($v, $errors)
     {
         $filled = true;
@@ -228,13 +257,6 @@ class ProfileController extends Controller
         }
 
         return $filled;
-    }
-
-    private function processStudent(Request $request)
-    {
-        $errors = Validator::make($request->all(), array());
-
-        return errors;
     }
 
     public function getStudentPublicData($user, $public = false)
@@ -312,7 +334,10 @@ class ProfileController extends Controller
         );
         if ($user->userable) {
             $data['student'] = $user->userable;
-            $data['validator'] = $user->userable->validationRequest->validator;
+            $data['validator'] = "";
+            if ($user->userable->validationRequest) {
+                $data['validator'] = $user->userable->validationRequest->validator;
+            }
         } else {
             $data['student'] = new Student();
         }
