@@ -104,7 +104,7 @@ class SearchController extends SiteSearchController
             }
 
             $students[] = array(
-                'id' => $student->id,
+                'id' => $student->user->id,
                 'slug' => $student->user->slug,
                 'full_name' => $student->user->name . " " . $student->user->surname,
                 'name' => $student->user->name,
@@ -172,7 +172,7 @@ class SearchController extends SiteSearchController
             }
 
             $companies[] = array(
-                'id' => $company->id,
+                'id' => $company->user->id,
                 'slug' => $company->user->slug,
                 'name' => $company->user->name,
                 'info' => trans('reg-profile.'.$company->activity),
