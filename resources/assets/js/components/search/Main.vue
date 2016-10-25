@@ -4,7 +4,7 @@
         <div class="row results-filters-wrapper">
             <div class="results-filters-transition" v-bind:class="{ 'init-loading': init_loading }">
                 <search-filters :collective="collective"></search-filters>
-                <results :collective="collective" :results="results" :number-of-results="numberOfResults" ></results>
+                <results :collective="collective" :results="results" :number-of-results="numberOfResults" :loading="loading"></results>
             </div>
 
             <div class="well init-loading-box" v-if="init_loading">
@@ -31,6 +31,7 @@ export default {
     data() {
         return {
             init_loading: true,
+            loading: false,
             results: [],
             filters: null,
             search_text: null,
@@ -53,6 +54,7 @@ export default {
     },
     methods: {
         fetchResults(filters, search_text) {
+            this.loading = true;
             var resource = studentsResultsResource;
             if (this.collective == 'companies') {
                 resource = companiesResultsResource;
@@ -61,7 +63,9 @@ export default {
                 this.results = response.body.data;
                 this.numberOfResults = response.body.total;
                 this.init_loading = false;
+                this.loading = false;
             }, (errorResponse) => {
+                this.loading = false;
                 console.log(errorResponse);
             });
         }
