@@ -2,3 +2,9 @@ body {
 	font-family: $font-stack;
 	width: 100%;
 }
+
+a.icon-link {
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+}

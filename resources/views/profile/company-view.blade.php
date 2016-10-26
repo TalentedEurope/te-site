@@ -76,28 +76,28 @@
           <ul class="social">
             @if ($user->facebook)
             <li>
-              <a target="_blank" href="{{ $user->facebook }}">
+              <a target="_blank" href="{{ $user->facebook }}" rel="noopener noreferrer" class="icon-link">
                 <i class="fi flaticon-facebook"></i>
               </a>
             </li>
             @endif
             @if ($user->twitter)
             <li>
-              <a target="_blank" href="{{ $user->twitter }}">
+              <a target="_blank" href="{{ $user->twitter }}" rel="noopener noreferrer" class="icon-link">
                 <i class="fi flaticon-twitter"></i>
               </a>
             </li>
             @endif
             @if ($user->linkedin)
             <li>
-              <a target="_blank" href="{{ $user->linkedin }}">
+              <a target="_blank" href="{{ $user->linkedin }}" rel="noopener noreferrer" class="icon-link">
                 <i class="fa fa-linkedin"></i>
               </a>
             </li>
             @endif
             @if ($company->website)
             <li>
-              <a target="_blank" href="{{ $company->website }}">
+              <a target="_blank" href="{{ $company->website }}" rel="noopener noreferrer" class="icon-link">
                 <i class="fa fa-external-link"></i>
               </a>
             </li>

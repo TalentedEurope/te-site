@@ -228,14 +228,14 @@
           <ul class="social">
             @if ($user->facebook)
             <li>
-              <a target="_blank" href="{{ $user->facebook }}">
+              <a target="_blank" href="{{ $user->facebook }}" rel="noopener noreferrer" class="icon-link">
                 <i class="fi flaticon-facebook"></i>
               </a>
             </li>
             @endif
             @if ($user->twitter)
             <li>
-              <a target="_blank" href="{{ $user->twitter }}">
+              <a target="_blank" href="{{ $user->twitter }}" rel="noopener noreferrer" class="icon-link">
                 <i class="fi flaticon-twitter"></i>
               </a>
             </li>
