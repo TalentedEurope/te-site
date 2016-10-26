@@ -33,7 +33,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'es' => 'adaptable',                    
                 
-                    'it' => 'adattabile',                    
+                    'it' => 'versatile',                    
                 
                     'de' => 'anpassungsfähig',                    
                 
@@ -129,7 +129,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'es' => 'comercial',                    
                 
-                    'it' => 'commerciale',                    
+                    'it' => 'pragmatico, efficiente',                    
                 
                     'de' => 'kommerziell',                    
                 
@@ -177,7 +177,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'es' => 'sistemático',                    
                 
-                    'it' => 'sistematico',                    
+                    'it' => 'scrupoloso, preciso',                    
                 
                     'de' => 'pedant',                    
                 
@@ -209,7 +209,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'es' => 'confiado',                    
                 
-                    'it' => 'confidente',                    
+                    'it' => 'sicuro di sé',                    
                 
                     'de' => 'selbstbewusst',                    
                 
@@ -225,7 +225,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'es' => 'colaborador',                    
                 
-                    'it' => 'collaboratore',                    
+                    'it' => 'collaborativo',                    
                 
                     'de' => 'kooperativ',                    
                 
@@ -257,7 +257,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'es' => 'entregado',                    
                 
-                    'it' => 'devoto',                    
+                    'it' => 'dedito a ',                    
                 
                     'de' => 'begeistert',                    
                 
@@ -289,7 +289,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'es' => 'eficiente',                    
                 
-                    'it' => 'efficace',                    
+                    'it' => 'efficiente',                    
                 
                     'de' => 'leistungsstark',                    
                 
@@ -545,7 +545,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'es' => 'realista',                    
                 
-                    'it' => 'realistico',                    
+                    'it' => 'realista',                    
                 
                     'de' => 'realistisch',                    
                 
@@ -625,7 +625,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'es' => 'universal',                    
                 
-                    'it' => 'universale',                    
+                    'it' => 'versatile',                    
                 
                     'de' => 'universell',                    
                 
@@ -641,7 +641,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'es' => 'dispuesto a aprender',                    
                 
-                    'it' => 'disposto a imparare',                    
+                    'it' => 'desideroso di imparare',                    
                 
                     'de' => 'willig / willig zu lernen',                    
                 
