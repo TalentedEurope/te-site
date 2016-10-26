@@ -4,7 +4,7 @@
         <div class="row results-filters-wrapper">
             <div class="results-filters-transition" v-bind:class="{ 'init-loading': init_loading }">
                 <search-filters :collective="collective"></search-filters>
-                <results :collective="collective" :results="results" :number-of-results="numberOfResults" :loading="loading"></results>
+                <results :collective="collective" :results="results" :number-of-results="numberOfResults" :loading="loading" :is-filtering="is_filtering"></results>
             </div>
 
             <div class="well init-loading-box" v-if="init_loading">
@@ -15,11 +15,11 @@
 </template>
 
 <script>
-import SearchBar from './SearchBar.vue'
-import SearchFilters from './SearchFilters.vue'
-import Results from './Results.vue'
-import EventBus from 'event-bus.js'
-import { studentsResultsResource, companiesResultsResource } from 'resources/search'
+import SearchBar from './SearchBar.vue';
+import SearchFilters from './SearchFilters.vue';
+import Results from './Results.vue';
+import EventBus from 'event-bus.js';
+import { studentsResultsResource, companiesResultsResource } from 'resources/search';
 
 export default {
     props: ['collective', 'showTypeSelector'],
@@ -33,6 +33,7 @@ export default {
             init_loading: true,
             loading: false,
             results: [],
+            is_filtering: true,
             filters: null,
             search_text: null,
             numberOfResults: null
@@ -42,6 +43,9 @@ export default {
         var that = this;
         EventBus.$on('onChangeFilters', function(filters) {
             this.filters = filters;
+            if (_.isEmpty(_.omit(filters, ['__ob__']))) {
+                this.filters = {};
+            }
             that.fetchResults(this.filters, this.search_text);
         });
         EventBus.$on('onSearch', function(search_text) {
@@ -54,22 +58,25 @@ export default {
     },
     methods: {
         fetchResults(filters, search_text) {
-            this.loading = true;
             var resource = studentsResultsResource;
             if (this.collective == 'companies') {
                 resource = companiesResultsResource;
             }
+
+            this.loading = true;
+
             resource.get(filters, search_text).then((response) => {
+                this.is_filtering = !_.isEmpty(filters) || !_.isEmpty(search_text);
                 this.results = response.body.data;
                 this.numberOfResults = response.body.total;
+            }, (errorResponse) => {
+                console.log(errorResponse);
+            }).finally(() => {
                 this.init_loading = false;
                 this.loading = false;
-            }, (errorResponse) => {
-                this.loading = false;
-                console.log(errorResponse);
             });
         }
-    },
+    }
 }
 </script>
 
@@ -85,7 +92,6 @@ export default {
         }
     }
 
-
     .init-loading-box {
         position: absolute;
         width: 100%;
@@ -93,6 +99,4 @@ export default {
         padding: 70px;
     }
 }
-
-
 </style>

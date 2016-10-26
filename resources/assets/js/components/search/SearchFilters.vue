@@ -76,6 +76,10 @@ export default {
             index = this.applied_filters[filter.id].indexOf(filter.item.id);
             if (index > -1) {
                 this.applied_filters[filter.id].splice(index, 1);
+
+                if (_.isEmpty(this.applied_filters[filter.id])) {
+                    delete this.applied_filters[filter.id]
+                }
             }
 
             EventBus.$emit('onChangeFilters', this.applied_filters);

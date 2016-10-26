@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="form-group col-sm-7" v-bind:class="{ 'col-sm-10': !showTypeSelector }">
-                <input type="text" class="form-control" id="name" name="name" placeholder="What are you looking for?" v-model="search_text">
+                <input type="text" class="form-control" id="name" name="name" placeholder="What are you looking for?" v-model="search_text" @keyup.enter="search()">
             </div>
             <div class="form-group col-sm-2">
                 <button type="submit" class="btn btn-primary" @click.prevent="search()">
@@ -34,6 +34,7 @@ export default {
     },
     methods: {
         search: function() {
+            this.search_text = _.trim(this.search_text);
             EventBus.$emit('onSearch', this.search_text);
         }
     }
