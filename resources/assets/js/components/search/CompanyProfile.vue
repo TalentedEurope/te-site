@@ -31,19 +31,24 @@
                     <img :src="company.photo" alt="" class="img-circle img-responsive">
                 </figure>
                 <ul class="social">
-                    <li>
-                        <a href="#">
+                    <li v-if="company.facebook">
+                        <a target="_blank" :href="company.facebook" rel="noopener noreferrer" class="icon-link">
                             <i class="fi flaticon-facebook"></i>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li v-if="company.twitter">
+                        <a target="_blank" :href="company.twitter" rel="noopener noreferrer" class="icon-link">
                             <i class="fi flaticon-twitter"></i>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-envelope"></i>
+                    <li v-if="company.linkedin">
+                        <a target="_blank" :href="company.linkedin" rel="noopener noreferrer" class="icon-link">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li v-if="company.website">
+                        <a target="_blank" :href="company.website" rel="noopener noreferrer" class="icon-link">
+                            <i class="fa fa-external-link"></i>
                         </a>
                     </li>
                 </ul>

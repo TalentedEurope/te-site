@@ -3,7 +3,7 @@
         <!-- <label :for="code">{{label}}</label> -->
         <div class="select-holder">
             <select class="form-control" :id="code" :name="code" v-model="model">
-                <option :value="null">{{placeholder}}</option>
+                <option value="">{{placeholder}}</option>
                 <option v-for="(v_name, v_code) in parsed_values" :value="v_code">{{ v_name }}</option>
             </select>
         </div>
