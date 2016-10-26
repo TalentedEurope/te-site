@@ -32,23 +32,23 @@
                 </figure>
                 <ul class="social">
                     <li v-if="company.facebook">
-                        <a :href="company.facebook">
+                        <a target="_blank" :href="company.facebook" rel="noopener noreferrer" class="icon-link">
                             <i class="fi flaticon-facebook"></i>
                         </a>
                     </li>
                     <li v-if="company.twitter">
-                        <a :href="company.twitter">
+                        <a target="_blank" :href="company.twitter" rel="noopener noreferrer" class="icon-link">
                             <i class="fi flaticon-twitter"></i>
                         </a>
                     </li>
                     <li v-if="company.linkedin">
-                        <a :href="company.linkedin">
+                        <a target="_blank" :href="company.linkedin" rel="noopener noreferrer" class="icon-link">
                             <i class="fa fa-linkedin"></i>
                         </a>
                     </li>
                     <li v-if="company.website">
-                        <a :href="company.website">
-                            <i class="fa fa-envelope"></i>
+                        <a target="_blank" :href="company.website" rel="noopener noreferrer" class="icon-link">
+                            <i class="fa fa-external-link"></i>
                         </a>
                     </li>
                 </ul>
