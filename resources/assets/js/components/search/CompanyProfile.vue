@@ -31,18 +31,23 @@
                     <img :src="company.photo" alt="" class="img-circle img-responsive">
                 </figure>
                 <ul class="social">
-                    <li>
-                        <a href="#">
+                    <li v-if="company.facebook">
+                        <a :href="company.facebook">
                             <i class="fi flaticon-facebook"></i>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li v-if="company.twitter">
+                        <a :href="company.twitter">
                             <i class="fi flaticon-twitter"></i>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li v-if="company.linkedin">
+                        <a :href="company.linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li v-if="company.website">
+                        <a :href="company.website">
                             <i class="fa fa-envelope"></i>
                         </a>
                     </li>

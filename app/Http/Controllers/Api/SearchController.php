@@ -182,6 +182,10 @@ class SearchController extends SiteSearchController
                 'talent_is' => $company->talent,
                 'skills' => $skills,
                 'photo' => asset(User::$photoPath.$company->user->image),
+                'facebook' => $company->user->facebook,
+                'twitter' => $company->user->twitter,
+                'linkedin' => $company->user->linkedin,
+                'website' => $company->website,
             );
         }
         return array(
