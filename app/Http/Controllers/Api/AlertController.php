@@ -34,10 +34,10 @@ class AlertController extends SiteAlertController
             App::abort(403, 'Unauthorized action.');
         }
         $alerts = array();
-        $userAlerts = Alert::where('target_id', $user->id)->get();
+        $results = Alert::where('target_id', $user->id)->paginate(env('PAGINATE_ENTRIES', 10));
         Carbon::setLocale(Config::get('app.locale'));
 
-        foreach ($userAlerts as $item) {
+        foreach ($results as $item) {
             // Just in case since the current version of the api
             // is tailored to student->company.
             if ($item->origin->userable_type != Student::class) {
@@ -61,7 +61,16 @@ class AlertController extends SiteAlertController
             // Update its timestamp
             $item->touch();
         }
-        return $alerts;
+        return array(
+            'data' => $alerts,
+            'per_page' => $results->perPage(),
+            'total' => $results->total(),
+            'current_page' => $results->currentPage(),
+            'prev_page_url' => $results->previousPageUrl(),
+            'next_page_url' => $results->nextPageUrl(),
+        );
+
+
     }
 
     public function destroy(Request $request, $id)
