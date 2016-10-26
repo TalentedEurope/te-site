@@ -162,7 +162,7 @@
             @foreach ($student->languages as $language)
             @if ($language->name)
               <li>
-                <h4>{{ $languages[$language->name]['name'] }} | <em>{{ $languageLevels[$language->level] }}</em></h4>
+                <h4>{{ $languages[$language->name]['eng'] }} | <em>{{ $languageLevels[$language->level] }}</em></h4>
                 @if ($language->certificate && !$public)
                 <p><a class="btn btn-primary btn-link"
                       href="{{ route('get_language_certificate', [
