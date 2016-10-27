@@ -1,9 +1,9 @@
 <template>
-    <div class="well col-sm-12">
-        <div v-if="alerts.length == 0">
+    <div class="well col-sm-12" v-cloak>
+        <div v-if="!loading && alerts.length == 0">
             No alerts found
         </div>
-        <table v-if="alerts.length > 0" class="table table-striped table-hover table-responsive">
+        <table v-if="!loading && alerts.length > 0" class="table table-striped table-hover table-responsive">
             <thead>
                 <tr>
                     <th>Student</th>
@@ -38,7 +38,8 @@ import { alertsResource } from '../../resources/alerts';
 export default {
     data() {
         return {
-            alerts: []
+            alerts: [],
+            loading: true
         }
     },
     mounted() {
@@ -48,9 +49,12 @@ export default {
         fetchAlerts() {
             alertsResource.get()
                 .then((response) => {
-                    this.alerts = response.body;
+                    this.alerts = response.body.data;
                 }, (errorResponse) => {
                     console.log(errorResponse);
+                })
+                .finally(() => {
+                    this.loading = false;
                 });
         },
         removeAlert(alert) {

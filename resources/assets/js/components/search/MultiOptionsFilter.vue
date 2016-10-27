@@ -64,10 +64,12 @@ export default {
         border-left: 2px solid $blue;
         li {
             font-size: 16px;
-            padding: 5px 0;
+            margin-bottom: 3px;
             label {
                 font-weight: normal;
                 cursor: pointer;
+                padding: 5px 0;
+                margin: 0;
             }
         }
     }
