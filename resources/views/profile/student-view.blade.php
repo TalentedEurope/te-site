@@ -91,9 +91,9 @@
         <div class="row">
           <div class="col-sm-12">
             <h5>Legend</h5>
-            <ul class="skills">
-              <li class="important">Set by both parties</li>
-              <li>Set by either the referee or the student</li>
+            <ul class="legend">
+              <li><span class="important"> </span> Set by both parties</li>
+              <li><span> </span> Set by either the referee or the student</li>
             </ul>
           </div>
         </div>

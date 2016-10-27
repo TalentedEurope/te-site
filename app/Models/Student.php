@@ -3,9 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Sofa\Eloquence\Eloquence;
+
 
 class Student extends Model
 {
+    use eloquence;
+
     public $timestamps = false;
     protected $with = ['studies', 'languages', 'personalSkills', 'professionalSkills', 'validationRequest'];
 
