@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('page-title') Your profile is empty! @endsection
 
+@section ('profile_warning')
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row">

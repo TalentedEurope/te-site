@@ -91,9 +91,9 @@
         <div class="row">
           <div class="col-sm-12">
             <h5>Legend</h5>
-            <ul class="skills">
-              <li class="important">Set by both parties</li>
-              <li>Set by either the referee or the student</li>
+            <ul class="legend">
+              <li><span class="important"> </span> Set by both parties</li>
+              <li><span> </span> Set by either the referee or the student</li>
             </ul>
           </div>
         </div>
@@ -162,7 +162,7 @@
             @foreach ($student->languages as $language)
             @if ($language->name)
               <li>
-                <h4>{{ $languages[$language->name]['name'] }} | <em>{{ $languageLevels[$language->level] }}</em></h4>
+                <h4>{{ $languages[$language->name]['eng'] }} | <em>{{ $languageLevels[$language->level] }}</em></h4>
                 @if ($language->certificate && !$public)
                 <p><a class="btn btn-primary btn-link"
                       href="{{ route('get_language_certificate', [

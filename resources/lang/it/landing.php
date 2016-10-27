@@ -21,13 +21,13 @@ return [
     
         'what_is_cta' => '<strong>Scopri di più!</strong> Richiedi opuscolo!',
     
-        'what_is_text_1' => 'Sai immaginare di essere capace di assumere i migliori studenti da qualsiasi paese europeo? Vorresti far parte del settore degli studenti d’élite d’Europa? Migliaia di compagnie avranno accesso diretto all tue informazioni di contatto. Migliore valutazione ottieni, più grandi possibilità avrai di trovare un bel lavoro.',
+        'what_is_text_1' => 'Ti immagini di poter assumere i migliori studenti di qualsiasi paese europeo? Ti piacerebbe far parte di un elite studentesca in Europa? Migliaia di compagnie avranno un accesso diretto ai tuoi contatti e alle tue informazioni, migliori saranno i tuoi voti, maggiori saranno le possibilità di trovare un buon lavoro.',
     
-        'what_is_text_2' => 'E‘ proprio quello che offre la Talented Europe. Una vitrina piena dei migliori studenti d‘Europa. Una semplice idea che unisce i datori di lavoro e gli studenti. Punto di ritrovo per eccellenza.',
+        'what_is_text_2' => 'Questa è l’offerta che Talented Europe ti propone. Una vetrina in cui vengono messi in mostra i migliori studenti di tutta Europa. Un’idea semplice che unisce i datori di lavoro agli studenti. Il punto d’incontro per eccellenza.',
     
         'subscribe_title' => 'Registrati e segui i nostri aggiornamenti.',
     
-        'subscribe_text' => 'Ricevi notifiche circa tutti gli eventi e novità su Talented Europe',
+        'subscribe_text' => 'Ricevi notifiche circa tutti gli eventi e le novità su Talented Europe',
     
         'subscribe_form_placeholder' => 'Inserisci indirizzo email',
     
@@ -35,11 +35,11 @@ return [
     
         'subscribe_follow_text' => 'oppure seguici su',
     
-        'subscribe_text_question' => 'Ricevi news circa Talented Europe nella tua casella di posta elettronica. <br/> Non esitare a darci la tua risposta a: Che cosa significa talento per te?',
+        'subscribe_text_question' => 'Ricevi news circa Talented Europe nella tua casella di posta elettronica. <br/> Sentiti di libero di rispondere alla nostra domanda: Che cosa significa talento per te?',
     
-        'meta_description' => 'Un progetto Erasmus Plus che permette di facilitare l‘accesso degli studenti eccellenti alle opportunità di lavoro e di stage in tutta l’Europa.',
+        'meta_description' => 'Un progetto Erasmus Plus che permette ai migliori studenti di trovare posti di lavoro e stage in tutta Europa molto più facilmente.',
     
-        'coming_soon' => 'prossimamentP',
+        'coming_soon' => 'prossimamente',
     
         'search_placeholder' => 'Che cosa stai cercando?',
     

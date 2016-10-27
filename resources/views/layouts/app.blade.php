@@ -47,6 +47,30 @@
       </div>
   @endif
 
+  @section ('profile_warning')
+    @if (!Auth::guest())
+      @if (Auth::user()->isA('company') && !Auth::user()->is_filled && rand(0,5) == 0)
+      <div class="container">
+        <div class="alert alert-warning text-center" role="alert">
+          We don't have enough data from you to be able to show your profile.
+          Please click on the following link to fill the required fields.
+            <a href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i>  Set up my profile</a>
+        </div>
+      </div>
+      @endif
+
+      @if (Auth::user()->isA('student') && !Auth::user()->is_filled)
+      <div class="container">
+        <div class="alert alert-warning text-center" role="alert">
+          We don't have enough data from you to be able to show your profile.
+          Please click on the following link to fill the required fields.
+            <a href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i>  Set up my profile</a>
+        </div>
+      </div>
+      @endif
+    @endif
+  @show
+
   @yield('content')
   <div class="pre-footer">
     <div class="container">
@@ -96,13 +120,13 @@
   <div class="footer">
     <div class="ue-logos row xs12">
       <div class="logo">
-        <img src="{{ asset('/img/logo-footer-erasmus.png') }}" width="174" alt="Erasmus+">
+        <a href="https://ec.europa.eu/programmes/erasmus-plus/" target="_blank"><img src="{{ asset('/img/logo-footer-erasmus.png') }}" width="174" alt="Erasmus+"></a>
       </div>
       <div class="logo">
-        <img src="{{ asset('/img/logo-footer-cofunded-ue.png') }}" width="160" alt="Co-funded by the Erasmus+ Programme of the European Union">
+        <a href="https://ec.europa.eu/programmes/erasmus-plus/" target="_blank"><img src="{{ asset('/img/logo-footer-cofunded-ue.png') }}" width="160" alt="Co-funded by the Erasmus+ Programme of the European Union"></a>
       </div>
       <div class="logo">
-        <img src="{{ asset('/img/logo-footer-gob-espana-y-sepie.svg') }}" width="240" alt="Gobierno de españa and Sepie">
+        <a href="http://sepie.es/" target="_blank"><img src="{{ asset('/img/logo-footer-gob-espana-y-sepie.svg') }}" width="240" alt="Gobierno de españa and Sepie"></a>
       </div>
     </div>
   </div>

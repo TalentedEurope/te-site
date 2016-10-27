@@ -13,7 +13,7 @@
 
 Route::post('login', 'Api\LoginController@getToken');
 
-Route::group(['prefix' => 'search', 'namespace' => 'api'], function () {
+Route::group(['prefix' => 'search', 'namespace' => 'Api'], function () {
     Route::group(['prefix' => 'students'], function () {
         Route::get('/', 'SearchController@getStudents');
         Route::get('filters', 'SearchController@getStudentFilters');
@@ -25,7 +25,7 @@ Route::group(['prefix' => 'search', 'namespace' => 'api'], function () {
     });
 });
 
-Route::group(['prefix' => 'profile', 'namespace' => 'api'], function () {
+Route::group(['prefix' => 'profile', 'namespace' => 'Api'], function () {
     Route::put('/', 'ProfileController@update');
 });
 
