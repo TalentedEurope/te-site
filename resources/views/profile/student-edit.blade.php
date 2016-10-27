@@ -3,6 +3,13 @@
 @section('page-title') My Profile @endsection
 @section('page-class') my-profile @endsection
 
+@section('meta')
+  <meta id="token" content="{{ $token }}" />
+@endsection
+
+@section ('profile_warning')
+@endsection
+
 @section('content')
 <div class="container edit-profile">
   <div class="row">

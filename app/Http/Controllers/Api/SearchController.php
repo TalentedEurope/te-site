@@ -28,6 +28,7 @@ class SearchController extends SiteSearchController
         );
 
         $v = Validator::make($request->all(), $rules);
+
         $results = Student::whereHas('user', function ($q) use ($v) {
                         $q->where('visible', true);
                         $q->where('is_filled', true);
@@ -39,7 +40,6 @@ class SearchController extends SiteSearchController
                 $q->whereIn('country', $v->valid()['countries']);
             }
         });
-
 
         if (isset($v->valid()['level_of_studies']) ||
                 isset($v->valid()['field_of_studies'])) {
@@ -63,6 +63,10 @@ class SearchController extends SiteSearchController
 
         if (isset($v->valid()['activities'])) {
             $results->whereIn('activity', $v->valid()['activities']);
+        }
+
+        if (isset($v->valid()['search_text'])) {
+            $results->search($v->valid()['search_text'], ['talent']);
         }
 
         $results = $results->paginate(env('PAGINATE_ENTRIES', 10));
@@ -99,7 +103,7 @@ class SearchController extends SiteSearchController
 
             foreach ($student->languages as $item) {
                 if ($item->name) {
-                    $languages[] = StudentLanguage::$languages[$item->name]['name'];
+                    $languages[] = StudentLanguage::$languages[$item->name]['eng'];
                 }
             }
 
@@ -266,11 +270,10 @@ class SearchController extends SiteSearchController
 
         foreach ($availableStudyLanguages as $language) {
             $languages[] = array(
-                'id' => $language->level,
+                'id' => $language->name,
                 'name' => StudentLanguage::$languages[$language->name]["eng"]
             );
         }
-
 
         foreach ($availableCountries as $country) {
             $countries[] = array(

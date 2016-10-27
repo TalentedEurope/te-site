@@ -13,7 +13,7 @@ return [
     
         'company_activity' => 'Settore di attività',
     
-        'company_contact_person' => 'Persona di contatto',
+        'company_contact_person' => 'Referente',
     
         'company_representative' => 'Rappresentante legale (responsabile)',
     
@@ -21,7 +21,7 @@ return [
     
         'institution_certificate' => 'Certificato di autenticità',
     
-        'city' => 'Paese',
+        'city' => 'Città',
     
         'country' => 'Stato',
     
@@ -53,7 +53,7 @@ return [
     
         'clear_btn' => 'Elimina',
     
-        'student_experience_company' => 'Compagnia',
+        'student_experience_company' => 'c',
     
         'student_completed_studies' => 'Studi terminati',
     
@@ -101,7 +101,7 @@ return [
     
         'save_btn' => 'Salva',
     
-        'student_study_scanned_document' => 'Documento scansito',
+        'student_study_scanned_document' => 'Documento scannerizzato',
     
         'student_validator' => 'Se non specifichi un valutatore, ti sarà assegnato automaticamente',
     
@@ -127,7 +127,7 @@ return [
     
         'create_account' => 'Crea un nuovo account',
     
-        'forgot_password' => 'Pasword dimenticata?',
+        'forgot_password' => 'Password dimenticata?',
     
         'administration' => '',
     

@@ -7,6 +7,9 @@
   <meta id="token" content="{{ $token }}" />
 @endsection
 
+@section ('profile_warning')
+@endsection
+
 @section('content')
 <div class="container v-container edit-profile">
   <div class="row">

@@ -105,13 +105,37 @@
         li {
             display: inline-block;
             padding: 5px 20px;
-            background: $light-gray;
+            background: $blue;
+            color: $white;
             margin-bottom: 5px;
         }
 
         li.important {
-            background: $dark-blue;
+            background: $brand-success;
             color: $white;
+        }
+    }
+
+    .legend {
+        margin-top: 15px;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            padding: 5px 20px;
+            margin-bottom: 5px;
+
+            span {
+                background: $blue;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+            }
+
+            span.important {
+                background: $brand-success;
+                color: $white;
+            }
         }
     }
     ul.social {
