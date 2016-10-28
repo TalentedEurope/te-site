@@ -131,15 +131,15 @@ return [
     
         'administration' => 'Administration',
     
-        'architecture-amp-construction' => 'Architecture &amp; Construction',
+        'architecture-amp-construction' => 'Architecture & Construction',
     
-        'art-amp-culture' => 'Art &amp; Culture',
+        'art-amp-culture' => 'Art & Culture',
     
-        'banking-and-or-finance-amp-insurance' => 'Banking and/or Finance &amp; Insurance',
+        'banking-and-or-finance-amp-insurance' => 'Banking and/or Finance & Insurance',
     
-        'business-amp-consulting' => 'Business &amp; Consulting',
+        'business-amp-consulting' => 'Business & Consulting',
     
-        'communication-amp-media-amp-pr' => 'Communication &amp; Media &amp; PR',
+        'communication-amp-media-amp-pr' => 'Communication & Media & PR',
     
         'consumer-goods' => 'Consumer Goods',
     
@@ -147,15 +147,15 @@ return [
     
         'design' => 'Design',
     
-        'education-amp-training' => 'Education &amp; Training',
+        'education-amp-training' => 'Education & Training',
     
         'engineering' => 'Engineering',
     
-        'hospitality-amp-tourism' => 'Hospitality &amp; tourism',
+        'hospitality-amp-tourism' => 'Hospitality & tourism',
     
         'human-resources' => 'Human Resources',
     
-        'it-amp-web' => 'IT &amp; Web',
+        'it-amp-web' => 'IT & Web',
     
         'legal' => 'Legal',
     
@@ -163,27 +163,27 @@ return [
     
         'manufacturing' => 'Manufacturing',
     
-        'marketing-amp-advertising' => 'Marketing &amp; Advertising',
+        'marketing-amp-advertising' => 'Marketing & Advertising',
     
-        'medicine-amp-pharmaceutics' => 'Medicine &amp; Pharmaceutics',
+        'medicine-amp-pharmaceutics' => 'Medicine & Pharmaceutics',
     
         'politics' => 'Politics',
     
-        'quality-assurance-amp-safety' => 'Quality Assurance &amp; Safety',
+        'quality-assurance-amp-safety' => 'Quality Assurance & Safety',
     
         'real-estate' => 'Real Estate',
     
-        'research-amp-development' => 'Research &amp; Development',
+        'research-amp-development' => 'Research & Development',
     
-        'retail-amp-wholesale' => 'Retail &amp; Wholesale',
+        'retail-amp-wholesale' => 'Retail & Wholesale',
     
         'sales' => 'Sales',
     
         'social-work' => 'Social Work',
     
-        'sport-and-or-health-amp-wellness' => 'Sport and/or Health &amp; Wellness',
+        'sport-and-or-health-amp-wellness' => 'Sport and/or Health & Wellness',
     
-        'technology-amp-telecommunications' => 'Technology &amp; Telecommunications',
+        'technology-amp-telecommunications' => 'Technology & Telecommunications',
     
         'business-studies-and-or-management-science' => 'Business Studies and/or Management Science',
     

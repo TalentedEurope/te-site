@@ -11,8 +11,11 @@ use App\Models\User;
 use App\Models\Student;
 use App\Models\StudentStudy;
 use App\Models\StudentLanguage;
+use App\Models\CompanyKeyword;
+use App\Models\StudyKeyword;
 use App\Http\Requests;
 use JWTAuth;
+use config;
 use Validator;
 
 class SearchController extends SiteSearchController
@@ -29,11 +32,19 @@ class SearchController extends SiteSearchController
 
         $v = Validator::make($request->all(), $rules);
 
-        $results = Student::whereHas('user', function ($q) use ($v) {
+        $searchKeyword = array();
+        if (isset($v->valid()['search_text'])) {
+            $foundKeywords = StudyKeyword::search($v->valid()['search_text'], Config::get('app.locale'))->select('key')->get();
+            foreach ($foundKeywords as $item) {
+                $searchKeyword[] = $item["attributes"]["key"];
+            }
+        }
+
+        $results = Student::whereHas('user', function ($q) use ($v, $searchKeyword) {
                         $q->where('visible', true);
                         $q->where('is_filled', true);
                         $q->where('banned', false);
-            if (isset($v->valid()['search_text'])) {
+            if (isset($v->valid()['search_text']) && sizeof($searchKeyword) == 0) {
                 $q->search($v->valid()['search_text'], ['name','email']);
             }
             if (isset($v->valid()['countries'])) {
@@ -42,11 +53,16 @@ class SearchController extends SiteSearchController
         });
 
         if (isset($v->valid()['level_of_studies']) ||
-                isset($v->valid()['field_of_studies'])) {
-            $results->whereHas('studies', function ($q) use ($v) {
+                isset($v->valid()['field_of_studies'])
+                || sizeof($searchKeyword)) {
+            $results->whereHas('studies', function ($q) use ($v, $searchKeyword) {
 
                 if (isset($v->valid()['level_of_studies'])) {
                     $q->whereIn('level', $v->valid()['level_of_studies']);
+                }
+
+                if (sizeof($searchKeyword)) {
+                    $q->whereIn('field', $searchKeyword);
                 }
 
                 if (isset($v->valid()['field_of_studies'])) {
@@ -65,8 +81,8 @@ class SearchController extends SiteSearchController
             $results->whereIn('activity', $v->valid()['activities']);
         }
 
-        if (isset($v->valid()['search_text'])) {
-            $results->search($v->valid()['search_text'], ['talent']);
+        if (isset($v->valid()['search_text']) && sizeof($searchKeyword) == 0) {
+             $results->search($v->valid()['search_text'], ['talent', 'user.name', 'user.surname', 'user.email']);
         }
 
         $results = $results->paginate(env('PAGINATE_ENTRIES', 10));
@@ -152,12 +168,21 @@ class SearchController extends SiteSearchController
                         'countries.*' => 'required|in:'.implode(',', array_keys(User::$countries)),
         );
         $v = Validator::make($request->all(), $rules);
+
+        $searchKeyword = array();
+        if (isset($v->valid()['search_text'])) {
+            $foundKeywords = CompanyKeyword::search($v->valid()['search_text'], Config::get('app.locale'))->select('key')->get();
+            foreach ($foundKeywords as $item) {
+                $searchKeyword[] = $item["attributes"]["key"];
+            }
+        }
+
         $results = Company::whereNotNull("activity")
-                ->whereHas('user', function ($q) use ($v) {
+                ->whereHas('user', function ($q) use ($v, $searchKeyword) {
                     $q->where('visible', true);
                     $q->where('is_filled', true);
                     $q->where('banned', false);
-                    if (isset($v->valid()['search_text'])) {
+                    if (isset($v->valid()['search_text']) && !sizeof($searchKeyword)) {
                         $q->search($v->valid()['search_text'], ['name','email']);
                     }
                     if (isset($v->valid()['countries'])) {
