@@ -4,7 +4,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="well auth-box col-sm-6 col-sm-offset-2  col-md-4 col-md-offset-4">
+        <div class="well auth-box col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
             <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                 {!! csrf_field() !!}
                 <div class="avatar-placeholder">

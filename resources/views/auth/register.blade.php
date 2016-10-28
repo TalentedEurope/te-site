@@ -21,7 +21,7 @@
           </span>
           @endif
           <p><strong>I am a:</strong></p>
-          <div class="user-type">
+          <div class="user-type @if ($errors->has('type')) alert alert-danger @endif">
             <div class="radio-check">
               <input id="Student" type="radio" name="type" value="student"             @if (old('type') == "student") checked @endif>
               <label for="Student">
@@ -35,7 +35,7 @@
             </div>
             --}}
             <div class="radio-check">
-              <input id="Company" type="radio" name="type" value="company"             @if (old('type') == "company") checked @endif>
+              <input id="Company" type="radio" name="type" value="company" @if (old('type') == "company") checked @endif>
               <label for="Company"><i data-toggle="tooltip" data-placement="bottom" title="Company" class="fa fa-building" aria-hidden="true"></i></label>
             </div>
           </div>
@@ -57,9 +57,8 @@
               <input type="checkbox" required name="remember"></input> I agree with <a target="_blank" href="{{ url('/terms') }}"> the terms of use</a>
             </label>
           </div>
-          <div class="captcha">
-            {!! app('captcha')->display(); !!}
-          </div>
+          <p class="text-center"><em>All fields are required</em></p>
+
           <button type="submit" class="btn btn-primary">
             Sign up
           </button>
