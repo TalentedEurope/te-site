@@ -2,12 +2,12 @@
     <div class="well result-info">
         <span v-if="!isFiltering" class="h4">There exists {{ numberOfResults }} {{ collective }} in the database</span>
         <span v-if="isFiltering" class="h4">We found {{ numberOfResults }} {{ collective }} matching your needs</span>
-        <p v-if="collective == 'companies'">
+        <!-- <p v-if="collective == 'companies'">
             <label class="h5" for="magic-matching">
                 <input type="checkbox" name="magic-matching" id="magic-matching" value="1">
                 Search only for companies with matched desired skills <em>(magic matching)</em>
             </label>
-        </p>
+        </p> -->
     </div>
 </template>
 

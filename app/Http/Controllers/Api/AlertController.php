@@ -55,8 +55,8 @@ class AlertController extends SiteAlertController
                 'user_id' => $item->origin->id,
                 'slug' => $item->origin->slug,
                 'study_level' => $studyLevel,
-                'when_nudged' => $item->created_at->format('d-m-Y: h:i:s A'),
-                'when_nudged_relative' => $item->created_at->diffForHumans(),
+                'when_alert' => $item->created_at->format('d-m-Y: h:i:s A'),
+                'when_alert_relative' => $item->created_at->diffForHumans(),
             );
             // Update its timestamp
             $item->touch();

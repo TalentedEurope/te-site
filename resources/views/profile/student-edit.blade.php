@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-<div class="container edit-profile">
+<div class="container v-container edit-profile">
   <div class="row">
     <div class="col-md-12 col-xs-12">
       <h1 class="page-title">My profile</h1>
@@ -28,7 +28,7 @@
         </ul>
         <div id="profileTab" class="tab-content well">
           <div class="tab-pane active in" id="profile">
-            <form enctype='multipart/form-data' class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#profile' }}">
+            <form enctype="multipart/form-data" class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#profile' }}">
               {{ csrf_field() }}
 
               <h4>Profile Visibility</h4>
@@ -192,8 +192,9 @@
               <button type="submit" class="btn btn-primary">Update settings</button>
             </form>
           </div>
+
           <div class="tab-pane fade" id="career">
-            <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#contact') }}">
+            <form class="form-vertical" enctype="multipart/form-data" role="form" method="POST" action="{{ route('update_profile'). '#contact' }}">
             {{ csrf_field() }}
             <h4>Academic information</h4>
             <hr>
@@ -207,287 +208,22 @@
               @endif
             </div>
             <hr class="separator">
-            @forelse ($student->studies as $study)
-            <div class="study">
-              <header class="clearfix">
-                <h4 class="pull-left">Studies #{{ $loop->index +1 }}</h4>
-                <a class="pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
-              </header>
-                <div class="form-group{{ $errors->has('institution_name') ? ' has-error' : '' }}">
-                  <!-- <label for="institution_name">Institution name</label> -->
-                  <input type="text" class="form-control" id="institution_name" name="institution_name" placeholder="Institution name" value="{{ old('institution_name', $study->institution_name) }}">
-                  @if ($errors->has('institution_name'))
-                  <span class="help-block">
-                  <strong>{{ $errors->first('institution_name') }}</strong>
-                  </span>
-                  @endif
-                </div>
-                <div class="row">
-                  <div class="col-sm-8 form-group{{ $errors->has('studies_name') ? ' has-error' : '' }}">
-                    <!-- <label for="studies_name">Institution name</label> -->
-                    <input type="text" class="form-control" id="studies_name" name="studies_name" placeholder="Course/Studies name" value="{{ old('studies_name', $study->name) }}">
-                    @if ($errors->has('studies_name'))
-                    <span class="help-block">
-                    <strong>{{ $errors->first('studies_name') }}</strong>
-                    </span>
-                    @endif
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="select-holder">
-                      <select class="form-control" id="country" name="country">
-                        <option value="">Level</option>
-                        @foreach ($studyLevels as $key => $level)
-                          <option value="{{ $key }}" @if ($study->level == $key) selected @endif > {{ $level }}</option>
-                        @endforeach
-                      </select>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="form-group{{ $errors->has('study_field') ? ' has-error' : '' }}">
-                  <div class="select-holder">
-                    <select class="form-control" id="study_field" name="study_field">
-                        <option value="" selected>Field of studies</option>
-                        @foreach ($studyFields as $key => $field)
-                          <option value="{{ $key }}" @if ($study->field == $key) selected @endif > {{ $field }}</option>
-                        @endforeach
-                    </select>
-                  </div>
-                </div>
-                <hr>
-                <div class="form-group">
-                  <label for="certificate">Certificate</label>
-                  <input type="file" id="certificate" name="certificate">
-                  @if ($study->certificate)
-                    <p class="download-button h4">
-                      <a class="btn btn-primary" alt="Download your certificate" href="{{ URL::to('/profile/certificate/' . $user->id . '/study/' . $study->id) }}"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download Certificate</a>
-                    </p>
-                  @endif
-                </div>
-                <hr>
-                <div class="form-group">
-                  <label for="gradecard">Gradecard</label>
-                  <input type="file" id="gradecard" name="gradecard">
-                  @if ($study->gradecard)
-                    <p class="download-button h4">
-                      <a class="btn btn-primary" alt="Download your gradecard" href="{{ URL::to('/profile/gradecard/' . $user->id . '/study/' . $study->id) }}"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download gradecard</a>
-                    </p>
-                  @endif
-                </div>
+            <studies studies='{!! json_encode($student->studies, JSON_HEX_APOS) !!}'
+                    study-levels='{!! json_encode($studyLevels, JSON_HEX_APOS) !!}'
+                    study-fields='{!! json_encode($studyFields, JSON_HEX_APOS) !!}'
+                    errors='{!! json_encode($errors, JSON_HEX_APOS) !!}'></studies>
 
-              @if ($loop->last)
-              <hr>
-              <p class="text-center">
-                <a class="btn btn-default" href="#"><i class="fa fa-plus" aria-hidden="true"></i> add more studies</a>
-              </p>
-              @endif
-                <hr class="separator">
-            </div><!-- study -->
-            @empty
-            <div class="study">
-              <header class="clearfix">
-                <h4 class="pull-left">Studies 1</h4>
-                <a class="hidden pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
-              </header>
-              <div class="form-group">
-                <!-- <label for="institution_name">Institution name</label> -->
-                <input type="text" class="form-control" id="institution_name" name="institution_name" placeholder="Institution name">
-              </div>
-                <div class="row">
-                  <div class="col-sm-8 form-group{{ $errors->has('studies_name') ? ' has-error' : '' }}">
-                    <!-- <label for="studies_name">Institution name</label> -->
-                    <input type="text" class="form-control" id="studies_name" name="studies_name" placeholder="Course/Studies name">
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="select-holder">
-                      <select class="form-control" id="country" name="country">
-                        <option value="">Level</option>
-                        @foreach ($studyLevels as $key => $level)
-                          <option value="{{ $key }}"> {{ $level }}</option>
-                        @endforeach
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group{{ $errors->has('study_field') ? ' has-error' : '' }}">
-                  <div class="select-holder">
-                    <select class="form-control" id="study_field" name="study_field">
-                        <option value="" selected>Field of studies</option>
-                        @foreach ($studyFields as $key => $field)
-                          <option value="{{ $key }}"> {{ $field }}</option>
-                        @endforeach
-                    </select>
-                  </div>
-                </div>
-                <hr>
-                <div class="form-group">
-                  <label for="certificate">Certificate</label>
-                  <input type="file" id="certificate" name="certificate">
-                </div>
-                <hr>
-                <div class="form-group">
-                  <label for="gradecard">Gradecard</label>
-                  <input type="file" id="gradecard" name="gradecard">
-                </div>
-                <hr>
-                <p class="text-center">
-                  <a class="btn btn-default" href="#"><i class="fa fa-plus" aria-hidden="true"></i> add more studies</a>
-                </p>
-                <hr class="separator">
-            </div><!-- study -->
-            @endforelse
-            @forelse ($student->training as $training)
-              <div class="training">
-                <header class="clearfix">
-                  <h4 class="pull-left">Training #{{ $loop->index +1 }}</h4>
-                  <a class="pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
-                </header>
-                <a class="pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
-                </p>
-                <div class="form-group{{ $errors->has('training_name') ? ' has-error' : '' }}">
-                <!-- <label for="training_name">Email</label> -->
-                <input type="email" class="form-control" id="training_name" name="training_name" placeholder="Course name" value="{{ old('training_name', $training->name) }}">
-                  @if ($errors->has('training_name'))
-                  <span class="help-block">
-                  <strong>{{ $errors->first('training_name') }}</strong>
-                  </span>
-                  @endif
-                </div>
+            <trainings trainings='{!! json_encode($student->training, JSON_HEX_APOS) !!}'
+                    errors='{!! json_encode($errors, JSON_HEX_APOS) !!}'></trainings>
 
-                <div class="form-group{{ $errors->has('training_date') ? ' has-error' : '' }}">
-                  <label for="training_date">Date</label>
-                  <input type="date" class="form-control" id="training_date" name="training_date" placeholder="training_date" value="{{ old('training_date', $training->date) }}">
-                  @if ($errors->has('training_date'))
-                  <span class="help-block">
-                  <strong>{{ $errors->first('training_date') }}</strong>
-                  </span>
-                  @endif
-                </div>
-                <div class="form-group">
-                  <label for="training_certificate">Certificate</label>
-                  @if ($study->certificate)
-                    <p>
-                      <a class="btn btn-primary" alt="Download your certificate" href="{{ URL::to('/profile/certificate/' . $user->id . '/training/' . $training->id) }}"><i class="fa fa-cloud-download" aria-hidden="true"></i>Download</a>
-                    </p>
-                  @endif
-                  <input type="file" id="training_certificate" name="training_certificate">
-                </div>
-                @if ($loop->last)
-                <p class="text-center">
-                  <a class="btn btn-default" href="#"><i class="fa fa-plus" aria-hidden="true"></i> add more training</a>
-                </p>
-                @endif
-                <hr class="separator">
-              </div><!-- end of training -->
-            @empty
-              <div class="training">
-                <header class="clearfix">
-                  <h4 class="pull-left">Training #1</h4>
-                  <a class="hidden pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
-                </header>
-                <div class="form-group">
-                  <input type="email" class="form-control" id="training_name" name="training_name" placeholder="Course name">
-                </div>
 
-                <div class="form-group{{ $errors->has('training_date') ? ' has-error' : '' }}">
-                  <label for="training_date">Date</label>
-                  <input type="date" class="form-control" id="training_date" name="training_date" placeholder="training_date">
-                </div>
-                <div class="form-group">
-                  <label for="training_certificate">Certificate</label>
-                  <input type="file" id="training_certificate" name="training_certificate">
-                </div>
-                <p class="text-center">
-                  <a class="btn btn-default" href="#"><i class="fa fa-plus" aria-hidden="true"></i> add more training</a>
-                </p>
-                <hr class="separator">
-              </div><!-- end of training -->
-            @endforelse
-              @forelse ($student->languages as $language)
-              <div class="language">
-                <header class="clearfix">
-                  <h4 class="pull-left">Language #{{ $loop->index +1 }}</h4>
-                  <a class="pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
-                </header>
-                <div class="form-group{{ $errors->has('language-name') ? ' has-error' : '' }}">
-                  <div class="select-holder">
-                    <select class="form-control" id="language-name" name="language-name">
-                      <option value="" selected>Language</option>
-                      @foreach ($languages as $code => $langdata)
-                        <option
-                            @if ($language->name == $code) selected @endif
-                            value="{{ $code }}">{{ $langdata['name'] }}</option>
-                      @endforeach
-                    </select>
-                  </div>
-                </div>
+            <languages languages='{!! json_encode($student->languages, JSON_HEX_APOS) !!}'
+                    language-names='{!! json_encode($languages, JSON_HEX_APOS) !!}'
+                    language-levels='{!! json_encode($languageLevels, JSON_HEX_APOS) !!}'
+                    errors='{!! json_encode($errors, JSON_HEX_APOS) !!}'></languages>
 
-                <div class="form-group{{ $errors->has('language-level') ? ' has-error' : '' }}">
-                  <div class="select-holder">
-                    <select class="form-control" id="language-level" name="language-level">
-                      <option value="" selected>Language level</option>
-                      @foreach ($languageLevels as $key => $level)
-                        <option
-                            @if ($language->level == $key) selected @endif
-                            value="{{ $key }}">{{ $level }}</option>
-                      @endforeach
-                    </select>
-                  </div>
-                </div>
-                <hr>
-                <div class="form-group">
-                  <label for="certificate">Certificate</label>
-                  @if ($study->certificate)
-                    <p>
-                      <a class="btn btn-primary" alt="Download your certificate" href="{{ URL::to('/profile/certificate/' . $user->id . '/language/' . $language->id) }}"><i class="fa fa-cloud-download" aria-hidden="true"></i>Download</a>
-                    </p>
-                  @endif
-                  <input type="file" id="certificate" name="certificate">
-                </div>                <hr>
-              </div><!-- end of language -->
-              @if ($loop->last)
-              <p class="text-center">
-                <a class="btn btn-default" href="#"><i class="fa fa-plus" aria-hidden="true"></i> add more languages</a>
-              </p>
-              @endif
-              @empty
-                <div class="language">
-                  <header class="clearfix">
-                    <h4 class="pull-left">Language #1</h4>
-                    <a class="pull-right hidden remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
-                  </header>
-                  <div class="form-group">
-                    <div class="select-holder">
-                      <select class="form-control" id="language-name" name="language-name">
-                        <option value="" selected>Language</option>
-                        @foreach ($languages as $code => $langdata)
-                          <option value="{{ $code }}">{{ $langdata['name'] }}</option>
-                        @endforeach
-                      </select>
-                    </div>
-                  </div>
 
-                  <div class="form-group{{ $errors->has('language-level') ? ' has-error' : '' }}">
-                    <div class="select-holder">
-                      <select class="form-control" id="language-level" name="language-level">
-                        <option value="" selected>Language level</option>
-                        @foreach ($languageLevels as $key => $level)
-                          <option value="{{ $key }}">{{ $level }}</option>
-                        @endforeach
-                      </select>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="form-group">
-                    <label for="certificate">Certificate</label>
-                    <input type="file" id="certificate" name="certificate">
-                  </div>
-                  <hr>
-                </div><!-- end of language -->
-                <p class="text-center">
-                  <a class="btn btn-default" href="#"><i class="fa fa-plus" aria-hidden="true"></i> add more languages</a>
-                </p>
-              @endforelse
               <hr class="separator">
               @foreach ($student->experiences as $experience)
               <div class="work_experience">
@@ -603,7 +339,7 @@
               Profile refereeing will be available soon
             </div>
 
-            <form class="form-vertical" role="form" style="display:none" method="POST" action="{{ url('/profile#refer') }}">
+            <form class="form-vertical" role="form" style="display:none" method="POST" action="{{ route('update_profile'). '#refer' }}">
               {{ csrf_field() }}
               <div class="form-group{{ $errors->has('validator_name') ? ' has-error' : '' }}">
                 <!-- <label for="validator_name">New validator_name</label> -->
@@ -630,7 +366,7 @@
 
           <div class="tab-pane fade" id="password">
             <h4>Change your password</h4>
-            <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#password') }}">
+            <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#password' }}">
               {{ csrf_field() }}
               <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                 <!-- <label for="password">New Password</label> -->
