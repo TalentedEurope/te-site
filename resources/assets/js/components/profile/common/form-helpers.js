@@ -1,4 +1,4 @@
-import { profileResource } from '../../resources/profile';
+import { profileResource } from 'resources/profile';
 
 var setDebounced = function() {
     this.debounced = _.debounce(this.validateField, 1500);
