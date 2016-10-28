@@ -16,8 +16,12 @@ class CreateStudyKeywordTable extends Migration
     {
         Schema::create('study_keywords', function (Blueprint $table) {
             $table->enum('field', StudentStudy::$fields);
-            $table->text('entity_type', 150)->nullable();
-            $table->boolean('only_owned')->default(false);
+            $table->text('en')->nullable();
+            $table->text('es')->nullable();
+            $table->text('it')->nullable();
+            $table->text('de')->nullable();
+            $table->text('fr')->nullable();
+            $table->text('sk')->nullable();
             $table->timestamps();
             $table->primary('field');
         });
@@ -30,6 +34,6 @@ class CreateStudyKeywordTable extends Migration
      */
     public function down()
     {
-        Schema::drop('study_keyword' );
+        Schema::drop('study_keywords');
     }
 }

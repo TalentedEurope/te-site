@@ -14,10 +14,14 @@ class CreateCompanyKeywordTable extends Migration
      */
     public function up()
     {
-        Schema::create('company_keyword', function (Blueprint $table) {
+        Schema::create('company_keywords', function (Blueprint $table) {
             $table->enum('field', Company::$activities);
-            $table->text('entity_type', 150)->nullable();
-            $table->boolean('only_owned')->default(false);
+            $table->text('en')->nullable();
+            $table->text('es')->nullable();
+            $table->text('it')->nullable();
+            $table->text('de')->nullable();
+            $table->text('fr')->nullable();
+            $table->text('sk')->nullable();
             $table->timestamps();
             $table->primary('field');
         });
@@ -30,6 +34,6 @@ class CreateCompanyKeywordTable extends Migration
      */
     public function down()
     {
-        Schema::drop('company_keyword');
+        Schema::drop('company_keywords');
     }
 }
