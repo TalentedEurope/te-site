@@ -63,9 +63,13 @@
 
               <select-form code="activity" label="Activity Sector" placeholder=" - Activity Sector - " values='{!! json_encode($activities, JSON_HEX_APOS) !!}' value="{{ old('activity', $company->activity) }}" has-error="{{ $errors->has('activity') }}" error="{{ $errors->first('activity') }}"></select-form>
 
-              <div class="form-group">
+              <div class="form-group @if ($errors->has('image')) alert alert-danger   @endif  ">
+                @if ($errors->has('image'))
+                <span class="help-block">
+                    <strong>{{ $errors->first('image') }}</strong>
+                </span> @endif
                 <label for="image">Company Logo</label>
-                <input type="file" id="image" name="image">
+                <input type="file" id="image" name="image" accept="image/*">
               </div>
 
               <hr class="separator">
@@ -117,7 +121,7 @@
               </div>
               <div class="form-group{{ $errors->has('notification_email') ? ' alert alert-danger' : '' }}">
                 <!-- <label for="email">Email</label> -->
-                <input type="email" class="form-control" id="notification_email" name="notification_email" placeholder="Contact email" value="{{ old('contact_name', $company->notification_email) }}"> @if ($errors->has('notification_email'))
+                <input type="email" class="form-control" id="notification_email" name="notification_email" placeholder="Contact email" value="{{ old('notification_email', $company->notification_email) }}"> @if ($errors->has('notification_email'))
                 <span class="help-block">
                   <strong>{{ $errors->first('notification_email') }}</strong>
                 </span> @endif

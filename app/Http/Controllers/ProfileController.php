@@ -52,7 +52,6 @@ class ProfileController extends Controller
         if ($user->isA('student')) {
             $data = $this->getStudentPrivateData($user);
             $data['token'] = LoginController::userToken();
-
             return view('profile.student-edit', $data);
         }
 
@@ -165,8 +164,6 @@ class ProfileController extends Controller
             })->save($fname);
             $user->image = basename($fname);
         }
-        $errors = $errors->merge($v);
-
         $user->save();
         return $errors;
     }
@@ -313,7 +310,9 @@ class ProfileController extends Controller
         $studyFields = array();
         $languageLevels = array();
         $languages = array();
-
+        foreach (StudentLanguage::$languages as $key => $item) {
+            $languages[$key] = $item['eng'];
+        }
         foreach (StudentStudy::$levels as $item) {
             $studyLevels[$item] = trans('reg-profile.'.$item);
         }
@@ -330,7 +329,7 @@ class ProfileController extends Controller
             'studyLevels' => $studyLevels,
             'studyFields' => $studyFields,
             'languageLevels' => $languageLevels,
-            'languages' => StudentLanguage::$languages,
+            'languages' => $languages,
         );
         if ($user->userable) {
             $data['student'] = $user->userable;

@@ -26,6 +26,7 @@
     input[type="radio"],
     input[type="checkbox"] {
         width: auto;
+        position: inherit;
     }
     input.has-error {
         background: lighten($red, 30%);

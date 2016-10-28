@@ -129,102 +129,103 @@ return [
     
         'forgot_password' => 'Zabudli ste heslo?',
     
-        'administration' => '',
+        'administration' => 'Administratíva',
     
-        'architecture-amp-construction' => '',
+        'architecture-amp-construction' => 'Architektúra a stavebníctvo',
     
-        'art-amp-culture' => '',
+        'art-amp-culture' => 'Umenie a kultúra',
     
-        'banking-and-or-finance-amp-insurance' => '',
+        'banking-and-or-finance-amp-insurance' => 'Bankovníctvo a/alebo Financie a Poisťovníctvo',
     
-        'business-amp-consulting' => '',
+        'business-amp-consulting' => '
+Obchodná a poradenská činnosť',
     
-        'communication-amp-media-amp-pr' => '',
+        'communication-amp-media-amp-pr' => 'Komunikácia a médiá a PR',
     
-        'consumer-goods' => '',
+        'consumer-goods' => 'Spotrebný tovar',
     
-        'customer-service' => '',
+        'customer-service' => 'Zákaznícky servis',
     
-        'design' => '',
+        'design' => 'Dizajn',
     
-        'education-amp-training' => '',
+        'education-amp-training' => 'Vzdelávanie',
     
-        'engineering' => '',
+        'engineering' => 'Inžinierstvo',
     
-        'hospitality-amp-tourism' => '',
+        'hospitality-amp-tourism' => 'Cestovný ruch a turizmus',
     
-        'human-resources' => '',
+        'human-resources' => 'Ľudské zdroje',
     
-        'it-amp-web' => '',
+        'it-amp-web' => 'IT a web',
     
-        'legal' => '',
+        'legal' => 'Právo',
     
-        'logistics' => '',
+        'logistics' => 'Logistika',
     
-        'manufacturing' => '',
+        'manufacturing' => 'Výroba',
     
-        'marketing-amp-advertising' => '',
+        'marketing-amp-advertising' => 'Marketing a reklama',
     
-        'medicine-amp-pharmaceutics' => '',
+        'medicine-amp-pharmaceutics' => 'Medicína a farmácia',
     
-        'politics' => '',
+        'politics' => 'Politika',
     
-        'quality-assurance-amp-safety' => '',
+        'quality-assurance-amp-safety' => 'Zabezpečenie kvality a bezpečnosti',
     
-        'real-estate' => '',
+        'real-estate' => 'Nehnuteľnosti',
     
-        'research-amp-development' => '',
+        'research-amp-development' => 'Výskum a  vývoj',
     
-        'retail-amp-wholesale' => '',
+        'retail-amp-wholesale' => 'Maloobchod a veľkoobchod',
     
-        'sales' => '',
+        'sales' => 'Predaj',
     
-        'social-work' => '',
+        'social-work' => 'Sociálna práca',
     
-        'sport-and-or-health-amp-wellness' => '',
+        'sport-and-or-health-amp-wellness' => 'Šport a/alebo zdravie a wellness',
     
-        'technology-amp-telecommunications' => '',
+        'technology-amp-telecommunications' => 'Technológie a telekomunikácie',
     
-        'business-studies-and-or-management-science' => '',
+        'business-studies-and-or-management-science' => 'Obchodné štúdia a/alebo manažment ',
     
-        'engineering-and-or-technology' => '',
+        'engineering-and-or-technology' => 'Inžinierstvo a/alebo technológie',
     
-        'social-sciences' => '',
+        'social-sciences' => 'Spoločenské vedy',
     
-        'languages-and-philological-sciences' => '',
+        'languages-and-philological-sciences' => 'Jazyky a filologické vedy',
     
-        'communication-and-information-sciences' => '',
+        'communication-and-information-sciences' => 'Komunikácia a informačné vedy ',
     
-        'humanities' => '',
+        'humanities' => 'Humanitné vedy',
     
-        'education-and-or-teacher-training' => '',
+        'education-and-or-teacher-training' => 'Vzdelávanie a /alebo príprava učiteľov',
     
-        'law' => '',
+        'law' => 'Právo',
     
-        'art-and-design' => '',
+        'art-and-design' => 'Umenie a dizajn',
     
-        'architecture-and-or-urban-and-regional-planning' => '',
+        'architecture-and-or-urban-and-regional-planning' => 'Architektúra a/alebo územné a regionálne plánovanie',
     
-        'natural-sciences' => '',
+        'natural-sciences' => 'Prírodné vedy',
     
-        'mathematics-and-or-informatics' => '',
+        'mathematics-and-or-informatics' => 'Matematika a/alebo informatika',
     
-        'medical-sciences' => '',
+        'medical-sciences' => 'Lekárske vedy',
     
-        'geography-and-or-geology' => '',
+        'geography-and-or-geology' => 'Geografia a/alebo geológia',
     
-        'agriculture-sciences' => '',
+        'agriculture-sciences' => 'Poľnohospodárske vedy',
     
-        'Lang_level_A1' => '',
+        'Lang_level_A1' => 'A1: úplný začiatočník',
     
-        'Lang_level_A2' => '',
+        'Lang_level_A2' => 'A2: začiatočník',
     
-        'Lang_level_B1' => '',
+        'Lang_level_B1' => 'B1: mierne pokročilý',
     
-        'Lang_level_B2' => '',
+        'Lang_level_B2' => 'B2: stredne pokročilý',
     
-        'Lang_level_C1' => '',
+        'Lang_level_C1' => 'C1: pokročilý',
     
-        'Lang_level_C2' => '',
+        'Lang_level_C2' => 'C2: expert',
     
 ];
