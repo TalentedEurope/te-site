@@ -83,7 +83,7 @@ class LoginController extends Controller
         $messages = array($this->username().'.verified' => 'Email has not been verified, we have sent you the verification email again. Please verify your email and try to log in again');
 
         $this->validate($request, [
-            $this->username() => 'required', $this->username() => 'verified', 'password' => 'required',
+            $this->username() => 'required|verified', 'password' => 'required',
         ], $messages);
     }
 }

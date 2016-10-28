@@ -34,9 +34,9 @@ class SearchController extends SiteSearchController
 
         $searchKeyword = array();
         if (isset($v->valid()['search_text'])) {
-            $foundKeywords = StudyKeyword::search($v->valid()['search_text'], Config::get('app.locale'))->select('field')->get();
+            $foundKeywords = StudyKeyword::search($v->valid()['search_text'], Config::get('app.locale'))->select('key')->get();
             foreach ($foundKeywords as $item) {
-                $searchKeyword[] = $item["attributes"]["field"];
+                $searchKeyword[] = $item["attributes"]["key"];
             }
         }
 
@@ -168,12 +168,21 @@ class SearchController extends SiteSearchController
                         'countries.*' => 'required|in:'.implode(',', array_keys(User::$countries)),
         );
         $v = Validator::make($request->all(), $rules);
+
+        $searchKeyword = array();
+        if (isset($v->valid()['search_text'])) {
+            $foundKeywords = CompanyKeyword::search($v->valid()['search_text'], Config::get('app.locale'))->select('key')->get();
+            foreach ($foundKeywords as $item) {
+                $searchKeyword[] = $item["attributes"]["key"];
+            }
+        }
+
         $results = Company::whereNotNull("activity")
-                ->whereHas('user', function ($q) use ($v) {
+                ->whereHas('user', function ($q) use ($v, $searchKeyword) {
                     $q->where('visible', true);
                     $q->where('is_filled', true);
                     $q->where('banned', false);
-                    if (isset($v->valid()['search_text'])) {
+                    if (isset($v->valid()['search_text']) && !sizeof($searchKeyword)) {
                         $q->search($v->valid()['search_text'], ['name','email']);
                     }
                     if (isset($v->valid()['countries'])) {

@@ -8,5 +8,5 @@ use Sofa\Eloquence\Eloquence;
 class StudyKeyword extends Model
 {
     use Eloquence;
-    protected $primaryKey = 'field';
+    protected $primaryKey = 'key';
 }

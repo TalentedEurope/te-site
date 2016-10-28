@@ -15,7 +15,7 @@ class CreateStudyKeywordTable extends Migration
     public function up()
     {
         Schema::create('study_keywords', function (Blueprint $table) {
-            $table->enum('field', StudentStudy::$fields);
+            $table->enum('key', StudentStudy::$fields);
             $table->text('en')->nullable();
             $table->text('es')->nullable();
             $table->text('it')->nullable();
@@ -23,7 +23,7 @@ class CreateStudyKeywordTable extends Migration
             $table->text('fr')->nullable();
             $table->text('sk')->nullable();
             $table->timestamps();
-            $table->primary('field');
+            $table->primary('key');
         });
     }
 

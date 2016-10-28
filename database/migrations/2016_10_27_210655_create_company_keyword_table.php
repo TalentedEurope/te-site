@@ -15,7 +15,7 @@ class CreateCompanyKeywordTable extends Migration
     public function up()
     {
         Schema::create('company_keywords', function (Blueprint $table) {
-            $table->enum('field', Company::$activities);
+            $table->enum('key', Company::$activities);
             $table->text('en')->nullable();
             $table->text('es')->nullable();
             $table->text('it')->nullable();
@@ -23,7 +23,7 @@ class CreateCompanyKeywordTable extends Migration
             $table->text('fr')->nullable();
             $table->text('sk')->nullable();
             $table->timestamps();
-            $table->primary('field');
+            $table->primary('key');
         });
     }
 
