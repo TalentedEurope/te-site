@@ -11,7 +11,10 @@ import TextAreaForm from './components/profile/common/TextAreaForm.vue';
 import TextBoxForm from './components/profile/common/TextBoxForm.vue';
 import PersonalSkillsForm from './components/profile/common/PersonalSkillsForm.vue';
 import FileForm from './components/profile/common/FileForm.vue';
+import DateForm from './components/profile/common/DateForm.vue';
 import Studies from './components/profile/student/Studies.vue';
+import Trainings from './components/profile/student/Trainings.vue';
+import Languages from './components/profile/student/Languages.vue';
 import AlertButton from './components/common/AlertButton.vue';
 
 
@@ -19,7 +22,7 @@ new Vue({
     el: '.v-container',
     components: {
         Search, Alerts, Validators, StudentsValidation,
-        SelectForm, TextAreaForm, TextBoxForm, PersonalSkillsForm, FileForm,
-        Studies,
+        SelectForm, TextAreaForm, TextBoxForm, PersonalSkillsForm, FileForm, DateForm,
+        Studies, Trainings, Languages,
         AlertButton },
 })
