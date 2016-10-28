@@ -29,7 +29,7 @@ Route::group(['prefix' => 'profile', 'namespace' => 'Api'], function () {
     Route::put('/', 'ProfileController@update');
 });
 
-Route::resource('alert', 'Api\AlertController');
+Route::resource('alerts', 'Api\AlertController');
 
 Route::group(['prefix' => 'profile'], function () {
     Route::get('/student', 'ProfileController@getJSONStudentProfile');

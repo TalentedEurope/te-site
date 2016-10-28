@@ -19,11 +19,7 @@
                     {{company.talent_is}}
                 </p>
 
-                <div v-if="showImHereButton()">
-                    <a href="#" class="btn btn-primary btn-nudge btn-lg"><i class="fa fa-bell" aria-hidden="true"></i> I'm here!</a>
-
-                    <a href="#" class="btn btn-primary btn-tooltip btn-lg" data-toggle="tooltip" data-placement="right" title="Explanation text about what the Hey listen! button does" > ? </a>
-                </div>
+                <alert-button :company-id="company.id" placement="right"></alert-button>
 
             </div>
             <div class="col-xs-12 col-sm-4 col-md-3 text-center">
@@ -58,19 +54,12 @@
 </template>
 
 <script>
-import SkillsTags from '../common/SkillsTags.vue'
+import SkillsTags from '../common/SkillsTags.vue';
+import AlertButton from '../common/AlertButton.vue';
 
 export default {
-    components: {
-        'skills-tags': SkillsTags,
-    },
+    components: { SkillsTags, AlertButton },
     props: ['company'],
-    methods: {
-        showImHereButton: function () {
-            var user_type = $("meta[id='user_type']").attr('content');
-            return user_type == 'student';
-        }
-    }
 }
 </script>
 

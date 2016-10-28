@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container nudges">
+<div class="container">
   <div class="row">
     <h1 class="page-title">My students</h1>
     <div class="v-container">
