@@ -164,8 +164,6 @@ class ProfileController extends Controller
             })->save($fname);
             $user->image = basename($fname);
         }
-        $errors = $errors->merge($v);
-
         $user->save();
         return $errors;
     }
