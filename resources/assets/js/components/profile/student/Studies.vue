@@ -9,7 +9,7 @@
             <text-box-form :code="generateCode('institution_name', study)" label="Institution name" placeholder="Institution name" :value="study.institution_name" :has-error="parsed_errors['institution_name']" :error="parsed_errors['institution_name']"></text-box-form>
 
             <div class="row">
-                <text-box-form class="col-sm-8" :code="generateCode('studies_name', study)" label="Course/Studies name" placeholder="Course/Studies name" :value="study.studies_name" :has-error="parsed_errors['studies_name']" :error="parsed_errors['studies_name']"></text-box-form>
+                <text-box-form class="col-sm-8" :code="generateCode('name', study)" label="Course/Studies name" placeholder="Course/Studies name" :value="study.name" :has-error="parsed_errors['name']" :error="parsed_errors['name']"></text-box-form>
                 <select-form class="col-sm-4" :code="generateCode('level', study)" label="Level" placeholder=" - Level - " :values="studyLevels" :value="study.level" :has-error="parsed_errors['level']" :error="parsed_errors['level']"></select-form>
             </div>
 
@@ -31,7 +31,7 @@
             <text-box-form :code="generateCode('institution_name', new_study)" label="Institution name" placeholder="Institution name" :has-error="parsed_errors['institution_name']" :error="parsed_errors['institution_name']"></text-box-form>
 
             <div class="row">
-                <text-box-form class="col-sm-8" :code="generateCode('studies_name', new_study)" label="Course/Studies name" placeholder="Course/Studies name" :has-error="parsed_errors['studies_name']" :error="parsed_errors['studies_name']"></text-box-form>
+                <text-box-form class="col-sm-8" :code="generateCode('name', new_study)" label="Course/Studies name" placeholder="Course/Studies name" :has-error="parsed_errors['name']" :error="parsed_errors['name']"></text-box-form>
                 <select-form class="col-sm-4" :code="generateCode('level', new_study)" label="Level" placeholder=" - Level - " :values="studyLevels" value="" :has-error="parsed_errors['level']" :error="parsed_errors['level']"></select-form>
             </div>
 

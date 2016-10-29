@@ -98,7 +98,7 @@
                     value="{{ old('talent', $company->talent) }}" has-error="{{ $errors->has('talent') }}" error="{{ $errors->first('talent') }}"></text-area-form>
 
 
-              <personal-skills-form code="personal" max-personal-skills="6" values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}' value='{!! json_encode($company->personalSkills, JSON_HEX_APOS) !!}' has-error="{{ $errors->has('name') }}" error="{{ $errors->first('name') }}">
+              <personal-skills-form max-personal-skills="6" values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}' value='{!! json_encode($company->personalSkills, JSON_HEX_APOS) !!}' has-error="{{ $errors->has('personal_skills') }}" error="{{ $errors->first('personal_skills') }}">
               </personal-skills-form>
 
               <hr>
@@ -112,20 +112,9 @@
             <label>Setup an alternative contact user that will receive all the notifications instead of the main account</label>
             <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#contact' }}" >
               {{ csrf_field() }}
-              <div class="form-group{{ $errors->has('notification_name') ? ' alert alert-danger' : '' }}">
-                <!-- <label for="notification_name">Name</label> -->
-                <input type="text" class="form-control" id="notification_name" name="notification_name" placeholder="Name" value="{{ old('notification_name', $company->notification_name) }}"> @if ($errors->has('notification_name'))
-                <span class="help-block">
-                  <strong>{{ $errors->first('notification_name') }}</strong>
-                </span> @endif
-              </div>
-              <div class="form-group{{ $errors->has('notification_email') ? ' alert alert-danger' : '' }}">
-                <!-- <label for="email">Email</label> -->
-                <input type="email" class="form-control" id="notification_email" name="notification_email" placeholder="Contact email" value="{{ old('notification_email', $company->notification_email) }}"> @if ($errors->has('notification_email'))
-                <span class="help-block">
-                  <strong>{{ $errors->first('notification_email') }}</strong>
-                </span> @endif
-              </div>
+              <text-box-form code="notification_name" label="Name" placeholder="Name" value="{{ old('notification_name', $company->notification_name) }}" has-error="{{ $errors->has('notification_name') }}" error="{{ $errors->first('notification_name') }}"></text-box-form>
+              <text-box-form type="email" code="notification_email" label="Email" placeholder="Email" value="{{ old('notification_email', $company->notification_email) }}" has-error="{{ $errors->has('notification_email') }}" error="{{ $errors->first('notification_email') }}"></text-box-form>
+
               <hr>
               <button type="submit" class="btn btn-primary">Update settings</button>
             </form>
@@ -135,20 +124,9 @@
             <p><span class="h4">Change your password</span></p>
             <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#password' }}">
               {{ csrf_field() }}
-              <div class="form-group{{ $errors->has('password') ? ' alert alert-danger' : '' }}">
-                <!-- <label for="password">New Password</label> -->
-                <input type="password" class="form-control" id="password" name="password" placeholder="New password"> @if ($errors->has('password'))
-                <span class="help-block">
-                  <strong>{{ $errors->first('password') }}</strong>
-                </span> @endif
-              </div>
-              <div class="form-group{{ $errors->has('password_confirm') ? ' alert alert-danger' : '' }}">
-                <!-- <label for="password_confirm">Repeat new Password</label> -->
-                <input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Repeat new password"> @if ($errors->has('password_confirm'))
-                <span class="help-block">
-                  <strong>{{ $errors->first('password_confirm') }}</strong>
-                </span> @endif
-              </div>
+              <text-box-form type="password" code="password" label="New Password" placeholder="New Password" value="" has-error="{{ $errors->has('password') }}" error="{{ $errors->first('password') }}"></text-box-form>
+              <text-box-form type="password" code="password_confirm" label="Repeat new Password" placeholder="Repeat new Password" value="" has-error="{{ $errors->has('password_confirm') }}" error="{{ $errors->first('password_confirm') }}"></text-box-form>
+
               <hr>
               <button type="submit" class="btn btn-primary">Save new password</button>
             </form>

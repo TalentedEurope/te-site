@@ -1,13 +1,13 @@
 <template>
     <div>
-        <div class="training" v-for="(training, key, index) in parsed_trainings">
+        <div class="training" v-for="(training, index) in parsed_trainings">
             <header class="clearfix">
                 <h4 class="pull-left">Training {{ index + 1 }}</h4>
                 <a class="pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
             </header>
 
-            <text-box-form :code="generateCode('training_name', training)" label="Course name" placeholder="Course name" :value="training.training_name" :has-error="parsed_errors['training_name']" :error="parsed_errors['training_name']"></text-box-form>
-            <date-form :code="generateCode('training_date', training)" label="Date" placeholder="Date" :value="training.training_date" :has-error="parsed_errors['training_date']" :error="parsed_errors['training_date']"></date-form>
+            <text-box-form :code="generateCode('name', training)" label="Course name" placeholder="Course name" :value="training.name" :has-error="parsed_errors['name']" :error="parsed_errors['name']"></text-box-form>
+            <date-form :code="generateCode('date', training)" label="Date" placeholder="Date" :value="training.date" :has-error="parsed_errors['date']" :error="parsed_errors['date']"></date-form>
 
             <hr>
             <file-form :code="generateCode('certificate', training)" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/training/32"></file-form>
@@ -20,8 +20,8 @@
                 <a class="hidden pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
             </header>
 
-            <text-box-form :code="generateCode('training_name', new_training)" label="Course name" placeholder="Course name" :value="new_training.training_name" :has-error="parsed_errors['training_name']" :error="parsed_errors['training_name']"></text-box-form>
-            <date-form :code="generateCode('training_date', new_training)" label="Date" placeholder="Date" :value="new_training.training_date" :has-error="parsed_errors['training_date']" :error="parsed_errors['training_date']"></date-form>
+            <text-box-form :code="generateCode('name', new_training)" label="Course name" placeholder="Course name" :value="new_training.name" :has-error="parsed_errors['name']" :error="parsed_errors['name']"></text-box-form>
+            <date-form :code="generateCode('date', new_training)" label="Date" placeholder="Date" :value="new_training.date" :has-error="parsed_errors['date']" :error="parsed_errors['date']"></date-form>
 
             <hr>
             <file-form :code="generateCode('certificate', new_training)" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/training/32"></file-form>
