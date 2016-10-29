@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\ValidationRequest;
 use App\Models\StudentStudy;
 use App\Models\StudentLanguage;
+use APp\Models\StudentTraining;
 use App\Models\PersonalSkill;
 use App\Http\Controllers\Api\LoginController;
 use App;
@@ -157,7 +158,9 @@ class ProfileController extends Controller
         $v = Validator::make($request->all(), array_filter(User::rules('image')));
 
         if ($v->passes() && $request->hasFile('image') && !$request->has('validate')) {
-            $fname = tempnam(public_path() . User::$photoPath, $user->id).'.jpg';
+            $fname = tempnam(public_path() . User::$photoPath, $user->id);
+            unlink($fname);
+            $fname .= '.jpg';
             $img = Image::make($request->file('image'))
             ->resize(User::$photoWidth, User::$photoHeight, function ($constraint) {
                 $constraint->aspectRatio();
@@ -222,17 +225,83 @@ class ProfileController extends Controller
             $student = Student::create();
             $student->user()->save($user);
         }
-        $v = Validator::make($request->all(), Company::rules($student));
+
+        $v = Validator::make($request->all(), Student::rules());
 
         foreach ($v->valid() as $key => $value) {
-            if (array_has($student['attributes'], $key) && !$request->has('validate')) {
+            if (!is_array($value) && array_has($student['attributes'], $key) && !$request->has('validate')) {
                 $student->$key = $value;
             }
+        }
+
+        // Related columns, those are more complicated than the ones in company so we validate row by row.
+        if (isset($v->valid()['trainings'])) {
+            $trainIds = array();
+            foreach ($v->valid()['trainings'] as $key => $train) {
+                if (isset($train['training_date'])) {
+                    $train['date'] = $train['training_date'];
+                }
+                $itemVal = Validator::make($train, Student::rulesRelated('trainings'));
+                $training = new StudentTraining();
+                $errors = $errors->merge($v);
+                if (isset($train['id'])) {
+                    $queryLang = StudentTraining::find($train['id']);
+                    if ($queryLang) {
+                        $training = $queryLang;
+                    }
+                }
+                if (isset($itemVal->valid()['name'])) {
+                    $training->name = $train['name'];
+                }
+                if (isset($itemVal->valid()['date'])) {
+                    $training->date = $train['date'];
+                }
+                if (isset($itemVal->valid()['certificate'])) {
+                    $fname = tempnam(public_path() . Student::$studyCertificatePath, $user->id);
+                    unlink($fname);
+                    $itemVal->valid()['certificate']->move($fname . '.pdf');
+                }
+                $training->student_id = $student->id;
+                $training->save();
+                $trainIds[] = array();
+            }
+            StudentTraining::where('student_id', $student->id)->whereNotIn('id', $langIds)->delete();
+        }
+
+        if (isset($v->valid()['languages'])) {
+            $langIds = array();
+            foreach ($v->valid()['languages'] as $key => $lang) {
+                $itemVal = Validator::make($lang, Student::rulesRelated('languages'));
+                $language = new StudentLanguage();
+                $errors = $errors->merge($v);
+                if (isset($lang['id'])) {
+                    $queryLang = StudentLanguage::find($lang['id']);
+                    if ($queryLang) {
+                        $language = $queryLang;
+                    }
+                }
+                if (isset($itemVal->valid()['name'])) {
+                    $language->name = $lang['name'];
+                }
+                if (isset($itemVal->valid()['level'])) {
+                    $language->level = $lang["level"];
+                }
+                if (isset($itemVal->valid()['certificate'])) {
+                    $fname = tempnam(public_path() . Student::$studyCertificatePath, $user->id);
+                    unlink($fname);
+                    $itemVal->valid()['certificate']->move($fname . '.pdf');
+                }
+                $language->student_id = $student->id;
+                $language->save();
+                $langIds[] = array();
+            }
+            StudentLanguage::where('student_id', $student->id)->whereNotIn('id', $langIds)->delete();
         }
 
         // Not yet implemented
         //$this->is_filled = $this->checkFill($v, $errors);
         $errors = $errors->merge($v);
+
 
         $student->save();
         $user->save();
@@ -330,6 +399,7 @@ class ProfileController extends Controller
             'studyFields' => $studyFields,
             'languageLevels' => $languageLevels,
             'languages' => $languages,
+            'personalSkills' => PersonalSkill::getFormattedArray(),
         );
         if ($user->userable) {
             $data['student'] = $user->userable;
