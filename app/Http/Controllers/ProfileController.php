@@ -330,6 +330,7 @@ class ProfileController extends Controller
             'studyFields' => $studyFields,
             'languageLevels' => $languageLevels,
             'languages' => $languages,
+            'personalSkills' => PersonalSkill::getFormattedArray()
         );
         if ($user->userable) {
             $data['student'] = $user->userable;

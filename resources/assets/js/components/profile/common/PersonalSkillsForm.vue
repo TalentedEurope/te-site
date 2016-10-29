@@ -28,7 +28,7 @@
 
 <script>
 export default {
-    props: ['code', 'maxPersonalSkills', 'value', 'values', 'hasError', 'error', 'readonly'],
+    props: ['maxPersonalSkills', 'value', 'values', 'hasError', 'error', 'readonly'],
     data() {
         return {
             'selected_skills': JSON.parse(this.value),

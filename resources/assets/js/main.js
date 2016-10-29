@@ -15,6 +15,7 @@ import DateForm from './components/profile/common/DateForm.vue';
 import Studies from './components/profile/student/Studies.vue';
 import Trainings from './components/profile/student/Trainings.vue';
 import Languages from './components/profile/student/Languages.vue';
+import Experiences from './components/profile/student/Experiences.vue';
 import AlertButton from './components/common/AlertButton.vue';
 
 
@@ -23,6 +24,6 @@ new Vue({
     components: {
         Search, Alerts, Validators, StudentsValidation,
         SelectForm, TextAreaForm, TextBoxForm, PersonalSkillsForm, FileForm, DateForm,
-        Studies, Trainings, Languages,
+        Studies, Trainings, Languages, Experiences,
         AlertButton },
 })

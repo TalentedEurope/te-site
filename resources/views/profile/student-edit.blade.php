@@ -49,239 +49,73 @@
 
               <hr class="separator">
               <h4>About me</h4>
-              <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                <!-- <label for="name">Name</label> -->
-                <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="{{ old('name', $user->name) }}">
-                @if ($errors->has('name'))
-                  <span class="help-block">
-                    <strong>{{ $errors->first('name') }}</strong>
-                  </span>
-                @endif
-              </div>
-
-              <div class="form-group{{ $errors->has('surname') ? ' has-error' : '' }}">
-                <!-- <label for="surname">Surname</label> -->
-                <input type="text" class="form-control" id="surname" name="surname" placeholder="Surname" value="{{ old('surname', $user->surname) }}">
-                @if ($errors->has('surname'))
-                <span class="help-block">
-                <strong>{{ $errors->first('surname') }}</strong>
-                </span>
-                @endif
-              </div>
+              <text-box-form code="name" label="Name" placeholder="Name" value="{{ old('name', $user->name) }}" has-error="{{ $errors->has('name') }}" error="{{ $errors->first('name') }}"></text-box-form>
+              <text-box-form code="surname" label="Surname" placeholder="Surname" value="{{ old('surname', $user->surname) }}" has-error="{{ $errors->has('surname') }}" error="{{ $errors->first('surname') }}"></text-box-form>
 
               <div class="row">
-                <div class="col-sm-6 form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                  <!-- <label for="email">Email</label> -->
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Email" readonly value="{{ old('email', $user->email) }}">
-                  @if ($errors->has('email'))
-                  <span class="help-block">
-                  <strong>{{ $errors->first('email') }}</strong>
-                  </span>
-                  @endif
-                </div>
-
-                <div class="col-sm-6 form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-                  <!-- <label for="phone">Phone</label> -->
-                  <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" value="{{ old('phone', $user->phone) }}">
-                  @if ($errors->has('phone'))
-                  <span class="help-block">
-                  <strong>{{ $errors->first('phone') }}</strong>
-                  </span>
-                  @endif
-                </div>
+                <text-box-form class="col-sm-6" type="email" readonly="true" code="email" label="Email" placeholder="Email" value="{{ old('email', $user->email) }}" has-error="{{ $errors->has('email') }}" error="{{ $errors->first('email') }}"></text-box-form>
+                <text-box-form class="col-sm-6" code="phone" label="Phone" placeholder="Phone" value="{{ old('phone', $user->phone) }}" has-error="{{ $errors->has('phone') }}" error="{{ $errors->first('phone') }}"></text-box-form>
               </div>
 
-              <div class="form-group{{ $errors->has('nationality') ? ' has-error' : '' }}">
-                <!-- <label for="nationality">nationality</label> -->
-                <div class="select-holder">
-                  <select class="form-control" id="nationality" name="nationality">
-                    <option value="" selected>Nationality</option>
-                    @foreach ($countries as $code => $nationality)
-                      <option value="{{ $code }}" @if($student->nationality == $code) selected @endif >{{ $nationality }}</option>
-                    @endforeach
-                  </select>
-                </div>
-              </div>
+              {{-- COUNTRIES OR NATIONALITIES? --}}
+              <select-form code="nationality" label="Nationality" placeholder=" - Nationality - " values='{!! json_encode($countries, JSON_HEX_APOS) !!}' value="{{ old('nationality', $student->nationality) }}" has-error="{{ $errors->has('nationality') }}" error="{{ $errors->first('nationality') }}"></select-form>
 
-              <div class="form-group{{ $errors->has('birthdate') ? ' has-error' : '' }}">
-                <label for="birthdate">Birthdate</label>
-                <input type="date" class="form-control" id="birthdate" name="birthdate" placeholder="Birthdate" value="{{ old('birthdate', $student->birthdate) }}">
-                @if ($errors->has('birthdate'))
-                <span class="help-block">
-                <strong>{{ $errors->first('birthdate') }}</strong>
-                </span>
-                @endif
-              </div>
+              <date-form code="birthdate" label="Birthdate" placeholder="Birthdate" value="{{ old('birthdate', $student->birthdate) }}" has-error="{{ $errors->has('birthdate') }}" error="{{ $errors->first('birthdate') }}"></date-form>
 
-              <div class="form-group">
-                <label for="image">My Photo</label>
-                <input type="file" id="image" name="image">
-              </div>
+              <file-form code="image" label="My Photo"></file-form>
 
               <hr class="separator">
+
               <h4>Social networks</h4>
-              <div class="form-group{{ $errors->has('facebook') ? ' has-error' : '' }}">
-                <!-- <label for="facebook">Facebook page url</label> -->
-                <input type="text" class="form-control" id="facebook" name="facebook" placeholder="Facebook page url" value="{{ old('facebook', $user->facebook) }}"> @if ($errors->has('facebook'))
-                <span class="help-block">
-                  <strong>{{ $errors->first('facebook') }}</strong>
-                </span> @endif
-              </div>
-              <div class="form-group{{ $errors->has('twitter') ? ' has-error' : '' }}">
-                <!-- <label for="twitter">Twitter page url</label> -->
-                <input type="text" class="form-control" id="twitter" name="twitter" placeholder="Twitter page url" value="{{ old('twitter', $user->twitter) }}"> @if ($errors->has('twitter'))
-                <span class="help-block">
-                  <strong>{{ $errors->first('twitter') }}</strong>
-                </span> @endif
-              </div>
-              <div class="form-group{{ $errors->has('linkedin') ? ' has-error' : '' }}">
-                <!-- <label for="linkedin">linkedin page url</label> -->
-                <input type="text" class="form-control" id="linkedin" name="linkedin" placeholder="Linkedin page url" value="{{ old('linkedin', $user->linkedin) }}"> @if ($errors->has('linkedin'))
-                <span class="help-block">
-                  <strong>{{ $errors->first('linkedin') }}</strong>
-                </span> @endif
-              </div>
+              <text-box-form code="facebook" label="Facebook page url" placeholder="Facebook page url" value="{{ old('facebook', $user->facebook) }}" has-error="{{ $errors->has('facebook') }}" error="{{ $errors->first('facebook') }}"></text-box-form>
+              <text-box-form code="twitter" label="Twitter page url" placeholder="Twitter page url" value="{{ old('twitter', $user->twitter) }}" has-error="{{ $errors->has('twitter') }}" error="{{ $errors->first('twitter') }}"></text-box-form>
+              <text-box-form code="linkedin" label="Linkedin page url" placeholder="Linkedin page url" value="{{ old('linkedin', $user->linkedin) }}" has-error="{{ $errors->has('linkedin') }}" error="{{ $errors->first('linkedin') }}"></text-box-form>
+
               <h4>Address</h4>
-              <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
-                <!-- <label for="address">Address</label> -->
-                <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="{{ old('address', $user->address) }}">
-                @if ($errors->has('address'))
-                <span class="help-block">
-                <strong>{{ $errors->first('address') }}</strong>
-                </span>
-                @endif
-              </div>
+              <text-box-form code="address" label="Address" placeholder="Address" value="{{ old('address', $user->address) }}" has-error="{{ $errors->has('address') }}" error="{{ $errors->first('address') }}"></text-box-form>
+
               <div class="row">
-              <div class="col-sm-4 form-group{{ $errors->has('postal_code') ? ' has-error' : '' }}">
-                <!-- <label for="postal_code">Postal Code</label> -->
-                <input type="text" class="form-control" id="postal_code" name="postal_code" placeholder="Postal Code" value="{{ old('postal_code', $user->postal_code) }}">
-                @if ($errors->has('postal_code'))
-                <span class="help-block">
-                <strong>{{ $errors->first('postal_code') }}</strong>
-                </span>
-                @endif
-              </div>
-              <div class="col-sm-8 form-group{{ $errors->has('city') ? ' has-error' : '' }}">
-                <!-- <label for="city">City</label> -->
-                <input type="text" class="form-control" id="city" name="city" placeholder="City" value="{{ old('city', $user->city) }}">
-                @if ($errors->has('city'))
-                <span class="help-block">
-                <strong>{{ $errors->first('city') }}</strong>
-                </span>
-                @endif
-              </div>
-              </div>
-              <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
-                <!-- <label for="country">country</label> -->
-                <div class="select-holder">
-                  <select class="form-control" id="country" name="country">
-                    <option value="" selected>Country</option>
-                    @foreach ($countries as $code => $country)
-                      <option value="{{ $code }}" @if($user->country == $code) selected @endif >{{ $country }}</option>
-                    @endforeach
-                  </select>
-                </div>
-                @if ($errors->has('country'))
-                <span class="help-block">
-                <strong>{{ $errors->first('country') }}</strong>
-                </span>
-                @endif
+                <text-box-form class="col-sm-4" code="postal_code" label="Postal Code" placeholder="Postal Code" value="{{ old('postal_code', $user->postal_code) }}" has-error="{{ $errors->has('postal_code') }}" error="{{ $errors->first('postal_code') }}"></text-box-form>
+                <text-box-form class="col-sm-8" code="city" label="City" placeholder="City" value="{{ old('city', $user->city) }}" has-error="{{ $errors->has('city') }}" error="{{ $errors->first('city') }}"></text-box-form>
               </div>
 
+              <select-form code="country" label="Country" placeholder=" - Country - " values='{!! json_encode($countries, JSON_HEX_APOS) !!}' value="{{ old('country', $user->country) }}" has-error="{{ $errors->has('country') }}" error="{{ $errors->first('country') }}"></select-form>
+
               <hr class="separator">
+
               <button type="submit" class="btn btn-primary">Update settings</button>
             </form>
           </div>
 
           <div class="tab-pane fade" id="career">
             <form class="form-vertical" enctype="multipart/form-data" role="form" method="POST" action="{{ route('update_profile'). '#contact' }}">
-            {{ csrf_field() }}
-            <h4>Academic information</h4>
-            <hr>
-            <div class="form-group">
-              <label for="europass">Europass curriculum</label>
-              <input type="file" id="europass" name="europass">
-              @if ($student->curriculum)
-                <p class="download-button h4">
-                  <a class="btn btn-primary" alt="Download your Europass curriculum" href="{{ URL::to('/profile/curriculum/' . $user->id) }}"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download curriculum</a>
-                </p>
-              @endif
-            </div>
-            <hr class="separator">
-
-            <studies studies='{!! json_encode($student->studies, JSON_HEX_APOS) !!}'
-                    study-levels='{!! json_encode($studyLevels, JSON_HEX_APOS) !!}'
-                    study-fields='{!! json_encode($studyFields, JSON_HEX_APOS) !!}'
-                    errors='{!! json_encode($errors, JSON_HEX_APOS) !!}'></studies>
-
-            <trainings trainings='{!! json_encode($student->training, JSON_HEX_APOS) !!}'
-                    errors='{!! json_encode($errors, JSON_HEX_APOS) !!}'></trainings>
-
-
-            <languages languages='{!! json_encode($student->languages, JSON_HEX_APOS) !!}'
-                    language-names='{!! json_encode($languages, JSON_HEX_APOS) !!}'
-                    language-levels='{!! json_encode($languageLevels, JSON_HEX_APOS) !!}'
-                    errors='{!! json_encode($errors, JSON_HEX_APOS) !!}'></languages>
-
-
-              <hr class="separator">
-              @foreach ($student->experiences as $experience)
-              <div class="work_experience">
-                <header class="clearfix">
-                  <h4 class="pull-left">Work Experience #{{ $loop->index +1 }}</h4>
-                  <a class="pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
-                </header>
-                <div class="row">
-                  <div class="col-sm-6 form-group{{ $errors->has('work_from') ? ' has-error' : '' }}">
-                    <label for="work_from">From</label>
-                    <input type="date" class="form-control" id="work_from" name="work_from" placeholder="work_from" value="{{ old('work_from', $experience->from) }}">
-                    @if ($errors->has('work_from'))
-                    <span class="help-block">
-                    <strong>{{ $errors->first('work_from') }}</strong>
-                    </span>
-                    @endif
-                  </div>
-
-                  <div class="col-sm-6 form-group{{ $errors->has('work_to') ? ' has-error' : '' }}">
-                    <label for="work_to">To</label>
-                    <input type="date" class="form-control" id="work_to" name="work_to" placeholder="work_to" value="{{ old('work_to', $experience->until) }}">
-                    @if ($errors->has('work_to'))
-                    <span class="help-block">
-                    <strong>{{ $errors->first('work_to') }}</strong>
-                    </span>
-                    @endif
-                  </div>
-                </div>
-
-                <div class="form-group{{ $errors->has('work_company_name') ? ' has-error' : '' }}">
-                <!-- <label for="work_company_name">Company name</label> -->
-                <input type="email" class="form-control" id="work_company_name" name="work_company_name" placeholder="Company name" value="{{ old('work_company_name', $experience->company) }}">
-                  @if ($errors->has('work_company_name'))
-                  <span class="help-block">
-                  <strong>{{ $errors->first('work_company_name') }}</strong>
-                  </span>
-                  @endif
-                </div>
-
-                <div class="form-group{{ $errors->has('work_position') ? ' has-error' : '' }}">
-                <!-- <label for="work_position">Position</label> -->
-                <input type="email" class="form-control" id="work_position" name="work_position" placeholder="Position" value="{{ old('work_position', $experience->position) }}">
-                  @if ($errors->has('work_position'))
-                  <span class="help-block">
-                  <strong>{{ $errors->first('work_position') }}</strong>
-                  </span>
-                  @endif
-                </div>
-              </div><!-- end of Work_experience -->
-              @if ($loop->last)
+              {{ csrf_field() }}
+              <h4>Academic information</h4>
               <hr>
-              <p class="text-center">
-                <a class="btn btn-default" href="#"><i class="fa fa-plus" aria-hidden="true"></i> add more work experiences</a>
-              </p>
-              @endif
+
+              <file-form code="europass" label="Europass curriculum" download-text="Download curriculum" file-url="{{ URL::to('/profile/curriculum/' . $user->id) }}"></file-form>
+
               <hr class="separator">
 
-              @endforeach
+              <studies studies='{!! json_encode($student->studies, JSON_HEX_APOS) !!}'
+                      study-levels='{!! json_encode($studyLevels, JSON_HEX_APOS) !!}'
+                      study-fields='{!! json_encode($studyFields, JSON_HEX_APOS) !!}'
+                      errors='{!! json_encode($errors, JSON_HEX_APOS) !!}'></studies>
+
+              <trainings trainings='{!! json_encode($student->training, JSON_HEX_APOS) !!}'
+                      errors='{!! json_encode($errors, JSON_HEX_APOS) !!}'></trainings>
+
+
+              <languages languages='{!! json_encode($student->languages, JSON_HEX_APOS) !!}'
+                      language-names='{!! json_encode($languages, JSON_HEX_APOS) !!}'
+                      language-levels='{!! json_encode($languageLevels, JSON_HEX_APOS) !!}'
+                      errors='{!! json_encode($errors, JSON_HEX_APOS) !!}'></languages>
+
+
+              <hr class="separator">
+
+              {{-- <experiences experiences='{!! json_encode($student->experiences, JSON_HEX_APOS) !!}' errors='{!! json_encode($errors, JSON_HEX_APOS) !!}'></experiencies> --}}
+
               <div class="form-group{{ $errors->has('profesional_skills') ? ' has-error' : '' }}">
                 <label for="profesional_skills">Professional skills</label>
                 <ul class="selected-skills list-unstyled">
@@ -299,34 +133,10 @@
                 @endif
               </div>
 
-              <div class="form-group{{ $errors->has('personal_skills') ? ' has-error' : '' }}">
-                <label for="personal_skills">Personal skills (max 6)</label>
+              <personal-skills-form max-personal-skills="6" values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}' value='{!! json_encode($student->personalSkills, JSON_HEX_APOS) !!}' has-error="{{ $errors->has('personal_skills') }}" error="{{ $errors->first('personal_skills') }}"></personal-skills-form>
 
-                <ul class="selected-skills list-unstyled">
-                  @foreach ($student->personalSkills as $skill)
-                    <li class="btn btn-default"><input type="hidden" name="profesional_skills" value="{{ $skill->id }}" > {{ $skill[App::getLocale()] }}
-                    <a title="remove" href="javascript:void(0)"><i class="fa fa-close" aria-hidden="true"></i></a>
-                    </li>
-                  @endforeach
-                </ul>
-
-                <input type="text" class="form-control" name="personal_skills" placeholder="Personal skills" value="">
-                @if ($errors->has('personal_skills'))
-                  <span class="help-block">
-                  <strong>{{ $errors->first('personal_skills') }}</strong>
-                  </span>
-                @endif
-              </div>
-
-              <div class="form-group{{ $errors->has('talent') ? ' has-error' : '' }}">
-                <label for="talent">My talent (max 300 characters)</label>
-                <textarea class="form-control" id="talent" name="talent" placeholder="Describe briefly your talent.">{{ old('talent', $student->talent) }}</textarea>
-                @if ($errors->has('talent'))
-                <span class="help-block">
-                <strong>{{ $errors->first('talent') }}</strong>
-                </span>
-                @endif
-              </div>
+              <text-area-form code="talent" label="My talent (max 300 characters)" placeholder="Describe briefly your talent."
+                    value="{{ old('talent', $student->talent) }}" has-error="{{ $errors->has('talent') }}" error="{{ $errors->first('talent') }}"></text-area-form>
 
               <hr>
               <button type="submit" class="btn btn-primary">Update settings</button>
@@ -341,24 +151,10 @@
 
             <form class="form-vertical" role="form" style="display:none" method="POST" action="{{ route('update_profile'). '#refer' }}">
               {{ csrf_field() }}
-              <div class="form-group{{ $errors->has('validator_name') ? ' has-error' : '' }}">
-                <!-- <label for="validator_name">New validator_name</label> -->
-                <input type="text" class="form-control" id="validator_name" name="validator_name" placeholder="Referee name">
-                @if ($errors->has('validator_name'))
-                <span class="help-block">
-                <strong>{{ $errors->first('validator_name') }}</strong>
-                </span>
-                @endif
-              </div>
-              <div class="form-group{{ $errors->has('validator_email') ? ' has-error' : '' }}">
-                <!-- <label for="validator_email">New validator_email</label> -->
-                <input type="email" class="form-control" id="validator_email" name="validator_email" placeholder="Referee email">
-                @if ($errors->has('validator_email'))
-                <span class="help-block">
-                <strong>{{ $errors->first('validator_email') }}</strong>
-                </span>
-                @endif
-              </div>
+
+              <text-box-form code="validator_name" label="New validator name" placeholder="Referee name" value="" has-error="{{ $errors->has('validator_name') }}" error="{{ $errors->first('validator_name') }}"></text-box-form>
+              <text-box-form type="email" code="validator_email" label="New validator email" placeholder="Referee email" value="" has-error="{{ $errors->has('validator_email') }}" error="{{ $errors->first('validator_email') }}"></text-box-form>
+
               <hr>
               <button type="submit" class="btn btn-primary">Get your profile refereed</button>
             </form>
@@ -368,24 +164,9 @@
             <h4>Change your password</h4>
             <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#password' }}">
               {{ csrf_field() }}
-              <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                <!-- <label for="password">New Password</label> -->
-                <input type="password" class="form-control" id="password" name="password" placeholder="New password">
-                @if ($errors->has('password'))
-                <span class="help-block">
-                <strong>{{ $errors->first('password') }}</strong>
-                </span>
-                @endif
-              </div>
-              <div class="form-group{{ $errors->has('password_confirm') ? ' has-error' : '' }}">
-                <!-- <label for="password_confirm">Repeat new Password</label> -->
-                <input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Repeat new password">
-                @if ($errors->has('password_confirm'))
-                <span class="help-block">
-                <strong>{{ $errors->first('password_confirm') }}</strong>
-                </span>
-                @endif
-              </div>
+              <text-box-form type="password" code="password" label="New Password" placeholder="New Password" value="" has-error="{{ $errors->has('password') }}" error="{{ $errors->first('password') }}"></text-box-form>
+              <text-box-form type="password" code="password_confirm" label="Repeat new Password" placeholder="Repeat new Password" value="" has-error="{{ $errors->has('password_confirm') }}" error="{{ $errors->first('password_confirm') }}"></text-box-form>
+
               <hr>
               <button type="submit" class="btn btn-primary">Save new password</button>
             </form>
