@@ -22,6 +22,7 @@
     "lodash": "^4.16.4",
     "node-sass": "^3.10.0",
     "sass-loader": "^4.0.2",
+    "smoothscroll": "^0.2.2",
     "style-loader": "^0.13.1",
     "te-translation-builder": "*",
     "vue": "^2.0.3",
