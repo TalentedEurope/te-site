@@ -106,7 +106,6 @@ class ProfileController extends Controller
 
         // Process common information for all profiles.
         $errors = $errors->merge($this->processCommon($request, $user));
-        $user->is_filled = true;
 
         // Process specific profiles
         if (Auth::user()->isA('company')) {
@@ -139,7 +138,6 @@ class ProfileController extends Controller
                 $user->$key = $value;
             }
         }
-        $user->is_filled = $this->checkFill($v, $errors);
 
         // Password reset.
         // Unlike the other fields we only check them if they're passed
@@ -193,7 +191,6 @@ class ProfileController extends Controller
             }
         }
 
-        $this->is_filled = $this->checkFill($v, $errors);
         $errors = $errors->merge($v);
 
         // Related columns
@@ -209,6 +206,13 @@ class ProfileController extends Controller
                     }
                 }
             }
+        }
+
+        $user->is_filled = false;
+        $uFilledVal = Validator::make($user->toArray(), User::Rules(false, true));
+        $filledVal = Validator::make($company->toArray(), Company::Rules());
+        if ($uFilledVal->passes() && $filledVal->passes()) {
+            $user->is_filled = true;
         }
 
         $company->save();
@@ -237,11 +241,11 @@ class ProfileController extends Controller
             }
         }
 
-        if (isset($v->valid()['europass'])) {
+        if (isset($v->valid()['curriculum'])) {
             $fname = tempnam(public_path() . Student::$curriculumPath, $user->id);
             unlink($fname);
             $file = $fname . '.pdf';
-            $v->valid()['europass']->move($file);
+            $v->valid()['curriculum']->move($file);
             $student->curriculum = basename($file);
         }
 
@@ -443,29 +447,17 @@ class ProfileController extends Controller
         }
 
 
-        $filledVal = Validator::make($request->all(), Student::rules(true));
-        $this->is_filled = $this->checkFill($filledVal, $errors);
-        $errors = $errors->merge($v);
+        $user->is_filled = false;
+        $uFilledVal = Validator::make($user->toArray(), User::Rules(false, true));
+        $filledVal = Validator::make($student->toArray(), Student::Rules(true));
+        if ($uFilledVal->passes() && $filledVal->passes()) {
+            $user->is_filled = true;
+        }
 
         $student->save();
         $user->save();
         $errors = $errors->merge($v);
         return $errors;
-    }
-
-    protected function checkFill($v, $errors)
-    {
-        $filled = true;
-
-        foreach ($v->getRules() as $key => $rule) {
-            foreach ($rule as $check) {
-                if (is_string($check) && $check == 'required' && in_array($key, array_keys($errors->messages()))) {
-                    $filled = false;
-                    break;
-                }
-            }
-        }
-        return $filled;
     }
 
     public function getStudentPublicData($user, $public = false)
@@ -649,53 +641,6 @@ class ProfileController extends Controller
             $erray[$mainKey.'.'.$subKey .'.'. $key] = $errors->get($key);
         }
         return $erray;
-    }
-
-    public function getJSONStudentProfile(Request $request)
-    {
-        return array(
-            'id' => 1,
-            'full_name' => 'John Doe',
-            'studied' => 'Doctorate in Lorem ipsum dolor sit amet Consectetuor',
-            'lives_in' => 'Puerto de la Cruz, Spain',
-            'nationality' => 'United Kingdom',
-            'studied_in' => 'IES Puerto de la Cruz Telesforo Bravo',
-            'born_on' => '17 september 1993',
-            'my_talent' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut arcu sed odio vestibulum rhoncus et vel est. Ut id odio eu lorem iaculis posuere quis a elit. Nunc dictum placerat eros, eget pulvinar felis tristique eget. Curabitur fermentum purus vel lorem blandit fringilla. Mauris',
-            'skills' => array(
-                array('name' => 'Lorem ipsum', 'important' => true),
-                array('name' => 'Dolor sit amet', 'important' => false),
-                array('name' => 'Consectetur adipiscing elit', 'important' => false),
-            ),
-            'languages' => array('Spanish', 'English', 'French'),
-            'photo' => 'http://placekitten.com/g/150/150',
-            'validated' => true,
-            'email' => 'john@doe.com',
-            'phone' => '317-456-2564',
-            'address' => '32 Reading rd, Birmingham B26 3QJ, United Kingdom',
-            'twitter' => 'http://twitter.com',
-        );
-    }
-
-    public function getJSONCompanyProfile(Request $request)
-    {
-        return array(
-            'id' => 1,
-            'name' => 'John Doe',
-            'sector' => 'Company sector',
-            'we_are_in' => 'Santa Cruz de Tenerife, Spain.',
-            'talent_is' => 'Jelly apple pie icing. Jelly cupcake tiramisu jelly beans marzipan. Cheesecake jelly-o jelly tootsie roll biscuit chocolate macaroon marshmallow. Jelly-o marshmallow tart donut brownie chocolate topping chocolate cake.',
-            'skills' => array(
-                array('name' => 'Lorem ipsum'),
-                array('name' => 'Dolor sit amet'),
-                array('name' => 'Consectetur adipiscing elit'),
-            ),
-            'photo' => 'http://placebear.com/g/150/150',
-            'email' => 'john@doe.com',
-            'phone' => '317-456-2564',
-            'address' => '32 Reading rd, Birmingham B26 3QJ, United Kingdom',
-            'twitter' => 'http://twitter.com',
-        );
     }
 
     public function getJSONValidatorProfile(Request $request)

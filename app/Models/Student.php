@@ -20,34 +20,34 @@ class Student extends Model
     public static $studyGradeCardPath = '/uploads/gradecard/';
     public static $studyCertificatePath = '/uploads/certificate/';
 
-    public static function rules($withRelated = false, $only_key = false)
+    public static function rules($forModelValidation = false, $only_key = false)
     {
         $filter = array(
-            'address' => 'required',
             'nationality' => 'required|in:'.implode(',', Student::$nationalities),
             'birthdate' => 'required|date',
             'curriculum' => 'required',
             'valid' => 'required',
             'renewed_at' => 'required',
-            'visible' => 'required',
             'talent' => 'required|max:300',
             'studies' => 'array|min:1',
             'languages' => 'array',
-            'europass' => 'required|file',
+            'curriculum' => 'required|file',
             'personalSkills' => 'array|max:6',
             'professionalSkills' => 'array|max:6'
         );
 
         $filterRelated = array(
             'studies.*.institution_name' => 'required|regex:/^[\pL\s\-]+$/u',
-            'studies.*.studies_name' => 'required|regex:/^[\pL\s\-]+$/u',
+            'studies.*.name' => 'required|regex:/^[\pL\s\-]+$/u',
             'studies.*.level' => 'required|in:'.implode(',', StudentStudy::$levels),
-            'studies.*.study_field' => 'required|in:'.implode(',', StudentStudy::$fields),
+            'studies.*.field' => 'required|in:'.implode(',', StudentStudy::$fields),
             'studies.*.certificate' => 'required|mimes:pdf',
         );
 
-        if ($withRelated) {
+        if ($forModelValidation) {
             $filter = array_merge($filter, $filterRelated);
+            $filter["curriculum"] = "required";
+            $filter["studies.*.certificate"] = 'required';
         }
 
         if ($only_key) {

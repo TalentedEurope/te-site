@@ -129,102 +129,102 @@ return [
     
         'forgot_password' => 'Password dimenticata?',
     
-        'administration' => '',
+        'administration' => 'Amministrativa',
     
-        'architecture-amp-construction' => '',
+        'architecture-amp-construction' => 'Architettura e costruzioni',
     
-        'art-amp-culture' => '',
+        'art-amp-culture' => 'Arte e cultura',
     
-        'banking-and-or-finance-amp-insurance' => '',
+        'banking-and-or-finance-amp-insurance' => 'Settore bancario e/o finanza e assicurazioni',
     
-        'business-amp-consulting' => '',
+        'business-amp-consulting' => 'Commercio e consulenza',
     
-        'communication-amp-media-amp-pr' => '',
+        'communication-amp-media-amp-pr' => 'Comunicazione e media e PR',
     
-        'consumer-goods' => '',
+        'consumer-goods' => 'Beni di consumo',
     
-        'customer-service' => '',
+        'customer-service' => 'Servizio clienti',
     
-        'design' => '',
+        'design' => 'Design',
     
-        'education-amp-training' => '',
+        'education-amp-training' => 'Educazione',
     
-        'engineering' => '',
+        'engineering' => 'Ingegneria',
     
-        'hospitality-amp-tourism' => '',
+        'hospitality-amp-tourism' => 'Turismo e settore alberghiero',
     
-        'human-resources' => '',
+        'human-resources' => 'Risorse umane',
     
-        'it-amp-web' => '',
+        'it-amp-web' => 'IT e web',
     
-        'legal' => '',
+        'legal' => 'Diritto',
     
-        'logistics' => '',
+        'logistics' => 'Logistica',
     
-        'manufacturing' => '',
+        'manufacturing' => 'Produzione',
     
-        'marketing-amp-advertising' => '',
+        'marketing-amp-advertising' => 'Marketing e pubblicità',
     
-        'medicine-amp-pharmaceutics' => '',
+        'medicine-amp-pharmaceutics' => 'Medicina e farmacia',
     
-        'politics' => '',
+        'politics' => 'Politica',
     
-        'quality-assurance-amp-safety' => '',
+        'quality-assurance-amp-safety' => 'Assicurazione qualità e sicurezza',
     
-        'real-estate' => '',
+        'real-estate' => 'Beni immobili',
     
-        'research-amp-development' => '',
+        'research-amp-development' => 'Ricerca e sviluppo',
     
-        'retail-amp-wholesale' => '',
+        'retail-amp-wholesale' => 'Commercio al dettaglio e all&apos;ingrosso',
     
-        'sales' => '',
+        'sales' => 'Vendite',
     
-        'social-work' => '',
+        'social-work' => 'Servizio sociale',
     
-        'sport-and-or-health-amp-wellness' => '',
+        'sport-and-or-health-amp-wellness' => 'Sport e/o salute e wellness',
     
-        'technology-amp-telecommunications' => '',
+        'technology-amp-telecommunications' => 'Tecnologie e telecomunicazioni',
     
-        'business-studies-and-or-management-science' => '',
+        'business-studies-and-or-management-science' => 'Economia aziendale e/o management',
     
-        'engineering-and-or-technology' => '',
+        'engineering-and-or-technology' => 'Ingegneria e/o tecnologie',
     
-        'social-sciences' => '',
+        'social-sciences' => 'Scienze sociali',
     
-        'languages-and-philological-sciences' => '',
+        'languages-and-philological-sciences' => 'Lingue e scienze filologiche',
     
-        'communication-and-information-sciences' => '',
+        'communication-and-information-sciences' => 'Comunicazione e scienze informatiche',
     
-        'humanities' => '',
+        'humanities' => 'Scienze umanistiche',
     
-        'education-and-or-teacher-training' => '',
+        'education-and-or-teacher-training' => 'Educazione e/o corso per insegnanti',
     
-        'law' => '',
+        'law' => 'Diritto',
     
-        'art-and-design' => '',
+        'art-and-design' => 'Arte e design',
     
-        'architecture-and-or-urban-and-regional-planning' => '',
+        'architecture-and-or-urban-and-regional-planning' => 'Architettura e/o pianificazione urbana e regionale',
     
-        'natural-sciences' => '',
+        'natural-sciences' => 'Scienze naturali',
     
-        'mathematics-and-or-informatics' => '',
+        'mathematics-and-or-informatics' => 'Matematica e/o informatica',
     
-        'medical-sciences' => '',
+        'medical-sciences' => 'Scienze mediche',
     
-        'geography-and-or-geology' => '',
+        'geography-and-or-geology' => 'Geografia e/o geologia',
     
-        'agriculture-sciences' => '',
+        'agriculture-sciences' => 'Scienze agricole',
     
-        'Lang_level_A1' => '',
+        'Lang_level_A1' => 'A1: Principiante totale',
     
-        'Lang_level_A2' => '',
+        'Lang_level_A2' => 'A2: Principiante',
     
-        'Lang_level_B1' => '',
+        'Lang_level_B1' => 'B1: Inferiore-intermedio',
     
-        'Lang_level_B2' => '',
+        'Lang_level_B2' => 'B2: Intermedio-avanzato',
     
-        'Lang_level_C1' => '',
+        'Lang_level_C1' => 'C1: Avanzato',
     
-        'Lang_level_C2' => '',
+        'Lang_level_C2' => 'C2: Esperto',
     
 ];
