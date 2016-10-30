@@ -2,6 +2,7 @@
     <div class="col-sm-4 col-md-3 search-options">
         <div class="options-title">
             <span class="h3"><i class="fa fa-filter" aria-hidden="true"></i>Filters</span>
+            <a class="button-toggle-filters" @click.prevent="toggleFilters()">(Open/Close)</a>
         </div>
         <div class="current-search" v-if="current_search.length > 0">
             <h3>Current Search</h3>
@@ -11,7 +12,9 @@
                 </li>
             </ul>
         </div>
-        <multi-options-filter v-for="filter in filters" @onselectfilter="selectFilter" @onremovefilter="removeFilter" :items="filter.items" :id="filter.id" :title="filter.title"></multi-options-filter>
+        <div class="filters-list" v-bind:class="{'collapsed': !show_filters}">
+            <multi-options-filter v-for="filter in filters" @onselectfilter="selectFilter" @onremovefilter="removeFilter" :items="filter.items" :id="filter.id" :title="filter.title"></multi-options-filter>
+        </div>
     </div>
 </template>
 
@@ -29,13 +32,17 @@ export default {
         return {
             current_search: [],
             filters: [],
-            applied_filters: {}
+            applied_filters: {},
+            show_filters: false,
         }
     },
     mounted () {
         this.fetchFilters();
     },
     methods: {
+        toggleFilters: function () {
+          this.show_filters = !this.show_filters;
+        },
         fetchFilters: function () {
             if (this.collective == 'companies') {
                 var resource = companiesFiltersResource;
@@ -91,6 +98,10 @@ export default {
 <style lang="sass" scoped>
 @import "resources/assets/sass/variables";
 
+.search-options {
+  padding-bottom: 15px;
+}
+
 .options-title {
     box-shadow: none;
     text-transform: uppercase;
@@ -101,6 +112,18 @@ export default {
         padding-right: 10px;
     }
 }
+
+.button-toggle-filters {
+    text-decoration: none;
+    display: inline-block;
+    padding: 3px 5px;
+    margin-top: -1px;
+    margin-left: 3px;
+    text-transform: initial;
+    cursor: pointer;
+    vertical-align: top;
+}
+
 .current-search {
     ul {
         padding: 0;
@@ -119,30 +142,17 @@ export default {
         }
     }
 }
-.search-options .filter-list {
-    ul {
-        list-style: none;
-        padding-left: 10px;
-        border-left: 2px solid $blue;
-        li {
-            font-size: 16px;
-            padding: 5px 0;
-            label {
-                font-weight: normal;
-            }
-        }
+
+.filters-list.collapsed {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .button-toggle-filters {
+        display: none;
     }
-    .more button {
-        background: none;
-        border: none;
-        font-size: 14px;
-        color: $blue;
-        &:hover {
-            text-decoration: underline;
-        }
-        .fa {
-            padding-right: 5px;
-        }
+    .filters-list.collapsed {
+        display: block;
     }
 }
 </style>
