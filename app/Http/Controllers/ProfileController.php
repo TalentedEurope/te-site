@@ -237,6 +237,7 @@ class ProfileController extends Controller
         }
 
         $v = Validator::make($request->all(), Student::rules());
+        $errors = $errors->merge($v);
 
         foreach ($v->valid() as $key => $value) {
             if (!is_array($value) && array_has($student['attributes'], $key) && !$request->has('validate')) {
@@ -455,7 +456,6 @@ class ProfileController extends Controller
         if ($uFilledVal->passes() && $filledVal->passes()) {
             $user->is_filled = true;
         }
-
         $student->save();
         $user->save();
 
