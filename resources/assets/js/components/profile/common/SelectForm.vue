@@ -14,23 +14,28 @@
 </template>
 
 <script>
-import { setDebounced, setInitError, generateFieldName, validateField, modelWatch} from './form-helpers'
+import { setDebounced, setCodeForValidation, setInitError, generateFieldName, validateField, modelWatch} from './form-helpers'
 
 export default {
     props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'values', 'value', 'errors'],
     data() {
         return {
             'model': this.value,
-            'has_error': this.hasError,
-            'error_message': this.error,
+            'has_error': false,
+            'error_message': '',
+            'code_for_validation': '',
             'parsed_values': []
         }
     },
     mounted() {
+        if (_.isNull(this.model) || _.isUndefined(this.model)) {
+            this.model = '';
+        }
         this.parsed_values = JSON.parse(this.values);
     },
     created() {
         setDebounced.call(this);
+        setCodeForValidation.call(this);
         setInitError.call(this);
     },
     methods: {
