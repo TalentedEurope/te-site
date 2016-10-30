@@ -24,7 +24,7 @@ class Student extends Model
     {
         $filter = array(
             'address' => 'required',
-            'nationality' => 'required',
+            'nationality' => 'required|in:'.implode(',', Student::$nationalities),
             'birthdate' => 'required|date',
             'curriculum' => 'required',
             'valid' => 'required',
@@ -52,7 +52,7 @@ class Student extends Model
                 'institution_name' => 'required|regex:/^[\pL\s\-]+$/u',
                 'studies_name' => 'required|regex:/^[\pL\s\-]+$/u',
                 'level' => 'required|in:'.implode(',', StudentStudy::$levels),
-                'study_field' => 'required|in:'.implode(',', StudentStudy::$levels),
+                'study_field' => 'required|in:'.implode(',', StudentStudy::$fields),
                 'certificate' => 'required|mimes:pdf',
                 'gradecard' => 'mimes:pdf'
             ),
@@ -69,6 +69,16 @@ class Student extends Model
                 'certificate' => 'mimes:pdf',
             ),
 
+            'professionalSkills' => array (
+                'name' =>  'required|regex:/^[\pL\s\-]+$/u',
+            ),
+
+            'experiences' => array (
+                'company' =>  'required|regex:/^[\pL\s\-]+$/u',
+                'from' =>  'required|date',
+                'until' =>  'date',
+                'position' =>  'required|regex:/^[\pL\s\-]+$/u',
+            ),
         );
         $filter = $relatedRules[$related];
         if ($only_key) {
