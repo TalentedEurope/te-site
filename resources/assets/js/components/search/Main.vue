@@ -4,7 +4,7 @@
         <div class="row results-filters-wrapper">
             <div class="results-filters-transition" v-bind:class="{ 'init-loading': init_loading }">
                 <search-filters :collective="collective"></search-filters>
-                <results :collective="collective" :results="results" :number-of-results="numberOfResults" :loading="loading" :is-filtering="is_filtering"></results>
+                <results id="results" :collective="collective" :results="results" :pagination-data="pagination_data" :loading="loading" :is-filtering="is_filtering"></results>
             </div>
 
             <div class="well init-loading-box" v-if="init_loading">
@@ -20,6 +20,7 @@ import SearchFilters from './SearchFilters.vue';
 import Results from './Results.vue';
 import EventBus from 'event-bus.js';
 import { studentsResultsResource, companiesResultsResource } from 'resources/search';
+import smoothScroll from 'smoothscroll';
 
 export default {
     props: ['collective', 'showTypeSelector'],
@@ -32,32 +33,41 @@ export default {
         return {
             init_loading: true,
             loading: false,
+            results_element: null,
             results: [],
+            pagination_data: {},
             is_filtering: true,
-            filters: null,
-            search_text: null,
-            numberOfResults: null
+            current_page: 1,
+            filters: {},
+            search_text: null
         }
     },
     created () {
-        var that = this;
-        EventBus.$on('onChangeFilters', function(filters) {
+        EventBus.$on('onChangePage', (current_page) => {
+            this.current_page = current_page;
+            this.fetchResults(this.current_page, this.filters, this.search_text);
+            if (!this.results_element) {
+                this.results_element = document.querySelector('#results')
+            }
+            smoothScroll(this.results_element);
+        });
+        EventBus.$on('onChangeFilters', (filters) => {
             this.filters = filters;
             if (_.isEmpty(_.omit(filters, ['__ob__']))) {
                 this.filters = {};
             }
-            that.fetchResults(this.filters, this.search_text);
+            this.fetchResults(1, this.filters, this.search_text);
         });
-        EventBus.$on('onSearch', function(search_text) {
+        EventBus.$on('onSearch', (search_text) => {
             this.search_text = search_text;
-            that.fetchResults(this.filters, this.search_text);
+            this.fetchResults(1, this.filters, this.search_text);
         });
     },
     mounted () {
         this.fetchResults();
     },
     methods: {
-        fetchResults(filters, search_text) {
+        fetchResults(page, filters, search_text) {
             var resource = studentsResultsResource;
             if (this.collective == 'companies') {
                 resource = companiesResultsResource;
@@ -65,10 +75,10 @@ export default {
 
             this.loading = true;
 
-            resource.get(filters, search_text).then((response) => {
+            resource.get(page, filters, search_text).then((response) => {
                 this.is_filtering = !_.isEmpty(filters) || !_.isEmpty(search_text);
                 this.results = response.body.data;
-                this.numberOfResults = response.body.total;
+                this.pagination_data = response.body;
             }, (errorResponse) => {
                 console.log(errorResponse);
             }).finally(() => {
