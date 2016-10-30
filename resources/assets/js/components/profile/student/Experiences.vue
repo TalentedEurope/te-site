@@ -6,15 +6,15 @@
                 <remove-item-button :items="parsed_experiences" :item="experience"></remove-item-button>
             </header>
 
-            <input :name="generateCode('id', experience)" type="hidden" :value="experience.id"/>
+            <text-box-form type="hidden" code="id" group-code="experiences" :group-id="experience.id" :value="experience.id"></text-box-form>
 
             <div class="row">
-                <date-form class="col-sm-6" :code="generateCode('from', experience)" label="From" placeholder="Work from" :value="experience.from" :has-error="parsed_errors['from']" :error="parsed_errors['from']"></date-form>
-                <date-form class="col-sm-6" :code="generateCode('until', experience)" label="To" placeholder="Work to" :value="experience.until" :has-error="parsed_errors['until']" :error="parsed_errors['until']"></date-form>
+                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="experience.id" label="From" placeholder="Work from" :value="experience.from" :errors="errors"></date-form>
+                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="experience.id" label="To" placeholder="Work to" :value="experience.until" :errors="errors"></date-form>
             </div>
 
-            <text-box-form :code="generateCode('company', experience)" label="Company name" placeholder="Company name" :value="experience.company" :has-error="parsed_errors['company']" :error="parsed_errors['company']"></text-box-form>
-            <text-box-form :code="generateCode('position', experience)" label="Position" placeholder="Position" :value="experience.position" :has-error="parsed_errors['position']" :error="parsed_errors['position']"></text-box-form>
+            <text-box-form code="company" group-code="experiences" :group-id="experience.id" label="Company name" placeholder="Company name" :value="experience.company" :errors="errors"></text-box-form>
+            <text-box-form code="position" group-code="experiences" :group-id="experience.id" label="Position" placeholder="Position" :value="experience.position" :errors="errors"></text-box-form>
         </div>
 
         <div class="experience" v-for="(new_experience, index) in new_experiences">
@@ -23,12 +23,12 @@
                 <remove-item-button :items="new_experiences" :item="new_experience"></remove-item-button>
             </header>
             <div class="row">
-                <date-form class="col-sm-6" :code="generateCode('from', new_experience)" label="From" placeholder="Work from" :value="new_experience.from" :has-error="parsed_errors['from']" :error="parsed_errors['from']"></date-form>
-                <date-form class="col-sm-6" :code="generateCode('until', new_experience)" label="To" placeholder="Work to" :value="new_experience.until" :has-error="parsed_errors['until']" :error="parsed_errors['until']"></date-form>
+                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="new_experience.id" label="From" placeholder="Work from" :value="new_experience.from" :errors="errors"></date-form>
+                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="new_experience.id" label="To" placeholder="Work to" :value="new_experience.until" :errors="errors"></date-form>
             </div>
 
-            <text-box-form :code="generateCode('company', new_experience)" label="Company name" placeholder="Company name" :value="new_experience.company" :has-error="parsed_errors['company']" :error="parsed_errors['company']"></text-box-form>
-            <text-box-form :code="generateCode('position', new_experience)" label="Position" placeholder="Position" :value="new_experience.position" :has-error="parsed_errors['position']" :error="parsed_errors['position']"></text-box-form>
+            <text-box-form code="company" group-code="experiences" :group-id="new_experience.id" label="Company name" placeholder="Company name" :value="new_experience.company" :errors="errors"></text-box-form>
+            <text-box-form code="position" group-code="experiences" :group-id="new_experience.id" label="Position" placeholder="Position" :value="new_experience.position" :errors="errors"></text-box-form>
         </div>
 
         <hr>
@@ -66,9 +66,6 @@ export default {
         }
     },
     methods: {
-        generateCode: function (field_name, experience) {
-            return `experiences[${experience.id}][${field_name}]`;
-        },
         addNewExperience: function () {
             var count = this.new_experiences.length;
             this.new_experiences.push({"id": `new_${count}`});

@@ -6,21 +6,21 @@
                 <remove-item-button :items="parsed_studies" :item="study"></remove-item-button>
             </header>
 
-            <input :name="generateCode('id', study)" type="hidden" :value="study.id"/>
+            <text-box-form type="hidden" code="id" group-code="studies" :group-id="study.id" :value="study.id"></text-box-form>
 
-            <text-box-form :code="generateCode('institution_name', study)" label="Institution name" placeholder="Institution name" :value="study.institution_name" :has-error="parsed_errors['institution_name']" :error="parsed_errors['institution_name']"></text-box-form>
+            <text-box-form code="institution_name" group-code="studies" :group-id="study.id" label="Institution name" placeholder="Institution name" :value="study.institution_name" :errors="errors"></text-box-form>
 
             <div class="row">
-                <text-box-form class="col-sm-8" :code="generateCode('name', study)" label="Course/Studies name" placeholder="Course/Studies name" :value="study.name" :has-error="parsed_errors['name']" :error="parsed_errors['name']"></text-box-form>
-                <select-form class="col-sm-4" :code="generateCode('level', study)" label="Level" placeholder=" - Level - " :values="studyLevels" :value="study.level" :has-error="parsed_errors['level']" :error="parsed_errors['level']"></select-form>
+                <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="study.id" label="Course/Studies name" placeholder="Course/Studies name" :value="study.name" :errors="errors"></text-box-form>
+                <select-form class="col-sm-4" code="level" group-code="studies" :group-id="study.id" label="Level" placeholder=" - Level - " :values="studyLevels" :value="study.level" :errors="errors"></select-form>
             </div>
 
-            <select-form :code="generateCode('study_field', study)" label="Field of studies" placeholder=" - Field of studies - " :values="studyFields" :value="study.study_field" :has-error="parsed_errors['study_field']" :error="parsed_errors['study_field']"></select-form>
+            <select-form code="study_field" group-code="studies" :group-id="study.id" label="Field of studies" placeholder=" - Field of studies - " :values="studyFields" :value="study.study_field" :errors="errors"></select-form>
 
             <hr>
-            <file-form :code="generateCode('certificate', study)" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/study/32"></file-form>
+            <file-form code="certificate" group-code="studies" :group-id="study.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/study/32"></file-form>
             <hr>
-            <file-form :code="generateCode('gradecard', study)" label="Gradecard" download-text="Download Gradecard" file-url="/profile/gradecard/2/study/32"></file-form>
+            <file-form code="gradecard" group-code="studies" :group-id="study.id" label="Gradecard" download-text="Download Gradecard" file-url="/profile/gradecard/2/study/32"></file-form>
             <hr>
         </div>
 
@@ -30,19 +30,19 @@
                 <remove-item-button :items="new_studies" :item="new_study"></remove-item-button>
             </header>
 
-            <text-box-form :code="generateCode('institution_name', new_study)" label="Institution name" placeholder="Institution name" :has-error="parsed_errors['institution_name']" :error="parsed_errors['institution_name']"></text-box-form>
+            <text-box-form code="institution_name" group-code="new_studies" :group-id="new_study.id" label="Institution name" placeholder="Institution name" :errors="errors"></text-box-form>
 
             <div class="row">
-                <text-box-form class="col-sm-8" :code="generateCode('name', new_study)" label="Course/Studies name" placeholder="Course/Studies name" :has-error="parsed_errors['name']" :error="parsed_errors['name']"></text-box-form>
-                <select-form class="col-sm-4" :code="generateCode('level', new_study)" label="Level" placeholder=" - Level - " :values="studyLevels" value="" :has-error="parsed_errors['level']" :error="parsed_errors['level']"></select-form>
+                <text-box-form class="col-sm-8" code="name" group-code="new_studies" :group-id="new_study.id" label="Course/Studies name" placeholder="Course/Studies name" :errors="errors"></text-box-form>
+                <select-form class="col-sm-4" code="level" group-code="new_studies" :group-id="new_study.id" label="Level" placeholder=" - Level - " :values="studyLevels" value="" :errors="errors"></select-form>
             </div>
 
-            <select-form :code="generateCode('study_field', new_study)" label="Field of studies" placeholder=" - Field of studies - " :values="studyFields" value="" :has-error="parsed_errors['study_field']" :error="parsed_errors['study_field']"></select-form>
+            <select-form code="study_field" group-code="new_studies" :group-id="new_study.id" label="Field of studies" placeholder=" - Field of studies - " :values="studyFields" value="" :errors="errors"></select-form>
 
             <hr>
-            <file-form :code="generateCode('certificate', new_study)" label="Certificate"></file-form>
+            <file-form code="certificate" group-code="new_studies" :group-id="new_study.id" label="Certificate"></file-form>
             <hr>
-            <file-form :code="generateCode('gradecard', new_study)" label="Gradecard"></file-form>
+            <file-form code="gradecard" group-code="new_studies" :group-id="new_study.id" label="Gradecard"></file-form>
             <hr>
         </div>
 
@@ -79,9 +79,6 @@ export default {
         }
     },
     methods: {
-        generateCode: function (field_name, study) {
-            return `studies[${study.id}][${field_name}]`;
-        },
         addNewStudy: function () {
             var count = this.new_studies.length;
             this.new_studies.push({"id": `new_${count}`});

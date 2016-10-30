@@ -1,14 +1,38 @@
 import { profileResource } from 'resources/profile';
 
-var setDebounced = function() {
+var setDebounced = function () {
     this.debounced = _.debounce(this.validateField, 1500);
+};
+
+var setInitError = function () {
+    if (_.has(this.errors, this.code)) {
+        this.has_error = true;
+        this.error_message = this.errors[this.code][0];
+    }
+};
+
+var generateFieldName = function () {
+    if (this.groupCode) {
+        return `${this.groupCode}[${this.groupId}][${this.code}]`;
+    } else {
+        return this.code;
+    }
 };
 
 var validateField = function() {
     var that = this;
     var data = {validate: true,}
 
-    data[this.code] = this.model || '';
+    var value = this.model || '';
+    var code = this.code;
+    if (this.groupCode) {
+        var field = {}
+        field['id'] = this.groupId;
+        field[code] = value;
+        data[this.groupCode] = [field];
+    } else {
+        data[code] = value;
+    }
 
     profileResource.put(data)
         .then(function(response) {
@@ -31,5 +55,7 @@ var modelWatch = function(value) {
 };
 
 export var setDebounced = setDebounced;
+export var setInitError = setInitError;
+export var generateFieldName = generateFieldName;
 export var validateField = validateField;
 export var modelWatch = modelWatch;

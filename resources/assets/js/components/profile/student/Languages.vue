@@ -6,13 +6,13 @@
                 <remove-item-button :items="parsed_languages" :item="language"></remove-item-button>
             </header>
 
-            <input :name="generateCode('id', language)" type="hidden" :value="language.id"/>
+            <text-box-form type="hidden" code="id" group-code="languages" :group-id="language.id" :value="language.id"></text-box-form>
 
-            <select-form :code="generateCode('name', language)" label="Language name" placeholder=" - Language name - " :values="languageNames" :value="language.name" :has-error="parsed_errors['name']" :error="parsed_errors['name']"></select-form>
-            <select-form :code="generateCode('level', language)" label="Language level" placeholder=" - Language level - " :values="languageLevels" :value="language.level" :has-error="parsed_errors['level']" :error="parsed_errors['level']"></select-form>
+            <select-form code="name" group-code="languages" :group-id="language.id" label="Language name" placeholder=" - Language name - " :values="languageNames" :value="language.name" :errors="errors"></select-form>
+            <select-form code="level" group-code="languages" :group-id="language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" :value="language.level" :errors="errors"></select-form>
 
             <hr>
-            <file-form :code="generateCode('certificate', language)" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/language/32"></file-form>
+            <file-form code="certificate" group-code="languages" :group-id="language.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/language/32"></file-form>
             <hr>
         </div>
 
@@ -22,11 +22,11 @@
                 <remove-item-button :items="new_languages" :item="new_language"></remove-item-button>
             </header>
 
-            <select-form :code="generateCode('name', new_language)" label="Language name" placeholder=" - Language name - " :values="languageNames" value="" :has-error="parsed_errors['name']" :error="parsed_errors['name']"></select-form>
-            <select-form :code="generateCode('level', new_language)" label="Language level" placeholder=" - Language level - " :values="languageLevels" value="" :has-error="parsed_errors['level']" :error="parsed_errors['level']"></select-form>
+            <select-form code="name" group-code="languages" :group-id="new_language.id" label="Language name" placeholder=" - Language name - " :values="languageNames" value="" :errors="errors"></select-form>
+            <select-form code="level" group-code="languages" :group-id="new_language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" value="" :errors="errors"></select-form>
 
             <hr>
-            <file-form :code="generateCode('certificate', new_language)" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/language/32"></file-form>
+            <file-form code="certificate" group-code="languages" :group-id="new_language.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/language/32"></file-form>
             <hr>
 
         </div>
@@ -42,12 +42,13 @@
 
 <script>
 import RemoveItemButton from './common/RemoveItemButton.vue';
+import TextBoxForm from '../common/TextBoxForm.vue';
 import SelectForm from '../common/SelectForm.vue';
 import FileForm from '../common/FileForm.vue';
 
 export default {
     props: ['languages', 'languageNames', 'languageLevels', 'errors'],
-    components: { RemoveItemButton, SelectForm, FileForm },
+    components: { RemoveItemButton, TextBoxForm, SelectForm, FileForm },
     data() {
         return {
             parsed_languages: [],
@@ -63,9 +64,6 @@ export default {
         }
     },
     methods: {
-        generateCode: function (field_name, language) {
-            return `languages[${language.id}][${field_name}]`;
-        },
         addNewLanguage: function () {
             var count = this.new_languages.length;
             this.new_languages.push({"id": `new_${count}`});
