@@ -2,9 +2,11 @@
     <div>
         <div class="training" v-for="(training, index) in parsed_trainings">
             <header class="clearfix">
-                <h4 class="pull-left">Training {{ index + 1 }}</h4>
-                <a class="pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
+                <h4 class="pull-left">Training #{{ index + 1 }}</h4>
+                <remove-item-button :items="parsed_trainings" :item="training"></remove-item-button>
             </header>
+
+            <input :name="generateCode('id', training)" type="hidden" :value="training.id"/>
 
             <text-box-form :code="generateCode('name', training)" label="Course name" placeholder="Course name" :value="training.name" :has-error="parsed_errors['name']" :error="parsed_errors['name']"></text-box-form>
             <date-form :code="generateCode('date', training)" label="Date" placeholder="Date" :value="training.date" :has-error="parsed_errors['date']" :error="parsed_errors['date']"></date-form>
@@ -16,8 +18,8 @@
 
         <div class="training" v-for="(new_training, index) in new_trainings">
             <header class="clearfix">
-                <h4 class="pull-left">Training {{ (parsed_trainings.length + index + 1) }}</h4>
-                <a class="hidden pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
+                <h4 class="pull-left">Training #{{ (parsed_trainings.length + index + 1) }}</h4>
+                <remove-item-button :items="new_trainings" :item="new_training"></remove-item-button>
             </header>
 
             <text-box-form :code="generateCode('name', new_training)" label="Course name" placeholder="Course name" :value="new_training.name" :has-error="parsed_errors['name']" :error="parsed_errors['name']"></text-box-form>
@@ -39,13 +41,14 @@
 </template>
 
 <script>
+import RemoveItemButton from './common/RemoveItemButton.vue';
 import TextBoxForm from '../common/TextBoxForm.vue';
 import DateForm from '../common/DateForm.vue';
 import FileForm from '../common/FileForm.vue';
 
 export default {
     props: ['trainings', 'trainingLevels', 'trainingFields', 'errors'],
-    components: { TextBoxForm, DateForm, FileForm },
+    components: { RemoveItemButton, TextBoxForm, DateForm, FileForm },
     data() {
         return {
             parsed_trainings: [],

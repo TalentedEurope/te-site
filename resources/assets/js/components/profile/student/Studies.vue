@@ -1,10 +1,12 @@
 <template>
     <div>
-        <div class="study" v-for="(study, key, index) in parsed_studies">
+        <div class="study" v-for="(study, index) in parsed_studies">
             <header class="clearfix">
-                <h4 class="pull-left">Studies {{ index + 1 }}</h4>
-                <a class="pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
+                <h4 class="pull-left">Studies #{{ index + 1 }}</h4>
+                <remove-item-button :items="parsed_studies" :item="study"></remove-item-button>
             </header>
+
+            <input :name="generateCode('id', study)" type="hidden" :value="study.id"/>
 
             <text-box-form :code="generateCode('institution_name', study)" label="Institution name" placeholder="Institution name" :value="study.institution_name" :has-error="parsed_errors['institution_name']" :error="parsed_errors['institution_name']"></text-box-form>
 
@@ -24,8 +26,8 @@
 
         <div class="study" v-for="(new_study, index) in new_studies">
             <header class="clearfix">
-                <h4 class="pull-left">Studies {{ (parsed_studies.length + index + 1) }}</h4>
-                <a class="hidden pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
+                <h4 class="pull-left">Studies #{{ (parsed_studies.length + index + 1) }}</h4>
+                <remove-item-button :items="new_studies" :item="new_study"></remove-item-button>
             </header>
 
             <text-box-form :code="generateCode('institution_name', new_study)" label="Institution name" placeholder="Institution name" :has-error="parsed_errors['institution_name']" :error="parsed_errors['institution_name']"></text-box-form>
@@ -54,13 +56,14 @@
 </template>
 
 <script>
+import RemoveItemButton from './common/RemoveItemButton.vue';
 import TextBoxForm from '../common/TextBoxForm.vue';
 import SelectForm from '../common/SelectForm.vue';
 import FileForm from '../common/FileForm.vue';
 
 export default {
     props: ['studies', 'studyLevels', 'studyFields', 'errors'],
-    components: { TextBoxForm, SelectForm, FileForm },
+    components: { RemoveItemButton, TextBoxForm, SelectForm, FileForm },
     data() {
         return {
             parsed_studies: [],

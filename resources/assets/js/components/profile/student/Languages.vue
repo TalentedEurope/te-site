@@ -1,10 +1,12 @@
 <template>
     <div>
-        <div class="language" v-for="(language, key, index) in parsed_languages">
+        <div class="language" v-for="(language, index) in parsed_languages">
             <header class="clearfix">
-                <h4 class="pull-left">Language {{ index + 1 }}</h4>
-                <a class="pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
+                <h4 class="pull-left">Language #{{ index + 1 }}</h4>
+                <remove-item-button :items="parsed_languages" :item="language"></remove-item-button>
             </header>
+
+            <input :name="generateCode('id', language)" type="hidden" :value="language.id"/>
 
             <select-form :code="generateCode('name', language)" label="Language name" placeholder=" - Language name - " :values="languageNames" :value="language.name" :has-error="parsed_errors['name']" :error="parsed_errors['name']"></select-form>
             <select-form :code="generateCode('level', language)" label="Language level" placeholder=" - Language level - " :values="languageLevels" :value="language.level" :has-error="parsed_errors['level']" :error="parsed_errors['level']"></select-form>
@@ -16,8 +18,8 @@
 
         <div class="language" v-for="(new_language, index) in new_languages">
             <header class="clearfix">
-                <h4 class="pull-left">Language {{ (parsed_languages.length + index + 1) }}</h4>
-                <a class="hidden pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
+                <h4 class="pull-left">Language #{{ (parsed_languages.length + index + 1) }}</h4>
+                <remove-item-button :items="new_languages" :item="new_language"></remove-item-button>
             </header>
 
             <select-form :code="generateCode('name', new_language)" label="Language name" placeholder=" - Language name - " :values="languageNames" value="" :has-error="parsed_errors['name']" :error="parsed_errors['name']"></select-form>
@@ -39,12 +41,13 @@
 </template>
 
 <script>
+import RemoveItemButton from './common/RemoveItemButton.vue';
 import SelectForm from '../common/SelectForm.vue';
 import FileForm from '../common/FileForm.vue';
 
 export default {
     props: ['languages', 'languageNames', 'languageLevels', 'errors'],
-    components: { SelectForm, FileForm },
+    components: { RemoveItemButton, SelectForm, FileForm },
     data() {
         return {
             parsed_languages: [],
