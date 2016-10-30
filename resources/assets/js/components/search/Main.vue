@@ -43,32 +43,31 @@ export default {
         }
     },
     created () {
-        var that = this;
-        EventBus.$on('onChangePage', function(current_page) {
-            that.current_page = current_page;
-            that.fetchResults(that.current_page, that.filters, that.search_text);
-            if (!that.results_element) {
-                that.results_element = document.querySelector('#results')
+        EventBus.$on('onChangePage', (current_page) => {
+            this.current_page = current_page;
+            this.fetchResults(this.current_page, this.filters, this.search_text);
+            if (!this.results_element) {
+                this.results_element = document.querySelector('#results')
             }
-            smoothScroll(that.results_element);
+            smoothScroll(this.results_element);
         });
-        EventBus.$on('onChangeFilters', function(filters) {
-            that.filters = filters;
+        EventBus.$on('onChangeFilters', (filters) => {
+            this.filters = filters;
             if (_.isEmpty(_.omit(filters, ['__ob__']))) {
-                that.filters = {};
+                this.filters = {};
             }
-            that.fetchResults(that.current_page, that.filters, that.search_text);
+            this.fetchResults(1, this.filters, this.search_text);
         });
-        EventBus.$on('onSearch', function(search_text) {
-            that.search_text = search_text;
-            that.fetchResults(that.current_page, that.filters, that.search_text);
+        EventBus.$on('onSearch', (search_text) => {
+            this.search_text = search_text;
+            this.fetchResults(1, this.filters, this.search_text);
         });
     },
     mounted () {
         this.fetchResults();
     },
     methods: {
-        fetchResults(current_page, filters, search_text) {
+        fetchResults(page, filters, search_text) {
             var resource = studentsResultsResource;
             if (this.collective == 'companies') {
                 resource = companiesResultsResource;
@@ -76,7 +75,7 @@ export default {
 
             this.loading = true;
 
-            resource.get(current_page, filters, search_text).then((response) => {
+            resource.get(page, filters, search_text).then((response) => {
                 this.is_filtering = !_.isEmpty(filters) || !_.isEmpty(search_text);
                 this.results = response.body.data;
                 this.pagination_data = response.body;

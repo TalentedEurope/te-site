@@ -1,10 +1,10 @@
 import http from './http';
 
-var getFormattedParams = function (current_page=1, filters={}, search_text) {
+var getFormattedParams = function (page=1, filters={}, search_text) {
     var _filters = _.clone(filters);
 
-    if (current_page) {
-        _filters["page"] = current_page;
+    if (page) {
+        _filters["page"] = page;
     }
 
     if (search_text) {
@@ -15,15 +15,15 @@ var getFormattedParams = function (current_page=1, filters={}, search_text) {
 }
 
 var StudentsResultsResource = {
-    get: (current_page, filters, search_text) => {
-        var params = getFormattedParams(current_page, filters, search_text);
+    get: (page, filters, search_text) => {
+        var params = getFormattedParams(page, filters, search_text);
         return http.get(`search/students?${params}`);
     }
 };
 
 var CompaniesResultsResource = {
-    get: (current_page, filters, search_text) => {
-        var params = getFormattedParams(current_page, filters, search_text);
+    get: (page, filters, search_text) => {
+        var params = getFormattedParams(page, filters, search_text);
         return http.get(`search/companies?${params}`);
     }
 };

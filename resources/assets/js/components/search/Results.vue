@@ -7,7 +7,7 @@
             <company-profile v-if="collective == 'companies'" v-for="company in results" :company="company"></company-profile>
         </ul>
 
-        <pager :pagination-data="paginationData"></pager>
+        <pager v-show="!loading && results.length > 0" :pagination-data="paginationData"></pager>
     </div>
 </template>
 
