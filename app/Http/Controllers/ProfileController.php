@@ -9,7 +9,10 @@ use App\Models\User;
 use App\Models\ValidationRequest;
 use App\Models\StudentStudy;
 use App\Models\StudentLanguage;
+use App\Models\StudentTraining;
+use App\Models\StudentExperience;
 use App\Models\PersonalSkill;
+use App\Models\ProfessionalSkill;
 use App\Http\Controllers\Api\LoginController;
 use App;
 use Auth;
@@ -17,6 +20,7 @@ use Illuminate\Support\MessageBag;
 use Validator;
 use Image;
 use JWTAuth;
+use Config;
 
 class ProfileController extends Controller
 {
@@ -157,7 +161,9 @@ class ProfileController extends Controller
         $v = Validator::make($request->all(), array_filter(User::rules('image')));
 
         if ($v->passes() && $request->hasFile('image') && !$request->has('validate')) {
-            $fname = tempnam(public_path() . User::$photoPath, $user->id).'.jpg';
+            $fname = tempnam(public_path() . User::$photoPath, $user->id);
+            unlink($fname);
+            $fname .= '.jpg';
             $img = Image::make($request->file('image'))
             ->resize(User::$photoWidth, User::$photoHeight, function ($constraint) {
                 $constraint->aspectRatio();
@@ -222,11 +228,208 @@ class ProfileController extends Controller
             $student = Student::create();
             $student->user()->save($user);
         }
-        $v = Validator::make($request->all(), Company::rules($student));
+
+        $v = Validator::make($request->all(), Student::rules());
 
         foreach ($v->valid() as $key => $value) {
-            if (array_has($student['attributes'], $key) && !$request->has('validate')) {
+            if (!is_array($value) && array_has($student['attributes'], $key) && !$request->has('validate')) {
                 $student->$key = $value;
+            }
+        }
+        $student->save();
+
+        // Related columns, those are more complicated than the ones in company so we validate row by row.
+        if (isset($v->valid()['studies'])) {
+            $studyIds = array();
+            foreach ($v->valid()['studies'] as $key => $stud) {
+                $itemVal = Validator::make($stud, Student::rulesRelated('studies'));
+                $study = new StudentStudy();
+                $errors = $errors->merge($this->formatRelatedErrors($itemVal->errors(), 'studies', $key));
+                if (!$request->has('validate')) {
+                    if (isset($stud['id'])) {
+                        $queryLang = StudentStudy::find($stud['id']);
+                        if ($queryLang) {
+                            $study = $queryLang;
+                        }
+                    }
+
+                    if (isset($itemVal->valid()['name'])) {
+                        $study->name = $stud['name'];
+                    }
+
+                    if (isset($itemVal->valid()['institution_name'])) {
+                        $study->institution_name = $stud['institution_name'];
+                    }
+
+                    if (isset($itemVal->valid()['level'])) {
+                        $study->level = $stud['level'];
+                    }
+
+                    if (isset($itemVal->valid()['study_field'])) {
+                        $study->field = $stud['study_field'];
+                    }
+
+                    if (isset($itemVal->valid()['gradecard'])) {
+                        $fname = tempnam(public_path() . Student::$studyCertificatePath, $user->id);
+                        unlink($fname);
+                        $file = $fname . '.pdf';
+                        $itemVal->valid()['gradecard']->move($file);
+                        $study->gradecard = basename($file);
+                    }
+
+                    if (isset($itemVal->valid()['certificate'])) {
+                        $fname = tempnam(public_path() . Student::$studyCertificatePath, $user->id);
+                        unlink($fname);
+                        $file = $fname . '.pdf';
+                        $itemVal->valid()['certificate']->move($file);
+                        $study->certificate = basename($file);
+                    }
+                    $study->student_id = $student->id;
+                    $study->save();
+                    $studyIds[] = $study->id;
+                }
+            }
+            if (sizeof($studyIds)) {
+                StudentStudy::where('student_id', $student->id)->whereNotIn('id', $studyIds)->delete();
+            }
+        }
+
+        if (isset($v->valid()['trainings'])) {
+            $trainIds = array();
+            foreach ($v->valid()['trainings'] as $key => $train) {
+                $itemVal = Validator::make($train, Student::rulesRelated('trainings'));
+                $training = new StudentTraining();
+                $errors = $errors->merge($this->formatRelatedErrors($itemVal->errors(), 'trainings', $key));
+                if (!$request->has('validate')) {
+                    if (isset($train['id'])) {
+                        $queryLang = StudentTraining::find($train['id']);
+                        if ($queryLang) {
+                            $training = $queryLang;
+                        }
+                    }
+                    if (isset($itemVal->valid()['name'])) {
+                        $training->name = $train['name'];
+                    }
+                    if (isset($itemVal->valid()['date'])) {
+                        $training->date = $train['date'];
+                    }
+                    if (isset($itemVal->valid()['certificate'])) {
+                        $fname = tempnam(public_path() . Student::$studyCertificatePath, $user->id);
+                        unlink($fname);
+                        $file = $fname . '.pdf';
+                        $itemVal->valid()['certificate']->move($file);
+                        $training->certificate = basename($file);
+                    }
+                    $training->student_id = $student->id;
+                    $training->save();
+                    $trainIds[] = $training->id;
+                }
+            }
+            if (sizeof($trainIds)) {
+                StudentTraining::where('student_id', $student->id)->whereNotIn('id', $trainIds)->delete();
+            }
+        }
+
+        if (isset($v->valid()['languages'])) {
+            $langIds = array();
+            foreach ($v->valid()['languages'] as $key => $lang) {
+                $itemVal = Validator::make($lang, Student::rulesRelated('languages'));
+                $language = new StudentLanguage();
+                $errors = $errors->merge($this->formatRelatedErrors($itemVal->errors(), 'languages', $key));
+                if (!$request->has('validate')) {
+                    if (isset($lang['id'])) {
+                        $queryLang = StudentLanguage::find($lang['id']);
+                        if ($queryLang) {
+                            $language = $queryLang;
+                        }
+                    }
+                    if (isset($itemVal->valid()['name'])) {
+                        $language->name = $lang['name'];
+                    }
+                    if (isset($itemVal->valid()['level'])) {
+                        $language->level = $lang["level"];
+                    }
+                    if (isset($itemVal->valid()['certificate'])) {
+                        $fname = tempnam(public_path() . Student::$studyCertificatePath, $user->id);
+                        unlink($fname);
+                        $file = $fname . '.pdf';
+                        $itemVal->valid()['certificate']->move($file);
+                        $language->certificate = basename($file);
+                    }
+                    $language->student_id = $student->id;
+                    $language->save();
+                    $langIds[] = $language->id;
+                }
+            }
+            if (sizeof($langIds)) {
+                StudentLanguage::where('student_id', $student->id)->whereNotIn('id', $langIds)->delete();
+            }
+        }
+
+        if (isset($v->valid()['experiences'])) {
+            $expIds = array();
+            foreach ($v->valid()['experiences'] as $key => $exp) {
+                $itemVal = Validator::make($exp, Student::rulesRelated('experiences'));
+                $experience = new StudentExperience();
+                $errors = $errors->merge($this->formatRelatedErrors($itemVal->errors(), 'experiences', $key));
+                if (!$request->has('validate')) {
+                    if (isset($exp['id'])) {
+                        $queryExp = StudentExperience::find($exp['id']);
+                        if ($queryExp) {
+                            $experience = $queryExp;
+                        }
+                    }
+                    if (isset($itemVal->valid()['company'])) {
+                        $experience->company = $exp['company'];
+                    }
+                    if (isset($itemVal->valid()['from'])) {
+                        $experience->from = $exp["from"];
+                    }
+                    if (isset($itemVal->valid()['until'])) {
+                        $experience->until = $exp["until"];
+                    }
+                    if (isset($itemVal->valid()['position'])) {
+                        $experience->position = $exp['position'];
+                    }
+                    $experience->student_id = $student->id;
+                    $experience->save();
+                    $expIds[] = $language->id;
+                }
+            }
+            if (sizeof($langIds)) {
+                StudentLanguage::where('student_id', $student->id)->whereNotIn('id', $langIds)->delete();
+            }
+        }
+
+
+        if (isset($v->valid()['personalSkills'])) {
+            $skills = $v->valid()['personalSkills'];
+            if ($skills) {
+                $student->personalSkills()->whereNotIn('id', $skills)->detach();
+                foreach ($skills as $skillID) {
+                    $skill = PersonalSkill::find($skillID);
+                    if ($skill && !$student->personalSkills()->find($skillID)) {
+                        $student->personalSkills()->attach($skill);
+                    }
+                }
+            }
+        }
+
+
+        if (isset($v->valid()['professionalSkills'])) {
+            $skills = $v->valid()['professionalSkills'];
+            if ($skills) {
+                $skillIds = array();
+                foreach ($skills as $skill) {
+                    $sk = ProfessionalSkill::firstOrCreate(array('name' => $skill, 'language_code' => Config::get('app.locale') ));
+                    if ($skill && !$student->professionalSkills()->find($sk)) {
+                        $student->professionalSkills()->attach($skill);
+                        $skillIds[] = $sk->id;
+                    }
+                }
+                if (sizeof($skillIds)) {
+                    $student->professionalSkills()->whereNotIn('id', $skillIds)->delete();
+                }
             }
         }
 
@@ -252,7 +455,6 @@ class ProfileController extends Controller
                 }
             }
         }
-
         return $filled;
     }
 
@@ -310,6 +512,7 @@ class ProfileController extends Controller
         $studyFields = array();
         $languageLevels = array();
         $languages = array();
+        $nationalities = array();
         foreach (StudentLanguage::$languages as $key => $item) {
             $languages[$key] = $item['eng'];
         }
@@ -323,14 +526,20 @@ class ProfileController extends Controller
             $languageLevels[$item] = trans('reg-profile.'.$item);
         }
 
+        foreach (Student::$nationalities as $item) {
+            $nationalities[$item] = trans('global.'.$item);
+        }
+
         $data = array(
             'user' => $user,
             'countries' => User::$countries,
+            'nationalities' => $nationalities,
             'studyLevels' => $studyLevels,
             'studyFields' => $studyFields,
             'languageLevels' => $languageLevels,
             'languages' => $languages,
-            'personalSkills' => PersonalSkill::getFormattedArray()
+            'personalSkills' => PersonalSkill::getFormattedArray(),
+            'professionalSkills' => ProfessionalSkill::where('language_code', Config::get('app.locale')),
         );
         if ($user->userable) {
             $data['student'] = $user->userable;
@@ -421,6 +630,15 @@ class ProfileController extends Controller
             return response()->download(public_path().Student::$studyCertificatePath.$user->userable->languages()->find($studyId)->certificate);
         }
         App::abort(403, 'Unauthorized action.');
+    }
+
+    private function formatRelatedErrors($errors, $mainKey, $subKey)
+    {
+        $erray = array();
+        foreach ($errors->keys() as $key) {
+            $erray[$mainKey.'.'.$subKey .'.'. $key] = $errors->get($key);
+        }
+        return $erray;
     }
 
     public function getJSONStudentProfile(Request $request)

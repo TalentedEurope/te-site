@@ -58,7 +58,7 @@
               </div>
 
               {{-- COUNTRIES OR NATIONALITIES? --}}
-              <select-form code="nationality" label="Nationality" placeholder=" - Nationality - " values='{!! json_encode($countries, JSON_HEX_APOS) !!}' value="{{ old('nationality', $student->nationality) }}" has-error="{{ $errors->has('nationality') }}" error="{{ $errors->first('nationality') }}"></select-form>
+              <select-form code="nationality" label="Nationality" placeholder=" - Nationality - " values='{!! json_encode($nationalities, JSON_HEX_APOS) !!}' value="{{ old('nationality', $student->nationality) }}" has-error="{{ $errors->has('nationality') }}" error="{{ $errors->first('nationality') }}"></select-form>
 
               <date-form code="birthdate" label="Birthdate" placeholder="Birthdate" value="{{ old('birthdate', $student->birthdate) }}" has-error="{{ $errors->has('birthdate') }}" error="{{ $errors->first('birthdate') }}"></date-form>
 

@@ -11,7 +11,7 @@
             <div class="avatar-placeholder">
                 <i class="fa fa-pencil" aria-hidden="true"></i>
             </div>
-            <h2 class="page-title">Your profile is empty!</h2>
+            <h2 class="page-title">Not enough information :(</h2>
             <div class="text-left">
             <p>We don't have enough data from you to be able to show your profile.</p>
 
