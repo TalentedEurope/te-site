@@ -115,6 +115,9 @@ class ProfileController extends Controller
         }
         // Make sure that the only errors shown are from the fields we passed.
         $reqErrors = new MessageBag();
+        return $errors;
+
+        // Todo: Fix this so it only returns what the user requires even when passing arrays.
         foreach ($errors->messages() as $key => $value) {
             if (isset($request->all()[$key])) {
                 foreach ($value as $message) {
@@ -241,7 +244,7 @@ class ProfileController extends Controller
             }
         }
 
-        if (isset($v->valid()['curriculum'])) {
+        if (isset($v->valid()['curriculum']) && !$request->has('validate')) {
             $fname = tempnam(public_path() . Student::$curriculumPath, $user->id);
             unlink($fname);
             $file = $fname . '.pdf';
@@ -446,7 +449,6 @@ class ProfileController extends Controller
             }
         }
 
-
         $user->is_filled = false;
         $uFilledVal = Validator::make($user->toArray(), User::Rules(false, true));
         $filledVal = Validator::make($student->toArray(), Student::Rules(true));
@@ -456,7 +458,7 @@ class ProfileController extends Controller
 
         $student->save();
         $user->save();
-        $errors = $errors->merge($v);
+
         return $errors;
     }
 
