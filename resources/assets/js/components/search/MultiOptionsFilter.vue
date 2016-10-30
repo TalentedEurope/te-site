@@ -11,6 +11,9 @@
             <li class="more" v-if="displayViewMore">
                 <button @click.prevent="viewMore()"><i class="fa fa-plus-square" aria-hidden="true"></i> View More</button>
             </li>
+            <li class="less" v-if="displayViewLess">
+                <button @click.prevent="viewLess()"><i class="fa fa-minus-square" aria-hidden="true"></i> View Less</button>
+            </li>
         </ul>
     </div>
 </template>
@@ -20,8 +23,8 @@ export default {
     props: ['items', 'id', 'title'],
     data() {
         return {
-            'view_more': false,
-            'max_items': 4,
+            'view_all': false,
+            'max_items': 5,
         }
     },
     methods: {
@@ -29,7 +32,10 @@ export default {
             return filter_id + item_id;
         },
         viewMore: function () {
-            this.view_more = true;
+            this.view_all = true;
+        },
+        viewLess: function () {
+            this.view_all = false;
         },
         change: function (item) {
             this.$set(item, 'selected', !item.selected);
@@ -43,13 +49,16 @@ export default {
     },
     computed: {
         getItems() {
-            if (this.view_more) {
+            if (this.view_all) {
                 return this.items;
             }
             return this.items.slice(0, this.max_items);
         },
         displayViewMore() {
-            return !(this.view_more || this.items.length <= this.max_items);
+            return !(this.view_all || this.items.length <= this.max_items);
+        },
+        displayViewLess() {
+            return this.view_all;
         }
     }
 }
@@ -73,7 +82,7 @@ export default {
             }
         }
     }
-    .more button {
+    .more button, .less button {
         background: none;
         border: none;
         font-size: 14px;
