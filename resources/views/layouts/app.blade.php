@@ -142,6 +142,12 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('[data-toggle="tooltip"]').tooltip();
+
+      var profile_tabs = $('#profile-tabs');
+      if (profile_tabs.data("hashtab")) {
+        var hash = window.location.hash;
+        profile_tabs.find('a[href="' + hash + '"]').tab('show');
+      }
     });
   </script>
 </body>

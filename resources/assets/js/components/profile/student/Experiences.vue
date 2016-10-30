@@ -3,8 +3,11 @@
         <div class="experience" v-for="(experience, index) in parsed_experiences">
             <header class="clearfix">
                 <h4 class="pull-left">Work Experience #{{ index + 1 }}</h4>
-                <a class="pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
+                <remove-item-button :items="parsed_experiences" :item="experience"></remove-item-button>
             </header>
+
+            <input :name="generateCode('id', experience)" type="hidden" :value="experience.id"/>
+
             <div class="row">
                 <date-form class="col-sm-6" :code="generateCode('from', experience)" label="From" placeholder="Work from" :value="experience.from" :has-error="parsed_errors['from']" :error="parsed_errors['from']"></date-form>
                 <date-form class="col-sm-6" :code="generateCode('until', experience)" label="To" placeholder="Work to" :value="experience.until" :has-error="parsed_errors['until']" :error="parsed_errors['until']"></date-form>
@@ -17,7 +20,7 @@
         <div class="experience" v-for="(new_experience, index) in new_experiences">
             <header class="clearfix">
                 <h4 class="pull-left">Work Experience #{{ (parsed_experiences.length + index + 1) }}</h4>
-                <a class="pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
+                <remove-item-button :items="new_experiences" :item="new_experience"></remove-item-button>
             </header>
             <div class="row">
                 <date-form class="col-sm-6" :code="generateCode('from', new_experience)" label="From" placeholder="Work from" :value="new_experience.from" :has-error="parsed_errors['from']" :error="parsed_errors['from']"></date-form>
@@ -41,12 +44,13 @@
 </template>
 
 <script>
+import RemoveItemButton from './common/RemoveItemButton.vue';
 import TextBoxForm from '../common/TextBoxForm.vue';
 import DateForm from '../common/DateForm.vue';
 
 export default {
     props: ['experiences', 'errors'],
-    components: { TextBoxForm, DateForm },
+    components: { RemoveItemButton, TextBoxForm, DateForm },
     data() {
         return {
             parsed_experiences: [],

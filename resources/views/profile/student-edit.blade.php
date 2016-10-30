@@ -93,7 +93,7 @@
               <h4>Academic information</h4>
               <hr>
 
-              <file-form code="europass" label="Europass curriculum" download-text="Download curriculum" file-url="{{ URL::to('/profile/curriculum/' . $user->id) }}"></file-form>
+              <file-form code="curriculum" label="Europass curriculum" download-text="Download curriculum" file-url="{{ URL::to('/profile/curriculum/' . $user->id) }}"></file-form>
 
               <hr class="separator">
 
