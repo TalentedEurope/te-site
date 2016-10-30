@@ -30,19 +30,19 @@
                 <remove-item-button :items="new_studies" :item="new_study"></remove-item-button>
             </header>
 
-            <text-box-form code="institution_name" group-code="new_studies" :group-id="new_study.id" label="Institution name" placeholder="Institution name" :errors="errors"></text-box-form>
+            <text-box-form code="institution_name" group-code="studies" :group-id="new_study.id" label="Institution name" placeholder="Institution name" :errors="errors"></text-box-form>
 
             <div class="row">
-                <text-box-form class="col-sm-8" code="name" group-code="new_studies" :group-id="new_study.id" label="Course/Studies name" placeholder="Course/Studies name" :errors="errors"></text-box-form>
-                <select-form class="col-sm-4" code="level" group-code="new_studies" :group-id="new_study.id" label="Level" placeholder=" - Level - " :values="studyLevels" value="" :errors="errors"></select-form>
+                <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="new_study.id" label="Course/Studies name" placeholder="Course/Studies name" :errors="errors"></text-box-form>
+                <select-form class="col-sm-4" code="level" group-code="studies" :group-id="new_study.id" label="Level" placeholder=" - Level - " :values="studyLevels" value="" :errors="errors"></select-form>
             </div>
 
-            <select-form code="study_field" group-code="new_studies" :group-id="new_study.id" label="Field of studies" placeholder=" - Field of studies - " :values="studyFields" value="" :errors="errors"></select-form>
+            <select-form code="study_field" group-code="studies" :group-id="new_study.id" label="Field of studies" placeholder=" - Field of studies - " :values="studyFields" value="" :errors="errors"></select-form>
 
             <hr>
-            <file-form code="certificate" group-code="new_studies" :group-id="new_study.id" label="Certificate"></file-form>
+            <file-form code="certificate" group-code="studies" :group-id="new_study.id" label="Certificate"></file-form>
             <hr>
-            <file-form code="gradecard" group-code="new_studies" :group-id="new_study.id" label="Gradecard"></file-form>
+            <file-form code="gradecard" group-code="studies" :group-id="new_study.id" label="Gradecard"></file-form>
             <hr>
         </div>
 
