@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Sofa\Eloquence\Eloquence;
-
+use App\Models\StudentStudy;
+use App\Models\StudentLanguage;
 
 class Student extends Model
 {
@@ -19,15 +20,73 @@ class Student extends Model
     public static $studyGradeCardPath = '/uploads/gradecard/';
     public static $studyCertificatePath = '/uploads/certificate/';
 
-    public static $rules = array(
-        'address' => 'required',
-        'nationality' => 'required',
-        'birthdate' => 'required',
-        'curriculum' => 'required',
-        'valid' => 'required',
-        'renewed_at' => 'required',
-        'visible' => 'required',
-    );
+    public static function rules($only_key = false)
+    {
+        $filter = array(
+            'address' => 'required',
+            'nationality' => 'required|in:'.implode(',', Student::$nationalities),
+            'birthdate' => 'required|date',
+            'curriculum' => 'required',
+            'valid' => 'required',
+            'renewed_at' => 'required',
+            'visible' => 'required',
+            'talent' => 'required|max:300',
+            'studies' => 'array|min:1',
+            'languages' => 'array',
+            'personalSkills' => 'array|max:6',
+            'professionalSkills' => 'array|max:6'
+        );
+
+        if ($only_key) {
+            return array($only_key => $filter[$only_key]);
+        } else {
+            return $filter;
+        }
+    }
+
+
+    public static function rulesRelated($related, $only_key = false)
+    {
+        $relatedRules = array(
+            'studies' => array(
+                'institution_name' => 'required|regex:/^[\pL\s\-]+$/u',
+                'studies_name' => 'required|regex:/^[\pL\s\-]+$/u',
+                'level' => 'required|in:'.implode(',', StudentStudy::$levels),
+                'study_field' => 'required|in:'.implode(',', StudentStudy::$fields),
+                'certificate' => 'required|mimes:pdf',
+                'gradecard' => 'mimes:pdf'
+            ),
+
+            'trainings' => array (
+                'name' => 'required|regex:/^[\pL\s\-]+$/u',
+                'date' => 'required|date',
+                'certificate' => 'mimes:pdf',
+            ),
+
+            'languages' => array (
+                'name' =>  'required|in:'.implode(',', array_keys(StudentLanguage::$languages)),
+                'level' =>  'required|in:'.implode(',', StudentLanguage::$levels),
+                'certificate' => 'mimes:pdf',
+            ),
+
+            'professionalSkills' => array (
+                'name' =>  'required|regex:/^[\pL\s\-]+$/u',
+            ),
+
+            'experiences' => array (
+                'company' =>  'required|regex:/^[\pL\s\-]+$/u',
+                'from' =>  'required|date',
+                'until' =>  'date',
+                'position' =>  'required|regex:/^[\pL\s\-]+$/u',
+            ),
+        );
+        $filter = $relatedRules[$related];
+        if ($only_key) {
+            return array($only_key => $filter[$only_key]);
+        } else {
+            return $filter;
+        }
+    }
 
     public function user()
     {
