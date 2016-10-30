@@ -15,8 +15,8 @@ class CreateStudentStudiesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('institution_name');
-            $table->enum('level', StudentStudy::$levels);
-            $table->enum('field', StudentStudy::$fields);
+            $table->enum('level', StudentStudy::$levels)->nullable();
+            $table->enum('field', StudentStudy::$fields)->nullable();
             $table->string('certificate');
             $table->string('gradecard');
             $table->integer('student_id')->unsigned();

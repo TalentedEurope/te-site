@@ -20,7 +20,7 @@ class Student extends Model
     public static $studyGradeCardPath = '/uploads/gradecard/';
     public static $studyCertificatePath = '/uploads/certificate/';
 
-    public static function rules($only_key = false)
+    public static function rules($withRelated = false, $only_key = false)
     {
         $filter = array(
             'address' => 'required',
@@ -33,9 +33,22 @@ class Student extends Model
             'talent' => 'required|max:300',
             'studies' => 'array|min:1',
             'languages' => 'array',
+            'europass' => 'required|file',
             'personalSkills' => 'array|max:6',
             'professionalSkills' => 'array|max:6'
         );
+
+        $filterRelated = array(
+            'studies.*.institution_name' => 'required|regex:/^[\pL\s\-]+$/u',
+            'studies.*.studies_name' => 'required|regex:/^[\pL\s\-]+$/u',
+            'studies.*.level' => 'required|in:'.implode(',', StudentStudy::$levels),
+            'studies.*.study_field' => 'required|in:'.implode(',', StudentStudy::$fields),
+            'studies.*.certificate' => 'required|mimes:pdf',
+        );
+
+        if ($withRelated) {
+            $filter = array_merge($filter, $filterRelated);
+        }
 
         if ($only_key) {
             return array($only_key => $filter[$only_key]);

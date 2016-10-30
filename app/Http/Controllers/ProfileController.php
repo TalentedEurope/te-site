@@ -236,6 +236,15 @@ class ProfileController extends Controller
                 $student->$key = $value;
             }
         }
+
+        if (isset($v->valid()['europass'])) {
+            $fname = tempnam(public_path() . Student::$curriculumPath, $user->id);
+            unlink($fname);
+            $file = $fname . '.pdf';
+            $v->valid()['europass']->move($file);
+            $student->curriculum = basename($file);
+        }
+
         $student->save();
 
         // Related columns, those are more complicated than the ones in company so we validate row by row.
@@ -433,8 +442,9 @@ class ProfileController extends Controller
             }
         }
 
-        // Not yet implemented
-        //$this->is_filled = $this->checkFill($v, $errors);
+
+        $filledVal = Validator::make($request->all(), Student::rules(true));
+        $this->is_filled = $this->checkFill($filledVal, $errors);
         $errors = $errors->merge($v);
 
         $student->save();
