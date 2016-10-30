@@ -1,30 +1,32 @@
 <template>
     <div>
-        <div class="language" v-for="(language, key, index) in parsed_languages">
+        <div class="language" v-for="(language, index) in parsed_languages">
             <header class="clearfix">
-                <h4 class="pull-left">Language {{ index + 1 }}</h4>
-                <a class="pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
+                <h4 class="pull-left">Language #{{ index + 1 }}</h4>
+                <remove-item-button :items="parsed_languages" :item="language"></remove-item-button>
             </header>
 
-            <select-form :code="generateCode('name', language)" label="Language name" placeholder=" - Language name - " :values="languageNames" :value="language.name" :has-error="parsed_errors['name']" :error="parsed_errors['name']"></select-form>
-            <select-form :code="generateCode('level', language)" label="Language level" placeholder=" - Language level - " :values="languageLevels" :value="language.level" :has-error="parsed_errors['level']" :error="parsed_errors['level']"></select-form>
+            <text-box-form type="hidden" code="id" group-code="languages" :group-id="language.id" :value="language.id"></text-box-form>
+
+            <select-form code="name" group-code="languages" :group-id="language.id" label="Language name" placeholder=" - Language name - " :values="languageNames" :value="language.name" :errors="errors"></select-form>
+            <select-form code="level" group-code="languages" :group-id="language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" :value="language.level" :errors="errors"></select-form>
 
             <hr>
-            <file-form :code="generateCode('certificate', language)" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/language/32"></file-form>
+            <file-form code="certificate" group-code="languages" :group-id="language.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/language/32"></file-form>
             <hr>
         </div>
 
         <div class="language" v-for="(new_language, index) in new_languages">
             <header class="clearfix">
-                <h4 class="pull-left">Language {{ (parsed_languages.length + index + 1) }}</h4>
-                <a class="hidden pull-right remove btn-danger btn btn-sm" href="#"><i class="fa fa-close" aria-hidden="true"></i> remove</a>
+                <h4 class="pull-left">Language #{{ (parsed_languages.length + index + 1) }}</h4>
+                <remove-item-button :items="new_languages" :item="new_language"></remove-item-button>
             </header>
 
-            <select-form :code="generateCode('name', new_language)" label="Language name" placeholder=" - Language name - " :values="languageNames" value="" :has-error="parsed_errors['name']" :error="parsed_errors['name']"></select-form>
-            <select-form :code="generateCode('level', new_language)" label="Language level" placeholder=" - Language level - " :values="languageLevels" value="" :has-error="parsed_errors['level']" :error="parsed_errors['level']"></select-form>
+            <select-form code="name" group-code="languages" :group-id="new_language.id" label="Language name" placeholder=" - Language name - " :values="languageNames" value="" :errors="errors"></select-form>
+            <select-form code="level" group-code="languages" :group-id="new_language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" value="" :errors="errors"></select-form>
 
             <hr>
-            <file-form :code="generateCode('certificate', new_language)" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/language/32"></file-form>
+            <file-form code="certificate" group-code="languages" :group-id="new_language.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/language/32"></file-form>
             <hr>
 
         </div>
@@ -39,12 +41,14 @@
 </template>
 
 <script>
+import RemoveItemButton from './common/RemoveItemButton.vue';
+import TextBoxForm from '../common/TextBoxForm.vue';
 import SelectForm from '../common/SelectForm.vue';
 import FileForm from '../common/FileForm.vue';
 
 export default {
     props: ['languages', 'languageNames', 'languageLevels', 'errors'],
-    components: { SelectForm, FileForm },
+    components: { RemoveItemButton, TextBoxForm, SelectForm, FileForm },
     data() {
         return {
             parsed_languages: [],
@@ -60,9 +64,6 @@ export default {
         }
     },
     methods: {
-        generateCode: function (field_name, language) {
-            return `languages[${language.id}][${field_name}]`;
-        },
         addNewLanguage: function () {
             var count = this.new_languages.length;
             this.new_languages.push({"id": `new_${count}`});

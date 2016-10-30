@@ -2,7 +2,7 @@
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
         <!-- <label :for="code">{{label}}</label> -->
         <div class="select-holder">
-            <select class="form-control" :id="code" :name="code" v-model="model">
+            <select class="form-control" :id="code" :name="generateFieldName()" v-model="model">
                 <option value="">{{placeholder}}</option>
                 <option v-for="(v_name, v_code) in parsed_values" :value="v_code">{{ v_name }}</option>
             </select>
@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import { setDebounced, validateField, modelWatch} from './form-helpers'
+import { setDebounced, setInitError, generateFieldName, validateField, modelWatch} from './form-helpers'
 
 export default {
-    props: ['code', 'label', 'placeholder', 'values', 'value', 'hasError', 'error'],
+    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'values', 'value', 'errors'],
     data() {
         return {
             'model': this.value,
@@ -31,9 +31,11 @@ export default {
     },
     created() {
         setDebounced.call(this);
+        setInitError.call(this);
     },
     methods: {
-        validateField: validateField
+        validateField: validateField,
+        generateFieldName: generateFieldName,
     },
     watch: {
         model: modelWatch
