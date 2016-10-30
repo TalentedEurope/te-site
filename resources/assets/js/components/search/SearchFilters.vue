@@ -2,7 +2,9 @@
     <div class="col-sm-4 col-md-3 search-options">
         <div class="options-title">
             <span class="h3"><i class="fa fa-filter" aria-hidden="true"></i>Filters</span>
-            <a class="button-toggle-filters" @click.prevent="toggleFilters()">(Open/Close)</a>
+            <button class="btn btn-primary button-toggle-filters" @click.prevent="toggleFilters()">
+                <i class="fa fa-bars" aria-hidden="true"></i> Toggle
+            </button>
         </div>
         <div class="current-search" v-if="current_search.length > 0">
             <h3>Current Search</h3>
@@ -114,14 +116,14 @@ export default {
 }
 
 .button-toggle-filters {
-    text-decoration: none;
-    display: inline-block;
-    padding: 3px 5px;
-    margin-top: -1px;
-    margin-left: 3px;
-    text-transform: initial;
-    cursor: pointer;
+    padding: 3px 7px;
+    border-radius: 5px;
+    margin-left: 7px;
     vertical-align: top;
+
+    .fa {
+        padding-right: 2px;
+    }
 }
 
 .current-search {
