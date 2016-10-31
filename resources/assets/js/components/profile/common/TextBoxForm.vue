@@ -1,5 +1,5 @@
 <template>
-    <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
+    <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error, 'hidden-type': input_type == 'hidden' }">
         <!-- <label :for="code">{{label}}</label> -->
         <input v-if="input_type == 'text'" type="text" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" :value="value" @input="onInput" :readonly="readonly"/>
         <input v-if="input_type == 'email'" type="email" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" :value="value" @input="onInput" :readonly="readonly"/>
@@ -37,3 +37,9 @@ export default {
     }
 };
 </script>
+
+<style lang="sass" scoped>
+.form-group.hidden-type {
+    margin: 0;
+}
+</style>
