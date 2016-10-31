@@ -15,6 +15,7 @@
 
             <text-box-form code="company" group-code="experiences" :group-id="experience.id" label="Company name" placeholder="Company name" :value="experience.company" :errors="errors"></text-box-form>
             <text-box-form code="position" group-code="experiences" :group-id="experience.id" label="Position" placeholder="Position" :value="experience.position" :errors="errors"></text-box-form>
+            <hr>
         </div>
 
         <div class="experience" v-for="(new_experience, index) in new_experiences">
@@ -29,13 +30,12 @@
 
             <text-box-form code="company" group-code="experiences" :group-id="new_experience.id" label="Company name" placeholder="Company name" :value="new_experience.company" :errors="errors"></text-box-form>
             <text-box-form code="position" group-code="experiences" :group-id="new_experience.id" label="Position" placeholder="Position" :value="new_experience.position" :errors="errors"></text-box-form>
+            <hr>
         </div>
-
-        <hr>
 
         <p class="text-center">
             <button class="btn btn-default" @click.prevent="addNewExperience()">
-                <i class="fa fa-plus" aria-hidden="true"></i> add more work experiences
+                <i class="fa fa-plus" aria-hidden="true"></i> {{addButtonText}}
             </button>
         </p>
 
@@ -54,21 +54,32 @@ export default {
     data() {
         return {
             parsed_experiences: [],
+            new_experiences: [],
             parsed_errors: [],
-            new_experiences: []
+            total: 0
         }
     },
     mounted() {
         this.parsed_experiences = JSON.parse(this.experiences);
         this.parsed_errors = JSON.parse(this.errors);
-        if (this.parsed_experiences.length == 0) {
-            this.addNewExperience();
-        }
     },
     methods: {
         addNewExperience: function () {
             var count = this.new_experiences.length;
             this.new_experiences.push({"id": `new_${count}`});
+        }
+    },
+    computed: {
+        addButtonText: function () {
+            return this.total == 0 ? 'add a work experience' : 'add more work experiences';
+        }
+    },
+    watch: {
+        parsed_experiences: function () {
+            this.total = this.parsed_experiences.length + this.new_experiences.length
+        },
+        new_experiences: function () {
+            this.total = this.parsed_experiences.length + this.new_experiences.length
         }
     }
 };

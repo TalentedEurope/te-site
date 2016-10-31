@@ -33,7 +33,7 @@
 
         <p class="text-center">
             <button class="btn btn-default" @click.prevent="addNewTraining()">
-                <i class="fa fa-plus" aria-hidden="true"></i> add more trainings
+                <i class="fa fa-plus" aria-hidden="true"></i> {{addButtonText}}
             </button>
         </p>
         <hr class="separator">
@@ -52,21 +52,32 @@ export default {
     data() {
         return {
             parsed_trainings: [],
+            new_trainings: [],
             parsed_errors: [],
-            new_trainings: []
+            total: 0
         }
     },
     mounted() {
         this.parsed_trainings = JSON.parse(this.trainings);
         this.parsed_errors = JSON.parse(this.errors);
-        if (this.parsed_trainings.length == 0) {
-            this.addNewTraining();
-        }
     },
     methods: {
         addNewTraining: function () {
             var count = this.new_trainings.length;
             this.new_trainings.push({"id": `new_${count}`});
+        }
+    },
+    computed: {
+        addButtonText: function () {
+            return this.total == 0 ? 'add a training' : 'add more trainings';
+        }
+    },
+    watch: {
+        parsed_trainings: function () {
+            this.total = this.parsed_trainings.length + this.new_trainings.length
+        },
+        new_trainings: function () {
+            this.total = this.parsed_trainings.length + this.new_trainings.length
         }
     }
 };

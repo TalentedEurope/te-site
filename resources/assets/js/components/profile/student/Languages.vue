@@ -33,7 +33,7 @@
 
         <p class="text-center">
             <button class="btn btn-default" @click.prevent="addNewLanguage()">
-                <i class="fa fa-plus" aria-hidden="true"></i> add more languages
+                <i class="fa fa-plus" aria-hidden="true"></i> {{addButtonText}}
             </button>
         </p>
         <hr class="separator">
@@ -52,21 +52,32 @@ export default {
     data() {
         return {
             parsed_languages: [],
+            new_languages: [],
             parsed_errors: [],
-            new_languages: []
+            total: 0
         }
     },
     mounted() {
         this.parsed_languages = JSON.parse(this.languages);
         this.parsed_errors = JSON.parse(this.errors);
-        if (this.parsed_languages.length == 0) {
-            this.addNewLanguage();
-        }
     },
     methods: {
         addNewLanguage: function () {
             var count = this.new_languages.length;
             this.new_languages.push({"id": `new_${count}`});
+        }
+    },
+    computed: {
+        addButtonText: function () {
+            return this.total == 0 ? 'add a language' : 'add more languages';
+        }
+    },
+    watch: {
+        parsed_languages: function () {
+            this.total = this.parsed_languages.length + this.new_languages.length
+        },
+        new_languages: function () {
+            this.total = this.parsed_languages.length + this.new_languages.length
         }
     }
 };
