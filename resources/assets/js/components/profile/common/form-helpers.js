@@ -4,10 +4,20 @@ var setDebounced = function () {
     this.debounced = _.debounce(this.validateField, 1500);
 };
 
+var setCodeForValidation = function () {
+    var code = this.code;
+    if (this.groupCode) {
+        code = `${this.groupCode}.${this.groupId}.${this.code}`;
+    }
+    this.code_for_validation = code;
+};
+
 var setInitError = function () {
-    if (_.has(this.errors, this.code)) {
+    var code = this.code_for_validation;
+
+    if (_.has(this.errors, code)) {
         this.has_error = true;
-        this.error_message = this.errors[this.code][0];
+        this.error_message = this.errors[code][0];
     }
 };
 
@@ -26,10 +36,10 @@ var validateField = function() {
     var value = this.model || '';
     var code = this.code;
     if (this.groupCode) {
-        var field = {}
-        field['id'] = this.groupId;
+        var field = {'id': this.groupId};
         field[code] = value;
-        data[this.groupCode] = [field];
+        data[this.groupCode] = {};
+        data[this.groupCode][this.groupId] = field;
     } else {
         data[code] = value;
     }
@@ -37,11 +47,12 @@ var validateField = function() {
     profileResource.put(data)
         .then(function(response) {
             var body = response.body;
-            if (_.isPlainObject(body) && body[that.code]) {
+
+            var code = that.code_for_validation;
+            if (_.isPlainObject(body) && body[code]) {
                 that.has_error = true;
-                that.error_message = body[that.code][0];
+                that.error_message = body[code][0];
             }
-            console.log(response);
         }, function(response) {
             console.log(response)
         });
@@ -55,6 +66,7 @@ var modelWatch = function(value) {
 };
 
 export var setDebounced = setDebounced;
+export var setCodeForValidation = setCodeForValidation;
 export var setInitError = setInitError;
 export var generateFieldName = generateFieldName;
 export var validateField = validateField;

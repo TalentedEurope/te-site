@@ -19,11 +19,13 @@ import Experiences from './components/profile/student/Experiences.vue';
 import AlertButton from './components/common/AlertButton.vue';
 
 
-new Vue({
-    el: '.v-container',
-    components: {
-        Search, Alerts, Validators, StudentsValidation,
-        SelectForm, TextAreaForm, TextBoxForm, PersonalSkillsForm, FileForm, DateForm,
-        Studies, Trainings, Languages, Experiences,
-        AlertButton },
-})
+if (document.querySelector('.v-container')) {
+    new Vue({
+        el: '.v-container',
+        components: {
+            Search, Alerts, Validators, StudentsValidation,
+            SelectForm, TextAreaForm, TextBoxForm, PersonalSkillsForm, FileForm, DateForm,
+            Studies, Trainings, Languages, Experiences,
+            AlertButton },
+    })
+}
