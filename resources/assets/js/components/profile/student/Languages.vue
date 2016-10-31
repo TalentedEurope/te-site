@@ -6,13 +6,13 @@
                 <remove-item-button :items="parsed_languages" :item="language"></remove-item-button>
             </header>
 
-            <text-box-form type="hidden" code="id" group-code="languages" :group-id="language.id" :value="language.id"></text-box-form>
+            <text-box-form type="hidden" code="id" group-code="languages" :group-id="language.id" v-model="language.id"></text-box-form>
 
-            <select-form code="name" group-code="languages" :group-id="language.id" label="Language name" placeholder=" - Language name - " :values="languageNames" :value="language.name" :errors="errors"></select-form>
-            <select-form code="level" group-code="languages" :group-id="language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" :value="language.level" :errors="errors"></select-form>
+            <select-form code="name" group-code="languages" :group-id="language.id" label="Language name" placeholder=" - Language name - " :values="languageNames" v-model="language.name" :errors="errors"></select-form>
+            <select-form code="level" group-code="languages" :group-id="language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" v-model="language.level" :errors="errors"></select-form>
 
             <hr>
-            <file-form code="certificate" group-code="languages" :group-id="language.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/language/32"></file-form>
+            <file-form code="certificate" group-code="languages" :group-id="language.id" label="Certificate" v-model="language.certificate" download-text="Download Certificate" file-url="/profile/certificate/2/language/32"></file-form>
             <hr>
         </div>
 
@@ -22,8 +22,8 @@
                 <remove-item-button :items="new_languages" :item="new_language"></remove-item-button>
             </header>
 
-            <select-form code="name" group-code="languages" :group-id="new_language.id" label="Language name" placeholder=" - Language name - " :values="languageNames" value="" :errors="errors"></select-form>
-            <select-form code="level" group-code="languages" :group-id="new_language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" value="" :errors="errors"></select-form>
+            <select-form code="name" group-code="languages" :group-id="new_language.id" label="Language name" placeholder=" - Language name - " :values="languageNames" v-model="new_language.name" :errors="errors"></select-form>
+            <select-form code="level" group-code="languages" :group-id="new_language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" v-model="new_language.level" :errors="errors"></select-form>
 
             <hr>
             <file-form code="certificate" group-code="languages" :group-id="new_language.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/language/32"></file-form>

@@ -6,10 +6,10 @@
                 <remove-item-button :items="parsed_trainings" :item="training"></remove-item-button>
             </header>
 
-            <text-box-form type="hidden" code="id" group-code="trainings" :group-id="training.id" :value="training.id"></text-box-form>
+            <text-box-form type="hidden" code="id" group-code="trainings" :group-id="training.id" v-model="training.id"></text-box-form>
 
-            <text-box-form code="name" group-code="trainings" :group-id="training.id" label="Course name" placeholder="Course name" :value="training.name" :errors="errors"></text-box-form>
-            <date-form code="date" group-code="trainings" :group-id="training.id" label="Date" placeholder="Date" :value="training.date" :errors="errors"></date-form>
+            <text-box-form code="name" group-code="trainings" :group-id="training.id" label="Course name" placeholder="Course name" v-model="training.name" :errors="errors"></text-box-form>
+            <date-form code="date" group-code="trainings" :group-id="training.id" label="Date" placeholder="Date" v-model="training.date" :errors="errors"></date-form>
 
             <hr>
             <file-form code="certificate" group-code="trainings" :group-id="training.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/training/32"></file-form>
@@ -22,8 +22,8 @@
                 <remove-item-button :items="new_trainings" :item="new_training"></remove-item-button>
             </header>
 
-            <text-box-form code="name" group-code="trainings" :group-id="new_training.id" label="Course name" placeholder="Course name" :value="new_training.name" :errors="errors"></text-box-form>
-            <date-form code="date" group-code="trainings" :group-id="new_training.id" label="Date" placeholder="Date" :value="new_training.date" :errors="errors"></date-form>
+            <text-box-form code="name" group-code="trainings" :group-id="new_training.id" label="Course name" placeholder="Course name" v-model="new_training.name" :errors="errors"></text-box-form>
+            <date-form code="date" group-code="trainings" :group-id="new_training.id" label="Date" placeholder="Date" v-model="new_training.date" :errors="errors"></date-form>
 
             <hr>
             <file-form code="certificate" group-code="trainings" :group-id="new_training.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/training/32"></file-form>
