@@ -16,7 +16,7 @@ class CreateCompaniesTable extends Migration
             $table->string('overseer');
             $table->string('fiscal_id');
             $table->string('website');
-            $table->string('talent');
+            $table->string('talent', 300);
             $table->string('notification_email');
             $table->string('notification_name');
             $table->enum('activity', Company::$activities)->nullable();

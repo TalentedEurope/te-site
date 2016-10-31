@@ -107,7 +107,7 @@ return [
     
         'surname' => 'le nom',
     
-        'student_study_to' => ' qui',
+        'student_study_to' => 'a qui',
     
         'student_training' => 'l&apos;expérience',
     
@@ -129,102 +129,102 @@ return [
     
         'forgot_password' => 'Avez-vous oublié votre mot de passe?',
     
-        'administration' => '',
+        'administration' => 'Administration',
     
-        'architecture-amp-construction' => '',
+        'architecture-amp-construction' => 'Architecture et construction',
     
-        'art-amp-culture' => '',
+        'art-amp-culture' => 'Art et culture',
     
-        'banking-and-or-finance-amp-insurance' => '',
+        'banking-and-or-finance-amp-insurance' => 'Banque,finance et/ou assurance',
     
-        'business-amp-consulting' => '',
+        'business-amp-consulting' => 'Activité commerciale et consultative',
     
-        'communication-amp-media-amp-pr' => '',
+        'communication-amp-media-amp-pr' => 'Communication et médias et PR',
     
-        'consumer-goods' => '',
+        'consumer-goods' => 'Biens de consommation',
     
-        'customer-service' => '',
+        'customer-service' => 'Service clients',
     
-        'design' => '',
+        'design' => 'Design',
     
-        'education-amp-training' => '',
+        'education-amp-training' => 'Formation',
     
-        'engineering' => '',
+        'engineering' => 'Ingénierie',
     
-        'hospitality-amp-tourism' => '',
+        'hospitality-amp-tourism' => 'Tourisme',
     
-        'human-resources' => '',
+        'human-resources' => 'Ressourses  humains',
     
-        'it-amp-web' => '',
+        'it-amp-web' => 'IT et web',
     
-        'legal' => '',
+        'legal' => 'Droits',
     
-        'logistics' => '',
+        'logistics' => 'Logistique',
     
-        'manufacturing' => '',
+        'manufacturing' => 'Production',
     
-        'marketing-amp-advertising' => '',
+        'marketing-amp-advertising' => 'Marketing et publicité',
     
-        'medicine-amp-pharmaceutics' => '',
+        'medicine-amp-pharmaceutics' => 'Médecine et pharmacie',
     
-        'politics' => '',
+        'politics' => 'Politique',
     
-        'quality-assurance-amp-safety' => '',
+        'quality-assurance-amp-safety' => 'Assurance de la qualité et de la sécurité',
     
-        'real-estate' => '',
+        'real-estate' => 'Biens immobilers',
     
-        'research-amp-development' => '',
+        'research-amp-development' => 'Recherche et développement',
     
-        'retail-amp-wholesale' => '',
+        'retail-amp-wholesale' => 'Commerce de détail et de gros',
     
-        'sales' => '',
+        'sales' => 'Vente',
     
-        'social-work' => '',
+        'social-work' => 'Service social',
     
-        'sport-and-or-health-amp-wellness' => '',
+        'sport-and-or-health-amp-wellness' => 'Sport et/ou santé et wellness',
     
-        'technology-amp-telecommunications' => '',
+        'technology-amp-telecommunications' => 'Technologie et télecommunications',
     
-        'business-studies-and-or-management-science' => '',
+        'business-studies-and-or-management-science' => 'Ětudes commerciales et /ou management',
     
-        'engineering-and-or-technology' => '',
+        'engineering-and-or-technology' => 'Ingénierie et/ou technologie',
     
-        'social-sciences' => '',
+        'social-sciences' => 'Sciences sociales',
     
-        'languages-and-philological-sciences' => '',
+        'languages-and-philological-sciences' => 'Langues et Sciences philologiques',
     
-        'communication-and-information-sciences' => '',
+        'communication-and-information-sciences' => 'Communication et sciences d l&apos;information',
     
-        'humanities' => '',
+        'humanities' => 'Sciences humaines',
     
-        'education-and-or-teacher-training' => '',
+        'education-and-or-teacher-training' => 'Formation des enseignants',
     
-        'law' => '',
+        'law' => 'Droits',
     
-        'art-and-design' => '',
+        'art-and-design' => 'Art et Design',
     
-        'architecture-and-or-urban-and-regional-planning' => '',
+        'architecture-and-or-urban-and-regional-planning' => 'Architecture et/ou aménagement urbain',
     
-        'natural-sciences' => '',
+        'natural-sciences' => 'Sciences naturelles',
     
-        'mathematics-and-or-informatics' => '',
+        'mathematics-and-or-informatics' => 'Mathématiques et/ou informatique',
     
-        'medical-sciences' => '',
+        'medical-sciences' => 'Sciences médicales',
     
-        'geography-and-or-geology' => '',
+        'geography-and-or-geology' => 'Géographie et/ou géologie',
     
-        'agriculture-sciences' => '',
+        'agriculture-sciences' => 'Science agricole',
     
-        'Lang_level_A1' => '',
+        'Lang_level_A1' => 'A1: élémentaire',
     
-        'Lang_level_A2' => '',
+        'Lang_level_A2' => 'A2:débutant',
     
-        'Lang_level_B1' => '',
+        'Lang_level_B1' => 'B1: pre-intermediaire',
     
-        'Lang_level_B2' => '',
+        'Lang_level_B2' => 'B2: intermédiaire',
     
-        'Lang_level_C1' => '',
+        'Lang_level_C1' => 'C1: avancé',
     
-        'Lang_level_C2' => '',
+        'Lang_level_C2' => 'C2: compétent',
     
 ];
