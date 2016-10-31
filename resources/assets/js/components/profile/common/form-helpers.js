@@ -33,7 +33,7 @@ var validateField = function() {
     var that = this;
     var data = {validate: true,}
 
-    var value = this.model || '';
+    var value = this.value || '';
     var code = this.code;
     if (this.groupCode) {
         var field = {'id': this.groupId};
@@ -58,16 +58,19 @@ var validateField = function() {
         });
 };
 
-var modelWatch = function(value) {
+var onInput = function(event) {
+    this.$emit('input', event.target.value);
+
     this.has_error = false;
     this.error_message = null;
 
     this.debounced()
 };
 
+
 export var setDebounced = setDebounced;
 export var setCodeForValidation = setCodeForValidation;
 export var setInitError = setInitError;
 export var generateFieldName = generateFieldName;
 export var validateField = validateField;
-export var modelWatch = modelWatch;
+export var onInput = onInput;

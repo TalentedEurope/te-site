@@ -1,10 +1,10 @@
 <template>
-    <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
+    <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error, 'hidden-type': input_type == 'hidden' }">
         <!-- <label :for="code">{{label}}</label> -->
-        <input v-if="input_type == 'text'" type="text" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" v-model="model" :readonly="readonly"/>
-        <input v-if="input_type == 'email'" type="email" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" v-model="model" :readonly="readonly"/>
-        <input v-if="input_type == 'password'" type="password" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" v-model="model" :readonly="readonly"/>
-        <input v-if="input_type == 'hidden'" type="hidden" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" v-model="model" :readonly="readonly"/>
+        <input v-if="input_type == 'text'" type="text" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" :value="value" @input="onInput" :readonly="readonly"/>
+        <input v-if="input_type == 'email'" type="email" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" :value="value" @input="onInput" :readonly="readonly"/>
+        <input v-if="input_type == 'password'" type="password" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" :value="value" @input="onInput" :readonly="readonly"/>
+        <input v-if="input_type == 'hidden'" type="hidden" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" :value="value" @input="onInput" :readonly="readonly"/>
 
         <span v-if="has_error" class="help-block">
             <strong>{{error_message}}</strong>
@@ -13,13 +13,12 @@
 </template>
 
 <script>
-import { setDebounced, setCodeForValidation, setInitError, generateFieldName, validateField, modelWatch} from './form-helpers'
+import { setDebounced, setCodeForValidation, setInitError, generateFieldName, validateField, onInput } from './form-helpers'
 
 export default {
     props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'type', 'value', 'errors', 'readonly'],
     data() {
         return {
-            'model': this.value,
             'has_error': false,
             'error_message': '',
             'code_for_validation': '',
@@ -34,9 +33,13 @@ export default {
     methods: {
         validateField: validateField,
         generateFieldName: generateFieldName,
-    },
-    watch: {
-        model: modelWatch
+        onInput: onInput
     }
 };
 </script>
+
+<style lang="sass" scoped>
+.form-group.hidden-type {
+    margin: 0;
+}
+</style>

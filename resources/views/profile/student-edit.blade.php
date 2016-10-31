@@ -114,6 +114,8 @@
 
               <experiences experiences='{!! json_encode($student->experiences, JSON_HEX_APOS) !!}' errors='{!! json_encode($errors, JSON_HEX_APOS) !!}'></experiences>
 
+              <professional-skills selected-skills='{!! json_encode($student->professionalSkills, JSON_HEX_APOS) !!}' skills='{!! json_encode($professionalSkills, JSON_HEX_APOS) !!}'></professional-skills>
+
               <div class="form-group{{ $errors->has('profesional_skills') ? ' has-error' : '' }}">
                 <label for="profesional_skills">Professional skills</label>
                 <ul class="selected-skills list-unstyled">

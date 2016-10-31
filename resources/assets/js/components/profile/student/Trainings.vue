@@ -6,10 +6,10 @@
                 <remove-item-button :items="parsed_trainings" :item="training"></remove-item-button>
             </header>
 
-            <text-box-form type="hidden" code="id" group-code="trainings" :group-id="training.id" :value="training.id"></text-box-form>
+            <text-box-form type="hidden" code="id" group-code="trainings" :group-id="training.id" v-model="training.id"></text-box-form>
 
-            <text-box-form code="name" group-code="trainings" :group-id="training.id" label="Course name" placeholder="Course name" :value="training.name" :errors="errors"></text-box-form>
-            <date-form code="date" group-code="trainings" :group-id="training.id" label="Date" placeholder="Date" :value="training.date" :errors="errors"></date-form>
+            <text-box-form code="name" group-code="trainings" :group-id="training.id" label="Course name" placeholder="Course name" v-model="training.name" :errors="errors"></text-box-form>
+            <date-form code="date" group-code="trainings" :group-id="training.id" label="Date" placeholder="Date" v-model="training.date" :errors="errors"></date-form>
 
             <hr>
             <file-form code="certificate" group-code="trainings" :group-id="training.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/training/32"></file-form>
@@ -22,8 +22,8 @@
                 <remove-item-button :items="new_trainings" :item="new_training"></remove-item-button>
             </header>
 
-            <text-box-form code="name" group-code="trainings" :group-id="new_training.id" label="Course name" placeholder="Course name" :value="new_training.name" :errors="errors"></text-box-form>
-            <date-form code="date" group-code="trainings" :group-id="new_training.id" label="Date" placeholder="Date" :value="new_training.date" :errors="errors"></date-form>
+            <text-box-form code="name" group-code="trainings" :group-id="new_training.id" label="Course name" placeholder="Course name" v-model="new_training.name" :errors="errors"></text-box-form>
+            <date-form code="date" group-code="trainings" :group-id="new_training.id" label="Date" placeholder="Date" v-model="new_training.date" :errors="errors"></date-form>
 
             <hr>
             <file-form code="certificate" group-code="trainings" :group-id="new_training.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/training/32"></file-form>
@@ -33,7 +33,7 @@
 
         <p class="text-center">
             <button class="btn btn-default" @click.prevent="addNewTraining()">
-                <i class="fa fa-plus" aria-hidden="true"></i> add more trainings
+                <i class="fa fa-plus" aria-hidden="true"></i> {{addButtonText}}
             </button>
         </p>
         <hr class="separator">
@@ -52,21 +52,32 @@ export default {
     data() {
         return {
             parsed_trainings: [],
+            new_trainings: [],
             parsed_errors: [],
-            new_trainings: []
+            total: 0
         }
     },
     mounted() {
         this.parsed_trainings = JSON.parse(this.trainings);
         this.parsed_errors = JSON.parse(this.errors);
-        if (this.parsed_trainings.length == 0) {
-            this.addNewTraining();
-        }
     },
     methods: {
         addNewTraining: function () {
             var count = this.new_trainings.length;
             this.new_trainings.push({"id": `new_${count}`});
+        }
+    },
+    computed: {
+        addButtonText: function () {
+            return this.total == 0 ? 'add a training' : 'add more trainings';
+        }
+    },
+    watch: {
+        parsed_trainings: function () {
+            this.total = this.parsed_trainings.length + this.new_trainings.length
+        },
+        new_trainings: function () {
+            this.total = this.parsed_trainings.length + this.new_trainings.length
         }
     }
 };

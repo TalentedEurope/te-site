@@ -282,8 +282,8 @@ class ProfileController extends Controller
                         $study->level = $stud['level'];
                     }
 
-                    if (isset($itemVal->valid()['study_field'])) {
-                        $study->field = $stud['study_field'];
+                    if (isset($itemVal->valid()['field'])) {
+                        $study->field = $stud['field'];
                     }
 
                     if (isset($itemVal->valid()['gradecard'])) {
