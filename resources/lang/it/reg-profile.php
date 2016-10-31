@@ -129,7 +129,7 @@ return [
     
         'forgot_password' => 'Password dimenticata?',
     
-        'administration' => 'Amministrativa',
+        'administration' => 'Amministrazione',
     
         'architecture-amp-construction' => 'Architettura e costruzioni',
     
@@ -139,7 +139,7 @@ return [
     
         'business-amp-consulting' => 'Commercio e consulenza',
     
-        'communication-amp-media-amp-pr' => 'Comunicazione e media e PR',
+        'communication-amp-media-amp-pr' => 'Comunicazione, media e PR',
     
         'consumer-goods' => 'Beni di consumo',
     
@@ -151,7 +151,7 @@ return [
     
         'engineering' => 'Ingegneria',
     
-        'hospitality-amp-tourism' => 'Turismo e settore alberghiero',
+        'hospitality-amp-tourism' => 'Ospitalità e turismo',
     
         'human-resources' => 'Risorse umane',
     
@@ -181,7 +181,7 @@ return [
     
         'social-work' => 'Servizio sociale',
     
-        'sport-and-or-health-amp-wellness' => 'Sport e/o salute e wellness',
+        'sport-and-or-health-amp-wellness' => 'Sport e/o salute e benessere',
     
         'technology-amp-telecommunications' => 'Tecnologie e telecomunicazioni',
     
@@ -215,16 +215,16 @@ return [
     
         'agriculture-sciences' => 'Scienze agricole',
     
-        'Lang_level_A1' => 'A1: Principiante totale',
+        'Lang_level_A1' => 'A1: Livello base',
     
-        'Lang_level_A2' => 'A2: Principiante',
+        'Lang_level_A2' => 'A2: Livello elementare',
     
-        'Lang_level_B1' => 'B1: Inferiore-intermedio',
+        'Lang_level_B1' => 'B1: Livello intermedio o "di soglia"',
     
-        'Lang_level_B2' => 'B2: Intermedio-avanzato',
+        'Lang_level_B2' => 'B2: Livello intermedio superiore',
     
-        'Lang_level_C1' => 'C1: Avanzato',
+        'Lang_level_C1' => 'C1: Livello avanzato',
     
-        'Lang_level_C2' => 'C2: Esperto',
+        'Lang_level_C2' => 'C2: Livello esperto',
     
 ];

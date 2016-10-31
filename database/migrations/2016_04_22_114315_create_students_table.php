@@ -19,7 +19,7 @@ class CreateStudentsTable extends Migration
             $table->integer('institution_id')->unsigned()->nullable();
             $table->foreign('institution_id')->references('id')->on('institutions')->onDelete('cascade');
             $table->string('curriculum');
-            $table->string('talent');
+            $table->string('talent', 300);
             $table->boolean('valid')->default(false);
             $table->boolean('private')->default(false);
             $table->date('renewed_at');
