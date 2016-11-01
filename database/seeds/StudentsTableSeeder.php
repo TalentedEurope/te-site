@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Config;
 use App\Models\User;
 use App\Models\Institution;
 use App\Models\Student;
@@ -46,6 +47,7 @@ class StudentsTableSeeder extends Seeder
                     'country' => array_keys(User::$countries)[rand(0, sizeof(array_keys(User::$countries)) - 1)],
                 ]);
                 $nationality = $country_codes[rand(0, sizeOf($country_codes) - 1)];
+                $lang = Config::get('app.languages')[rand(0, sizeOf(Config::get('app.languages')) - 1)];
 
                 Bouncer::assign('student')->to($user);
                 $student = Student::create([
@@ -98,7 +100,7 @@ class StudentsTableSeeder extends Seeder
                 // Student professional skills
                 foreach (range(1, 5) as $professionalSkillsIndex) {
                     $skillName = $faker->word;
-                    $skill = ProfessionalSkill::firstOrCreate(array('name' => $skillName, 'language_code' => $nationality));
+                    $skill = ProfessionalSkill::firstOrCreate(array('name' => $skillName, 'language_code' => $lang));
                     if ($student->professionalSkills()->where('name', '=', $skillName)->count() == 0) {
                         $student->professionalSkills()->attach($skill);
                     }

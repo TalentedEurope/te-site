@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\Config;
 
 class CreateProfessionalSkillsTable extends Migration
 {
@@ -12,7 +13,7 @@ class CreateProfessionalSkillsTable extends Migration
     {
         Schema::create('professional_skills', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('language_code');
+            $table->enum('language_code', Config::get('app.languages'));
             $table->string('name');
             $table->unique(array('language_code', 'name'));
         });
