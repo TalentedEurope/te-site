@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import VueResource from 'vue-resource';
 import _ from 'lodash';
+require('jquery-toast-plugin/dist/jquery.toast.min.css');
+require('jquery-toast-plugin/dist/jquery.toast.min.js');
 
 import Search from './components/search/Main.vue';
 import Alerts from './components/alerts/Main.vue';

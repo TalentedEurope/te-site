@@ -55,7 +55,7 @@
         @endif
         <div class="contact">
           <h3>Get in contact</h3>
-            <alert-button :company-id="{{ $company->id }}" placement="bottom"></alert-button>
+            {{-- <alert-button :company-id="{{ $company->id }}" :alertable="{{ $company->alertable }}" placement="bottom"></alert-button> --}}
           <hr>
           @if (!$public)
           <p><i class="fa icon fa-envelope"></i> Email: <a href="mailto:{{ $company->notification_email ? $company->notification_email : $user->email }}">

@@ -2,7 +2,7 @@
     <div class="form-group">
         <label :for="code">{{ label }}</label>
         <input type="file" :id="generateFieldId()" :name="generateFieldName()" :filename="code"/>
-        <p class="download-button h4" v-if="fileUrl">
+        <p class="download-button h4" v-if="hasFile">
             <a class="btn btn-primary" :alt="downloadText" :href="fileUrl">
                 <i class="fa fa-cloud-download" aria-hidden="true"></i> {{ downloadText }}
             </a>
@@ -13,7 +13,7 @@
 <script>
 import { generateFieldId, generateFieldName } from './form-helpers';
 export default {
-    props: ['code', 'label', 'groupCode', 'groupId', 'downloadText', 'fileUrl'],
+    props: ['code', 'label', 'groupCode', 'groupId', 'downloadText', 'hasFile', 'fileUrl'],
     methods: {
         generateFieldId: generateFieldId,
         generateFieldName: generateFieldName,

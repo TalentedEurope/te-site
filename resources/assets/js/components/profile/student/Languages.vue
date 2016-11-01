@@ -12,7 +12,7 @@
             <select-form code="level" group-code="languages" :group-id="language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" :value="language.level" :errors="errors"></select-form>
 
             <hr>
-            <file-form code="certificate" group-code="languages" :group-id="language.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/language/32"></file-form>
+            <file-form code="certificate" group-code="languages" :group-id="language.id" label="Certificate" download-text="Download Certificate" :has-file="language.certificate" :file-url="getFileUrl(language.id, 'certificate')"></file-form>
             <hr>
         </div>
 
@@ -26,7 +26,7 @@
             <select-form code="level" group-code="languages" :group-id="new_language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" :value="new_language.level" :errors="errors"></select-form>
 
             <hr>
-            <file-form code="certificate" group-code="languages" :group-id="new_language.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/language/32"></file-form>
+            <file-form code="certificate" group-code="languages" :group-id="new_language.id" label="Certificate" download-text="Download Certificate"></file-form>
             <hr>
 
         </div>
@@ -65,6 +65,9 @@ export default {
         addNewLanguage: function () {
             var count = this.new_languages.length;
             this.new_languages.push({"id": `new_${count}`});
+        },
+        getFileUrl: function (language_id, code) {
+            return `/${code}/${this.userId}/language/${language_id}`;
         }
     },
     computed: {

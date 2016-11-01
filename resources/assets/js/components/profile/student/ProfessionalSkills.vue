@@ -98,7 +98,9 @@ export default {
     computed: {
         suggestions() {
             return this.items.filter((item) => {
-                return _.indexOf(this.selected_items, item) == -1;
+                return !_.find(this.selected_items, (selected) => {
+                    return item.id == selected.id;
+                });
             });
         },
         matches() {

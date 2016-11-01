@@ -28,6 +28,7 @@
 
 <script>
 import { studentsValidationResource } from '../../resources/students-validation'
+import { defaultErrorToast } from 'errors-handling.js';
 
 export default {
     data() {
@@ -44,7 +45,7 @@ export default {
                 .then((response) => {
                     this.students = response.body;
                 }, (errorResponse) => {
-                    console.log(errorResponse);
+                    defaultErrorToast();
                 });
         },
         statusClass(student) {

@@ -20,6 +20,7 @@ import SearchFilters from './SearchFilters.vue';
 import Results from './Results.vue';
 import EventBus from 'event-bus.js';
 import { studentsResultsResource, companiesResultsResource } from 'resources/search';
+import { defaultErrorToast } from 'errors-handling.js';
 import smoothScroll from 'smoothscroll';
 
 export default {
@@ -80,7 +81,7 @@ export default {
                 this.results = response.body.data;
                 this.pagination_data = response.body;
             }, (errorResponse) => {
-                console.log(errorResponse);
+                defaultErrorToast();
             }).finally(() => {
                 this.init_loading = false;
                 this.loading = false;

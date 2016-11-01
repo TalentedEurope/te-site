@@ -38,6 +38,7 @@
 import Pager from '../common/Pager.vue';
 import EventBus from 'event-bus.js';
 import { alertsResource } from '../../resources/alerts';
+import { defaultErrorToast } from 'errors-handling.js';
 import smoothScroll from 'smoothscroll';
 
 export default {
@@ -69,7 +70,7 @@ export default {
                     this.alerts = response.body.data;
                     this.pagination_data = response.body;
                 }, (errorResponse) => {
-                    console.log(errorResponse);
+                    defaultErrorToast()
                 })
                 .finally(() => {
                     this.loading = false;
