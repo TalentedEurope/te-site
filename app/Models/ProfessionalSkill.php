@@ -8,7 +8,7 @@ class ProfessionalSkill extends Model
 {
     public $timestamps = false;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name','language_code'];
 
     protected $primaryKey = 'id';
 
