@@ -21,9 +21,9 @@
             <select-form code="field" group-code="studies" :group-id="study.id" label="Field of studies" placeholder=" - Field of studies - " :values="studyFields" :value="study.field" :errors="errors"></select-form>
 
             <hr>
-            <file-form code="certificate" group-code="studies" :group-id="study.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/study/32"></file-form>
+            <file-form code="certificate" group-code="studies" :group-id="study.id" label="Certificate" download-text="Download Certificate" :has-file="study.certificate" :file-url="getFileUrl(study.id, 'certificate')"></file-form>
             <hr>
-            <file-form code="gradecard" group-code="studies" :group-id="study.id" label="Gradecard" download-text="Download Gradecard" file-url="/profile/gradecard/2/study/32"></file-form>
+            <file-form code="gradecard" group-code="studies" :group-id="study.id" label="Gradecard" download-text="Download Gradecard" :has-file="study.gradecard" :file-url="getFileUrl(study.id, 'gradecard')"></file-form>
             <hr>
         </div>
 
@@ -36,14 +36,14 @@
                 </button>
             </header>
 
-            <text-box-form code="institution_name" group-code="studies" :group-id="new_study.id" label="Institution name" placeholder="Institution name" :value="new_study.institution_name" :errors="errors"></text-box-form>
+            <text-box-form code="institution_name" group-code="studies" :group-id="new_study.id" label="Institution name" placeholder="Institution name" :value="new_study.institution_name"></text-box-form>
 
             <div class="row">
-                <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="new_study.id" label="Course/Studies name" placeholder="Course/Studies name" :value="new_study.name" :errors="errors"></text-box-form>
-                <select-form class="col-sm-4" code="level" group-code="studies" :group-id="new_study.id" label="Level" placeholder=" - Level - " :values="studyLevels" :value="new_study.level" :errors="errors"></select-form>
+                <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="new_study.id" label="Course/Studies name" placeholder="Course/Studies name" :value="new_study.name"></text-box-form>
+                <select-form class="col-sm-4" code="level" group-code="studies" :group-id="new_study.id" label="Level" placeholder=" - Level - " :values="studyLevels" :value="new_study.level"></select-form>
             </div>
 
-            <select-form code="field" group-code="studies" :group-id="new_study.id" label="Field of studies" placeholder=" - Field of studies - " :values="studyFields" :value="new_study.field" :errors="errors"></select-form>
+            <select-form code="field" group-code="studies" :group-id="new_study.id" label="Field of studies" placeholder=" - Field of studies - " :values="studyFields" :value="new_study.field"></select-form>
 
             <hr>
             <file-form code="certificate" group-code="studies" :group-id="new_study.id" label="Certificate"></file-form>
@@ -68,7 +68,7 @@ import SelectForm from '../common/SelectForm.vue';
 import FileForm from '../common/FileForm.vue';
 
 export default {
-    props: ['studies', 'studyLevels', 'studyFields', 'errors'],
+    props: ['studies', 'studyLevels', 'studyFields', 'userId', 'errors'],
     components: { RemoveItemButton, TextBoxForm, SelectForm, FileForm },
     data() {
         return {
@@ -94,6 +94,9 @@ export default {
             var count = this.new_studies.length;
             this.new_studies.push(
                 {'id': `new_${count}`, 'institution_name': '', 'name': '', 'level': '', 'field': ''});
+        },
+        getFileUrl: function (study_id, code) {
+            return `/${code}/${this.userId}/study/${study_id}`;
         }
     },
     computed: {
