@@ -12,7 +12,7 @@
             <date-form code="date" group-code="trainings" :group-id="training.id" label="Date" placeholder="Date" :value="training.date" :errors="errors"></date-form>
 
             <hr>
-            <file-form code="certificate" group-code="trainings" :group-id="training.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/training/32"></file-form>
+            <file-form code="certificate" group-code="trainings" :group-id="training.id" label="Certificate" download-text="Download Certificate" :has-file="training.certificate" :file-url="getFileUrl(training.id, 'certificate')"></file-form>
             <hr>
         </div>
 
@@ -26,7 +26,7 @@
             <date-form code="date" group-code="trainings" :group-id="new_training.id" label="Date" placeholder="Date" :value="new_training.date" :errors="errors"></date-form>
 
             <hr>
-            <file-form code="certificate" group-code="trainings" :group-id="new_training.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/training/32"></file-form>
+            <file-form code="certificate" group-code="trainings" :group-id="new_training.id" label="Certificate" download-text="Download Certificate"></file-form>
             <hr>
 
         </div>
@@ -47,7 +47,7 @@ import DateForm from '../common/DateForm.vue';
 import FileForm from '../common/FileForm.vue';
 
 export default {
-    props: ['trainings', 'trainingLevels', 'trainingFields', 'errors'],
+    props: ['trainings', 'trainingLevels', 'trainingFields', 'userId', 'errors'],
     components: { RemoveItemButton, TextBoxForm, DateForm, FileForm },
     data() {
         return {
@@ -65,6 +65,9 @@ export default {
         addNewTraining: function () {
             var count = this.new_trainings.length;
             this.new_trainings.push({"id": `new_${count}`});
+        },
+        getFileUrl: function (training_id, code) {
+            return `/${code}/${this.userId}/training/${training_id}`;
         }
     },
     computed: {

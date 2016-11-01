@@ -25,6 +25,7 @@ import Vue from 'vue';
 import EventBus from 'event-bus.js';
 import MultiOptionsFilter from './MultiOptionsFilter.vue';
 import { companiesFiltersResource, studentsFiltersResource } from 'resources/search';
+import { defaultErrorToast } from 'errors-handling.js';
 
 export default {
     props: ['collective'],
@@ -56,7 +57,7 @@ export default {
             resource.get().then((response) => {
                 this.filters = response.body;
             }, (errorResponse) => {
-                console.log(errorResponse);
+                defaultErrorToast();
             });
         },
         removeCurrentSearchFilter: function (filter) {

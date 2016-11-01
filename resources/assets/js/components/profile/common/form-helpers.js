@@ -1,4 +1,5 @@
 import { profileResource } from 'resources/profile';
+import { defaultErrorToast } from 'errors-handling.js';
 
 var setDebounced = function () {
     this.debounced = _.debounce(this.validateField, 1500);
@@ -14,10 +15,12 @@ var setCodeForValidation = function () {
 
 var setInitError = function () {
     var code = this.code_for_validation;
-
-    if (_.has(this.errors, code)) {
-        this.has_error = true;
-        this.error_message = this.errors[code][0];
+    if (this.errors) {
+        var parsed_errors = JSON.parse(this.errors);
+        if (_.has(parsed_errors, code)) {
+            this.has_error = true;
+            this.error_message = parsed_errors[code][0];
+        }
     }
 };
 
@@ -62,7 +65,7 @@ var validateField = function() {
                 that.error_message = body[code][0];
             }
         }, function(errorResponse) {
-            console.log(errorResponse)
+            defaultErrorToast();
         });
 };
 
