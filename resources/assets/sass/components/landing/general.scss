@@ -64,6 +64,41 @@
 
 @media (min-width: 1100px) {
     .content-box {
+        height: 590px;
+        width: 50%;
+    }
+
+    .content-image {
+        &.first-image {
+            height: 590px;
+        }
+
+        &.second-image {
+            display: block;
+        }
+    }
+}
+
+
+@media (min-width: 1100px) {
+    .content-box {
+        height: 590px;
+        width: 50%;
+    }
+
+    .content-image {
+        &.first-image {
+            height: 590px;
+        }
+
+        &.second-image {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 1300px) {
+    .content-box {
         height: 480px;
         width: 50%;
     }
