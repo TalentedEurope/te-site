@@ -13,10 +13,13 @@ use App\Models\StudentStudy;
 use App\Models\StudentLanguage;
 use App\Models\CompanyKeyword;
 use App\Models\StudyKeyword;
+use App\Models\Alert;
 use App\Http\Requests;
 use JWTAuth;
 use config;
 use Validator;
+use Auth;
+use Carbon\Carbon;
 
 class SearchController extends SiteSearchController
 {
@@ -162,6 +165,7 @@ class SearchController extends SiteSearchController
 
     public function getCompanies(Request $request)
     {
+        $user = Auth::user();
         $rules = array(
                         'search_text' => 'string|nullable',
                         'activities.*' => 'required|in:'.implode(',', Company::$activities),
@@ -195,6 +199,11 @@ class SearchController extends SiteSearchController
 
         $results = $results->paginate(env('PAGINATE_ENTRIES', 10));
 
+        $alerts = array();
+        if ($user && $user->isA('student')) {
+            $alerts = array_flatten(Alert::where('origin_id', $user->id)->whereDate('created_at', '>', Carbon::now()->subDays(env("MIN_ALERT_DAYS", 1)))->select('target_id')->get()->toArray());
+        }
+
         $companies = array();
         foreach ($results as $company) {
             $skills = array();
@@ -220,6 +229,7 @@ class SearchController extends SiteSearchController
                 'twitter' => $company->user->twitter,
                 'linkedin' => $company->user->linkedin,
                 'website' => $company->website,
+                'alertable' => !in_array($company->user->id, $alerts),
             );
         }
         return array(

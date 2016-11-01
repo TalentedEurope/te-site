@@ -8,6 +8,10 @@ class ProfessionalSkill extends Model
 {
     public $timestamps = false;
 
+    protected $fillable = ['name'];
+
+    protected $primaryKey = 'id';
+
     public static $rules = array(
             'name' => 'required|unique:professional_skills',
             'language_code' => 'required',
