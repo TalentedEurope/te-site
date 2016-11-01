@@ -96,9 +96,11 @@ class ProfileController extends Controller
             $data = $this->getCompanyPublicData($user, $public);
             $data['token'] = LoginController::userToken();
 
+
             return view('profile.company-view', $data);
         }
     }
+
 
     protected function processUser(Request $request, User $user)
     {
@@ -439,7 +441,7 @@ class ProfileController extends Controller
                 $skillIds = array();
                 foreach ($skills as $skill) {
                     $sk = ProfessionalSkill::firstOrCreate(array('name' => $skill, 'language_code' => Config::get('app.locale') ));
-                    if ($skill && !$student->professionalSkills()->find($sk)) {
+                    if ($skill && !$student->professionalSkills()->find($sk->id)) {
                         $student->professionalSkills()->attach($sk);
                         $skillIds[] = $sk->id;
                     }
