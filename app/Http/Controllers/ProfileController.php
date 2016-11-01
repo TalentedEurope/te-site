@@ -19,6 +19,7 @@ use Auth;
 use Illuminate\Support\MessageBag;
 use Validator;
 use Image;
+use Session;
 use JWTAuth;
 use Config;
 
@@ -415,8 +416,8 @@ class ProfileController extends Controller
                     $expIds[] = $language->id;
                 }
             }
-            if (sizeof($langIds)) {
-                StudentLanguage::where('student_id', $student->id)->whereNotIn('id', $langIds)->delete();
+            if (sizeof($expIds)) {
+                StudentLanguage::where('student_id', $student->id)->whereNotIn('id', $expIds)->delete();
             }
         }
 
@@ -439,15 +440,17 @@ class ProfileController extends Controller
             $skills = $v->valid()['professionalSkills'];
             if ($skills) {
                 $skillIds = array();
+                // Not a fan of this but theres a bug that makes $student->professionalSkills()->whereNotIn('id', $skillIds)->detach(); fail.
+                $student->professionalSkills()->detach();
                 foreach ($skills as $skill) {
-                    $sk = ProfessionalSkill::firstOrCreate(array('name' => $skill, 'language_code' => Config::get('app.locale') ));
+                    $sk = ProfessionalSkill::where('name', $skill)->where('language_code', Config::get('app.locale'))->first();
+                    if (!$sk) {
+                        $sk = ProfessionalSkill::create(array('name' => $skill, 'language_code' => Config::get('app.locale')));
+                    }
+                    $skillIds[] = $sk->id;
                     if ($skill && !$student->professionalSkills()->find($sk->id)) {
                         $student->professionalSkills()->attach($sk);
-                        $skillIds[] = $sk->id;
                     }
-                }
-                if (sizeof($skillIds)) {
-                    $student->professionalSkills()->whereNotIn('id', $skillIds)->delete();
                 }
             }
         }
