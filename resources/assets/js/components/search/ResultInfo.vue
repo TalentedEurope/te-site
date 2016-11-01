@@ -1,7 +1,7 @@
 <template>
     <div class="well result-info">
-        <span v-if="!isFiltering" class="h4">There exists {{ numberOfResults }} {{ collective }} in the database</span>
-        <span v-if="isFiltering" class="h4">We found {{ numberOfResults }} {{ collective }} matching your needs</span>
+        <span class="h4">{{infoMessage}}</span>
+
         <!-- <p v-if="collective == 'companies'">
             <label class="h5" for="magic-matching">
                 <input type="checkbox" name="magic-matching" id="magic-matching" value="1">
@@ -14,6 +14,26 @@
 <script>
 export default {
     props: ['collective', 'numberOfResults', 'isFiltering'],
+    methods: {
+        getCollective: function () {
+            if (this.numberOfResults > 1) {
+                return this.collective;
+            }
+            return this.collective == 'companies' ? 'company' : 'student';
+        }
+    },
+    computed: {
+        infoMessage: function () {
+            if (this.numberOfResults == 0) {
+                return `There are no ${this.collective} matching the selected filters at the moment`;
+            }
+            var collective = this.getCollective();
+            if (this.isFiltering) {
+                return `We found ${this.numberOfResults} ${collective} matching your needs`;
+            }
+            return `There exists ${this.numberOfResults} ${collective} in the database`;
+        }
+    }
 }
 </script>
 

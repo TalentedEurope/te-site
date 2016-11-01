@@ -66,6 +66,9 @@ class StudentsTableSeeder extends Seeder
                         'level' => StudentStudy::$levels[
                             rand(0, sizeOf(StudentStudy::$levels) - 1)
                         ],
+                        'field' => StudentStudy::$fields[
+                            rand(0, sizeOf(StudentStudy::$fields) - 1)
+                        ],
                         'student_id' => $student->id,
                         'certificate' => 'sample.pdf',
                         'institution_name' => $faker->company,

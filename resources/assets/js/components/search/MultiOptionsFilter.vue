@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import Vue from 'vue';
+
 export default {
     props: ['items', 'id', 'title'],
     data() {
@@ -38,7 +40,7 @@ export default {
             this.view_all = false;
         },
         change: function (item) {
-            this.$set(item, 'selected', !item.selected);
+            Vue.set(item, 'selected', !item.selected);
             var data = {id: this.id, item_id: this.getInputId(this.id, item.id), item: item};
             if (item.selected) {
                 this.$emit('onselectfilter', data);

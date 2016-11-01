@@ -1,9 +1,12 @@
 <template>
     <div>
-        <div class="study" v-for="(study, index) in parsed_studies">
+        <div class="study" v-for="(index, study) in parsed_studies">
             <header class="clearfix">
                 <h4 class="pull-left">Studies #{{ index + 1 }}</h4>
-                <remove-item-button :items="parsed_studies" :item="study"></remove-item-button>
+                <remove-item-button v-if="!showClearButton" :items="parsed_studies" :item="study"></remove-item-button>
+                <button class="pull-right remove btn-warning btn btn-sm" v-if="showClearButton" @click.prevent="clearForm()" >
+                    <i class="fa fa-close" aria-hidden="true"></i> clear
+                </button>
             </header>
 
             <text-box-form type="hidden" code="id" group-code="studies" :group-id="study.id" :value="study.id"></text-box-form>
@@ -15,7 +18,7 @@
                 <select-form class="col-sm-4" code="level" group-code="studies" :group-id="study.id" label="Level" placeholder=" - Level - " :values="studyLevels" :value="study.level" :errors="errors"></select-form>
             </div>
 
-            <select-form code="study_field" group-code="studies" :group-id="study.id" label="Field of studies" placeholder=" - Field of studies - " :values="studyFields" :value="study.study_field" :errors="errors"></select-form>
+            <select-form code="field" group-code="studies" :group-id="study.id" label="Field of studies" placeholder=" - Field of studies - " :values="studyFields" :value="study.field" :errors="errors"></select-form>
 
             <hr>
             <file-form code="certificate" group-code="studies" :group-id="study.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/study/32"></file-form>
@@ -24,20 +27,23 @@
             <hr>
         </div>
 
-        <div class="study" v-for="(new_study, index) in new_studies">
+        <div class="study" v-for="(index, new_study) in new_studies">
             <header class="clearfix">
                 <h4 class="pull-left">Studies #{{ (parsed_studies.length + index + 1) }}</h4>
-                <remove-item-button :items="new_studies" :item="new_study"></remove-item-button>
+                <remove-item-button v-if="!showClearButton" :items="new_studies" :item="new_study" ></remove-item-button>
+                <button class="pull-right remove btn-warning btn btn-sm" v-if="showClearButton" @click.prevent="clearForm()" >
+                    <i class="fa fa-close" aria-hidden="true"></i> clear
+                </button>
             </header>
 
-            <text-box-form code="institution_name" group-code="studies" :group-id="new_study.id" label="Institution name" placeholder="Institution name" :errors="errors"></text-box-form>
+            <text-box-form code="institution_name" group-code="studies" :group-id="new_study.id" label="Institution name" placeholder="Institution name" :value="new_study.institution_name" :errors="errors"></text-box-form>
 
             <div class="row">
-                <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="new_study.id" label="Course/Studies name" placeholder="Course/Studies name" :errors="errors"></text-box-form>
-                <select-form class="col-sm-4" code="level" group-code="studies" :group-id="new_study.id" label="Level" placeholder=" - Level - " :values="studyLevels" value="" :errors="errors"></select-form>
+                <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="new_study.id" label="Course/Studies name" placeholder="Course/Studies name" :value="new_study.name" :errors="errors"></text-box-form>
+                <select-form class="col-sm-4" code="level" group-code="studies" :group-id="new_study.id" label="Level" placeholder=" - Level - " :values="studyLevels" :value="new_study.level" :errors="errors"></select-form>
             </div>
 
-            <select-form code="study_field" group-code="studies" :group-id="new_study.id" label="Field of studies" placeholder=" - Field of studies - " :values="studyFields" value="" :errors="errors"></select-form>
+            <select-form code="field" group-code="studies" :group-id="new_study.id" label="Field of studies" placeholder=" - Field of studies - " :values="studyFields" :value="new_study.field" :errors="errors"></select-form>
 
             <hr>
             <file-form code="certificate" group-code="studies" :group-id="new_study.id" label="Certificate"></file-form>
@@ -71,7 +77,7 @@ export default {
             new_studies: []
         }
     },
-    mounted() {
+    ready() {
         this.parsed_studies = JSON.parse(this.studies);
         this.parsed_errors = JSON.parse(this.errors);
         if (this.parsed_studies.length == 0) {
@@ -79,9 +85,20 @@ export default {
         }
     },
     methods: {
+        clearForm: function () {
+            this.parsed_studies = [];
+            this.new_studies = [];
+            this.addNewStudy();
+        },
         addNewStudy: function () {
             var count = this.new_studies.length;
-            this.new_studies.push({"id": `new_${count}`});
+            this.new_studies.push(
+                {'id': `new_${count}`, 'institution_name': '', 'name': '', 'level': '', 'field': ''});
+        }
+    },
+    computed: {
+        showClearButton: function () {
+            return this.parsed_studies.length + this.new_studies.length == 1;
         }
     }
 };

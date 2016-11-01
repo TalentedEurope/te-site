@@ -3,7 +3,7 @@
         <label for="personalSkills">A list of the most valuable skills for the company</label>
         <p>Desired personal skills max: {{ maxPersonalSkills }}</p>
 
-        <ul class="selected-skills list-unstyled">
+        <ul class="selected-skills list-unstyled" v-show="selectedSkills.length > 0">
             <li class="btn btn-default" v-for="skill in selectedSkills">
                 <input type="hidden" name="personalSkills[]" :value="skill.id"/>
                 {{ skill.name }}

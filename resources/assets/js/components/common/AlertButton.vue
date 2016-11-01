@@ -17,7 +17,7 @@ export default {
             sending: false,
         }
     },
-    mounted: function () {
+    ready: function () {
         $(this.$el).find('[data-toggle="tooltip"]').tooltip();
     },
     methods: {
@@ -32,11 +32,11 @@ export default {
             alertsResource.post(this.companyId)
                 .then((response) => {
                     console.log(response);
-                }, (response) => {
-                    if (response.status == 429) {
+                }, (errorResponse) => {
+                    if (errorResponse.status == 429) {
                         alert("too many requests");
                     }
-                    console.log(response);
+                    console.log(errorResponse);
                 })
                 .finally(() => {
                     this.sending = false;

@@ -21,6 +21,14 @@ var setInitError = function () {
     }
 };
 
+var generateFieldId = function () {
+    if (this.groupCode) {
+        return `${this.groupCode}-${this.groupId}-${this.code}`;
+    } else {
+        return this.code;
+    }
+};
+
 var generateFieldName = function () {
     if (this.groupCode) {
         return `${this.groupCode}[${this.groupId}][${this.code}]`;
@@ -33,7 +41,7 @@ var validateField = function() {
     var that = this;
     var data = {validate: true,}
 
-    var value = this.model || '';
+    var value = this.value || '';
     var code = this.code;
     if (this.groupCode) {
         var field = {'id': this.groupId};
@@ -53,21 +61,23 @@ var validateField = function() {
                 that.has_error = true;
                 that.error_message = body[code][0];
             }
-        }, function(response) {
-            console.log(response)
+        }, function(errorResponse) {
+            console.log(errorResponse)
         });
 };
 
-var modelWatch = function(value) {
+var onInput = function(event) {
     this.has_error = false;
     this.error_message = null;
 
     this.debounced()
 };
 
+
 export var setDebounced = setDebounced;
 export var setCodeForValidation = setCodeForValidation;
 export var setInitError = setInitError;
+export var generateFieldId = generateFieldId;
 export var generateFieldName = generateFieldName;
 export var validateField = validateField;
-export var modelWatch = modelWatch;
+export var onInput = onInput;

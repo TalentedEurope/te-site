@@ -1,7 +1,7 @@
 <template>
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
         <label :for="code">{{label}}</label>
-        <textarea type="text" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" v-model="model"></textarea>
+        <textarea type="text" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" v-model="value" @input="onInput"></textarea>
 
         <span v-if="has_error" class="help-block">
             <strong>{{error_message}}</strong>
@@ -10,13 +10,12 @@
 </template>
 
 <script>
-import { setDebounced, setCodeForValidation, setInitError, generateFieldName, validateField, modelWatch} from './form-helpers'
+import { setDebounced, setCodeForValidation, setInitError, generateFieldName, validateField, onInput } from './form-helpers'
 
 export default {
     props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'value', 'errors'],
     data() {
         return {
-            'model': this.value,
             'has_error': false,
             'error_message': '',
             'code_for_validation': '',
@@ -30,9 +29,7 @@ export default {
     methods: {
         validateField: validateField,
         generateFieldName: generateFieldName,
-    },
-    watch: {
-        model: modelWatch
+        onInput: onInput
     }
 };
 </script>
