@@ -133,7 +133,7 @@
           <h1>{!! trans('landing.what_is_title') !!}</h1>
           <p>{!! trans('landing.what_is_text_1') !!}</p>
           <p>{!! trans('landing.what_is_text_2') !!}</p>
-          <h2>{!! trans('landing.what_is_cta') !!}</h2>
+          <h3>{!! trans('landing.what_is_cta') !!}</h3>
           <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureC.pdf') }}" target="_blank" class="btn">
             <i class="fi flaticon-cloud-download"></i>
               {!! explode("|", trans('global.company'))[1] !!}
