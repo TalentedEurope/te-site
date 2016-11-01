@@ -543,8 +543,9 @@ class ProfileController extends Controller
             'languageLevels' => $languageLevels,
             'languages' => $languages,
             'personalSkills' => PersonalSkill::getFormattedArray(),
-            'professionalSkills' => ProfessionalSkill::where('language_code', Config::get('app.locale')),
+            'professionalSkills' => ProfessionalSkill::where('language_code', Config::get('app.locale'))->get(),
         );
+
         if ($user->userable) {
             $data['student'] = $user->userable;
             $data['validator'] = "";
