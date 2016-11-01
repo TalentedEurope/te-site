@@ -1,29 +1,29 @@
 <template>
-    <div v-if="showAlertButton()">
-        <button class="btn btn-primary btn-alert btn-lg" @click="sendAlert()">
+    <div v-show="show_alert_button" v-bind:class="{ 'disabled': disabled }">
+        <button class="btn btn-disabled btn-alert btn-lg" @click="sendAlert()" :disabled="disabled" v-bind:class="{ 'btn-primary': !disabled }">
             <i class="fa fa-bell" aria-hidden="true"></i> I'm here!
         </button>
-        <button class="btn btn-primary btn-tooltip btn-lg" data-toggle="tooltip" :data-placement="placement" title="" data-original-title="Tell the company that you may be interested to work for them"> ? </button>
+        <button class="btn btn-primary btn-tooltip btn-lg" :disabled="disabled" data-toggle="tooltip" :data-placement="placement" title="" data-original-title="Tell the company that you may be interested to work for them"> ? </button>
     </div>
 </template>
 
 <script>
 import { alertsResource } from '../../resources/alerts';
+import { defaultErrorToast } from 'errors-handling.js';
 
 export default {
-    props: ['companyId', 'placement'],
+    props: ['companyId', 'alertable', 'placement'],
     data() {
         return {
             sending: false,
+            show_alert_button: $("meta[id='user_type']").attr('content') == 'student',
+            disabled: !this.alertable
         }
     },
     ready: function () {
         $(this.$el).find('[data-toggle="tooltip"]').tooltip();
     },
     methods: {
-        showAlertButton: function () {
-            return $("meta[id='user_type']").attr('content') == 'student';
-        },
         sendAlert: function () {
             if (this.sending) {
                 return;
@@ -31,12 +31,38 @@ export default {
             this.sending = true;
             alertsResource.post(this.companyId)
                 .then((response) => {
-                    console.log(response);
+                    this.disabled = true;
+                    $.toast({
+                        text : 'Alert sent successfully to the company',
+                        showHideTransition : 'fade',
+                        bgColor : '#31B47D',
+                        textColor : '#FFFFFF',
+                        allowToastClose : false,
+                        hideAfter : 2500,
+                        stack : false,
+                        loader: false,
+                        textAlign : 'center',
+                        position : 'top-center'
+                    })
+
                 }, (errorResponse) => {
                     if (errorResponse.status == 429) {
-                        alert("too many requests");
+                        this.disabled = true;
+                        $.toast({
+                            text : 'You have already sent an alert to this company',
+                            showHideTransition : 'fade',
+                            bgColor : '#bf433c',
+                            textColor : '#FFFFFF',
+                            allowToastClose : true,
+                            hideAfter : false,
+                            stack : false,
+                            loader: false,
+                            textAlign : 'center',
+                            position : 'top-center'
+                        });
+                    } else {
+                        defaultErrorToast();
                     }
-                    console.log(errorResponse);
                 })
                 .finally(() => {
                     this.sending = false;
@@ -66,6 +92,14 @@ export default {
 
     &:hover, &:focus, &:active {
         background: $yellow-light;
+    }
+}
+
+.disabled {
+    .btn-tooltip {
+        &, &:hover, &:focus, &:active {
+            background: $dark-gray;
+        }
     }
 }
 </style>

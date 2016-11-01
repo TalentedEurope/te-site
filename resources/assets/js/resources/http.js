@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueResource from 'vue-resource';
+import { defaultErrorToast } from 'errors-handling.js';
 
 Vue.use(VueResource);
 
@@ -13,7 +14,7 @@ Vue.http.options.headers = {
 Vue.http.interceptors.push((request, next) => {
     next((response) => {
         if (response.status === 404) {
-            console.log("Handle 404");
+            defaultErrorToast();
         }
     });
 });

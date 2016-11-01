@@ -1,4 +1,5 @@
 import { profileResource } from 'resources/profile';
+import { defaultErrorToast } from 'errors-handling.js';
 
 var setDebounced = function () {
     this.debounced = _.debounce(this.validateField, 1500);
@@ -62,7 +63,7 @@ var validateField = function() {
                 that.error_message = body[code][0];
             }
         }, function(errorResponse) {
-            console.log(errorResponse)
+            defaultErrorToast();
         });
 };
 

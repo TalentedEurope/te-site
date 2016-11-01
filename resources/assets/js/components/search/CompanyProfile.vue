@@ -19,13 +19,14 @@
                     {{company.talent_is}}
                 </p>
 
-                <alert-button :company-id="company.id" placement="right"></alert-button>
+                <alert-button :company-id="company.id" :alertable="company.alertable" placement="right"></alert-button>
 
             </div>
             <div class="col-xs-12 col-sm-4 col-md-3 text-center">
                 <figure>
                     <img :src="company.photo" alt="" class="img-circle img-responsive">
                 </figure>
+
                 <ul class="social">
                     <li v-if="company.facebook">
                         <a target="_blank" :href="company.facebook" rel="noopener noreferrer" class="icon-link">
@@ -48,6 +49,8 @@
                         </a>
                     </li>
                 </ul>
+
+                <a class="btn-primary btn view-more" :href="profileUrl">View more</a>
             </div>
         </div>
     </li>
@@ -60,9 +63,27 @@ import AlertButton from '../common/AlertButton.vue';
 export default {
     components: { SkillsTags, AlertButton },
     props: ['company'],
+    computed: {
+        profileUrl: function () {
+            return `/profile/${this.company.slug}/${this.company.id}`;
+        }
+    }
 }
 </script>
 
 <style lang="sass" scoped>
 @import "resources/assets/sass/components/site/search-profile";
+
+.profile img.img-responsive {
+    margin-bottom: 15px;
+}
+.view-more {
+    margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+    .profile img.img-responsive {
+        margin-top: 0;
+    }
+}
 </style>

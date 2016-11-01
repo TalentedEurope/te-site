@@ -40,6 +40,7 @@
 <script>
 import NewValidator from './NewValidator.vue'
 import { validatorsResource } from '../../resources/validators'
+import { defaultErrorToast } from 'errors-handling.js';
 
 export default {
     components: {
@@ -59,7 +60,7 @@ export default {
                 .then((response) => {
                     this.validators = response.body;
                 }, (errorResponse) => {
-                    console.log(errorResponse);
+                    defaultErrorToast();
                 });
         },
         toggleValidatorStatus(validator) {
@@ -67,7 +68,7 @@ export default {
                 .then((response) => {
                     validator.active = !validator.active;
                 }, (errorResponse) => {
-                    console.log(errorResponse);
+                    defaultErrorToast();
                 });
         }
     }
