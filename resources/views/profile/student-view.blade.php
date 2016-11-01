@@ -56,8 +56,7 @@
             @endif
 
           @else
-            <p class="validated-by col-sm-6"><span class="btn btn-lg"><strong><em>Refereeing
- pending</em></strong></span></p>
+            <p class="validated-by col-sm-6"><span class="btn btn-lg"><strong><em>Refereeing pending</em></strong></span></p>
           @endif
           @if ($student->curriculum && !$public)
           <p class="col-sm-6"><a class="btn btn-lg btn-primary pull-right"
@@ -107,7 +106,12 @@
           <ul class="timeline">
             @foreach ($student->studies as $study)
             <li>
-              <p class="date">{{ $studyFields[$study->field] }} - {{ $study->institution_name }}</p>
+              @if ($study->field)
+                <p class="date">{{ $studyFields[$study->field] }} - {{ $study->institution_name }}</p>
+              @else
+                <p class="date">{{ $study->institution_name }}</p>
+              @endif
+
               <h4>{{ $study->name }} | <em>{{ $studyLevels[$study->level] }}</em></h4>
               <p>
                 @if ($study->certificate && !$public)

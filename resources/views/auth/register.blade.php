@@ -28,12 +28,12 @@
                 <i class="fa fa-user" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Student"></i>
               </label>
             </div>
-            {{--
+
             <div class="radio-check">
-              <input id="Institution" type="radio" name="type" value="institution" @if (old('type') == "institution") checked @endif>
+              <input id="Institution" type="radio" disabled="true" name="type" value="institution" @if (old('type') == "institution") checked @endif>
               <label for="Institution" data-toggle="tooltip" data-placement="bottom" title="Institution"><i class="fa fa-university" aria-hidden="true"></i></label>
             </div>
-            --}}
+
             <div class="radio-check">
               <input id="Company" type="radio" name="type" value="company" @if (old('type') == "company") checked @endif>
               <label for="Company"><i data-toggle="tooltip" data-placement="bottom" title="Company" class="fa fa-building" aria-hidden="true"></i></label>

@@ -63,11 +63,11 @@ return [
     
         'search_info' => 'vyhľadávaj',
     
-        'company' => 'Spoločnosť/spoločnosti',
+        'company' => 'Spoločnosť|Spoločnosti',
     
-        'institution' => 'Inštitúcia/inštitúcie',
+        'institution' => 'Inštitúcia|Inštitúcie',
     
-        'student' => 'Študent/študenti',
+        'student' => 'Študent|študenti',
     
         'more_btn' => 'Zobraz viac',
     

@@ -63,12 +63,11 @@ return [
     
         'search_info' => 'recherche',
     
-        'company' => 'la société/ les sociétés',
+        'company' => 'la société|Les sociétés',
     
-        'institution' => 'l&apos;institution / les institutions',
+        'institution' => 'L&apos;institution|Les institutions',
     
-        'student' => 'l&apos; étudiant / les étudiants
-',
+        'student' => 'L&apos;étudiant|Les étudiants',
     
         'more_btn' => 'voir plus',
     
