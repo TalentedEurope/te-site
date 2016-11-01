@@ -133,9 +133,18 @@
           <h1>{!! trans('landing.what_is_title') !!}</h1>
           <p>{!! trans('landing.what_is_text_1') !!}</p>
           <p>{!! trans('landing.what_is_text_2') !!}</p>
-          <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochure.pdf') }}" target="_blank" class="btn">
+          <h2>{!! trans('landing.what_is_cta') !!}</h2>
+          <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureC.pdf') }}" target="_blank" class="btn">
             <i class="fi flaticon-cloud-download"></i>
-            {!! trans('landing.what_is_cta') !!}
+              {!! explode("|", trans('global.company'))[1] !!}
+          </a>
+          <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureI.pdf') }}" target="_blank" class="btn">
+            <i class="fi flaticon-cloud-download"></i>
+              {!! explode("|", trans('global.institution'))[1] !!}
+          </a>
+          <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureS.pdf') }}" target="_blank" class="btn">
+            <i class="fi flaticon-cloud-download"></i>
+              {!! explode("|", trans('global.student'))[1] !!}
           </a>
         </div>
       </div>

@@ -107,7 +107,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'es' => '',                    
                 
-                    'it' => '',                    
+                    'it' => 'Agenzia PR',                    
                 
                     'de' => '',                    
                 
@@ -125,7 +125,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'es' => '',                    
                 
-                    'it' => '',                    
+                    'it' => 'Supermercato',                    
                 
                     'de' => '',                    
                 
@@ -143,7 +143,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'es' => '',                    
                 
-                    'it' => '',                    
+                    'it' => 'Assistenza clienti',                    
                 
                     'de' => '',                    
                 
@@ -161,7 +161,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'es' => '',                    
                 
-                    'it' => '',                    
+                    'it' => 'Agenzia di design',                    
                 
                     'de' => '',                    
                 
@@ -305,7 +305,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'es' => '',                    
                 
-                    'it' => '',                    
+                    'it' => 'Fabbrica',                    
                 
                     'de' => '',                    
                 
@@ -503,7 +503,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'es' => '',                    
                 
-                    'it' => '',                    
+                    'it' => 'Tecnologia e telecomunicazione',                    
                 
                     'de' => '',                    
                 
