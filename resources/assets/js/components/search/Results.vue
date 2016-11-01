@@ -3,8 +3,12 @@
         <result-info :collective="collective" :number-of-results="paginationData.total" :is-filtering="isFiltering"></result-info>
 
         <ul class="results" v-bind:class="{ 'loading': loading }">
-            <student-profile v-if="collective == 'students'" v-for="student in results" :student="student"></student-profile>
-            <company-profile v-if="collective == 'companies'" v-for="company in results" :company="company"></company-profile>
+            <div v-if="collective == 'students'">
+                <student-profile v-for="student in results" :student="student"></student-profile>
+            </div>
+            <div v-if="collective == 'companies'">
+                <company-profile v-for="company in results" :company="company"></company-profile>
+            </div>
         </ul>
 
         <pager v-show="!loading && results.length > 0" :pagination-data="paginationData"></pager>

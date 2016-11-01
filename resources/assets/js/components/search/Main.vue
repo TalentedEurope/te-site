@@ -63,7 +63,7 @@ export default {
             this.fetchResults(1, this.filters, this.search_text);
         });
     },
-    mounted () {
+    ready () {
         this.fetchResults();
     },
     methods: {

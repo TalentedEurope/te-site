@@ -50,7 +50,7 @@ export default {
             'validators': []
         }
     },
-    mounted() {
+    ready() {
         this.fetchValidators();
     },
     methods: {

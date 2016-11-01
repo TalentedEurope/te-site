@@ -1,7 +1,7 @@
 <template>
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
         <label :for="code">{{label}}</label>
-        <textarea type="text" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" :value="value" @input="onInput"></textarea>
+        <textarea type="text" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" v-model="value" @input="onInput"></textarea>
 
         <span v-if="has_error" class="help-block">
             <strong>{{error_message}}</strong>

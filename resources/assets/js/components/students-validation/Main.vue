@@ -35,7 +35,7 @@ export default {
             'students': []
         }
     },
-    mounted() {
+    ready() {
         this.fetchStudents();
     },
     methods: {

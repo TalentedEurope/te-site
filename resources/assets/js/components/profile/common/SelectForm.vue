@@ -2,9 +2,9 @@
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
         <!-- <label :for="code">{{label}}</label> -->
         <div class="select-holder">
-            <select class="form-control" :id="code" :name="generateFieldName()" :value="value" @input="onInput">
+            <select class="form-control" :id="code" :name="generateFieldName()" v-model="value" @input="onInput">
                 <option value="">{{placeholder}}</option>
-                <option v-for="(v_name, v_code) in parsed_values" :value="v_code">{{ v_name }}</option>
+                <option v-for="(v_code, v_name) in parsed_values" :value="v_code">{{ v_name }}</option>
             </select>
         </div>
         <span v-if="has_error" class="help-block">
@@ -23,12 +23,12 @@ export default {
             'has_error': false,
             'error_message': '',
             'code_for_validation': '',
-            'parsed_values': []
+            'parsed_values': [],
         }
     },
-    mounted() {
+    ready() {
         if (_.isNull(this.value) || _.isUndefined(this.value)) {
-            this.$emit('input', '');
+            this.value = '';
         }
         this.parsed_values = JSON.parse(this.values);
     },

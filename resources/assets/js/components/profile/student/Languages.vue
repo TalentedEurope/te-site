@@ -1,29 +1,29 @@
 <template>
     <div>
-        <div class="language" v-for="(language, index) in parsed_languages">
+        <div class="language" :id="language.id" v-for="(index, language) in parsed_languages">
             <header class="clearfix">
                 <h4 class="pull-left">Language #{{ index + 1 }}</h4>
                 <remove-item-button :items="parsed_languages" :item="language"></remove-item-button>
             </header>
 
-            <text-box-form type="hidden" code="id" group-code="languages" :group-id="language.id" v-model="language.id"></text-box-form>
+            <text-box-form type="hidden" code="id" group-code="languages" :group-id="language.id" :value="language.id"></text-box-form>
 
-            <select-form code="name" group-code="languages" :group-id="language.id" label="Language name" placeholder=" - Language name - " :values="languageNames" v-model="language.name" :errors="errors"></select-form>
-            <select-form code="level" group-code="languages" :group-id="language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" v-model="language.level" :errors="errors"></select-form>
+            <select-form code="name" group-code="languages" :group-id="language.id" label="Language name" placeholder=" - Language name - " :values="languageNames" :value="language.name" :errors="errors"></select-form>
+            <select-form code="level" group-code="languages" :group-id="language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" :value="language.level" :errors="errors"></select-form>
 
             <hr>
-            <file-form code="certificate" group-code="languages" :group-id="language.id" label="Certificate" v-model="language.certificate" download-text="Download Certificate" file-url="/profile/certificate/2/language/32"></file-form>
+            <file-form code="certificate" group-code="languages" :group-id="language.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/language/32"></file-form>
             <hr>
         </div>
 
-        <div class="language" v-for="(new_language, index) in new_languages">
+        <div class="language" v-for="(index, new_language) in new_languages">
             <header class="clearfix">
                 <h4 class="pull-left">Language #{{ (parsed_languages.length + index + 1) }}</h4>
                 <remove-item-button :items="new_languages" :item="new_language"></remove-item-button>
             </header>
 
-            <select-form code="name" group-code="languages" :group-id="new_language.id" label="Language name" placeholder=" - Language name - " :values="languageNames" v-model="new_language.name" :errors="errors"></select-form>
-            <select-form code="level" group-code="languages" :group-id="new_language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" v-model="new_language.level" :errors="errors"></select-form>
+            <select-form code="name" group-code="languages" :group-id="new_language.id" label="Language name" placeholder=" - Language name - " :values="languageNames" :value="new_language.name" :errors="errors"></select-form>
+            <select-form code="level" group-code="languages" :group-id="new_language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" :value="new_language.level" :errors="errors"></select-form>
 
             <hr>
             <file-form code="certificate" group-code="languages" :group-id="new_language.id" label="Certificate" download-text="Download Certificate" file-url="/profile/certificate/2/language/32"></file-form>
@@ -57,7 +57,7 @@ export default {
             total: 0
         }
     },
-    mounted() {
+    ready() {
         this.parsed_languages = JSON.parse(this.languages);
         this.parsed_errors = JSON.parse(this.errors);
     },

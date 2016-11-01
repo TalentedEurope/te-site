@@ -13,7 +13,7 @@
                 </p>
                 <p><strong>Languages: </strong>
                     <ul class="languages">
-                        <li v-for="language in student.languages">{{language}}</li>
+                        <li v-for="language in student.languages" track-by="$index">{{language}}</li>
                     </ul>
                 </p>
             </div>

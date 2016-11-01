@@ -1,10 +1,10 @@
 <template>
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error, 'hidden-type': input_type == 'hidden' }">
         <!-- <label :for="code">{{label}}</label> -->
-        <input v-if="input_type == 'text'" type="text" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" :value="value" @input="onInput" :readonly="readonly"/>
-        <input v-if="input_type == 'email'" type="email" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" :value="value" @input="onInput" :readonly="readonly"/>
-        <input v-if="input_type == 'password'" type="password" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" :value="value" @input="onInput" :readonly="readonly"/>
-        <input v-if="input_type == 'hidden'" type="hidden" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" :value="value" @input="onInput" :readonly="readonly"/>
+        <input v-if="input_type == 'text'" type="text" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" v-model="value" @input="onInput" :readonly="readonly"/>
+        <input v-if="input_type == 'email'" type="email" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" v-model="value" @input="onInput" :readonly="readonly"/>
+        <input v-if="input_type == 'password'" type="password" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" v-model="value" @input="onInput" :readonly="readonly"/>
+        <input v-if="input_type == 'hidden'" type="hidden" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" v-model="value" @input="onInput" :readonly="readonly"/>
 
         <span v-if="has_error" class="help-block">
             <strong>{{error_message}}</strong>
