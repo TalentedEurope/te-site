@@ -440,7 +440,7 @@ class ProfileController extends Controller
                 foreach ($skills as $skill) {
                     $sk = ProfessionalSkill::firstOrCreate(array('name' => $skill, 'language_code' => Config::get('app.locale') ));
                     if ($skill && !$student->professionalSkills()->find($sk)) {
-                        $student->professionalSkills()->attach($skill);
+                        $student->professionalSkills()->attach($sk);
                         $skillIds[] = $sk->id;
                     }
                 }

@@ -129,102 +129,102 @@ return [
     
         'forgot_password' => '¿Olvidaste tu contraseña?',
     
-        'administration' => '',
+        'administration' => 'Administración',
     
-        'architecture-amp-construction' => '',
+        'architecture-amp-construction' => 'Arquitectura y Construcción',
     
-        'art-amp-culture' => '',
+        'art-amp-culture' => 'Arte y Cultura',
     
-        'banking-and-or-finance-amp-insurance' => '',
+        'banking-and-or-finance-amp-insurance' => 'Banca y/o finanzas y seguros',
     
-        'business-amp-consulting' => '',
+        'business-amp-consulting' => 'Comercio y Consultoría',
     
-        'communication-amp-media-amp-pr' => '',
+        'communication-amp-media-amp-pr' => 'Comunicación, medios de comunicación y RR.PP.',
     
-        'consumer-goods' => '',
+        'consumer-goods' => 'Bienes de consumo',
     
-        'customer-service' => '',
+        'customer-service' => 'Servicio al cliente',
     
-        'design' => '',
+        'design' => 'Diseño',
     
-        'education-amp-training' => '',
+        'education-amp-training' => 'Educación y Formación',
     
-        'engineering' => '',
+        'engineering' => 'Ingeniería',
     
-        'hospitality-amp-tourism' => '',
+        'hospitality-amp-tourism' => 'Hostelería y turismo',
     
-        'human-resources' => '',
+        'human-resources' => 'Recursos humanos',
     
-        'it-amp-web' => '',
+        'it-amp-web' => 'IT y web',
     
-        'legal' => '',
+        'legal' => 'Derecho',
     
-        'logistics' => '',
+        'logistics' => 'Logística',
     
-        'manufacturing' => '',
+        'manufacturing' => 'Producción',
     
-        'marketing-amp-advertising' => '',
+        'marketing-amp-advertising' => 'Marketing y Publicidad',
     
-        'medicine-amp-pharmaceutics' => '',
+        'medicine-amp-pharmaceutics' => 'Medicina y Farmacia',
     
-        'politics' => '',
+        'politics' => 'Política',
     
-        'quality-assurance-amp-safety' => '',
+        'quality-assurance-amp-safety' => 'Aseguramiento de Calidad y Seguridad',
     
-        'real-estate' => '',
+        'real-estate' => 'Bienes inmuebles',
     
-        'research-amp-development' => '',
+        'research-amp-development' => 'Investigación y desarrollo',
     
-        'retail-amp-wholesale' => '',
+        'retail-amp-wholesale' => 'Comercio al por menor y al por mayor',
     
-        'sales' => '',
+        'sales' => 'Ventas',
     
-        'social-work' => '',
+        'social-work' => 'Trabajo social',
     
-        'sport-and-or-health-amp-wellness' => '',
+        'sport-and-or-health-amp-wellness' => 'Deporte y/o Salud y bienestar',
     
-        'technology-amp-telecommunications' => '',
+        'technology-amp-telecommunications' => 'Tecnología y Telecomunicaciones',
     
-        'business-studies-and-or-management-science' => '',
+        'business-studies-and-or-management-science' => 'Estudios de negocios y/o Ciencias de la Gestión',
     
-        'engineering-and-or-technology' => '',
+        'engineering-and-or-technology' => 'Ingeniería y/o Tecnología',
     
-        'social-sciences' => '',
+        'social-sciences' => 'Ciencias Sociales',
     
-        'languages-and-philological-sciences' => '',
+        'languages-and-philological-sciences' => 'Lenguas y Ciencias Filológicas',
     
-        'communication-and-information-sciences' => '',
+        'communication-and-information-sciences' => 'Comunicación y Ciencias de la Información',
     
-        'humanities' => '',
+        'humanities' => 'Humanidades',
     
-        'education-and-or-teacher-training' => '',
+        'education-and-or-teacher-training' => 'Educación y /o Formación del profesorado',
     
-        'law' => '',
+        'law' => 'Derecho',
     
-        'art-and-design' => '',
+        'art-and-design' => 'Arte y diseño',
     
-        'architecture-and-or-urban-and-regional-planning' => '',
+        'architecture-and-or-urban-and-regional-planning' => 'Arquitectura y/o Planificación Urbana y Regional',
     
-        'natural-sciences' => '',
+        'natural-sciences' => 'Ciencias Naturales',
     
-        'mathematics-and-or-informatics' => '',
+        'mathematics-and-or-informatics' => 'Matemáticas y/o Informática',
     
-        'medical-sciences' => '',
+        'medical-sciences' => 'Ciencias Médicas',
     
-        'geography-and-or-geology' => '',
+        'geography-and-or-geology' => 'Geografía y/o Geología',
     
-        'agriculture-sciences' => '',
+        'agriculture-sciences' => 'Ciencias Agrarias',
     
-        'Lang_level_A1' => '',
+        'Lang_level_A1' => 'A1: Acceso o principiante',
     
-        'Lang_level_A2' => '',
+        'Lang_level_A2' => 'A2: Plataforma o básico',
     
-        'Lang_level_B1' => '',
+        'Lang_level_B1' => 'B1: Umbral o intermedio',
     
-        'Lang_level_B2' => '',
+        'Lang_level_B2' => 'B2: Avanzado o intermedio alto',
     
-        'Lang_level_C1' => '',
+        'Lang_level_C1' => 'C1: Dominio operativo eficaz o superior bajo',
     
-        'Lang_level_C2' => '',
+        'Lang_level_C2' => 'C2: Maestría o superior',
     
 ];
