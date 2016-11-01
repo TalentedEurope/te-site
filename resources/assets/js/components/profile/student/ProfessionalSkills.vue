@@ -1,23 +1,26 @@
 <template>
-    <div>
-        <div class="form-group dropdown" v-bind:class="{'open': openSuggestion}">
-            <label for="profesional_skills">Professional skills</label>
+    <div class="form-group clearfix">
+        <label>Professional skills</label>
 
-            <ul class="selected-skills list-unstyled">
-                <li class="btn btn-default" v-for="skill in selected_items">
-                    <input type="hidden" name="professionalSkills[]" :value="skill.name"/>
-                    {{ skill.name }}
-                    <a title="Remove professional skill" @click.prevent="removeSkill(skill)"><i class="fa fa-close" aria-hidden="true"></i></a>
+        <ul class="selected-skills list-unstyled" v-show="selected_items.length > 0">
+            <li class="btn btn-default" v-for="skill in selected_items">
+                <input type="hidden" name="professionalSkills[]" :value="skill.name"/>
+                {{ skill.name }}
+                <a title="Remove professional skill" @click.prevent="removeSkill(skill)"><i class="fa fa-close" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+
+        <div class="dropdown suggestions-dropdown col-sm-10 no-padding" v-bind:class="{'open': openSuggestion}">
+            <input type="text" class="form-control" v-model="model" placeholder="Add a professional skill"
+               @keydown.enter.prevent="enter" @keydown.down="down" @keydown.up="up" @input="change"/>
+            <ul class="dropdown-menu suggestions-menu">
+                <li v-for="(index, item) in matches" v-bind:class="{'active': isActive(index)}" @click="selectItem(index)">
+                    <a>{{item.name}}</a>
                 </li>
             </ul>
-
-            <input type="text" class="form-control" v-model="model"
-                @keydown.enter.prevent="enter" @keydown.down="down" @keydown.up="up" @input="change"/>
-            <ul class="dropdown-menu">
-                <li v-for="(item, index) in matches" v-bind:class="{'active': isActive(index)}" @click="suggestionClick(index)">
-                    <a>{{item}}</a>
-                </li>
-            </ul>
+        </div>
+        <div class="col-sm-2 no-padding">
+            <button class="btn btn-primary button-add-skill" @click.prevent="enter()">Add</button>
         </div>
     </div>
 </template>
@@ -30,18 +33,30 @@ export default {
     data() {
         return {
             selected_items: [],
-            items: ['test1', 'test2', 'test3'],
+            items: [],
             model: '',
             open: false,
             current: -1,
         };
     },
-    mounted() {
+    ready() {
         this.selected_items = JSON.parse(this.selectedSkills);
-        // this.items = JSON.parse(this.skills);
+        this.items = JSON.parse(this.skills);
     },
     methods: {
         enter() {
+            this.model = this.model.trim();
+
+            var is_duplicate = _.find(this.selected_items, (selected) => {
+                return selected.name.toLowerCase() == this.model.toLowerCase();
+            });
+            if (this.model.length == 0 || is_duplicate) {
+                return;
+            }
+
+            if (this.matches.length == 1 && this.matches[0].name.length == this.model.length) {
+                this.current = 0;
+            }
             this.selectItem(this.current)
         },
         up() {
@@ -63,14 +78,17 @@ export default {
                 this.open = true;
             }
         },
-        suggestionClick(index) {
-            this.selectItem(index)
+        removeSkill(skill) {
+            var index = this.selected_items.indexOf(skill);
+            if (index >= 0) {
+                this.selected_items.splice(index, 1);
+            }
         },
         selectItem(index) {
             if (index >= 0) {
-                this.selected_items.push({name: this.matches[index]});
+                this.selected_items.push(this.matches[index]);
             } else {
-                this.selected_items.push({name: this.model});
+                this.selected_items.push({'id': 'new', 'language_code': 'en', 'name': this.model});
             }
             this.model = '';
             this.open = false;
@@ -80,12 +98,12 @@ export default {
     computed: {
         suggestions() {
             return this.items.filter((item) => {
-                return !(_.includes(this.selected_items, item))
+                return _.indexOf(this.selected_items, item) == -1;
             });
         },
         matches() {
             return this.suggestions.filter((str) => {
-                return str.indexOf(this.model) >= 0;
+                return str.name.toLowerCase().indexOf(this.model.toLowerCase()) >= 0;
             });
         },
         openSuggestion() {
@@ -95,5 +113,29 @@ export default {
 };
 </script>
 
-<style>
+<style lang="sass" scoped>
+.selected-skills .btn-default {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.no-padding {
+    padding: 0;
+}
+.suggestions-dropdown {
+
+    .suggestions-menu {
+        width: 100%;
+
+        & > li > a {
+            cursor: pointer;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+}
+
+.button-add-skill {
+    width: 100%;
+    height: 50px;
+}
 </style>
