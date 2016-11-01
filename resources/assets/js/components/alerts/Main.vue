@@ -50,7 +50,7 @@ export default {
             current_page: 1,
         }
     },
-    mounted() {
+    ready() {
         this.fetchAlerts(this.current_page);
 
         EventBus.$on('onChangePage', (current_page) => {

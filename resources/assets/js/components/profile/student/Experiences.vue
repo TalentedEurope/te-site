@@ -1,35 +1,35 @@
 <template>
     <div>
-        <div class="experience" v-for="(experience, index) in parsed_experiences">
+        <div class="experience" v-for="(index, experience) in parsed_experiences">
             <header class="clearfix">
                 <h4 class="pull-left">Work Experience #{{ index + 1 }}</h4>
                 <remove-item-button :items="parsed_experiences" :item="experience"></remove-item-button>
             </header>
 
-            <text-box-form type="hidden" code="id" group-code="experiences" :group-id="experience.id" v-model="experience.id"></text-box-form>
+            <text-box-form type="hidden" code="id" group-code="experiences" :group-id="experience.id" :value="experience.id"></text-box-form>
 
             <div class="row">
-                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="experience.id" label="From" placeholder="Work from" v-model="experience.from" :errors="errors"></date-form>
-                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="experience.id" label="To" placeholder="Work to" v-model="experience.until" :errors="errors"></date-form>
+                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="experience.id" label="From" placeholder="Work from" :value="experience.from" :errors="errors"></date-form>
+                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="experience.id" label="To" placeholder="Work to" :value="experience.until" :errors="errors"></date-form>
             </div>
 
-            <text-box-form code="company" group-code="experiences" :group-id="experience.id" label="Company name" placeholder="Company name" v-model="experience.company" :errors="errors"></text-box-form>
-            <text-box-form code="position" group-code="experiences" :group-id="experience.id" label="Position" placeholder="Position" v-model="experience.position" :errors="errors"></text-box-form>
+            <text-box-form code="company" group-code="experiences" :group-id="experience.id" label="Company name" placeholder="Company name" :value="experience.company" :errors="errors"></text-box-form>
+            <text-box-form code="position" group-code="experiences" :group-id="experience.id" label="Position" placeholder="Position" :value="experience.position" :errors="errors"></text-box-form>
             <hr>
         </div>
 
-        <div class="experience" v-for="(new_experience, index) in new_experiences">
+        <div class="experience" v-for="(index, new_experience) in new_experiences">
             <header class="clearfix">
                 <h4 class="pull-left">Work Experience #{{ (parsed_experiences.length + index + 1) }}</h4>
                 <remove-item-button :items="new_experiences" :item="new_experience"></remove-item-button>
             </header>
             <div class="row">
-                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="new_experience.id" label="From" placeholder="Work from" v-model="new_experience.from" :errors="errors"></date-form>
-                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="new_experience.id" label="To" placeholder="Work to" v-model="new_experience.until" :errors="errors"></date-form>
+                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="new_experience.id" label="From" placeholder="Work from" :value="new_experience.from" :errors="errors"></date-form>
+                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="new_experience.id" label="To" placeholder="Work to" :value="new_experience.until" :errors="errors"></date-form>
             </div>
 
-            <text-box-form code="company" group-code="experiences" :group-id="new_experience.id" label="Company name" placeholder="Company name" v-model="new_experience.company" :errors="errors"></text-box-form>
-            <text-box-form code="position" group-code="experiences" :group-id="new_experience.id" label="Position" placeholder="Position" v-model="new_experience.position" :errors="errors"></text-box-form>
+            <text-box-form code="company" group-code="experiences" :group-id="new_experience.id" label="Company name" placeholder="Company name" :value="new_experience.company" :errors="errors"></text-box-form>
+            <text-box-form code="position" group-code="experiences" :group-id="new_experience.id" label="Position" placeholder="Position" :value="new_experience.position" :errors="errors"></text-box-form>
             <hr>
         </div>
 
@@ -59,7 +59,7 @@ export default {
             total: 0
         }
     },
-    mounted() {
+    ready() {
         this.parsed_experiences = JSON.parse(this.experiences);
         this.parsed_errors = JSON.parse(this.errors);
     },

@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import Vue from 'vue';
 import EventBus from 'event-bus.js';
 import MultiOptionsFilter from './MultiOptionsFilter.vue';
 import { companiesFiltersResource, studentsFiltersResource } from 'resources/search';
@@ -38,7 +39,7 @@ export default {
             show_filters: false,
         }
     },
-    mounted () {
+    ready () {
         this.fetchFilters();
     },
     methods: {
@@ -61,7 +62,8 @@ export default {
         removeCurrentSearchFilter: function (filter) {
             var e_filter = this.filters.find(x => x.id === filter.id);
             var item = e_filter.items.find(x => x.id === filter.item.id);
-            this.$set(item, 'selected', false);
+
+            Vue.set(item, 'selected', false);
 
             this.removeFilter(filter);
         },
