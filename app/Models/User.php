@@ -36,22 +36,22 @@ class User extends Authenticatable
 
     public static function rules($only_key = false, $forModelValidation = false, $user = false)
     {
-        $filter = array( 'visible' => 'required|boolean',
-                        'notify_me' => 'required|boolean',
-                        'name' => 'required',
+        $filter = array( 'visible' => 'sometimes|required|boolean',
+                        'notify_me' => 'sometimes|required|boolean',
+                        'name' => 'sometimes|required',
                         'phone' => 'regex:/^[\pN\s\d\+\-\(\)\.]+$/u' ,
                         'facebook' => 'active_url' ,
                         'twitter' => 'active_url' ,
                         'linkedin' => 'active_url' ,
                         'address' => 'max:300',
                         'postal_code' => 'max:12',
-                        'city' => 'required',
-                        'country' => 'required|in:'.implode(',', array_keys(User::$countries)),
+                        'city' => 'sometimes|required',
+                        'country' => 'sometimes|required|in:'.implode(',', array_keys(User::$countries)),
                         'image' => 'image'
         );
 
         if ($user && $user->isA('student')) {
-            $filter['surname'] = 'required';
+            $filter['surname'] = 'sometimes|required';
         }
 
         if ($forModelValidation) {

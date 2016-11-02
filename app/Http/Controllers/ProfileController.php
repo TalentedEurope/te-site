@@ -252,7 +252,7 @@ class ProfileController extends Controller
             $fname = tempnam(public_path() . Student::$curriculumPath, $user->id);
             unlink($fname);
             $file = $fname . '.pdf';
-            $v->valid()['curriculum']->move($file);
+            $v->valid()['curriculum']->move(public_path() . Student::$curriculumPath, basename($file));
             $student->curriculum = basename($file);
         }
 
@@ -290,10 +290,10 @@ class ProfileController extends Controller
                     }
 
                     if (isset($itemVal->valid()['gradecard'])) {
-                        $fname = tempnam(public_path() . Student::$studyCertificatePath, $user->id);
+                        $fname = tempnam(public_path() . Student::$studyGradeCardPath, $user->id);
                         unlink($fname);
                         $file = $fname . '.pdf';
-                        $itemVal->valid()['gradecard']->move($file);
+                        $itemVal->valid()['gradecard']->move(public_path() . Student::$studyGradeCardPath, basename($file));
                         $study->gradecard = basename($file);
                     }
 
@@ -301,7 +301,7 @@ class ProfileController extends Controller
                         $fname = tempnam(public_path() . Student::$studyCertificatePath, $user->id);
                         unlink($fname);
                         $file = $fname . '.pdf';
-                        $itemVal->valid()['certificate']->move($file);
+                        $itemVal->valid()['certificate']->move(public_path() . Student::$studyCertificatePath, basename($file));
                         $study->certificate = basename($file);
                     }
                     $study->student_id = $student->id;
@@ -337,7 +337,7 @@ class ProfileController extends Controller
                         $fname = tempnam(public_path() . Student::$studyCertificatePath, $user->id);
                         unlink($fname);
                         $file = $fname . '.pdf';
-                        $itemVal->valid()['certificate']->move($file);
+                        $itemVal->valid()['certificate']->move(public_path() . Student::$studyCertificatePath, basename($file));
                         $training->certificate = basename($file);
                     }
                     $training->student_id = $student->id;
@@ -373,7 +373,7 @@ class ProfileController extends Controller
                         $fname = tempnam(public_path() . Student::$studyCertificatePath, $user->id);
                         unlink($fname);
                         $file = $fname . '.pdf';
-                        $itemVal->valid()['certificate']->move($file);
+                        $itemVal->valid()['certificate']->move(public_path() . Student::$studyCertificatePath, basename($file));
                         $language->certificate = basename($file);
                     }
                     $language->student_id = $student->id;
