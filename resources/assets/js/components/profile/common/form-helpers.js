@@ -69,7 +69,7 @@ var validateField = function() {
         });
 };
 
-var onInput = function(event) {
+var onInput = function() {
     this.has_error = false;
     this.error_message = null;
 
