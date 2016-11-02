@@ -62,7 +62,7 @@ export default {
             this.new_trainings.push({"id": `new_${count}`});
         },
         getFileUrl: function (training_id, code) {
-            return `/${code}/${this.userId}/training/${training_id}`;
+            return `/profile/${code}/${this.userId}/training/${training_id}`;
         }
     },
     computed: {
