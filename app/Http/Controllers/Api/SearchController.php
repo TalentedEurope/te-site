@@ -286,6 +286,9 @@ class SearchController extends SiteSearchController
         $availableCountries = User::where('userable_type', Student::class)
                                         ->select("country")
                                         ->whereNotNull('country')
+                                        ->where('visible', true)
+                                        ->where('is_filled', true)
+                                        ->where('banned', false)
                                         ->groupBy('country')
                                         ->get();
 
@@ -356,6 +359,9 @@ class SearchController extends SiteSearchController
                                         ->get();
         $availableCountries = User::where('userable_type', Company::class)
                                         ->select("country")
+                                        ->where('visible', true)
+                                        ->where('is_filled', true)
+                                        ->where('banned', false)
                                         ->groupBy('country')
                                         ->get();
         foreach ($availableSectors as $sector) {
