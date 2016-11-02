@@ -16,13 +16,12 @@
 import { setDebounced, setCodeForValidation, setInitError, generateFieldName, validateField, onInput } from './form-helpers'
 
 export default {
-    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'type', 'value', 'errors', 'readonly'],
+    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'type', 'value', 'errors', 'readonly', 'noValidate'],
     data() {
         return {
-            'has_error': false,
-            'error_message': '',
-            'code_for_validation': '',
             'input_type': this.type || 'text',
+            'has_error': false,
+            'error_message': null
         }
     },
     created() {

@@ -42,7 +42,7 @@ var generateFieldName = function () {
 
 var validateField = function() {
     var that = this;
-    var data = {validate: true,}
+    var data = {validate: true}
 
     var value = this.value || '';
     var code = this.code;
@@ -70,10 +70,14 @@ var validateField = function() {
 };
 
 var onInput = function() {
-    this.has_error = false;
-    this.error_message = null;
+    if (_.isUndefined(this.noValidate)) {
+        this.has_error = false;
+        this.error_message = null;
 
-    this.debounced()
+        if (this.debounced) {
+            this.debounced();
+        }
+    }
 };
 
 

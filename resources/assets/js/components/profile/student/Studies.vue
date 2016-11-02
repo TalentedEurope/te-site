@@ -21,9 +21,9 @@
             <select-form code="field" group-code="studies" :group-id="study.id" label="Field of studies" placeholder=" - Field of studies - " :values="studyFields" :value="study.field" :errors="errors"></select-form>
 
             <hr>
-            <file-form code="certificate" group-code="studies" :group-id="study.id" label="Certificate" download-text="Download Certificate" :has-file="study.certificate" :file-url="getFileUrl(study.id, 'certificate')"></file-form>
+            <file-form code="certificate" group-code="studies" :group-id="study.id" label="Certificate" download-text="Download Certificate" :has-file="study.certificate" :file-url="getFileUrl(study.id, 'certificate')" :errors="errors"></file-form>
             <hr>
-            <file-form code="gradecard" group-code="studies" :group-id="study.id" label="Gradecard" download-text="Download Gradecard" :has-file="study.gradecard" :file-url="getFileUrl(study.id, 'gradecard')"></file-form>
+            <file-form code="gradecard" group-code="studies" :group-id="study.id" label="Gradecard" download-text="Download Gradecard" :has-file="study.gradecard" :file-url="getFileUrl(study.id, 'gradecard')" :errors="errors"></file-form>
             <hr>
         </div>
 

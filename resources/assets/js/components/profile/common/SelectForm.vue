@@ -17,20 +17,18 @@
 import { setDebounced, setCodeForValidation, setInitError, generateFieldName, validateField, onInput } from './form-helpers';
 
 export default {
-    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'values', 'value', 'errors'],
+    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'values', 'value', 'errors', 'noValidate'],
     data() {
         return {
+            'parsed_values': JSON.parse(this.values),
             'has_error': false,
-            'error_message': '',
-            'code_for_validation': '',
-            'parsed_values': [],
+            'error_message': null
         }
     },
     ready() {
         if (_.isNull(this.value) || _.isUndefined(this.value)) {
             this.value = '';
         }
-        this.parsed_values = JSON.parse(this.values);
     },
     created() {
         setDebounced.call(this);

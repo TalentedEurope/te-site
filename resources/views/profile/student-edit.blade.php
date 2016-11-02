@@ -63,7 +63,7 @@
 
               <date-form code="birthdate" label="Birthdate" placeholder="Birthdate" value="{{ old('birthdate', $student->birthdate) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></date-form>
 
-              <file-form code="image" label="My Photo"></file-form>
+              <file-form code="image" label="My Photo" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></file-form>
 
               <hr class="separator">
 
@@ -94,7 +94,8 @@
               <h4>Academic information</h4>
               <hr>
 
-              <file-form code="curriculum" label="Europass curriculum" download-text="Download curriculum" file-url="{{ URL::to('/profile/curriculum/' . $user->id) }}"></file-form>
+              <file-form code="curriculum" label="Europass curriculum" download-text="Download curriculum"
+                    file-url="{{ URL::to('/profile/curriculum/' . $user->id) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></file-form>
 
               <hr class="separator">
 
@@ -119,12 +120,18 @@
                       user-id="{{ Auth::user()->id }}"></experiences>
 
               <professional-skills selected-skills='{!! json_encode($student->professionalSkills, JSON_HEX_APOS) !!}'
-                      skills='{!! json_encode($professionalSkills, JSON_HEX_APOS) !!}'></professional-skills>
+                      skills='{!! json_encode($professionalSkills, JSON_HEX_APOS) !!}'
+                      errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></professional-skills>
 
-              <personal-skills-form max-personal-skills="6" values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}' value='{!! json_encode($student->personalSkills, JSON_HEX_APOS) !!}' errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></personal-skills-form>
+              <personal-skills-form label="Personal skills (max 6)"
+                      values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}'
+                      value='{!! json_encode($student->personalSkills, JSON_HEX_APOS) !!}'
+                      errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></personal-skills-form>
 
-              <text-area-form code="talent" label="My talent (max 300 characters)" placeholder="Describe briefly your talent."
-                    value="{{ old('talent', $student->talent) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-area-form>
+              <text-area-form code="talent" label="My talent (max 300 characters)"
+                    placeholder="Describe briefly your talent."
+                    value="{{ old('talent', $student->talent) }}"
+                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-area-form>
 
               <hr>
               <button type="submit" class="btn btn-primary">Update settings</button>
@@ -153,7 +160,7 @@
             <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#password' }}">
               {{ csrf_field() }}
               <text-box-form type="password" code="password" label="New Password" placeholder="New Password" value="" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-              <text-box-form type="password" code="password_confirm" label="Repeat new Password" placeholder="Repeat new Password" value="" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+              <text-box-form type="password" code="password_confirm" label="Repeat new Password" placeholder="Repeat new Password" value="" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}' no-validate></text-box-form>
 
               <hr>
               <button type="submit" class="btn btn-primary">Save new password</button>
