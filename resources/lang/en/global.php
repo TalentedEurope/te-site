@@ -3,6 +3,8 @@
 
 return [
     
+        'AT' => 'Austria',
+    
         'BE' => 'Belgium',
     
         'BG' => 'Bulgaria',

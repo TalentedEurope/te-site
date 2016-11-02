@@ -13,7 +13,7 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->increments('id');
-            $table->enum('nationality', Student::$nationalities);
+            $table->enum('nationality', Student::$nationalities)->nullable();
             $table->string('photo');
             $table->date('birthdate');
             $table->integer('institution_id')->unsigned()->nullable();
