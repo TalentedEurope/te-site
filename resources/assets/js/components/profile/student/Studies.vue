@@ -72,14 +72,11 @@ export default {
     components: { RemoveItemButton, TextBoxForm, SelectForm, FileForm },
     data() {
         return {
-            parsed_studies: [],
-            parsed_errors: [],
+            parsed_studies: JSON.parse(this.studies),
             new_studies: []
         }
     },
     ready() {
-        this.parsed_studies = JSON.parse(this.studies);
-        this.parsed_errors = JSON.parse(this.errors);
         if (this.parsed_studies.length == 0) {
             this.addNewStudy();
         }
@@ -96,7 +93,7 @@ export default {
                 {'id': `new_${count}`, 'institution_name': '', 'name': '', 'level': '', 'field': ''});
         },
         getFileUrl: function (study_id, code) {
-            return `/${code}/${this.userId}/study/${study_id}`;
+            return `/profile/${code}/${this.userId}/study/${study_id}`;
         }
     },
     computed: {

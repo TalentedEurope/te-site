@@ -51,15 +51,10 @@ export default {
     components: { RemoveItemButton, TextBoxForm, SelectForm, FileForm },
     data() {
         return {
-            parsed_languages: [],
+            parsed_languages: JSON.parse(this.languages),
             new_languages: [],
-            parsed_errors: [],
             total: 0
         }
-    },
-    ready() {
-        this.parsed_languages = JSON.parse(this.languages);
-        this.parsed_errors = JSON.parse(this.errors);
     },
     methods: {
         addNewLanguage: function () {
@@ -67,7 +62,7 @@ export default {
             this.new_languages.push({"id": `new_${count}`});
         },
         getFileUrl: function (language_id, code) {
-            return `/${code}/${this.userId}/language/${language_id}`;
+            return `/profile/${code}/${this.userId}/language/${language_id}`;
         }
     },
     computed: {

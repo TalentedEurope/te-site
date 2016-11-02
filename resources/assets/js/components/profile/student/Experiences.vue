@@ -53,15 +53,10 @@ export default {
     components: { RemoveItemButton, TextBoxForm, DateForm },
     data() {
         return {
-            parsed_experiences: [],
+            parsed_experiences: JSON.parse(this.experiences),
             new_experiences: [],
-            parsed_errors: [],
             total: 0
         }
-    },
-    ready() {
-        this.parsed_experiences = JSON.parse(this.experiences);
-        this.parsed_errors = JSON.parse(this.errors);
     },
     methods: {
         addNewExperience: function () {
