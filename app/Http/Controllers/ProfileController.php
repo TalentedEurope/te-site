@@ -264,7 +264,6 @@ class ProfileController extends Controller
             foreach ($v->valid()['studies'] as $key => $stud) {
                 $itemVal = Validator::make($stud, Student::rulesRelated('studies'));
                 $study = new StudentStudy();
-                $errors = $errors->merge($this->formatRelatedErrors($itemVal->errors(), 'studies', $key));
                 if (!$request->has('validate')) {
                     if (isset($stud['id'])) {
                         $queryLang = StudentStudy::find($stud['id']);
@@ -307,6 +306,9 @@ class ProfileController extends Controller
                     $study->student_id = $student->id;
                     $study->save();
                     $studyIds[] = $study->id;
+                    $errors = $errors->merge($this->formatRelatedErrors($itemVal->errors(), 'studies', $study->id));
+                } else {
+                    $errors = $errors->merge($this->formatRelatedErrors($itemVal->errors(), 'studies', $key));
                 }
             }
             if (sizeof($studyIds)) {
@@ -319,7 +321,6 @@ class ProfileController extends Controller
             foreach ($v->valid()['trainings'] as $key => $train) {
                 $itemVal = Validator::make($train, Student::rulesRelated('trainings'));
                 $training = new StudentTraining();
-                $errors = $errors->merge($this->formatRelatedErrors($itemVal->errors(), 'trainings', $key));
                 if (!$request->has('validate')) {
                     if (isset($train['id'])) {
                         $queryLang = StudentTraining::find($train['id']);
@@ -343,6 +344,9 @@ class ProfileController extends Controller
                     $training->student_id = $student->id;
                     $training->save();
                     $trainIds[] = $training->id;
+                    $errors = $errors->merge($this->formatRelatedErrors($itemVal->errors(), 'trainings', $training->id));
+                } else {
+                    $errors = $errors->merge($this->formatRelatedErrors($itemVal->errors(), 'trainings', $key));
                 }
             }
             if (sizeof($trainIds)) {
@@ -355,7 +359,6 @@ class ProfileController extends Controller
             foreach ($v->valid()['languages'] as $key => $lang) {
                 $itemVal = Validator::make($lang, Student::rulesRelated('languages'));
                 $language = new StudentLanguage();
-                $errors = $errors->merge($this->formatRelatedErrors($itemVal->errors(), 'languages', $key));
                 if (!$request->has('validate')) {
                     if (isset($lang['id'])) {
                         $queryLang = StudentLanguage::find($lang['id']);
@@ -379,6 +382,9 @@ class ProfileController extends Controller
                     $language->student_id = $student->id;
                     $language->save();
                     $langIds[] = $language->id;
+                    $errors = $errors->merge($this->formatRelatedErrors($itemVal->errors(), 'languages', $language->id));
+                } else {
+                    $errors = $errors->merge($this->formatRelatedErrors($itemVal->errors(), 'languages', $key));
                 }
             }
             if (sizeof($langIds)) {
@@ -391,7 +397,6 @@ class ProfileController extends Controller
             foreach ($v->valid()['experiences'] as $key => $exp) {
                 $itemVal = Validator::make($exp, Student::rulesRelated('experiences'));
                 $experience = new StudentExperience();
-                $errors = $errors->merge($this->formatRelatedErrors($itemVal->errors(), 'experiences', $key));
                 if (!$request->has('validate')) {
                     if (isset($exp['id'])) {
                         $queryExp = StudentExperience::find($exp['id']);
@@ -413,7 +418,10 @@ class ProfileController extends Controller
                     }
                     $experience->student_id = $student->id;
                     $experience->save();
-                    $expIds[] = $language->id;
+                    $expIds[] = $experience->id;
+                    $errors = $errors->merge($this->formatRelatedErrors($itemVal->errors(), 'experiences', $experience->id));
+                } else {
+                    $errors = $errors->merge($this->formatRelatedErrors($itemVal->errors(), 'experiences', $key));
                 }
             }
             if (sizeof($expIds)) {
@@ -463,7 +471,7 @@ class ProfileController extends Controller
         }
         $student->save();
         $user->save();
-
+        //dd($errors);
         return $errors;
     }
 
