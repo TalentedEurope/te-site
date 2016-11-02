@@ -12,7 +12,7 @@
             <date-form code="date" group-code="trainings" :group-id="training.id" label="Date" placeholder="Date" :value="training.date" :errors="errors"></date-form>
 
             <hr>
-            <file-form code="certificate" group-code="trainings" :group-id="training.id" label="Certificate" download-text="Download Certificate" :has-file="training.certificate" :file-url="getFileUrl(training.id, 'certificate')"></file-form>
+            <file-form code="certificate" group-code="trainings" :group-id="training.id" label="Certificate" download-text="Download Certificate" :has-file="training.certificate" :file-url="getFileUrl(training.id, 'certificate')" :errors="errors"></file-form>
             <hr>
         </div>
 
@@ -22,8 +22,8 @@
                 <remove-item-button :items="new_trainings" :item="new_training"></remove-item-button>
             </header>
 
-            <text-box-form code="name" group-code="trainings" :group-id="new_training.id" label="Course name" placeholder="Course name" :value="new_training.name" :errors="errors"></text-box-form>
-            <date-form code="date" group-code="trainings" :group-id="new_training.id" label="Date" placeholder="Date" :value="new_training.date" :errors="errors"></date-form>
+            <text-box-form code="name" group-code="trainings" :group-id="new_training.id" label="Course name" placeholder="Course name" :value="new_training.name"></text-box-form>
+            <date-form code="date" group-code="trainings" :group-id="new_training.id" label="Date" placeholder="Date" :value="new_training.date"></date-form>
 
             <hr>
             <file-form code="certificate" group-code="trainings" :group-id="new_training.id" label="Certificate" download-text="Download Certificate"></file-form>
@@ -51,15 +51,10 @@ export default {
     components: { RemoveItemButton, TextBoxForm, DateForm, FileForm },
     data() {
         return {
-            parsed_trainings: [],
+            parsed_trainings: JSON.parse(this.trainings),
             new_trainings: [],
-            parsed_errors: [],
             total: 0
         }
-    },
-    ready() {
-        this.parsed_trainings = JSON.parse(this.trainings);
-        this.parsed_errors = JSON.parse(this.errors);
     },
     methods: {
         addNewTraining: function () {

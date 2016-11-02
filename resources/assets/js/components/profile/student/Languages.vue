@@ -12,7 +12,7 @@
             <select-form code="level" group-code="languages" :group-id="language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" :value="language.level" :errors="errors"></select-form>
 
             <hr>
-            <file-form code="certificate" group-code="languages" :group-id="language.id" label="Certificate" download-text="Download Certificate" :has-file="language.certificate" :file-url="getFileUrl(language.id, 'certificate')"></file-form>
+            <file-form code="certificate" group-code="languages" :group-id="language.id" label="Certificate" download-text="Download Certificate" :has-file="language.certificate" :file-url="getFileUrl(language.id, 'certificate')" :errors="errors"></file-form>
             <hr>
         </div>
 
@@ -22,8 +22,8 @@
                 <remove-item-button :items="new_languages" :item="new_language"></remove-item-button>
             </header>
 
-            <select-form code="name" group-code="languages" :group-id="new_language.id" label="Language name" placeholder=" - Language name - " :values="languageNames" :value="new_language.name" :errors="errors"></select-form>
-            <select-form code="level" group-code="languages" :group-id="new_language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" :value="new_language.level" :errors="errors"></select-form>
+            <select-form code="name" group-code="languages" :group-id="new_language.id" label="Language name" placeholder=" - Language name - " :values="languageNames" :value="new_language.name"></select-form>
+            <select-form code="level" group-code="languages" :group-id="new_language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" :value="new_language.level"></select-form>
 
             <hr>
             <file-form code="certificate" group-code="languages" :group-id="new_language.id" label="Certificate" download-text="Download Certificate"></file-form>

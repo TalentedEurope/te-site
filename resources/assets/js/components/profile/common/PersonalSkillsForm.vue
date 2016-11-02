@@ -1,7 +1,7 @@
 <template>
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
-        <label for="personalSkills">A list of the most valuable skills for the company</label>
-        <p>Desired personal skills max: {{ maxPersonalSkills }}</p>
+        <label for="personalSkills">{{ label }}</label>
+        <p>{{ sublabel }}</p>
 
         <ul class="selected-skills list-unstyled" v-show="selectedSkills.length > 0">
             <li class="btn btn-default" v-for="skill in selectedSkills">
@@ -12,7 +12,7 @@
         </ul>
 
         <div class="select-holder">
-            <select v-model="selected_skill" :disabled="disabledSelectSkills" class="form-control">
+            <select v-model="selected_skill" :disabled="selected_skills.length >= max_personal_skills" class="form-control">
                 <option :value="null"> - Personal skills - </option>
                 <option v-for="skill in posibleSkills" :value="skill">{{ skill.name }}</option>
             </select>
@@ -27,16 +27,24 @@
 </template>
 
 <script>
+import { setCodeForValidation, setInitError, onInput } from './form-helpers';
+
 export default {
-    props: ['maxPersonalSkills', 'value', 'values', 'hasError', 'error', 'readonly'],
+    props: ['label', 'sublabel', 'value', 'values', 'errors', 'readonly'],
     data() {
         return {
+            'code': 'personalSkills',
+            'max_personal_skills': 6,
             'selected_skills': JSON.parse(this.value),
             'all_skills': JSON.parse(this.values),
             'selected_skill': null,
-            'has_error': this.hasError,
-            'error_message': this.error
+            'has_error': false,
+            'error_message': null
         }
+    },
+    created() {
+        setCodeForValidation.call(this);
+        setInitError.call(this);
     },
     methods: {
         removeSkill: function (skill) {
@@ -60,9 +68,6 @@ export default {
             return _.filter(this.all_skills, function(skill) {
                 return !(_.find(that.selected_skills, function(selected) { return skill.code == selected.id }))
             });
-        },
-        disabledSelectSkills: function () {
-            return this.selected_skills.length >= this.maxPersonalSkills;
         }
     },
     watch: {
@@ -71,6 +76,9 @@ export default {
                 this.addSelectedSkill();
                 this.selected_skill = null;
             }
+        },
+        selectedSkills: function () {
+            onInput.call(this);
         }
     }
 };

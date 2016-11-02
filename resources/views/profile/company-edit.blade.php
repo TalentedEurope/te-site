@@ -98,7 +98,7 @@
                     value="{{ old('talent', $company->talent) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-area-form>
 
 
-              <personal-skills-form max-personal-skills="6" values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}' value='{!! json_encode($company->personalSkills, JSON_HEX_APOS) !!}' errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'>
+              <personal-skills-form label="Personal skills (max 6)" sublabel="A list of the most valuable skills for the company" values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}' value='{!! json_encode($company->personalSkills, JSON_HEX_APOS) !!}' errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'>
               </personal-skills-form>
 
               <hr>

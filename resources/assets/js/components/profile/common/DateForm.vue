@@ -1,6 +1,6 @@
 <template>
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
-        <label :for="code">{{label}}</label>
+        <label :for="code">{{ label }}</label>
         <input class="form-control" type="text" :id="generateFieldId()" :name="generateFieldName()" :placeholder="placeholder" :value="value" data-input/>
 
         <span v-if="has_error" class="help-block">
@@ -13,12 +13,11 @@
 import { setDebounced, setCodeForValidation, setInitError, generateFieldId, generateFieldName, validateField, onInput } from './form-helpers';
 
 export default {
-    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'value', 'errors', 'readonly'],
+    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'value', 'errors', 'readonly', 'noValidate'],
     data() {
         return {
             'has_error': false,
-            'error_message': '',
-            'code_for_validation': '',
+            'error_message': null
         }
     },
     created() {
@@ -41,7 +40,6 @@ export default {
         validateField: validateField,
         generateFieldId: generateFieldId,
         generateFieldName: generateFieldName,
-        onInput: onInput
     },
     watch: {
         value: onInput
