@@ -3,6 +3,8 @@
 
 return [
     
+        'AT' => 'Rakúsko',
+    
         'BE' => 'Belgicko',
     
         'BG' => 'Bulharsko',
