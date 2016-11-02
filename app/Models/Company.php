@@ -16,11 +16,11 @@ class Company extends Model
 
     public static function rules($company, $only_key = false)
     {
-        $filter = array( 'fiscal_id' => ['required','alpha_dash', Rule::unique('companies')->ignore($company->id)] ,
+        $filter = array( 'fiscal_id' => ['sometimes', 'required','alpha_dash', Rule::unique('companies')->ignore($company->id)] ,
                         'overseer' => 'regex:/^[\pL\s\-]+$/u' ,
-                        'activity' => 'required|in:'.implode(',', Company::$activities),
+                        'activity' => 'sometimes|required|in:'.implode(',', Company::$activities),
                         'website' => 'active_url' ,
-                        'talent' => 'required|max:300',
+                        'talent' => 'sometimes|required|max:300',
                         'notification_name' => 'regex:/^[\pL\s\-]+$/u',
                         'notification_email' => 'email'
         );
