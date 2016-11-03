@@ -9,12 +9,16 @@
             <text-box-form type="hidden" code="id" group-code="experiences" :group-id="experience.id" :value="experience.id"></text-box-form>
 
             <div class="row">
-                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="experience.id" label="From" placeholder="Work from" :value="experience.from" :errors="errors"></date-form>
-                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="experience.id" label="To" placeholder="Work to" :value="experience.until" :errors="errors"></date-form>
+                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="experience.id" label="From"
+                    required placeholder="Work from" :value="experience.from" :errors="errors"></date-form>
+                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="experience.id" label="To"
+                    required placeholder="Work to" :value="experience.until" :errors="errors"></date-form>
             </div>
 
-            <text-box-form code="company" group-code="experiences" :group-id="experience.id" label="Company name" placeholder="Company name" :value="experience.company" :errors="errors"></text-box-form>
-            <text-box-form code="position" group-code="experiences" :group-id="experience.id" label="Position" placeholder="Position" :value="experience.position" :errors="errors"></text-box-form>
+            <text-box-form code="company" group-code="experiences" :group-id="experience.id" label="Company name"
+                required placeholder="Company name" :value="experience.company" :errors="errors"></text-box-form>
+            <text-box-form code="position" group-code="experiences" :group-id="experience.id" label="Position"
+                required placeholder="Position" :value="experience.position" :errors="errors"></text-box-form>
             <hr>
         </div>
 
@@ -24,12 +28,16 @@
                 <remove-item-button :items="new_experiences" :item="new_experience"></remove-item-button>
             </header>
             <div class="row">
-                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="new_experience.id" label="From" placeholder="Work from" :value="new_experience.from"></date-form>
-                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="new_experience.id" label="To" placeholder="Work to" :value="new_experience.until"></date-form>
+                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="new_experience.id"
+                    required label="From" placeholder="Work from" :value="new_experience.from"></date-form>
+                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="new_experience.id"
+                    required label="To" placeholder="Work to" :value="new_experience.until"></date-form>
             </div>
 
-            <text-box-form code="company" group-code="experiences" :group-id="new_experience.id" label="Company name" placeholder="Company name" :value="new_experience.company"></text-box-form>
-            <text-box-form code="position" group-code="experiences" :group-id="new_experience.id" label="Position" placeholder="Position" :value="new_experience.position"></text-box-form>
+            <text-box-form code="company" group-code="experiences" :group-id="new_experience.id" label="Company name"
+                required placeholder="Company name" :value="new_experience.company"></text-box-form>
+            <text-box-form code="position" group-code="experiences" :group-id="new_experience.id" label="Position"
+                required placeholder="Position" :value="new_experience.position"></text-box-form>
             <hr>
         </div>
 

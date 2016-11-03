@@ -6,13 +6,17 @@
                 <remove-item-button :items="parsed_trainings" :item="training"></remove-item-button>
             </header>
 
-            <text-box-form type="hidden" code="id" group-code="trainings" :group-id="training.id" :value="training.id"></text-box-form>
+            <text-box-form type="hidden" code="id" group-code="trainings" :group-id="training.id" :value="training.id" required></text-box-form>
 
-            <text-box-form code="name" group-code="trainings" :group-id="training.id" label="Course name" placeholder="Course name" :value="training.name" :errors="errors"></text-box-form>
-            <date-form code="date" group-code="trainings" :group-id="training.id" label="Date" placeholder="Date" :value="training.date" :errors="errors"></date-form>
+            <text-box-form code="name" group-code="trainings" :group-id="training.id" label="Course name" placeholder="Course name"
+                required :value="training.name" :errors="errors"></text-box-form>
+            <date-form code="date" group-code="trainings" :group-id="training.id" label="Date" placeholder="Date"
+                required :value="training.date" :errors="errors"></date-form>
 
             <hr>
-            <file-form code="certificate" group-code="trainings" :group-id="training.id" label="Certificate" download-text="Download Certificate" :has-file="training.certificate" :file-url="getFileUrl(training.id, 'certificate')" :errors="errors"></file-form>
+            <file-form code="certificate" group-code="trainings" :group-id="training.id" label="Certificate"
+                required download-text="Download Certificate" :has-file="training.certificate"
+                :file-url="getFileUrl(training.id, 'certificate')" :errors="errors"></file-form>
             <hr>
         </div>
 
@@ -22,11 +26,14 @@
                 <remove-item-button :items="new_trainings" :item="new_training"></remove-item-button>
             </header>
 
-            <text-box-form code="name" group-code="trainings" :group-id="new_training.id" label="Course name" placeholder="Course name" :value="new_training.name"></text-box-form>
-            <date-form code="date" group-code="trainings" :group-id="new_training.id" label="Date" placeholder="Date" :value="new_training.date"></date-form>
+            <text-box-form code="name" group-code="trainings" :group-id="new_training.id" label="Course name"
+                required placeholder="Course name" :value="new_training.name"></text-box-form>
+            <date-form code="date" group-code="trainings" :group-id="new_training.id" label="Date"
+                required placeholder="Date" :value="new_training.date"></date-form>
 
             <hr>
-            <file-form code="certificate" group-code="trainings" :group-id="new_training.id" label="Certificate" download-text="Download Certificate"></file-form>
+            <file-form code="certificate" group-code="trainings" :group-id="new_training.id" label="Certificate"
+                required download-text="Download Certificate"></file-form>
             <hr>
 
         </div>

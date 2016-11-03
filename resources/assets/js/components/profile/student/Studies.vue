@@ -11,19 +11,27 @@
 
             <text-box-form type="hidden" code="id" group-code="studies" :group-id="study.id" :value="study.id"></text-box-form>
 
-            <text-box-form code="institution_name" group-code="studies" :group-id="study.id" label="Institution name" placeholder="Institution name" :value="study.institution_name" :errors="errors"></text-box-form>
+            <text-box-form code="institution_name" group-code="studies" :group-id="study.id" label="Institution name"
+                required placeholder="Institution name" :value="study.institution_name" :errors="errors"></text-box-form>
 
             <div class="row">
-                <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="study.id" label="Course/Studies name" placeholder="Course/Studies name" :value="study.name" :errors="errors"></text-box-form>
-                <select-form class="col-sm-4" code="level" group-code="studies" :group-id="study.id" label="Level" placeholder=" - Level - " :values="studyLevels" :value="study.level" :errors="errors"></select-form>
+                <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="study.id" label="Course/Studies name"
+                    required placeholder="Course/Studies name" :value="study.name" :errors="errors"></text-box-form>
+                <select-form class="col-sm-4" code="level" group-code="studies" :group-id="study.id" label="Level"
+                    required placeholder=" - Level - " :values="studyLevels" :value="study.level" :errors="errors"></select-form>
             </div>
 
-            <select-form code="field" group-code="studies" :group-id="study.id" label="Field of studies" placeholder=" - Field of studies - " :values="studyFields" :value="study.field" :errors="errors"></select-form>
+            <select-form code="field" group-code="studies" :group-id="study.id" label="Field of studies"
+                required placeholder=" - Field of studies - " :values="studyFields" :value="study.field" :errors="errors"></select-form>
 
             <hr>
-            <file-form code="certificate" group-code="studies" :group-id="study.id" label="Certificate" download-text="Download Certificate" :has-file="study.certificate" :file-url="getFileUrl(study.id, 'certificate')" :errors="errors"></file-form>
+            <file-form code="certificate" group-code="studies" :group-id="study.id" label="Certificate"
+                download-text="Download Certificate" :has-file="study.certificate" required
+                :file-url="getFileUrl(study.id, 'certificate')" :errors="errors"></file-form>
             <hr>
-            <file-form code="gradecard" group-code="studies" :group-id="study.id" label="Gradecard" download-text="Download Gradecard" :has-file="study.gradecard" :file-url="getFileUrl(study.id, 'gradecard')" :errors="errors"></file-form>
+            <file-form code="gradecard" group-code="studies" :group-id="study.id" label="Gradecard"
+                download-text="Download Gradecard" :has-file="study.gradecard"
+                :file-url="getFileUrl(study.id, 'gradecard')" :errors="errors"></file-form>
             <hr>
         </div>
 
@@ -36,17 +44,21 @@
                 </button>
             </header>
 
-            <text-box-form code="institution_name" group-code="studies" :group-id="new_study.id" label="Institution name" placeholder="Institution name" :value="new_study.institution_name"></text-box-form>
+            <text-box-form code="institution_name" group-code="studies" :group-id="new_study.id" label="Institution name"
+                required placeholder="Institution name" :value="new_study.institution_name"></text-box-form>
 
             <div class="row">
-                <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="new_study.id" label="Course/Studies name" placeholder="Course/Studies name" :value="new_study.name"></text-box-form>
-                <select-form class="col-sm-4" code="level" group-code="studies" :group-id="new_study.id" label="Level" placeholder=" - Level - " :values="studyLevels" :value="new_study.level"></select-form>
+                <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="new_study.id"
+                    required label="Course/Studies name" placeholder="Course/Studies name" :value="new_study.name"></text-box-form>
+                <select-form class="col-sm-4" code="level" group-code="studies" :group-id="new_study.id"
+                    required label="Level" placeholder=" - Level - " :values="studyLevels" :value="new_study.level"></select-form>
             </div>
 
-            <select-form code="field" group-code="studies" :group-id="new_study.id" label="Field of studies" placeholder=" - Field of studies - " :values="studyFields" :value="new_study.field"></select-form>
+            <select-form code="field" group-code="studies" :group-id="new_study.id" label="Field of studies"
+                required placeholder=" - Field of studies - " :values="studyFields" :value="new_study.field"></select-form>
 
             <hr>
-            <file-form code="certificate" group-code="studies" :group-id="new_study.id" label="Certificate"></file-form>
+            <file-form code="certificate" group-code="studies" :group-id="new_study.id" label="Certificate" required></file-form>
             <hr>
             <file-form code="gradecard" group-code="studies" :group-id="new_study.id" label="Gradecard"></file-form>
             <hr>

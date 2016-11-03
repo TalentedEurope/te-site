@@ -1,7 +1,8 @@
 <template>
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
         <label :for="generateFieldId()">{{ label }}</label>
-        <input type="file" :id="generateFieldId()" :name="generateFieldName()" :filename="code" @change="changeFile()" :required="required"/>
+        <input type="file" :id="generateFieldId()" :name="generateFieldName()" :filename="code"
+            @change="changeFile()" :required="isRequired"/>
         <p class="download-button h4" v-if="hasFile">
             <a class="btn btn-primary" :alt="downloadText" :href="fileUrl">
                 <i class="fa fa-cloud-download" aria-hidden="true"></i> {{ downloadText }}
@@ -29,6 +30,9 @@ export default {
         setInitError.call(this);
     },
     methods: {
+        isRequired: function () {
+            return this.required && !this.hasFile;
+        },
         generateFieldId: generateFieldId,
         generateFieldName: generateFieldName,
         changeFile: function () {
