@@ -2,13 +2,13 @@
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error, 'hidden-type': input_type == 'hidden' }">
         <!-- <label :for="generateFieldId()">{{label}}</label> -->
         <input v-if="input_type == 'text'" type="text" class="form-control" :id="generateFieldId()" :name="generateFieldName()"
-            :placeholder="placeholder" v-model="value" @input="onInput" :readonly="readonly" :required="required"/>
+            :placeholder="placeholder" v-model="value" @input="onInput" :readonly="readonly" :required="required" :minlength="minlength"/>
         <input v-if="input_type == 'email'" type="email" class="form-control" :id="generateFieldId()" :name="generateFieldName()"
-            :placeholder="placeholder" v-model="value" @input="onInput" :readonly="readonly" :required="required"/>
+            :placeholder="placeholder" v-model="value" @input="onInput" :readonly="readonly" :required="required" :minlength="minlength"/>
         <input v-if="input_type == 'password'" type="password" class="form-control" :id="generateFieldId()" :name="generateFieldName()"
-            :placeholder="placeholder" v-model="value" @input="onInput" :readonly="readonly" :required="required"/>
+            :placeholder="placeholder" v-model="value" @input="onInput" :readonly="readonly" :required="required" :minlength="minlength"/>
         <input v-if="input_type == 'hidden'" type="hidden" class="form-control" :id="generateFieldId()" :name="generateFieldName()"
-            :placeholder="placeholder" v-model="value" @input="onInput" :readonly="readonly" :required="required"/>
+            :placeholder="placeholder" v-model="value" @input="onInput"/>
 
         <span v-if="has_error" class="help-block">
             <strong>{{error_message}}</strong>
@@ -20,7 +20,7 @@
 import { setDebounced, setCodeForValidation, setInitError, generateFieldId, generateFieldName, validateField, onInput } from './form-helpers'
 
 export default {
-    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'type', 'value', 'readonly', 'required', 'errors', 'noValidate'],
+    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'type', 'value', 'minlength', 'readonly', 'required', 'errors', 'noValidate'],
     data() {
         return {
             'input_type': this.type || 'text',
