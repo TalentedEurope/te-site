@@ -1,8 +1,8 @@
 <template>
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
-        <!-- <label :for="code">{{label}}</label> -->
+        <!-- <label :for="generateFieldId()">{{label}}</label> -->
         <div class="select-holder">
-            <select class="form-control" :id="code" :name="generateFieldName()" v-model="value" @input="onInput">
+            <select class="form-control" :id="generateFieldId()" :name="generateFieldName()" v-model="value" @input="onInput" :required="required">
                 <option value="">{{placeholder}}</option>
                 <option v-for="(v_code, v_name) in parsed_values" :value="v_code">{{ v_name }}</option>
             </select>
@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import { setDebounced, setCodeForValidation, setInitError, generateFieldName, validateField, onInput } from './form-helpers';
+import { setDebounced, setCodeForValidation, setInitError, generateFieldId, generateFieldName, validateField, onInput } from './form-helpers';
 
 export default {
-    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'values', 'value', 'errors', 'noValidate'],
+    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'values', 'value', 'required', 'errors', 'noValidate'],
     data() {
         return {
             'parsed_values': JSON.parse(this.values),
@@ -37,6 +37,7 @@ export default {
     },
     methods: {
         validateField: validateField,
+        generateFieldId: generateFieldId,
         generateFieldName: generateFieldName,
         onInput: onInput
     }

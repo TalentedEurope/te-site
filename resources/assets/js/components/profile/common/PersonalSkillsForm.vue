@@ -1,7 +1,7 @@
 <template>
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
-        <label for="personalSkills">{{ label }}</label>
-        <p>{{ sublabel }}</p>
+        <label for="personalSkillsSelect">{{ label }}</label>
+        <p v-if="sublabel">{{ sublabel }}</p>
 
         <ul class="selected-skills list-unstyled" v-show="selectedSkills.length > 0">
             <li class="btn btn-default" v-for="skill in selectedSkills">
@@ -12,7 +12,7 @@
         </ul>
 
         <div class="select-holder">
-            <select v-model="selected_skill" :disabled="selected_skills.length >= max_personal_skills" class="form-control">
+            <select v-model="selected_skill" id="personalSkillsSelect" :disabled="selected_skills.length >= max_personal_skills" class="form-control">
                 <option :value="null"> - Personal skills - </option>
                 <option v-for="skill in posibleSkills" :value="skill">{{ skill.name }}</option>
             </select>

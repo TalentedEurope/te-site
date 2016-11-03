@@ -5,13 +5,18 @@
 </template>
 
 <script>
+import EventBus from 'event-bus.js';
+
 export default {
-    props: ['item', 'items'],
+    props: ['item', 'items', 'groupName'],
     methods: {
         removeItem: function () {
             var index = this.items.indexOf(this.item);
             if (index > -1) {
                 this.items.splice(index, 1);
+                if (this.groupName) {
+                    EventBus.$emit(`onRemove${this.groupName}`, this.item);
+                }
             }
         }
     }

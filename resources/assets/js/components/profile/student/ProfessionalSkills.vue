@@ -1,6 +1,6 @@
 <template>
     <div class="form-group clearfix" v-bind:class="{ 'alert alert-danger': has_error }">
-        <label>Professional skills (max {{ max_professional_skills }})</label>
+        <label for="professionalSkillsInput">Professional skills (max {{ max_professional_skills }})</label>
 
         <ul class="selected-skills list-unstyled" v-show="selected_items.length > 0">
             <li class="btn btn-default" v-for="skill in selected_items">
@@ -11,7 +11,7 @@
         </ul>
 
         <div class="dropdown suggestions-dropdown col-sm-10 no-padding" v-bind:class="{'open': openSuggestion}">
-            <input type="text" class="form-control" v-model="model" placeholder="Add a professional skill"
+            <input type="text" class="form-control" id="professionalSkillsInput" v-model="model" placeholder="Add a professional skill"
                @keydown.enter.prevent="enter" @keydown.down="down" @keydown.up="up" @input="change" :disabled="selected_items.length >= max_professional_skills"/>
             <ul class="dropdown-menu suggestions-menu">
                 <li v-for="(index, item) in matches" v-bind:class="{'active': isActive(index)}" @click="selectItem(index)">
