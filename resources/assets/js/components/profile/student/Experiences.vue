@@ -1,9 +1,11 @@
 <template>
     <div>
+        <input type="hidden" name="remove_experiences[]" v-for="remove_experience in remove_experiences" :value="remove_experience"/>
+
         <div class="experience" v-for="(index, experience) in parsed_experiences">
             <header class="clearfix">
                 <h4 class="pull-left">Work Experience #{{ index + 1 }}</h4>
-                <remove-item-button :items="parsed_experiences" :item="experience"></remove-item-button>
+                <remove-item-button :items="parsed_experiences" :item="experience" group-name="Experience"></remove-item-button>
             </header>
 
             <text-box-form type="hidden" code="id" group-code="experiences" :group-id="experience.id" :value="experience.id"></text-box-form>
@@ -55,6 +57,7 @@
 import RemoveItemButton from './common/RemoveItemButton.vue';
 import TextBoxForm from '../common/TextBoxForm.vue';
 import DateForm from '../common/DateForm.vue';
+import EventBus from 'event-bus.js';
 
 export default {
     props: ['experiences', 'errors'],
@@ -63,8 +66,14 @@ export default {
         return {
             parsed_experiences: JSON.parse(this.experiences),
             new_experiences: [],
-            total: 0
+            total: 0,
+            remove_experiences: [],
         }
+    },
+    ready() {
+        EventBus.$on('onRemoveExperience', (experience) => {
+            this.remove_experiences.push(experience.id);
+        });
     },
     methods: {
         addNewExperience: function () {

@@ -1,9 +1,11 @@
 <template>
     <div>
+        <input type="hidden" name="remove_studies[]" v-for="remove_study in remove_studies" :value="remove_study"/>
+
         <div class="study" v-for="(index, study) in parsed_studies">
             <header class="clearfix">
                 <h4 class="pull-left">Studies #{{ index + 1 }}</h4>
-                <remove-item-button v-if="!showClearButton" :items="parsed_studies" :item="study"></remove-item-button>
+                <remove-item-button v-if="!showClearButton" :items="parsed_studies" :item="study" group-name="Study"></remove-item-button>
                 <button class="pull-right remove btn-warning btn btn-sm" v-if="showClearButton" @click.prevent="clearForm()" >
                     <i class="fa fa-close" aria-hidden="true"></i> clear
                 </button>
@@ -78,6 +80,7 @@ import RemoveItemButton from './common/RemoveItemButton.vue';
 import TextBoxForm from '../common/TextBoxForm.vue';
 import SelectForm from '../common/SelectForm.vue';
 import FileForm from '../common/FileForm.vue';
+import EventBus from 'event-bus.js';
 
 export default {
     props: ['studies', 'studyLevels', 'studyFields', 'userId', 'errors'],
@@ -85,16 +88,23 @@ export default {
     data() {
         return {
             parsed_studies: JSON.parse(this.studies),
-            new_studies: []
+            new_studies: [],
+            remove_studies: []
         }
     },
     ready() {
         if (this.parsed_studies.length == 0) {
             this.addNewStudy();
         }
+        EventBus.$on('onRemoveStudy', (study) => {
+            this.remove_studies.push(study.id);
+        });
     },
     methods: {
         clearForm: function () {
+            if (this.parsed_studies.length > 0) {
+                this.remove_studies.push(this.parsed_studies[0].id);
+            }
             this.parsed_studies = [];
             this.new_studies = [];
             this.addNewStudy();

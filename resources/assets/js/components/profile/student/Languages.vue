@@ -1,9 +1,11 @@
 <template>
     <div>
+        <input type="hidden" name="remove_languages[]" v-for="remove_language in remove_languages" :value="remove_language"/>
+
         <div class="language" :id="language.id" v-for="(index, language) in parsed_languages">
             <header class="clearfix">
                 <h4 class="pull-left">Language #{{ index + 1 }}</h4>
-                <remove-item-button :items="parsed_languages" :item="language"></remove-item-button>
+                <remove-item-button :items="parsed_languages" :item="language" group-name="Language"></remove-item-button>
             </header>
 
             <text-box-form type="hidden" code="id" group-code="languages" :group-id="language.id"
@@ -53,6 +55,7 @@ import RemoveItemButton from './common/RemoveItemButton.vue';
 import TextBoxForm from '../common/TextBoxForm.vue';
 import SelectForm from '../common/SelectForm.vue';
 import FileForm from '../common/FileForm.vue';
+import EventBus from 'event-bus.js';
 
 export default {
     props: ['languages', 'languageNames', 'languageLevels', 'errors'],
@@ -61,8 +64,14 @@ export default {
         return {
             parsed_languages: JSON.parse(this.languages),
             new_languages: [],
-            total: 0
+            total: 0,
+            remove_languages: [],
         }
+    },
+    ready() {
+        EventBus.$on('onRemoveLanguage', (language) => {
+            this.remove_languages.push(language.id);
+        });
     },
     methods: {
         addNewLanguage: function () {

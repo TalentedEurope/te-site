@@ -1,9 +1,11 @@
 <template>
     <div>
+        <input type="hidden" name="remove_trainings[]" v-for="remove_training in remove_trainings" :value="remove_training"/>
+
         <div class="training" v-for="(index, training) in parsed_trainings">
             <header class="clearfix">
                 <h4 class="pull-left">Training #{{ index + 1 }}</h4>
-                <remove-item-button :items="parsed_trainings" :item="training"></remove-item-button>
+                <remove-item-button :items="parsed_trainings" :item="training" group-name="Training"></remove-item-button>
             </header>
 
             <text-box-form type="hidden" code="id" group-code="trainings" :group-id="training.id" :value="training.id" required></text-box-form>
@@ -52,6 +54,7 @@ import RemoveItemButton from './common/RemoveItemButton.vue';
 import TextBoxForm from '../common/TextBoxForm.vue';
 import DateForm from '../common/DateForm.vue';
 import FileForm from '../common/FileForm.vue';
+import EventBus from 'event-bus.js';
 
 export default {
     props: ['trainings', 'trainingLevels', 'trainingFields', 'userId', 'errors'],
@@ -60,8 +63,14 @@ export default {
         return {
             parsed_trainings: JSON.parse(this.trainings),
             new_trainings: [],
-            total: 0
+            total: 0,
+            remove_trainings: [],
         }
+    },
+    ready() {
+        EventBus.$on('onRemoveTraining', (training) => {
+            this.remove_trainings.push(training.id);
+        });
     },
     methods: {
         addNewTraining: function () {
