@@ -109,7 +109,7 @@
 
               <div class="row">
                 <text-box-form class="col-sm-4" code="postal_code" label="Postal Code" placeholder="Postal Code"
-                    value="{{ old('postal_code', $user->postal_code) }}"
+                    value="{{ old('postal_code', $user->postal_code) }}" minlength="3"
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
                 <text-box-form class="col-sm-8" code="city" label="City" placeholder="City"
                     required value="{{ old('city', $user->city) }}"
