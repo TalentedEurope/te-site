@@ -80,6 +80,14 @@ var onInput = function() {
     }
 };
 
+var onBlur = function() {
+    if (_.isUndefined(this.noValidate) && this.has_error == false) {
+        if (this.debounced) {
+            this.debounced.flush();
+        }
+    }
+};
+
 
 export var setDebounced = setDebounced;
 export var setCodeForValidation = setCodeForValidation;
@@ -88,3 +96,4 @@ export var generateFieldId = generateFieldId;
 export var generateFieldName = generateFieldName;
 export var validateField = validateField;
 export var onInput = onInput;
+export var onBlur = onBlur;
