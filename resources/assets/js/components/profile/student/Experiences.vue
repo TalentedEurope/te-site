@@ -1,20 +1,26 @@
 <template>
     <div>
+        <input type="hidden" name="remove_experiences[]" v-for="remove_experience in remove_experiences" :value="remove_experience"/>
+
         <div class="experience" v-for="(index, experience) in parsed_experiences">
             <header class="clearfix">
                 <h4 class="pull-left">Work Experience #{{ index + 1 }}</h4>
-                <remove-item-button :items="parsed_experiences" :item="experience"></remove-item-button>
+                <remove-item-button :items="parsed_experiences" :item="experience" group-name="Experience"></remove-item-button>
             </header>
 
             <text-box-form type="hidden" code="id" group-code="experiences" :group-id="experience.id" :value="experience.id"></text-box-form>
 
             <div class="row">
-                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="experience.id" label="From" placeholder="Work from" :value="experience.from" :errors="errors"></date-form>
-                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="experience.id" label="To" placeholder="Work to" :value="experience.until" :errors="errors"></date-form>
+                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="experience.id" label="From"
+                    required placeholder="Work from" :value="experience.from" :errors="errors"></date-form>
+                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="experience.id" label="To"
+                    placeholder="Work to" :value="experience.until" :errors="errors"></date-form>
             </div>
 
-            <text-box-form code="company" group-code="experiences" :group-id="experience.id" label="Company name" placeholder="Company name" :value="experience.company" :errors="errors"></text-box-form>
-            <text-box-form code="position" group-code="experiences" :group-id="experience.id" label="Position" placeholder="Position" :value="experience.position" :errors="errors"></text-box-form>
+            <text-box-form code="company" group-code="experiences" :group-id="experience.id" label="Company name"
+                required placeholder="Company name" :value="experience.company" :errors="errors"></text-box-form>
+            <text-box-form code="position" group-code="experiences" :group-id="experience.id" label="Position"
+                required placeholder="Position" :value="experience.position" :errors="errors"></text-box-form>
             <hr>
         </div>
 
@@ -24,12 +30,16 @@
                 <remove-item-button :items="new_experiences" :item="new_experience"></remove-item-button>
             </header>
             <div class="row">
-                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="new_experience.id" label="From" placeholder="Work from" :value="new_experience.from" :errors="errors"></date-form>
-                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="new_experience.id" label="To" placeholder="Work to" :value="new_experience.until" :errors="errors"></date-form>
+                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="new_experience.id"
+                    required label="From" placeholder="Work from" :value="new_experience.from"></date-form>
+                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="new_experience.id"
+                    label="To" placeholder="Work to" :value="new_experience.until"></date-form>
             </div>
 
-            <text-box-form code="company" group-code="experiences" :group-id="new_experience.id" label="Company name" placeholder="Company name" :value="new_experience.company" :errors="errors"></text-box-form>
-            <text-box-form code="position" group-code="experiences" :group-id="new_experience.id" label="Position" placeholder="Position" :value="new_experience.position" :errors="errors"></text-box-form>
+            <text-box-form code="company" group-code="experiences" :group-id="new_experience.id" label="Company name"
+                required placeholder="Company name" :value="new_experience.company"></text-box-form>
+            <text-box-form code="position" group-code="experiences" :group-id="new_experience.id" label="Position"
+                required placeholder="Position" :value="new_experience.position"></text-box-form>
             <hr>
         </div>
 
@@ -47,21 +57,23 @@
 import RemoveItemButton from './common/RemoveItemButton.vue';
 import TextBoxForm from '../common/TextBoxForm.vue';
 import DateForm from '../common/DateForm.vue';
+import EventBus from 'event-bus.js';
 
 export default {
     props: ['experiences', 'errors'],
     components: { RemoveItemButton, TextBoxForm, DateForm },
     data() {
         return {
-            parsed_experiences: [],
+            parsed_experiences: JSON.parse(this.experiences),
             new_experiences: [],
-            parsed_errors: [],
-            total: 0
+            total: 0,
+            remove_experiences: [],
         }
     },
     ready() {
-        this.parsed_experiences = JSON.parse(this.experiences);
-        this.parsed_errors = JSON.parse(this.errors);
+        EventBus.$on('onRemoveExperience', (experience) => {
+            this.remove_experiences.push(experience.id);
+        });
     },
     methods: {
         addNewExperience: function () {

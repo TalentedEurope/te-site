@@ -49,19 +49,31 @@
               <hr class="separator">
               <h4>About</h4>
 
-              <text-box-form code="name" label="Name" placeholder="Name" value="{{ old('name', $user->name) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+              <text-box-form code="name" label="Name" placeholder="Name" value="{{ old('name', $user->name) }}"
+                  required errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <div class="row">
-                <text-box-form class="col-sm-6" code="fiscal_id" label="Fiscal id" placeholder="Fiscal id" value="{{ old('fiscal_id', $company->fiscal_id) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-                <text-box-form class="col-sm-6" code="overseer" label="Legal representative" placeholder="Legal representative" value="{{ old('overseer', $company->overseer) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                <text-box-form class="col-sm-6" code="fiscal_id" label="Fiscal id" placeholder="Fiscal id"
+                    required value="{{ old('fiscal_id', $company->fiscal_id) }}"
+                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                <text-box-form class="col-sm-6" code="overseer" label="Legal representative"
+                    placeholder="Legal representative" value="{{ old('overseer', $company->overseer) }}"
+                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
               </div>
 
               <div class="row">
-                <text-box-form class="col-sm-6" code="email" label="Email" placeholder="Email" readonly value="{{ old('email', $user->email) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-                <text-box-form class="col-sm-6" code="phone" label="Phone" placeholder="Phone" value="{{ old('phone', $user->phone) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                <text-box-form class="col-sm-6" code="email" label="Email" placeholder="Email" readonly
+                    value="{{ old('email', $user->email) }}"
+                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                <text-box-form class="col-sm-6" code="phone" label="Phone" placeholder="Phone"
+                    value="{{ old('phone', $user->phone) }}"
+                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
               </div>
 
-              <select-form code="activity" label="Activity Sector" placeholder=" - Activity Sector - " values='{!! json_encode($activities, JSON_HEX_APOS) !!}' value="{{ old('activity', $company->activity) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></select-form>
+              <select-form code="activity" label="Activity Sector" placeholder=" - Activity Sector - " required
+                  values='{!! json_encode($activities, JSON_HEX_APOS) !!}'
+                  value="{{ old('activity', $company->activity) }}"
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></select-form>
 
               <div class="form-group @if ($errors->has('image')) alert alert-danger   @endif  ">
                 @if ($errors->has('image'))
@@ -75,31 +87,51 @@
               <hr class="separator">
 
               <h4>Social networks and website</h4>
-              <text-box-form code="facebook" label="Facebook page url" placeholder="Facebook page url" value="{{ old('facebook', $user->facebook) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-              <text-box-form code="twitter" label="Twitter page url" placeholder="Twitter page url" value="{{ old('twitter', $user->twitter) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-              <text-box-form code="linkedin" label="Linkedin page url" placeholder="Linkedin page url" value="{{ old('linkedin', $user->linkedin) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-              <text-box-form code="website" label="Website url" placeholder="Website url" value="{{ old('website', $company->website) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+              <text-box-form code="facebook" label="Facebook page url" placeholder="Facebook page url"
+                  value="{{ old('facebook', $user->facebook) }}"
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+              <text-box-form code="twitter" label="Twitter page url" placeholder="Twitter page url"
+                  value="{{ old('twitter', $user->twitter) }}"
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+              <text-box-form code="linkedin" label="Linkedin page url" placeholder="Linkedin page url"
+                  value="{{ old('linkedin', $user->linkedin) }}"
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+              <text-box-form code="website" label="Website url" placeholder="Website url"
+                  value="{{ old('website', $company->website) }}"
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <hr class="separator">
 
               <h4>Address</h4>
-              <text-box-form code="address" label="Address" placeholder="Address" value="{{ old('address', $user->address) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+              <text-box-form code="address" label="Address" placeholder="Address"
+                  value="{{ old('address', $user->address) }}"
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <div class="row">
-                <text-box-form class="col-sm-4" code="postal_code" label="Postal Code" placeholder="Postal Code" value="{{ old('postal_code', $user->postal_code) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-                <text-box-form class="col-sm-8" code="city" label="City" placeholder="City" value="{{ old('city', $user->city) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                <text-box-form class="col-sm-4" code="postal_code" label="Postal Code" placeholder="Postal Code"
+                    value="{{ old('postal_code', $user->postal_code) }}" minlength="3"
+                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                <text-box-form class="col-sm-8" code="city" label="City" placeholder="City"
+                    required value="{{ old('city', $user->city) }}"
+                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
               </div>
 
-              <select-form code="country" label="Country" placeholder=" - Country - " values='{!! json_encode($countries, JSON_HEX_APOS) !!}' value="{{ old('country', $user->country) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></select-form>
+              <select-form code="country" label="Country" placeholder=" - Country - " required
+                  values='{!! json_encode($countries, JSON_HEX_APOS) !!}' value="{{ old('country', $user->country) }}"
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></select-form>
 
               <hr class="separator">
 
-              <text-area-form code="talent" label="What is talent for you? (Max 300 characters)" placeholder="Explain us what is talent for you in a few words (max 300)."
-                    value="{{ old('talent', $company->talent) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-area-form>
+              <text-area-form code="talent" label="What is talent for you? (Max 300 characters)"
+                  placeholder="Explain us what is talent for you in a few words (max 300)." required
+                  value="{{ old('talent', $company->talent) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-area-form>
 
 
-              <personal-skills-form max-personal-skills="6" values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}' value='{!! json_encode($company->personalSkills, JSON_HEX_APOS) !!}' errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'>
-              </personal-skills-form>
+              <personal-skills-form label="Personal skills (max 6)"
+                  sublabel="A list of the most valuable skills for the company"
+                  values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}'
+                  value='{!! json_encode($company->personalSkills, JSON_HEX_APOS) !!}'
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></personal-skills-form>
 
               <hr>
 
@@ -112,8 +144,12 @@
             <label>Setup an alternative contact user that will receive all the notifications instead of the main account</label>
             <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#contact' }}" >
               {{ csrf_field() }}
-              <text-box-form code="notification_name" label="Name" placeholder="Name" value="{{ old('notification_name', $company->notification_name) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-              <text-box-form type="email" code="notification_email" label="Email" placeholder="Email" value="{{ old('notification_email', $company->notification_email) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+              <text-box-form code="notification_name" label="Name" placeholder="Name"
+                  value="{{ old('notification_name', $company->notification_name) }}"
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+              <text-box-form type="email" code="notification_email" label="Email" placeholder="Email"
+                  value="{{ old('notification_email', $company->notification_email) }}"
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <hr>
               <button type="submit" class="btn btn-primary">Update settings</button>
@@ -124,8 +160,12 @@
             <p><span class="h4">Change your password</span></p>
             <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#password' }}">
               {{ csrf_field() }}
-              <text-box-form type="password" code="password" label="New Password" placeholder="New Password" value="" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-              <text-box-form type="password" code="password_confirm" label="Repeat new Password" placeholder="Repeat new Password" value="" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+              <text-box-form type="password" code="password" label="New Password"
+                  required placeholder="New Password" value=""
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+              <text-box-form type="password" code="password_confirm" label="Repeat new Password"
+                  required placeholder="Repeat new Password" value=""
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <hr>
               <button type="submit" class="btn btn-primary">Save new password</button>

@@ -1,6 +1,6 @@
 <template>
-    <div class="form-group clearfix">
-        <label>Professional skills</label>
+    <div class="form-group clearfix" v-bind:class="{ 'alert alert-danger': has_error }">
+        <label for="professionalSkillsInput">Professional skills (max {{ max_professional_skills }})</label>
 
         <ul class="selected-skills list-unstyled" v-show="selected_items.length > 0">
             <li class="btn btn-default" v-for="skill in selected_items">
@@ -11,8 +11,8 @@
         </ul>
 
         <div class="dropdown suggestions-dropdown col-sm-10 no-padding" v-bind:class="{'open': openSuggestion}">
-            <input type="text" class="form-control" v-model="model" placeholder="Add a professional skill"
-               @keydown.enter.prevent="enter" @keydown.down="down" @keydown.up="up" @input="change"/>
+            <input type="text" class="form-control" id="professionalSkillsInput" v-model="model" placeholder="Add a professional skill"
+               @keydown.enter.prevent="enter" @keydown.down="down" @keydown.up="up" @input="change" :disabled="selected_items.length >= max_professional_skills"/>
             <ul class="dropdown-menu suggestions-menu">
                 <li v-for="(index, item) in matches" v-bind:class="{'active': isActive(index)}" @click="selectItem(index)">
                     <a>{{item.name}}</a>
@@ -20,31 +20,45 @@
             </ul>
         </div>
         <div class="col-sm-2 no-padding">
-            <button class="btn btn-primary button-add-skill" @click.prevent="enter()">Add</button>
+            <button class="btn btn-primary button-add-skill" @click.prevent="enter()" :disabled="selected_items.length >= max_professional_skills">Add</button>
         </div>
+
+        <span v-if="has_error" class="help-block">
+            <strong>{{error_message}}</strong>
+        </span>
     </div>
 </template>
 
-
 <script>
+import { setCodeForValidation, setInitError, onInput } from '../common/form-helpers';
+
 // source http://fareez.info/blog/create-your-own-autocomplete-using-vuejs/
 export default {
-    props: ['skills', 'selectedSkills'],
+    props: ['skills', 'selectedSkills', 'errors'],
     data() {
         return {
-            selected_items: [],
-            items: [],
+            code: 'professionalSkills',
+            max_professional_skills: 6,
+            selected_items: JSON.parse(this.selectedSkills),
+            items: JSON.parse(this.skills),
             model: '',
             open: false,
             current: -1,
+            has_error: false,
+            error_message: null
         };
     },
-    ready() {
-        this.selected_items = JSON.parse(this.selectedSkills);
-        this.items = JSON.parse(this.skills);
+    created() {
+        setCodeForValidation.call(this);
+        setInitError.call(this);
     },
     methods: {
         enter() {
+            if (this.current > -1) {
+                this.selectItem(this.current);
+                return;
+            }
+
             this.model = this.model.trim();
 
             var is_duplicate = _.find(this.selected_items, (selected) => {
@@ -110,6 +124,11 @@ export default {
         },
         openSuggestion() {
             return this.model !== "" && this.matches.length != 0 && this.open === true;
+        }
+    },
+    watch: {
+        selected_items: function () {
+            onInput.call(this);
         }
     }
 };

@@ -1,8 +1,13 @@
 import Vue from 'vue';
 import VueResource from 'vue-resource';
 import _ from 'lodash';
+
 require('jquery-toast-plugin/dist/jquery.toast.min.css');
 require('jquery-toast-plugin/dist/jquery.toast.min.js');
+
+require('flatpickr/dist/flatpickr.min.css');
+var Flatpickr = require('flatpickr/dist/flatpickr.min.js');
+Flatpickr.l10n.firstDayOfWeek = 1;
 
 import Search from './components/search/Main.vue';
 import Alerts from './components/alerts/Main.vue';

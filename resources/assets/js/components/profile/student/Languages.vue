@@ -1,18 +1,25 @@
 <template>
     <div>
+        <input type="hidden" name="remove_languages[]" v-for="remove_language in remove_languages" :value="remove_language"/>
+
         <div class="language" :id="language.id" v-for="(index, language) in parsed_languages">
             <header class="clearfix">
                 <h4 class="pull-left">Language #{{ index + 1 }}</h4>
-                <remove-item-button :items="parsed_languages" :item="language"></remove-item-button>
+                <remove-item-button :items="parsed_languages" :item="language" group-name="Language"></remove-item-button>
             </header>
 
-            <text-box-form type="hidden" code="id" group-code="languages" :group-id="language.id" :value="language.id"></text-box-form>
+            <text-box-form type="hidden" code="id" group-code="languages" :group-id="language.id"
+                required :value="language.id"></text-box-form>
 
-            <select-form code="name" group-code="languages" :group-id="language.id" label="Language name" placeholder=" - Language name - " :values="languageNames" :value="language.name" :errors="errors"></select-form>
-            <select-form code="level" group-code="languages" :group-id="language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" :value="language.level" :errors="errors"></select-form>
+            <select-form code="name" group-code="languages" :group-id="language.id" label="Language name"
+                required placeholder=" - Language name - " :values="languageNames" :value="language.name" :errors="errors"></select-form>
+            <select-form code="level" group-code="languages" :group-id="language.id" label="Language level"
+                required placeholder=" - Language level - " :values="languageLevels" :value="language.level" :errors="errors"></select-form>
 
             <hr>
-            <file-form code="certificate" group-code="languages" :group-id="language.id" label="Certificate" download-text="Download Certificate" :has-file="language.certificate" :file-url="getFileUrl(language.id, 'certificate')"></file-form>
+            <file-form code="certificate" group-code="languages" :group-id="language.id" label="Certificate"
+                download-text="Download Certificate" :has-file="language.certificate"
+                :file-url="getFileUrl(language.id, 'certificate')" :errors="errors"></file-form>
             <hr>
         </div>
 
@@ -22,11 +29,14 @@
                 <remove-item-button :items="new_languages" :item="new_language"></remove-item-button>
             </header>
 
-            <select-form code="name" group-code="languages" :group-id="new_language.id" label="Language name" placeholder=" - Language name - " :values="languageNames" :value="new_language.name" :errors="errors"></select-form>
-            <select-form code="level" group-code="languages" :group-id="new_language.id" label="Language level" placeholder=" - Language level - " :values="languageLevels" :value="new_language.level" :errors="errors"></select-form>
+            <select-form code="name" group-code="languages" :group-id="new_language.id" label="Language name"
+                required placeholder=" - Language name - " :values="languageNames" :value="new_language.name"></select-form>
+            <select-form code="level" group-code="languages" :group-id="new_language.id" label="Language level"
+                required placeholder=" - Language level - " :values="languageLevels" :value="new_language.level"></select-form>
 
             <hr>
-            <file-form code="certificate" group-code="languages" :group-id="new_language.id" label="Certificate" download-text="Download Certificate"></file-form>
+            <file-form code="certificate" group-code="languages" :group-id="new_language.id" label="Certificate"
+                download-text="Download Certificate"></file-form>
             <hr>
 
         </div>
@@ -45,21 +55,23 @@ import RemoveItemButton from './common/RemoveItemButton.vue';
 import TextBoxForm from '../common/TextBoxForm.vue';
 import SelectForm from '../common/SelectForm.vue';
 import FileForm from '../common/FileForm.vue';
+import EventBus from 'event-bus.js';
 
 export default {
     props: ['languages', 'languageNames', 'languageLevels', 'errors'],
     components: { RemoveItemButton, TextBoxForm, SelectForm, FileForm },
     data() {
         return {
-            parsed_languages: [],
+            parsed_languages: JSON.parse(this.languages),
             new_languages: [],
-            parsed_errors: [],
-            total: 0
+            total: 0,
+            remove_languages: [],
         }
     },
     ready() {
-        this.parsed_languages = JSON.parse(this.languages);
-        this.parsed_errors = JSON.parse(this.errors);
+        EventBus.$on('onRemoveLanguage', (language) => {
+            this.remove_languages.push(language.id);
+        });
     },
     methods: {
         addNewLanguage: function () {
@@ -67,7 +79,7 @@ export default {
             this.new_languages.push({"id": `new_${count}`});
         },
         getFileUrl: function (language_id, code) {
-            return `/${code}/${this.userId}/language/${language_id}`;
+            return `/profile/${code}/${this.userId}/language/${language_id}`;
         }
     },
     computed: {

@@ -42,7 +42,7 @@ var generateFieldName = function () {
 
 var validateField = function() {
     var that = this;
-    var data = {validate: true,}
+    var data = {validate: true}
 
     var value = this.value || '';
     var code = this.code;
@@ -69,11 +69,23 @@ var validateField = function() {
         });
 };
 
-var onInput = function(event) {
-    this.has_error = false;
-    this.error_message = null;
+var onInput = function() {
+    if (_.isUndefined(this.noValidate)) {
+        this.has_error = false;
+        this.error_message = null;
 
-    this.debounced()
+        if (this.debounced) {
+            this.debounced();
+        }
+    }
+};
+
+var onBlur = function() {
+    if (_.isUndefined(this.noValidate) && this.has_error == false) {
+        if (this.debounced) {
+            this.debounced.flush();
+        }
+    }
 };
 
 
@@ -84,3 +96,4 @@ export var generateFieldId = generateFieldId;
 export var generateFieldName = generateFieldName;
 export var validateField = validateField;
 export var onInput = onInput;
+export var onBlur = onBlur;

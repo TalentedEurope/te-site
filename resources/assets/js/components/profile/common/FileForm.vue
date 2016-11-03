@@ -1,22 +1,49 @@
 <template>
-    <div class="form-group">
-        <label :for="code">{{ label }}</label>
-        <input type="file" :id="generateFieldId()" :name="generateFieldName()" :filename="code"/>
+    <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
+        <label :for="generateFieldId()">{{ label }}</label>
+        <input type="file" :id="generateFieldId()" :name="generateFieldName()" :filename="code"
+            @change="changeFile()" :required="isRequired()"/>
         <p class="download-button h4" v-if="hasFile">
             <a class="btn btn-primary" :alt="downloadText" :href="fileUrl">
                 <i class="fa fa-cloud-download" aria-hidden="true"></i> {{ downloadText }}
             </a>
         </p>
+        <span v-if="has_error" class="help-block">
+            <strong>{{error_message}}</strong>
+        </span>
     </div>
 </template>
 
 <script>
-import { generateFieldId, generateFieldName } from './form-helpers';
+import { setCodeForValidation, setInitError, generateFieldId, generateFieldName, onInput } from './form-helpers';
+
 export default {
-    props: ['code', 'label', 'groupCode', 'groupId', 'downloadText', 'hasFile', 'fileUrl'],
+    props: ['code', 'label', 'groupCode', 'groupId', 'downloadText', 'hasFile', 'fileUrl', 'required', 'errors', 'noValidate'],
+    data() {
+        return {
+            'has_error': false,
+            'error_message': null
+        }
+    },
+    created() {
+        setCodeForValidation.call(this);
+        setInitError.call(this);
+    },
     methods: {
+        isRequired: function () {
+            return !_.isUndefined(this.required) && !this.hasFile;
+        },
         generateFieldId: generateFieldId,
         generateFieldName: generateFieldName,
-    },
+        changeFile: function () {
+            onInput.call(this);
+        }
+    }
 };
 </script>
+
+<style lang="sass" scoped>
+.form-group {
+    overflow: hidden;
+}
+</style>

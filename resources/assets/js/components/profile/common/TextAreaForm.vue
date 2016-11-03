@@ -1,7 +1,8 @@
 <template>
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
-        <label :for="code">{{label}}</label>
-        <textarea type="text" class="form-control" :id="code" :name="generateFieldName()" :placeholder="placeholder" v-model="value" @input="onInput"></textarea>
+        <label :for="generateFieldId()">{{label}}</label>
+        <textarea type="text" class="form-control" :id="generateFieldId()" :name="generateFieldName()"
+            :placeholder="placeholder" v-model="value" @input="onInput" @onBlur="onBlur" :required="required"></textarea>
 
         <span v-if="has_error" class="help-block">
             <strong>{{error_message}}</strong>
@@ -10,15 +11,14 @@
 </template>
 
 <script>
-import { setDebounced, setCodeForValidation, setInitError, generateFieldName, validateField, onInput } from './form-helpers'
+import { setDebounced, setCodeForValidation, setInitError, generateFieldId, generateFieldName, validateField, onInput, onBlur } from './form-helpers'
 
 export default {
-    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'value', 'errors'],
+    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'value', 'required', 'errors', 'noValidate'],
     data() {
         return {
-            'has_error': false,
-            'error_message': '',
-            'code_for_validation': '',
+            has_error: false,
+            error_message: null
         }
     },
     created() {
@@ -28,8 +28,10 @@ export default {
     },
     methods: {
         validateField: validateField,
+        generateFieldId: generateFieldId,
         generateFieldName: generateFieldName,
-        onInput: onInput
+        onInput: onInput,
+        onBlur: onBlur
     }
 };
 </script>

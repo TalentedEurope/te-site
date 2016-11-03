@@ -1,8 +1,9 @@
 <template>
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
-        <!-- <label :for="code">{{label}}</label> -->
+        <!-- <label :for="generateFieldId()">{{label}}</label> -->
         <div class="select-holder">
-            <select class="form-control" :id="code" :name="generateFieldName()" v-model="value" @input="onInput">
+            <select class="form-control" :id="generateFieldId()" :name="generateFieldName()" v-model="value"
+                    @input="onInput" @blur="onBlur" :required="required">
                 <option value="">{{placeholder}}</option>
                 <option v-for="(v_code, v_name) in parsed_values" :value="v_code">{{ v_name }}</option>
             </select>
@@ -14,23 +15,21 @@
 </template>
 
 <script>
-import { setDebounced, setCodeForValidation, setInitError, generateFieldName, validateField, onInput } from './form-helpers';
+import { setDebounced, setCodeForValidation, setInitError, generateFieldId, generateFieldName, validateField, onInput, onBlur } from './form-helpers';
 
 export default {
-    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'values', 'value', 'errors'],
+    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'values', 'value', 'required', 'errors', 'noValidate'],
     data() {
         return {
+            'parsed_values': JSON.parse(this.values),
             'has_error': false,
-            'error_message': '',
-            'code_for_validation': '',
-            'parsed_values': [],
+            'error_message': null
         }
     },
     ready() {
         if (_.isNull(this.value) || _.isUndefined(this.value)) {
             this.value = '';
         }
-        this.parsed_values = JSON.parse(this.values);
     },
     created() {
         setDebounced.call(this);
@@ -39,8 +38,10 @@ export default {
     },
     methods: {
         validateField: validateField,
+        generateFieldId: generateFieldId,
         generateFieldName: generateFieldName,
-        onInput: onInput
+        onInput: onInput,
+        onBlur: onBlur
     }
 };
 </script>
