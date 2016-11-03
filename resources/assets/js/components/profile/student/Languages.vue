@@ -16,7 +16,7 @@
 
             <hr>
             <file-form code="certificate" group-code="languages" :group-id="language.id" label="Certificate"
-                required download-text="Download Certificate" :has-file="language.certificate"
+                download-text="Download Certificate" :has-file="language.certificate"
                 :file-url="getFileUrl(language.id, 'certificate')" :errors="errors"></file-form>
             <hr>
         </div>
@@ -34,7 +34,7 @@
 
             <hr>
             <file-form code="certificate" group-code="languages" :group-id="new_language.id" label="Certificate"
-                required download-text="Download Certificate"></file-form>
+                download-text="Download Certificate"></file-form>
             <hr>
 
         </div>

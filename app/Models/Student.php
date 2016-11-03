@@ -63,7 +63,7 @@ class Student extends Model
         $relatedRules = array(
             'studies' => array(
                 'institution_name' => 'required|regex:/^[\pL\s\-]+$/u',
-                'studies_name' => 'required|regex:/^[\pL\s\-]+$/u',
+                'name' => 'required|regex:/^[\pL\s\-]+$/u',
                 'level' => 'required|in:'.implode(',', StudentStudy::$levels),
                 'field' => 'required|in:'.implode(',', StudentStudy::$fields),
                 'certificate' => 'required|mimes:pdf',

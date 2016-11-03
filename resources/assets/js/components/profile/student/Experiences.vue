@@ -12,7 +12,7 @@
                 <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="experience.id" label="From"
                     required placeholder="Work from" :value="experience.from" :errors="errors"></date-form>
                 <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="experience.id" label="To"
-                    required placeholder="Work to" :value="experience.until" :errors="errors"></date-form>
+                    placeholder="Work to" :value="experience.until" :errors="errors"></date-form>
             </div>
 
             <text-box-form code="company" group-code="experiences" :group-id="experience.id" label="Company name"
@@ -31,7 +31,7 @@
                 <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="new_experience.id"
                     required label="From" placeholder="Work from" :value="new_experience.from"></date-form>
                 <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="new_experience.id"
-                    required label="To" placeholder="Work to" :value="new_experience.until"></date-form>
+                    label="To" placeholder="Work to" :value="new_experience.until"></date-form>
             </div>
 
             <text-box-form code="company" group-code="experiences" :group-id="new_experience.id" label="Company name"
