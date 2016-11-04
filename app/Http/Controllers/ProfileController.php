@@ -36,7 +36,17 @@ class ProfileController extends Controller
     {
         $user = Auth::user();
         if (!$user->is_filled) {
-            return view('profile.empty');
+            $errors = Validator::make($user->toArray(), User::Rules(false, true));
+            if ($user->isA('student')) {
+                $filledVal = Validator::make($user->userable->toArray(), Student::Rules(true));
+                $errors->errors()->merge($filledVal);
+            }
+            if ($user->isA('company')) {
+                $filledVal = Validator::make($user->userable->toArray(), Company::Rules($user->userable));
+                $errors->errors()->merge($filledVal);
+            }
+            $data['profileErrors'] = $errors->errors();
+            return view('profile.empty', $data);
         }
         return $this->showProfile($user);
     }
@@ -149,7 +159,7 @@ class ProfileController extends Controller
         // Unlike the other fields we only check them if they're passed
         if ($request->has('password') || $request->has('password_confirm')) {
             $rules = array(
-                    'password' => 'required|min:8',
+                    'password' => 'required|min:8|same:password_confirm',
                     'password_confirm' => 'required|min:8|same:password',
             );
             $v = Validator::make($request->all(), $rules);
@@ -213,6 +223,10 @@ class ProfileController extends Controller
                 }
             }
         }
+        if ($request->has('remove_all_personal_skills')) {
+            $company->personalSkills()->detach();
+        }
+
 
         $user->is_filled = false;
         $uFilledVal = Validator::make($user->toArray(), User::Rules(false, true));
@@ -464,6 +478,9 @@ class ProfileController extends Controller
             }
         }
 
+        if ($request->has('remove_all_personal_skills')) {
+            $student->personalSkills()->detach();
+        }
 
         if (isset($v->valid()['professionalSkills'])) {
             $skills = $v->valid()['professionalSkills'];
@@ -484,9 +501,13 @@ class ProfileController extends Controller
             }
         }
 
+        if ($request->has('remove_all_professional_skills')) {
+            $student->professionalSkills()->detach();
+        }
+
         $user->is_filled = false;
         $uFilledVal = Validator::make($user->toArray(), User::Rules(false, true, $user));
-        $filledVal = Validator::make($student->toArray(), Student::Rules(true));
+        $filledVal = Validator::make(User::find($user->id)->userable->toArray(), Student::Rules(true));
         if ($uFilledVal->passes() && $filledVal->passes()) {
             $user->is_filled = true;
         }
