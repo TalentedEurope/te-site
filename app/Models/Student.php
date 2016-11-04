@@ -25,7 +25,7 @@ class Student extends Model
         $filter = array(
             'nationality' => 'sometimes|required|in:'.implode(',', Student::$nationalities),
             'birthdate' => 'sometimes|required|date',
-            'curriculum' => 'sometimes|required',
+            'curriculum' => 'mimes:pdf',
             'valid' => 'sometimes|required',
             'renewed_at' => 'sometimes|required',
             'talent' => 'sometimes|required|max:300',
@@ -41,13 +41,13 @@ class Student extends Model
             'studies.*.name' => 'sometimes|required|regex:/^[\pL\s\-]+$/u',
             'studies.*.level' => 'sometimes|required|in:'.implode(',', StudentStudy::$levels),
             'studies.*.field' => 'sometimes|required|in:'.implode(',', StudentStudy::$fields),
-            'studies.*.certificate' => 'sometimes|required|mimes:pdf',
+            'studies.*.certificate' => 'mimes:pdf',
         );
 
         if ($forModelValidation) {
             $filter = array_merge($filter, $filterRelated);
-            $filter["curriculum"] = "required";
-            $filter["studies.*.certificate"] = 'required';
+            $filter["curriculum"] = "mimes:pdf";
+            $filter["studies.*.certificate"] = 'mimes:pdf';
         }
 
         if ($only_key) {
@@ -66,7 +66,7 @@ class Student extends Model
                 'name' => 'required|regex:/^[\pL\s\-]+$/u',
                 'level' => 'required|in:'.implode(',', StudentStudy::$levels),
                 'field' => 'required|in:'.implode(',', StudentStudy::$fields),
-                'certificate' => 'required_without:id|mimes:pdf',
+                'certificate' => 'mimes:pdf',
                 'gradecard' => 'mimes:pdf'
             ),
 
