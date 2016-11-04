@@ -23,6 +23,8 @@
         <span v-if="has_error" class="help-block">
             <strong>{{error_message}}</strong>
         </span>
+
+        <input type="hidden" name="remove_all_personal_skills" v-if="selectedSkills.length == 0" value="true"/>
     </div>
 </template>
 
