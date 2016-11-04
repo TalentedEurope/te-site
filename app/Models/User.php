@@ -45,6 +45,8 @@ class User extends Authenticatable
                         'linkedin' => 'active_url' ,
                         'address' => 'max:300',
                         'postal_code' => 'max:12',
+                        'password' => 'sometimes|required|min:8|same:password_confirm',
+                        'password_confirm' => 'sometimes|required|min:8|same:password',
                         'city' => 'sometimes|required',
                         'country' => 'sometimes|required|in:'.implode(',', array_keys(User::$countries)),
                         'image' => 'image'
@@ -56,6 +58,8 @@ class User extends Authenticatable
 
         if ($forModelValidation) {
             unset($filter["image"]);
+            unset($filter["password"]);
+            unset($filter["password_confirm"]);
         }
 
         if ($only_key) {
