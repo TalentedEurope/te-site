@@ -16,7 +16,7 @@
             <p>We don't have enough data from you to be able to show your profile.</p>
 
             <p>You'll need to fix the following errors:</p>
-            @if ($profileErrors)
+            @if ($profileErrors->all())
               <div class="alert alert-warning">
               <ul>
               @foreach ($profileErrors->all() as $error)
