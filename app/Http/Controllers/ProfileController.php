@@ -268,11 +268,11 @@ class ProfileController extends Controller
             }
         }
 
-        if (isset($v->valid()['curriculum']) && !$request->has('validate')) {
+        if (sizeof($v->errors()->get('curriculum')) == 0 && isset($request->all()['curriculum']) && !$request->has('validate')) {
             $fname = tempnam(public_path() . Student::$curriculumPath, $user->id);
             unlink($fname);
             $file = $fname . '.pdf';
-            $v->valid()['curriculum']->move(public_path() . Student::$curriculumPath, basename($file));
+            $request->all()['curriculum']->move(public_path() . Student::$curriculumPath, basename($file));
             $student->curriculum = basename($file);
         }
 
