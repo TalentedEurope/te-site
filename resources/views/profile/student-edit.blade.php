@@ -185,7 +185,7 @@
             <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#password' }}">
               {{ csrf_field() }}
               <text-box-form type="password" code="password" label="New Password" placeholder="New Password" value="" required
-                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}' no-validate></text-box-form>
               <text-box-form type="password" code="password_confirm" label="Repeat new Password"
                   placeholder="Repeat new Password" value="" required
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}' no-validate></text-box-form>
