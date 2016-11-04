@@ -24,14 +24,15 @@ export default {
     },
     computed: {
         infoMessage: function () {
-            if (this.numberOfResults == 0) {
-                return `There are no ${this.collective} matching the selected filters at the moment`;
-            }
             var collective = this.getCollective();
             if (this.isFiltering) {
-                return `We found ${this.numberOfResults} ${collective} matching your needs`;
+                if (this.numberOfResults == 0) {
+                    return `There are no ${this.collective} matching the selected filters at the moment`;
+                } else {
+                    return `We found ${this.numberOfResults} ${collective} matching your needs`;
+                }
             }
-            return `There exists ${this.numberOfResults} ${collective} in the database`;
+            return `There exists ${this.numberOfResults} ${this.collective} in the database`;
         }
     }
 }
