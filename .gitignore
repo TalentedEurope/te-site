@@ -13,5 +13,8 @@ clamp.json
 !/public/css/vendor/
 .DS_Store
 translation-settings.json
-/public/uploads/**/*
-!/public/uploads/**/.gitkeep
+
+public/uploads/*
+!public/uploads/photo/
+public/uploads/photo/*
+!public/uploads/photo/default.png
