@@ -161,11 +161,11 @@
             <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#password' }}">
               {{ csrf_field() }}
               <text-box-form type="password" code="password" label="New Password"
-                  required placeholder="New Password" value=""
+                  required placeholder="New Password" value="" no-validate
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
               <text-box-form type="password" code="password_confirm" label="Repeat new Password"
-                  required placeholder="Repeat new Password" value=""
-                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}' no-validate></text-box-form>
+                  required placeholder="Repeat new Password" value="" no-validate
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <hr>
               <button type="submit" class="btn btn-primary">Save new password</button>
