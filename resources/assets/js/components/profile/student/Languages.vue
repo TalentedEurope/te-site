@@ -9,7 +9,7 @@
             </header>
 
             <text-box-form type="hidden" code="id" group-code="languages" :group-id="language.id"
-                required :value="language.id"></text-box-form>
+                :value="language.id"></text-box-form>
 
             <select-form code="name" group-code="languages" :group-id="language.id" label="Language name"
                 required placeholder=" - Language name - " :values="languageNames" :value="language.name" :errors="errors"></select-form>
