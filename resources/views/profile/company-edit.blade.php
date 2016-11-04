@@ -165,7 +165,7 @@
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
               <text-box-form type="password" code="password_confirm" label="Repeat new Password"
                   required placeholder="Repeat new Password" value=""
-                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}' no-validate></text-box-form>
 
               <hr>
               <button type="submit" class="btn btn-primary">Save new password</button>
