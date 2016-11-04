@@ -36,7 +36,17 @@ class ProfileController extends Controller
     {
         $user = Auth::user();
         if (!$user->is_filled) {
-            return view('profile.empty');
+            $errors = Validator::make($user->toArray(), User::Rules(false, true));
+            if ($user->isA('student')) {
+                $filledVal = Validator::make($user->userable->toArray(), Student::Rules(true));
+                $errors->errors()->merge($filledVal);
+            }
+            if ($user->isA('company')) {
+                $filledVal = Validator::make($user->userable->toArray(), Company::Rules($user->userable));
+                $errors->errors()->merge($filledVal);
+            }
+            $data['profileErrors'] = $errors->errors();
+            return view('profile.empty', $data);
         }
         return $this->showProfile($user);
     }
@@ -149,7 +159,7 @@ class ProfileController extends Controller
         // Unlike the other fields we only check them if they're passed
         if ($request->has('password') || $request->has('password_confirm')) {
             $rules = array(
-                    'password' => 'required|min:8',
+                    'password' => 'required|min:8|same:password_confirm',
                     'password_confirm' => 'required|min:8|same:password',
             );
             $v = Validator::make($request->all(), $rules);
