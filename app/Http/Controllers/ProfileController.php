@@ -507,7 +507,7 @@ class ProfileController extends Controller
 
         $user->is_filled = false;
         $uFilledVal = Validator::make($user->toArray(), User::Rules(false, true, $user));
-        $filledVal = Validator::make($student->toArray(), Student::Rules(true));
+        $filledVal = Validator::make(User::find($user->id)->userable->toArray(), Student::Rules(true));
         if ($uFilledVal->passes() && $filledVal->passes()) {
             $user->is_filled = true;
         }
