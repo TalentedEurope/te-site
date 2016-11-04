@@ -46,8 +46,8 @@ class Student extends Model
 
         if ($forModelValidation) {
             $filter = array_merge($filter, $filterRelated);
-            $filter["curriculum"] = "mimes:pdf";
-            $filter["studies.*.certificate"] = 'mimes:pdf';
+            unset($filter["curriculum"]);
+            unset($filter["studies.*.certificate"]);
         }
 
         if ($only_key) {
