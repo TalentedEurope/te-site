@@ -117,7 +117,7 @@
               <h4>Academic information</h4>
               <hr>
 
-              <file-form code="curriculum" label="Europass curriculum" download-text="Download curriculum"
+              <file-form code="curriculum" label="Europass curriculum" download-text="Download curriculum" has-file="{{ $student->curriculum }}"
                   file-url="{{ URL::to('/profile/curriculum/' . $user->id) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></file-form>
 
               <hr class="separator">
