@@ -18,3 +18,11 @@ public/uploads/*
 !public/uploads/photo/
 public/uploads/photo/*
 !public/uploads/photo/default.png
+!public/uploads/certificate/
+public/uploads/certificate/*
+!public/uploads/curriculum/
+public/uploads/curriculum/*
+!public/uploads/gradecard/
+public/uploads/gradecard/*
+!public/uploads/samples/
+public/uploads/samples/*
