@@ -229,6 +229,26 @@ class ProfileController extends Controller
 
     protected function processStudent(Request $request, User $user)
     {
+        if ($request->has('remove_studies')) {
+            $studies = $request->input('remove_studies');
+            StudentStudy::whereIn('id', $studies)->delete();
+        }
+
+        if ($request->has('remove_languages')) {
+            $langs = $request->input('remove_languages');
+            StudentLanguage::whereIn('id', $langs)->delete();
+        }
+
+        if ($request->has('remove_trainings')) {
+            $training = $request->input('remove_trainings');
+            StudentTraining::whereIn('id', $training)->delete();
+        }
+
+        if ($request->has('remove_experiences')) {
+            $experiences = $request->input('remove_experiences');
+            StudentExperience::whereIn('id', $experiences)->delete();
+        }
+
         $errors = new MessageBag();
         $student = null;
 
@@ -288,19 +308,20 @@ class ProfileController extends Controller
                         $study->field = $stud['field'];
                     }
 
-                    if (isset($itemVal->valid()['gradecard'])) {
+                    if (sizeof($itemVal->errors()->get('gradecard')) == 0 && isset($stud['gradecard'])) {
                         $fname = tempnam(public_path() . Student::$studyGradeCardPath, $user->id);
                         unlink($fname);
                         $file = $fname . '.pdf';
-                        $itemVal->valid()['gradecard']->move(public_path() . Student::$studyGradeCardPath, basename($file));
+                        $stud['gradecard']->move(public_path() . Student::$studyGradeCardPath, basename($file));
                         $study->gradecard = basename($file);
                     }
 
-                    if (isset($itemVal->valid()['certificate'])) {
+
+                    if (sizeof($itemVal->errors()->get('certificate')) == 0 && isset($stud['certificate'])) {
                         $fname = tempnam(public_path() . Student::$studyCertificatePath, $user->id);
                         unlink($fname);
                         $file = $fname . '.pdf';
-                        $itemVal->valid()['certificate']->move(public_path() . Student::$studyCertificatePath, basename($file));
+                        $stud['certificate']->move(public_path() . Student::$studyCertificatePath, basename($file));
                         $study->certificate = basename($file);
                     }
                     $study->student_id = $student->id;
@@ -334,11 +355,11 @@ class ProfileController extends Controller
                     if (isset($itemVal->valid()['date'])) {
                         $training->date = $train['date'];
                     }
-                    if (isset($itemVal->valid()['certificate'])) {
+                    if (sizeof($itemVal->errors()->get('certificate')) == 0 && isset($train['certificate'])) {
                         $fname = tempnam(public_path() . Student::$studyCertificatePath, $user->id);
                         unlink($fname);
                         $file = $fname . '.pdf';
-                        $itemVal->valid()['certificate']->move(public_path() . Student::$studyCertificatePath, basename($file));
+                        $train['certificate']->move(public_path() . Student::$studyCertificatePath, basename($file));
                         $training->certificate = basename($file);
                     }
                     $training->student_id = $student->id;
@@ -372,11 +393,11 @@ class ProfileController extends Controller
                     if (isset($itemVal->valid()['level'])) {
                         $language->level = $lang["level"];
                     }
-                    if (isset($itemVal->valid()['certificate'])) {
+                    if (sizeof($itemVal->errors()->get('certificate')) == 0 && isset($lang['certificate'])) {
                         $fname = tempnam(public_path() . Student::$studyCertificatePath, $user->id);
                         unlink($fname);
                         $file = $fname . '.pdf';
-                        $itemVal->valid()['certificate']->move(public_path() . Student::$studyCertificatePath, basename($file));
+                        $lang['certificate']->move(public_path() . Student::$studyCertificatePath, basename($file));
                         $language->certificate = basename($file);
                     }
                     $language->student_id = $student->id;

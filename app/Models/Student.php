@@ -66,7 +66,7 @@ class Student extends Model
                 'name' => 'required|regex:/^[\pL\s\-]+$/u',
                 'level' => 'required|in:'.implode(',', StudentStudy::$levels),
                 'field' => 'required|in:'.implode(',', StudentStudy::$fields),
-                'certificate' => 'required|mimes:pdf',
+                'certificate' => 'required_without:id|mimes:pdf',
                 'gradecard' => 'mimes:pdf'
             ),
 
