@@ -58,7 +58,7 @@ import FileForm from '../common/FileForm.vue';
 import EventBus from 'event-bus.js';
 
 export default {
-    props: ['languages', 'languageNames', 'languageLevels', 'errors'],
+    props: ['languages', 'languageNames', 'languageLevels', 'errors', 'userId'],
     components: { RemoveItemButton, TextBoxForm, SelectForm, FileForm },
     data() {
         return {
