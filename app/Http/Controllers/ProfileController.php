@@ -223,6 +223,10 @@ class ProfileController extends Controller
                 }
             }
         }
+        if ($request->has('remove_all_personal_skills')) {
+            $company->personalSkills()->detach();
+        }
+
 
         $user->is_filled = false;
         $uFilledVal = Validator::make($user->toArray(), User::Rules(false, true));
@@ -474,6 +478,9 @@ class ProfileController extends Controller
             }
         }
 
+        if ($request->has('remove_all_personal_skills')) {
+            $student->personalSkills()->detach();
+        }
 
         if (isset($v->valid()['professionalSkills'])) {
             $skills = $v->valid()['professionalSkills'];
@@ -492,6 +499,10 @@ class ProfileController extends Controller
                     }
                 }
             }
+        }
+
+        if ($request->has('remove_all_professional_skills')) {
+            $student->professionalSkills()->detach();
         }
 
         $user->is_filled = false;
