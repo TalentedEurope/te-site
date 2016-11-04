@@ -28,7 +28,7 @@
         {{ $mainStudy['level'] }} in {{ $mainStudy['name'] }}</li>
         @endif
         @if ($user->country && $student->nationality)
-          <li><strong><i class="icon fa fa-map-marker"></i>  Lives in: </strong> {{ $user->city }}, <em>{{ $countries[$user->country] }} </em> | <strong> Nationality: </strong> {{ $countries[$student->nationality]  }} </li>
+          <li><strong><i class="icon fa fa-map-marker"></i>  Lives in: </strong> {{ $user->city }}, <em>{{ $countries[$user->country] }} </em> | <strong> Nationality: </strong> {{ $nationalities[$student->nationality]  }} </li>
         @endif
         @if ($student->birthdate)
         <li><strong><i class="icon fa fa-calendar"></i>  Born on: </strong> {{ Carbon\Carbon::parse($student->birthdate)->format('d/m/Y') }}</li>
