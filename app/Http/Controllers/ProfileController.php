@@ -446,7 +446,7 @@ class ProfileController extends Controller
                 }
             }
             if (sizeof($expIds)) {
-                StudentLanguage::where('student_id', $student->id)->whereNotIn('id', $expIds)->delete();
+                StudentExperience::where('student_id', $student->id)->whereNotIn('id', $expIds)->delete();
             }
         }
 
@@ -492,7 +492,6 @@ class ProfileController extends Controller
         }
         $student->save();
         $user->save();
-        //dd($errors);
         return $errors;
     }
 
