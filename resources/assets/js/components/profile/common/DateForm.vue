@@ -1,6 +1,6 @@
 <template>
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
-        <label :for="generateFieldId()">{{ label }}</label>
+        <label :for="generateFieldId()">{{ parsedLabel }}</label>
         <input class="form-control" type="date" :id="generateFieldId()" :name="generateFieldName()"
             :placeholder="placeholder" :value="value" :required="required"/>
 
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { setDebounced, setCodeForValidation, setInitError, generateFieldId, generateFieldName, validateField, onInput } from './form-helpers';
+import { parsedLabel, setDebounced, setCodeForValidation, setInitError, generateFieldId, generateFieldName, validateField, onInput } from './form-helpers';
 
 export default {
     props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'value', 'readonly', 'required', 'errors', 'noValidate'],
@@ -46,6 +46,9 @@ export default {
         setDebounced.call(this);
         setCodeForValidation.call(this);
         setInitError.call(this);
+    },
+    computed: {
+        parsedLabel: parsedLabel
     },
     methods: {
         validateField: validateField,

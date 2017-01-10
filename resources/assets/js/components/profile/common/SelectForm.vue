@@ -4,7 +4,7 @@
         <div class="select-holder">
             <select class="form-control" :id="generateFieldId()" :name="generateFieldName()" v-model="value"
                     @input="onInput" @blur="onBlur" :required="required">
-                <option value="">{{placeholder}}</option>
+                <option value="">{{ parsedPlaceholder }}</option>
                 <option v-for="(v_code, v_name) in parsed_values" :value="v_code">{{ v_name }}</option>
             </select>
         </div>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { setDebounced, setCodeForValidation, setInitError, generateFieldId, generateFieldName, validateField, onInput, onBlur } from './form-helpers';
+import { parsedPlaceholder, setDebounced, setCodeForValidation, setInitError, generateFieldId, generateFieldName, validateField, onInput, onBlur } from './form-helpers';
 
 export default {
     props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'values', 'value', 'required', 'errors', 'noValidate'],
@@ -35,6 +35,9 @@ export default {
         setDebounced.call(this);
         setCodeForValidation.call(this);
         setInitError.call(this);
+    },
+    computed: {
+        parsedPlaceholder: parsedPlaceholder
     },
     methods: {
         validateField: validateField,

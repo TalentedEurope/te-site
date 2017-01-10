@@ -1,5 +1,21 @@
 import { profileResource } from 'resources/profile';
 
+var parsedLabel = function () {
+    var required_text = '';
+    if (!_.isUndefined(this.required)) {
+        required_text = ' (Required)';
+    }
+    return `${this.label}${required_text}`;
+};
+
+var parsedPlaceholder = function () {
+    var required_text = '';
+    if (!_.isUndefined(this.required)) {
+        required_text = ' (Required)';
+    }
+    return `${this.placeholder}${required_text}`;
+};
+
 var setDebounced = function () {
     this.debounced = _.debounce(this.validateField, 1500);
 };
@@ -86,7 +102,8 @@ var onBlur = function() {
     }
 };
 
-
+export var parsedLabel = parsedLabel;
+export var parsedPlaceholder = parsedPlaceholder;
 export var setDebounced = setDebounced;
 export var setCodeForValidation = setCodeForValidation;
 export var setInitError = setInitError;
