@@ -11,6 +11,12 @@
 @endsection
 
 @section('content')
+
+  {{-- <professional-skills selected-skills='{!! json_encode($student->professionalSkills, JSON_HEX_APOS) !!}'
+      skills='{!! json_encode($professionalSkills, JSON_HEX_APOS) !!}'
+      errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></professional-skills>
+       --}}
+
 <div class="container v-container edit-profile">
   <div class="row">
     <div class="col-md-12 col-xs-12">
@@ -50,26 +56,26 @@
               <hr class="separator">
               <h4>About me</h4>
 
-              <text-box-form code="name" label="Name" placeholder="Name" value="{{ old('name', $user->name) }}"
+              <text-box-form code="name" label="{!! trans('reg-profile.name') !!}" placeholder="{!! trans('reg-profile.name') !!}" value="{{ old('name', $user->name) }}"
                   required errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-              <text-box-form code="surname" label="Surname" placeholder="Surname" value="{{ old('surname', $user->surname) }}"
+              <text-box-form code="surname" label="{!! trans('reg-profile.surname') !!}" placeholder="{!! trans('reg-profile.surname') !!}" value="{{ old('surname', $user->surname) }}"
                   required errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <div class="row">
-                <text-box-form class="col-sm-6" type="email" readonly code="email" label="Email" placeholder="Email"
+                <text-box-form class="col-sm-6" type="email" readonly code="email" label="{!! trans('reg-profile.email') !!}" placeholder="{!! trans('reg-profile.email') !!}"
                     value="{{ old('email', $user->email) }}"
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-                <text-box-form class="col-sm-6" code="phone" label="Phone" placeholder="Phone"
+                <text-box-form class="col-sm-6" code="phone" label="{!! trans('reg-profile.phone') !!}" placeholder="{!! trans('reg-profile.phone') !!}"
                     value="{{ old('phone', $user->phone) }}"
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
               </div>
 
-              <select-form code="nationality" label="Nationality" placeholder=" - Nationality - " required
+              <select-form code="nationality" label="{!! trans('reg-profile.nationality') !!}" placeholder=" - {!! trans('reg-profile.nationality') !!} - " required
                   values='{!! json_encode($nationalities, JSON_HEX_APOS) !!}'
                   value="{{ old('nationality', $student->nationality) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></select-form>
 
-              <date-form code="birthdate" label="Birthdate" placeholder="Birthdate" required
+              <date-form code="birthdate" label="{!! trans('reg-profile.student_birthdate') !!}" placeholder="{!! trans('reg-profile.student_birthdate') !!}" required
                   value="{{ old('birthdate', $student->birthdate) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></date-form>
 
@@ -88,20 +94,20 @@
                   value="{{ old('linkedin', $user->linkedin) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
-              <h4>Address</h4>
-              <text-box-form code="address" label="Address" placeholder="Address" value="{{ old('address', $user->address) }}"
+              <h4>{!! trans('reg-profile.address') !!}</h4>
+              <text-box-form code="address" label="{!! trans('reg-profile.address') !!}" placeholder="{!! trans('reg-profile.address') !!}" value="{{ old('address', $user->address) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <div class="row">
-                <text-box-form class="col-sm-4" code="postal_code" label="Postal Code" placeholder="Postal Code"
+                <text-box-form class="col-sm-4" code="postal_code" label="{!! trans('reg-profile.postal_code') !!}" placeholder="{!! trans('reg-profile.postal_code') !!}"
                     value="{{ old('postal_code', $user->postal_code) }}" minlength="3"
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-                <text-box-form class="col-sm-8" code="city" label="City" placeholder="City"
+                <text-box-form class="col-sm-8" code="city" label="{!! trans('reg-profile.city') !!}" placeholder="{!! trans('reg-profile.city') !!}"
                     value="{{ old('city', $user->city) }}" required
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
               </div>
 
-              <select-form code="country" label="Country" placeholder=" - Country - " required
+              <select-form code="country" label="{!! trans('reg-profile.country') !!}" placeholder=" - {!! trans('reg-profile.country') !!} - " required
                   values='{!! json_encode($countries, JSON_HEX_APOS) !!}' value="{{ old('country', $user->country) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></select-form>
 
@@ -114,10 +120,10 @@
           <div class="tab-pane fade" id="career">
             <form class="form-vertical" enctype="multipart/form-data" role="form" method="POST" action="{{ route('update_profile'). '#career' }}">
               {{ csrf_field() }}
-              <h4>Academic information</h4>
+              <h4>{!! trans('reg-profile.student_academic_info') !!}</h4>
               <hr>
 
-              <file-form code="curriculum" label="Europass curriculum" download-text="Download curriculum" has-file="{{ $student->curriculum }}"
+              <file-form code="curriculum" label="{!! trans('reg-profile.student_europass') !!}" download-text="Download curriculum" has-file="{{ $student->curriculum }}"
                   file-url="{{ URL::to('/profile/curriculum/' . $user->id) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></file-form>
 
               <hr class="separator">
@@ -152,7 +158,7 @@
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></personal-skills-form>
 
               <text-area-form code="talent" label="My talent (max 300 characters)"
-                  placeholder="Describe briefly your talent." required
+                  placeholder="{!! trans('reg-profile.student_describe_talent') !!}" required
                   value="{{ old('talent', $student->talent) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-area-form>
 
@@ -170,9 +176,9 @@
             <form class="form-vertical" role="form" style="display:none" method="POST" action="{{ route('update_profile'). '#refer' }}">
               {{ csrf_field() }}
 
-              <text-box-form code="validator_name" label="New validator name" placeholder="Referee name" value=""
+              <text-box-form code="validator_name" label="Referee name" placeholder="Referee name" value=""
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-              <text-box-form type="email" code="validator_email" label="New validator email" placeholder="Referee email" value=""
+              <text-box-form type="email" code="validator_email" label="Referee email" placeholder="Referee email" value=""
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <hr>

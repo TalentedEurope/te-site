@@ -1,6 +1,6 @@
 <template>
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
-        <label :for="generateFieldId()">{{ label }}</label>
+        <label :for="generateFieldId()">{{ parsedLabel }}</label>
         <input type="file" :id="generateFieldId()" :name="generateFieldName()" :filename="code"
             @change="changeFile()" :required="isRequired()"/>
         <p class="download-button h4" v-if="hasFile">
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { setCodeForValidation, setInitError, generateFieldId, generateFieldName, onInput } from './form-helpers';
+import { parsedLabel, setCodeForValidation, setInitError, generateFieldId, generateFieldName, onInput } from './form-helpers';
 
 export default {
     props: ['code', 'label', 'groupCode', 'groupId', 'downloadText', 'hasFile', 'fileUrl', 'required', 'errors', 'noValidate'],
@@ -28,6 +28,9 @@ export default {
     created() {
         setCodeForValidation.call(this);
         setInitError.call(this);
+    },
+    computed: {
+        parsedLabel: parsedLabel
     },
     methods: {
         isRequired: function () {

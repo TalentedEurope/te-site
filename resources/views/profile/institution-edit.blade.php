@@ -29,21 +29,20 @@
                   <div class="select-holder">
                     <select class="form-control" id="type" name="type">
                       <option value="" selected>Institution Type</option>
-                      <option>HEI</option>
+                      <option>{!! trans('reg-profile.institution_hei') !!}</option>
                       <option>VET</option>
                     </select>
                   </div>
                 </div>
                 <div class="col-sm-8 form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                   <div class="radio-holder">
-                    <label class="radio-inline"><input type="radio" name="subtype">UFA</label>
-                    <label class="radio-inline"><input type="radio" name="subtype">HIS</label>
+                    <label class="radio-inline"><input type="radio" name="subtype">{!! trans('reg-profile.institution_ufa') !!}</label>
+                    <label class="radio-inline"><input type="radio" name="subtype">{!! trans('reg-profile.institution_his') !!}</label>
                   </div>
                 </div>
               </div>
               <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                <!-- <label for="name">Name</label> -->
-                <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="">
+                <input type="text" class="form-control" id="name" name="name" placeholder="{!! trans('reg-profile.name') !!}" value="">
                 @if ($errors->has('name'))
                 <span class="help-block">
                 <strong>{{ $errors->first('name') }}</strong>
@@ -51,8 +50,7 @@
                 @endif
               </div>
               <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                <!-- <label for="email">Email</label> -->
-                <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="">
+                <input type="email" class="form-control" id="email" name="email" placeholder="{!! trans('reg-profile.email') !!}" value="">
                 @if ($errors->has('email'))
                 <span class="help-block">
                 <strong>{{ $errors->first('email') }}</strong>
@@ -61,8 +59,7 @@
               </div>
 
               <div class="form-group{{ $errors->has('person_in_charge') ? ' has-error' : '' }}">
-                <!-- <label for="Legal representative">Name</label> -->
-                <input type="text" class="form-control" id="person_in_charge" name="person_in_charge" placeholder="Legal representative" value="">
+                <input type="text" class="form-control" id="person_in_charge" name="person_in_charge" placeholder="{!! trans('reg-profile.legal_representative') !!}" value="">
                 @if ($errors->has('person_in_charge'))
                 <span class="help-block">
                 <strong>{{ $errors->first('person_in_charge') }}</strong>
@@ -71,8 +68,7 @@
               </div>
               <div class="row">
                 <div class="col-sm-6 form-group{{ $errors->has('fiscal_id') ? ' has-error' : '' }}">
-                  <!-- <label for="Fiscal ID">Name</label> -->
-                  <input type="text" class="form-control" id="fiscal_id" name="fiscal_id" placeholder="Fiscal ID" value="">
+                  <input type="text" class="form-control" id="fiscal_id" name="fiscal_id" placeholder="{!! trans('reg-profile.fiscal_id') !!}" value="">
                   @if ($errors->has('fiscal_id'))
                   <span class="help-block">
                   <strong>{{ $errors->first('fiscal_id') }}</strong>
@@ -80,8 +76,7 @@
                   @endif
                 </div>
                 <div class="col-sm-6 form-group{{ $errors->has('PIC') ? ' has-error' : '' }}">
-                  <!-- <label for="Fiscal ID">Name</label> -->
-                  <input type="text" class="form-control" id="PIC" name="PIC" placeholder="PIC" value="">
+                  <input type="text" class="form-control" id="PIC" name="PIC" placeholder="{!! trans('reg-profile.institution_pic') !!}" value="">
                   @if ($errors->has('PIC'))
                   <span class="help-block">
                   <strong>{{ $errors->first('PIC') }}</strong>
@@ -97,17 +92,16 @@
               </div>
 
               <div class="form-group">
-                <label for="certificate">Certificate of authenticity</label>
+                <label for="certificate">{!! trans('reg-profile.institution_certificate') !!}</label>
                 <input type="file" id="certificate" name="certificate">
-                <p class="help-block">Signature and stamp required <br/><a href="{{ asset('docs/certificate_template.pdf') }} ">Download template. </a></p>
+                <p class="help-block">{!! trans('reg-profile.institution_sig_stamp_text') !!} <br/><a href="{{ asset('docs/certificate_template.pdf') }} ">{!! trans('reg-profile.institution_certificate_template_download') !!}. </a></p>
               </div>
 
 
               <hr>
-              <h4>Address</h4>
+              <h4>{!! trans('reg-profile.address') !!}</h4>
               <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
-                <!-- <label for="address">Address</label> -->
-                <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="">
+                <input type="text" class="form-control" id="address" name="address" placeholder="{!! trans('reg-profile.address') !!}" value="">
                 @if ($errors->has('address'))
                 <span class="help-block">
                 <strong>{{ $errors->first('address') }}</strong>
@@ -116,8 +110,7 @@
               </div>
               <div class="row">
                 <div class="col-sm-4 form-group{{ $errors->has('postal_code') ? ' has-error' : '' }}">
-                  <!-- <label for="postal_code">Postal Code</label> -->
-                  <input type="text" class="form-control" id="postal_code" name="postal_code" placeholder="Postal Code" value="">
+                  <input type="text" class="form-control" id="postal_code" name="postal_code" placeholder="{!! trans('reg-profile.postal_code') !!}" value="">
                   @if ($errors->has('postal_code'))
                   <span class="help-block">
                   <strong>{{ $errors->first('postal_code') }}</strong>
@@ -125,8 +118,7 @@
                   @endif
                 </div>
                 <div class="col-sm-8 form-group{{ $errors->has('city') ? ' has-error' : '' }}">
-                  <!-- <label for="city">City</label> -->
-                  <input type="text" class="form-control" id="city" name="city" placeholder="City" value="">
+                  <input type="text" class="form-control" id="city" name="city" placeholder="{!! trans('reg-profile.city') !!}" value="">
                   @if ($errors->has('city'))
                   <span class="help-block">
                   <strong>{{ $errors->first('city') }}</strong>
@@ -135,10 +127,9 @@
                 </div>
               </div>
               <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}">
-                <!-- <label for="country">country</label> -->
                 <div class="select-holder">
                   <select class="form-control" id="country" name="country">
-                    <option value="" selected>Country</option>
+                    <option value="" selected>{!! trans('reg-profile.country') !!}</option>
                     <option>Spain</option>
                     <option>United Kingdom</option>
                     <option>France</option>
@@ -162,8 +153,7 @@
             <form class="form-vertical" role="form" method="POST" action="{{ url('/profile#password') }}">
               {{ csrf_field() }}
               <div class="form-group{{ $errors->has('contact_name') ? ' has-error' : '' }}">
-                <!-- <label for="contact_name">Name</label> -->
-                <input type="text" class="form-control" id="contact_name" name="contact_name" placeholder="Name" value="">
+                <input type="text" class="form-control" id="contact_name" name="contact_name" placeholder="{!! trans('reg-profile.name') !!}" value="">
                 @if ($errors->has('contact_name'))
                 <span class="help-block">
                 <strong>{{ $errors->first('contact_name') }}</strong>
@@ -171,7 +161,6 @@
                 @endif
               </div>
               <div class="form-group{{ $errors->has('contact_email') ? ' has-error' : '' }}">
-                <!-- <label for="email">Email</label> -->
                 <input type="email" class="form-control" id="contact_email" name="contact_email" placeholder="Contact email" value="">
                 @if ($errors->has('contact_email'))
                 <span class="help-block">

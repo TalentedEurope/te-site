@@ -25,18 +25,18 @@
             <div class="radio-check">
               <input id="Student" type="radio" name="type" value="student"             @if (old('type') == "student") checked @endif>
               <label for="Student">
-                <i class="fa fa-user" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Student"></i>
+                <i class="fa fa-user" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="{!! trans_choice('global.student', 1) !!}"></i>
               </label>
             </div>
 
             <div class="radio-check">
               <input id="Institution" type="radio" disabled="true" name="type" value="institution" @if (old('type') == "institution") checked @endif>
-              <label for="Institution" data-toggle="tooltip" data-placement="bottom" title="Institution"><i class="fa fa-university" aria-hidden="true"></i></label>
+              <label for="Institution" data-toggle="tooltip" data-placement="bottom" title="{!! trans_choice('global.institution', 1) !!}"><i class="fa fa-university" aria-hidden="true"></i></label>
             </div>
 
             <div class="radio-check">
               <input id="Company" type="radio" name="type" value="company" @if (old('type') == "company") checked @endif>
-              <label for="Company"><i data-toggle="tooltip" data-placement="bottom" title="Company" class="fa fa-building" aria-hidden="true"></i></label>
+              <label for="Company"><i data-toggle="tooltip" data-placement="bottom" title="{!! trans_choice('global.company', 1) !!}" class="fa fa-building" aria-hidden="true"></i></label>
             </div>
           </div>
           @if ($errors->has('email'))
@@ -44,14 +44,14 @@
             <strong>{{ $errors->first('email') }}</strong>
           </span>
           @endif
-          <input id="email" required name="email" class="{{ $errors->has('email') ? ' has-error' : '' }}" type="text" placeholder="Email" value="{{ old('email') }}">
+          <input id="email" required name="email" class="{{ $errors->has('email') ? ' has-error' : '' }}" type="text" placeholder="{!! trans('reg-profile.email') !!}" value="{{ old('email') }}">
           @if ($errors->has('password'))
           <span class="help-block">
             <strong>{{ $errors->first('password') }}</strong>
           </span>
           @endif
-          <input id="password" required name="password" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="Password">
-          <input id="password" name="password_confirmation" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="Confirm password">
+          <input id="password" required name="password" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="{!! trans('reg-profile.password') !!}">
+          <input id="password" name="password_confirmation" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="{!! trans('reg-profile.confirm_password') !!}">
           <div class="checkbox">
             <label>
               <input type="checkbox" required name="remember"></input> I agree with <a target="_blank" href="{{ url('/terms') }}"> the terms of use</a>
@@ -60,14 +60,14 @@
           <p class="text-center"><em>All fields are required</em></p>
 
           <button type="submit" class="btn btn-primary">
-            Sign up
+            {!! trans('global.register_btn') !!}
           </button>
         </div>
       </form>
       <div>
         <br>
         <p>
-          <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a> | <a class="btn btn-link" href="{{ url('/login') }}">Sign in</a>
+          <a class="btn btn-link" href="{{ url('/password/reset') }}">{!! trans('reg-profile.forgot_password') !!}</a> | <a class="btn btn-link" href="{{ url('/login') }}">{!! trans('global.login_btn') !!}</a>
         </p>
       </div>
     </div>

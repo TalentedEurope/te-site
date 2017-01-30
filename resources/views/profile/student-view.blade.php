@@ -8,7 +8,7 @@
   <div class="row profile">
       @if($public)
       <div class="col-xs-12 alert alert-danger">
-          <p>Do you want to view all the details of this student? <a href="{{ url('/register') }}">Sign up</a></p>
+          <p>Do you want to view all the details of this student? <a href="{{ url('/register') }}">{!! trans('global.register_btn') !!}</a></p>
       </div>
       @endif
 
@@ -28,7 +28,7 @@
         {{ $mainStudy['level'] }} in {{ $mainStudy['name'] }}</li>
         @endif
         @if ($user->country && $student->nationality)
-          <li><strong><i class="icon fa fa-map-marker"></i>  Lives in: </strong> {{ $user->city }}, <em>{{ $countries[$user->country] }} </em> | <strong> Nationality: </strong> {{ $nationalities[$student->nationality]  }} </li>
+          <li><strong><i class="icon fa fa-map-marker"></i>  Lives in: </strong> {{ $user->city }}, <em>{{ $countries[$user->country] }} </em> | <strong> {!! trans('reg-profile.nationality') !!}: </strong> {{ $nationalities[$student->nationality]  }} </li>
         @endif
         @if ($student->birthdate)
         <li><strong><i class="icon fa fa-calendar"></i>  Born on: </strong> {{ Carbon\Carbon::parse($student->birthdate)->format('d/m/Y') }}</li>
@@ -60,7 +60,7 @@
           @endif
           @if ($student->curriculum && !$public)
           <p class="col-sm-6"><a class="btn btn-lg btn-primary pull-right"
-             href="{{ route('get_curriculum', ['id' => $user->id]) }}"> <i class="fa fa-cloud-download" aria-hidden="true"></i> Europass Curriculum</a></p>
+             href="{{ route('get_curriculum', ['id' => $user->id]) }}"> <i class="fa fa-cloud-download" aria-hidden="true"></i> {!! trans('reg-profile.student_europass') !!}</a></p>
           @endif
         </div>
       </div>
@@ -118,12 +118,12 @@
                 <a class="btn btn-primary btn-link"
                    href="{{ route('get_study_certificate', ['id' => $user->id, 'studyId' => $study->id]) }}">
                   <i class="fa fa-cloud-download"></i>
-                  Grade card
+                  {!! trans('reg-profile.student_study_grade_card') !!}
                 </a>
                 @endif
                 @if ($study->gradecard  && !$public)
                 <a class="btn btn-primary btn-link" href="{{ route('get_study_gradecard', ['id' => $user->id, 'studyId' => $study->id]) }}">
-                  <i class="fa fa-cloud-download"></i> Certificate
+                  <i class="fa fa-cloud-download"></i> {!! trans('reg-profile.student_certificate') !!}
                 </a>
                 @endif
               </p>
@@ -137,7 +137,7 @@
       @if ($student->training->count())
       <div class="well">
         <div class="training">
-          <h3 class="section-title"> <i class="fa fa fa-trophy" aria-hidden="true"></i> Training</h3>
+          <h3 class="section-title"> <i class="fa fa fa-trophy" aria-hidden="true"></i> {!! trans('reg-profile.student_training') !!}</h3>
           <ul class="timeline">
             @foreach ($student->training as $training)
             <li>
@@ -149,7 +149,7 @@
               <h4>{{ $training->name }}</h4>
               @if ($training->certificate && !$public)
               <p><a class="btn btn-primary btn-link"
-                    href="{{ route('get_training_certificate', ['id' => $user->id, 'studyId' => $training->id]) }}"><i class="fa fa-cloud-download"></i> Certificate</a></p>
+                    href="{{ route('get_training_certificate', ['id' => $user->id, 'studyId' => $training->id]) }}"><i class="fa fa-cloud-download"></i> {!! trans('reg-profile.student_certificate') !!}</a></p>
               @endif
             </li>
             @endforeach
@@ -161,7 +161,7 @@
       @if ($student->languages->count())
       <div class="well">
         <div class="languages">
-          <h3 class="section-title"> <i class="fa fa fa-language" aria-hidden="true"></i> Languages</h3>
+          <h3 class="section-title"> <i class="fa fa fa-language" aria-hidden="true"></i> {!! trans('reg-profile.student_languages') !!}</h3>
           <ul class="cards clearfix">
             @foreach ($student->languages as $language)
             @if ($language->name)
@@ -171,7 +171,7 @@
                 <p><a class="btn btn-primary btn-link"
                       href="{{ route('get_language_certificate', [
                                 'id' => $user->id,
-                                'studyId' => $language->id]) }}"><i class="fa fa-cloud-download"></i> Certificate</a>
+                                'studyId' => $language->id]) }}"><i class="fa fa-cloud-download"></i> {!! trans('reg-profile.student_certificate') !!}</a>
                 </p>
                 @endif
               </li>
@@ -185,7 +185,7 @@
       @if ($student->experiences->count())
       <div class="well">
         <div class="experience">
-          <h3 class="section-title"> <i class="fa fa fa-suitcase" aria-hidden="true"></i> Work experience</h3>
+          <h3 class="section-title"> <i class="fa fa fa-suitcase" aria-hidden="true"></i> {!! trans('reg-profile.student_work_experience') !!}</h3>
           <ul class="timeline">
             @foreach ($student->experiences as $experience)
             <li>
@@ -217,10 +217,10 @@
         <div class="contact">
           <h3>Get in contact</h3>
           <hr>
-          <p><i class="fa icon fa-envelope"></i> Email: <a href="mailto:{{ $user->email }}">
+          <p><i class="fa icon fa-envelope"></i> {!! trans('reg-profile.email') !!}: <a href="mailto:{{ $user->email }}">
           {{ $user->email }}</a></p>
           @if ($user->phone)
-          <p><i class="fa icon fa-phone"></i> Phone:  <a href="tel:{{ $user->phone }}">{{ $user->phone }}</a></p>
+          <p><i class="fa icon fa-phone"></i> {!! trans('reg-profile.phone') !!}:  <a href="tel:{{ $user->phone }}">{{ $user->phone }}</a></p>
           @endif
           @if ($user->country)
           <address>

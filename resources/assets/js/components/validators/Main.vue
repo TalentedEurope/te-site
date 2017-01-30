@@ -7,10 +7,10 @@
         <table v-if="validators.length > 0" class="table table-striped table-hover table-responsive">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Department</th>
-                    <th>Position</th>
+                    <th>{{ $t('reg-profile.name') }}</th>
+                    <th>{{ $t('reg-profile.email') }}</th>
+                    <th>{{ $t('reg-profile.validator_department') }}</th>
+                    <th>{{ $t('global.position') }}</th>
                     <th></th>
                 </tr>
             </thead>

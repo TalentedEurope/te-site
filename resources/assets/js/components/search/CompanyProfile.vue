@@ -50,7 +50,7 @@
                     </li>
                 </ul>
 
-                <a class="btn-primary btn view-more" :href="profileUrl">View more</a>
+                <a class="btn-primary btn view-more" :href="profileUrl">{{ $t('global.more_btn') }}</a>
             </div>
         </div>
     </li>

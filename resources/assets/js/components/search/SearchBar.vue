@@ -4,18 +4,18 @@
             <div class="form-group col-sm-3" v-if="showTypeSelector">
                 <div class="select-holder">
                     <select class="form-control" id="country" name="country">
-                        <option value="" selected="">Search for:</option>
-                        <option value="students">Students</option>
-                        <option value="companies">Companies</option>
+                        <option value="" selected="">{{ $t('global.search_info') }}:</option>
+                        <option value="students">{{ $tc('global.student', 2) }}</option>
+                        <option value="companies">{{ $tc('global.company', 2) }}</option>
                     </select>
                 </div>
             </div>
             <div class="form-group col-sm-7" v-bind:class="{ 'col-sm-10': !showTypeSelector }">
-                <input type="text" class="form-control" id="name" name="name" placeholder="What are you looking for?" v-model="search_text" @keyup.enter="search()">
+                <input type="text" class="form-control" id="name" name="name" :placeholder="$t('landing.search_placeholder')" v-model="search_text" @keyup.enter="search()">
             </div>
             <div class="form-group col-sm-2">
                 <button type="submit" class="btn btn-primary" @click.prevent="search()">
-                    <i class="fa fa-search" aria-hidden="true"></i> Search
+                    <i class="fa fa-search" aria-hidden="true"></i> {{ $t('landing.search_btn') }}
                 </button>
             </div>
         </div>

@@ -49,28 +49,28 @@
               <hr class="separator">
               <h4>About</h4>
 
-              <text-box-form code="name" label="Name" placeholder="Name" value="{{ old('name', $user->name) }}"
+              <text-box-form code="name" label="{!! trans('reg-profile.name') !!}" placeholder="{!! trans('reg-profile.name') !!}" value="{{ old('name', $user->name) }}"
                   required errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <div class="row">
-                <text-box-form class="col-sm-6" code="fiscal_id" label="Fiscal id" placeholder="Fiscal id"
+                <text-box-form class="col-sm-6" code="fiscal_id" label="{!! trans('reg-profile.fiscal_id') !!}" placeholder="{!! trans('reg-profile.name') !!}"
                     required value="{{ old('fiscal_id', $company->fiscal_id) }}"
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-                <text-box-form class="col-sm-6" code="overseer" label="Legal representative"
-                    placeholder="Legal representative" value="{{ old('overseer', $company->overseer) }}"
+                <text-box-form class="col-sm-6" code="overseer" label="{!! trans('reg-profile.legal_representative') !!}"
+                    placeholder="{!! trans('reg-profile.legal_representative') !!}" value="{{ old('overseer', $company->overseer) }}"
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
               </div>
 
               <div class="row">
-                <text-box-form class="col-sm-6" code="email" label="Email" placeholder="Email" readonly
+                <text-box-form class="col-sm-6" code="email" label="{!! trans('reg-profile.email') !!}" placeholder="{!! trans('reg-profile.email') !!}" readonly
                     value="{{ old('email', $user->email) }}"
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-                <text-box-form class="col-sm-6" code="phone" label="Phone" placeholder="Phone"
+                <text-box-form class="col-sm-6" code="phone" label="{!! trans('reg-profile.phone') !!}" placeholder="{!! trans('reg-profile.phone') !!}"
                     value="{{ old('phone', $user->phone) }}"
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
               </div>
 
-              <select-form code="activity" label="Activity Sector" placeholder=" - Activity Sector - " required
+              <select-form code="activity" label="{!! trans('reg-profile.company_activity') !!}" placeholder=" - {!! trans('reg-profile.company_activity') !!} - " required
                   values='{!! json_encode($activities, JSON_HEX_APOS) !!}'
                   value="{{ old('activity', $company->activity) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></select-form>
@@ -102,27 +102,27 @@
 
               <hr class="separator">
 
-              <h4>Address</h4>
-              <text-box-form code="address" label="Address" placeholder="Address"
+              <h4>{!! trans('reg-profile.address') !!}</h4>
+              <text-box-form code="address" label="{!! trans('reg-profile.address') !!}" placeholder="{!! trans('reg-profile.address') !!}"
                   value="{{ old('address', $user->address) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <div class="row">
-                <text-box-form class="col-sm-4" code="postal_code" label="Postal Code" placeholder="Postal Code"
+                <text-box-form class="col-sm-4" code="postal_code" label="{!! trans('reg-profile.postal_code') !!}" placeholder="{!! trans('reg-profile.postal_code') !!}"
                     value="{{ old('postal_code', $user->postal_code) }}" minlength="3"
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-                <text-box-form class="col-sm-8" code="city" label="City" placeholder="City"
+                <text-box-form class="col-sm-8" code="city" label="{!! trans('reg-profile.city') !!}" placeholder="{!! trans('reg-profile.city') !!}"
                     required value="{{ old('city', $user->city) }}"
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
               </div>
 
-              <select-form code="country" label="Country" placeholder=" - Country - " required
+              <select-form code="country" label="{!! trans('reg-profile.country') !!}" placeholder=" - {!! trans('reg-profile.country') !!} - " required
                   values='{!! json_encode($countries, JSON_HEX_APOS) !!}' value="{{ old('country', $user->country) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></select-form>
 
               <hr class="separator">
 
-              <text-area-form code="talent" label="What is talent for you? (Max 300 characters)"
+              <text-area-form code="talent" label="{!! trans('reg-profile.company_what_is_talent') !!} (Max 300 characters)"
                   placeholder="Explain us what is talent for you in a few words (max 300)." required
                   value="{{ old('talent', $company->talent) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-area-form>
 
@@ -140,14 +140,14 @@
           </div>
 
           <div class="tab-pane fade" id="contact">
-            <h4>Contact person</h4>
+            <h4>{!! trans('reg-profile.company_contact_person') !!}</h4>
             <label>Setup an alternative contact user that will receive all the notifications instead of the main account</label>
             <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#contact' }}" >
               {{ csrf_field() }}
-              <text-box-form code="notification_name" label="Name" placeholder="Name"
+              <text-box-form code="notification_name" label="{!! trans('reg-profile.name') !!}" placeholder="{!! trans('reg-profile.name') !!}"
                   value="{{ old('notification_name', $company->notification_name) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-              <text-box-form type="email" code="notification_email" label="Email" placeholder="Email"
+              <text-box-form type="email" code="notification_email" label="{!! trans('reg-profile.email') !!}" placeholder="{!! trans('reg-profile.email') !!}"
                   value="{{ old('notification_email', $company->notification_email) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 

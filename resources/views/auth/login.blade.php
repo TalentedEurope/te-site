@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('page-title') Log in @endsection
+@section('page-title') {!! trans('global.login_btn') !!} @endsection
 
 @section('content')
 <div class="container">
@@ -10,17 +10,17 @@
                 <div class="avatar-placeholder">
                     <i class="fa fa-user" aria-hidden="true"></i>
                 </div>
-                <h2 class="page-title">Log in</h2>
+                <h2 class="page-title">{!! trans('global.login_btn') !!}</h2>
                 <div>
                     @if ($errors->has('email'))
                     <span class="help-block">
                         <strong>{{ $errors->first('email') }}</strong>
                     </span> @endif
-                    <input id="email" name="email" class="{{ $errors->has('email') ? ' has-error' : '' }}" type="text" placeholder="email" value="{{ old('email') }}"> @if ($errors->has('password'))
+                    <input id="email" name="email" class="{{ $errors->has('email') ? ' has-error' : '' }}" type="text" placeholder="{!! trans('reg-profile.email') !!}" value="{{ old('email') }}"> @if ($errors->has('password'))
                     <span class="help-block">
                         <strong>{{ $errors->first('password') }}</strong>
                     </span> @endif
-                    <input id="password" name="password" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="password">
+                    <input id="password" name="password" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="{!! trans('reg-profile.password') !!}">
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" name="remember"> Remember Me
@@ -34,7 +34,7 @@
             <div>
                 <br/>
                 <p>
-                    <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a> | <a class="btn btn-link" href="{{ url('/register') }}">Sign up</a>
+                    <a class="btn btn-link" href="{{ url('/password/reset') }}">{!! trans('reg-profile.forgot_password') !!}</a> | <a class="btn btn-link" href="{{ url('/register') }}">{!! trans('global.register_btn') !!}</a>
                 </p>
             </div>
         </div>

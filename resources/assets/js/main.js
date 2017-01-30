@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import VueI18n from 'vue-i18n';
 import VueResource from 'vue-resource';
 import _ from 'lodash';
 
@@ -26,6 +27,10 @@ import Languages from './components/profile/student/Languages.vue';
 import Experiences from './components/profile/student/Experiences.vue';
 import AlertButton from './components/common/AlertButton.vue';
 
+
+Vue.use(VueI18n);
+Vue.config.lang = 'en';
+Vue.locale('en', TE.translations.en);
 
 if (document.querySelector('.v-container')) {
     new Vue({

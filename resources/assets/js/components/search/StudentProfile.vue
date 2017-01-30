@@ -11,7 +11,7 @@
                     <strong>Skilled in: </strong>
                     <skills-tags :skills="student.skills"></skills-tags>
                 </p>
-                <p><strong>Languages: </strong>
+                <p><strong>{{ $t('reg-profile.student_languages') }}: </strong>
                     <ul class="languages">
                         <li v-for="language in student.languages" track-by="$index">{{language}}</li>
                     </ul>
@@ -26,7 +26,7 @@
                         </span>
                     </figcaption>
                 </figure>
-                <a class="btn-primary btn view-more" :href="profileUrl">View more</a>
+                <a class="btn-primary btn view-more" :href="profileUrl">{{ $t('global.more_btn') }}</a>
             </div>
         </div>
     </li>

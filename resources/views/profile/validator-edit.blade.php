@@ -22,8 +22,7 @@
               <!-- company_name -->
               <h4>About</h4>
               <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                <!-- <label for="name">Name</label> -->
-                <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="">
+                <input type="text" class="form-control" id="name" name="name" placeholder="{!! trans('reg-profile.name') !!}" value="">
                 @if ($errors->has('name'))
                 <span class="help-block">
                   <strong>{{ $errors->first('name') }}</strong>
@@ -32,8 +31,7 @@
               </div>
 
               <div class="form-group{{ $errors->has('surname') ? ' has-error' : '' }}">
-                <!-- <label for="surname">surname</label> -->
-                <input type="text" class="form-control" id="surname" name="surname" placeholder="surname" value="">
+                <input type="text" class="form-control" id="surname" name="surname" placeholder="{!! trans('reg-profile.surname') !!}" value="">
                 @if ($errors->has('surname'))
                 <span class="help-block">
                   <strong>{{ $errors->first('surname') }}</strong>
@@ -42,8 +40,7 @@
               </div>
 
               <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                <!-- <label for="email">Email</label> -->
-                <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="">
+                <input type="email" class="form-control" id="email" name="email" placeholder="{!! trans('reg-profile.email') !!}" value="">
                 @if ($errors->has('email'))
                 <span class="help-block">
                   <strong>{{ $errors->first('email') }}</strong>
@@ -55,13 +52,11 @@
 
               <h4>My Institution</h4>
               <div class="form-group">
-                <!-- <label for="department">Institution</label> -->
-                <input id="institution" class="form-control" readonly="true" required name="institution"  class="{{ $errors->has('email') ? ' has-error' : '' }}" type="text" placeholder="Institution" value="Institution: IES Puerto de la Cruz">
+                <input id="institution" class="form-control" readonly="true" required name="institution"  class="{{ $errors->has('email') ? ' has-error' : '' }}" type="text" placeholder="{!! trans_choice('global.institution', 1) !!}" value="">
               </div>
 
               <div class="form-group{{ $errors->has('department') ? ' has-error' : '' }}">
-                <!-- <label for="department">department</label> -->
-                <input type="text" class="form-control" id="department" name="department" placeholder="Department" value="">
+                <input type="text" class="form-control" id="department" name="department" placeholder="{!! trans('reg-profile.validator_department') !!}" value="">
                 @if ($errors->has('department'))
                 <span class="help-block">
                   <strong>{{ $errors->first('department') }}</strong>
@@ -70,8 +65,7 @@
               </div>
 
               <div class="form-group{{ $errors->has('position') ? ' has-error' : '' }}">
-                <!-- <label for="position">position</label> -->
-                <input type="text" class="form-control" id="position" name="position" placeholder="Position" value="">
+                <input type="text" class="form-control" id="position" name="position" placeholder="{!! trans('reg-profile.position') !!}" value="">
                 @if ($errors->has('position'))
                 <span class="help-block">
                   <strong>{{ $errors->first('position') }}</strong>

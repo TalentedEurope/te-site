@@ -38,7 +38,19 @@
   </script>
 
   <script type="text/javascript">
-    TE = {}
+    TE = {};
+    TE.translations = {
+      'en': {
+        'auth': {!! json_encode(trans('auth'), JSON_HEX_APOS) !!},
+        'global': {!! json_encode(trans('global'), JSON_HEX_APOS) !!},
+        'landing': {!! json_encode(trans('landing'), JSON_HEX_APOS) !!},
+        'pagination': {!! json_encode(trans('pagination'), JSON_HEX_APOS) !!},
+        'passwords': {!! json_encode(trans('passwords'), JSON_HEX_APOS) !!},
+        'profile': {!! json_encode(trans('profile'), JSON_HEX_APOS) !!},
+        'reg-profile': {!! json_encode(trans('reg-profile'), JSON_HEX_APOS) !!},
+        'validation': {!! json_encode(trans('validation'), JSON_HEX_APOS) !!},
+      }
+    };
   </script>
 </head>
 

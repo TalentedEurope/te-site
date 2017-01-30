@@ -9,7 +9,7 @@
                 </label>
             </li>
             <li class="more" v-if="displayViewMore">
-                <button @click.prevent="viewMore()"><i class="fa fa-plus-square" aria-hidden="true"></i> View More</button>
+                <button @click.prevent="viewMore()"><i class="fa fa-plus-square" aria-hidden="true"></i> {{ $t('global.more_btn') }}</button>
             </li>
             <li class="less" v-if="displayViewLess">
                 <button @click.prevent="viewLess()"><i class="fa fa-minus-square" aria-hidden="true"></i> View Less</button>
