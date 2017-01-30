@@ -34,7 +34,7 @@ By default while laravel allows us to use other data backends, the production si
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Talented Europe, please send an e-mail to Carlos Sosa or Pol Cámara at dev@talentedeurope.org. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Talented Europe, please send an e-mail to dev@talentedeurope.org. All security vulnerabilities will be promptly addressed.
 
 ## License
 
