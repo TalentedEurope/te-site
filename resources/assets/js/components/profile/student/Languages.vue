@@ -17,7 +17,7 @@
                 required placeholder=" - Language level - " :values="languageLevels" :value="language.level" :errors="errors"></select-form>
 
             <hr>
-            <file-form code="certificate" group-code="languages" :group-id="language.id" label="Certificate"
+            <file-form code="certificate" group-code="languages" :group-id="language.id" :label="$t('reg-profile.student_certificate')"
                 download-text="Download Certificate" :has-file="language.certificate"
                 :file-url="getFileUrl(language.id, 'certificate')" :errors="errors"></file-form>
             <hr>
@@ -35,7 +35,7 @@
                 required placeholder=" - Language level - " :values="languageLevels" :value="new_language.level"></select-form>
 
             <hr>
-            <file-form code="certificate" group-code="languages" :group-id="new_language.id" label="Certificate"
+            <file-form code="certificate" group-code="languages" :group-id="new_language.id" :label="$t('reg-profile.student_certificate')"
                 download-text="Download Certificate"></file-form>
             <hr>
 

@@ -4,42 +4,42 @@
 
         <div class="experience" v-for="(index, experience) in parsed_experiences">
             <header class="clearfix">
-                <h4 class="pull-left">Work Experience #{{ index + 1 }}</h4>
+                <h4 class="pull-left">{{ $t("reg-profile.student_work_experience") }} #{{ index + 1 }}</h4>
                 <remove-item-button :items="parsed_experiences" :item="experience" group-name="Experience"></remove-item-button>
             </header>
 
             <text-box-form type="hidden" code="id" group-code="experiences" :group-id="experience.id" :value="experience.id"></text-box-form>
 
             <div class="row">
-                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="experience.id" label="From"
+                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="experience.id" :label="$t('reg-profile.student_study_from')"
                     required placeholder="Work from" :value="experience.from" :errors="errors"></date-form>
-                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="experience.id" label="To"
+                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="experience.id" :label="$t('reg-profile.student_study_to')"
                     placeholder="Work to" :value="experience.until" :errors="errors"></date-form>
             </div>
 
-            <text-box-form code="company" group-code="experiences" :group-id="experience.id" label="Company name"
-                required placeholder="Company name" :value="experience.company" :errors="errors"></text-box-form>
-            <text-box-form code="position" group-code="experiences" :group-id="experience.id" label="Position"
-                required placeholder="Position" :value="experience.position" :errors="errors"></text-box-form>
+            <text-box-form code="company" group-code="experiences" :group-id="experience.id" :label="$t('reg-profile.student_experience_company')"
+                required :placeholder="$t('reg-profile.student_experience_company')" :value="experience.company" :errors="errors"></text-box-form>
+            <text-box-form code="position" group-code="experiences" :group-id="experience.id" :label="$t('reg-profile.position')"
+                required :placeholder="$t('reg-profile.position')" :value="experience.position" :errors="errors"></text-box-form>
             <hr>
         </div>
 
         <div class="experience" v-for="(index, new_experience) in new_experiences">
             <header class="clearfix">
-                <h4 class="pull-left">Work Experience #{{ (parsed_experiences.length + index + 1) }}</h4>
+                <h4 class="pull-left">{{ $t("reg-profile.student_work_experience") }} #{{ (parsed_experiences.length + index + 1) }}</h4>
                 <remove-item-button :items="new_experiences" :item="new_experience"></remove-item-button>
             </header>
             <div class="row">
                 <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="new_experience.id"
-                    required label="From" placeholder="Work from" :value="new_experience.from"></date-form>
+                    required :label="$t('reg-profile.student_study_from')" placeholder="Work from" :value="new_experience.from"></date-form>
                 <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="new_experience.id"
-                    label="To" placeholder="Work to" :value="new_experience.until"></date-form>
+                    :label="$t('reg-profile.student_study_to')" placeholder="Work to" :value="new_experience.until"></date-form>
             </div>
 
-            <text-box-form code="company" group-code="experiences" :group-id="new_experience.id" label="Company name"
-                required placeholder="Company name" :value="new_experience.company"></text-box-form>
-            <text-box-form code="position" group-code="experiences" :group-id="new_experience.id" label="Position"
-                required placeholder="Position" :value="new_experience.position"></text-box-form>
+            <text-box-form code="company" group-code="experiences" :group-id="new_experience.id" :label="$t('reg-profile.student_experience_company')"
+                required :placeholder="$t('reg-profile.student_experience_company')" :value="new_experience.company"></text-box-form>
+            <text-box-form code="position" group-code="experiences" :group-id="new_experience.id" :label="$t('reg-profile.position')"
+                required :placeholder="$t('reg-profile.position')" :value="new_experience.position"></text-box-form>
             <hr>
         </div>
 

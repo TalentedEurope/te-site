@@ -1,6 +1,6 @@
 @extends('../layouts.app')
 
-@section('page-title') Search for @endsection
+@section('page-title') {!! trans('global.search_info') !!} @endsection
 @section('page-class') search students companies @endsection
 @section('meta')
   <meta id="token" content="{{ $token }}" />

@@ -4,10 +4,10 @@
 
         <div class="study" v-for="(index, study) in parsed_studies">
             <header class="clearfix">
-                <h4 class="pull-left">Studies #{{ index + 1 }}</h4>
+                <h4 class="pull-left">Study #{{ index + 1 }}</h4>
                 <remove-item-button v-if="!showClearButton" :items="parsed_studies" :item="study" group-name="Study"></remove-item-button>
                 <button class="pull-right remove btn-warning btn btn-sm" v-if="showClearButton" @click.prevent="clearForm()" >
-                    <i class="fa fa-close" aria-hidden="true"></i> clear
+                    <i class="fa fa-close" aria-hidden="true"></i> {{ $t('reg-profile.clear_btn') }}
                 </button>
             </header>
 
@@ -19,19 +19,19 @@
             <div class="row">
                 <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="study.id" label="Course/Studies name"
                     required placeholder="Course/Studies name" :value="study.name" :errors="errors"></text-box-form>
-                <select-form class="col-sm-4" code="level" group-code="studies" :group-id="study.id" label="Level"
-                    required placeholder=" - Level - " :values="studyLevels" :value="study.level" :errors="errors"></select-form>
+                <select-form class="col-sm-4" code="level" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_level')"
+                    required :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyLevels" :value="study.level" :errors="errors"></select-form>
             </div>
 
-            <select-form code="field" group-code="studies" :group-id="study.id" label="Field of studies"
-                required placeholder=" - Field of studies - " :values="studyFields" :value="study.field" :errors="errors"></select-form>
+            <select-form code="field" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_field')"
+                required :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyFields" :value="study.field" :errors="errors"></select-form>
 
             <hr>
-            <file-form code="certificate" group-code="studies" :group-id="study.id" label="Certificate"
+            <file-form code="certificate" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_certificate')"
                 download-text="Download Certificate" :has-file="study.certificate"
                 :file-url="getFileUrl(study.id, 'certificate')" :errors="errors"></file-form>
             <hr>
-            <file-form code="gradecard" group-code="studies" :group-id="study.id" label="Gradecard"
+            <file-form code="gradecard" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_grade_card')"
                 download-text="Download Gradecard" :has-file="study.gradecard"
                 :file-url="getFileUrl(study.id, 'gradecard')" :errors="errors"></file-form>
             <hr>
@@ -39,10 +39,10 @@
 
         <div class="study" v-for="(index, new_study) in new_studies">
             <header class="clearfix">
-                <h4 class="pull-left">Studies #{{ (parsed_studies.length + index + 1) }}</h4>
+                <h4 class="pull-left">Study #{{ (parsed_studies.length + index + 1) }}</h4>
                 <remove-item-button v-if="!showClearButton" :items="new_studies" :item="new_study" ></remove-item-button>
                 <button class="pull-right remove btn-warning btn btn-sm" v-if="showClearButton" @click.prevent="clearForm()" >
-                    <i class="fa fa-close" aria-hidden="true"></i> clear
+                    <i class="fa fa-close" aria-hidden="true"></i> {{ $t('reg-profile.clear_btn') }}
                 </button>
             </header>
 
@@ -53,16 +53,16 @@
                 <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="new_study.id"
                     required label="Course/Studies name" placeholder="Course/Studies name" :value="new_study.name"></text-box-form>
                 <select-form class="col-sm-4" code="level" group-code="studies" :group-id="new_study.id"
-                    required label="Level" placeholder=" - Level - " :values="studyLevels" :value="new_study.level"></select-form>
+                    required :label="$t('reg-profile.student_study_level')" :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyLevels" :value="new_study.level"></select-form>
             </div>
 
-            <select-form code="field" group-code="studies" :group-id="new_study.id" label="Field of studies"
-                required placeholder=" - Field of studies - " :values="studyFields" :value="new_study.field"></select-form>
+            <select-form code="field" group-code="studies" :group-id="new_study.id" :label="$t('reg-profile.student_study_field')"
+                required :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyFields" :value="new_study.field"></select-form>
 
             <hr>
-            <file-form code="certificate" group-code="studies" :group-id="new_study.id" label="Certificate"></file-form>
+            <file-form code="certificate" group-code="studies" :group-id="new_study.id" :label="$t('reg-profile.student_certificate')"></file-form>
             <hr>
-            <file-form code="gradecard" group-code="studies" :group-id="new_study.id" label="Gradecard"></file-form>
+            <file-form code="gradecard" group-code="studies" :group-id="new_study.id" :label="$t('reg-profile.student_study_grade_card')"></file-form>
             <hr>
         </div>
 
