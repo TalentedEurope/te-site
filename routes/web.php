@@ -13,6 +13,7 @@
 
 // Static pages
 Route::get('/', 'StaticController@getHome');
+Route::get('/landing', 'StaticController@getLanding');
 Route::get('/cookies', 'StaticController@getCookies');
 Route::get('/privacy-policy', 'StaticController@getPrivacyPolicy');
 Route::get('/terms', 'StaticController@getTerms');

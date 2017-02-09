@@ -29,6 +29,21 @@ class StaticController extends Controller
     }
 
     /**
+     * Show the landing page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getLanding()
+    {
+        $user = Auth::user();
+        if ($user) {
+            return redirect(route('view_profile'));
+        }
+
+        return view('static.landing');
+    }
+
+    /**
      * Show the cookies page.
      *
      * @return \Illuminate\Http\Response

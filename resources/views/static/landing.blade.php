@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Talented Europe</title>
+    <link rel="stylesheet" type="text/css" href="{{ elixir("css/landing.css") }}">
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700,400italic,200italic,700italic,900' rel='stylesheet' type='text/css'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="{{ trans('landing.meta_title') }}" property="og:title" />
+    <meta content="{{ trans('landing.meta_description') }}" name="description" />
+    <meta content="{{ URL::to('/') }}" name="url" property="og:url" />
+    <meta content="website" name="type" property="og:type" />
+    <meta content="{{ URL::asset('img/logo-header.png') }}" name="image" property="og:image" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ URL::asset('img/favicon/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ URL::asset('img/favicon/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ URL::asset('img/favicon/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ URL::asset('img/favicon/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ URL::asset('img/favicon/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ URL::asset('img/favicon/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ URL::asset('img/favicon/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ URL::asset('img/favicon/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ URL::asset('img/favicon/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ URL::asset('img/favicon/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('img/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ URL::asset('img/favicon/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('img/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '{{ env('ANALYTICS',false) }}', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <script type="text/javascript">
+      TE = {};
+      TE.translations = {
+        'en': {
+          'auth': {!! json_encode(trans('auth'), JSON_HEX_APOS) !!},
+          'global': {!! json_encode(trans('global'), JSON_HEX_APOS) !!},
+          'landing': {!! json_encode(trans('landing'), JSON_HEX_APOS) !!},
+          'pagination': {!! json_encode(trans('pagination'), JSON_HEX_APOS) !!},
+          'passwords': {!! json_encode(trans('passwords'), JSON_HEX_APOS) !!},
+          'profile': {!! json_encode(trans('profile'), JSON_HEX_APOS) !!},
+          'reg-profile': {!! json_encode(trans('reg-profile'), JSON_HEX_APOS) !!},
+          'validation': {!! json_encode(trans('validation'), JSON_HEX_APOS) !!},
+        }
+      };
+    </script>
+  </head>
+
+  <body class="v-container">
+    <header class="hero">
+      <nav class="navbar navbar-inverse navbar-landing navbar-static-top">
+        <div class="container">
+          <div id="navbar">
+
+            <ul class="nav navbar-nav navbar-right languages-nav">
+              <li><a href="?lang=en">EN</a></li>
+              <li><a href="?lang=es">ES</a></li>
+              <li><a href="?lang=it">IT</a></li>
+              <li><a href="?lang=de">DE</a></li>
+              <li><a href="?lang=fr">FR</a></li>
+              <li><a href="?lang=sk">SK</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right social-nav">
+              <li>
+                <a href="https://www.facebook.com/Talented-Europe-839419182764068/">
+                  <i class="fi flaticon-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/talentedeurope">
+                  <i class="fi flaticon-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UCkj5UUptbZnQ5kvxVpDfkBw">
+                  <i class="fi flaticon-youtube"></i>
+                </a>
+              </li>
+            </ul>
+
+            @if (Auth::user())
+            <ul class="nav navbar-nav navbar-right login">
+              <li><a href="{{ URL::to('/register') }}">{!! trans('landing.search_btn') !!}</a></li>
+              <li><a href="{{ URL::to('/logout') }}">{!! trans('global.logout_btn') !!}</a></li>
+            </ul>
+            @else
+            <ul class="nav navbar-nav navbar-right login">
+              <li><a href="{{ URL::to('/login') }}">{!! trans('global.login_btn') !!}</a></li>
+              <li><a href="{{ URL::to('/register') }}">{!! trans('global.register_btn') !!}</a></li>
+            </ul>
+            @endif
+
+          </div>
+        </div>
+      </nav>
+
+      <div class="hero-video">
+        <div class="hero-video-overlay"></div>
+        <div class="video-bg cover">
+          <div class="video-fg">
+              <video autoplay loop="true" width="1280" height="720">
+                <source src="video/home-video.mp4" type='video/mp4' />
+                <source src="video/home-video.webm" type='video/webm' />
+              </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row content">
+          <img class="logo" src="{{ URL::asset('img/logo-header-alt.png') }}" alt="Talented Europe">
+
+          <search-bar :show-type-selector="true" :landing="true"></search-bar>
+        </div>
+      </div>
+    </header>
+
+
+    <section id="about" class="about-section clearfix content-section">
+      <div class="content">
+        <div class="vertical-centered">
+          <h1 class="text-center">{!! trans('landing.what_is_title') !!}</h1>
+          <p class="col-md-6">{!! trans('landing.what_is_text_1') !!}</p>
+          <p class="col-md-6">{!! trans('landing.what_is_text_2') !!}</p>
+          <h3 class="text-center col-md-12">{!! trans('landing.what_is_cta') !!}</h3>
+          <div class="text-center col-md-12">
+            <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureC.pdf') }}" target="_blank" class="btn" onclick="ga('send', 'event', 'Brochure Company', 'Download', '{{ App::getLocale() }}');">
+              <i class="fi flaticon-cloud-download"></i>
+                {!! explode("|", trans('global.company'))[1] !!}
+            </a>
+            <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureI.pdf') }}" target="_blank" class="btn" onclick="ga('send', 'event', 'Brochure Institution', 'Download', '{{ App::getLocale() }}');">
+              <i class="fi flaticon-cloud-download"></i>
+                {!! explode("|", trans('global.institution'))[1] !!}
+            </a>
+            <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureS.pdf') }}" target="_blank" class="btn" onclick="ga('send', 'event', 'Brochure Student', 'Download', '{{ App::getLocale() }}');">
+              <i class="fi flaticon-cloud-download"></i>
+                {!! explode("|", trans('global.student'))[1] !!}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="quote-section content-section">
+      <div class="overlay"></div>
+      <div class="content text-center">
+        <img src="http://placehold.it/140x100"/>
+        <p class="quote-text">Talent is the eventual potential of an individual in a certain endeavor. It's not how good one is right away - it's how good one can become in a perfect world.</p>
+        <p class="quote-author">Company Name - Representative</p>
+      </div>
+    </section>
+
+
+    <section class="logos-carousel-section content-section col-md-12">
+      <div class="content">
+        <ul class="nav nav-tabs text-center">
+          <li role="presentation" class="active">
+            <a href="#companies-logos" aria-controls="profile" role="tab" data-toggle="tab">
+              <i class="fa fa-building" aria-hidden="true"></i>
+              <div>Companies</div>
+            </a>
+          </li>
+          <li role="presentation">
+            <a href="#institutions-logos" aria-controls="profile" role="tab" data-toggle="tab">
+              <i class="fa fa-university" aria-hidden="true"></i>
+              <div>Institutions</div>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div role="tabpanel" id="companies-logos" class="companies-logos tab-pane active">
+            @for ($i = 0; $i < 9; $i++)
+              <a href="#">
+                <img src="http://placehold.it/140x100"/>
+              </a>
+            @endfor
+          </div>
+
+          <div role="tabpanel" id="institutions-logos" class="institutions-logos tab-pane">
+            @for ($i = 0; $i < 9; $i++)
+              <a href="#">
+                <img src="http://placehold.it/140x100">
+              </a>
+            @endfor
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="stadistics-section content-section col-md-12">
+      <div class="content">
+        <h1 class="text-center">Stadistics</h1>
+        <div class="stadistics-box clearfix">
+          <div class="col-xs-3 col-sm-3 text-center">
+            <div class="c100 p51 yellow small center">
+              <span>51%</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+            <p>Lorem ipsum</p>
+          </div>
+
+          <div class="col-xs-3 col-sm-3 text-center">
+            <div class="c100 p15 small center">
+              <span>15%</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+            <p>Lorem ipsum</p>
+          </div>
+
+          <div class="col-xs-3 col-sm-3 text-center">
+            <div class="c100 p72 yellow small center">
+              <span>72%</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+            <p>Lorem ipsum</p>
+          </div>
+
+          <div class="col-xs-3 col-sm-3 text-center">
+            <div class="c100 p19 small center">
+              <span>19%</span>
+              <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+              </div>
+            </div>
+            <p>Lorem ipsum</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="map-section col-md-12">
+      <div class="map"></div>
+    </section>
+
+
+    <section class="students-section content-section col-md-12">
+      <div class="content">
+        <h1 class="text-center">Last students</h1>
+        <div class="students-box clearfix">
+          @for ($i = 0; $i < 6; $i++)
+            <a href="#" class="col-xs-6 col-sm-4 col-md-2 text-center">
+              <img src="http://placehold.it/130x130">
+              <p>John Doe</p>
+            </a>
+          @endfor
+        </div>
+        <div class="text-center">
+          <a class="button" href="#">View More</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="subscribe" class="subscribe-section content-section text-center col-md-12">
+      <div class="overlay"></div>
+      <div class="content">
+        <h1>{{ trans('landing.subscribe_title') }}</h1>
+        <p>{!! trans('landing.subscribe_text_question') !!}</p>
+        <a class="button" href="http://talentedeurope.us13.list-manage.com/subscribe?u=b4e15aa0a9873bc5785280c76&id=2854c91856">{{ trans('landing.subscribe_btn_text') }}</a>
+
+        <div class="social">
+          <p>
+            {{ trans('landing.subscribe_follow_text') }}
+          </p>
+          <ul class="nav">
+            <li>
+              <a class="facebook" href="https://www.facebook.com/Talented-Europe-839419182764068/">
+                <i class="fi flaticon-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a class="twitter" href="https://twitter.com/talentedeurope">
+                <i class="fi flaticon-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a class="youtube" href="https://www.youtube.com/channel/UCkj5UUptbZnQ5kvxVpDfkBw">
+                <i class="fi flaticon-youtube"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="pre-footer">
+      <div class="container">
+        <div class="col-sm-6">
+          <a href="{{ url('/') }}">
+            <img class="te-logo" src="{{ asset('img/logo-header.png') }}" alt="{{ env('SITE_TITLE','Talented Europe') }}">
+          </a>
+          <ul class="navigation" role="nav">
+            <li><a href="{{ url('/') }}">Home</a></li>
+            <li><a href="{{ url('/cookies') }}">Cookies</a></li>
+            <li><a href="{{ url('/privacy-policy') }}">Privacy Policy</a></li>
+          </ul>
+          <ul class="navigation">
+            <li>
+            Follow us:
+            </li>
+            <li>
+              <a href="https://www.facebook.com/Talented-Europe-839419182764068/">
+                <i class="fi flaticon-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/talentedeurope">
+                <i class="fi flaticon-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCkj5UUptbZnQ5kvxVpDfkBw">
+                <i class="fi flaticon-youtube"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <h3>Partners</h3>
+
+          <ul class="partner-list">
+            <li><a target="_blank" href="http://erasmusplus.iespuertodelacruz.es"><img src="/img/logo-iespto.png" alt="IES Puerto de la Cruz"></a></li>
+            <li><a target="_blank" href="http://cifpcesarmanrique.es/"><img src="/img/logo-cifpcesar.png" alt="CIFP César Manrique"></a></li>
+            <li><a target="_blank" href="http://europeanprojects.org/"><img src="/img/logo-epa.png" alt="European Projects Association"></a></li>
+            <li><a target="_blank" href="http://web.tuke.sk/kj/english_version.htm"><img src="/img/logo-tuke.png" alt="Technical University of Kosice"></a></li>
+            <li><a target="_blank" href="http://www.beds.ac.uk/"><img src="/img/logo-ubbs.png" alt="University of Bedfordshire"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="ue-logos row xs12">
+        <div class="logo">
+          <a href="https://ec.europa.eu/programmes/erasmus-plus/" target="_blank"><img src="{{ asset('/img/logo-footer-erasmus.png') }}" width="174" alt="Erasmus+"></a>
+        </div>
+        <div class="logo">
+          <a href="https://ec.europa.eu/programmes/erasmus-plus/" target="_blank"><img src="{{ asset('/img/logo-footer-cofunded-ue.png') }}" width="160" alt="Co-funded by the Erasmus+ Programme of the European Union"></a>
+        </div>
+        <div class="logo">
+          <a href="http://sepie.es/" target="_blank"><img src="{{ asset('/img/logo-footer-gob-espana-y-sepie.svg') }}" width="240" alt="Gobierno de españa and Sepie"></a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{{ URL::asset('js/conditionizr/conditionizr.js') }}"></script>
+    <script src="{{ URL::asset('js/conditionizr/ios.js') }}"></script>
+    <script src="{{ URL::asset('js/slick-carousel/slick.js') }}"></script>
+    <script src="{{ URL::asset('js/jdoom.min.js') }}"></script>
+    <script src="{{ elixir('js/landing-build.js') }}"></script>
+
+  </body>
+</html>

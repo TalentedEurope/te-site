@@ -1,0 +1,13 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "resources/assets/sass/variables";
+@import "resources/assets/sass/base";
+@import "resources/assets/sass/icons-font";
+
+
+/* Home page */
+@import "resources/assets/sass/components/home/general";
+@import "resources/assets/sass/components/home/navbar";
+@import "resources/assets/sass/components/home/hero-unit";
+@import "resources/assets/sass/components/home/about";
+@import "resources/assets/sass/components/home/subscribe";
+@import "resources/assets/sass/components/home/footer";

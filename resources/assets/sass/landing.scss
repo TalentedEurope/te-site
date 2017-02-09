@@ -1,4 +1,10 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+$slick-font-path: "/fonts/slick-carousel/";
+$slick-loader-path: "/img/slick-carousel/";
+@import "node_modules/slick-carousel/slick/slick.scss";
+@import "node_modules/slick-carousel/slick/slick-theme.scss";
+
 @import "resources/assets/sass/variables";
 @import "resources/assets/sass/base";
 @import "resources/assets/sass/icons-font";
@@ -9,5 +15,11 @@
 @import "resources/assets/sass/components/landing/navbar";
 @import "resources/assets/sass/components/landing/hero-unit";
 @import "resources/assets/sass/components/landing/about";
+@import "resources/assets/sass/components/landing/quote";
+@import "resources/assets/sass/components/landing/logos-carousel";
+@import "resources/assets/sass/components/landing/stadistics";
+@import "resources/assets/sass/components/landing/circle";
+@import "resources/assets/sass/components/landing/map";
+@import "resources/assets/sass/components/landing/students";
 @import "resources/assets/sass/components/landing/subscribe";
-@import "resources/assets/sass/components/landing/footer";
+@import "resources/assets/sass/components/global/footer";

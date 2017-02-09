@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Talented Europe</title>
-    <link rel="stylesheet" type="text/css" href="{{ elixir("css/landing.css") }}">
+    <link rel="stylesheet" type="text/css" href="{{ elixir("css/home.css") }}">
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700,400italic,200italic,700italic,900' rel='stylesheet' type='text/css'>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -144,15 +144,15 @@
           <p>{!! trans('landing.what_is_text_1') !!}</p>
           <p>{!! trans('landing.what_is_text_2') !!}</p>
           <h3>{!! trans('landing.what_is_cta') !!}</h3>
-          <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureC.pdf') }}" target="_blank" class="btn">
+          <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureC.pdf') }}" target="_blank" class="btn" onclick="ga('send', 'event', 'Brochure Company', 'Download', '{{ App::getLocale() }}');">
             <i class="fi flaticon-cloud-download"></i>
               {!! explode("|", trans('global.company'))[1] !!}
           </a>
-          <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureI.pdf') }}" target="_blank" class="btn">
+          <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureI.pdf') }}" target="_blank" class="btn" onclick="ga('send', 'event', 'Brochure Institution', 'Download', '{{ App::getLocale() }}');">
             <i class="fi flaticon-cloud-download"></i>
               {!! explode("|", trans('global.institution'))[1] !!}
           </a>
-          <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureS.pdf') }}" target="_blank" class="btn">
+          <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureS.pdf') }}" target="_blank" class="btn" onclick="ga('send', 'event', 'Brochure Student', 'Download', '{{ App::getLocale() }}');">
             <i class="fi flaticon-cloud-download"></i>
               {!! explode("|", trans('global.student'))[1] !!}
           </a>
@@ -219,7 +219,7 @@
     <script src="{{ URL::asset('js/conditionizr/conditionizr.js') }}"></script>
     <script src="{{ URL::asset('js/conditionizr/ios.js') }}"></script>
     <script src="{{ URL::asset('js/jdoom.min.js') }}"></script>
-    <script src="{{ URL::asset('js/landing.js') }}"></script>
+    <script src="{{ URL::asset('js/home.js') }}"></script>
 
   </body>
 </html>

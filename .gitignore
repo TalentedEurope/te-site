@@ -8,8 +8,10 @@ composer.lock
 clamp.json
 .clamp/*
 /public/build
+/public/*/slick-carousel/*
 /public/css/*
-/public/js/build.js
+/public/js/*-build.js
+/public/js/main-build.js
 !/public/css/vendor/
 .DS_Store
 translation-settings.json

@@ -1,0 +1,26 @@
+.footer {
+    background-color: #212E44;
+    color: #9CA1A7;
+    padding: 30px 10px;
+    overflow: hidden;
+    text-align: center;
+
+    .ue-logos {
+
+        .logo {
+            display:block;
+            margin: 25px 40px;
+        }
+    }
+}
+
+@media (min-width: 450px) {
+    .footer {
+        .ue-logos {
+
+            .logo {
+                display: inline-block;
+            }
+        }
+    }
+}

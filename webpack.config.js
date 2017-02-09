@@ -8,10 +8,13 @@ module.exports = {
             path.resolve('./node_modules')
         ]
     },
-    entry: './resources/assets/js/main.js',
+    entry: {
+        main: './resources/assets/js/main.js',
+        landing: './resources/assets/js/landing.js'
+    },
     output: {
         path: '/public/js',
-        filename: 'build.js'
+        filename: '[name]-build.js'
     },
     module: {
         loaders: [
