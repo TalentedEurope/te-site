@@ -1,0 +1,287 @@
+.hero {
+    height: 100vh;
+    min-height: 490px;
+    overflow: hidden;
+
+    .hero-video {
+        position: absolute;
+        top: 0;
+        left: 0%;
+        height: 100vh;
+        min-height: 490px;
+        right: 0%;
+        bottom: 0%;
+
+        .hero-video-overlay {
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            position: absolute;
+            background: linear-gradient(45deg, rgba(45, 11, 88, 0.35) 0%, rgba(10, 44, 88, 0.36) 100%);
+        }
+
+        &:before {
+            content: '';
+            z-index: 2;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .video-bg, html.ios & .video-bg, html.android & .video-bg {
+            background: white;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            overflow: hidden;
+            background-position-x: 44%;
+            background-position-y: 50%;
+            background-size: cover;
+            background-repeat-x: no-repeat;
+            background-repeat-y: no-repeat;
+            background-image: url('../../img/landing/video-background.png');
+        }
+
+        video, html.ios & video, html.android & video{
+            display: none;
+        }
+
+        .video-bg,
+        .video-bg video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-fg {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+
+        .video-fg video {
+          /* Make video to at least 100% wide and tall */
+          min-width: 100%;
+          min-height: 100%;
+
+          /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+          width: auto;
+          height: auto;
+
+          /* Center the video */
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+
+    }
+
+    .container {
+        height: 100%;
+        display: table;
+
+        .content {
+            position: relative;
+            z-index: 4;
+            color: $text-color-alt;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .logo {
+            height: 83px;
+            margin-top: 25px;
+        }
+
+
+        h1 {
+            text-transform: uppercase;
+            font-style: normal;
+            padding: 0 10px;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 1.3em;
+            max-width: 22em;
+            margin: 25px auto;
+
+            strong {
+                font-weight: 500;
+            }
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 15px;
+            margin-top: 33px;
+            margin-bottom: 16px;
+            letter-spacing: 0.1em;
+            word-spacing: 0.4em;
+        }
+
+        .countdown {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            text-align: center;
+
+            li {
+                display: inline-block;
+                padding: 0 12px;
+                max-width: 25%;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                span {
+                    font-size: 16px;
+                    font-weight: 300;
+                    margin-left: -4px;
+                }
+
+                p {
+                    color: #DADCE0;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        @keyframes bounce {
+            0%, 7.5%, 15%, 100% {
+                -moz-transform: translateY(0);
+                -ms-transform: translateY(0);
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+            5% {
+                -moz-transform: translateY(-13px);
+                -ms-transform: translateY(-13px);
+                -webkit-transform: translateY(-13px);
+                transform: translateY(-13px);
+            }
+            10% {
+                -moz-transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
+                -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
+            }
+        }
+
+        .btn {
+            color: $yellow;
+            background: transparent;
+            text-transform: uppercase;
+            border: 0;
+            border-radius: 0;
+            font-size: 18px;
+            transition: all .3s;
+            margin-top: 30px;
+
+            &:hover, &:active, &:focus {
+                color: $yellow-light;
+            }
+
+            i {
+                display: block;
+                font-size: 36px;
+                animation: bounce 4.5s infinite;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 450px) {
+    .hero {
+        min-height: 510px;
+
+        .hero-video {
+            min-height: 510px;
+        }
+
+        .container {
+
+            h1 {
+                font-size: 22px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (min-width: 550px) {
+    .hero {
+        min-height: 670px;
+
+        .hero-video {
+            min-height: 670px;
+        }
+
+        .container {
+
+            .logo {
+                height: 160px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .countdown li {
+                padding: 0 20px;
+
+                span {
+                    font-size: 28px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .btn {
+                font-size: 20px;
+
+                i {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) and (min-height: 670px) {
+    .hero .hero-video {
+        .video-bg {
+            background-image: none;
+        }
+
+        video {
+            display: block;
+        }
+    }
+}

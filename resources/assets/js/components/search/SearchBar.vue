@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <div class="col-sm-12 well search-bar">
+        <div class="col-sm-12 search-bar">
             <div class="form-group col-sm-3" v-if="showTypeSelector">
                 <div class="select-holder">
                     <select class="form-control" id="country" name="country">
@@ -26,7 +26,7 @@
 import EventBus from 'event-bus.js';
 
 export default {
-    props: ['showTypeSelector'],
+    props: ['showTypeSelector', 'landing'],
     data () {
         return {
             search_text: ''
@@ -34,8 +34,12 @@ export default {
     },
     methods: {
         search: function() {
-            this.search_text = _.trim(this.search_text);
-            EventBus.$emit('onSearch', this.search_text);
+            if (this.landing) {
+                location.href = `/search/?search=${this.search_text}`;
+            } else {
+                this.search_text = _.trim(this.search_text);
+                EventBus.$emit('onSearch', this.search_text);
+            }
         }
     }
 }
@@ -45,11 +49,21 @@ export default {
 @import "resources/assets/sass/variables";
 .search-bar {
     background: $blue;
+    padding: 19px 4px;
+    margin-bottom: 20px;
+
+    input, select, .btn-primary {
+        border-radius: 0;
+        -webkit-appearance: none;
+    }
+
     input {
         background: $white;
+        padding: 15px;
+        height: auto;
     }
-    .select-holder {
-        background: $white;
+    select {
+        height: 52px;
     }
     .btn-primary {
         width: 100%;

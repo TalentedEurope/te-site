@@ -19,15 +19,24 @@ elixir.config.muted = true;
 elixir(function(mix) {
     var bootstrapPath = 'node_modules/bootstrap-sass/assets';
     var conditionizrPath = 'node_modules/conditionizr';
+    var slickCarouselPath = 'node_modules/slick-carousel/slick';
+
     mix.task('translate');
 
     mix.copy(bootstrapPath + '/fonts', 'public/fonts')
         .copy(bootstrapPath + '/javascripts/bootstrap.min.js', 'public/js');
 
+    mix.copy(conditionizrPath + '/dist/conditionizr.js', 'public/js/conditionizr')
+        .copy(conditionizrPath + '/detects/ios.js', 'public/js/conditionizr');
+
+    mix.copy(slickCarouselPath + '/ajax-loader.gif', 'public/img/slick-carousel/')
+        .copy(slickCarouselPath + '/fonts', 'public/fonts/slick-carousel/')
+        .copy(slickCarouselPath + '/slick.js', 'public/js/slick-carousel');
+
+    mix.sass('home.scss')
+        .styles(['vendor/*.css', 'app.css'], 'public/css/home.css', 'public/css')
 
     mix.sass('landing.scss')
-        .copy(conditionizrPath + '/dist/conditionizr.js', 'public/js/conditionizr')
-        .copy(conditionizrPath + '/detects/ios.js', 'public/js/conditionizr')
         .styles(['vendor/*.css', 'app.css'], 'public/css/landing.css', 'public/css')
 
     mix.sass('site.scss')
@@ -35,6 +44,7 @@ elixir(function(mix) {
 
 
     mix.webpack('main.js');
+    mix.webpack('landing.js');
 
     mix.version(['public/css/*.css', 'public/js/*.js']);
 });
