@@ -1,9 +1,9 @@
 <template>
-    <div class="row">
+    <div class="row" v-if="!transition" transition="opacity">
         <div class="col-sm-12 search-bar">
             <div class="form-group col-sm-3" v-if="showTypeSelector">
                 <div class="select-holder">
-                    <select class="form-control" id="country" name="country">
+                    <select class="form-control" id="country" name="country" v-model="user_type">
                         <option value="" selected="">{{ $t('global.search_info') }}:</option>
                         <option value="students">{{ $tc('global.student', 2) }}</option>
                         <option value="companies">{{ $tc('global.company', 2) }}</option>
@@ -11,10 +11,10 @@
                 </div>
             </div>
             <div class="form-group col-sm-7" v-bind:class="{ 'col-sm-10': !showTypeSelector }">
-                <input type="text" class="form-control" id="name" name="name" :placeholder="$t('landing.search_placeholder')" v-model="search_text" @keyup.enter="search()">
+                <input type="text" class="form-control" id="name" name="name" :placeholder="$t('landing.search_placeholder')" v-model="search_text" @keyup.enter="onSearchButton()">
             </div>
             <div class="form-group col-sm-2">
-                <button type="submit" class="btn btn-primary" @click.prevent="search()">
+                <button type="submit" class="btn btn-primary" @click.prevent="onSearchButton()">
                     <i class="fa fa-search" aria-hidden="true"></i> {{ $t('landing.search_btn') }}
                 </button>
             </div>
@@ -24,22 +24,50 @@
 
 <script>
 import EventBus from 'event-bus.js';
+import { getUrlParameter } from 'helpers/manage-urls.js';
 
 export default {
-    props: ['showTypeSelector', 'landing'],
+    props: ['showTypeSelector', 'landing', 'transition'],
     data () {
         return {
-            search_text: ''
+            search_text: '',
+            user_type: ''
+        }
+    },
+    ready () {
+        this.transition = false;
+
+        if (!this.landing) {
+            this.search_text = getUrlParameter('search');
+
+            this.cleanSearchText();
+            history.replaceState(this.search_text, '');
+            this.emitSearch();
+
+            var that = this;
+            window.addEventListener('popstate', function (e) {
+                that.search_text = e.state;
+                that.emitSearch();
+            });
         }
     },
     methods: {
-        search: function() {
+        cleanSearchText: function () {
+            this.search_text = _.trim(this.search_text);
+        },
+        onSearchButton: function () {
+            this.cleanSearchText();
+
             if (this.landing) {
-                location.href = `/search/?search=${this.search_text}`;
+                var user_type = this.user_type ? this.user_type : 'students';
+                location.href = `/search/${user_type}/?search=${this.search_text}`;
             } else {
-                this.search_text = _.trim(this.search_text);
-                EventBus.$emit('onSearch', this.search_text);
+                history.pushState(this.search_text, null, `?search=${this.search_text}`);
+                this.emitSearch();
             }
+        },
+        emitSearch: function () {
+            EventBus.$emit('onSearch', this.search_text);
         }
     }
 }
@@ -47,6 +75,15 @@ export default {
 
 <style lang="sass" scoped>
 @import "resources/assets/sass/variables";
+.opacity-transition {
+    opacity: 1;
+    transition: 0.5s;
+}
+.opacity-enter {
+    opacity: 0;
+    transition: 0.5s;
+}
+
 .search-bar {
     background: $blue;
     padding: 19px 4px;

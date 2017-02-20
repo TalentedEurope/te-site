@@ -64,9 +64,6 @@ export default {
             this.fetchResults(1, this.filters, this.search_text);
         });
     },
-    ready () {
-        this.fetchResults();
-    },
     methods: {
         fetchResults(page, filters, search_text) {
             var resource = studentsResultsResource;

@@ -54,4 +54,16 @@
         }
     }
 
+    // bootstrap hack: fix content width inside hidden tabs
+    // SOURCE: https://github.com/kenwheeler/slick/issues/619#issuecomment-67228390
+    .tab-content > .tab-pane {
+        display: block;
+        height: 0;
+        overflow-y: hidden;
+    }
+    .tab-content > .active {
+        height: auto;
+    }
+    // bootstrap hack end
+
 }

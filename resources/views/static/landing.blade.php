@@ -124,7 +124,9 @@
         <div class="row content">
           <img class="logo" src="{{ URL::asset('img/logo-header-alt.png') }}" alt="Talented Europe">
 
-          <search-bar :show-type-selector="true" :landing="true"></search-bar>
+          <div class="search-bar-wrapper">
+            <search-bar :show-type-selector="true" :landing="true" :transition="true"></search-bar>
+          </div>
         </div>
       </div>
     </header>
@@ -184,20 +186,24 @@
         </ul>
 
         <div class="tab-content">
-          <div role="tabpanel" id="companies-logos" class="companies-logos tab-pane active">
-            @for ($i = 0; $i < 9; $i++)
-              <a href="#">
-                <img src="http://placehold.it/140x100"/>
-              </a>
-            @endfor
+          <div role="tabpanel" class="tab-pane active" id="companies-logos">
+            <div class="companies-logos">
+              @for ($i = 0; $i < 9; $i++)
+                <a href="#">
+                  <img src="http://placehold.it/140x100"/>
+                </a>
+              @endfor
+            </div>
           </div>
 
-          <div role="tabpanel" id="institutions-logos" class="institutions-logos tab-pane">
-            @for ($i = 0; $i < 9; $i++)
-              <a href="#">
-                <img src="http://placehold.it/140x100">
-              </a>
-            @endfor
+          <div role="tabpanel" class="tab-pane" id="institutions-logos">
+            <div class="institutions-logos">
+              @for ($i = 0; $i < 9; $i++)
+                <a href="#">
+                  <img src="http://placehold.it/140x110">
+                </a>
+              @endfor
+            </div>
           </div>
         </div>
       </div>
@@ -312,7 +318,7 @@
     </section>
 
 
-    <div class="pre-footer">
+    <div class="pre-footer col-md-12">
       <div class="container">
         <div class="col-sm-6">
           <a href="{{ url('/') }}">
@@ -357,7 +363,7 @@
         </div>
       </div>
     </div>
-    <div class="footer">
+    <div class="footer col-md-12">
       <div class="ue-logos row xs12">
         <div class="logo">
           <a href="https://ec.europa.eu/programmes/erasmus-plus/" target="_blank"><img src="{{ asset('/img/logo-footer-erasmus.png') }}" width="174" alt="Erasmus+"></a>

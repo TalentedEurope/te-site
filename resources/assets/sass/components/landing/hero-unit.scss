@@ -8,6 +8,7 @@
         left: 0%;
         right: 0%;
         bottom: 0%;
+        background: $blue;
 
         .hero-video-overlay {
             width: 100%;
@@ -27,7 +28,7 @@
         }
 
         .video-bg, html.ios & .video-bg, html.android & .video-bg {
-            background: white;
+            background: rgba(255, 255, 255, 0.3);
             position: absolute;
             top: 0;
             right: 0;
@@ -90,6 +91,7 @@
         .logo {
             max-width: 75%;
             width: 230px;
+            min-height: 98px;
         }
 
         .content {
@@ -101,16 +103,19 @@
             text-align: center;
         }
 
+        .search-bar-wrapper {
+            min-height: 271px;
 
-        .search-bar {
-            margin-top: 60px;
-            background-color: $white;
-            box-shadow: 0px 5px 8px 0px rgba(22, 34, 45, 0.15);
+            .search-bar {
+                margin-top: 60px;
+                background-color: $white;
+                box-shadow: 0px 5px 8px 0px rgba(22, 34, 45, 0.15);
 
-            select, input {
-                box-shadow: none;
-                background-color: $light-gray;
-                border: none;
+                select, input {
+                    box-shadow: none;
+                    background-color: $light-gray;
+                    border: none;
+                }
             }
         }
 
@@ -126,6 +131,20 @@
 
         video {
             display: block;
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
+    .hero {
+        .container {
+            .logo {
+                min-height: 131px;
+            }
+            .search-bar-wrapper {
+                min-height: 170px;
+            }
         }
     }
 }
