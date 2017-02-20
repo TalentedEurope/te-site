@@ -11,10 +11,10 @@
                 </div>
             </div>
             <div class="form-group col-sm-7" v-bind:class="{ 'col-sm-10': !showTypeSelector }">
-                <input type="text" class="form-control" id="name" name="name" :placeholder="$t('landing.search_placeholder')" v-model="search_text" @keyup.enter="search()">
+                <input type="text" class="form-control" id="name" name="name" :placeholder="$t('landing.search_placeholder')" v-model="search_text" @keyup.enter="onSearchButton()">
             </div>
             <div class="form-group col-sm-2">
-                <button type="submit" class="btn btn-primary" @click.prevent="search()">
+                <button type="submit" class="btn btn-primary" @click.prevent="onSearchButton()">
                     <i class="fa fa-search" aria-hidden="true"></i> {{ $t('landing.search_btn') }}
                 </button>
             </div>
@@ -24,6 +24,7 @@
 
 <script>
 import EventBus from 'event-bus.js';
+import { getUrlParameter } from 'helpers/manage-urls.js';
 
 export default {
     props: ['showTypeSelector', 'landing', 'transition'],
@@ -33,18 +34,40 @@ export default {
             user_type: ''
         }
     },
-    ready() {
+    ready () {
         this.transition = false;
+
+        if (!this.landing) {
+            this.search_text = getUrlParameter('search');
+
+            this.cleanSearchText();
+            history.replaceState(this.search_text, '');
+            this.emitSearch();
+
+            var that = this;
+            window.addEventListener('popstate', function (e) {
+                that.search_text = e.state;
+                that.emitSearch();
+            });
+        }
     },
     methods: {
-        search: function() {
+        cleanSearchText: function () {
+            this.search_text = _.trim(this.search_text);
+        },
+        onSearchButton: function () {
+            this.cleanSearchText();
+
             if (this.landing) {
                 var user_type = this.user_type ? this.user_type : 'students';
                 location.href = `/search/${user_type}/?search=${this.search_text}`;
             } else {
-                this.search_text = _.trim(this.search_text);
-                EventBus.$emit('onSearch', this.search_text);
+                history.pushState(this.search_text, null, `?search=${this.search_text}`);
+                this.emitSearch();
             }
+        },
+        emitSearch: function () {
+            EventBus.$emit('onSearch', this.search_text);
         }
     }
 }
