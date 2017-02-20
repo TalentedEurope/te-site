@@ -102,6 +102,7 @@
         </a>
         <ul class="navigation" role="nav">
           <li><a href="{{ url('/') }}">Home</a></li>
+          <li><a href="http://blog.talentedeurope.eu" target="_blank">Blog</a></li>
           <li><a href="{{ url('/cookies') }}">Cookies</a></li>
           <li><a href="{{ url('/privacy-policy') }}">Privacy Policy</a></li>
         </ul>

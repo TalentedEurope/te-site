@@ -171,6 +171,7 @@ return [
         Jrean\UserVerification\UserVerificationServiceProvider::class,
         'Tymon\JWTAuth\Providers\JWTAuthServiceProvider',
         'Sofa\Eloquence\ServiceProvider',
+        Moharrum\LaravelGeoIPWorldCities\LaravelGeoIPWorldCitiesServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -231,6 +232,8 @@ return [
         'Bouncer' => Silber\Bouncer\BouncerFacade::class,
         'UserVerification' => Jrean\UserVerification\Facades\UserVerification::class,
         'Notification' => Illuminate\Support\Facades\Notification::class,
+        'Cities' => Moharrum\LaravelGeoIPWorldCities\Facade::class,
+
     ],
 
     /*
