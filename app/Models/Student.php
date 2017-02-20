@@ -101,6 +101,15 @@ class Student extends Model
         }
     }
 
+    // TODO: In the future when theres enough users: Limit them to ready users or validated ones.
+    public static function getRecent()
+    {
+        $recent = \App\Models\User::where('userable_type', \App\Models\Student::class)->orderBy('created_at', 'desc')->limit(6)->select('userable_id')->get()->map(function ($item, $key) {
+            return $item->userable_id;
+        })->toArray();
+        return \App\Models\Student::whereIn('id', $recent)->get();
+    }
+
     public function user()
     {
         return $this->morphOne('\App\Models\User', 'userable');

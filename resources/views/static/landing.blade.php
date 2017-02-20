@@ -11,6 +11,7 @@
     <meta content="{{ URL::to('/') }}" name="url" property="og:url" />
     <meta content="website" name="type" property="og:type" />
     <meta content="{{ URL::asset('img/logo-header.png') }}" name="image" property="og:image" />
+    <meta name="mapPoints" id="mapPoints" content='{!! $cities !!}'>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
 
@@ -157,16 +158,29 @@
       </div>
     </section>
 
-
+    @if ($talentQuote)
     <section class="quote-section content-section">
       <div class="overlay"></div>
       <div class="content text-center">
-        <img src="http://placehold.it/140x100"/>
-        <p class="quote-text">Talent is the eventual potential of an individual in a certain endeavor. It's not how good one is right away - it's how good one can become in a perfect world.</p>
-        <p class="quote-author">Company Name - Representative</p>
+        @if ($talentQuote->user->image)
+        <a href="{{ route('get_profile', [str_slug($talentQuote->user->name),$talentQuote->user->id]) }}">
+        <img width="150" class="round" src="{{ asset('uploads/photo/'.$talentQuote->user->image) }}"/>
+        </a>
+        @endif
+        <p class="quote-text">{{ $talentQuote->talent }}</p>
+        <p class="quote-author">{{ $talentQuote->overseer }} - {{ $talentQuote->user->name }} </p>
       </div>
     </section>
-
+    @else
+    <section class="quote-section content-section">
+      <div class="overlay"></div>
+      <div class="content text-center">
+        <p class="quote-text">“Hide not your talents, they for use were made,<br/>
+            What's a sundial in the shade?”</p>
+        <p class="quote-author">Benjamin Franklin</p>
+      </div>
+    </section>
+    @endif
 
     <section class="logos-carousel-section content-section col-md-12">
       <div class="content">
@@ -186,24 +200,28 @@
         </ul>
 
         <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="companies-logos">
-            <div class="companies-logos">
-              @for ($i = 0; $i < 9; $i++)
-                <a href="#">
-                  <img src="http://placehold.it/140x100"/>
+          <div role="tabpanel" id="companies-logos" class="@if ($companies->count()) companies-logos @endif tab-pane active">
+            @if ($companies->count())
+              @foreach ($companies as $company)
+                <a href="{{ route('get_profile', [str_slug($company->user->name),$company->user->id]) }}">
+                <img width="150" src="{{ asset('uploads/photo/'.$company->user->image) }}"/>
                 </a>
-              @endfor
-            </div>
+              @endforeach
+            @else
+              <p class="h2 text-center">No companies available</p>
+            @endif
           </div>
 
-          <div role="tabpanel" class="tab-pane" id="institutions-logos">
-            <div class="institutions-logos">
-              @for ($i = 0; $i < 9; $i++)
-                <a href="#">
-                  <img src="http://placehold.it/140x110">
+          <div role="tabpanel" id="institutions-logos" class="tab-pane @if ($institutions->count()) institutions-logos @endif">
+            @if ($institutions->count())
+              @foreach ($institutions as $institution)
+                <a href="{{ route('get_profile', [str_slug($institution->user->name),$institution->user->id]) }}">
+                <img width="150" src="{{ asset('uploads/photo/'.$institution->user->image) }}"/>
                 </a>
-              @endfor
-            </div>
+              @endforeach
+            @else
+              <p class="h2 text-center">No institutions available</p>
+            @endif
           </div>
         </div>
       </div>
@@ -215,47 +233,47 @@
         <h1 class="text-center">Stadistics</h1>
         <div class="stadistics-box clearfix">
           <div class="col-xs-3 col-sm-3 text-center">
-            <div class="c100 p51 yellow small center">
-              <span>51%</span>
+            <div class="c100 p73 yellow small center">
+              <span>{{ $alerts }}</span>
               <div class="slice">
                 <div class="bar"></div>
                 <div class="fill"></div>
               </div>
             </div>
-            <p>Lorem ipsum</p>
+            <p>Contacts between students and companies</p>
           </div>
 
           <div class="col-xs-3 col-sm-3 text-center">
-            <div class="c100 p15 small center">
-              <span>15%</span>
+            <div class="c100 p{{ round($studentsCount/$totalUserCount*100) }} small center">
+              <span>{{ round($studentsCount/$totalUserCount*100) }}%</span>
               <div class="slice">
                 <div class="bar"></div>
                 <div class="fill"></div>
               </div>
             </div>
-            <p>Lorem ipsum</p>
+            <p>Students</p>
           </div>
 
           <div class="col-xs-3 col-sm-3 text-center">
-            <div class="c100 p72 yellow small center">
-              <span>72%</span>
+            <div class="c100 p{{ round($companiesCount/$totalUserCount*100) }} yellow small center">
+              <span>{{ round($companiesCount/$totalUserCount*100) }}%</span>
               <div class="slice">
                 <div class="bar"></div>
                 <div class="fill"></div>
               </div>
             </div>
-            <p>Lorem ipsum</p>
+            <p>Companies</p>
           </div>
 
           <div class="col-xs-3 col-sm-3 text-center">
-            <div class="c100 p19 small center">
-              <span>19%</span>
+            <div class="c100 p{{ $institutionsCount/$totalUserCount*100 }} small center">
+              <span>{{ $institutionsCount/$totalUserCount*100 }}%</span>
               <div class="slice">
                 <div class="bar"></div>
                 <div class="fill"></div>
               </div>
             </div>
-            <p>Lorem ipsum</p>
+            <p>Institutions</p>
           </div>
         </div>
       </div>
@@ -269,17 +287,21 @@
 
     <section class="students-section content-section col-md-12">
       <div class="content">
-        <h1 class="text-center">Last students</h1>
+        <h1 class="text-center">Recent students</h1>
         <div class="students-box clearfix">
-          @for ($i = 0; $i < 6; $i++)
-            <a href="#" class="col-xs-6 col-sm-4 col-md-2 text-center">
-              <img src="http://placehold.it/130x130">
-              <p>John Doe</p>
-            </a>
-          @endfor
+          @if ($recentStudents->count())
+            @foreach ($recentStudents as $student)
+              <a href="{{ route('get_profile', [str_slug($student->user->name),$student->user->id]) }}" class="col-xs-6 col-sm-4 col-md-2 text-center">
+              <img width="150" src="{{ asset('uploads/photo/'.$student->user->image) }}"/>
+              <p>{{ $student->user->FullName }}</p>
+              </a>
+            @endforeach
+          @else
+            <p class="h2">No students available</p>
+          @endif
         </div>
         <div class="text-center">
-          <a class="button" href="#">View More</a>
+          <a class="button" href="{{ route('searchStudents') }}">View More</a>
         </div>
       </div>
     </section>
@@ -326,6 +348,7 @@
           </a>
           <ul class="navigation" role="nav">
             <li><a href="{{ url('/') }}">Home</a></li>
+            <li><a href="http://blog.talentedeurope.eu" target="_blank">Blog</a></li>
             <li><a href="{{ url('/cookies') }}">Cookies</a></li>
             <li><a href="{{ url('/privacy-policy') }}">Privacy Policy</a></li>
           </ul>
