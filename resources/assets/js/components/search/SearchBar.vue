@@ -39,35 +39,16 @@ export default {
 
         if (!this.landing) {
             this.search_text = getUrlParameter('search');
-
-            this.cleanSearchText();
-            history.replaceState(this.search_text, '');
-            this.emitSearch();
-
-            var that = this;
-            window.addEventListener('popstate', function (e) {
-                that.search_text = e.state;
-                that.emitSearch();
-            });
         }
     },
     methods: {
-        cleanSearchText: function () {
-            this.search_text = _.trim(this.search_text);
-        },
         onSearchButton: function () {
-            this.cleanSearchText();
-
             if (this.landing) {
                 var user_type = this.user_type ? this.user_type : 'students';
                 location.href = `/search/${user_type}/?search=${this.search_text}`;
             } else {
-                history.pushState(this.search_text, null, `?search=${this.search_text}`);
-                this.emitSearch();
+                EventBus.$emit('onSearch', this.search_text);
             }
-        },
-        emitSearch: function () {
-            EventBus.$emit('onSearch', this.search_text);
         }
     }
 }
