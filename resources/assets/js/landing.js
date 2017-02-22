@@ -1,24 +1,3 @@
-import Vue from 'vue';
-import VueI18n from 'vue-i18n';
-import _ from 'lodash';
-
-import SearchBar from './components/search/SearchBar.vue';
-
-
-Vue.use(VueI18n);
-Vue.config.lang = 'en';
-Vue.locale('en', TE.translations.en);
-
-if (document.querySelector('.v-container')) {
-    new Vue({
-        el: '.v-container',
-        components: {
-            'search-bar': SearchBar,
-        }
-    })
-}
-
-
 conditionizr.add('android', /android/i.test(navigator.userAgent));
 conditionizr.config({
     tests: {
@@ -27,8 +6,31 @@ conditionizr.config({
     }
 });
 
-
 $(document).ready(function(){
+    var search = function () {
+        var search_type = document.getElementById('search-type').value || 'students';
+        var url = '/search/' + search_type + '/';
+
+        var search_text = document.getElementById('search-text').value;
+        if (search_text) {
+            url += '?search=' + search_text;
+        }
+        window.location = url;
+    }
+
+    $('#search-text').keypress(function(event) {
+        if (event.which == 13) {
+            event.preventDefault();
+            search();
+        }
+    });
+
+    $('#search-button').click(function() {
+        search();
+    });
+
+
+    // CAROUSEL OF LOGOS
     var carousel_settings = {
         infinite: true,
         slidesToShow: 6,
