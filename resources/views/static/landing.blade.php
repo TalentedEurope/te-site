@@ -158,8 +158,9 @@
       </div>
     </section>
 
+
     @if ($talentQuote)
-    <section class="quote-section content-section">
+    <section class="quote-section content-section col-md-12">
       <div class="overlay"></div>
       <div class="content text-center">
         @if ($talentQuote->user->image)
@@ -172,7 +173,7 @@
       </div>
     </section>
     @else
-    <section class="quote-section content-section">
+    <section class="quote-section content-section col-md-12">
       <div class="overlay"></div>
       <div class="content text-center">
         <p class="quote-text">“Hide not your talents, they for use were made,<br/>
@@ -181,6 +182,7 @@
       </div>
     </section>
     @endif
+
 
     <section class="logos-carousel-section content-section col-md-12">
       <div class="content">
@@ -281,7 +283,7 @@
 
 
     <section class="map-section col-md-12">
-      <div class="map"></div>
+      <div id="map" class="map"></div>
     </section>
 
 
@@ -408,5 +410,31 @@
     <script src="{{ URL::asset('js/jdoom.min.js') }}"></script>
     <script src="{{ elixir('js/landing-build.js') }}"></script>
 
+    <script>
+      function initMap() {
+          var map_points = document.querySelector('meta[name="mapPoints"]').getAttribute("content");
+          map_points = [
+              {"city": "Puerto de la Cruz", "latitude":"28.383333", "longitude":"-16.550000"},
+              {"city": "Tegueste", "latitude": "28.516667", "longitude": "-16.316667"},
+              {"city": "Santa Cruz de Tenerife", "latitude": "28.460238", "longitude": "-16.280616"},
+              {"city": "C\u00f3rdoba", "latitude": "37.891550", "longitude": "-4.772748"},
+              {"city": "Szeged", "latitude": "46.250000", "longitude": "20.166667"}];
+
+          var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 4,
+              center: {lat: 50.866667, lng: 6.333333},
+              scrollwheel: false,
+          });
+
+          for (i = 0; i < map_points.length; i++) {
+              new google.maps.Marker({
+                  position: {lat: parseFloat(map_points[i]["latitude"]), lng: parseFloat(map_points[i]["longitude"])},
+                  map: map,
+                  title: ''
+              });
+          }
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
   </body>
 </html>

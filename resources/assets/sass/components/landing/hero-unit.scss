@@ -15,7 +15,7 @@
             height: 100%;
             z-index: 3;
             position: absolute;
-            background: linear-gradient(0deg, $blue 0%, rgba($blue, 0.8) 100%);
+            background: linear-gradient(0deg, #212E44 0%, rgba(33, 46, 68, 0.8) 100%);
         }
 
         &:before {
@@ -37,7 +37,7 @@
             z-index: 1;
             overflow: hidden;
             background-position-x: 44%;
-            background-position-y: 50%;
+            background-position-y: 20%;
             background-size: cover;
             background-repeat-x: no-repeat;
             background-repeat-y: no-repeat;
@@ -77,7 +77,7 @@
 
           /* Center the video */
           position: absolute;
-          top: 50%;
+          top: 68%;
           left: 50%;
           transform: translate(-50%,-50%);
         }
