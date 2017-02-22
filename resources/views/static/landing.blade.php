@@ -60,7 +60,7 @@
     </script>
   </head>
 
-  <body class="v-container">
+  <body>
     <header class="hero">
       <nav class="navbar navbar-inverse navbar-landing navbar-static-top">
         <div class="container">
@@ -125,8 +125,24 @@
         <div class="row content">
           <img class="logo" src="{{ URL::asset('img/logo-header-alt.png') }}" alt="Talented Europe">
 
-          <div class="search-bar-wrapper">
-            <search-bar :show-type-selector="true" :landing="true" :transition="true"></search-bar>
+          <div class="col-sm-12 search-bar">
+            <div class="form-group col-sm-3">
+              <div class="select-holder">
+                <select class="form-control" id="search-type">
+                  <option value="" selected="">{!! trans('global.search_info') !!}:</option>
+                  <option value="students">{!! trans_choice('global.student', 2) !!}</option>
+                  <option value="companies">{!! trans_choice('global.company', 2) !!}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group col-sm-7">
+              <input type="text" class="form-control" id="search-text" placeholder="{!! trans('landing.search_placeholder') !!}">
+            </div>
+            <div class="form-group col-sm-2">
+              <button type="submit" class="btn btn-primary" id="search-button">
+                <i class="fa fa-search" aria-hidden="true"></i> {!! trans('landing.search_btn') !!}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -407,7 +423,6 @@
     <script src="{{ URL::asset('js/conditionizr/conditionizr.js') }}"></script>
     <script src="{{ URL::asset('js/conditionizr/ios.js') }}"></script>
     <script src="{{ URL::asset('js/slick-carousel/slick.js') }}"></script>
-    <script src="{{ URL::asset('js/jdoom.min.js') }}"></script>
     <script src="{{ elixir('js/landing-build.js') }}"></script>
 
     <script>

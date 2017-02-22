@@ -1,6 +1,6 @@
 <template>
     <div>
-        <search-bar :show-type-selector="showTypeSelector"></search-bar>
+        <search-bar :search-text="search_text"></search-bar>
         <div class="row results-filters-wrapper">
             <div class="results-filters-transition" v-bind:class="{ 'init-loading': init_loading }">
                 <search-filters :collective="collective"></search-filters>
@@ -25,7 +25,7 @@ import { defaultErrorToast } from 'errors-handling.js';
 import smoothScroll from 'smoothscroll';
 
 export default {
-    props: ['collective', 'showTypeSelector'],
+    props: ['collective'],
     components: {
         'search-bar': SearchBar,
         'search-filters': SearchFilters,
@@ -124,7 +124,9 @@ export default {
             if (!this.results_element) {
                 this.results_element = document.querySelector('#results');
             }
-            smoothScroll(this.results_element);
+            if ($(window).scrollTop() > $(this.results_element).offset().top) {
+                smoothScroll(this.results_element);
+            }
         }
     }
 }
