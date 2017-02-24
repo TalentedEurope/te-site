@@ -154,10 +154,10 @@
 
               <personal-skills-form label="Personal skills (max 6)"
                   values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}'
-                  value='{!! json_encode($student->personalSkills, JSON_HEX_APOS) !!}'
+                  value='{!! json_encode($student->personalSkills()->wherePivot('validator',false)->get(), JSON_HEX_APOS) !!}'
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></personal-skills-form>
 
-              <text-area-form code="talent" label="My talent (max 300 characters)"
+              <text-area-form code="talent" label="{!! trans('reg-profile.student_describe_talent') !!}"
                   placeholder="{!! trans('reg-profile.student_describe_talent') !!}" required
                   value="{{ old('talent', $student->talent) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-area-form>

@@ -147,6 +147,6 @@ class Student extends Model
 
     public function personalSkills()
     {
-        return $this->belongsToMany('\App\Models\PersonalSkill');
+        return $this->belongsToMany('\App\Models\PersonalSkill')->withPivot('validator');
     }
 }

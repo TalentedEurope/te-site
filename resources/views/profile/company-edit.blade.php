@@ -53,7 +53,7 @@
                   required errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <div class="row">
-                <text-box-form class="col-sm-6" code="fiscal_id" label="{!! trans('reg-profile.fiscal_id') !!}" placeholder="{!! trans('reg-profile.name') !!}"
+                <text-box-form class="col-sm-6" code="fiscal_id" label="{!! trans('reg-profile.fiscal_id') !!}" placeholder="{!! trans('reg-profile.fiscal_id') !!}"
                     required value="{{ old('fiscal_id', $company->fiscal_id) }}"
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
                 <text-box-form class="col-sm-6" code="overseer" label="{!! trans('reg-profile.legal_representative') !!}"
