@@ -9,6 +9,15 @@ a.icon-link {
     }
 }
 
+@media (min-width: 768px) {
+    .sm-no-padding-left {
+        padding-left: 0;
+    }
+    .sm-no-padding-right {
+        padding-right: 0;
+    }
+}
+
 // override
 div.jq-toast-wrap {
     top: 0 !important;

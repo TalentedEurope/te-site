@@ -3,8 +3,8 @@
         <search-bar :search-text="search_text"></search-bar>
         <div class="row results-filters-wrapper">
             <div class="results-filters-transition" v-bind:class="{ 'init-loading': init_loading }">
-                <search-filters :collective="collective"></search-filters>
-                <results id="results" :collective="collective" :results="results" :pagination-data="pagination_data" :loading="loading" :is-filtering="is_filtering"></results>
+                <search-filters class="sm-no-padding-left" :collective="collective"></search-filters>
+                <results id="results" class="sm-no-padding-right" :collective="collective" :results="results" :pagination-data="pagination_data" :loading="loading" :is-filtering="is_filtering"></results>
             </div>
 
             <div class="well init-loading-box" v-if="init_loading">
