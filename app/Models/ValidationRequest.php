@@ -7,16 +7,30 @@ use Illuminate\Database\Eloquent\Model;
 class ValidationRequest extends Model
 {
     public static $rules = array(
-            'student_id' => 'required',
+        'status' => 'required|in:valid,invalid',
+        'personalSkills' => 'sometimes|required|array|max:6',
+        'comment' => 'sometimes|required|max:300',
+        'reason' => 'required_if:status,invalid|in:nocriteria,nostudent'
     );
 
-	public function validator()
-	{
-		return $this->belongsTo('App\Models\Validator');
-	}
+    public static $status = ['pending', 'validated', 'denied'];
 
-	public function student()
-	{
-		return $this->belongsTo('App\Models\Student');
-	}
+    public static function invalidReasons()
+    {
+        return array(
+            'nocriteria' => trans('validation.criteria'),
+            'nostudent' => trans('validation.nostudent'),
+        );
+    }
+
+
+    public function validator()
+    {
+        return $this->belongsTo('App\Models\Validator');
+    }
+
+    public function student()
+    {
+        return $this->belongsTo('App\Models\Student');
+    }
 }

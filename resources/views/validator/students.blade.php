@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('page-title')My students @endsection
+
 @section('content')
 
 <div class="container">

@@ -47,7 +47,6 @@ class Company extends Model
         }
     }
 
-
     public static $niceNames = array(
                         'fiscal_id' => 'Fiscal ID',
                         'overseer' => 'Person in charge',

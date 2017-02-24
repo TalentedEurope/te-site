@@ -176,6 +176,14 @@
         var hash = window.location.hash;
         profile_tabs.find('a[href="' + hash + '"]').tab('show');
       }
+
+      var validate_tabs = $('#validate-tabs');
+      if (validate_tabs.data("hashtab")) {
+        var hash = window.location.hash;
+        validate_tabs.find('a[href="' + hash + '"]').tab('show');
+      }
+
+
     });
   </script>
 </body>
