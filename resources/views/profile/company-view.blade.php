@@ -16,7 +16,7 @@
     </div>
     @endif
 
-    <div class="col-xs-12 col-sm-8 col-md-9">
+    <div class="col-xs-12 col-sm-8 col-md-9 sm-no-padding-left">
       <div class="well student-name">
         <h2 class="title">{{ $user->name }} </h2>
         @if ($company->activity)
@@ -46,7 +46,7 @@
 
     </div>
 
-    <div class="col-xs-12 col-sm-4 col-md-3 text-center contact-info">
+    <div class="col-xs-12 col-sm-4 col-md-3 sm-no-padding-right text-center contact-info">
       <div class="well">
         @if ($user->image)
         <figure>

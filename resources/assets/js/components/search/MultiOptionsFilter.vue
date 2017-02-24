@@ -68,6 +68,11 @@ export default {
 
 <style lang="sass" scoped>
 @import "resources/assets/sass/variables";
+
+h3, .h3 {
+    font-size: 21px;
+}
+
 .search-options .filter-list {
     ul {
         list-style: none;
