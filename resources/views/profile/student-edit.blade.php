@@ -188,8 +188,10 @@
             <p class="small"><em>Get a better validation improving your profile readiness and improve possibility of company contact</em></p>
             <hr class="separator">
 
-            <h4>Find your school</h4>
-            <find-your-school countries="{!! json_encode($nationalities, JSON_HEX_APOS) !!}"></find-your-school>
+            <form class="form-vertical" role="form" method="POST">
+              <h4>Find your school</h4>
+              <find-your-school countries='{!! json_encode($nationalities, JSON_HEX_APOS) !!}'></find-your-school>
+            </form>
 
             <hr class="separator">
             <h4>Can't find your institution? ask them to join talented europe</h4>
