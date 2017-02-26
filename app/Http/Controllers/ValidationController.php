@@ -11,6 +11,7 @@ use App\Http\Controllers\Api\LoginController;
 use App\Models\Student;
 use App\Models\ValidationRequest;
 use App\Models\PersonalSkill;
+use App\Models\Institution;
 use Carbon\Carbon;
 
 class ValidationController extends Controller
@@ -30,6 +31,10 @@ class ValidationController extends Controller
 
     public function getValidate($id)
     {
+        if (!Auth::user()->userable->canValidate()) {
+            App::abort(403, 'Unauthorized action.');
+        }
+
         $validation = \App\Models\ValidationRequest::with("student")->findOrFail($id);
         if ($validation->validator != Auth::user()->userable) {
             App::abort(403, 'Unauthorized action.');
@@ -92,11 +97,11 @@ class ValidationController extends Controller
         }
     }
 
-
     public function getJSONStudentsValidation(Request $request)
     {
+        $canValidate = Auth::user()->userable->canValidate();
         Carbon::setLocale(Config::get('app.locale'));
-        $validations = ValidationRequest::with('student')->where("validator_id", 29)->get();
+        $validations = ValidationRequest::with('student')->whereHas('student.user')->where("validator_id", 29)->get();
 
         $res = array();
         foreach ($validations as $validation) {
@@ -104,7 +109,8 @@ class ValidationController extends Controller
                 'id' => $validation->id,
                 'full_name' => $validation->student->user->fullName,
                 'status' => $validation->student->valid,
-                'validation_url' => route('get_validate_student', [$validation->id])
+                'validation_url' => route('get_validate_student', [$validation->id]),
+                'can_validate' => $canValidate
             );
             if ($validation->created_at != null) {
                 $val['date_of_request'] = $validation->created_at->diffForHumans();

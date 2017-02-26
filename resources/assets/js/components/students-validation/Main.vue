@@ -3,7 +3,7 @@
         <div v-if="students.length == 0">
             Mensaje no students validation
         </div>
-        <table n-if="students.length > 0" class="table table-striped table-hover table-responsive">
+        <table v-if="students.length > 0" class="table table-striped table-hover table-responsive">
             <thead>
                 <tr>
                     <th>{{ $t('global.student') }}</th>

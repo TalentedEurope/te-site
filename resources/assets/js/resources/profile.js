@@ -6,25 +6,18 @@ var ProfileResource = {
     }
 };
 
-var StudentProfileResource = {
-    get: () => {
-        return http.get('profile/student');
+var InstitutionResource = {
+    get: (country_code) => {
+        return http.get(`institutions/${country_code}`);
     }
 };
 
-var CompanyProfileResource = {
-    get: () => {
-        return http.get('profile/company');
-    }
-};
-
-var ValidatorProfileResource = {
-    get: () => {
-        return http.get('profile/validator');
+var RefereeResource = {
+    get: (institution_id) => {
+        return http.get(`institutions/${institution_id}/validators`);
     }
 };
 
 export const profileResource = ProfileResource;
-export const studentProfileResource = StudentProfileResource;
-export const companyProfileResource = CompanyProfileResource;
-export const validatorProfileResource = ValidatorProfileResource;
+export const institutionResource = InstitutionResource;
+export const refereeResource = RefereeResource;

@@ -25,7 +25,6 @@ class Validator extends Model
         }
     }
 
-
     public function institution()
     {
         return $this->belongsTo('App\Models\Institution');
@@ -39,5 +38,19 @@ class Validator extends Model
     public function user()
     {
         return $this->morphOne('\App\Models\User', 'userable');
+    }
+
+    public function canValidate()
+    {
+        if (!$this->institution) {
+            return false;
+        }
+        if (!$this->institution->user) {
+            return false;
+        }
+        if (!$this->institution->user->is_filled) {
+            return false;
+        }
+        return true;
     }
 }

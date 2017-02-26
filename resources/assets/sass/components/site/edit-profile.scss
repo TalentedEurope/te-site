@@ -11,3 +11,74 @@
         color: $white
     }
 }
+
+.edit-profile {
+    .progress-form {
+        position: relative;
+        margin-bottom: 96px;
+
+        .line-background {
+            position: absolute;
+            left: 50px;
+            right: 50px;
+            border-top: 3px solid #d5d9de;
+        }
+
+        .line-progress {
+            width: 33%;
+            border-top: 3px solid $yellow;
+            position: absolute;
+            left: 50px;
+            right: 50px;
+        }
+
+        .number {
+            position: absolute;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            width: 40px;
+            top: -20px;
+            box-sizing: content-box;
+            color: white;
+            background: $yellow;
+            border-radius: 40px;
+
+            &.p-0 {
+                left: 30px;
+            }
+
+            &.p-50 {
+                left: calc(50% - 20px);
+            }
+
+            &.p-100 {
+                right: 30px;
+            }
+
+            &.disabled {
+                background: #d5d9de;
+            }
+        }
+
+        .name {
+            position: absolute;
+            text-align: center;
+            width: 100px;
+            top: 29px;
+
+            &.p-50 {
+                left: calc(50% - 50px);
+            }
+
+            &.p-100 {
+                right: 0;
+            }
+
+            &.disabled {
+                color: #8b9198;
+            }
+        }
+
+    }
+}

@@ -32,7 +32,7 @@
               <h4>About</h4>
 
               <select-form code="type" label="{!! trans('reg-profile.institution_type') !!}" placeholder=" - {!! trans('reg-profile.institution_type') !!} - " required
-                  values='{!! json_encode($types, JSON_HEX_APOS) !!}' value="{{ old('type', $institution->type) }}"
+                  values='{!! json_encode($types, JSON_HEX_APOS) !!}' value="{{ old('type', $institution->type) }}" related-options="true"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></select-form>
 
               <text-box-form code="name" label="{!! trans('reg-profile.name') !!}" placeholder="{!! trans('reg-profile.name') !!}" value="{{ old('name', $user->name) }}"
