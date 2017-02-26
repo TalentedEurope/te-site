@@ -6,6 +6,9 @@ import _ from 'lodash';
 require('jquery-toast-plugin/dist/jquery.toast.min.css');
 require('jquery-toast-plugin/dist/jquery.toast.min.js');
 
+require('jquery-confirm/dist/jquery-confirm.min.css');
+require('jquery-confirm/dist/jquery-confirm.min.js');
+
 require('flatpickr/dist/flatpickr.min.css');
 var Flatpickr = require('flatpickr/dist/flatpickr.min.js');
 Flatpickr.l10n.firstDayOfWeek = 1;

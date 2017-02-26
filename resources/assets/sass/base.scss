@@ -17,31 +17,3 @@ a.icon-link {
         padding-right: 0;
     }
 }
-
-// override
-div.jq-toast-wrap {
-    top: 0 !important;
-    width: 100%;
-    & > .jq-toast-single {
-        width: 100%;
-        padding: 17px 25px;
-        font-size: 15px;
-        border-radius: 0;
-    }
-}
-
-
-@media only screen and (min-width: 500px) {
-    div.jq-toast-wrap {
-        max-width: 50em;
-        width: auto;
-        top: 10px !important;
-
-        & > .jq-toast-single {
-            width: auto;
-            min-width: 364px;
-            max-width: 100%;
-        }
-
-    }
-}

@@ -2,10 +2,18 @@
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
         <!-- <label :for="generateFieldId()">{{label}}</label> -->
         <div class="select-holder">
-            <select class="form-control" :id="generateFieldId()" :name="generateFieldName()" v-model="value"
+            <select v-if="!relatedOptions" class="form-control" :id="generateFieldId()" :name="generateFieldName()" v-model="value"
                     @input="onInput" @blur="onBlur" :required="required">
                 <option value="">{{ parsedPlaceholder }}</option>
                 <option v-for="(v_code, v_name) in parsed_values" :value="v_code">{{ v_name }}</option>
+            </select>
+
+            <select v-if="relatedOptions" class="form-control" :id="generateFieldId()" :name="generateFieldName()" v-model="value"
+                    @input="onInput" @blur="onBlur" :required="required">
+                <option value="">{{ parsedPlaceholder }}</option>
+                <optgroup :label="group_name" v-for="(group_name, options) in parsed_values">
+                    <option v-for="(v_code, v_name) in options" :value="v_code">{{ v_name }}</option>
+                </optgroup>
             </select>
         </div>
         <span v-if="has_error" class="help-block">
@@ -18,7 +26,7 @@
 import { parsedPlaceholder, setDebounced, setCodeForValidation, setInitError, generateFieldId, generateFieldName, validateField, onInput, onBlur } from './form-helpers';
 
 export default {
-    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'values', 'value', 'required', 'errors', 'noValidate'],
+    props: ['code', 'groupCode', 'groupId', 'label', 'placeholder', 'values', 'value', 'relatedOptions', 'required', 'errors', 'noValidate'],
     data() {
         return {
             'parsed_values': JSON.parse(this.values),

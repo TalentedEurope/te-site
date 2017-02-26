@@ -12,11 +12,6 @@
 
 @section('content')
 
-  {{-- <professional-skills selected-skills='{!! json_encode($student->professionalSkills, JSON_HEX_APOS) !!}'
-      skills='{!! json_encode($professionalSkills, JSON_HEX_APOS) !!}'
-      errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></professional-skills>
-       --}}
-
 <div class="container v-container edit-profile">
   <div class="row">
     <div class="col-md-12 col-xs-12">
@@ -26,6 +21,17 @@
       </div>
       <div class="col-sm-8 col-md-8 col-xs-12">
         <!-- Content -->
+        <div class="progress-form">
+          <div class="line-background"></div>
+          <div class="line-progress"></div>
+          <span class="number p-0">1</span>
+          <span class="name p-0">Account setup</span>
+          <span class="number p-50">2</span>
+          <span class="name p-50">Referee your profile</span>
+          <span class="number p-100 disabled">3</span>
+          <span class="name p-100 disabled">????? ?????</span>
+        </div>
+
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">
           <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
           <li><a href="#career" data-toggle="tab">Career and Skills</a></li>
@@ -168,22 +174,33 @@
           </div>
 
           <div class="tab-pane fade" id="refer">
-            <h4>Get your profile refereed</h4>
-            <div class="alert alert-danger">
-              Profile refereeing will be available soon
+            <h4>Profile readiness</h4>
+
+            <div class="form-group">
+              <label>Profile Readiness/Fill rate:</label>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                  60%
+                </div>
+              </div>
             </div>
 
-            <form class="form-vertical" role="form" style="display:none" method="POST" action="{{ route('update_profile'). '#refer' }}">
-              {{ csrf_field() }}
+            <p class="small"><em>Get a better validation improving your profile readiness and improve possibility of company contact</em></p>
+            <hr class="separator">
 
-              <text-box-form code="validator_name" label="Referee name" placeholder="Referee name" value=""
-                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-              <text-box-form type="email" code="validator_email" label="Referee email" placeholder="Referee email" value=""
-                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+            <h4>Find your school</h4>
+            <find-your-school countries="{!! json_encode($nationalities, JSON_HEX_APOS) !!}"></find-your-school>
 
+            <hr class="separator">
+            <h4>Can't find your institution? ask them to join talented europe</h4>
+
+            <div class="row">
+              <text-box-form class="col-sm-12" code="facebook" label="Institution email" placeholder="Institution email"
+                    value="{{ old('facebook', $user->facebook) }}"
+                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'> </text-box-form>
               <hr>
-              <button type="submit" class="btn btn-primary">Get your profile refereed</button>
-            </form>
+              <p class="col-sm-12 text-right"><button type="submit" class="btn btn-primary">Send</button></p>
+            </div>
           </div>
 
           <div class="tab-pane fade" id="password">

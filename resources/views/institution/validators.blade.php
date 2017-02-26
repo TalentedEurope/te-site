@@ -6,11 +6,10 @@
 
 <div class="container validators">
   <div class="row">
-    <h1 class="page-title">Validators</h1>
     <div class="v-container">
       <validators></validators>
       <div class="clearfix"></div>
-      <div class="col-sm-6">
+      <div class="col-sm-6 sm-no-padding-left">
           <h2>Add a new validator</h2>
           <form enctype='multipart/form-data'  class="well form-vertical" role="form" method="POST" action="{{ route('add_validator') }}" >
               {{ csrf_field() }}
@@ -24,7 +23,7 @@
               </p>
           </form>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6 sm-no-padding-right">
         <h2>Invites pending</h2>
          <div class="well">
             <table class=" table table-striped">
