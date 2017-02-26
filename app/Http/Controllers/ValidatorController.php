@@ -7,11 +7,11 @@ use Auth;
 use Bouncer;
 use App;
 use App\Models\User;
+use App\Models\Institution;
 use App\Models\ValidatorInvite;
 use App\Notifications\InstitutionRemoved;
 use App\Notifications\InviteCreated;
 use App\Notifications\ChangeInstitution;
-use Response;
 use Validator;
 
 class ValidatorController extends Controller
@@ -27,14 +27,23 @@ class ValidatorController extends Controller
     public function index(Request $request)
     {
         $this->institutionOnly();
-        $sent = ValidatorInvite::getSent(Auth::user()->userable);
-        return view('institution.validators', array('sent' => $sent));
+        $user = Auth::user();
+        $sent = ValidatorInvite::getSent($user->userable);
+        $data = array('sent' => $sent);
+        if (!$user->is_filled) {
+            $errors = Validator::make($user->toArray(), User::Rules(false, true));
+                $filledVal = Validator::make($user->userable->toArray(), Institution::Rules($user->userable));
+                $errors->errors()->merge($filledVal);
+                $data['profileErrors'] = $errors->errors();
+        }
+
+        return view('institution.validators', $data);
     }
 
     public function getJSONValidators(Request $request)
     {
         $this->institutionOnly();
-        $validators = App\Models\Validator::where('institution_id', Auth::user()->userable->id)->with('user')->get();
+        $validators = App\Models\Validator::where('institution_id', Auth::user()->userable->id)->whereHas('user')->with('user')->get();
 
         $res = array();
         foreach ($validators as $validator) {
@@ -50,6 +59,35 @@ class ValidatorController extends Controller
             $res[] = $item;
         }
         return $res;
+    }
+
+    public function getInstitutions($countryCode)
+    {
+        $institutions = Institution::whereHas('user', function ($query) use ($countryCode) {
+            $query->where('country', $countryCode);
+        })->get();
+        return $institutions->map(
+            function ($institution) {
+                return ['id' => $institution->id,
+                        'name' => $institution->user->name
+                ];
+            }
+        );
+    }
+
+    public function getInstitutionValidators($id)
+    {
+        $validators = \App\Models\Validator::where('institution_id', $id)->whereHas('user')->get();
+        return $validators->map(
+            function ($validator) {
+                if ($validator->user) {
+                    return ['id' => $validator->id,
+                            'name' => $validator->user->fullName,
+                            'department' => $validator->department,
+                            'position' => $validator->position];
+                }
+            }
+        );
     }
 
     // Should be in a helper or something
@@ -116,8 +154,9 @@ class ValidatorController extends Controller
             }
             $request->session()->flash('success_message', sprintf('Sent invitation to %s', $v->valid()['email']));
             return back();
+        } else {
+            return back()->withInput()->withErrors($v->errors());
         }
-        return back()->withInput()->withErrors($v->errors());
     }
 
     public function delete(Request $request, $id)
@@ -127,10 +166,13 @@ class ValidatorController extends Controller
             $val->institution_id = null;
             $val->save();
             $val->user->notify(new InstitutionRemoved($val->user, Auth::user()->userable));
-            return Response::json(trans('api.'.'success'), 200);
+            $request->session()->flash('success_message', sprintf('Removed %s from institution', $val->user->fullName));
+        } else {
+            $request->session()->flash('error_message', 'Cannot find user to remove from institution, please try again later');
         }
-        return Response::json(trans('api.'.'remove_cannot_find_validator'), 400);
+        return back();
     }
+
 
     public function deleteInvite(Request $request, $id)
     {
@@ -138,8 +180,9 @@ class ValidatorController extends Controller
         $res = ValidatorInvite::where('id', $id)->where("institution_id", Auth::user()->userable->id)->delete();
         if ($res != 0) {
             $request->session()->flash('success_message', 'Deleted invitation successfully');
+        } else {
+            $request->session()->flash('error_message', 'Cannot find invitation to delete, please try again later');
         }
-        $request->session()->flash('error_message', 'Cannot find invitation to delete, please try again later');
         return back();
     }
 
@@ -187,7 +230,7 @@ class ValidatorController extends Controller
         if ($inv && $v->passes() && $vv->passes()) {
             $user = new User();
             $user->email = $request->input('email');
-            $user->password = $request->input('password');
+            $user->password = bcrypt($request->input('password'));
             $user->name = $request->input('name');
             $user->surname = $request->input('surname');
             $user->verified = 1;

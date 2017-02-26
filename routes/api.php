@@ -46,6 +46,9 @@ Route::group(['prefix' => 'validators'], function () {
     Route::put('/{id}', 'ValidatorController@toggleStatus');
 });
 
+Route::get('institutions/{id}/validators', 'ValidatorController@getInstitutionValidators');
+Route::get('institutions/{countryCode}', 'ValidatorController@getInstitutions');
+
 Route::group(['prefix' => 'validation'], function () {
     Route::get('/', 'ValidationController@getJSONStudentsValidation');
 });

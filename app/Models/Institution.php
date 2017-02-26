@@ -16,7 +16,7 @@ class Institution extends Model
             'type' => 'sometimes|required|in:'.implode(',', Institution::$types),
             'pic' => 'sometimes|required',
             'fiscal_id' => 'sometimes|required|alpha_dash',
-            'certificate' => 'mimes:pdf,jpg,png'
+            'certificate' => 'sometimes|required|mimes:pdf,jpg,png'
         );
 
         if ($only_key) {

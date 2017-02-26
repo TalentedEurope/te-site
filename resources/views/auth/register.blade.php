@@ -39,22 +39,37 @@
               <label for="Company"><i data-toggle="tooltip" data-placement="bottom" title="{!! trans_choice('global.company', 1) !!}" class="fa fa-building" aria-hidden="true"></i></label>
             </div>
           </div>
+          @if ($errors->has('name'))
+          <span class="help-block">
+            <strong>{{ $errors->first('name') }}</strong>
+          </span>
+          @endif
+          <input @if (old('type') && old('type') != "institution") style="display: none" @endif style="display: none" id="name" name="name" class="{{ $errors->has('name') ? ' has-error' : '' }}" type="text" placeholder="{!! trans('reg-profile.name') !!}" value="{{ old('name') }}">
+
           @if ($errors->has('email'))
           <span class="help-block">
             <strong>{{ $errors->first('email') }}</strong>
           </span>
           @endif
-          <input id="email" required name="email" class="{{ $errors->has('email') ? ' has-error' : '' }}" type="text" placeholder="{!! trans('reg-profile.email') !!}" value="{{ old('email') }}">
+          <input required id="email"  name="email" class="{{ $errors->has('email') ? ' has-error' : '' }}" type="text" placeholder="{!! trans('reg-profile.email') !!}" value="{{ old('email') }}">
+
           @if ($errors->has('password'))
           <span class="help-block">
             <strong>{{ $errors->first('password') }}</strong>
           </span>
           @endif
-          <input id="password" required name="password" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="{!! trans('reg-profile.password') !!}">
-          <input id="password" name="password_confirmation" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="{!! trans('reg-profile.confirm_password') !!}">
-          <div class="checkbox">
+          <input required id="password"  name="password" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="{!! trans('reg-profile.password') !!}">
+          <input required id="password" name="password_confirmation" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="{!! trans('reg-profile.confirm_password') !!}">
+
+
+          @if ($errors->has('terms'))
+          <span class="help-block">
+            <strong>{{ $errors->first('terms') }}</strong>
+          </span>
+          @endif
+          <div class="checkbox @if ($errors->has('terms')) alert alert-danger @endif">
             <label>
-              <input type="checkbox" required name="remember"></input> I agree with <a target="_blank" href="{{ url('/terms') }}"> the terms of use</a>
+              <input required type="checkbox"  name="terms"></input> I agree with <a target="_blank" href="{{ url('/terms') }}"> the terms of use</a>
             </label>
           </div>
           <p class="text-center"><em>All fields are required</em></p>
@@ -73,4 +88,24 @@
     </div>
   </div>
 </div>
+@endsection
+
+@section('js')
+<script>
+jQuery(document).ready(function() {
+  if (jQuery("input#Institution").is(':checked')) {
+      jQuery("input#name").show().attr('required',true);
+  }
+
+  jQuery(".user-type input").change(function() {
+    var type = jQuery(this).attr("id");
+    if (type == "Institution") {
+      jQuery("input#name").show().attr('required',true);
+    } else {
+      jQuery("input#name").hide().removeAttr('required');
+    }
+  });
+
+});
+</script>
 @endsection

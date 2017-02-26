@@ -6,6 +6,22 @@
 
 <div class="container validators">
   <div class="row">
+    <h1 class="page-title">Validators</h1>
+          @if ($profileErrors)
+            <div class="text-left">
+            <p>You'll need to fix the following errors or your validators won't be able to validate profiles:</p>
+            @if ($profileErrors->all())
+              <div class="alert alert-warning">
+              <ul>
+              @foreach ($profileErrors->all() as $error)
+                <li>{{ $error }}</li>
+              @endforeach
+              </ul>
+              </div>
+            @endif
+            </div>
+          @endif
+
     <div class="v-container">
       <validators></validators>
       <div class="clearfix"></div>
