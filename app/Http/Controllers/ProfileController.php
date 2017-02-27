@@ -746,11 +746,15 @@ class ProfileController extends Controller
 
     public function getInstitutionPrivateData($user)
     {
+        $countries = array();
+        foreach (Student::$nationalities as $value) {
+            $countries[$value] = User::$countries[$value];
+        }
 
         $data = array(
             'user' => $user,
-            'countries' => User::$countries,
-            'types' => Institution::getTypes()
+            'countries' => $countries,
+            'types' => Institution::getTypes(true)
         );
         if ($user->userable) {
             $data['institution'] = $user->userable;

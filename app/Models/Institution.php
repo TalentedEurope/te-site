@@ -41,8 +41,20 @@ class Institution extends Model
         return $this->hasMany('App\Models\Validator');
     }
 
-    public static function getTypes()
+    public static function getTypes($categorized = false)
     {
+        if ($categorized) {
+            return array(
+                trans('reg-profile.institution_hei') => array(
+                    'HEI_HIS' => trans('reg-profile.insitution_his'),
+                    'HEI_VET' => trans('reg-profile.institution_vet'),
+                ),
+                trans('reg-profile.institution_ufa') => array(
+                    'UFA' => trans('reg-profile.institution_ufa'),
+                ),
+            );
+        }
+
         return array(
             '' => trans('reg-profile.institution_hei'),
             'HEI_HIS' => trans('reg-profile.insitution_his'),
