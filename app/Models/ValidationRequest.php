@@ -23,7 +23,6 @@ class ValidationRequest extends Model
         );
     }
 
-
     public function validator()
     {
         return $this->belongsTo('App\Models\Validator');
@@ -32,5 +31,13 @@ class ValidationRequest extends Model
     public function student()
     {
         return $this->belongsTo('App\Models\Student');
+    }
+
+    public function getValidator()
+    {
+        if ($this->validator_name) {
+            return $this->validator_name;
+        }
+        return $this->validator->user->fullName;
     }
 }
