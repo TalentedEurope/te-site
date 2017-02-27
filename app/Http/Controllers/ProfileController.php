@@ -72,6 +72,13 @@ class ProfileController extends Controller
         if ($user->isA('student')) {
             $data = $this->getStudentPrivateData($user);
             $data['token'] = LoginController::userToken();
+            $errors = Validator::make($user->toArray(), User::Rules(false, true));
+            if ($user->isA('student')) {
+                $filledVal = Validator::make($user->userable->toArray(), Student::Rules(true));
+                $errors->errors()->merge($filledVal);
+            }
+            $data['institutionCountries'] = Institution::getAvailableCountries($data['nationalities']);
+            $data['profileErrors'] = $errors->errors();
             return view('profile.student-edit', $data);
         }
 
@@ -746,11 +753,15 @@ class ProfileController extends Controller
 
     public function getInstitutionPrivateData($user)
     {
+        $countries = array();
+        foreach (Student::$nationalities as $value) {
+            $countries[$value] = User::$countries[$value];
+        }
 
         $data = array(
             'user' => $user,
-            'countries' => User::$countries,
-            'types' => Institution::getTypes()
+            'countries' => $countries,
+            'types' => Institution::getTypes(true)
         );
         if ($user->userable) {
             $data['institution'] = $user->userable;

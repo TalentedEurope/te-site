@@ -11,7 +11,6 @@
 @endsection
 
 @section('content')
-
 <div class="container v-container edit-profile">
   <div class="row">
     <div class="col-md-12 col-xs-12">
@@ -21,15 +20,17 @@
       </div>
       <div class="col-sm-8 col-md-8 col-xs-12">
         <!-- Content -->
-        <div class="progress-form">
+        <div class="progress-form
+          @if ($user->filled && $user->userable->valid == 'pending') f-50 @endif
+          @if ($user->userable->valid != 'pending') f-100 @endif  ">
           <div class="line-background"></div>
           <div class="line-progress"></div>
           <span class="number p-0">1</span>
           <span class="name p-0">Account setup</span>
-          <span class="number p-50">2</span>
-          <span class="name p-50">Referee your profile</span>
-          <span class="number p-100 disabled">3</span>
-          <span class="name p-100 disabled">????? ?????</span>
+          <span class="number p-50 @if (!$user->filled && $user->userable->valid == 'pending') disabled @endif">2</span>
+          <span class="name p-50 @if (!$user->filled && $user->userable->valid == 'pending') disabled @endif"">Refer your profile</span>
+          <span class="number p-100 @if ($user->userable->valid != 'validated') disabled @endif @if ($user->userable->valid == 'denied') invalid @endif ">3</span>
+          <span class="name p-100 @if ($user->userable->valid != 'validated') disabled @endif">Completed</span>
         </div>
 
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">
@@ -176,6 +177,9 @@
           <div class="tab-pane fade" id="refer">
             <h4>Profile readiness</h4>
 
+            <p>Getting your profile refereed gives a third party opinion of you and helps increasing the possibilities of contact from a company</p>
+
+            @if ($user->is_filled && $user->userable->valid == 'pending')
             <div class="form-group">
               <label>Profile Readiness/Fill rate:</label>
               <div class="progress">
@@ -185,24 +189,49 @@
               </div>
             </div>
 
-            <p class="small"><em>Get a better validation improving your profile readiness and improve possibility of company contact</em></p>
+            <p class="small"><em>Get a better refeer improving your profile readiness and improve possibility of company contact</em></p>
             <hr class="separator">
 
             <form class="form-vertical" role="form" method="POST">
               <h4>Find your school</h4>
-              <find-your-school countries='{!! json_encode($nationalities, JSON_HEX_APOS) !!}'></find-your-school>
+              <find-your-school countries='{!! json_encode($institutionCountries, JSON_HEX_APOS) !!}' route-validate="{{ route('request-validation') }}" route-invite="{{ route('invite-school') }}" csrf="{{ csrf_field() }}" ></find-your-school>
             </form>
 
             <hr class="separator">
-            <h4>Can't find your institution? ask them to join talented europe</h4>
+            <h4>Can't find your institution? ask them to join Talented Europe</h4>
 
             <div class="row">
-              <text-box-form class="col-sm-12" code="facebook" label="Institution email" placeholder="Institution email"
-                    value="{{ old('facebook', $user->facebook) }}"
+              <text-box-form class="col-sm-12" code="institution_email" label="Institution email or Teacher email" placeholder="Institution email"
+                    value="{{ old('institution_email', $user->institution_email) }}"
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'> </text-box-form>
               <hr>
               <p class="col-sm-12 text-right"><button type="submit" class="btn btn-primary">Send</button></p>
             </div>
+            @elseif ($user->is_filled && $user->userable->valid == 'validated')
+            <p class="h4">Your profile was validated successfully</p>
+            <p>This is what your validator said about you: </p>
+            <div class="alert alert-info">
+              {{ $user->userable->validation_comment }}
+            </div>
+            @elseif ($user->is_filled && $user->userable->valid == 'denied')
+            <p class="h4 alert alert-danger">Your profile was denied</p>
+
+            @else
+            <p>We don't have enough data from you to be able to do a refeer.</p>
+
+            <p><strong>You'll need to fix the following errors:</strong></p>
+            @if ($profileErrors->all())
+              <div class="alert alert-warning">
+              <ul>
+              @foreach ($profileErrors->all() as $error)
+                <li>{{ $error }}</li>
+              @endforeach
+              </ul>
+              </div>
+            @endif
+
+            @endif
+
           </div>
 
           <div class="tab-pane fade" id="password">
