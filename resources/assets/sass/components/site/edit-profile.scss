@@ -82,3 +82,11 @@
 
     }
 }
+
+
+@media (min-width: $screen-sm) {
+    .edit-profile .progress-form {
+        margin-top: -37px;
+        margin-bottom: 103px;
+    }
+}
