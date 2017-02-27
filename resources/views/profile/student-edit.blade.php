@@ -179,7 +179,7 @@
 
             <p>Getting your profile refereed gives a third party opinion of you and helps increasing the possibilities of contact from a company</p>
 
-            @if ($user->is_filled && $user->userable->valid == 'pending')
+
             <div class="form-group">
               <label>Profile Readiness/Fill rate:</label>
               <div class="progress">
@@ -190,23 +190,48 @@
             </div>
 
             <p class="small"><em>Get a better refeer improving your profile readiness and improve possibility of company contact</em></p>
-            <hr class="separator">
-
-            <form class="form-vertical" role="form" method="POST">
-              <h4>Find your school</h4>
-              <find-your-school countries='{!! json_encode($institutionCountries, JSON_HEX_APOS) !!}' route-validate="{{ route('request-validation') }}" route-invite="{{ route('invite-school') }}" csrf="{{ csrf_field() }}" ></find-your-school>
-            </form>
 
             <hr class="separator">
-            <h4>Can't find your institution? ask them to join Talented Europe</h4>
+            @if ($user->is_filled && $user->userable->valid == 'pending')
 
-            <div class="row">
-              <text-box-form class="col-sm-12" code="institution_email" label="Institution email or Teacher email" placeholder="Institution email"
-                    value="{{ old('institution_email', $user->institution_email) }}"
-                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'> </text-box-form>
-              <hr>
-              <p class="col-sm-12 text-right"><button type="submit" class="btn btn-primary">Send</button></p>
-            </div>
+              @if($user->userable->validationRequest)
+                <h4>Your request is being managed by: {{ $user->userable->validationRequest->getValidator() }}</h4>
+                <div class="alert alert-info">
+                <p>{{ sprintf('Your request was created %s', '2 days ago') }}</p>
+                <p>{{ sprintf('If your request hasn\'t been completed in %s days you will be able to create a new request', env('CLEANUP_DAYS',14)) }}
+                </div>
+              @else
+                <form class="form-vertical" role="form" method="POST" action="{{ route('request-validation') }}">
+                  {{ csrf_field() }}
+                  <h4>Find your school</h4>
+                  <find-your-school countries='{!! json_encode($institutionCountries, JSON_HEX_APOS) !!}'></find-your-school>
+                </form>
+
+                <hr class="separator">
+                <h4>Can't find your institution? ask your referee and institution to join Talented Europe</h4>
+
+                <p>This step sends an email to your referee with instructions on how to join Talented Europe, automatically registers him as referee once his institution joins, and adds you to the refeeral queue</p>
+
+                <form class="form-vertical" role="form" method="POST" action="{{ route('invite-school') }}">
+                {{ csrf_field() }}
+
+                <div class="row">
+                  <text-box-form class="col-sm-6" code="validator_name" label="Referee email" placeholder="Referee Name"
+                        value="{{ old('validator_name', $user->validator_name) }}"
+                        errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'> </text-box-form>
+
+                  <text-box-form class="col-sm-6" code="validator_email" label="Referee email" placeholder="Referee email"
+                        value="{{ old('validator_email', $user->validator_email) }}"
+                        errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'> </text-box-form>
+                        </div>
+                <div class="row">
+                  <hr>
+                  <p class="col-sm-12 text-right"><button type="submit" class="btn btn-primary">Send Invitation</button></p>
+                </div>
+                </form>
+              @endif
+
+
             @elseif ($user->is_filled && $user->userable->valid == 'validated')
             <p class="h4">Your profile was validated successfully</p>
             <p>This is what your validator said about you: </p>
