@@ -1,9 +1,13 @@
 import Vue from 'vue';
+import VueI18n from 'vue-i18n';
 import VueResource from 'vue-resource';
 import _ from 'lodash';
 
 require('jquery-toast-plugin/dist/jquery.toast.min.css');
 require('jquery-toast-plugin/dist/jquery.toast.min.js');
+
+require('jquery-confirm/dist/jquery-confirm.min.css');
+require('jquery-confirm/dist/jquery-confirm.min.js');
 
 require('flatpickr/dist/flatpickr.min.css');
 var Flatpickr = require('flatpickr/dist/flatpickr.min.js');
@@ -24,8 +28,13 @@ import Studies from './components/profile/student/Studies.vue';
 import Trainings from './components/profile/student/Trainings.vue';
 import Languages from './components/profile/student/Languages.vue';
 import Experiences from './components/profile/student/Experiences.vue';
+import FindYourSchool from './components/profile/student/FindYourSchool.vue';
 import AlertButton from './components/common/AlertButton.vue';
 
+
+Vue.use(VueI18n);
+Vue.config.lang = 'en';
+Vue.locale('en', TE.translations.en);
 
 if (document.querySelector('.v-container')) {
     new Vue({
@@ -33,7 +42,7 @@ if (document.querySelector('.v-container')) {
         components: {
             Search, Alerts, Validators, StudentsValidation,
             SelectForm, TextAreaForm, TextBoxForm, PersonalSkillsForm, FileForm, DateForm,
-            ProfessionalSkills, Studies, Trainings, Languages, Experiences,
+            ProfessionalSkills, Studies, Trainings, Languages, Experiences, FindYourSchool,
             AlertButton },
     })
 }

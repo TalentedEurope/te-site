@@ -1,6 +1,7 @@
 @import "resources/assets/sass/variables";
 @import "resources/assets/sass/bs-overrides";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "resources/assets/sass/override";
 @import "resources/assets/sass/base";
 @import "resources/assets/sass/icons-font";
 
@@ -12,3 +13,4 @@
 @import "resources/assets/sass/components/site/auth";
 @import "resources/assets/sass/components/site/edit-profile";
 @import "resources/assets/sass/components/site/profile";
+@import "resources/assets/sass/components/site/search-bar";

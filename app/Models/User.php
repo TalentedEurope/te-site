@@ -94,6 +94,19 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public static function getCityCoordinates()
+    {
+        return \App\Models\User::whereNotNull("users.city")->join('cities', function ($join) {
+                $join->on('cities.country', '=', 'users.country');
+                $join->on('cities.city', '=', "users.city");
+        })->select('users.city', 'latitude', 'longitude') ->get();
+    }
+
+    public static function getCount($type)
+    {
+        return \App\Models\User::where('userable_type', $type)->count();
+    }
+
     public function getPhoto()
     {
         $route = User::$photoPath;

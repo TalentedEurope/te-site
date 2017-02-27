@@ -60,9 +60,11 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+            'name' => 'required_if:type,institution',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
             'type' => 'required',
+            'terms' => 'required'
         ]);
     }
 
@@ -111,6 +113,8 @@ class RegisterController extends Controller
                 Bouncer::assign('company')->to($user);
                 break;
             case 'institution':
+                $user->name = $data['name'];
+                $user->save();
                 $institution = Institution::create();
                 $institution->user()->save($user);
                 Bouncer::assign('institution')->to($user);

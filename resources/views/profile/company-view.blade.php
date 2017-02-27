@@ -12,11 +12,11 @@
   <div class="row profile">
     @if($public)
     <div class="col-xs-12 alert alert-danger">
-        <p>Do you want to show this company how talented you are? <a href="{{ url('/register') }}">Sign up</a></p>
+        <p>Do you want to show this company how talented you are? <a href="{{ url('/register') }}">{!! trans('global.register_btn') !!}</a></p>
     </div>
     @endif
 
-    <div class="col-xs-12 col-sm-8 col-md-9">
+    <div class="col-xs-12 col-sm-8 col-md-9 sm-no-padding-left">
       <div class="well student-name">
         <h2 class="title">{{ $user->name }} </h2>
         @if ($company->activity)
@@ -46,7 +46,7 @@
 
     </div>
 
-    <div class="col-xs-12 col-sm-4 col-md-3 text-center contact-info">
+    <div class="col-xs-12 col-sm-4 col-md-3 sm-no-padding-right text-center contact-info">
       <div class="well">
         @if ($user->image)
         <figure>
@@ -58,11 +58,11 @@
             {{-- <alert-button :company-id="{{ $company->id }}" :alertable="{{ $company->alertable }}" placement="bottom"></alert-button> --}}
           <hr>
           @if (!$public)
-          <p><i class="fa icon fa-envelope"></i> Email: <a href="mailto:{{ $company->notification_email ? $company->notification_email : $user->email }}">
+          <p><i class="fa icon fa-envelope"></i> {!! trans('reg-profile.email') !!}: <a href="mailto:{{ $company->notification_email ? $company->notification_email : $user->email }}">
           {{ $company->notification_email ? $company->notification_email : $user->email }}</a></p>
           @endif
           @if ($user->phone)
-          <p><i class="fa icon fa-phone"></i> Phone:  <a href="tel:{{ $user->phone }}">{{ $user->phone }}</a></p>
+          <p><i class="fa icon fa-phone"></i> {!! trans('reg-profile.phone') !!}:  <a href="tel:{{ $user->phone }}">{{ $user->phone }}</a></p>
           @endif
           @if ($user->country)
           <address>

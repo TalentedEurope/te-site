@@ -13,6 +13,7 @@
 
 // Static pages
 Route::get('/', 'StaticController@getHome');
+Route::get('/landing', 'StaticController@getLanding');
 Route::get('/cookies', 'StaticController@getCookies');
 Route::get('/privacy-policy', 'StaticController@getPrivacyPolicy');
 Route::get('/terms', 'StaticController@getTerms');
@@ -36,6 +37,7 @@ Route::group(['prefix' => 'profile'], function () {
     // Profile file downloads.
     Route::get('/curriculum/{id}', 'ProfileController@getCurriculum')->name('get_curriculum');
     Route::get('/gradecard/{id}/study/{studyId}', 'ProfileController@getStudyGradeCard')->name('get_study_gradecard');
+    Route::get('/certificate/{id}/institution', 'ProfileController@getInstitutionCertificate')->name('get_institution_certificate');
     Route::get('/certificate/{id}/study/{studyId}', 'ProfileController@getStudyCertificate')->name('get_study_certificate');
     Route::get('/certificate/{id}/training/{studyId}', 'ProfileController@getTrainingCertificate')->name('get_training_certificate');
     Route::get('/certificate/{id}/language/{studyId}', 'ProfileController@getLanguageCertificate')->name('get_language_certificate');
@@ -52,12 +54,33 @@ Route::group(['prefix' => 'alerts'], function () {
 // Referees
 Route::group(['prefix' => 'validators'], function () {
     Route::get('/', 'ValidatorController@index')->name('view_validators');
-    Route::get('/{id}', 'ValidatorController@toggle')->name('toggle_validator');
+    Route::get('/{id}', 'ValidatorController@toggle')->name('old_toggle_validator');
+    Route::get('/toggle/{id}', 'ValidatorController@toggle')->name('toggle_validator');
+
+    // Invitations
+    Route::post('/add', 'ValidatorController@add')->name('add_validator');
+    Route::get('cancel/{id}', 'ValidatorController@deleteInvite')
+        ->name('delete_invite');
+
+    // Unasign validator from school. (Keeps the account)
+    Route::get('delete/{id}', 'ValidatorController@delete')
+        ->name('delete_validator');
+
+    Route::get('change/{uid}', 'ValidatorController@changeInstitution')
+        ->name('change_institution');
+
+    // Register form for validator
+    Route::get('register/{uid}', 'ValidatorController@getRegister')
+        ->name('get_register_validator');
+    Route::post('register/{uid}', 'ValidatorController@postRegister')
+        ->name('post_register_validator');
 });
 
 // Referee
 Route::group(['prefix' => 'validate'], function () {
     Route::get('/', 'ValidationController@index')->name('view_validate_students');
+    Route::get('{id}', 'ValidationController@getValidate')->name('get_validate_student');
+    Route::post('{id}', 'ValidationController@postValidate')->name('post_validate_student');
 });
 
 // Search

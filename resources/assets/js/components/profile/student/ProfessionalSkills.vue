@@ -1,6 +1,6 @@
 <template>
     <div class="form-group clearfix" v-bind:class="{ 'alert alert-danger': has_error }">
-        <label for="professionalSkillsInput">Professional skills (max {{ max_professional_skills }})</label>
+        <label for="professionalSkillsInput">{{ $t('reg-profile.student_professional_skills') }} (max {{ max_professional_skills }})</label>
 
         <ul class="selected-skills list-unstyled" v-show="selected_items.length > 0">
             <li class="btn btn-default" v-for="skill in selected_items">

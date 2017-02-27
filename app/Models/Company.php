@@ -47,7 +47,6 @@ class Company extends Model
         }
     }
 
-
     public static $niceNames = array(
                         'fiscal_id' => 'Fiscal ID',
                         'overseer' => 'Person in charge',
@@ -57,6 +56,20 @@ class Company extends Model
                         'contact_name' => 'Contact person name',
                         'contact_email' => 'Contact person email'
         );
+
+    public static function getRandomTalent()
+    {
+        return \App\Models\Company::where("talent", "!=", "")->whereRaw('LENGTH(talent) > 50')->inRandomOrder()->limit(1)->first();
+    }
+
+    public static function getRandom()
+    {
+        $items = \App\Models\User::where('userable_type', \App\Models\Company::class)->inRandomOrder()->where('image', '!=', '')->limit(18)->select('userable_id')->get()->map(function ($item, $key) {
+            return $item->userable_id;
+        })->toArray();
+        return \App\Models\Company::whereIn('id', $items)->get();
+        ;
+    }
 
     public function user()
     {

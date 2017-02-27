@@ -1,0 +1,36 @@
+@import "resources/assets/sass/variables";
+
+.search-bar {
+    background: $blue;
+    padding: 19px 4px;
+    margin-bottom: 20px;
+
+    input, select, .btn-primary {
+        border-radius: 0;
+        -webkit-appearance: none;
+    }
+
+    input {
+        background: $white;
+        padding: 15px;
+        height: auto;
+    }
+    select {
+        height: 52px;
+    }
+    .btn-primary {
+        width: 100%;
+        background: $yellow;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 15px 6px;
+        font-size: 15px;
+        border: none;
+        .fa {
+            padding-right: 5px;
+        }
+    }
+    .form-group {
+        margin-bottom: 0;
+    }
+}

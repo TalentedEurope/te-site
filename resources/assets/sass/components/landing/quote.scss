@@ -1,0 +1,39 @@
+.quote-section {
+    position: relative;
+    background-color: #35A289;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-image: url('../../img/landing/background-1.png');
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(33, 46, 68, 0.82);
+    }
+
+    .content {
+        position: relative;
+        .quote-text {
+            max-width: 28em;
+            margin: 0 auto;
+            padding: 20px;
+            font-weight: 300;
+            font-size: 22px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .quote-author {
+            color: #fff;
+            font-weight: bold;
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+    }
+}

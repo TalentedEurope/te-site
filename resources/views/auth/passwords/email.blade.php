@@ -15,7 +15,7 @@
             <strong>{{ $errors->first('email') }}</strong>
           </span>
           @endif
-          <input id="email" name="email" class="{{ $errors->has('email') ? ' has-error' : '' }}" type="text" placeholder="email" value="{{ old('email') }}">
+          <input id="email" name="email" class="{{ $errors->has('email') ? ' has-error' : '' }}" type="text" placeholder="{!! trans('reg-profile.email') !!}" value="{{ old('email') }}">
           <button type="submit" class="btn btn-primary">
             Send password reset link
           </button>

@@ -2,7 +2,7 @@
     <li class="well profile clearfix">
         <div>
             <div class="col-xs-12 col-sm-8 col-md-9">
-                <h2 class="title">{{student.full_name}}</h2>
+                <h2 class="title"><a :href="profileUrl">{{student.full_name}}</a></h2>
                 <p><em class="h4">{{student.studied}}</em></p>
                 <hr>
                 <p><strong><i class="fa fa-map-marker"></i> Lives in: </strong> {{student.lives_in}}</p>
@@ -11,7 +11,7 @@
                     <strong>Skilled in: </strong>
                     <skills-tags :skills="student.skills"></skills-tags>
                 </p>
-                <p><strong>Languages: </strong>
+                <p><strong>{{ $t('reg-profile.student_languages') }}: </strong>
                     <ul class="languages">
                         <li v-for="language in student.languages" track-by="$index">{{language}}</li>
                     </ul>
@@ -26,7 +26,7 @@
                         </span>
                     </figcaption>
                 </figure>
-                <a class="btn-primary btn view-more" :href="profileUrl">View more</a>
+                <a class="btn-primary btn view-more" :href="profileUrl">{{ $t('global.more_btn') }}</a>
             </div>
         </div>
     </li>

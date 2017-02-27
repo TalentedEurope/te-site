@@ -16,7 +16,8 @@
         "doctrine/dbal": "^2.5",
         "silber/bouncer": "v1.0.0-alpha.3",
         "jrean/laravel-user-verification": "^3.0",
-        "sofa/eloquence": "^5.3"
+        "sofa/eloquence": "^5.3",
+        "moharrum/laravel-geoip-world-cities": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

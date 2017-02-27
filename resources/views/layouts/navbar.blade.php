@@ -19,8 +19,8 @@
           <li class="hidden-sm" ><p class="navbar-text" style="
             ">I'm looking for:</p>
           </li>
-          <li @yield('menu-student')><a href="{{ url('/search/students') }}">Students</a></li>
-          <li @yield('menu-company')><a href="{{ url('/search/companies') }}">Companies</a></li>
+          <li @yield('menu-student')><a href="{{ url('/search/students') }}">{!! trans_choice('global.student', 2) !!}</a></li>
+          <li @yield('menu-company')><a href="{{ url('/search/companies') }}">{!! trans_choice('global.company', 2) !!}</a></li>
         </ul>
         <!-- Right Side Of Navbar -->
         <ul class="nav navbar-nav navbar-right languages-nav">
@@ -37,8 +37,8 @@
         <ul class="nav navbar-nav navbar-right">
           <!-- Authentication Links -->
           @if (Auth::guest())
-          <li><a href="{{ url('/login') }}">Login</a></li>
-          <li><a href="{{ url('/register') }}">Register</a></li>
+          <li><a href="{{ url('/login') }}">{!! trans('global.login_btn') !!}</a></li>
+          <li><a href="{{ url('/register') }}">{!! trans('global.register_btn') !!}</a></li>
           @else
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -54,7 +54,7 @@
               @endif
               <li><a href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i> Settings</a></li>
 
-              <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> Logout</a></li>
+              <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> {!! trans('global.logout_btn') !!}</a></li>
             </ul>
           </li>
           @endif

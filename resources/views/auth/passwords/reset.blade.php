@@ -13,9 +13,9 @@
             {!! csrf_field() !!}
             <input type="hidden" name="token" value="{{ $token }}">
             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-              <label class="hidden col-md-4 control-label">E-Mail Address</label>
+              <label class="hidden col-md-4 control-label">{!! trans('reg-profile.email') !!}</label>
               <div class="col-sm-12">
-                <input type="email" class="form-control" name="email" value="{{ $email or old('email') }}" placeholder="Email address">
+                <input type="email" class="form-control" name="email" value="{{ $email or old('email') }}" placeholder="{!! trans('reg-profile.email') !!}">
                 @if ($errors->has('email'))
                 <span class="help-block">
                   <strong>{{ $errors->first('email') }}</strong>
@@ -24,7 +24,7 @@
               </div>
             </div>
             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-              <label class="hidden  col-md-4 control-label">Password</label>
+              <label class="hidden  col-md-4 control-label">New Password</label>
               <div class="col-sm-12">
                 <input type="password" class="form-control" name="password" placeholder="New Password">
                 @if ($errors->has('password'))
@@ -35,7 +35,7 @@
               </div>
             </div>
             <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-              <label class="hidden col-md-4 control-label">Confirm Password</label>
+              <label class="hidden col-md-4 control-label">Confirm New Password</label>
               <div class="col-sm-12">
                 <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm new password">
                 @if ($errors->has('password_confirmation'))

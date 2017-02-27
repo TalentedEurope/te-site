@@ -40,4 +40,9 @@ class Alert extends Model
     {
         return Alert::where('target_id', $user->id)->where('created_at', '=', DB::raw('updated_at'))->count();
     }
+
+    public static function getCount()
+    {
+        return Alert::withTrashed()->count();
+    }
 }

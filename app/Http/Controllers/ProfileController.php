@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Student;
 use App\Models\Company;
+use App\Models\Institution;
 use App\Models\User;
 use App\Models\ValidationRequest;
 use App\Models\StudentStudy;
@@ -35,7 +36,11 @@ class ProfileController extends Controller
     public function getMyProfile(Request $request)
     {
         $user = Auth::user();
-        if (!$user->is_filled) {
+        if ($user->isA('validator')) {
+            return redirect()->action('ValidationController@index');
+        } elseif ($user->isA('institution')) {
+            return redirect()->action('ValidatorController@index');
+        } elseif (!$user->is_filled) {
             $errors = Validator::make($user->toArray(), User::Rules(false, true));
             if ($user->isA('student')) {
                 $filledVal = Validator::make($user->userable->toArray(), Student::Rules(true));
@@ -77,11 +82,15 @@ class ProfileController extends Controller
         }
 
         if ($user->isA('institution')) {
-            return view('profile.institution-edit');
+            $data = $this->getInstitutionPrivateData($user);
+            $data['token'] = LoginController::userToken();
+            return view('profile.institution-edit', $data);
         }
 
         if ($user->isA('validator')) {
-            return view('profile.validator-edit');
+            $data = $this->getValidatorPrivateData($user);
+            $data['token'] = LoginController::userToken();
+            return view('profile.validator-edit', $data);
         }
     }
 
@@ -125,6 +134,10 @@ class ProfileController extends Controller
             $errors = $errors->merge($this->processCompany($request, $user));
         } elseif (Auth::user()->isA('student')) {
             $errors = $errors->merge($this->processStudent($request, $user));
+        } elseif (Auth::user()->isA('institution')) {
+            $errors = $errors->merge($this->processInstitution($request, $user));
+        } elseif (Auth::user()->isA('validator')) {
+            $errors = $errors->merge($this->processValidator($request, $user));
         }
         // Make sure that the only errors shown are from the fields we passed.
         $reqErrors = new MessageBag();
@@ -237,6 +250,90 @@ class ProfileController extends Controller
 
         $company->save();
         $user->save();
+        $errors = $errors->merge($v);
+        return $errors;
+    }
+
+
+    protected function processInstitution(Request $request, User $user)
+    {
+        $errors = new MessageBag();
+        $institution = null;
+
+        if ($user->userable) {
+            $institution = $user->userable()->first();
+        } else {
+            $institution = Institution::create();
+            $institution->user()->save($user);
+        }
+        $v = Validator::make($request->all(), Institution::rules($institution));
+
+        foreach ($v->valid() as $key => $value) {
+            if ($key == "certificate" && !$request->has('validate')) {
+                $fname = tempnam(public_path() . Institution::$certificatePath, $user->id);
+                unlink($fname);
+                $extension = ".".$value->extension();
+                $file = $fname . $extension;
+                $value->move(public_path() . Institution::$certificatePath, basename($file));
+                $institution->$key = basename($file);
+            } elseif (array_has($institution['attributes'], $key) && !$request->has('validate')) {
+                $institution->$key = $value;
+            }
+        }
+
+
+        $errors = $errors->merge($v);
+
+        $user->is_filled = false;
+        $uFilledVal = Validator::make($user->toArray(), User::Rules(false, true));
+        $filledVal = Validator::make($institution->toArray(), Institution::rules($institution));
+        if ($uFilledVal->passes() && $filledVal->passes()) {
+            $user->is_filled = true;
+        }
+
+        $institution->save();
+        $user->save();
+        $errors = $errors->merge($v);
+        return $errors;
+    }
+
+    protected function processValidator(Request $request, User $user)
+    {
+        $errors = new MessageBag();
+        $validator = null;
+
+        if ($user->userable) {
+            $validator = $user->userable()->first();
+        } else {
+            $validator = \App\Models\Validator::create();
+            $validator->user()->save($user);
+        }
+        $v = Validator::make($request->all(), \App\Models\Validator::rules($validator));
+
+        foreach ($v->valid() as $key => $value) {
+            if (array_has($validator['attributes'], $key) && !$request->has('validate')) {
+                $validator->$key = $value;
+            }
+        }
+
+        if ($request->has('leave')) {
+            $validator->institution_id = null;
+        }
+
+
+        $errors = $errors->merge($v);
+
+        $user->is_filled = false;
+        $uFilledVal = Validator::make($user->toArray(), User::Rules(false, true));
+        $filledVal = Validator::make($validator->toArray(), \App\Models\Validator::rules($validator));
+        if ($uFilledVal->passes() && $filledVal->passes()) {
+            $user->is_filled = true;
+        }
+
+        if (!$request->has('validate')) {
+            $validator->save();
+            $user->save();
+        }
         $errors = $errors->merge($v);
         return $errors;
     }
@@ -646,6 +743,39 @@ class ProfileController extends Controller
         return $data;
     }
 
+
+    public function getInstitutionPrivateData($user)
+    {
+
+        $data = array(
+            'user' => $user,
+            'countries' => User::$countries,
+            'types' => Institution::getTypes()
+        );
+        if ($user->userable) {
+            $data['institution'] = $user->userable;
+        } else {
+            $data['institution'] = new Institution();
+        }
+
+        return $data;
+    }
+
+    public function getValidatorPrivateData($user)
+    {
+        $data = array(
+            'user' => $user,
+        );
+
+        if ($user->userable) {
+            $data['validator'] = $user->userable;
+        } else {
+            $data['validator'] = new App\Models\Validator();
+        }
+
+        return $data;
+    }
+
     public function getCurriculum(Request $request, $id)
     {
         $user = User::findOrFail($id);
@@ -672,6 +802,17 @@ class ProfileController extends Controller
         }
         App::abort(403, 'Unauthorized action.');
     }
+
+    public function getInstitutionCertificate(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+
+        if ($user->userable && $user->userable->certificate) {
+            return response()->download(public_path().Institution::$certificatePath.$user->userable->certificate);
+        }
+        App::abort(403, 'Unauthorized action.');
+    }
+
 
     public function getTrainingCertificate(Request $request, $id, $studyId)
     {

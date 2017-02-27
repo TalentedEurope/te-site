@@ -7,17 +7,28 @@ use Illuminate\Database\Eloquent\Model;
 class Validator extends Model
 {
     public $timestamps = false;
+    protected $fillable = ['department', 'position'];
 
-    public static $rules = array(
-            'institution_id' => 'required',
-            'department' => 'required',
-            'position' => 'required'
-    );
 
-	public function institution()
-	{
-		return $this->belongsTo('App\Models\Institution');
-	}
+    public static function rules($institution = null, $only_key = false)
+    {
+        $filter = array(
+            'department' => 'sometimes|required',
+            'position' => 'sometimes|required',
+            'enabled' => 'sometimes|required|in:1,0'
+        );
+
+        if ($only_key) {
+            return array($only_key => $filter[$only_key]);
+        } else {
+            return $filter;
+        }
+    }
+
+    public function institution()
+    {
+        return $this->belongsTo('App\Models\Institution');
+    }
 
     public function validationRequest()
     {
@@ -27,38 +38,19 @@ class Validator extends Model
     public function user()
     {
         return $this->morphOne('\App\Models\User', 'userable');
-    }  
+    }
+
+    public function canValidate()
+    {
+        if (!$this->institution) {
+            return false;
+        }
+        if (!$this->institution->user) {
+            return false;
+        }
+        if (!$this->institution->user->is_filled) {
+            return false;
+        }
+        return true;
+    }
 }
-
-
-/*
-	use App\Models\Institution;
-	use App\Models\Validator;
-	use App\Models\User;
-
-	// Create institution
-	$user = new User;
-	$user->name = 'Institution';
-	$user->email = 'Institution@institution.com';
-	$institution = new Institution;
-	$institution->type = 'Test';
-	$institution->overseer = 'Test Overseer';
-	$institution->address = 'Test';
-	$institution->country = 'SP';	
-	$institution->save();
-	$institution->user()->save($user);
-
-	// Create validator;
-	$user = new User;
-	$user->name = 'Validator';
-	$user->email = 'validator@institution.com';
-	$validator = new Validator;
-	$validator->institution()->associate($institution);
-	$validator->department = "Department";
-	$validator->position = "Position";
-	$validator->save();
-	$validator->user()->save($user);
-
-	Institution::first()->validators();
-	Validator::first();
-*/
