@@ -11,6 +11,8 @@
 @endsection
 
 @section('content')
+
+
 <div class="container v-container edit-profile">
   <div class="row">
     <div class="col-md-12 col-xs-12">
@@ -20,15 +22,13 @@
       </div>
       <div class="col-sm-8 col-md-8 col-xs-12">
         <!-- Content -->
-        <div class="progress-form
-          @if ($user->filled && $user->userable->valid == 'pending') f-50 @endif
-          @if ($user->userable->valid != 'pending') f-100 @endif  ">
+        <div class="progress-form @if ($user->is_filled && $user->userable->valid == 'pending') f-50 @endif @if ($user->userable->valid != 'pending') f-100 @endif ">
           <div class="line-background"></div>
           <div class="line-progress"></div>
           <span class="number p-0">1</span>
           <span class="name p-0">Account setup</span>
-          <span class="number p-50 @if (!$user->filled && $user->userable->valid == 'pending') disabled @endif">2</span>
-          <span class="name p-50 @if (!$user->filled && $user->userable->valid == 'pending') disabled @endif"">Refer your profile</span>
+          <span class="number p-50 @if (!$user->is_filled && $user->userable->valid == 'pending') disabled @endif">2</span>
+          <span class="name p-50 @if (!$user->is_filled && $user->userable->valid == 'pending') disabled @endif"">Refer your profile</span>
           <span class="number p-100 @if ($user->userable->valid != 'validated') disabled @endif @if ($user->userable->valid == 'denied') invalid @endif ">3</span>
           <span class="name p-100 @if ($user->userable->valid != 'validated') disabled @endif">Completed</span>
         </div>
