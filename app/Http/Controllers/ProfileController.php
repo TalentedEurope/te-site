@@ -72,6 +72,13 @@ class ProfileController extends Controller
         if ($user->isA('student')) {
             $data = $this->getStudentPrivateData($user);
             $data['token'] = LoginController::userToken();
+            $errors = Validator::make($user->toArray(), User::Rules(false, true));
+            if ($user->isA('student')) {
+                $filledVal = Validator::make($user->userable->toArray(), Student::Rules(true));
+                $errors->errors()->merge($filledVal);
+            }
+            $data['institutionCountries'] = Institution::getAvailableCountries($data['nationalities']);
+            $data['profileErrors'] = $errors->errors();
             return view('profile.student-edit', $data);
         }
 

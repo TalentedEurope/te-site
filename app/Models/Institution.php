@@ -63,6 +63,18 @@ class Institution extends Model
         );
     }
 
+    public static function getAvailableCountries($baseList)
+    {
+        $countries = \App\Models\User::where('userable_type', \App\Models\Institution::class)->select('country')->groupBy('country')->whereNotNull('country')->get()->map(function ($item) {
+            return $item->country;
+        });
+        $newList = array();
+        foreach ($countries as $country) {
+            $newList[$country] = $baseList[$country];
+        }
+        return $newList;
+    }
+
     public static function getRandom()
     {
         $items = \App\Models\User::where('userable_type', \App\Models\Institution::class)->inRandomOrder()->where('image', '!=', '')->limit(18)->select('userable_id')->get()->map(function ($item, $key) {
