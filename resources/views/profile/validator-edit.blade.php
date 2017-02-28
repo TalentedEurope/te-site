@@ -56,7 +56,7 @@
               <h4>My Institution</h4>
               @if ($validator->institution)
               <text-box-form code="email" label="{!! trans('reg-profile.institution') !!}" placeholder="{!! trans('reg-profile.institution') !!}" readonly
-                    value="{{ old('institution', $validator->institution->name) }}"
+                    value="{{ old('institution', $validator->institution->user->name) }}"
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
               @endif
               <text-box-form code="department" label="{!! trans('reg-profile.validator_department') !!}" placeholder="{!! trans('reg-profile.validator_department') !!}" value="{{ old('department', $validator->department) }}"
