@@ -17,27 +17,31 @@
         position: relative;
         margin-bottom: 96px;
 
-        .line-background {
+        .line-wrapper {
             position: absolute;
             left: 50px;
             right: 50px;
-            border-top: 3px solid #d5d9de;
-        }
 
-        .line-progress {
-            width: 33%;
-            border-top: 3px solid $yellow;
-            position: absolute;
-            left: 50px;
-            right: 50px;
+            .line-background {
+                border-top: 3px solid #d5d9de;
+                position: absolute;
+                left: 0;
+                right: 0;
+            }
+
+            .line-progress {
+                width: 33%;
+                border-top: 3px solid $yellow;
+                position: absolute;
+            }
         }
 
         &.f-50 .line-progress {
-            width: 44%;
+            width: 50%;
         }
 
         &.f-100 .line-progress {
-            width: 88%;
+            width: 100%;
         }
 
 
