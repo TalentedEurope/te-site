@@ -77,6 +77,7 @@ class ProfileController extends Controller
                 $filledVal = Validator::make($user->userable->toArray(), Student::Rules(true));
                 $errors->errors()->merge($filledVal);
             }
+            $data['fillRate'] = $user->userable->fillRate();
             $data['institutionCountries'] = Institution::getAvailableCountries($data['nationalities']);
             $data['profileErrors'] = $errors->errors();
             return view('profile.student-edit', $data);
@@ -622,10 +623,12 @@ class ProfileController extends Controller
         if ($uFilledVal->passes() && $filledVal->passes()) {
             $user->is_filled = true;
         }
+
         if (!$request->has('validate')) {
             $student->save();
             $user->save();
         }
+
         return $errors;
     }
 

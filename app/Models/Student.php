@@ -20,13 +20,12 @@ class Student extends Model
     public static $studyGradeCardPath = '/uploads/gradecard/';
     public static $studyCertificatePath = '/uploads/certificate/';
 
-    public static function rules($forModelValidation = false, $only_key = false)
+    public static function rules($forModelValidation = false, $keyOnly = false)
     {
         $filter = array(
             'nationality' => 'sometimes|required|in:'.implode(',', Student::$nationalities),
             'birthdate' => 'sometimes|required|date',
             'curriculum' => 'mimes:pdf',
-            'valid' => 'sometimes|required',
             'renewed_at' => 'sometimes|required',
             'talent' => 'sometimes|required|max:300',
             'studies' => 'array|min:1',
@@ -50,15 +49,15 @@ class Student extends Model
             unset($filter["studies.*.certificate"]);
         }
 
-        if ($only_key) {
-            return array($only_key => $filter[$only_key]);
+        if ($keyOnly) {
+            return array($keyOnly => $filter[$keyOnly]);
         } else {
             return $filter;
         }
     }
 
 
-    public static function rulesRelated($related, $only_key = false)
+    public static function rulesRelated($related, $keyOnly = false)
     {
         $relatedRules = array(
             'studies' => array(
@@ -94,8 +93,8 @@ class Student extends Model
             ),
         );
         $filter = $relatedRules[$related];
-        if ($only_key) {
-            return array($only_key => $filter[$only_key]);
+        if ($keyOnly) {
+            return array($keyOnly => $filter[$keyOnly]);
         } else {
             return $filter;
         }
@@ -138,6 +137,145 @@ class Student extends Model
     public function validationRequest()
     {
         return $this->hasOne('App\Models\ValidationRequest');
+    }
+
+    private function countFields($fields, $max, $oneFull = false)
+    {
+        $count = 0;
+        $fieldSize = sizeof($fields);
+        foreach ($fields as $value) {
+            if ($value) {
+                $count++;
+            }
+        }
+        $res = round($count/$fieldSize * $max, 2);
+        if ($oneFull) {
+            if ($res != 0) {
+                return $max;
+            }
+            return 0;
+        }
+        return $res;
+    }
+
+    public function fillRate()
+    {
+        // We're weighting the fill rate like this.
+        // Basic data 10%
+        // Social networks: at least 1. 10%
+        // Contact information 10%
+        // Study. 20-30%. (First one 20%, afterwards the extra 10%)
+        // Training. 20% (if it has more than one study. this wont be neccesary)
+        // Language 15%
+        // Work experience 15%
+        // Professional skills 5%
+        // Personal skills 5%
+        // Describe talent 10%
+        // ----
+        // Note. It gives more than 100%.
+        // But thats to be expected.
+        // It will max at 100% tho
+
+        // Basic information.
+        $basic = $this->countFields(array(
+            $this->user->name,
+            $this->user->surname,
+            $this->user->phone,
+            $this->nationality,
+            $this->birthdate,
+        ), 10);
+
+        $social = $this->countFields(array(
+            $this->user->facebook,
+            $this->user->twitter,
+            $this->user->linkedin,
+        ), 10, true);
+
+        $contact = $this->countFields(array(
+            $this->user->postal_code,
+            $this->user->city,
+            $this->user->country,
+        ), 9) + $this->countFields(array(
+            $this->user->address
+        ), 1, true);
+
+        $studies = 0;
+        $idx = 0;
+        foreach ($this->studies as $study) {
+            $studyValue = $idx == 0? 20: 10;
+            $studies += $this->countFields(array(
+                $study->name,
+                $study->institution_name,
+                $study->level,
+                $study->field,
+                $study->certificate,
+                $study->gradecard
+            ), $studyValue);
+            $idx++;
+        }
+        if ($studies > 30) {
+            $studies = 30;
+        }
+
+        $training = 0;
+        foreach ($this->training as $training) {
+            $training += $this->countFields(array(
+                $training->name,
+                $training->certificate,
+                $training->date
+            ), 10);
+        }
+        if ($training > 10) {
+            $training = 10;
+        }
+
+        $languages = 0;
+        foreach ($this->languages as $language) {
+            $language += $this->countFields(array(
+                $language->name,
+                $language->level,
+            ), 4);
+            $language += $this->countFields(array(
+                $language->certificate
+            ), 1, true);
+        }
+        if ($languages > 15) {
+            $languages = 15;
+        }
+
+        $experiences = 0;
+        foreach ($this->experiences as $experience) {
+            $experience += $this->countFields(array(
+                $experience->company,
+                $experience->from,
+                $experience->until,
+                $experience->position
+            ), 7.5);
+        }
+        if ($experiences > 15) {
+            $experiences = 15;
+        }
+
+        $professionalSkills = 0;
+        if ($this->professionalSkills->count()) {
+            $professionalSkills += 5;
+        }
+
+        $personalSkills = 0;
+        if ($this->personalSkills->count()) {
+            $personalSkills += 5;
+        }
+
+        $talent = $this->countFields(array(
+            $this->talent
+        ), 10, true);
+
+        $total = $basic + $social + $contact + $studies + $training + $languages + $experiences + $professionalSkills + $personalSkills + $talent;
+
+        if ($total > 100) {
+            $total = 100;
+        }
+        return $total;
     }
 
     public function professionalSkills()
