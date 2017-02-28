@@ -32,6 +32,15 @@
             right: 50px;
         }
 
+        &.f-50 .line-progress {
+            width: 44%;
+        }
+
+        &.f-100 .line-progress {
+            width: 88%;
+        }
+
+
         .number {
             position: absolute;
             height: 40px;
@@ -59,6 +68,10 @@
             &.disabled {
                 background: #d5d9de;
             }
+
+            &.invalid {
+                background: $red;
+            }
         }
 
         .name {
@@ -80,5 +93,13 @@
             }
         }
 
+    }
+}
+
+
+@media (min-width: $screen-sm) {
+    .edit-profile .progress-form {
+        margin-top: -37px;
+        margin-bottom: 103px;
     }
 }
