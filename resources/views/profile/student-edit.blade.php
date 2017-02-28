@@ -22,12 +22,12 @@
       </div>
       <div class="col-sm-8 col-md-8 col-xs-12">
         <!-- Content -->
-        <div class="progress-form @if ($user->is_filled && $user->userable->valid == 'pending') f-50 @endif @if ($user->userable->valid != 'pending') f-100 @endif ">
+        <div class="progress-form @if ($user->is_filled && $user->userable->valid == 'pending') f-50 @endif @if ($user->userable->valid && $user->userable->valid != 'pending') f-100 @endif ">
           <div class="line-background"></div>
           <div class="line-progress"></div>
           <span class="number p-0">1</span>
           <span class="name p-0">Account setup</span>
-          <span class="number p-50 @if (!$user->is_filled && $user->userable->valid == 'pending') disabled @endif">2</span>
+          <span class="number p-50 @if (!$user->userable->valid || (!$user->is_filled && $user->userable->valid == 'pending')) disabled @endif">2</span>
           <span class="name p-50 @if (!$user->is_filled && $user->userable->valid == 'pending') disabled @endif">Refer your profile</span>
           <span class="number p-100 @if ($user->userable->valid != 'validated') disabled @endif @if ($user->userable->valid == 'denied') invalid @endif ">3</span>
           <span class="name p-100 @if ($user->userable->valid != 'validated') disabled @endif">Completed</span>
@@ -51,15 +51,6 @@
               <div class="radio">
                 <label><input @if ($user->visible != true) checked @endif type="radio" name="visible" value="0">Hidden. Cannot be searched or viewed</label>
               </div>
-              <hr>
-              <h4>Notifications</h4>
-              <div class="radio">
-                <label><input type="radio" @if ($user->notify_me == true) checked @endif name="notify_me" value="1">Enabled. You'll receive emails once a day if a student wants to get in contact with you</label>
-              </div>
-              <div class="radio">
-                <label><input @if ($user->notify_me != true) checked @endif type="radio" name="notify_me" value="0">Disabled. You won't receive any emails, except for announcements about the service</label>
-              </div>
-
               <hr class="separator">
               <h4>About me</h4>
 
@@ -181,10 +172,10 @@
 
 
             <div class="form-group">
-              <label>Profile Readiness/Fill rate:</label>
+              <label>Profile Readiness:</label>
               <div class="progress">
-                <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                  60%
+                <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="{{ $fillRate }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ $fillRate }}%;">
+                  {{ $fillRate }}%
                 </div>
               </div>
             </div>
@@ -192,7 +183,7 @@
             <p class="small"><em>Get a better refeer improving your profile readiness and improve possibility of company contact</em></p>
 
             <hr class="separator">
-            @if ($user->is_filled && $user->userable->valid == 'pending')
+            @if (($user->is_filled && !$user->userable->valid) || ($user->is_filled && $user->userable->valid == 'pending'))
 
               @if($user->userable->validationRequest)
                 <h4>Your request is being managed by: {{ $user->userable->validationRequest->getValidator() }}</h4>

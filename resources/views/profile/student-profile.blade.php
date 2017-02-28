@@ -33,7 +33,7 @@
         </ul>
         <hr>
         <div class="row">
-          @if ($student->valid && $student->validationRequest)
+          @if ($student->valid == "validated" && $student->validationRequest)
             @if ($student->validationRequest)
               <p class="validated-by col-sm-6"><span class="btn btn-lg"><strong><i class="fa fa-star icon"></i> Refereed by:
                </strong>
