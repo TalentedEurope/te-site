@@ -71,7 +71,9 @@ export default {
         clickOutside(e) {
             if ($(this.$el).find(e.target).length == 0) {
                 this.open = false;
-                this.selected_name = this.selected["name"];
+                if (!_.isNull(this.selected)) {
+                    this.selected_name = this.selected["name"];
+                }
             }
         }
     },
@@ -99,6 +101,9 @@ export default {
             } else {
                 $('body').off("click", this.clickOutside);
             }
+        },
+        selected_name: function (value) {
+            TE.profile.modified_fields = true;
         }
     }
 };

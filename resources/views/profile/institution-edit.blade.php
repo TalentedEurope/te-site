@@ -21,9 +21,9 @@
       <div class="col-sm-8 col-md-8 col-xs-12">
         <!-- Content -->
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">
-          <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
-          <li><a href="#contact" data-toggle="tab">Contact Person</a></li>
-          <li><a href="#password" data-toggle="tab">Change your password</a></li>
+          <li class="active"><a data-target="#profile" data-toggle="tab">Profile</a></li>
+          <li><a data-target="#contact" data-toggle="tab">Contact Person</a></li>
+          <li><a data-target="#password" data-toggle="tab">Change your password</a></li>
         </ul>
         <div id="profileTab" class="tab-content well">
           <div class="tab-pane active in" id="profile">
