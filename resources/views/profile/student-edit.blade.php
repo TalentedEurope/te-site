@@ -36,10 +36,10 @@
         </div>
 
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">
-          <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
-          <li><a href="#career" data-toggle="tab">Career and Skills</a></li>
-          <li><a href="#refer" data-toggle="tab">Get your profile refereed</a></li>
-          <li><a href="#password" data-toggle="tab">Change your password</a></li>
+          <li class="active"><a data-target="#profile" data-toggle="tab">Profile</a></li>
+          <li><a data-target="#career" data-toggle="tab">Career and Skills</a></li>
+          <li><a data-target="#refer" data-toggle="tab">Get your profile refereed</a></li>
+          <li><a data-target="#password" data-toggle="tab">Change your password</a></li>
         </ul>
         <div id="profileTab" class="tab-content well">
           <div class="tab-pane active in" id="profile">

@@ -131,7 +131,7 @@ export default {
     watch: {
         selected_items: function () {
             onInput.call(this);
-        }
+        },
     }
 };
 </script>

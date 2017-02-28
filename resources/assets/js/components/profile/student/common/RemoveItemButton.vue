@@ -18,6 +18,7 @@ export default {
                     EventBus.$emit(`onRemove${this.groupName}`, this.item);
                 }
             }
+            TE.profile.modified_fields = true;
         }
     }
 };

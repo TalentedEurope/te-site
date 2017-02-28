@@ -39,6 +39,7 @@
 
   <script type="text/javascript">
     TE = {};
+    TE.profile = {'modified_fields': false};
     TE.translations = {
       'en': {
         'auth': {!! json_encode(trans('auth'), JSON_HEX_APOS) !!},
@@ -174,7 +175,7 @@
       var profile_tabs = $('#profile-tabs');
       if (profile_tabs.data("hashtab")) {
         var hash = window.location.hash;
-        profile_tabs.find('a[href="' + hash + '"]').tab('show');
+        profile_tabs.find('a[data-target="' + hash + '"]').tab('show');
       }
 
       var validate_tabs = $('#validate-tabs');
@@ -183,7 +184,33 @@
         validate_tabs.find('a[href="' + hash + '"]').tab('show');
       }
 
-
+      $('#profile-tabs a').on('click', function(event) {
+        event.stopPropagation();
+        var element = $(event.target);
+        if (!TE.profile.modified_fields) {
+          element.tab('show');
+          location.hash = element.attr("data-target");
+        } else {
+          $.confirm({
+            title: null,
+            content: 'Tab changes haven\'t been saved, you may lose some data',
+            backgroundDismiss: true,
+            buttons: {
+              back: {},
+              confirm: {
+                text: 'Continue without saving',
+                btnClass: 'btn-info',
+                action: function() {
+                  element.tab('show');
+                  location.hash = element.attr("data-target");
+                  TE.profile.modified_fields = false;
+                  return true;
+                }
+              }
+            }
+          });
+        }
+      });
     });
   </script>
   @yield('js');
