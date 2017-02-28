@@ -9,7 +9,7 @@ class Institution extends Model
     public $timestamps = false;
 
 
-    public static function rules($institution, $only_key = false)
+    public static function rules($institution, $keyOnly = false, $dbCheck = false)
     {
         $filter = array(
             'overseer' => 'sometimes|required',
@@ -18,9 +18,12 @@ class Institution extends Model
             'fiscal_id' => 'sometimes|required|alpha_dash',
             'certificate' => 'sometimes|required|mimes:pdf,jpg,png'
         );
+        if ($dbCheck) {
+            $filter['certificate'] = 'sometimes|required';
+        }
 
-        if ($only_key) {
-            return array($only_key => $filter[$only_key]);
+        if ($keyOnly) {
+            return array($keyOnly => $filter[$keyOnly]);
         } else {
             return $filter;
         }

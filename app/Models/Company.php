@@ -14,7 +14,7 @@ class Company extends Model
     public static $activities = ['administration', 'architecture-amp-construction', 'art-amp-culture', 'banking-and-or-finance-amp-insurance', 'business-amp-consulting', 'communication-amp-media-amp-pr', 'consumer-goods', 'customer-service', 'design', 'education-amp-training', 'engineering', 'hospitality-amp-tourism', 'human-resources', 'it-amp-web', 'legal', 'logistics', 'manufacturing', 'marketing-amp-advertising', 'medicine-amp-pharmaceutics', 'politics', 'quality-assurance-amp-safety', 'real-estate', 'research-amp-development', 'retail-amp-wholesale', 'sales', 'social-work', 'sport-and-or-health-amp-wellness', 'technology-amp-telecommunications'];
 
 
-    public static function rules($company, $only_key = false)
+    public static function rules($company, $keyOnly = false)
     {
         $filter = array( 'fiscal_id' => ['sometimes', 'required','alpha_dash', Rule::unique('companies')->ignore($company->id)] ,
                         'overseer' => 'regex:/^[\pL\s\-]+$/u' ,
@@ -25,14 +25,14 @@ class Company extends Model
                         'notification_email' => 'email'
         );
 
-        if ($only_key) {
-            return array($only_key => $filter[$only_key]);
+        if ($keyOnly) {
+            return array($keyOnly => $filter[$keyOnly]);
         } else {
             return $filter;
         }
     }
 
-    public static function rulesRelated($related, $only_key = false)
+    public static function rulesRelated($related, $keyOnly = false)
     {
         $relatedRules = array(
             'personalSkills' => array(
@@ -40,8 +40,8 @@ class Company extends Model
             ),
         );
         $filter = $relatedRules[$related];
-        if ($only_key) {
-            return array($only_key => $filter[$only_key]);
+        if ($keyOnly) {
+            return array($keyOnly => $filter[$keyOnly]);
         } else {
             return $filter;
         }

@@ -18,18 +18,47 @@ class StudentsTableSeeder extends Seeder
     {
         $faker = Faker\Factory::create();
         $institutions = Institution::all();
+        $country_codes = Student::$nationalities;
+        $languages = array_keys(StudentLanguage::$languages);
 
-        //Let's create an empty stdent:
+        //Let's create a test stdent:
         $user = User::create([
             'email' => 'test@student',
+            'name' => 'My test student',
         ]);
         Bouncer::assign('student')->to($user);
         $user->password = Hash::make('secret');
         $user->verified = 1;
         $user->save();
 
-        $country_codes = Student::$nationalities;
-        $languages = array_keys(StudentLanguage::$languages);
+        $nationality = $country_codes[rand(0, sizeOf($country_codes) - 1)];
+        $student = Student::create([
+            'nationality' => $nationality,
+            'birthdate' => $faker->dateTimeThisCentury->format('Y-m-d'),
+            'institution_id' => $institutions->first()->id,
+            'valid' => false,
+            'curriculum' => 'sample.pdf',
+            'renewed_at' => date('Y-m-d'),
+        ]);
+
+        // Student studies.
+        foreach (range(1, rand(2, 5)) as $studiesIndex) {
+            $study = StudentStudy::create([
+                'name' => $faker->sentence(6, true),
+                'level' => StudentStudy::$levels[
+                    rand(0, sizeOf(StudentStudy::$levels) - 1)
+                ],
+                'field' => StudentStudy::$fields[
+                    rand(0, sizeOf(StudentStudy::$fields) - 1)
+                ],
+                'student_id' => $student->id,
+                'certificate' => 'sample.pdf',
+                'institution_name' => $faker->company,
+                'gradecard' => 'sample.pdf',
+            ]);
+        }
+        $student->user()->save($user);
+
 
         foreach ($institutions as $institution) {
             foreach ((range(1, 3)) as $index) {

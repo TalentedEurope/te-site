@@ -8,17 +8,26 @@ class InstitutionsTableSeeder extends Seeder
 {
     public function run()
     {
+        $faker = Faker\Factory::create();
 
         //Let's create an empty institution:
         $user = User::create([
             'email' => 'test@institution',
+            'name' => 'My test institution',
         ]);
         $user->password = Hash::make('secret');
         $user->verified = 1;
         $user->save();
+        $institution = Institution::create([
+            'type' => Institution::$types[
+                        rand(0, sizeOf(Institution::$types) - 1)
+                      ],
+            'overseer' => $faker->unique()->name,
+        ]);
+        $institution->user()->save($user);
+
         Bouncer::assign('institution')->to($user);
 
-        $faker = Faker\Factory::create();
         foreach ((range(1, 10)) as $index) {
             $user = User::create([
                 'name' => $faker->unique()->company,

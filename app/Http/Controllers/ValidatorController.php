@@ -32,7 +32,7 @@ class ValidatorController extends Controller
         $data = array('sent' => $sent);
         if (!$user->is_filled) {
             $errors = Validator::make($user->toArray(), User::Rules(false, true));
-                $filledVal = Validator::make($user->userable->toArray(), Institution::Rules($user->userable));
+                $filledVal = Validator::make($user->userable->toArray(), Institution::Rules($user->userable, false, true));
                 $errors->errors()->merge($filledVal);
                 $data['profileErrors'] = $errors->errors();
         }
