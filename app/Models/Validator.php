@@ -10,7 +10,7 @@ class Validator extends Model
     protected $fillable = ['department', 'position'];
 
 
-    public static function rules($institution = null, $only_key = false)
+    public static function rules($institution = null, $keyOnly = false)
     {
         $filter = array(
             'department' => 'sometimes|required',
@@ -18,8 +18,8 @@ class Validator extends Model
             'enabled' => 'sometimes|required|in:1,0'
         );
 
-        if ($only_key) {
-            return array($only_key => $filter[$only_key]);
+        if ($keyOnly) {
+            return array($keyOnly => $filter[$keyOnly]);
         } else {
             return $filter;
         }

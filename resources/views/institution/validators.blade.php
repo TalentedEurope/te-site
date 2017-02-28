@@ -7,7 +7,7 @@
 <div class="container validators">
   <div class="row">
     <h1 class="page-title">Validators</h1>
-          @if ($profileErrors)
+          @if ($profileErrors->all())
             <div class="text-left">
             <p>You'll need to fix the following errors or your validators won't be able to validate profiles:</p>
             @if ($profileErrors->all())
