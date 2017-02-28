@@ -1,6 +1,6 @@
 <template>
     <div class="form-group clearfix">
-        <div class="dropdown suggestions-dropdown no-padding" v-bind:class="{'open': openSuggestion}">
+        <div class="dropdown suggestions-dropdown no-padding" v-bind:class="{'open': openedSuggestions}">
             <input type="text" class="form-control" v-model="selected_name" :placeholder="placeholder"
                @keydown.enter.prevent="enter" @keydown.down="down" @keydown.up="up" @input="change" :disabled="disabled" :required="required"/>
             <ul class="dropdown-menu suggestions-menu">
@@ -44,6 +44,7 @@ export default {
             }
         },
         down() {
+            this.openSuggestions();
             if (this.current < this.matches.length - 1) {
                 this.current++;
             }
@@ -53,9 +54,7 @@ export default {
         },
         change() {
             this.current = -1;
-            if (this.open == false) {
-                this.open = true;
-            }
+            this.openSuggestions();
         },
         selectItem(index) {
             this.selected = this.matches[index];
@@ -63,6 +62,17 @@ export default {
             this.open = false;
             this.current = -1;
             EventBus.$emit(`onAutocompleteChange-${this.code}`, this.selected);
+        },
+        openSuggestions() {
+            if (this.open == false) {
+                this.open = true;
+            }
+        },
+        clickOutside(e) {
+            if ($(this.$el).find(e.target).length == 0) {
+                this.open = false;
+                this.selected_name = this.selected["name"];
+            }
         }
     },
     computed: {
@@ -71,9 +81,9 @@ export default {
                 return str.name.toLowerCase().indexOf(this.selected_name.toLowerCase()) >= 0;
             });
         },
-        openSuggestion() {
-            return this.selected_name !== "" && this.matches.length != 0 && this.open === true;
-        }
+        openedSuggestions() {
+            return this.matches.length != 0 && this.open === true;
+        },
     },
     watch: {
         items: function (value) {
@@ -83,6 +93,13 @@ export default {
                 EventBus.$emit(`onAutocompleteChange-${this.code}`, this.selected);
             }
         },
+        open: function (value) {
+            if (value) {
+                $('body').on("click", this.clickOutside);
+            } else {
+                $('body').off("click", this.clickOutside);
+            }
+        }
     }
 };
 </script>
