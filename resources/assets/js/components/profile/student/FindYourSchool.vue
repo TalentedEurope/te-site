@@ -3,16 +3,18 @@
         <select-form class="col-sm-6" code="country" :label="$t('reg-profile.country')" :placeholder="' - ' + $t('reg-profile.country') + ' - '" required :values="countries" :value="country">
         </select-form>
 
-        <autocomplete class="col-sm-6" code="institution" :items="institutions" placeholder="School name" :disabled="isInstitutionsDisabled" required>
+        <autocomplete class="col-sm-6" code="institution" :items="institutions" placeholder="Institution name"  :disabled="isInstitutionsDisabled" required>
         </autocomplete>
 
         <div class="form-group col-sm-12">
             <label for="referee">Choose validator</label>
-            <select-form code="referee" label="Referee" placeholder=" - Default - " :parsed-values="referees" :disabled="isRefereesDisabled" required>
+            <select-form code="referee" label="Referee" placeholder=" - Any Referee - " :parsed-values="referees" :disabled="isRefereesDisabled">
             </select-form>
         </div>
         <hr>
-        <p class="col-sm-12 text-right"><button type="submit" class="btn btn-primary">Send</button></p>
+        <p class="col-sm-12 text-right">
+            <button type="submit" class="btn btn-primary">Request Validation</button>
+        </p>
     </div>
 </template>
 

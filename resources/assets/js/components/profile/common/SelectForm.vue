@@ -38,6 +38,7 @@ export default {
     created() {
         if (_.isNull(this.parsedValues) || _.isUndefined(this.parsedValues)) {
             this.parsedValues = JSON.parse(this.values);
+            this.initial_change = true;
         }
 
         setDebounced.call(this);
@@ -61,18 +62,17 @@ export default {
         onBlur: onBlur
     },
     watch: {
+        parsedValues: function (values) {
+            if (_.isEmpty(values)) {
+                this.value = '';
+            }
+        },
         value: function (value) {
             if (this.initial_change) {
                 this.initial_change = false;
                 return;
             }
             EventBus.$emit(`onSelectChange-${this.code}`, this.value);
-        },
-        parsedValues: function (values) {
-            if (_.isEmpty(values)) {
-                this.value = '';
-                EventBus.$emit(`onSelectChange-${this.code}`, this.value);
-            }
         }
     }
 };
