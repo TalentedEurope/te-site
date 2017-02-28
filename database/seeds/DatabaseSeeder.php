@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
         $this->call(AlertsTableSeeder::class);
         $this->call(StudyKeywordTableSeeder::class);
         $this->call(CompanyKeywordTableSeeder::class);
-        $this->call(CitiesTableSeeder::class);
+        // Make sure the input files of this Table seeder are saved
+        // as utf8 before uncommenting, otherwise it will fail.
+        //$this->call(CitiesTableSeeder::class);
     }
 }
