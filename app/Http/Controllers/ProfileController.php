@@ -204,7 +204,9 @@ class ProfileController extends Controller
             })->save($fname);
             $user->image = basename($fname);
         }
-        $user->save();
+        if (!$request->has('validate')) {
+            $user->save();
+        }
         return $errors;
     }
 
@@ -231,7 +233,7 @@ class ProfileController extends Controller
 
         // Related columns
         $v = Validator::make($request->all(), Company::rulesRelated('personalSkills'));
-        if ($v->passes()) {
+        if ($v->passes() && !$request->has('validate')) {
             $skills = $request->input('personalSkills');
             if ($skills) {
                 $company->personalSkills()->whereNotIn('id', $skills)->detach();
@@ -243,7 +245,7 @@ class ProfileController extends Controller
                 }
             }
         }
-        if ($request->has('remove_all_personal_skills')) {
+        if ($request->has('remove_all_personal_skills') && !$request->has('validate')) {
             $company->personalSkills()->detach();
         }
 
@@ -254,9 +256,10 @@ class ProfileController extends Controller
         if ($uFilledVal->passes() && $filledVal->passes()) {
             $user->is_filled = true;
         }
-
-        $company->save();
-        $user->save();
+        if (!$request->has('validate')) {
+            $company->save();
+            $user->save();
+        }
         $errors = $errors->merge($v);
         return $errors;
     }
@@ -298,8 +301,10 @@ class ProfileController extends Controller
             $user->is_filled = true;
         }
 
-        $institution->save();
-        $user->save();
+        if (!$request->has('validate')) {
+            $institution->save();
+            $user->save();
+        }
         $errors = $errors->merge($v);
         return $errors;
     }
@@ -394,7 +399,9 @@ class ProfileController extends Controller
             $student->curriculum = basename($file);
         }
 
-        $student->save();
+        if (!$request->has('validate')) {
+            $student->save();
+        }
 
         // Related columns, those are more complicated than the ones in company so we validate row by row.
         if (isset($v->valid()['studies'])) {
@@ -569,7 +576,7 @@ class ProfileController extends Controller
         }
 
 
-        if (isset($v->valid()['personalSkills'])) {
+        if (isset($v->valid()['personalSkills']) && !$request->has('validate')) {
             $skills = $v->valid()['personalSkills'];
             if ($skills) {
                 $student->personalSkills()->whereNotIn('id', $skills)->detach();
@@ -582,13 +589,13 @@ class ProfileController extends Controller
             }
         }
 
-        if ($request->has('remove_all_personal_skills')) {
+        if ($request->has('remove_all_personal_skills') && !$request->has('validate')) {
             $student->personalSkills()->detach();
         }
 
         if (isset($v->valid()['professionalSkills'])) {
             $skills = $v->valid()['professionalSkills'];
-            if ($skills) {
+            if ($skills && !$request->has('validate')) {
                 $skillIds = array();
                 // Not a fan of this but theres a bug that makes $student->professionalSkills()->whereNotIn('id', $skillIds)->detach(); fail.
                 $student->professionalSkills()->detach();
@@ -605,7 +612,7 @@ class ProfileController extends Controller
             }
         }
 
-        if ($request->has('remove_all_professional_skills')) {
+        if ($request->has('remove_all_professional_skills') && !$request->has('validate')) {
             $student->professionalSkills()->detach();
         }
 
@@ -615,8 +622,10 @@ class ProfileController extends Controller
         if ($uFilledVal->passes() && $filledVal->passes()) {
             $user->is_filled = true;
         }
-        $student->save();
-        $user->save();
+        if (!$request->has('validate')) {
+            $student->save();
+            $user->save();
+        }
         return $errors;
     }
 
