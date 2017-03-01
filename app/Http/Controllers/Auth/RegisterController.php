@@ -45,7 +45,7 @@ class RegisterController extends Controller
         $data = array();
         if ($request->has('req_id')) {
             $req = ValidationRequest::find($request->input('req_id'));
-            if ($req) {
+            if ($req && !$req->institution_id) {
                 $data['request'] = $req;
             }
         }
@@ -140,9 +140,10 @@ class RegisterController extends Controller
                 Bouncer::assign('institution')->to($user);
                 if (isset($data['req_id'])) {
                     $req = ValidationRequest::find($data['req_id']);
-                    if ($req) {
+                    if ($req && !$req->institution_id) {
                         $vi = app('App\Http\Controllers\ValidatorController')->addValidator($req->validator_email, $institution->id);
-                        $req->delete();
+                        $req->institution_id = $institution->id;
+                        $req->save();
                     }
                 }
                 break;

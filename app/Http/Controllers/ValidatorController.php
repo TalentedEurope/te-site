@@ -9,6 +9,7 @@ use App;
 use App\Models\User;
 use App\Models\Institution;
 use App\Models\ValidatorInvite;
+use App\Models\ValidationRequest;
 use App\Notifications\InstitutionRemoved;
 use App\Notifications\InviteCreated;
 use App\Notifications\ChangeInstitution;
@@ -249,6 +250,12 @@ class ValidatorController extends Controller
             $validator->institution_id = $inv->institution_id;
             $validator->save();
             $inv->delete();
+
+            $requests = ValidationRequest::where("validator_email", $user->email)->get();
+            foreach ($requests as $req) {
+                $req->validator_id = $validator->id;
+                $req->save();
+            }
 
             return view('auth.register-success', array('type' => 'validator'));
         } else {
