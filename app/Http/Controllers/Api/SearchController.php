@@ -200,9 +200,14 @@ class SearchController extends SiteSearchController
         $results = $results->paginate(env('PAGINATE_ENTRIES', 10));
 
         $alerts = array();
+        $maxAlerts = 0;
         if ($user && $user->isA('student')) {
             $alerts = array_flatten(Alert::where('origin_id', $user->id)->whereDate('created_at', '>', Carbon::now()->subDays(env("MIN_ALERT_DAYS", 1)))->select('target_id')->get()->toArray());
+
+            $maxAlerts = env('MAX_ALERTS', 3) - Alert::where("origin_id", $user->id)->whereDate('created_at', Carbon::today())->count();
         }
+
+
 
         $companies = array();
         foreach ($results as $company) {
@@ -229,11 +234,12 @@ class SearchController extends SiteSearchController
                 'twitter' => $company->user->twitter,
                 'linkedin' => $company->user->linkedin,
                 'website' => $company->website,
-                'alertable' => !in_array($company->user->id, $alerts),
+                'alertable' => !in_array($company->user->id, $alerts) && $maxAlerts,
             );
         }
         return array(
             'data' => $companies,
+            'remaining_alerts' => $maxAlerts,
             'per_page' => $results->perPage(),
             'total' => $results->total(),
             'current_page' => $results->currentPage(),
