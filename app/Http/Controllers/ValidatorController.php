@@ -134,29 +134,34 @@ class ValidatorController extends Controller
         );
         $v = Validator::make($request->all(), ValidatorInvite::rules());
         if ($v->passes()) {
-            // Check if theres an user with that email
-            $existingUser = User::where('email', $v->valid()['email'])->first();
-            $vi = new ValidatorInvite();
-            $vi->email = $v->valid()['email'];
-            // Should be unique but let's check up collisions just in case.
-            while (!$vi->uid) {
-                $vi->uid = $this->makeUid();
-                if (ValidatorInvite::where('uid', $vi->uid)->first()) {
-                    $vi->uid = null;
-                }
-            }
-            $vi->institution_id = Auth::user()->userable->id;
-            $vi->save();
-            if ($existingUser) {
-                $existingUser->notify(new ChangeInstitution($vi, $existingUser));
-            } else {
-                $vi->notify(new InviteCreated($vi));
-            }
+            $this->addValidator($v->valid()['email'], Auth::user()->userable->id);
             $request->session()->flash('success_message', sprintf('Sent invitation to %s', $v->valid()['email']));
             return back();
         } else {
             return back()->withInput()->withErrors($v->errors());
         }
+    }
+
+    public function addValidator($email, $institution_id)
+    {
+        $existingUser = User::where('email', $email)->first();
+        $vi = new ValidatorInvite();
+        $vi->email = $email;
+        // Should be unique but let's check up collisions just in case.
+        while (!$vi->uid) {
+            $vi->uid = $this->makeUid();
+            if (ValidatorInvite::where('uid', $vi->uid)->first()) {
+                $vi->uid = null;
+            }
+        }
+        $vi->institution_id = $institution_id;
+        $vi->save();
+        if ($existingUser) {
+            $existingUser->notify(new ChangeInstitution($vi, $existingUser));
+        } else {
+            $vi->notify(new InviteCreated($vi));
+        }
+        return $vi;
     }
 
     public function delete(Request $request, $id)

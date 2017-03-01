@@ -14,6 +14,7 @@ use App\Models\StudentTraining;
 use App\Models\StudentExperience;
 use App\Models\PersonalSkill;
 use App\Models\ProfessionalSkill;
+use App\Notifications\ValidatorRequested;
 use App\Http\Controllers\Api\LoginController;
 use App;
 use Auth;
@@ -864,18 +865,49 @@ class ProfileController extends Controller
         return $erray;
     }
 
-    public function getJSONValidatorProfile(Request $request)
+    public function inviteSchool(Request $request, $validate = false)
     {
-        return array(
-            'id' => 1,
-            'full_name' => 'John Doe',
-            'institution_name' => 'Institution name',
-            'validated_students' => array(
-                array('full_name' => 'Lorem ipsum dolor sit amet'),
-                array('full_name' => 'Lorem ipsum dolor sit amet'),
-                array('full_name' => 'Lorem ipsum dolor sit amet'),
-                array('full_name' => 'Lorem ipsum dolor sit amet'),
-            ),
+        $rules = array( 'validator_name' => 'sometimes|required|regex:/^[\pL\s\-\,\.]+$/u' ,
+                         'validator_email' => 'sometimes|required|email',
         );
+        $v = Validator::make($request->all(), $rules);
+
+        if ($v->passes() && !$validate) {
+            $existing = User::where('email', $request->input('validator_email'))->first();
+            if ($existing) {
+                if ($existing->userable_type == Validator::class) {
+                    if ($existing->userable->institution) {
+                        $validator->errors()->add('validator_email', sprintf('Validator is part of %s get in contact with him to ask a institution change if required', $existing->userable->institution->user->name));
+                    } else {
+                        $validator->errors()->add('validator_email', 'Validator isn\'t part of any institution. Please ask him to get invited by one');
+                    }
+                } else {
+                    $validator->errors()->add('validator_email', 'This email address is registered to an user that cannot be a validator');
+                }
+            } else {
+                $this->inviteUser($request->input('validator_name'), $request->input('validator_email'));
+                $request->session()->flash('success_message', 'Invitation sent succesfully');
+                return back();
+            }
+        }
+
+        if ($validate) {
+            return $v->errors();
+        }
+
+        return back()->withInput()->withErrors();
+    }
+
+    private function inviteUser($name, $email)
+    {
+        // We create a request
+        $request = ValidationRequest::create([
+            'student_id' => Auth::user()->userable->id,
+            'validator_name' => $name,
+            'validator_email' => $email,
+        ]);
+
+        // We send an email to the validator
+        $request->notify(new ValidatorRequested($request));
     }
 }

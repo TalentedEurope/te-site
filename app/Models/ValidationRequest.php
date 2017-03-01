@@ -3,9 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class ValidationRequest extends Model
 {
+    use Notifiable;
+    protected $fillable = ['validator_name', 'validator_email', 'student_id'];
+
     public static $rules = array(
         'status' => 'required|in:valid,invalid',
         'personalSkills' => 'sometimes|required|array|max:6',
@@ -39,5 +43,10 @@ class ValidationRequest extends Model
             return $this->validator_name;
         }
         return $this->validator->user->fullName;
+    }
+
+    public function routeNotificationForMail()
+    {
+        return $this->validator_email;
     }
 }
