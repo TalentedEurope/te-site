@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Sofa\Eloquence\Eloquence;
 use App\Models\StudentStudy;
 use App\Models\StudentLanguage;
+use App;
 
 class Student extends Model
 {
@@ -14,6 +15,8 @@ class Student extends Model
     public $timestamps = false;
     protected $with = ['studies', 'languages', 'personalSkills', 'professionalSkills', 'validationRequest'];
 
+    // TODO: Move this to User::$EUCountries
+    // since it's being used for other stuff too;
     public static $nationalities = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB'];
 
     public static $curriculumPath = '/uploads/curriculum/';
@@ -36,8 +39,8 @@ class Student extends Model
         );
 
         $filterRelated = array(
-            'studies.*.institution_name' => 'sometimes|required|regex:/^[\pL\s\-]+$/u',
-            'studies.*.name' => 'sometimes|required|regex:/^[\pL\s\-]+$/u',
+            'studies.*.institution_name' => 'sometimes|required|regex:/^[\pL\s\-\,\.]+$/u',
+            'studies.*.name' => 'sometimes|required|regex:/^[\pL\s\-\,\.]+$/u',
             'studies.*.level' => 'sometimes|required|in:'.implode(',', StudentStudy::$levels),
             'studies.*.field' => 'sometimes|required|in:'.implode(',', StudentStudy::$fields),
             'studies.*.certificate' => 'mimes:pdf',
@@ -61,8 +64,8 @@ class Student extends Model
     {
         $relatedRules = array(
             'studies' => array(
-                'institution_name' => 'required|regex:/^[\pL\s\-]+$/u',
-                'name' => 'required|regex:/^[\pL\s\-]+$/u',
+                'institution_name' => 'required|regex:/^[\pL\s\-\,\.]+$/u',
+                'name' => 'required|regex:/^[\pL\s\-\,\.]+$/u',
                 'level' => 'required|in:'.implode(',', StudentStudy::$levels),
                 'field' => 'required|in:'.implode(',', StudentStudy::$fields),
                 'certificate' => 'mimes:pdf',
@@ -70,7 +73,7 @@ class Student extends Model
             ),
 
             'trainings' => array (
-                'name' => 'required|regex:/^[\pL\s\-]+$/u',
+                'name' => 'required|regex:/^[\pL\s\-\,\.]+$/u',
                 'date' => 'required|date',
                 'certificate' => 'mimes:pdf',
             ),
@@ -82,14 +85,14 @@ class Student extends Model
             ),
 
             'professionalSkills' => array (
-                'name' =>  'required|regex:/^[\pL\s\-]+$/u',
+                'name' =>  'required|regex:/^[\pL\s\-\,\.]+$/u',
             ),
 
             'experiences' => array (
-                'company' =>  'required|regex:/^[\pL\s\-]+$/u',
+                'company' =>  'required|regex:/^[\pL\s\-\,\.]+$/u',
                 'from' =>  'required|date',
                 'until' =>  'date',
-                'position' =>  'required|regex:/^[\pL\s\-]+$/u',
+                'position' =>  'required|regex:/^[\pL\s\-\,\.]+$/u',
             ),
         );
         $filter = $relatedRules[$related];
@@ -138,6 +141,30 @@ class Student extends Model
     {
         return $this->hasOne('App\Models\ValidationRequest');
     }
+
+    public function professionalSkills()
+    {
+        return $this->belongsToMany('\App\Models\ProfessionalSkill');
+    }
+
+    public function personalSkills()
+    {
+        return $this->belongsToMany('\App\Models\PersonalSkill')->withPivot('validator');
+    }
+
+    public function groupedPersonalSkills()
+    {
+        $skills = array();
+        foreach ($this->personalSkills as $skill) {
+            if (isset($skills[$skill->id])) {
+                $skills[$skill->id] = array('name' => $skill[App::getLocale()], 'repeated' => true);
+            } else {
+                $skills[$skill->id] = array('name' => $skill[App::getLocale()], 'repeated' => false);
+            }
+        }
+        return $skills;
+    }
+
 
     private function countFields($fields, $max, $oneFull = false)
     {
@@ -276,15 +303,5 @@ class Student extends Model
             $total = 100;
         }
         return $total;
-    }
-
-    public function professionalSkills()
-    {
-        return $this->belongsToMany('\App\Models\ProfessionalSkill');
-    }
-
-    public function personalSkills()
-    {
-        return $this->belongsToMany('\App\Models\PersonalSkill')->withPivot('validator');
     }
 }

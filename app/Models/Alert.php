@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Carbon\Carbon;
 use DB;
+use Auth;
 
 class Alert extends Model
 {
@@ -29,6 +30,11 @@ class Alert extends Model
     public static function isAllowed($originId, $targetId)
     {
         $alerts = Alert::where('origin_id', $originId)->where('target_id', $targetId)->orderBy('created_at')->get();
+
+        if ((env('MAX_ALERTS', 3) - Alert::where("origin_id", Auth::user()->id)->whereDate('created_at', Carbon::today())->count()) <= 0) {
+            return false;
+        }
+
         if ($alerts->count() == 0) {
             return true;
         } else {

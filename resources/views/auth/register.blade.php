@@ -5,10 +5,23 @@
 @section('content')
 <div class="container">
   <div class="row">
+        @if (isset($request))
+          <div class="alert alert-success col-sm-6 col-sm-offset-3  col-md-4 col-md-offset-4" role="alert">
+            You have been invited by {{ $request->validator_name }}
+          </div>
+        @endif
+
     <div class="well auth-box col-sm-6 col-sm-offset-3  col-md-4 col-md-offset-4">
-      <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+      <form class="form-horizontal" role="form" method="POST"
+      @if (isset($request))
+      action="{{ url('/register?req_id='.$request->id) }}">
+      @else
+      action="{{ url('/register') }}">
+      @endif
         {!! csrf_field() !!}
         <h2 class="page-title">Register</h2>
+
+
         @if ($errors->count())
           <div class="alert alert-danger" role="alert">
             There have been some errors
@@ -22,7 +35,7 @@
           @endif
           <p><strong>I am a:</strong></p>
           <div class="user-type @if ($errors->has('type')) alert alert-danger @endif">
-            <div class="radio-check">
+            <div class="radio-check" @if (isset($request)) style="display:none" @endif>
               <input id="Student" type="radio" name="type" value="student"             @if (old('type') == "student") checked @endif>
               <label for="Student">
                 <i class="fa fa-user" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="{!! trans_choice('global.student', 1) !!}"></i>
@@ -30,11 +43,11 @@
             </div>
 
             <div class="radio-check">
-              <input id="Institution" type="radio" name="type" value="institution" @if (old('type') == "institution") checked @endif>
+              <input id="Institution" type="radio" name="type" value="institution" @if (old('type') == "institution" || isset($request) ) checked @endif>
               <label for="Institution" data-toggle="tooltip" data-placement="bottom" title="{!! trans_choice('global.institution', 1) !!}"><i class="fa fa-university" aria-hidden="true"></i></label>
             </div>
 
-            <div class="radio-check">
+            <div class="radio-check" @if (isset($request)) style="display:none" @endif>
               <input id="Company" type="radio" name="type" value="company" @if (old('type') == "company") checked @endif>
               <label for="Company"><i data-toggle="tooltip" data-placement="bottom" title="{!! trans_choice('global.company', 1) !!}" class="fa fa-building" aria-hidden="true"></i></label>
             </div>

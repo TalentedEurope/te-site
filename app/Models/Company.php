@@ -17,11 +17,11 @@ class Company extends Model
     public static function rules($company, $keyOnly = false)
     {
         $filter = array( 'fiscal_id' => ['sometimes', 'required','alpha_dash', Rule::unique('companies')->ignore($company->id)] ,
-                        'overseer' => 'regex:/^[\pL\s\-]+$/u' ,
+                        'overseer' => 'regex:/^[\pL\s\-\,\.]+$/u' ,
                         'activity' => 'sometimes|required|in:'.implode(',', Company::$activities),
                         'website' => 'active_url' ,
                         'talent' => 'sometimes|required|max:300',
-                        'notification_name' => 'regex:/^[\pL\s\-]+$/u',
+                        'notification_name' => 'regex:/^[\pL\s\-\,\.]+$/u',
                         'notification_email' => 'email'
         );
 
@@ -68,7 +68,6 @@ class Company extends Model
             return $item->userable_id;
         })->toArray();
         return \App\Models\Company::whereIn('id', $items)->get();
-        ;
     }
 
     public function user()

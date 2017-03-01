@@ -74,8 +74,8 @@
             </div>
             <div class="col-sm-6"><h4>Personal</h4>
               <ul class="skills">
-                @foreach ($student->personalSkills as $skill)
-                  <li>{{ $skill[App::getLocale()] }}</li>
+                @foreach ($student->groupedPersonalSkills() as $skill)
+                  <li @if($skill['repeated']) class="important" @endif >{{ $skill['name'] }}</li>
                 @endforeach
               </ul>
             </div>
