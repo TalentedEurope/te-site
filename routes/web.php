@@ -46,8 +46,8 @@ Route::group(['prefix' => 'profile'], function () {
     Route::get('/{slug}/{id}', 'ProfileController@getProfile')->name('get_profile');
 
     // Request Validation
-    Route::post('validation/request', 'ProfileController@postEdit')->name('request-validation');
-    Route::post('invite', 'ProfileController@postEdit')->name('invite-school');
+    Route::post('validation/request', 'ProfileController@requestValidation')->name('request-validation');
+    Route::post('invite', 'ProfileController@inviteSchool')->name('invite-school');
 });
 
 // Nudge-Alert

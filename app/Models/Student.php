@@ -39,8 +39,8 @@ class Student extends Model
         );
 
         $filterRelated = array(
-            'studies.*.institution_name' => 'sometimes|required|regex:/^[\pL\s\-]+$/u',
-            'studies.*.name' => 'sometimes|required|regex:/^[\pL\s\-]+$/u',
+            'studies.*.institution_name' => 'sometimes|required|regex:/^[\pL\s\-\,\.]+$/u',
+            'studies.*.name' => 'sometimes|required|regex:/^[\pL\s\-\,\.]+$/u',
             'studies.*.level' => 'sometimes|required|in:'.implode(',', StudentStudy::$levels),
             'studies.*.field' => 'sometimes|required|in:'.implode(',', StudentStudy::$fields),
             'studies.*.certificate' => 'mimes:pdf',
@@ -64,8 +64,8 @@ class Student extends Model
     {
         $relatedRules = array(
             'studies' => array(
-                'institution_name' => 'required|regex:/^[\pL\s\-]+$/u',
-                'name' => 'required|regex:/^[\pL\s\-]+$/u',
+                'institution_name' => 'required|regex:/^[\pL\s\-\,\.]+$/u',
+                'name' => 'required|regex:/^[\pL\s\-\,\.]+$/u',
                 'level' => 'required|in:'.implode(',', StudentStudy::$levels),
                 'field' => 'required|in:'.implode(',', StudentStudy::$fields),
                 'certificate' => 'mimes:pdf',
@@ -73,7 +73,7 @@ class Student extends Model
             ),
 
             'trainings' => array (
-                'name' => 'required|regex:/^[\pL\s\-]+$/u',
+                'name' => 'required|regex:/^[\pL\s\-\,\.]+$/u',
                 'date' => 'required|date',
                 'certificate' => 'mimes:pdf',
             ),
@@ -85,14 +85,14 @@ class Student extends Model
             ),
 
             'professionalSkills' => array (
-                'name' =>  'required|regex:/^[\pL\s\-]+$/u',
+                'name' =>  'required|regex:/^[\pL\s\-\,\.]+$/u',
             ),
 
             'experiences' => array (
-                'company' =>  'required|regex:/^[\pL\s\-]+$/u',
+                'company' =>  'required|regex:/^[\pL\s\-\,\.]+$/u',
                 'from' =>  'required|date',
                 'until' =>  'date',
-                'position' =>  'required|regex:/^[\pL\s\-]+$/u',
+                'position' =>  'required|regex:/^[\pL\s\-\,\.]+$/u',
             ),
         );
         $filter = $relatedRules[$related];

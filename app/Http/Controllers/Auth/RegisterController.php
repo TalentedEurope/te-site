@@ -7,8 +7,11 @@ use App\Models\User;
 use App\Models\Institution;
 use App\Models\Student;
 use App\Models\Company;
+use App\Models\ValidationRequest;
+use App\Models\ValidatorInvite;
 use App\Notifications\AccountActivated;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\ValidatorController;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Auth\Events\Registered;
@@ -31,6 +34,23 @@ class RegisterController extends Controller
 
     use RegistersUsers;
     use VerifiesUsers;
+
+    /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showRegistrationForm(Request $request)
+    {
+        $data = array();
+        if ($request->has('req_id')) {
+            $req = ValidationRequest::find($request->input('req_id'));
+            if ($req) {
+                $data['request'] = $req;
+            }
+        }
+        return view('auth.register', $data);
+    }
 
     /**
      * Where to redirect users after login / registration.
@@ -118,6 +138,13 @@ class RegisterController extends Controller
                 $institution = Institution::create();
                 $institution->user()->save($user);
                 Bouncer::assign('institution')->to($user);
+                if (isset($data['req_id'])) {
+                    $req = ValidationRequest::find($data['req_id']);
+                    if ($req) {
+                        $vi = app('App\Http\Controllers\ValidatorController')->addValidator($req->validator_email, $institution->id);
+                        $req->delete();
+                    }
+                }
                 break;
         }
 
