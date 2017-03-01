@@ -68,7 +68,6 @@ class Company extends Model
             return $item->userable_id;
         })->toArray();
         return \App\Models\Company::whereIn('id', $items)->get();
-        ;
     }
 
     public function user()
