@@ -1,14 +1,17 @@
 <template>
     <div class="form-group clearfix">
         <div class="dropdown suggestions-dropdown no-padding" v-bind:class="{'open': openedSuggestions}">
-            <input type="hidden" :code="code" :value="selected_id"/>
+            <input type="hidden" :code="code" :name="code" :value="selected_id"/>
             <input type="text" class="form-control" v-model="selected_name" :placeholder="placeholder"
                @keydown.enter.prevent="enter" @keydown.down="down" @keydown.up="up" @input="change" :disabled="disabled" :required="required"/>
-            <ul class="dropdown-menu suggestions-menu">
+            <ul class="dropdown-menu suggestions-menu" v-if="matches.length > 0">
                 <li v-for="(index, item) in matches" v-bind:class="{'active': isActive(index)}" @click="selectItem(index)">
                     <a>{{item.name}}</a>
                 </li>
             </ul>
+            <div class="no-matches" v-if="showMessageNoMatches">
+                <div class="text-center">No matches</div>
+            </div>
         </div>
     </div>
 </template>
@@ -37,7 +40,8 @@ export default {
         enter() {
             if (this.current > -1) {
                 this.selectItem(this.current);
-                return;
+            } else if (this.matches.length == 1) {
+                this.selectItem(0);
             }
         },
         up() {
@@ -83,9 +87,7 @@ export default {
         clickOutside(e) {
             if ($(this.$el).find(e.target).length == 0) {
                 this.open = false;
-                if (!_.isNull(this.selected)) {
-                    this.setSelected(this.selected);
-                }
+                this.setSelected(this.selected);
             }
         }
     },
@@ -98,6 +100,9 @@ export default {
         openedSuggestions() {
             return this.matches.length != 0 && this.open === true;
         },
+        showMessageNoMatches() {
+            return this.selected_name != '' && this.items.length > 0 && this.matches.length == 0;
+        }
     },
     watch: {
         items: function (value) {
@@ -134,5 +139,16 @@ export default {
             padding-bottom: 5px;
         }
     }
+}
+
+.no-matches {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0.3em;
+    width: 100%;
+    background-color: #fbfbfb;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 }
 </style>
