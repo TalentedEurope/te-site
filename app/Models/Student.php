@@ -15,6 +15,10 @@ class Student extends Model
     public $timestamps = false;
     protected $with = ['studies', 'languages', 'personalSkills', 'professionalSkills', 'validationRequest'];
 
+    protected $attributes = array(
+      'valid' => 'pending'
+    );
+
     // TODO: Move this to User::$EUCountries
     // since it's being used for other stuff too;
     public static $nationalities = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB'];
