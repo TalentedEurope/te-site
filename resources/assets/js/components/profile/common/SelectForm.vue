@@ -2,13 +2,15 @@
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
         <!-- <label :for="generateFieldId()">{{label}}</label> -->
         <div class="select-holder">
-            <select v-if="!relatedOptions" class="form-control" :id="generateFieldId()" :name="generateFieldName()" v-model="value"
+            <input type="hidden" :id="generateFieldId()" :name="generateFieldName()" :value="value"/>
+
+            <select v-if="!relatedOptions" class="form-control" v-model="value"
                     @input="onInput" @blur="onBlur" :disabled="disabled" :required="required">
                 <option value="">{{ parsedPlaceholder }}</option>
                 <option v-for="(v_code, v_name) in parsedValues" :value="v_code">{{ v_name }}</option>
             </select>
 
-            <select v-if="relatedOptions" class="form-control" :id="generateFieldId()" :name="generateFieldName()" v-model="value"
+            <select v-if="relatedOptions" class="form-control" v-model="value"
                     @input="onInput" @blur="onBlur" :disabled="disabled" :required="required">
                 <option value="">{{ parsedPlaceholder }}</option>
                 <optgroup :label="group_name" v-for="(group_name, options) in parsedValues">

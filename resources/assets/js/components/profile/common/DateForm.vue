@@ -2,7 +2,7 @@
     <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
         <label :for="generateFieldId()">{{ parsedLabel }}</label>
         <input class="form-control" type="date" :id="generateFieldId()" :name="generateFieldName()"
-            :placeholder="placeholder" :value="value" :required="required"/>
+            :placeholder="placeholder" :value="value" :required="required" :readonly="readonly"/>
 
         <span v-if="has_error" class="help-block">
             <strong>{{error_message}}</strong>
@@ -23,6 +23,9 @@ export default {
     },
     created() {
         this.$nextTick(function () {
+            if (this.readonly) {
+                return;
+            }
             this.datepicker = document.getElementById(this.generateFieldId()).flatpickr({
                 altInput: true,
                 altFormat: 'd/m/Y',

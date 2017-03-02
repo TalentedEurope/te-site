@@ -96,7 +96,7 @@ var onInput = function() {
 };
 
 var onBlur = function() {
-    if (_.isUndefined(this.noValidate) && this.has_error == false) {
+    if (_.isUndefined(this.noValidate) && this.has_error == false && !this.readonly) {
         if (this.debounced) {
             this.debounced();
             this.debounced.flush();
