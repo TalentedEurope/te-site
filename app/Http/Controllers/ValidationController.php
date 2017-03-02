@@ -36,7 +36,7 @@ class ValidationController extends Controller
         }
 
         $validation = \App\Models\ValidationRequest::with("student")->findOrFail($id);
-        if ($validation->validator != Auth::user()->userable) {
+        if ($validation->validator->id != Auth::user()->userable->id) {
             App::abort(403, 'Unauthorized action.');
         }
         $studentUser = $validation->student->user;
@@ -101,7 +101,7 @@ class ValidationController extends Controller
     {
         $canValidate = Auth::user()->userable->canValidate();
         Carbon::setLocale(Config::get('app.locale'));
-        $validations = ValidationRequest::with('student')->whereHas('student.user')->where("validator_id", 29)->get();
+        $validations = ValidationRequest::with('student')->whereHas('student.user')->where("validator_id", Auth::user()->userable->id)->get();
 
         $res = array();
         foreach ($validations as $validation) {
