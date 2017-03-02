@@ -6,7 +6,7 @@
             <header class="clearfix">
                 <h4 class="pull-left">Study #{{ index + 1 }}</h4>
                 <remove-item-button v-if="!showClearButton" :items="parsed_studies" :item="study" group-name="Study"></remove-item-button>
-                <button class="pull-right remove btn-warning btn btn-sm" v-if="showClearButton" @click.prevent="clearForm()" >
+                <button class="pull-right remove btn-warning btn btn-sm" v-if="study.locked != 1 && showClearButton" @click.prevent="clearForm()" >
                     <i class="fa fa-close" aria-hidden="true"></i> {{ $t('reg-profile.clear_btn') }}
                 </button>
             </header>
@@ -14,26 +14,26 @@
             <text-box-form type="hidden" code="id" group-code="studies" :group-id="study.id" :value="study.id"></text-box-form>
 
             <text-box-form code="institution_name" group-code="studies" :group-id="study.id" label="Institution name"
-                required placeholder="Institution name" :value="study.institution_name" :errors="errors"></text-box-form>
+                required placeholder="Institution name" :value="study.institution_name" :readonly="!!study.locked" :errors="errors"></text-box-form>
 
             <div class="row">
                 <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="study.id" label="Course/Studies name"
-                    required placeholder="Course/Studies name" :value="study.name" :errors="errors"></text-box-form>
+                    required placeholder="Course/Studies name" :value="study.name" :readonly="!!study.locked" :errors="errors"></text-box-form>
                 <select-form class="col-sm-4" code="level" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_level')"
-                    required :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyLevels" :value="study.level" :errors="errors"></select-form>
+                    required :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyLevels" :value="study.level" :disabled="!!study.locked" :errors="errors"></select-form>
             </div>
 
             <select-form code="field" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_field')"
-                required :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyFields" :value="study.field" :errors="errors"></select-form>
+                required :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyFields" :value="study.field" :disabled="!!study.locked" :errors="errors"></select-form>
 
             <hr>
             <file-form code="certificate" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_certificate')"
                 download-text="Download Certificate" :has-file="study.certificate"
-                :file-url="getFileUrl(study.id, 'certificate')" :errors="errors"></file-form>
+                :file-url="getFileUrl(study.id, 'certificate')" :readonly="!!study.locked" :errors="errors"></file-form>
             <hr>
             <file-form code="gradecard" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_grade_card')"
                 download-text="Download Gradecard" :has-file="study.gradecard"
-                :file-url="getFileUrl(study.id, 'gradecard')" :errors="errors"></file-form>
+                :file-url="getFileUrl(study.id, 'gradecard')" :readonly="!!study.locked" :errors="errors"></file-form>
             <hr>
         </div>
 
