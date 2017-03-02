@@ -151,9 +151,8 @@
               <professional-skills selected-skills='{!! json_encode($student->professionalSkills, JSON_HEX_APOS) !!}'
                   skills='{!! json_encode($professionalSkills, JSON_HEX_APOS) !!}'
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></professional-skills>
-
               <personal-skills-form label="Personal skills (max 6)"
-                  values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}'
+                  values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}' readonly='{!! !!$validationReqDate !!}'
                   value='{!! json_encode($student->personalSkills()->wherePivot('validator',false)->get(), JSON_HEX_APOS) !!}'
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></personal-skills-form>
 
@@ -196,7 +195,6 @@
               @else
                 <form class="form-vertical" role="form" method="POST" action="{{ route('request-validation') }}">
                   {{ csrf_field() }}
-                  <h4>Find your school</h4>
                   <request-validation countries='{!! json_encode($institutionCountries, JSON_HEX_APOS) !!}'></request-validation>
                 </form>
 

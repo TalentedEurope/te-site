@@ -1,5 +1,7 @@
 <template>
     <div class="row">
+        <h4 class="col-sm-12">Find your Academic Institution</h4>
+
         <select-form class="col-sm-6" code="country" :label="$t('reg-profile.country')" :placeholder="' - ' + $t('reg-profile.country') + ' - '" required :values="countries" :value="country" no-validate>
         </select-form>
 

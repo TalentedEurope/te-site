@@ -8,7 +8,6 @@
                 <i class="fa fa-cloud-download" aria-hidden="true"></i> {{ downloadText }}
             </a>
         </p>
-        <p v-if="readonly && !hasFile">You have not uploaded a file</p>
         <span v-if="has_error" class="help-block">
             <strong>{{error_message}}</strong>
         </span>

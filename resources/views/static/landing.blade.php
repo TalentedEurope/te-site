@@ -202,45 +202,17 @@
 
     <section class="logos-carousel-section content-section col-md-12">
       <div class="content">
-        <ul class="nav nav-tabs text-center">
-          <li role="presentation" class="active">
-            <a href="#companies-logos" aria-controls="profile" role="tab" data-toggle="tab">
-              <i class="fa fa-building" aria-hidden="true"></i>
-              <div>Companies</div>
-            </a>
-          </li>
-          <li role="presentation">
-            <a href="#institutions-logos" aria-controls="profile" role="tab" data-toggle="tab">
-              <i class="fa fa-university" aria-hidden="true"></i>
-              <div>Institutions</div>
-            </a>
-          </li>
-        </ul>
-
-        <div class="tab-content">
-          <div role="tabpanel" id="companies-logos" class="@if ($companies->count()) companies-logos @endif tab-pane active">
-            @if ($companies->count())
-              @foreach ($companies as $company)
-                <a href="{{ route('get_profile', [str_slug($company->user->name),$company->user->id]) }}">
-                <img width="150" src="{{ asset('uploads/photo/'.$company->user->image) }}"/>
-                </a>
-              @endforeach
-            @else
-              <p class="h2 text-center">No companies available</p>
-            @endif
-          </div>
-
-          <div role="tabpanel" id="institutions-logos" class="tab-pane @if ($institutions->count()) institutions-logos @endif">
-            @if ($institutions->count())
-              @foreach ($institutions as $institution)
-                <a href="{{ route('get_profile', [str_slug($institution->user->name),$institution->user->id]) }}">
-                <img width="150" src="{{ asset('uploads/photo/'.$institution->user->image) }}"/>
-                </a>
-              @endforeach
-            @else
-              <p class="h2 text-center">No institutions available</p>
-            @endif
-          </div>
+        <h1 class="text-center">Companies and Institutions</h1>
+        <div role="tabpanel" id="companies-and-institutions-logos" class="@if ($companies->count()) companies-and-institutions-logos @endif">
+          @if ($companies->count())
+            @foreach ($companies as $company)
+              <a href="{{ route('get_profile', [str_slug($company->user->name),$company->user->id]) }}">
+              <img width="150" src="{{ asset('uploads/photo/'.$company->user->image) }}"/>
+              </a>
+            @endforeach
+          @else
+            <p class="h2 text-center">No companies available</p>
+          @endif
         </div>
       </div>
     </section>

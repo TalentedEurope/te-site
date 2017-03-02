@@ -59,6 +59,5 @@ $(document).ready(function(){
             }
         ]
     };
-    $('.companies-logos').slick(carousel_settings);
-    $('.institutions-logos').slick(carousel_settings);
+    $('.companies-and-institutions-logos').slick(carousel_settings);
 });

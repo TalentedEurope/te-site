@@ -26,14 +26,18 @@
             <select-form code="field" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_field')"
                 required :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyFields" :value="study.field" :disabled="!!study.locked" :errors="errors"></select-form>
 
-            <hr>
-            <file-form code="certificate" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_certificate')"
-                download-text="Download Certificate" :has-file="study.certificate"
-                :file-url="getFileUrl(study.id, 'certificate')" :readonly="!!study.locked" :errors="errors"></file-form>
-            <hr>
-            <file-form code="gradecard" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_grade_card')"
-                download-text="Download Gradecard" :has-file="study.gradecard"
-                :file-url="getFileUrl(study.id, 'gradecard')" :readonly="!!study.locked" :errors="errors"></file-form>
+            <div v-if="study.certificate || !study.locked">
+                <hr>
+                <file-form code="certificate" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_certificate')"
+                    download-text="Download Certificate" :has-file="study.certificate"
+                    :file-url="getFileUrl(study.id, 'certificate')" :readonly="!!study.locked" :errors="errors"></file-form>
+            </div>
+            <div v-if="study.gradecard || !study.locked">
+                <hr>
+                <file-form code="gradecard" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_grade_card')"
+                    download-text="Download Gradecard" :has-file="study.gradecard"
+                    :file-url="getFileUrl(study.id, 'gradecard')" :readonly="!!study.locked" :errors="errors"></file-form>
+            </div>
             <hr>
         </div>
 
