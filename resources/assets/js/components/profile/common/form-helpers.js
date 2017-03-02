@@ -83,6 +83,8 @@ var validateField = function() {
 };
 
 var onInput = function() {
+    TE.profile.modified_fields = true;
+
     if (_.isUndefined(this.noValidate)) {
         this.has_error = false;
         this.error_message = null;

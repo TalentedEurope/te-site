@@ -22,9 +22,11 @@
       </div>
       <div class="col-sm-8 col-md-8 col-xs-12">
         <!-- Content -->
-        <div class="progress-form @if ($user->is_filled && $user->userable->valid == 'pending') f-50 @endif @if ($user->userable->valid && $user->userable->valid != 'pending') f-100 @endif ">
-          <div class="line-background"></div>
-          <div class="line-progress"></div>
+        <div class="progress-form @if ($user->is_filled && $user->userable->valid == 'pending') f-50 @endif @if ($user->userable->valid != 'pending') f-100 @endif ">
+          <div class="line-wrapper">
+            <div class="line-background"></div>
+            <div class="line-progress"></div>
+          </div>
           <span class="number p-0">1</span>
           <span class="name p-0">Account setup</span>
           <span class="number p-50 @if (!$user->userable->valid || (!$user->is_filled && $user->userable->valid == 'pending')) disabled @endif">2</span>
@@ -34,10 +36,10 @@
         </div>
 
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">
-          <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
-          <li><a href="#career" data-toggle="tab">Career and Skills</a></li>
-          <li><a href="#refer" data-toggle="tab">Get your profile refereed</a></li>
-          <li><a href="#password" data-toggle="tab">Change your password</a></li>
+          <li class="active"><a data-target="#profile" data-toggle="tab">Profile</a></li>
+          <li><a data-target="#career" data-toggle="tab">Career and Skills</a></li>
+          <li><a data-target="#refer" data-toggle="tab">Get your profile refereed</a></li>
+          <li><a data-target="#password" data-toggle="tab">Change your password</a></li>
         </ul>
         <div id="profileTab" class="tab-content well">
           <div class="tab-pane active in" id="profile">

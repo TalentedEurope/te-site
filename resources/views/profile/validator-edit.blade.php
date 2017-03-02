@@ -16,11 +16,11 @@
       <div class="col-sm-8 col-md-8 col-xs-12 col-sm-offset-2">
         <!-- Content -->
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">
-          <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
+          <li class="active"><a data-target="#profile" data-toggle="tab">Profile</a></li>
           @if ($validator->institution)
-          <li><a href="#leave-institution" data-toggle="tab">Leave institution?</a></li>
+          <li><a data-target="#leave-institution" data-toggle="tab">Leave institution?</a></li>
           @endif
-          <li><a href="#password" data-toggle="tab">Change your password</a></li>
+          <li><a data-target="#password" data-toggle="tab">Change your password</a></li>
         </ul>
 
         <div id="profileTab" class="tab-content well">
