@@ -190,7 +190,7 @@
               @if($user->userable->validationRequest)
                 <h4>Your request is being managed by: {{ $user->userable->validationRequest->getValidator() }}</h4>
                 <div class="alert alert-info">
-                <p>{{ sprintf('Your request was created %s', '2 days ago') }}</p>
+                <p>{{ sprintf('Your request was created %s', $user->userable->validationRequest->created_at->diffForHumans()) }}</p>
                 <p>{{ sprintf('If your request hasn\'t been completed in %s days you will be able to create a new request', env('CLEANUP_DAYS',14)) }}
                 </div>
               @else
