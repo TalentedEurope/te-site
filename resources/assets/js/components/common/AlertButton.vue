@@ -10,6 +10,7 @@
 <script>
 import { alertsResource } from '../../resources/alerts';
 import { defaultErrorToast } from 'errors-handling.js';
+import EventBus from 'event-bus.js';
 
 export default {
     props: ['companyId', 'alertable', 'placement'],
@@ -22,6 +23,10 @@ export default {
     },
     ready: function () {
         $(this.$el).find('[data-toggle="tooltip"]').tooltip();
+
+        this.$on('disableAlerts', () => {
+            this.disabled = true;
+        });
     },
     methods: {
         sendAlert: function () {
@@ -43,8 +48,8 @@ export default {
                         loader: false,
                         textAlign : 'center',
                         position : 'top-center'
-                    })
-
+                    });
+                    EventBus.$emit('onAlert', '');
                 }, (errorResponse) => {
                     if (errorResponse.status == 429) {
                         this.disabled = true;
