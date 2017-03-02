@@ -34,7 +34,7 @@ class ProfileController extends SiteProfileController
         return array('user' => $user, 'errors' => $errors);
     }
 
-    public function inviteSchool(Request $request)
+    public function inviteSchool(Request $request, $validate = false)
     {
         return parent::inviteSchool($request, true);
     }
