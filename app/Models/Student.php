@@ -185,6 +185,50 @@ class Student extends Model
         return $res;
     }
 
+    public function calculateLockedStatus()
+    {
+        $validationReqDate = null;
+        if ($this->validationRequest) {
+            $validationReqDate = $this->validationRequest->created_at;
+        }
+        foreach ($this->studies as $item) {
+            if ($validationReqDate && $item->created_at < $validationReqDate) {
+                $item->locked = true;
+                $item->save();
+            } else {
+                $item->locked = false;
+                $item->save();
+            }
+        }
+        foreach ($this->training as $item) {
+            if ($validationReqDate && $item->created_at < $validationReqDate) {
+                $item->locked = true;
+                $item->save();
+            } else {
+                $item->locked = false;
+                $item->save();
+            }
+        }
+        foreach ($this->languages as $item) {
+            if ($validationReqDate && $item->created_at < $validationReqDate) {
+                $item->locked = true;
+                $item->save();
+            } else {
+                $item->locked = false;
+                $item->save();
+            }
+        }
+        foreach ($this->experiences as $item) {
+            if ($validationReqDate && $item->created_at < $validationReqDate) {
+                $item->locked = true;
+                $item->save();
+            } else {
+                $item->locked = false;
+                $item->save();
+            }
+        }
+    }
+
     public function fillRate()
     {
         // We're weighting the fill rate like this.
