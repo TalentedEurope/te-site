@@ -28,7 +28,7 @@ import Studies from './components/profile/student/Studies.vue';
 import Trainings from './components/profile/student/Trainings.vue';
 import Languages from './components/profile/student/Languages.vue';
 import Experiences from './components/profile/student/Experiences.vue';
-import FindYourSchool from './components/profile/student/FindYourSchool.vue';
+import RequestValidation from './components/profile/student/RequestValidation.vue';
 import AlertButton from './components/common/AlertButton.vue';
 
 
@@ -42,7 +42,7 @@ if (document.querySelector('.v-container')) {
         components: {
             Search, Alerts, Validators, StudentsValidation,
             SelectForm, TextAreaForm, TextBoxForm, PersonalSkillsForm, FileForm, DateForm,
-            ProfessionalSkills, Studies, Trainings, Languages, Experiences, FindYourSchool,
+            ProfessionalSkills, Studies, Trainings, Languages, Experiences, RequestValidation,
             AlertButton },
     })
 }

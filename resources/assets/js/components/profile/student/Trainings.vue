@@ -11,13 +11,13 @@
             <text-box-form type="hidden" code="id" group-code="trainings" :group-id="training.id" :value="training.id" required></text-box-form>
 
             <text-box-form code="name" group-code="trainings" :group-id="training.id" label="Course name" placeholder="Course name"
-                required :value="training.name" :errors="errors"></text-box-form>
+                required :value="training.name" :readonly="!!training.locked" :errors="errors"></text-box-form>
             <date-form code="date" group-code="trainings" :group-id="training.id" :label="$t('reg-profile.student_date')" :placeholder="$t('reg-profile.student_date')"
-                required :value="training.date" :errors="errors"></date-form>
+                required :value="training.date" :readonly="!!training.locked" :errors="errors"></date-form>
 
             <hr>
             <file-form code="certificate" group-code="trainings" :group-id="training.id" :label="$t('reg-profile.student_certificate')"
-                download-text="Download Certificate" :has-file="training.certificate"
+                download-text="Download Certificate" :has-file="training.certificate" :readonly="!!training.locked"
                 :file-url="getFileUrl(training.id, 'certificate')" :errors="errors"></file-form>
             <hr>
         </div>

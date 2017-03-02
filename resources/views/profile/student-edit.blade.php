@@ -197,7 +197,7 @@
                 <form class="form-vertical" role="form" method="POST" action="{{ route('request-validation') }}">
                   {{ csrf_field() }}
                   <h4>Find your school</h4>
-                  <find-your-school countries='{!! json_encode($institutionCountries, JSON_HEX_APOS) !!}'></find-your-school>
+                  <request-validation countries='{!! json_encode($institutionCountries, JSON_HEX_APOS) !!}'></request-validation>
                 </form>
 
                 <hr class="separator">

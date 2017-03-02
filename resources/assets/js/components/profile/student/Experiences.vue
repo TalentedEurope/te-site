@@ -12,15 +12,15 @@
 
             <div class="row">
                 <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="experience.id" :label="$t('reg-profile.student_study_from')"
-                    required placeholder="Work from" :value="experience.from" :errors="errors"></date-form>
+                    required placeholder="Work from" :value="experience.from" :readonly="!!experience.locked" :errors="errors"></date-form>
                 <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="experience.id" :label="$t('reg-profile.student_study_to')"
-                    placeholder="Work to" :value="experience.until" :errors="errors"></date-form>
+                    placeholder="Work to" :value="experience.until" :readonly="!!experience.locked" :errors="errors"></date-form>
             </div>
 
             <text-box-form code="company" group-code="experiences" :group-id="experience.id" :label="$t('reg-profile.student_experience_company')"
-                required :placeholder="$t('reg-profile.student_experience_company')" :value="experience.company" :errors="errors"></text-box-form>
+                required :placeholder="$t('reg-profile.student_experience_company')" :value="experience.company" :readonly="!!experience.locked" :errors="errors"></text-box-form>
             <text-box-form code="position" group-code="experiences" :group-id="experience.id" :label="$t('reg-profile.position')"
-                required :placeholder="$t('reg-profile.position')" :value="experience.position" :errors="errors"></text-box-form>
+                required :placeholder="$t('reg-profile.position')" :value="experience.position" :readonly="!!experience.locked" :errors="errors"></text-box-form>
             <hr>
         </div>
 

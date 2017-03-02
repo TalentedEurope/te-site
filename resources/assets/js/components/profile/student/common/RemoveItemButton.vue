@@ -1,5 +1,5 @@
 <template>
-    <button class="pull-right remove btn-danger btn btn-sm" @click.prevent="removeItem()">
+    <button class="pull-right remove btn-danger btn btn-sm" @click.prevent="removeItem()" v-if="!item.locked">
         <i class="fa fa-close" aria-hidden="true"></i> remove
     </button>
 </template>

@@ -3,7 +3,7 @@
         <button class="btn btn-disabled btn-alert btn-lg" @click="sendAlert()" :disabled="disabled" v-bind:class="{ 'btn-primary': !disabled }">
             <i class="fa fa-bell" aria-hidden="true"></i> I'm here!
         </button>
-        <button class="btn btn-primary btn-tooltip btn-lg" :disabled="disabled" data-toggle="tooltip" :data-placement="placement" title="" data-original-title="Tell the company that you may be interested to work for them"> ? </button>
+        <button class="btn btn-primary btn-tooltip btn-lg" data-toggle="tooltip" :data-placement="placement" title="" :data-original-title="tooltip_text"> ? </button>
     </div>
 </template>
 
@@ -18,10 +18,13 @@ export default {
         return {
             sending: false,
             show_alert_button: $("meta[id='user_type']").attr('content') == 'student',
-            disabled: !this.alertable
+            disabled: !this.alertable,
+            tooltip_text: ''
         }
     },
     ready: function () {
+        this.setTooltipText();
+
         $(this.$el).find('[data-toggle="tooltip"]').tooltip();
 
         this.$on('disableAlerts', () => {
@@ -29,6 +32,13 @@ export default {
         });
     },
     methods: {
+        setTooltipText: function () {
+            if (this.disabled) {
+                this.tooltip_text = 'You cannot send more alerts to this company today';
+            } else {
+                this.tooltip_text = 'Tell the company that you may be interested to work for them';
+            }
+        },
         sendAlert: function () {
             if (this.sending) {
                 return;
@@ -73,6 +83,11 @@ export default {
                     this.sending = false;
                 });
         }
+    },
+    watch: {
+        disabled: function (value) {
+            this.setTooltipText();
+        }
     }
 }
 </script>
@@ -97,14 +112,6 @@ export default {
 
     &:hover, &:focus, &:active {
         background: $yellow-light;
-    }
-}
-
-.disabled {
-    .btn-tooltip {
-        &, &:hover, &:focus, &:active {
-            background: $dark-gray;
-        }
     }
 }
 </style>

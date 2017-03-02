@@ -12,14 +12,14 @@
                 :value="language.id"></text-box-form>
 
             <select-form code="name" group-code="languages" :group-id="language.id" label="Language name"
-                required placeholder=" - Language name - " :values="languageNames" :value="language.name" :errors="errors"></select-form>
+                required placeholder=" - Language name - " :values="languageNames" :value="language.name" :disabled="!!language.locked" :errors="errors"></select-form>
             <select-form code="level" group-code="languages" :group-id="language.id" label="Language level"
-                required placeholder=" - Language level - " :values="languageLevels" :value="language.level" :errors="errors"></select-form>
+                required placeholder=" - Language level - " :values="languageLevels" :value="language.level" :disabled="!!language.locked" :errors="errors"></select-form>
 
             <hr>
             <file-form code="certificate" group-code="languages" :group-id="language.id" :label="$t('reg-profile.student_certificate')"
                 download-text="Download Certificate" :has-file="language.certificate"
-                :file-url="getFileUrl(language.id, 'certificate')" :errors="errors"></file-form>
+                :file-url="getFileUrl(language.id, 'certificate')" :readonly="!!language.locked" :errors="errors"></file-form>
             <hr>
         </div>
 
