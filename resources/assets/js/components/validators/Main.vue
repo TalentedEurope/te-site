@@ -1,9 +1,8 @@
 <template>
     <div class="col-sm-12 sm-no-padding-left sm-no-padding-right">
-        <h1 class="page-title">Validators</h1>
         <div class="panel panel-default">
-            <div v-if="validators.length == 0">
-                Mensaje no validators
+            <div class="default-message" v-if="validators.length == 0">
+                No referees
             </div>
             <table v-if="validators.length > 0" class="table table-striped table-hover table-responsive">
                 <thead>
@@ -31,8 +30,8 @@
                             </button>
                         </td>
                         <td>
-                            <button class="btn btn-danger" v-on:click="onDeleteButton(validator)">
-                                <i class="fa fa-toggle-on" aria-hidden="true"></i> Delete
+                            <button class="btn btn-danger" v-on:click="onRemoveButton(validator)">
+                                <i class="fa fa-toggle-on" aria-hidden="true"></i> Remove
                             </button>
                         </td>
                     </tr>
@@ -87,15 +86,16 @@ export default {
                     Vue.set(validator, 'loading', false);
                 });
         },
-        onDeleteButton(validator) {
+        onRemoveButton(validator) {
+            var validator_info = validator.full_name.trim() != '' ? validator.full_name.trim() : validator.email;
             var that = this;
             $.confirm({
-                title: 'Delete title',
-                content: 'Delete content',
+                title: 'Remove referee',
+                content: `Do you want to remove ${validator_info} from your institution?`,
                 backgroundDismiss: true,
                 buttons: {
                     confirm: {
-                        text: 'Delete',
+                        text: 'Remove',
                         btnClass: 'btn-danger',
                         keys: ['enter'],
                         action: function() {
@@ -104,8 +104,8 @@ export default {
                             }
                             Vue.set(validator, 'loading', true);
 
-                            this.setContent('Deleting...')
-                            that.deleteValidator(validator, this)
+                            this.setContent('Removing...')
+                            that.removeValidator(validator, this)
 
                             return false;
                         }
@@ -116,7 +116,7 @@ export default {
                 }
             });
         },
-        deleteValidator(validator, jq_confirm) {
+        removeValidator(validator, jq_confirm) {
             validatorsResource.delete(validator.delete_url)
                 .then((response) => {
                     var index = this.validators.indexOf(validator);

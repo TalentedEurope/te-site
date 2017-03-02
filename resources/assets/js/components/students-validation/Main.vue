@@ -1,7 +1,7 @@
 <template>
     <div class="panel panel-default col-sm-12">
-        <div v-if="students.length == 0">
-            Mensaje no students validation
+        <div class="default-message" v-if="students.length == 0">
+            No students
         </div>
         <table v-if="students.length > 0" class="table table-striped table-hover table-responsive">
             <thead>
@@ -51,9 +51,9 @@ export default {
         statusClass(student) {
             return {
                 'label': true,
-                'label-default': student.status == 'Pending',
-                'label-success': student.status == 'Validated',
-                'label-danger': student.status == 'Not validated'
+                'label-warning': student.status == 'pending',
+                'label-success': student.status == 'validated',
+                'label-danger': student.status == 'denied'
             }
         }
     }

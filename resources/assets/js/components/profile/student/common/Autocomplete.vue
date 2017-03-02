@@ -3,7 +3,7 @@
         <div class="dropdown suggestions-dropdown no-padding" v-bind:class="{'open': openedSuggestions}">
             <input type="hidden" :code="code" :name="code" :value="selected_id"/>
             <input type="text" class="form-control" v-model="selected_name" :placeholder="placeholder"
-               @keydown.enter.prevent="enter" @keydown.down="down" @keydown.up="up" @input="change" :disabled="disabled" :required="required"/>
+               @click="down" keydown.enter.prevent="enter" @keydown.down="down" @keydown.up="up" @input="change" :disabled="disabled" :required="required"/>
             <ul class="dropdown-menu suggestions-menu" v-if="matches.length > 0">
                 <li v-for="(index, item) in matches" v-bind:class="{'active': isActive(index)}" @click="selectItem(index)">
                     <a>{{item.name}}</a>
