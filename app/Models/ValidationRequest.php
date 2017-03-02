@@ -8,7 +8,7 @@ use Illuminate\Notifications\Notifiable;
 class ValidationRequest extends Model
 {
     use Notifiable;
-    protected $fillable = ['validator_name', 'validator_email', 'student_id'];
+    protected $fillable = ['validator_name', 'validator_email', 'student_id', 'validator_id'];
 
     public static $rules = array(
         'status' => 'required|in:valid,invalid',
@@ -18,6 +18,18 @@ class ValidationRequest extends Model
     );
 
     public static $status = ['pending', 'validated', 'denied'];
+
+    public static function boot()
+    {
+        parent::boot();
+        self::created(function ($model) {
+            $model->student->calculateLockedStatus();
+        });
+
+        self::deleted(function ($model) {
+            $model->student->calculateLockedStatus();
+        });
+    }
 
     public static function invalidReasons()
     {

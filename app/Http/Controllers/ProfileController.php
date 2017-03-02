@@ -73,6 +73,14 @@ class ProfileController extends Controller
         if ($user->isA('student')) {
             $data = $this->getStudentPrivateData($user);
             $data['token'] = LoginController::userToken();
+
+            $validationReqDate = null;
+            $student = $user->userable;
+            if ($student && $student->validationRequest) {
+                $validationReqDate = $student->validationRequest->created_at;
+            }
+            $data['validationReqDate'] = $validationReqDate;
+
             $errors = Validator::make($user->toArray(), User::Rules(false, true));
             if ($user->isA('student')) {
                 $filledVal = Validator::make($user->userable->toArray(), Student::Rules(true));
@@ -354,34 +362,83 @@ class ProfileController extends Controller
 
     protected function processStudent(Request $request, User $user)
     {
-        if ($request->has('remove_studies')) {
-            $studies = $request->input('remove_studies');
-            StudentStudy::whereIn('id', $studies)->delete();
-        }
-
-        if ($request->has('remove_languages')) {
-            $langs = $request->input('remove_languages');
-            StudentLanguage::whereIn('id', $langs)->delete();
-        }
-
-        if ($request->has('remove_trainings')) {
-            $training = $request->input('remove_trainings');
-            StudentTraining::whereIn('id', $training)->delete();
-        }
-
-        if ($request->has('remove_experiences')) {
-            $experiences = $request->input('remove_experiences');
-            StudentExperience::whereIn('id', $experiences)->delete();
-        }
-
         $errors = new MessageBag();
         $student = null;
+        $validationReqDate = null;
 
         if ($user->userable) {
             $student = $user->userable()->first();
         } else {
             $student = Student::create();
             $student->user()->save($user);
+        }
+
+        if ($student->validationRequest) {
+            $validationReqDate = $student->validationRequest->created_at;
+        }
+
+        if ($request->has('remove_studies')) {
+            $studies = $request->input('remove_studies');
+            $ids = $studies;
+            if ($validationReqDate) {
+                $ids = array();
+                foreach ($studies as $study) {
+                    $study = StudentStudy::find($study);
+                    if ($study && $study->created_at > $validationReqDate) {
+                        $ids[] = $study->id;
+                    }
+                }
+            }
+
+            StudentStudy::whereIn('id', $ids)->delete();
+        }
+
+        if ($request->has('remove_languages')) {
+            $langs = $request->input('remove_languages');
+            $ids = $langs;
+            if ($validationReqDate) {
+                $ids = array();
+                foreach ($langs as $lang) {
+                    $lang = StudentLanguage::find($lang);
+                    if ($lang && $lang->created_at > $validationReqDate) {
+                        $ids[] = $lang->id;
+                    }
+                }
+            }
+
+            StudentLanguage::whereIn('id', $ids)->delete();
+        }
+
+        if ($request->has('remove_trainings')) {
+            $trainings = $request->input('remove_trainings');
+            $ids = $trainings;
+            if ($validationReqDate) {
+                $ids = array();
+                foreach ($trainings as $training) {
+                    $training = StudentTraining::find($training);
+                    if ($training && $training->created_at > $validationReqDate) {
+                        $ids[] = $training->id;
+                    }
+                }
+            }
+
+            StudentTraining::whereIn('id', $ids)->delete();
+        }
+
+        if ($request->has('remove_experiences')) {
+            $experiences = $request->input('remove_experiences');
+            $ids = $experiences;
+            if ($validationReqDate) {
+                $ids = array();
+                foreach ($experiences as $experience) {
+                    $experience = StudentExperience::find($experience);
+                    if ($experience && $experience->created_at > $validationReqDate) {
+                        $ids[] = $experience->id;
+                    }
+                }
+            }
+
+            StudentExperience::whereIn('id', $ids)->delete();
         }
 
         $v = Validator::make($request->all(), Student::rules());
@@ -863,6 +920,43 @@ class ProfileController extends Controller
             $erray[$mainKey.'.'.$subKey .'.'. $key] = $errors->get($key);
         }
         return $erray;
+    }
+
+    public function requestValidation(Request $request)
+    {
+        if ($request->has('referee')) {
+            $val = \App\Models\Validator::find($request->input('referee'));
+            if (!$val) {
+                App::abort(404, 'Not found.');
+            }
+            ValidationRequest::create([
+                'student_id' => Auth::user()->userable->id,
+                'validator_id' => $val->id
+            ]);
+        } else {
+            $ins = Institution::find($request->input('institution'));
+            if (!$ins) {
+                App::abort(404, 'Not found.');
+            }
+            $lowest = INF;
+            $lowestValidatorId = null;
+            foreach ($ins->validators as $val) {
+                $count = $val->validationRequest->count();
+                if ($count < $lowest) {
+                    $lowest = $count;
+                    $lowestValidatorId = $val->id;
+                    if ($lowest == 0) {
+                        break;
+                    }
+                }
+            }
+            ValidationRequest::create([
+                'student_id' => Auth::user()->userable->id,
+                'validator_id' => $lowestValidatorId
+            ]);
+        }
+        $request->session()->flash('success_message', 'Successfully requested validation request');
+        return back();
     }
 
     public function inviteSchool(Request $request, $validate = false)
