@@ -41,7 +41,8 @@ export default {
             is_filtering: true,
             current_page: 1,
             filters: {},
-            search_text: null
+            search_text: null,
+            remaining_alerts: null
         }
     },
     created () {
@@ -63,6 +64,14 @@ export default {
             this.search_text = _.trim(search_text);
             this.fetchResults(true);
         });
+
+        EventBus.$on('onAlert', () => {
+            this.remaining_alerts -= 1;
+            if (this.remaining_alerts == 0) {
+                this.$broadcast('disableAlerts');
+            }
+        });
+
     },
     ready () {
         this.search_text = getUrlParameter('search');
@@ -113,6 +122,7 @@ export default {
                 this.is_filtering = !_.isEmpty(this.filters) || !_.isEmpty(this.search_text);
                 this.results = response.body.data;
                 this.pagination_data = response.body;
+                this.remaining_alerts = response.body.remaining_alerts;
             }, (errorResponse) => {
                 defaultErrorToast();
             }).finally(() => {
