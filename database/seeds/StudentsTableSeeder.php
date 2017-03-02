@@ -36,7 +36,6 @@ class StudentsTableSeeder extends Seeder
             'nationality' => $nationality,
             'birthdate' => $faker->dateTimeThisCentury->format('Y-m-d'),
             'institution_id' => $institutions->first()->id,
-            'valid' => false,
             'curriculum' => 'sample.pdf',
             'renewed_at' => date('Y-m-d'),
         ]);
@@ -84,7 +83,6 @@ class StudentsTableSeeder extends Seeder
                     'nationality' => $nationality,
                     'birthdate' => $faker->dateTimeThisCentury->format('Y-m-d'),
                     'institution_id' => $institution->id,
-                    'valid' => false,
                     'curriculum' => 'sample.pdf',
                     'renewed_at' => date('Y-m-d'),
                 ]);
