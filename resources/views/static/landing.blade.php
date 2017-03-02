@@ -284,7 +284,7 @@
           </div>
 
           <div class="col-xs-3 col-sm-3 text-center">
-            <div class="c100 p{{ $institutionsCount/$totalUserCount*100 }} small center">
+            <div class="c100 p{{ round($institutionsCount/$totalUserCount*100) }} small center">
               <span>{{ $institutionsCount/$totalUserCount*100 }}%</span>
               <div class="slice">
                 <div class="bar"></div>

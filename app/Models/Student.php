@@ -288,25 +288,25 @@ class Student extends Model
             $studies = 30;
         }
 
-        $training = 0;
+        $trainings = 0;
         foreach ($this->training as $training) {
-            $training += $this->countFields(array(
+            $trainings += $this->countFields(array(
                 $training->name,
                 $training->certificate,
                 $training->date
             ), 10);
         }
-        if ($training > 10) {
-            $training = 10;
+        if ($trainings > 10) {
+            $trainings = 10;
         }
 
         $languages = 0;
         foreach ($this->languages as $language) {
-            $language += $this->countFields(array(
+            $languages += $this->countFields(array(
                 $language->name,
                 $language->level,
             ), 4);
-            $language += $this->countFields(array(
+            $languages += $this->countFields(array(
                 $language->certificate
             ), 1, true);
         }
@@ -316,7 +316,7 @@ class Student extends Model
 
         $experiences = 0;
         foreach ($this->experiences as $experience) {
-            $experience += $this->countFields(array(
+            $experiences += $this->countFields(array(
                 $experience->company,
                 $experience->from,
                 $experience->until,
@@ -341,7 +341,7 @@ class Student extends Model
             $this->talent
         ), 10, true);
 
-        $total = $basic + $social + $contact + $studies + $training + $languages + $experiences + $professionalSkills + $personalSkills + $talent;
+        $total = $basic + $social + $contact + $studies + $trainings + $languages + $experiences + $professionalSkills + $personalSkills + $talent;
 
         if ($total > 100) {
             $total = 100;
