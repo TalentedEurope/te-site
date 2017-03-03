@@ -31,7 +31,7 @@ $(document).ready(function(){
 
 
     // CAROUSEL OF LOGOS
-    var carousel_settings = {
+    $('.companies-and-institutions-logos').slick({
         infinite: true,
         slidesToShow: 6,
         slidesToScroll: 6,
@@ -58,6 +58,5 @@ $(document).ready(function(){
                 }
             }
         ]
-    };
-    $('.companies-and-institutions-logos').slick(carousel_settings);
+    });
 });
