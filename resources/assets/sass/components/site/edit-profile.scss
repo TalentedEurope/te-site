@@ -31,10 +31,14 @@
             }
 
             .line-progress {
-                width: 33%;
+                width: 0;
                 border-top: 3px solid $yellow;
                 position: absolute;
             }
+        }
+
+        &.f-30 .line-progress {
+            width: 30%;
         }
 
         &.f-50 .line-progress {

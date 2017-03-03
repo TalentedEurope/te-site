@@ -28,7 +28,7 @@
 <a id="validate"></a>
 <div class="container v-container">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-12 sm-no-padding-left sm-no-padding-right">
       <div class="well">
       <h3 class="section-title"> <i class="fa fa-search" aria-hidden="true"></i> Student validation</h3>
         @if ($student->valid == 'validated')
@@ -71,7 +71,7 @@
 <a id="validate"></a>
 <div class="container v-container">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-12 sm-no-padding-left sm-no-padding-right">
       <div class="well">
       <h3 class="section-title"> <i class="fa fa-search" aria-hidden="true"></i> Student validation</h3>
       <p class=" alert alert-warning"><em>Please make sure you have reviewed the student profile carefully before validating it</em></p>
@@ -98,8 +98,8 @@
                   placeholder="{!! trans('validate.comment') !!}" required
                   value="{{ old('comment', $student->validation_comment) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-area-form>
-                              <hr>
-            <button type="submit" class="btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Finish validation</button>
+            <hr>
+            <button type="button" class="btn btn-primary finish-validation-button"><i class="fa fa-check" aria-hidden="true"></i> Finish validation</button>
 
           </form>
 
@@ -116,8 +116,8 @@
                               values='{!! json_encode($reasons, JSON_HEX_APOS) !!}'
                               value="{{ old('reason') }}"
                               errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></select-form>
-                              <hr>
-            <button type="submit" class="btn btn-primary"><i class="fa fa-times" aria-hidden="true"></i> Finish validation</button>
+            <hr>
+            <button type="button" class="btn btn-primary finish-validation-button"><i class="fa fa-times" aria-hidden="true"></i> Finish validation</button>
 
           </form>
 
