@@ -46,3 +46,30 @@ if (document.querySelector('.v-container')) {
             AlertButton },
     })
 }
+
+$(function() {
+    var get_confirm_config = function (form) {
+        return {
+            title: 'Confirm Validation',
+            content: 'Are you sure you want to finish refereeing this student?',
+            backgroundDismiss: true,
+            buttons: {
+                yes: {
+                    text: 'Yes',
+                    btnClass: 'btn-info',
+                    action: function() {
+                        form.submit();
+                        return true;
+                    }
+                },
+                no: {
+                    text: 'No',
+                }
+            }
+        }
+    };
+    $('.finish-validation-button').on('click', function () {
+        var confirm_config = get_confirm_config($(this).parents('form'));
+        $.confirm(confirm_config);
+    });
+});
