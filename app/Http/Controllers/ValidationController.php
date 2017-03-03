@@ -84,7 +84,7 @@ class ValidationController extends Controller
                     $student->valid = ValidationRequest::$status[2];
                     $student->save();
                 } else {
-                    $student->valid = null;
+                    $student->valid = ValidationRequest::$status[0];
                     $student->save();
                     $validation->delete();
                     $request->session()->flash('error_message', sprintf('The validation was removed because you indicated that %s wasn\'t a student from this institution', $studentName));
