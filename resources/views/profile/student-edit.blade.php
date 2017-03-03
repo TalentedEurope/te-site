@@ -32,7 +32,9 @@
           <span class="number p-50 @if (!$user->userable->validationRequest) disabled @endif">2</span>
           <span class="name p-50 @if (!$user->userable->validationRequest) disabled @endif">Refer your profile</span>
           <span class="number p-100 @if ($user->userable->valid == 'denied') invalid @elseif ($user->userable->valid != 'validated') disabled @endif">3</span>
-          <span class="name p-100 @if ($user->userable->valid != 'validated' && $user->userable->valid != 'denied') disabled @endif">@if ($user->userable->valid == 'denied') Not refereed @else Completed @endif</span>
+          <span class="name p-100 @if ($user->userable->valid != 'validated' && $user->userable->valid != 'denied') disabled @endif">
+            @if ($user->userable->valid == 'denied') Not refereed @else Completed @endif
+          </span>
         </div>
 
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">
