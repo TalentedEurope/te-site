@@ -29,8 +29,7 @@ class StaticController extends Controller
         if ($user) {
             return redirect(route('view_profile'));
         }
-
-        return view('static.home');
+        return $this->getLanding();
     }
 
     /**
@@ -40,19 +39,18 @@ class StaticController extends Controller
      */
     public function getLanding()
     {
-        $user = Auth::user();
-        if ($user) {
-            return redirect(route('view_profile'));
-        }
+        $companies = Company::getRandom();
+        $institutions = Institution::getRandom();
+        $logos = $companies->merge($institutions)->shuffle();
+
         $data = array(
             'cities' => User::getCityCoordinates()->toJSON(),
             'alerts' => Alert::getCount(),
+            'logos' => $logos,
             'studentsCount' => User::getCount(Student::class),
             'companiesCount' => User::getCount(Company::class),
             'institutionsCount' => User::getCount(Institution::class),
             'recentStudents' => Student::getRecent(),
-            'companies' => Company::getRandom(),
-            'institutions' => Institution::getRandom(),
             'talentQuote' => Company::getRandomTalent()
         );
         $data['totalUserCount'] = $data['studentsCount'] + $data['companiesCount'] + $data['institutionsCount'];
