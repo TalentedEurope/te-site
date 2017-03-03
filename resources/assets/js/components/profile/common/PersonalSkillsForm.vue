@@ -4,21 +4,19 @@
         <p v-if="sublabel">{{ sublabel }}</p>
 
         <ul class="selected-skills list-unstyled" v-show="selectedSkills.length > 0">
-            <li class="btn btn-default" v-for="skill in selectedSkills">
+            <li class="btn" v-for="skill in selectedSkills">
                 <input type="hidden" name="personalSkills[]" :value="skill.id"/>
                 {{ skill.name }}
-                <a title="Remove personal skill" @click.prevent="removeSkill(skill)"><i class="fa fa-close" aria-hidden="true"></i></a>
+                <a title="Remove personal skill" v-if="!readonly" @click.prevent="removeSkill(skill)"><i class="fa fa-close" aria-hidden="true"></i></a>
             </li>
         </ul>
 
-        <div class="select-holder">
+        <div class="select-holder" v-if="!readonly">
             <select v-model="selected_skill" id="personalSkillsSelect" :disabled="selected_skills.length >= max_personal_skills" class="form-control">
                 <option :value="null"> - Personal skills - </option>
                 <option v-for="skill in posibleSkills" :value="skill">{{ skill.name }}</option>
             </select>
         </div>
-
-        <!-- <button @click.prevent="addSelectedSkill()">Add</button> -->
 
         <span v-if="has_error" class="help-block">
             <strong>{{error_message}}</strong>
@@ -86,9 +84,21 @@ export default {
 };
 </script>
 
-<style scoped>
-.selected-skills .btn-default {
+<style lang="sass" scoped>
+.selected-skills .btn {
     margin-right: 5px;
     margin-bottom: 5px;
+    cursor: default;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+
+    &:active {
+        box-shadow: none;
+    }
+
+    a {
+        cursor: pointer;
+    }
 }
 </style>

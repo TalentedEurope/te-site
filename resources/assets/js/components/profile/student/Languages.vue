@@ -16,10 +16,12 @@
             <select-form code="level" group-code="languages" :group-id="language.id" label="Language level"
                 required placeholder=" - Language level - " :values="languageLevels" :value="language.level" :disabled="!!language.locked" :errors="errors"></select-form>
 
-            <hr>
-            <file-form code="certificate" group-code="languages" :group-id="language.id" :label="$t('reg-profile.student_certificate')"
-                download-text="Download Certificate" :has-file="language.certificate"
-                :file-url="getFileUrl(language.id, 'certificate')" :readonly="!!language.locked" :errors="errors"></file-form>
+            <div v-if="language.certificate || !language.locked">
+                <hr>
+                <file-form code="certificate" group-code="languages" :group-id="language.id" :label="$t('reg-profile.student_certificate')"
+                    download-text="Download Certificate" :has-file="language.certificate"
+                    :file-url="getFileUrl(language.id, 'certificate')" :readonly="!!language.locked" :errors="errors"></file-form>
+            </div>
             <hr>
         </div>
 

@@ -3,7 +3,7 @@
         <label for="professionalSkillsInput">{{ $t('reg-profile.student_professional_skills') }} (max {{ max_professional_skills }})</label>
 
         <ul class="selected-skills list-unstyled" v-show="selected_items.length > 0">
-            <li class="btn btn-default" v-for="skill in selected_items">
+            <li class="btn" v-for="skill in selected_items">
                 <input type="hidden" name="professionalSkills[]" :value="skill.name"/>
                 {{ skill.name }}
                 <a title="Remove professional skill" @click.prevent="removeSkill(skill)"><i class="fa fa-close" aria-hidden="true"></i></a>
@@ -137,10 +137,23 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.selected-skills .btn-default {
+.selected-skills .btn {
     margin-right: 5px;
     margin-bottom: 5px;
+    cursor: default;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+
+    &:active {
+        box-shadow: none;
+    }
+
+    a {
+        cursor: pointer;
+    }
 }
+
 .no-padding {
     padding: 0;
 }
