@@ -14,6 +14,7 @@ use App\Notifications\InstitutionRemoved;
 use App\Notifications\InviteCreated;
 use App\Notifications\ChangeInstitution;
 use Validator;
+use Response;
 
 class ValidatorController extends Controller
 {
@@ -172,11 +173,9 @@ class ValidatorController extends Controller
             $val->institution_id = null;
             $val->save();
             $val->user->notify(new InstitutionRemoved($val->user, Auth::user()->userable));
-            $request->session()->flash('success_message', sprintf('Removed %s from institution', $val->user->fullName));
-        } else {
-            $request->session()->flash('error_message', 'Cannot find user to remove from institution, please try again later');
+            return Response::json($val, 200);
         }
-        return back();
+        return Response::json('Cannot find user', 404);
     }
 
 
