@@ -407,16 +407,33 @@
     <script>
       function initMap() {
           var map_points = document.querySelector('meta[name="mapPoints"]').getAttribute("content");
-
+          map_points = [
+              {"city": "Puerto de la Cruz", "latitude":"28.383333", "longitude":"-16.550000"},
+              {"city": "Tegueste", "latitude": "28.516667", "longitude": "-16.316667"},
+              {"city": "Santa Cruz de Tenerife", "latitude": "28.460238", "longitude": "-16.280616"},
+              {"city": "C\u00f3rdoba", "latitude": "37.891550", "longitude": "-4.772748"},
+              {"city": "Szeged", "latitude": "46.250000", "longitude": "20.166667"}];
           var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 4,
               center: {lat: 50.866667, lng: 6.333333},
               scrollwheel: false,
           });
 
+          var icon = {
+            path: 'm23.177,0c-9.339582,0 -16.911,8.243 -16.911,18.411c0,9.224 10.536423,21.36 14.976582,26.065c1.087536,1.15 2.807018,1.174 3.91568,0.047c4.466797,-4.533 14.929737,-16.211 14.929737,-26.113c-0.000919,-10.167 -7.571418,-18.41 -16.911,-18.41zm0,24.393c-3.861487,0 -6.98999,-3.406 -6.98999,-7.609s3.128503,-7.61 6.98999,-7.61c3.860569,0 6.988153,3.406 6.988153,7.61s-3.127584,7.609 -6.988153,7.609z',
+      	    fillColor: '#2f70b1',
+      	    fillOpacity: 0.9,
+            strokeColor: '#184069',
+      	    strokeWeight: 1
+            scale: 0.6,
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(23, 49),
+      	  };
+
           for (i = 0; i < map_points.length; i++) {
               new google.maps.Marker({
                   position: {lat: parseFloat(map_points[i]["latitude"]), lng: parseFloat(map_points[i]["longitude"])},
+                  icon: icon,
                   map: map,
                   title: ''
               });
