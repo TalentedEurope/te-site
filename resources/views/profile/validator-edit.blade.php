@@ -33,7 +33,7 @@
               <text-box-form code="name" label="{!! trans('reg-profile.name') !!}" placeholder="{!! trans('reg-profile.name') !!}" value="{{ old('name', $user->name) }}"
                   required errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
-              <text-box-form code="surname" label="{!! trans('reg-profile.surname') !!}" placeholder="{!! trans('reg-profile.surname') !!}" value="{{ old('name', $user->surname) }}"
+              <text-box-form code="surname" label="{!! trans('reg-profile.surname') !!}" placeholder="{!! trans('reg-profile.surname') !!}" value="{{ old('surname', $user->surname) }}"
                   required errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <text-box-form code="email" label="{!! trans('reg-profile.email') !!}" placeholder="{!! trans('reg-profile.email') !!}" readonly
@@ -55,7 +55,7 @@
 
               <h4>My Institution</h4>
               @if ($validator->institution)
-              <text-box-form code="email" label="{!! trans('reg-profile.institution') !!}" placeholder="{!! trans('reg-profile.institution') !!}" readonly
+              <text-box-form code="institution_name" label="{!! trans('reg-profile.institution') !!}" placeholder="{!! trans('reg-profile.institution') !!}" readonly
                     value="{{ old('institution', $validator->institution->user->name) }}"
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
               @endif

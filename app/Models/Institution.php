@@ -14,7 +14,7 @@ class Institution extends Model
         $filter = array(
             'overseer' => 'sometimes|required',
             'type' => 'sometimes|required|in:'.implode(',', Institution::$types),
-            'pic' => 'sometimes|required',
+            'pic' => 'numeric',
             'fiscal_id' => 'sometimes|required|alpha_dash',
             'certificate' => 'sometimes|required|mimes:pdf,jpg,png'
         );
