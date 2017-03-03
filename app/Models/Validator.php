@@ -48,6 +48,9 @@ class Validator extends Model
         if (!$this->institution->user) {
             return false;
         }
+        if (!$this->institution) {
+            return false;
+        }
         if (!$this->institution->user->is_filled) {
             return false;
         }

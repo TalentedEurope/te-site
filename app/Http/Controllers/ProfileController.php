@@ -180,7 +180,7 @@ class ProfileController extends Controller
 
         $errors = $errors->merge($v);
         foreach ($v->valid() as $key => $value) {
-            if (array_has($user['attributes'], $key) && !$request->has('validate')) {
+            if ($key != 'email' && array_has($user['attributes'], $key) && !$request->has('validate')) {
                 $user->$key = $value;
             }
         }
@@ -346,6 +346,7 @@ class ProfileController extends Controller
         $errors = $errors->merge($v);
 
         $user->is_filled = false;
+
         $uFilledVal = Validator::make($user->toArray(), User::Rules(false, true));
         $filledVal = Validator::make($validator->toArray(), \App\Models\Validator::rules($validator));
         if ($uFilledVal->passes() && $filledVal->passes()) {
