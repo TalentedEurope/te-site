@@ -200,55 +200,30 @@
     @endif
 
 
+    @if ($logos->count())
     <section class="logos-carousel-section content-section col-md-12">
       <div class="content">
-        <ul class="nav nav-tabs text-center">
-          <li role="presentation" class="active">
-            <a href="#companies-logos" aria-controls="profile" role="tab" data-toggle="tab">
-              <i class="fa fa-building" aria-hidden="true"></i>
-              <div>Companies</div>
-            </a>
-          </li>
-          <li role="presentation">
-            <a href="#institutions-logos" aria-controls="profile" role="tab" data-toggle="tab">
-              <i class="fa fa-university" aria-hidden="true"></i>
-              <div>Institutions</div>
-            </a>
-          </li>
-        </ul>
+        <h3 class="text-center">{!! trans('landing.companies_institutions') !!}</h3>
 
-        <div class="tab-content">
-          <div role="tabpanel" id="companies-logos" class="@if ($companies->count()) companies-logos @endif tab-pane active">
-            @if ($companies->count())
-              @foreach ($companies as $company)
-                <a href="{{ route('get_profile', [str_slug($company->user->name),$company->user->id]) }}">
-                <img width="150" src="{{ asset('uploads/photo/'.$company->user->image) }}"/>
-                </a>
-              @endforeach
+        <div  id="companies-logos" class="companies-logos">
+          @foreach ($logos as $logo)
+            @if ($logo->user->userable_type == \App\Models\Company::class)
+            <a href="{{ route('get_profile', [str_slug($logo->user->name),$logo->user->id]) }}">
+            <img width="150" src="{{ asset('uploads/photo/'.$logo->user->image) }}"/>
+            </a>
             @else
-              <p class="h2 text-center">No companies available</p>
+            <img width="150" src="{{ asset('uploads/photo/'.$logo->user->image) }}"/>
             @endif
-          </div>
-
-          <div role="tabpanel" id="institutions-logos" class="tab-pane @if ($institutions->count()) institutions-logos @endif">
-            @if ($institutions->count())
-              @foreach ($institutions as $institution)
-                <a href="{{ route('get_profile', [str_slug($institution->user->name),$institution->user->id]) }}">
-                <img width="150" src="{{ asset('uploads/photo/'.$institution->user->image) }}"/>
-                </a>
-              @endforeach
-            @else
-              <p class="h2 text-center">No institutions available</p>
-            @endif
-          </div>
+          @endforeach
         </div>
       </div>
     </section>
+    @endif
 
 
     <section class="stadistics-section content-section col-md-12">
       <div class="content">
-        <h1 class="text-center">Stadistics</h1>
+        <h1 class="text-center">{!! trans('landing.statistics_title') !!}</h1>
         <div class="stadistics-box clearfix">
           <div class="col-xs-3 col-sm-3 text-center">
             <div class="c100 p73 yellow small center">
@@ -258,40 +233,40 @@
                 <div class="fill"></div>
               </div>
             </div>
-            <p>Contacts between students and companies</p>
+            <p>{!! trans('landing.contacts') !!}</p>
           </div>
 
           <div class="col-xs-3 col-sm-3 text-center">
             <div class="c100 p{{ round($studentsCount/$totalUserCount*100) }} small center">
-              <span>{{ round($studentsCount/$totalUserCount*100) }}%</span>
+              <span>{{ round($studentsCount/$totalUserCount*100,2) }}%</span>
               <div class="slice">
                 <div class="bar"></div>
                 <div class="fill"></div>
               </div>
             </div>
-            <p>Students</p>
+            <p>{!! trans('global.student') !!}</p>
           </div>
 
           <div class="col-xs-3 col-sm-3 text-center">
             <div class="c100 p{{ round($companiesCount/$totalUserCount*100) }} yellow small center">
-              <span>{{ round($companiesCount/$totalUserCount*100) }}%</span>
+              <span>{{ round($companiesCount/$totalUserCount*100,2) }}%</span>
               <div class="slice">
                 <div class="bar"></div>
                 <div class="fill"></div>
               </div>
             </div>
-            <p>Companies</p>
+            <p>{!! trans('global.company') !!}</p>
           </div>
 
           <div class="col-xs-3 col-sm-3 text-center">
             <div class="c100 p{{ round($institutionsCount/$totalUserCount*100) }} small center">
-              <span>{{ $institutionsCount/$totalUserCount*100 }}%</span>
+              <span>{{ round($institutionsCount/$totalUserCount*100,2) }}%</span>
               <div class="slice">
                 <div class="bar"></div>
                 <div class="fill"></div>
               </div>
             </div>
-            <p>Institutions</p>
+            <p>{!! trans('global.institution') !!}</p>
           </div>
         </div>
       </div>
@@ -305,7 +280,7 @@
 
     <section class="students-section content-section col-md-12">
       <div class="content">
-        <h1 class="text-center">Recent students</h1>
+        <h1 class="text-center">{!! trans('landing.students_title') !!}</h1>
         <div class="students-box clearfix">
           @if ($recentStudents->count())
             @foreach ($recentStudents as $student)
@@ -319,7 +294,7 @@
           @endif
         </div>
         <div class="text-center">
-          <a class="button" href="{{ route('searchStudents') }}">View More</a>
+          <a class="button" href="{{ route('searchStudents') }}">{!! trans('global.more_btn') !!}</a>
         </div>
       </div>
     </section>
@@ -365,10 +340,10 @@
             <img class="te-logo" src="{{ asset('img/logo-header.png') }}" alt="{{ env('SITE_TITLE','Talented Europe') }}">
           </a>
           <ul class="navigation" role="nav">
-            <li><a href="{{ url('/') }}">Home</a></li>
-            <li><a href="http://blog.talentedeurope.eu" target="_blank">Blog</a></li>
-            <li><a href="{{ url('/cookies') }}">Cookies</a></li>
-            <li><a href="{{ url('/privacy-policy') }}">Privacy Policy</a></li>
+            <li><a href="{{ url('/') }}">{!! trans('global.home') !!}</a></li>
+            <li><a href="http://blog.talentedeurope.eu" target="_blank">{!! trans('global.blog') !!}</a></li>
+            <li><a href="{{ url('/cookies') }}">{!! trans('global.cookies') !!}</a></li>
+            <li><a href="{{ url('/privacy-policy') }}">{!! trans('global.privacy_policy') !!}</a></li>
           </ul>
           <ul class="navigation">
             <li>
@@ -392,7 +367,7 @@
           </ul>
         </div>
         <div class="col-sm-6">
-          <h3>Partners</h3>
+          <h3>{!! trans('global.footer_partners') !!}</h3>
 
           <ul class="partner-list">
             <li><a target="_blank" href="http://erasmusplus.iespuertodelacruz.es"><img src="/img/logo-iespto.png" alt="IES Puerto de la Cruz"></a></li>
