@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use Carbon\Carbon;
 
 class ValidationRequest extends Model
 {
@@ -60,5 +61,10 @@ class ValidationRequest extends Model
     public function routeNotificationForMail()
     {
         return $this->validator_email;
+    }
+
+    public static function cleanup()
+    {
+        return ValidationRequest::where('created_at', '<=', Carbon::now()->subDays(env('CLEANUP_DAYS', 14)))->delete();
     }
 }

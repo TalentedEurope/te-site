@@ -244,7 +244,7 @@
                 <div class="fill"></div>
               </div>
             </div>
-            <p>{!! trans('global.student') !!}</p>
+            <p>{!! trans('global.student_plural') !!}</p>
           </div>
 
           <div class="col-xs-3 col-sm-3 text-center">
@@ -255,7 +255,7 @@
                 <div class="fill"></div>
               </div>
             </div>
-            <p>{!! trans('global.company') !!}</p>
+            <p>{!! trans('global.company_plural') !!}</p>
           </div>
 
           <div class="col-xs-3 col-sm-3 text-center">
@@ -266,7 +266,7 @@
                 <div class="fill"></div>
               </div>
             </div>
-            <p>{!! trans('global.institution') !!}</p>
+            <p>{!! trans('global.institution_plural') !!}</p>
           </div>
         </div>
       </div>
@@ -347,7 +347,7 @@
           </ul>
           <ul class="navigation">
             <li>
-            Follow us:
+            {!! trans('global.follow_us') !!}
             </li>
             <li>
               <a href="https://www.facebook.com/Talented-Europe-839419182764068/">
