@@ -11,7 +11,6 @@
     <meta content="{{ URL::to('/') }}" name="url" property="og:url" />
     <meta content="website" name="type" property="og:type" />
     <meta content="{{ URL::asset('img/logo-header.png') }}" name="image" property="og:image" />
-    <meta name="mapPoints" id="mapPoints" content='{!! $cities !!}'>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
 
@@ -406,13 +405,8 @@
 
     <script>
       function initMap() {
-          var map_points = document.querySelector('meta[name="mapPoints"]').getAttribute("content");
-          map_points = [
-              {"city": "Puerto de la Cruz", "latitude":"28.383333", "longitude":"-16.550000"},
-              {"city": "Tegueste", "latitude": "28.516667", "longitude": "-16.316667"},
-              {"city": "Santa Cruz de Tenerife", "latitude": "28.460238", "longitude": "-16.280616"},
-              {"city": "C\u00f3rdoba", "latitude": "37.891550", "longitude": "-4.772748"},
-              {"city": "Szeged", "latitude": "46.250000", "longitude": "20.166667"}];
+          var map_points = {!! $cities !!};
+
           var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 4,
               center: {lat: 50.866667, lng: 6.333333},
@@ -424,19 +418,19 @@
       	    fillColor: '#2f70b1',
       	    fillOpacity: 0.9,
             strokeColor: '#184069',
-      	    strokeWeight: 1
+      	    strokeWeight: 1,
             scale: 0.6,
             origin: new google.maps.Point(0, 0),
             anchor: new google.maps.Point(23, 49),
       	  };
 
           for (i = 0; i < map_points.length; i++) {
-              new google.maps.Marker({
-                  position: {lat: parseFloat(map_points[i]["latitude"]), lng: parseFloat(map_points[i]["longitude"])},
-                  icon: icon,
-                  map: map,
-                  title: ''
-              });
+            new google.maps.Marker({
+              position: {lat: parseFloat(map_points[i]["latitude"]), lng: parseFloat(map_points[i]["longitude"])},
+              icon: icon,
+              map: map,
+              title: ''
+            });
           }
       }
     </script>
