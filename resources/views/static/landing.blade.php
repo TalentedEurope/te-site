@@ -205,7 +205,7 @@
       <div class="content">
         <h3 class="text-center">{!! trans('landing.companies_institutions') !!}</h3>
 
-        <div  id="companies-logos" class="companies-logos">
+        <div class="companies-and-institutions-logos">
           @foreach ($logos as $logo)
             @if ($logo->user->userable_type == \App\Models\Company::class)
             <a href="{{ route('get_profile', [str_slug($logo->user->name),$logo->user->id]) }}">
@@ -225,48 +225,52 @@
       <div class="content">
         <h1 class="text-center">{!! trans('landing.statistics_title') !!}</h1>
         <div class="stadistics-box clearfix">
-          <div class="col-xs-3 col-sm-3 text-center">
-            <div class="c100 p73 yellow small center">
-              <span>{{ $alerts }}</span>
-              <div class="slice">
-                <div class="bar"></div>
-                <div class="fill"></div>
+          <div class="col-xs-12 col-sm-6 sm-no-padding-left sm-no-padding-right">
+            <div class="col-xs-6 text-center stadistic">
+              <div class="c100 p73 yellow small center">
+                <span>{{ $alerts }}</span>
+                <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+                </div>
               </div>
+              <p>{!! trans('landing.contacts') !!}</p>
             </div>
-            <p>{!! trans('landing.contacts') !!}</p>
+
+            <div class="col-xs-6 text-center stadistic">
+              <div class="c100 p{{ round($studentsCount/$totalUserCount*100) }} small center">
+                <span>{{ round($studentsCount/$totalUserCount*100,2) }}%</span>
+                <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+                </div>
+              </div>
+              <p>{!! trans('global.student_plural') !!}</p>
+            </div>
           </div>
 
-          <div class="col-xs-3 col-sm-3 text-center">
-            <div class="c100 p{{ round($studentsCount/$totalUserCount*100) }} small center">
-              <span>{{ round($studentsCount/$totalUserCount*100,2) }}%</span>
-              <div class="slice">
-                <div class="bar"></div>
-                <div class="fill"></div>
+          <div class="col-xs-12 col-sm-6 sm-no-padding-left sm-no-padding-right">
+            <div class="col-xs-6 text-center stadistic">
+              <div class="c100 p{{ round($companiesCount/$totalUserCount*100) }} yellow small center">
+                <span>{{ round($companiesCount/$totalUserCount*100,2) }}%</span>
+                <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+                </div>
               </div>
+              <p>{!! trans('global.company_plural') !!}</p>
             </div>
-            <p>{!! trans('global.student_plural') !!}</p>
-          </div>
 
-          <div class="col-xs-3 col-sm-3 text-center">
-            <div class="c100 p{{ round($companiesCount/$totalUserCount*100) }} yellow small center">
-              <span>{{ round($companiesCount/$totalUserCount*100,2) }}%</span>
-              <div class="slice">
-                <div class="bar"></div>
-                <div class="fill"></div>
+            <div class="col-xs-6 text-center stadistic">
+              <div class="c100 p{{ round($institutionsCount/$totalUserCount*100) }} small center">
+                <span>{{ round($institutionsCount/$totalUserCount*100,2) }}%</span>
+                <div class="slice">
+                  <div class="bar"></div>
+                  <div class="fill"></div>
+                </div>
               </div>
+              <p>{!! trans('global.institution_plural') !!}</p>
             </div>
-            <p>{!! trans('global.company_plural') !!}</p>
-          </div>
-
-          <div class="col-xs-3 col-sm-3 text-center">
-            <div class="c100 p{{ round($institutionsCount/$totalUserCount*100) }} small center">
-              <span>{{ round($institutionsCount/$totalUserCount*100,2) }}%</span>
-              <div class="slice">
-                <div class="bar"></div>
-                <div class="fill"></div>
-              </div>
-            </div>
-            <p>{!! trans('global.institution_plural') !!}</p>
           </div>
         </div>
       </div>
@@ -409,16 +413,27 @@
               {"city": "Santa Cruz de Tenerife", "latitude": "28.460238", "longitude": "-16.280616"},
               {"city": "C\u00f3rdoba", "latitude": "37.891550", "longitude": "-4.772748"},
               {"city": "Szeged", "latitude": "46.250000", "longitude": "20.166667"}];
-
           var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 4,
               center: {lat: 50.866667, lng: 6.333333},
               scrollwheel: false,
           });
 
+          var icon = {
+            path: 'm23.177,0c-9.339582,0 -16.911,8.243 -16.911,18.411c0,9.224 10.536423,21.36 14.976582,26.065c1.087536,1.15 2.807018,1.174 3.91568,0.047c4.466797,-4.533 14.929737,-16.211 14.929737,-26.113c-0.000919,-10.167 -7.571418,-18.41 -16.911,-18.41zm0,24.393c-3.861487,0 -6.98999,-3.406 -6.98999,-7.609s3.128503,-7.61 6.98999,-7.61c3.860569,0 6.988153,3.406 6.988153,7.61s-3.127584,7.609 -6.988153,7.609z',
+      	    fillColor: '#2f70b1',
+      	    fillOpacity: 0.9,
+            strokeColor: '#184069',
+      	    strokeWeight: 1
+            scale: 0.6,
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(23, 49),
+      	  };
+
           for (i = 0; i < map_points.length; i++) {
               new google.maps.Marker({
                   position: {lat: parseFloat(map_points[i]["latitude"]), lng: parseFloat(map_points[i]["longitude"])},
+                  icon: icon,
                   map: map,
                   title: ''
               });

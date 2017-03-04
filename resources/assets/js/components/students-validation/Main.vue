@@ -6,7 +6,7 @@
         <table v-if="students.length > 0" class="table table-striped table-hover table-responsive">
             <thead>
                 <tr>
-                    <th>{{ $t('global.student') }}</th>
+                    <th>{{ $tc('global.student', 1) }}</th>
                     <th>Date of request</th>
                     <th>Status</th>
                 </tr>
@@ -14,7 +14,7 @@
             <tbody>
                 <tr v-for="student in students">
                     <td>
-                        <a href="">{{student.full_name}}</a>
+                        <a href="{{student.validation_url}}">{{student.full_name}}</a>
                     </td>
                     <td>{{student.date_of_request}}</td>
                     <td>
