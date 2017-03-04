@@ -385,7 +385,7 @@ class ProfileController extends Controller
                 $ids = array();
                 foreach ($studies as $study) {
                     $study = StudentStudy::find($study);
-                    if ($study && $study->created_at > $validationReqDate) {
+                    if ($study && !$study->locked) {
                         $ids[] = $study->id;
                     }
                 }
@@ -401,7 +401,7 @@ class ProfileController extends Controller
                 $ids = array();
                 foreach ($langs as $lang) {
                     $lang = StudentLanguage::find($lang);
-                    if ($lang && $lang->created_at > $validationReqDate) {
+                    if ($lang && !$lang->locked) {
                         $ids[] = $lang->id;
                     }
                 }
@@ -417,7 +417,7 @@ class ProfileController extends Controller
                 $ids = array();
                 foreach ($trainings as $training) {
                     $training = StudentTraining::find($training);
-                    if ($training && $training->created_at > $validationReqDate) {
+                    if ($training && !$training->locked) {
                         $ids[] = $training->id;
                     }
                 }
@@ -433,7 +433,7 @@ class ProfileController extends Controller
                 $ids = array();
                 foreach ($experiences as $experience) {
                     $experience = StudentExperience::find($experience);
-                    if ($experience && $experience->created_at > $validationReqDate) {
+                    if ($experience && !$experience->locked) {
                         $ids[] = $experience->id;
                     }
                 }
@@ -469,14 +469,20 @@ class ProfileController extends Controller
             foreach ($v->valid()['studies'] as $key => $stud) {
                 $itemVal = Validator::make($stud, Student::rulesRelated('studies'));
                 $study = new StudentStudy();
-                if (!$request->has('validate')) {
-                    if (isset($stud['id'])) {
-                        $queryLang = StudentStudy::find($stud['id']);
-                        if ($queryLang) {
-                            $study = $queryLang;
-                        }
-                    }
 
+                if (isset($stud['id'])) {
+                    $queryLang = StudentStudy::find($stud['id']);
+                    if ($queryLang) {
+                        $study = $queryLang;
+                    }
+                }
+
+                if (isset($stud['id']) && $study->locked) {
+                    $studyIds[] = $stud['id'];
+                }
+
+
+                if (!$request->has('validate') && !$study->locked) {
                     if (isset($itemVal->valid()['name'])) {
                         $study->name = $stud['name'];
                     }
@@ -527,13 +533,19 @@ class ProfileController extends Controller
             foreach ($v->valid()['trainings'] as $key => $train) {
                 $itemVal = Validator::make($train, Student::rulesRelated('trainings'));
                 $training = new StudentTraining();
-                if (!$request->has('validate')) {
-                    if (isset($train['id'])) {
-                        $queryLang = StudentTraining::find($train['id']);
-                        if ($queryLang) {
-                            $training = $queryLang;
-                        }
+
+                if (isset($train['id'])) {
+                    $queryLang = StudentTraining::find($train['id']);
+                    if ($queryLang) {
+                        $training = $queryLang;
                     }
+                }
+
+                if (isset($train['id']) && $training->locked) {
+                    $trainIds[] = $train['id'];
+                }
+
+                if (!$request->has('validate') && !$training->locked) {
                     if (isset($itemVal->valid()['name'])) {
                         $training->name = $train['name'];
                     }
@@ -565,13 +577,19 @@ class ProfileController extends Controller
             foreach ($v->valid()['languages'] as $key => $lang) {
                 $itemVal = Validator::make($lang, Student::rulesRelated('languages'));
                 $language = new StudentLanguage();
-                if (!$request->has('validate')) {
-                    if (isset($lang['id'])) {
-                        $queryLang = StudentLanguage::find($lang['id']);
-                        if ($queryLang) {
-                            $language = $queryLang;
-                        }
+
+                if (isset($lang['id'])) {
+                    $queryLang = StudentLanguage::find($lang['id']);
+                    if ($queryLang) {
+                        $language = $queryLang;
                     }
+                }
+
+                if (isset($lang['id']) && $language->locked) {
+                    $langIds[] = $lang['id'];
+                }
+
+                if (!$request->has('validate') && !$language->locked) {
                     if (isset($itemVal->valid()['name'])) {
                         $language->name = $lang['name'];
                     }
@@ -603,13 +621,19 @@ class ProfileController extends Controller
             foreach ($v->valid()['experiences'] as $key => $exp) {
                 $itemVal = Validator::make($exp, Student::rulesRelated('experiences'));
                 $experience = new StudentExperience();
-                if (!$request->has('validate')) {
-                    if (isset($exp['id'])) {
-                        $queryExp = StudentExperience::find($exp['id']);
-                        if ($queryExp) {
-                            $experience = $queryExp;
-                        }
+
+                if (isset($exp['id'])) {
+                    $queryExp = StudentExperience::find($exp['id']);
+                    if ($queryExp) {
+                        $experience = $queryExp;
                     }
+                }
+
+                if (isset($exp['id']) && $experience->locked) {
+                    $expIds[] = $exp['id'];
+                }
+
+                if (!$request->has('validate') && !$experience->locked) {
                     if (isset($itemVal->valid()['company'])) {
                         $experience->company = $exp['company'];
                     }
@@ -642,14 +666,14 @@ class ProfileController extends Controller
                 $student->personalSkills()->whereNotIn('id', $skills)->detach();
                 foreach ($skills as $skillID) {
                     $skill = PersonalSkill::find($skillID);
-                    if ($skill && !$student->personalSkills()->find($skillID)) {
+                    if ($skill && !$validationReqDate &&  !$student->personalSkills()->find($skillID)) {
                         $student->personalSkills()->attach($skill);
                     }
                 }
             }
         }
 
-        if ($request->has('remove_all_personal_skills') && !$request->has('validate')) {
+        if ($request->has('remove_all_personal_skills') && !$validationReqDate && !$request->has('validate')) {
             $student->personalSkills()->detach();
         }
 
