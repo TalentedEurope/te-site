@@ -59,11 +59,19 @@ return [
     
         'UK' => 'Vereinigtes Königreich',
     
+        'follow_us' => 'Folge uns',
+    
         'login_btn' => 'Anmelden',
     
         'register_btn' => 'Bitte anmelden',
     
         'search_info' => 'suchen',
+    
+        'company_plural' => 'Unternehmen',
+    
+        'institution_plural' => 'Institutions',
+    
+        'student_plural' => 'Studenten',
     
         'company' => 'Unternehmen|Unternehmen',
     
@@ -72,6 +80,16 @@ return [
         'student' => 'Student|Studenten',
     
         'more_btn' => 'mehr erfahren',
+    
+        'home' => 'Startseite',
+    
+        'blog' => 'Blog',
+    
+        'cookies' => 'Informationen über Cookies',
+    
+        'privacy_policy' => 'Datenschutz-Bestimmungen',
+    
+        'partners' => 'Partners',
     
         'cookie_text' => '',
     

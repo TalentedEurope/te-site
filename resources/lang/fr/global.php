@@ -59,11 +59,19 @@ return [
     
         'UK' => 'le Royaume-Uni',
     
+        'follow_us' => 'Suivez nous',
+    
         'login_btn' => 'le logiciel',
     
         'register_btn' => 'connectez-vous',
     
         'search_info' => 'recherche',
+    
+        'company_plural' => 'Les sociétés',
+    
+        'institution_plural' => 'Les institutions',
+    
+        'student_plural' => 'Les étudiants',
     
         'company' => 'la société|Les sociétés',
     
@@ -72,6 +80,16 @@ return [
         'student' => 'L&apos;étudiant|Les étudiants',
     
         'more_btn' => 'voir plus',
+    
+        'home' => 'Accueil',
+    
+        'blog' => 'Blog',
+    
+        'cookies' => 'Informations sur les cookies',
+    
+        'privacy_policy' => 'Politique de confidentialité',
+    
+        'partners' => 'Partenaires',
     
         'cookie_text' => '',
     

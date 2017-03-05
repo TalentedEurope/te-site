@@ -49,6 +49,12 @@ return [
     
         'statistics_title' => 'Statistiche',
     
+        'contacts' => 'Contatti tra studenti e aziende',
+    
+        'companies_institutions' => 'Aziende e istituzioni',
+    
         'students_title' => 'Studenti di talento',
+    
+        'no_students' => 'Nessuno studente disponibili',
     
 ];

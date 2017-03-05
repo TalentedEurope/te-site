@@ -65,9 +65,11 @@ class ValidatorController extends Controller
 
     public function getInstitutions($countryCode)
     {
-        $institutions = Institution::whereHas('user', function ($query) use ($countryCode) {
-            $query->where('country', $countryCode);
-        })->get();
+        $institutionsIds = Institution::whereHas('user', function ($query) use ($countryCode) {
+                    $query->where('country', $countryCode);
+        })->join('validators', 'validators.institution_id', '=', 'institutions.id')->where('validators.enabled', 1)->select('institutions.id')->get();
+
+        $institutions = Institution::whereIn('id', $institutionsIds)->get();
         return $institutions->map(
             function ($institution) {
                 return ['id' => $institution->id,

@@ -47,8 +47,14 @@ return [
     
         'search_btn' => 'Buscar',
     
-        'statistics_title' => 'Estadística',
+        'statistics_title' => 'Estadísticas',
+    
+        'contacts' => 'Contactos entre estudiantes y empresas',
+    
+        'companies_institutions' => 'Empresas e Instituciones',
     
         'students_title' => 'Estudiantes talentosos',
+    
+        'no_students' => 'No hay estudiantes',
     
 ];

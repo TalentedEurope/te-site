@@ -209,9 +209,7 @@ class ProfileController extends Controller
             unlink($fname);
             $fname .= '.jpg';
             $img = Image::make($request->file('image'))
-            ->resize(User::$photoWidth, User::$photoHeight, function ($constraint) {
-                $constraint->aspectRatio();
-            })->save($fname);
+            ->fit(User::$photoWidth, User::$photoHeight)->save($fname);
             $user->image = basename($fname);
         }
         if (!$request->has('validate')) {
@@ -967,7 +965,7 @@ class ProfileController extends Controller
             $lowestValidatorId = null;
             foreach ($ins->validators as $val) {
                 $count = $val->validationRequest->count();
-                if ($count < $lowest) {
+                if ($count < $lowest && $val->enabled) {
                     $lowest = $count;
                     $lowestValidatorId = $val->id;
                     if ($lowest == 0) {

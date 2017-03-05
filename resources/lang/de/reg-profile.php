@@ -129,102 +129,102 @@ return [
     
         'forgot_password' => 'Password vergessen?',
     
-        'administration' => '',
+        'administration' => 'Administration',
     
-        'architecture-amp-construction' => '',
+        'architecture-amp-construction' => 'Architektur und Bauwesen',
     
-        'art-amp-culture' => '',
+        'art-amp-culture' => 'Kunst und Kultur',
     
-        'banking-and-or-finance-amp-insurance' => '',
+        'banking-and-or-finance-amp-insurance' => 'Bankwesen, Finanzen und Versicherungswesen',
     
-        'business-amp-consulting' => '',
+        'business-amp-consulting' => 'Handels- und Beratungstätigkeit',
     
-        'communication-amp-media-amp-pr' => '',
+        'communication-amp-media-amp-pr' => 'Kommunikatio, Medien und PR',
     
-        'consumer-goods' => '',
+        'consumer-goods' => 'Verbrauchsware',
     
-        'customer-service' => '',
+        'customer-service' => 'Kundenservice',
     
-        'design' => '',
+        'design' => 'Design',
     
-        'education-amp-training' => '',
+        'education-amp-training' => 'Ausbildung',
     
-        'engineering' => '',
+        'engineering' => 'Ingenieurwesen',
     
-        'hospitality-amp-tourism' => '',
+        'hospitality-amp-tourism' => 'Fremdenverkehr und Tourismus',
     
-        'human-resources' => '',
+        'human-resources' => 'Human Resources',
     
-        'it-amp-web' => '',
+        'it-amp-web' => 'IT und Web',
     
-        'legal' => '',
+        'legal' => 'Recht',
     
-        'logistics' => '',
+        'logistics' => 'Logistik',
     
-        'manufacturing' => '',
+        'manufacturing' => 'Produktion',
     
-        'marketing-amp-advertising' => '',
+        'marketing-amp-advertising' => 'Marketing und Werbung',
     
-        'medicine-amp-pharmaceutics' => '',
+        'medicine-amp-pharmaceutics' => 'Medizin und Pharmazie',
     
-        'politics' => '',
+        'politics' => 'Politik',
     
-        'quality-assurance-amp-safety' => '',
+        'quality-assurance-amp-safety' => 'Qualitäts- und Sicherheitsmanagement',
     
-        'real-estate' => '',
+        'real-estate' => 'Immobilien',
     
-        'research-amp-development' => '',
+        'research-amp-development' => 'Forschung und Entwicklung',
     
-        'retail-amp-wholesale' => '',
+        'retail-amp-wholesale' => 'Einzel- und Großhandel',
     
-        'sales' => '',
+        'sales' => 'Verkauf',
     
-        'social-work' => '',
+        'social-work' => 'Sozialdienstleistungen',
     
-        'sport-and-or-health-amp-wellness' => '',
+        'sport-and-or-health-amp-wellness' => 'Sport, Gesundheit und Wellness',
     
-        'technology-amp-telecommunications' => '',
+        'technology-amp-telecommunications' => 'Technologie und Telekommunikation',
     
-        'business-studies-and-or-management-science' => '',
+        'business-studies-and-or-management-science' => 'Handelswesen oder Management',
     
-        'engineering-and-or-technology' => '',
+        'engineering-and-or-technology' => 'Ingenieurwesen und Technologien',
     
-        'social-sciences' => '',
+        'social-sciences' => 'Gesellschaftswissenschaften',
     
-        'languages-and-philological-sciences' => '',
+        'languages-and-philological-sciences' => 'Sprache und Philologie',
     
-        'communication-and-information-sciences' => '',
+        'communication-and-information-sciences' => 'Kommunikation und Informationswissenschaften',
     
-        'humanities' => '',
+        'humanities' => 'Geisteswissenschaften',
     
-        'education-and-or-teacher-training' => '',
+        'education-and-or-teacher-training' => 'Ausbildung und Vorbereitung von Lehrern',
     
-        'law' => '',
+        'law' => 'Recht',
     
-        'art-and-design' => '',
+        'art-and-design' => 'Kunst und Design',
     
-        'architecture-and-or-urban-and-regional-planning' => '',
+        'architecture-and-or-urban-and-regional-planning' => 'Achitektur und/oder urbane und regionale Plannung',
     
-        'natural-sciences' => '',
+        'natural-sciences' => 'Naturwissenschaften',
     
-        'mathematics-and-or-informatics' => '',
+        'mathematics-and-or-informatics' => 'Mathematik und Informatik',
     
-        'medical-sciences' => '',
+        'medical-sciences' => 'Medizinwissenschaften',
     
-        'geography-and-or-geology' => '',
+        'geography-and-or-geology' => 'Geografie und/oder Geologie',
     
-        'agriculture-sciences' => '',
+        'agriculture-sciences' => 'Landwirtschaftswissenschaften',
     
-        'Lang_level_A1' => '',
+        'Lang_level_A1' => 'A1: Nullanfänger',
     
-        'Lang_level_A2' => '',
+        'Lang_level_A2' => 'A2: Anfänger',
     
-        'Lang_level_B1' => '',
+        'Lang_level_B1' => 'B1: Leicht Fortgeschritten',
     
-        'Lang_level_B2' => '',
+        'Lang_level_B2' => 'B2: Mäßig Fortgeschritten',
     
-        'Lang_level_C1' => '',
+        'Lang_level_C1' => 'C1: Fortgeschritten',
     
-        'Lang_level_C2' => '',
+        'Lang_level_C2' => 'C2: Expert',
     
 ];

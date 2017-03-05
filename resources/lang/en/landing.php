@@ -49,6 +49,12 @@ return [
     
         'statistics_title' => 'Statistics',
     
+        'contacts' => 'Contacts between students and companies',
+    
+        'companies_institutions' => 'Companies and Institutions',
+    
         'students_title' => 'Talented students',
+    
+        'no_students' => 'No students available',
     
 ];
