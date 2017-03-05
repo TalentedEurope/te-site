@@ -237,8 +237,16 @@
             </div>
 
             <div class="col-xs-6 text-center stadistic">
+              @if ($studentsCount)
               <div class="c100 p{{ round($studentsCount/$totalUserCount*100) }} small center">
+              @else
+              <div class="c100 p0 small center">
+              @endif
+                @if ($studentsCount)
                 <span>{{ round($studentsCount/$totalUserCount*100,2) }}%</span>
+                @else
+                <span>0%</span>
+                @endif
                 <div class="slice">
                   <div class="bar"></div>
                   <div class="fill"></div>
@@ -250,8 +258,16 @@
 
           <div class="col-xs-12 col-sm-6 sm-no-padding-left sm-no-padding-right">
             <div class="col-xs-6 text-center stadistic">
+            @if ($companiesCount)
               <div class="c100 p{{ round($companiesCount/$totalUserCount*100) }} yellow small center">
+            @else
+              <div class="c100 p0 yellow small center">
+            @endif
+                @if ($companiesCount)
                 <span>{{ round($companiesCount/$totalUserCount*100,2) }}%</span>
+                @else
+                <span>0%</span>
+                @endif
                 <div class="slice">
                   <div class="bar"></div>
                   <div class="fill"></div>
@@ -261,8 +277,16 @@
             </div>
 
             <div class="col-xs-6 text-center stadistic">
+              @if ($institutionsCount)
               <div class="c100 p{{ round($institutionsCount/$totalUserCount*100) }} small center">
+              @else
+              <div class="c100 p0 small center">
+              @endif
+                @if ($institutionsCount)
                 <span>{{ round($institutionsCount/$totalUserCount*100,2) }}%</span>
+                @else
+                <span>0%</span>
+                @endif
                 <div class="slice">
                   <div class="bar"></div>
                   <div class="fill"></div>
@@ -292,13 +316,16 @@
               <p>{{ $student->user->FullName }}</p>
               </a>
             @endforeach
+        </div>
           @else
-            <p class="h2">No students available</p>
-          @endif
+            <p class="h2">{{ trans('landing.no_students') }}</p>
         </div>
         <div class="text-center">
           <a class="button" href="{{ route('searchStudents') }}">{!! trans('global.more_btn') !!}</a>
         </div>
+
+          @endif
+
       </div>
     </section>
 

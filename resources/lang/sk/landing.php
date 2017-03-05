@@ -55,4 +55,6 @@ return [
     
         'students_title' => 'Talentovaní študenti',
     
+        'no_students' => 'Inga studenter tillgängliga',
+    
 ];

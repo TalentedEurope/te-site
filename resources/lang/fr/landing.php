@@ -55,4 +55,6 @@ return [
     
         'students_title' => 'les étudiants doués',
     
+        'no_students' => 'Aucun étudiant disponible',
+    
 ];
