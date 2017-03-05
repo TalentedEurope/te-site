@@ -55,4 +55,6 @@ return [
     
         'students_title' => 'Estudiantes talentosos',
     
+        'no_students' => 'No hay estudiantes',
+    
 ];
