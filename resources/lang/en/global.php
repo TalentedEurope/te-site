@@ -59,11 +59,19 @@ return [
     
         'UK' => 'United Kingdom',
     
+        'follow_us' => 'Follow us',
+    
         'login_btn' => 'Login',
     
         'register_btn' => 'Sign up',
     
         'search_info' => 'Search for',
+    
+        'company_plural' => 'Companies',
+    
+        'institution_plural' => 'Institutions',
+    
+        'student_plural' => 'Students',
     
         'company' => 'Company|Companies',
     
@@ -72,6 +80,14 @@ return [
         'student' => 'Student|Students',
     
         'more_btn' => 'View more',
+    
+        'home' => 'Home',
+    
+        'blog' => 'Blog',
+    
+        'cookies' => 'Information about cookies',
+    
+        'privacy_policy' => 'Privacy policy',
     
         'cookie_text' => 'This website uses cookies to help us give you the best experience when you visit. By using this website you consent to our use of these cookies. Find out more about how we use cookies and how to manage them by reading our <a href="/privacy-policy">cookie notice</a>',
     

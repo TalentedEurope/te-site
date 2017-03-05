@@ -49,6 +49,10 @@ return [
     
         'statistics_title' => 'Štatistiky',
     
+        'contacts' => 'Kontakterna mellan studenter och företag',
+    
+        'companies_institutions' => 'Företag och institutioner',
+    
         'students_title' => 'Talentovaní študenti',
     
 ];

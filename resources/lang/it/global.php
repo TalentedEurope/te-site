@@ -59,11 +59,19 @@ return [
     
         'UK' => 'Regno Unito',
     
+        'follow_us' => '',
+    
         'login_btn' => 'Accedi',
     
         'register_btn' => 'Registrati',
     
         'search_info' => 'Cerca',
+    
+        'company_plural' => 'Compagnie',
+    
+        'institution_plural' => 'Istituzioni',
+    
+        'student_plural' => 'Studenti',
     
         'company' => 'Compagnia|compagnie',
     
@@ -72,6 +80,14 @@ return [
         'student' => 'Studente|studenti',
     
         'more_btn' => 'Scopri di più',
+    
+        'home' => 'Home page',
+    
+        'blog' => 'Blog',
+    
+        'cookies' => 'Informazioni su cookie',
+    
+        'privacy_policy' => 'Politica sulla riservatezza',
     
         'cookie_text' => 'Questo sito web utilizza i cookie per garantire il corretto funzionamento delle procedure e migliorare l&apos;esperienza di utilizzazione dei servizi offerti online. Continuando la navigazione sul sito, si acconsente all&apos;utilizzo dei cookie. Per sapere di più sull‘uso dei cookie e sulla loro gestione, leggi <a href="/privacy-policy">cookie notice</a>',
     
