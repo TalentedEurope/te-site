@@ -317,11 +317,12 @@
               </a>
             @endforeach
         </div>
-          @else
-            <p class="h2">{{ trans('landing.no_students') }}</p>
-        </div>
         <div class="text-center">
           <a class="button" href="{{ route('searchStudents') }}">{!! trans('global.more_btn') !!}</a>
+        </div>
+
+          @else
+            <p class="h2">{{ trans('landing.no_students') }}</p>
         </div>
 
           @endif
