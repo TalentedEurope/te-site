@@ -68,7 +68,7 @@ class Institution extends Model
 
     public static function getAvailableCountries($baseList)
     {
-        $countries = \App\Models\User::where('userable_type', \App\Models\Institution::class)->select('country')->groupBy('country')->whereNotNull('country')->get()->map(function ($item) {
+        $countries = \App\Models\User::where('userable_type', \App\Models\Institution::class)->join('validators', 'validators.id', '=', 'users.userable_id')->where('validators.enabled', 1)->select('country')->groupBy('country')->whereNotNull('country')->get()->map(function ($item) {
             return $item->country;
         });
         $newList = array();
