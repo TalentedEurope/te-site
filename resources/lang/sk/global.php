@@ -59,7 +59,7 @@ return [
     
         'UK' => 'Spojené kráľovstvo',
     
-        'follow_us' => '',
+        'follow_us' => 'Följ oss',
     
         'login_btn' => 'Login',
     
