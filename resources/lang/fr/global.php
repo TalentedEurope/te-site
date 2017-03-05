@@ -59,7 +59,7 @@ return [
     
         'UK' => 'le Royaume-Uni',
     
-        'follow_us' => '',
+        'follow_us' => 'Suivez nous',
     
         'login_btn' => 'le logiciel',
     
