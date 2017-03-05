@@ -89,6 +89,8 @@ return [
     
         'privacy_policy' => 'Integritetspolicy',
     
+        'partners' => 'Partners',
+    
         'cookie_text' => '',
     
         'cookie_accept' => 'Zatvoriť',

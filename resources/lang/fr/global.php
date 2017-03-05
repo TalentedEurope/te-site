@@ -89,6 +89,8 @@ return [
     
         'privacy_policy' => 'Politique de confidentialité',
     
+        'partners' => 'Partenaires',
+    
         'cookie_text' => '',
     
         'cookie_accept' => 'fermer',
