@@ -59,11 +59,19 @@ return [
     
         'UK' => 'Spojené kráľovstvo',
     
+        'follow_us' => '',
+    
         'login_btn' => 'Login',
     
         'register_btn' => 'Prihláste sa',
     
         'search_info' => 'vyhľadávaj',
+    
+        'company_plural' => 'Spoločnosti',
+    
+        'institution_plural' => 'Inštitúcie',
+    
+        'student_plural' => 'Študenti',
     
         'company' => 'Spoločnosť|Spoločnosti',
     
@@ -72,6 +80,14 @@ return [
         'student' => 'Študent|študenti',
     
         'more_btn' => 'Zobraz viac',
+    
+        'home' => 'Hemsida',
+    
+        'blog' => 'Blogg',
+    
+        'cookies' => 'Information om cookies',
+    
+        'privacy_policy' => 'Integritetspolicy',
     
         'cookie_text' => '',
     
