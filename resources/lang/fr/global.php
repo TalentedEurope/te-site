@@ -89,7 +89,7 @@ return [
     
         'privacy_policy' => 'Politique de confidentialité',
     
-        'partners' => 'Partenaires',
+        'footer_partners' => 'Partenaires',
     
         'cookie_text' => '',
     

@@ -3,7 +3,7 @@
 
 return [
     
-        'meta_title' => 'Talented Europe | Une a talentos jóvenes con los empleadores en toda Europa',
+        'meta_title' => 'Talented Europe | Une jóvenes talentos con los empleadores en toda Europa',
     
         'tagline' => 'Une<br/> <strong>a talentos jóvenes</strong> con <strong>los empleadores</strong><br/> en toda <strong>Europa</strong>',
     
@@ -17,7 +17,7 @@ return [
     
         'more' => 'Averigua más',
     
-        'what_is_title' => '¿Qué es Europa con Talento?',
+        'what_is_title' => '¿Qué es Talented Europe?',
     
         'what_is_cta' => '<strong>¡Descubre más!</strong> ¡Pide el folleto!',
     
