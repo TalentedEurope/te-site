@@ -89,7 +89,7 @@ return [
     
         'privacy_policy' => 'Integritetspolicy',
     
-        'partners' => 'Partners',
+        'footer_partners' => 'Partners',
     
         'cookie_text' => '',
     
