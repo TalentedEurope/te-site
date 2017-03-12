@@ -89,7 +89,7 @@ return [
     
         'privacy_policy' => 'Politica sulla riservatezza',
     
-        'partners' => 'Partners',
+        'footer_partners' => 'Partners',
     
         'cookie_text' => 'Questo sito web utilizza i cookie per garantire il corretto funzionamento delle procedure e migliorare l&apos;esperienza di utilizzazione dei servizi offerti online. Continuando la navigazione sul sito, si acconsente all&apos;utilizzo dei cookie. Per sapere di più sull‘uso dei cookie e sulla loro gestione, leggi <a href="/privacy-policy">cookie notice</a>',
     
