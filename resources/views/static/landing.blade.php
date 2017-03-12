@@ -202,7 +202,7 @@
     @if ($logos->count())
     <section class="logos-carousel-section content-section col-md-12">
       <div class="content">
-        <h3 class="text-center">{!! trans('landing.companies_institutions') !!}</h3>
+        <h1 class="text-center">{!! trans('landing.companies_institutions') !!}</h1>
 
         <div class="companies-and-institutions-logos">
           @foreach ($logos as $logo)
