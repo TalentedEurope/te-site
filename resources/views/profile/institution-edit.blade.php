@@ -52,15 +52,13 @@
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <div class="row">
-
                 <text-box-form class="col-sm-6" code="fiscal_id" label="{!! trans('reg-profile.fiscal_id') !!}" placeholder="{!! trans('reg-profile.fiscal_id') !!}"
                   required value="{{ old('fiscal_id', $institution->fiscal_id) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
                 <text-box-form class="col-sm-6" code="pic" label="{!! trans('reg-profile.institution_pic') !!}" placeholder="{!! trans('reg-profile.institution_pic') !!}"
-                  required value="{{ old('pic', $institution->pic) }}"
+                  value="{{ old('pic', $institution->pic) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-
               </div>
 
               <div class="form-group @if ($errors->has('image')) alert alert-danger   @endif  ">

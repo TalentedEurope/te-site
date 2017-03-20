@@ -20,7 +20,7 @@
             <div class="col-xs-12 col-sm-4 col-md-3 text-center">
                 <figure>
                     <img :src="student.photo" alt="" class="img-circle img-responsive">
-                    <figcaption class="ratings" v-if="student.validated">
+                    <figcaption class="ratings" v-if="student.validated == 'validated'">
                         <span class="label label-success">
                             <i class="fa fa-star"></i> Refereed
                         </span>

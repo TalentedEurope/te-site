@@ -10,7 +10,7 @@
                         <th><a href="#" v-on:click.prevent="sortBy('full_name')">{{ $t('reg-profile.name') }}</a></th>
                         <th><a href="#" v-on:click.prevent="sortBy('email')">{{ $t('reg-profile.email') }}</th>
                         <th><a href="#" v-on:click.prevent="sortBy('validator_deparment')">{{ $t('reg-profile.validator_department') }}</a></th>
-                        <th><a href="#" v-on:click.prevent="sortBy('position')">{{ $t('global.position') }}</a></th>
+                        <th><a href="#" v-on:click.prevent="sortBy('position')">{{ $t('reg-profile.position') }}</a></th>
                         <th></th>
                         <th></th>
                     </tr>
