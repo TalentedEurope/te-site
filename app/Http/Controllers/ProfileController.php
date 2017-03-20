@@ -994,12 +994,12 @@ class ProfileController extends Controller
             if ($existing) {
                 if ($existing->userable_type == Validator::class) {
                     if ($existing->userable->institution) {
-                        $validator->errors()->add('validator_email', sprintf('Validator is part of %s get in contact with him to ask a institution change if required', $existing->userable->institution->user->name));
+                        $validator->errors()->add('validator_email', sprintf('Referee is part of %s get in contact with him to ask a institution change if required', $existing->userable->institution->user->name));
                     } else {
-                        $validator->errors()->add('validator_email', 'Validator isn\'t part of any institution. Please ask him to get invited by one');
+                        $validator->errors()->add('validator_email', 'Referee isn\'t part of any institution. Please ask him to get invited by one');
                     }
                 } else {
-                    $validator->errors()->add('validator_email', 'This email address is registered to an user that cannot be a validator');
+                    $validator->errors()->add('validator_email', 'This email address is registered to an user that cannot be a referee');
                 }
             } else {
                 $this->inviteUser($request->input('validator_name'), $request->input('validator_email'));

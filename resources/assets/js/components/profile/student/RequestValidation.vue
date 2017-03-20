@@ -9,13 +9,13 @@
         </autocomplete>
 
         <div class="form-group col-sm-12">
-            <label for="referee">Choose validator</label>
+            <label for="referee">Choose referee</label>
             <select-form code="referee" label="Referee" placeholder=" - Any Referee - " :parsed-values="referees" :disabled="isRefereesDisabled" no-validate>
             </select-form>
         </div>
         <hr>
         <p class="col-sm-12 text-right">
-            <button type="submit" class="btn btn-primary">Request Validation</button>
+            <button type="submit" class="btn btn-primary">Refer request</button>
         </p>
     </div>
 </template>

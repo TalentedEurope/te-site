@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
-@section('page-title')Manage validators @endsection
+@section('page-title')Manage referees @endsection
 
 @section('content')
 
 <div class="container validators">
   <div class="row">
-    <h1 class="page-title">Validators</h1>
+    <h1 class="page-title">Referees</h1>
           @if (isset($profileErrors) && $profileErrors->all())
             <div class="text-left">
-            <p>You'll need to fix the following errors or your validators won't be able to validate profiles:</p>
+            <p>You'll need to fix the following errors or your referees won't be able to validate profiles:</p>
             @if ($profileErrors->all())
               <div class="alert alert-warning">
               <ul>
@@ -26,7 +26,7 @@
       <validators></validators>
       <div class="clearfix"></div>
       <div class="col-sm-6 sm-no-padding-left">
-          <h2>Add a new validator</h2>
+          <h2>Add a new referee</h2>
           <form enctype='multipart/form-data'  class="well form-vertical" role="form" method="POST" action="{{ route('add_validator') }}" >
               {{ csrf_field() }}
 
@@ -35,7 +35,8 @@
               <hr>
               <p class="text-right">
               <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o" aria-hidden="true"></i>
- Send invitation to validator</button>
+                Send invitation to referee
+              </button>
               </p>
           </form>
       </div>

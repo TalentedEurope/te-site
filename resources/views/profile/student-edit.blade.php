@@ -227,7 +227,7 @@
 
             @elseif ($user->is_filled && $user->userable->valid == 'validated')
             <p class="h4">Your profile was validated successfully</p>
-            <p>This is what your validator said about you: </p>
+            <p>This is what your referee said about you: </p>
             <div class="alert alert-info">
               {{ $user->userable->validation_comment }}
             </div>

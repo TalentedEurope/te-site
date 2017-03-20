@@ -6,7 +6,7 @@
     <div class="well auth-box col-sm-6 col-sm-offset-3  col-md-4 col-md-offset-4">
       <form class="form-horizontal" role="form" method="POST" action="{{ route('post_register_validator', $invite->uid) }}">
         {!! csrf_field() !!}
-        <h2 class="page-title">Register as validator</h2>
+        <h2 class="page-title">Register as referee</h2>
         <div>
           <input type="hidden" value="{{ $invite->id }}" name="invite">
 
