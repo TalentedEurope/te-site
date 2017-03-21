@@ -49,4 +49,16 @@ return [
     
         'user_hasnt_complete_filling_its_profile' => 'hasn&apos;t complete filling it&apos;s profile. Until this process is complete you cannot validate any student',
     
+        'manage_validators' => 'Manage referees',
+    
+        'validators' => 'Referees',
+    
+        'invites_pending' => 'Invites pending',
+    
+        'date_sent' => 'Date sent',
+    
+        'note_invites_are_only_valid_14_days' => 'Note: invites are only valid 14 days after being sent, and they will disapear from this list afterwards',
+    
+        'cancel' => 'Cancel',
+    
 ];
