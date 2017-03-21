@@ -415,4 +415,6 @@ return [
     
         'progress_completed' => 'Completed',
     
+        'you_must_put_referee_email' => '<strong>Please note:</strong> You must put the referee email, not the one form the institution',
+    
 ];

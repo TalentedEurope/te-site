@@ -204,6 +204,7 @@
                 <h4>{!! trans('reg-profile.cant_find_your_institution') !!}</h4>
 
                 <p>{!! trans('reg-profile.this_step_sends_an_email_to_your_referee') !!}</p>
+                <p>{!! trans('reg-profile.you_must_put_referee_email') !!}</p>
 
                 <form class="form-vertical" role="form" method="POST" action="{{ route('invite-school') }}">
                 {{ csrf_field() }}
