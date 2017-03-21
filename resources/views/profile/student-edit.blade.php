@@ -1,6 +1,6 @@
 @extends('../layouts.app')
 
-@section('page-title') My Profile @endsection
+@section('page-title') {!! trans('reg-profile.my-profile') !!} @endsection
 @section('page-class') my-profile @endsection
 
 @section('meta')
@@ -16,7 +16,7 @@
 <div class="container v-container edit-profile">
   <div class="row">
     <div class="col-md-12 col-xs-12">
-      <h1 class="page-title">My profile</h1>
+      <h1 class="page-title">{!! trans('reg-profile.my-profile') !!}</h1>
       <div class="col-sm-4 col-md-4 col-xs-12">
         <img src="{{ asset($user->getPhoto()) }}" alt="" class="img-responsive" />
       </div>
@@ -28,32 +28,32 @@
             <div class="line-progress"></div>
           </div>
           <span class="number p-0 @if (!$user->is_filled) disabled @endif">1</span>
-          <span class="name p-0 @if (!$user->is_filled) disabled @endif">Account setup</span>
+          <span class="name p-0 @if (!$user->is_filled) disabled @endif">{!! trans('reg-profile.progress_account_setup') !!}</span>
           <span class="number p-50 @if (!$user->userable->validationRequest) disabled @endif">2</span>
-          <span class="name p-50 @if (!$user->userable->validationRequest) disabled @endif">Refer your profile</span>
+          <span class="name p-50 @if (!$user->userable->validationRequest) disabled @endif">{!! trans('reg-profile.progress_refer_your_profile') !!}</span>
           <span class="number p-100 @if ($user->userable->valid == 'denied') invalid @elseif ($user->userable->valid != 'validated') disabled @endif">3</span>
           <span class="name p-100 @if ($user->userable->valid != 'validated' && $user->userable->valid != 'denied') disabled @endif">
-            @if ($user->userable->valid == 'denied') Not refereed @else Completed @endif
+            @if ($user->userable->valid == 'denied') {!! trans('reg-profile.progress_not_refereed') !!} @else {!! trans('reg-profile.progress_completed') !!} @endif
           </span>
         </div>
 
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">
-          <li class="active"><a data-target="#profile" data-toggle="tab">Profile</a></li>
-          <li><a data-target="#career" data-toggle="tab">Career and Skills</a></li>
-          <li><a data-target="#refer" data-toggle="tab">Get your profile refereed</a></li>
-          <li><a data-target="#password" data-toggle="tab">Change your password</a></li>
+          <li class="active"><a data-target="#profile" data-toggle="tab">{!! trans('reg-profile.profile') !!}</a></li>
+          <li><a data-target="#career" data-toggle="tab">{!! trans('reg-profile.career_and_skills') !!}</a></li>
+          <li><a data-target="#refer" data-toggle="tab">{!! trans('reg-profile.get_your_profile_refereed') !!}</a></li>
+          <li><a data-target="#password" data-toggle="tab">{!! trans('reg-profile.change_your_password') !!}</a></li>
         </ul>
         <div id="profileTab" class="tab-content well">
           <div class="tab-pane active in" id="profile">
             <form enctype="multipart/form-data" class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#profile' }}">
               {{ csrf_field() }}
 
-              <h4>Profile Visibility</h4>
+              <h4>{!! trans('reg-profile.profile_visibility') !!}</h4>
               <div class="radio">
-                <label><input type="radio" @if ($user->visible == true) checked @endif name="visible" value="1">Visible. Can be searched, viewed</label>
+                <label><input type="radio" @if ($user->visible == true) checked @endif name="visible" value="1">{!! trans('reg-profile.profile_visibility_visible') !!}</label>
               </div>
               <div class="radio">
-                <label><input @if ($user->visible != true) checked @endif type="radio" name="visible" value="0">Hidden. Cannot be searched or viewed</label>
+                <label><input @if ($user->visible != true) checked @endif type="radio" name="visible" value="0">{!! trans('reg-profile.profile_visibility_hidden') !!}</label>
               </div>
               <hr class="separator">
               <h4>About me</h4>
@@ -81,18 +81,18 @@
                   value="{{ old('birthdate', $student->birthdate) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></date-form>
 
-              <file-form code="image" label="My Photo" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></file-form>
+              <file-form code="image" label="{!! trans('reg-profile.my_photo') !!}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></file-form>
 
               <hr class="separator">
 
               <h4>Social networks</h4>
-              <text-box-form code="facebook" label="Facebook page url" placeholder="Facebook page url"
+              <text-box-form code="facebook" label="{!! trans('reg-profile.facebook_page_url') !!}" placeholder="{!! trans('reg-profile.facebook_page_url') !!}"
                   value="{{ old('facebook', $user->facebook) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-              <text-box-form code="twitter" label="Twitter page url" placeholder="Twitter page url"
+              <text-box-form code="twitter" label="{!! trans('reg-profile.twitter_page_url') !!}" placeholder="{!! trans('reg-profile.twitter_page_url') !!}"
                   value="{{ old('twitter', $user->twitter) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-              <text-box-form code="linkedin" label="Linkedin page url" placeholder="Linkedin page url"
+              <text-box-form code="linkedin" label="{!! trans('reg-profile.linkedin_page_url') !!}" placeholder="{!! trans('reg-profile.linkedin_page_url') !!}"
                   value="{{ old('linkedin', $user->linkedin) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
@@ -115,7 +115,7 @@
 
               <hr class="separator">
 
-              <button type="submit" class="btn btn-primary">Update settings</button>
+              <button type="submit" class="btn btn-primary">{!! trans('reg-profile.update_settings') !!}</button>
             </form>
           </div>
 
@@ -125,7 +125,7 @@
               <h4>{!! trans('reg-profile.student_academic_info') !!}</h4>
               <hr>
 
-              <file-form code="curriculum" label="{!! trans('reg-profile.student_europass') !!}" download-text="Download curriculum" has-file="{{ $student->curriculum }}"
+              <file-form code="curriculum" label="{!! trans('reg-profile.student_europass') !!}" download-text="{!! trans('reg-profile.download_curriculum') !!}" has-file="{{ $student->curriculum }}"
                   file-url="{{ URL::to('/profile/curriculum/' . $user->id) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></file-form>
 
               <hr class="separator">
@@ -153,7 +153,7 @@
               <professional-skills selected-skills='{!! json_encode($student->professionalSkills, JSON_HEX_APOS) !!}'
                   skills='{!! json_encode($professionalSkills, JSON_HEX_APOS) !!}'
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></professional-skills>
-              <personal-skills-form label="Personal skills (max 6)"
+              <personal-skills-form label="{!! trans('reg-profile.student_personal_skills') !!} (max 6)"
                   values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}' readonly='{!! !!$validationReqDate !!}'
                   value='{!! json_encode($student->personalSkills()->wherePivot('validator',false)->get(), JSON_HEX_APOS) !!}'
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></personal-skills-form>
@@ -164,18 +164,18 @@
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-area-form>
 
               <hr>
-              <button type="submit" class="btn btn-primary">Update settings</button>
+              <button type="submit" class="btn btn-primary">{!! trans('reg-profile.update_settings') !!}</button>
             </form>
           </div>
 
           <div class="tab-pane fade" id="refer">
-            <h4>Profile readiness</h4>
+            <h4>{!! trans('reg-profile.profile_readiness') !!}</h4>
 
-            <p>Getting your profile refereed gives a third party opinion of you and helps increasing the possibilities of contact from a company</p>
+            <p>{!! trans('reg-profile.profile_readiness_explanation') !!}</p>
 
 
             <div class="form-group">
-              <label>Profile Readiness:</label>
+              <label>{!! trans('reg-profile.profile_readiness') !!}:</label>
               <div class="progress">
                 <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="{{ $fillRate }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ $fillRate }}%;">
                   {{ $fillRate }}%
@@ -183,13 +183,13 @@
               </div>
             </div>
 
-            <p class="small"><em>Get a better refeer improving your profile readiness and improve possibility of company contact</em></p>
+            <p class="small"><em>{!! trans('reg-profile.get_a_better_refeer') !!}</em></p>
 
             <hr class="separator">
             @if (($user->is_filled && !$user->userable->valid) || ($user->is_filled && $user->userable->valid == 'pending'))
 
               @if($user->userable->validationRequest)
-                <h4>Your request is being managed by: {{ $user->userable->validationRequest->getValidator() }}</h4>
+                <h4>{!! trans('reg-profile.request_is_managed_by') !!}: {{ $user->userable->validationRequest->getValidator() }}</h4>
                 <div class="alert alert-info">
                 <p>{{ sprintf('Your request was created %s', $user->userable->validationRequest->created_at->diffForHumans()) }}</p>
                 <p>{{ sprintf('If your request hasn\'t been completed in %s days you will be able to create a new request', env('CLEANUP_DAYS',14)) }}
@@ -201,43 +201,43 @@
                 </form>
 
                 <hr class="separator">
-                <h4>Can't find your institution? ask your referee and institution to join Talented Europe</h4>
+                <h4>{!! trans('reg-profile.cant_find_your_institution') !!}</h4>
 
-                <p>This step sends an email to your referee with instructions on how to join Talented Europe, automatically registers him as referee once his institution joins, and adds you to the refeeral queue</p>
+                <p>{!! trans('reg-profile.this_step_sends_an_email_to_your_referee') !!}</p>
 
                 <form class="form-vertical" role="form" method="POST" action="{{ route('invite-school') }}">
                 {{ csrf_field() }}
 
                 <div class="row">
-                  <text-box-form class="col-sm-6" code="validator_name" label="Referee email" placeholder="Referee Name"
+                  <text-box-form class="col-sm-6" code="validator_name" label="{!! trans('reg-profile.referee_name') !!}" placeholder="{!! trans('reg-profile.referee_name') !!}"
                         value="{{ old('validator_name', $user->validator_name) }}"
                         errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'> </text-box-form>
 
-                  <text-box-form class="col-sm-6" code="validator_email" label="Referee email" placeholder="Referee email"
+                  <text-box-form class="col-sm-6" code="validator_email" label="{!! trans('reg-profile.referee_email') !!}" placeholder="{!! trans('reg-profile.referee_email') !!}"
                         value="{{ old('validator_email', $user->validator_email) }}"
                         errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'> </text-box-form>
                         </div>
                 <div class="row">
                   <hr>
-                  <p class="col-sm-12 text-right"><button type="submit" class="btn btn-primary">Send Invitation</button></p>
+                  <p class="col-sm-12 text-right"><button type="submit" class="btn btn-primary">{!! trans('reg-profile.send_invitation') !!}</button></p>
                 </div>
                 </form>
               @endif
 
 
             @elseif ($user->is_filled && $user->userable->valid == 'validated')
-            <p class="h4">Your profile was validated successfully</p>
-            <p>This is what your referee said about you: </p>
+            <p class="h4">{!! trans('reg-profile.profile_validated_successfully') !!}</p>
+            <p>{!! trans('reg-profile.referee_said_about_you') !!}: </p>
             <div class="alert alert-info">
               {{ $user->userable->validation_comment }}
             </div>
             @elseif ($user->is_filled && $user->userable->valid == 'denied')
-            <p class="h4 alert alert-danger">Your profile was denied</p>
+            <p class="h4 alert alert-danger">{!! trans('reg-profile.profile_validated_denied') !!}</p>
 
             @else
-            <p>We don't have enough data from you to be able to do a refeer.</p>
+            <p>{!! trans('reg-profile.not_enough_data_to_do_a_refeer') !!}</p>
 
-            <p><strong>You'll need to fix the following errors:</strong></p>
+            <p><strong>{!! trans('reg-profile.fix_the_following_errors') !!}:</strong></p>
             @if ($profileErrors->all())
               <div class="alert alert-warning">
               <ul>
@@ -253,17 +253,17 @@
           </div>
 
           <div class="tab-pane fade" id="password">
-            <h4>Change your password</h4>
+            <h4>{!! trans('reg-profile.change_your_password') !!}</h4>
             <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#password' }}">
               {{ csrf_field() }}
-              <text-box-form type="password" code="password" label="New Password" placeholder="New Password" value="" required
+              <text-box-form type="password" code="password" label="{!! trans('reg-profile.new_password') !!}" placeholder="{!! trans('reg-profile.new_password') !!}" value="" required
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}' no-validate></text-box-form>
-              <text-box-form type="password" code="password_confirm" label="Repeat new Password"
-                  placeholder="Repeat new Password" value="" required
+              <text-box-form type="password" code="password_confirm" label="{!! trans('reg-profile.repeat_new_password') !!}"
+                  placeholder="{!! trans('reg-profile.repeat_new_password') !!}" value="" required
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}' no-validate></text-box-form>
 
               <hr>
-              <button type="submit" class="btn btn-primary">Save new password</button>
+              <button type="submit" class="btn btn-primary">{!! trans('reg-profile.save_new_password') !!}</button>
             </form>
           </div>
           <!-- End of content -->

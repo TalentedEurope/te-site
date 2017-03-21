@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('page-title') Error 500: Internal server error @endsection
+@section('page-title') Error 500: {!! trans('error-page.internal_server_error') !!} @endsection
 
 @section('content')
 <div class="container">
@@ -9,8 +9,8 @@
                 <i class="fa fa-warning" aria-hidden="true"></i>
             </div>
             <h2 class="page-title">500</h2>
-            <h3> Internal server error</h3>
-            <p>An error happened, administrators have been notified and this issue will be fixed soon, please try later.<br/> Meanwhile you can try searching for <a href="{{ route('searchStudents') }}">students</a> or <a href="{{ route('searchCompanies') }}">companies</a>  </p>
+            <h3>{!! trans('error-page.internal_server_error') !!}</h3>
+            <p>{!! trans('error-page.an_error_happened') !!}<br/> {!! trans('error-page.meanwhile_can_searching_for') !!} <a href="{{ route('searchStudents') }}">{!! trans_choice('global.student', 2) !!}</a> {!! trans('global.or') !!} <a href="{{ route('searchCompanies') }}">{!! trans_choice('global.company', 2) !!}</a>  </p>
         </div>
     </div>
 </div>

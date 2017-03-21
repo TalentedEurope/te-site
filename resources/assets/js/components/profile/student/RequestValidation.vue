@@ -5,7 +5,7 @@
         <select-form class="col-sm-6" code="country" :label="$t('reg-profile.country')" :placeholder="' - ' + $t('reg-profile.country') + ' - '" required :values="countries" :value="country" no-validate>
         </select-form>
 
-        <autocomplete class="col-sm-6" code="institution" :items="institutions" placeholder="Institution name"  :disabled="isInstitutionsDisabled" required>
+        <autocomplete class="col-sm-6" code="institution" :items="institutions" :placeholder="$t('reg-profile.student_study_institution_name')" :disabled="isInstitutionsDisabled" required>
         </autocomplete>
 
         <div class="form-group col-sm-12">

@@ -22,7 +22,7 @@
                     <img :src="student.photo" alt="" class="img-circle img-responsive">
                     <figcaption class="ratings" v-if="student.validated == 'validated'">
                         <span class="label label-success">
-                            <i class="fa fa-star"></i> Refereed
+                            <i class="fa fa-star"></i> {{ $t('search.refereed') }}
                         </span>
                     </figcaption>
                 </figure>

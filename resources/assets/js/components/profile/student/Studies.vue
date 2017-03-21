@@ -13,12 +13,12 @@
 
             <text-box-form type="hidden" code="id" group-code="studies" :group-id="study.id" :value="study.id"></text-box-form>
 
-            <text-box-form code="institution_name" group-code="studies" :group-id="study.id" label="Institution name"
-                required placeholder="Institution name" :value="study.institution_name" :readonly="!!study.locked" :errors="errors"></text-box-form>
+            <text-box-form code="institution_name" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_institution_name')"
+                required :placeholder="$t('reg-profile.student_study_institution_name')" :value="study.institution_name" :readonly="!!study.locked" :errors="errors"></text-box-form>
 
             <div class="row">
-                <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="study.id" label="Course/Studies name"
-                    required placeholder="Course/Studies name" :value="study.name" :readonly="!!study.locked" :errors="errors"></text-box-form>
+                <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_course_studies_name')"
+                    required :placeholder="$t('reg-profile.student_study_course_studies_name')" :value="study.name" :readonly="!!study.locked" :errors="errors"></text-box-form>
                 <select-form class="col-sm-4" code="level" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_level')"
                     required :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyLevels" :value="study.level" :disabled="!!study.locked" :errors="errors"></select-form>
             </div>
@@ -29,13 +29,13 @@
             <div v-if="study.certificate || !study.locked">
                 <hr>
                 <file-form code="certificate" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_certificate')"
-                    download-text="Download Certificate" :has-file="study.certificate"
+                    :download-text="$t('reg-profile.student_download_certificate')" :has-file="study.certificate"
                     :file-url="getFileUrl(study.id, 'certificate')" :readonly="!!study.locked" :errors="errors"></file-form>
             </div>
             <div v-if="study.gradecard || !study.locked">
                 <hr>
                 <file-form code="gradecard" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_grade_card')"
-                    download-text="Download Gradecard" :has-file="study.gradecard"
+                    :download-text="$t('reg-profile.student_download_grade_card')" :has-file="study.gradecard"
                     :file-url="getFileUrl(study.id, 'gradecard')" :readonly="!!study.locked" :errors="errors"></file-form>
             </div>
             <hr>
@@ -50,12 +50,12 @@
                 </button>
             </header>
 
-            <text-box-form code="institution_name" group-code="studies" :group-id="new_study.id" label="Institution name"
-                required placeholder="Institution name" :value="new_study.institution_name"></text-box-form>
+            <text-box-form code="institution_name" group-code="studies" :group-id="new_study.id" :label="$t('reg-profile.student_study_institution_name')"
+                required :placeholder="$t('reg-profile.student_study_institution_name')" :value="new_study.institution_name"></text-box-form>
 
             <div class="row">
                 <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="new_study.id"
-                    required label="Course/Studies name" placeholder="Course/Studies name" :value="new_study.name"></text-box-form>
+                    required :label="$t('reg-profile.student_study_course_studies_name')" :placeholder="$t('reg-profile.student_study_course_studies_name')" :value="new_study.name"></text-box-form>
                 <select-form class="col-sm-4" code="level" group-code="studies" :group-id="new_study.id"
                     required :label="$t('reg-profile.student_study_level')" :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyLevels" :value="new_study.level"></select-form>
             </div>
@@ -72,7 +72,7 @@
 
         <p class="text-center">
             <button class="btn btn-default" @click.prevent="addNewStudy()">
-                <i class="fa fa-plus" aria-hidden="true"></i> add more studies
+                <i class="fa fa-plus" aria-hidden="true"></i> {{ $t('reg-profile.add_more_studies') }}
             </button>
         </p>
         <hr class="separator">

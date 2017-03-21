@@ -16,8 +16,7 @@
       <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <!-- Left Side Of Navbar -->
         <ul class="main-navbar nav navbar-nav">
-          <li class="hidden-sm" ><p class="navbar-text" style="
-            ">I'm looking for:</p>
+          <li class="hidden-sm" ><p class="navbar-text">{!! trans('navbar.looking_for') !!}:</p>
           </li>
           <li @yield('menu-student')><a href="{{ url('/search/students') }}">{!! trans_choice('global.student', 2) !!}</a></li>
           <li @yield('menu-company')><a href="{{ url('/search/companies') }}">{!! trans_choice('global.company', 2) !!}</a></li>
@@ -48,11 +47,11 @@
               {{ Auth::user()->name ? Auth::user()->name . " " . Auth::user()->surname : Auth::user()->email }} <span class="caret"></span>
             </a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i> Profile</a></li>
+              <li><a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i> {!! trans('navbar.profile') !!}</a></li>
               @if (Auth::user()->isA('company'))
-              <li><a href="{{ url('/alerts') }}"><i class="fa fa-btn fa-envelope"></i> Alerts</a></li>
+              <li><a href="{{ url('/alerts') }}"><i class="fa fa-btn fa-envelope"></i> {!! trans('navbar.alerts') !!}</a></li>
               @endif
-              <li><a href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i> Settings</a></li>
+              <li><a href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i> {!! trans('navbar.settings') !!}</a></li>
 
               <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> {!! trans('global.logout_btn') !!}</a></li>
             </ul>

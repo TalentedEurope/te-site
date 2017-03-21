@@ -23,15 +23,15 @@
                         <td>{{validator.position}}</td>
                         <td>
                             <button v-if="!validator.active" class="btn btn-primary" v-on:click="toggleValidatorStatus(validator)">
-                                <i class="fa fa-toggle-on" aria-hidden="true"></i> Enable
+                                <i class="fa fa-toggle-on" aria-hidden="true"></i> {{ $t('validators.enable') }}
                             </button>
                             <button v-if="validator.active" class="btn btn-warning" v-on:click="toggleValidatorStatus(validator)">
-                                <i class="fa fa-toggle-off" aria-hidden="true"></i> Disable
+                                <i class="fa fa-toggle-off" aria-hidden="true"></i> {{ $t('validators.disable') }}
                             </button>
                         </td>
                         <td>
                             <button class="btn btn-danger" v-on:click="onRemoveButton(validator)">
-                                <i class="fa fa-toggle-on" aria-hidden="true"></i> Remove
+                                <i class="fa fa-toggle-on" aria-hidden="true"></i> {{ $t('reg-profile.remove_btn') }}
                             </button>
                         </td>
                     </tr>

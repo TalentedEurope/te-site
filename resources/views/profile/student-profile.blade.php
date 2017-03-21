@@ -2,7 +2,7 @@
   <div class="row profile">
       @if($public)
       <div class="col-xs-12 alert alert-danger">
-          <p>Do you want to view all the details of this student? <a href="{{ url('/register') }}">{!! trans('global.register_btn') !!}</a></p>
+          <p>{!! trans('reg-profile.want_to_view_all_details_of_student') !!} <a href="{{ url('/register') }}">{!! trans('global.register_btn') !!}</a></p>
       </div>
       @endif
 
@@ -15,27 +15,27 @@
       </div>
 
       <div class="well">
-        <h3 class="section-title"> <i class="fa fa-info" aria-hidden="true"></i> About</h3>
+        <h3 class="section-title"> <i class="fa fa-info" aria-hidden="true"></i> {!! trans('reg-profile.about') !!}</h3>
         <ul class="student-specs">
         @if (isset($mainStudy))
-        <li><strong><i class="icon fa fa-graduation-cap"></i>  Education: </strong>
+        <li><strong><i class="icon fa fa-graduation-cap"></i>  {!! trans('reg-profile.education') !!}: </strong>
         {{ $mainStudy['level'] }} in {{ $mainStudy['name'] }}</li>
         @endif
         @if ($user->country && $student->nationality)
-          <li><strong><i class="icon fa fa-map-marker"></i>  Lives in: </strong> {{ $user->city }}, <em>{{ $countries[$user->country] }} </em> | <strong> {!! trans('reg-profile.nationality') !!}: </strong> {{ $nationalities[$student->nationality]  }} </li>
+          <li><strong><i class="icon fa fa-map-marker"></i>  {!! trans('reg-profile.lives_in') !!}: </strong> {{ $user->city }}, <em>{{ $countries[$user->country] }} </em> | <strong> {!! trans('reg-profile.nationality') !!}: </strong> {{ $nationalities[$student->nationality]  }} </li>
         @endif
         @if ($student->birthdate)
-        <li><strong><i class="icon fa fa-calendar"></i>  Born on: </strong> {{ Carbon\Carbon::parse($student->birthdate)->format('d/m/Y') }}</li>
+        <li><strong><i class="icon fa fa-calendar"></i>  {!! trans('reg-profile.born_on') !!}: </strong> {{ Carbon\Carbon::parse($student->birthdate)->format('d/m/Y') }}</li>
         @endif
         @if ($student->talent)
-        <li><strong><i class="icon fa fa-lightbulb-o"></i> My talent:</strong> {{ $student->talent }} </span></li>
+        <li><strong><i class="icon fa fa-lightbulb-o"></i> {!! trans('reg-profile.my_talent') !!}:</strong> {{ $student->talent }} </span></li>
         @endif
         </ul>
         <hr>
         <div class="row">
           @if ($student->valid == "validated" && $student->validationRequest)
             @if ($student->validationRequest)
-              <p class="validated-by col-sm-6"><span class="btn btn-lg"><strong><i class="fa fa-star icon"></i> Refereed by:
+              <p class="validated-by col-sm-6"><span class="btn btn-lg"><strong><i class="fa fa-star icon"></i> {!! trans('reg-profile.refereed_by') !!}:
                </strong>
                <a href="{{
                   route('get_profile',
@@ -50,7 +50,7 @@
             @endif
 
           @else
-            <p class="validated-by col-sm-6"><span class="btn btn-lg"><strong><em>Refereeing pending</em></strong></span></p>
+            <p class="validated-by col-sm-6"><span class="btn btn-lg"><strong><em>{!! trans('reg-profile.refereeing_pending') !!}</em></strong></span></p>
           @endif
           @if ($student->curriculum && !$public)
           <p class="col-sm-6"><a class="btn btn-lg btn-primary pull-right"
@@ -62,9 +62,9 @@
       @if ($student->professionalSkills->count())
       <div class="well">
         <div class="skills">
-          <h3 class="section-title"> <i class="fa fa-cogs" aria-hidden="true"></i> Skills</h3>
+          <h3 class="section-title"> <i class="fa fa-cogs" aria-hidden="true"></i> {!! trans('reg-profile.skills') !!}</h3>
           <div class="row">
-            <div class="col-sm-6"><h4>Professional</h4>
+            <div class="col-sm-6"><h4>{!! trans('reg-profile.professional') !!}</h4>
               <ul class="skills">
                 <!-- <li class="important">Lorem ipsum</li> -->
                 @foreach ($student->professionalSkills as $skill)
@@ -72,7 +72,7 @@
                 @endforeach
               </ul>
             </div>
-            <div class="col-sm-6"><h4>Personal</h4>
+            <div class="col-sm-6"><h4>{!! trans('reg-profile.personal') !!}</h4>
               <ul class="skills">
                 @foreach ($student->groupedPersonalSkills() as $skill)
                   <li @if($skill['repeated']) class="important" @endif >{{ $skill['name'] }}</li>
@@ -83,10 +83,10 @@
         </div>
         <div class="row">
           <div class="col-sm-12">
-            <h5>Legend</h5>
+            <h5>{!! trans('reg-profile.legend') !!}</h5>
             <ul class="legend">
-              <li><span class="important"> </span> Set by both parties</li>
-              <li><span> </span> Set by either the referee or the student</li>
+              <li><span class="important"> </span> {!! trans('reg-profile.set_by_both_parties') !!}</li>
+              <li><span> </span> {!! trans('reg-profile.set_by_referee_or_student') !!}</li>
             </ul>
           </div>
         </div>
@@ -96,7 +96,7 @@
       @if ($student->studies->count())
       <div class="well">
         <div class="studies">
-          <h3 class="section-title"> <i class="fa fa fa-graduation-cap" aria-hidden="true"></i> Studies</h3>
+          <h3 class="section-title"> <i class="fa fa fa-graduation-cap" aria-hidden="true"></i> {!! trans_choice('reg-profile.study', 2) !!}</h3>
           <ul class="timeline">
             @foreach ($student->studies as $study)
             <li>
@@ -138,7 +138,7 @@
               @if ($training->date != '0000-00-00')
               <p class="date">{{ Carbon\Carbon::parse($training->date)->format('Y') }}</p>
               @else
-              <p class="date">Date not specified</p>
+              <p class="date">{!! trans('reg-profile.date_not_specified') !!}</p>
               @endif
               <h4>{{ $training->name }}</h4>
               @if ($training->certificate && !$public)
@@ -209,7 +209,7 @@
         </figure>
         @endif
         <div class="contact">
-          <h3>Get in contact</h3>
+          <h3>{!! trans('reg-profile.get_in_contact') !!}</h3>
           <hr>
           <p><i class="fa icon fa-envelope"></i> {!! trans('reg-profile.email') !!}: <a href="mailto:{{ $user->email }}">
           {{ $user->email }}</a></p>

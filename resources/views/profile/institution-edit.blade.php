@@ -1,6 +1,6 @@
 @extends('../layouts.app')
 
-@section('page-title') My Profile @endsection
+@section('page-title') {!! trans('reg-profile.my-profile') !!} @endsection
 @section('page-class') my-profile @endsection
 
 @section('meta')
@@ -14,22 +14,22 @@
 <div class="container v-container edit-profile">
   <div class="row">
     <div class="col-md-12 col-xs-12">
-      <h1 class="page-title">My profile</h1>
+      <h1 class="page-title">{!! trans('reg-profile.my-profile') !!}</h1>
       <div class="col-sm-4 col-md-4 col-xs-12">
         <img src="{{ asset($user->getPhoto()) }}" alt="" class="img-responsive" />
       </div>
       <div class="col-sm-8 col-md-8 col-xs-12">
         <!-- Content -->
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">
-          <li class="active"><a data-target="#profile" data-toggle="tab">Profile</a></li>
+          <li class="active"><a data-target="#profile" data-toggle="tab">{!! trans('reg-profile.profile') !!}</a></li>
           <li><a data-target="#contact" data-toggle="tab">Contact Person</a></li>
-          <li><a data-target="#password" data-toggle="tab">Change your password</a></li>
+          <li><a data-target="#password" data-toggle="tab">{!! trans('reg-profile.change_your_password') !!}</a></li>
         </ul>
         <div id="profileTab" class="tab-content well">
           <div class="tab-pane active in" id="profile">
             <form enctype='multipart/form-data'  class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#profile' }}" >
               {{ csrf_field() }}
-              <h4>About</h4>
+              <h4>{!! trans('reg-profile.about') !!}</h4>
 
               <select-form code="type" label="{!! trans('reg-profile.institution_type') !!}" placeholder=" - {!! trans('reg-profile.institution_type') !!} - " required
                   values='{!! json_encode($types, JSON_HEX_APOS) !!}' value="{{ old('type', $institution->type) }}" related-options="true"
@@ -70,7 +70,7 @@
                 <input type="file" id="image" name="image" accept="image/*">
               </div>
 
-              <file-form code="certificate" label="{!! trans('reg-profile.institution_certificate') !!}" download-text="Download certificate" has-file="{{ $institution->certificate }}"
+              <file-form code="certificate" label="{!! trans('reg-profile.institution_certificate') !!}" download-text="{!! trans('reg-profile.student_download_certificate') !!}" has-file="{{ $institution->certificate }}"
                   file-url="{{ URL::to('/profile/certificate/' . $user->id . '/institution') }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></file-form>
 
               <p class="help-block"><a target="_blank" href="{{ asset('docs/certificate_template.pdf') }} ">{!! trans('reg-profile.institution_certificate_template_download') !!}. </a></p>
@@ -95,12 +95,12 @@
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></select-form>
 
               <hr class="separator">
-              <button type="submit" class="btn btn-primary">Update settings</button>
+              <button type="submit" class="btn btn-primary">{!! trans('reg-profile.update_settings') !!}</button>
             </form>
           </div>
           <div class="tab-pane fade" id="contact">
             <h4>{!! trans('reg-profile.company_contact_person') !!}</h4>
-            <label>Setup an alternative contact user that will receive all the notifications instead of the main account</label>
+            <label>{!! trans('reg-profile.setup_alternative_contact') !!}</label>
             <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#contact' }}" >
               {{ csrf_field() }}
               <text-box-form code="notification_name" label="{!! trans('reg-profile.name') !!}" placeholder="{!! trans('reg-profile.name') !!}"
@@ -111,23 +111,23 @@
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <hr>
-              <button type="submit" class="btn btn-primary">Update settings</button>
+              <button type="submit" class="btn btn-primary">{!! trans('reg-profile.update_settings') !!}</button>
             </form>
           </div>
 
           <div class="tab-pane fade" id="password">
-            <p><span class="h4">Change your password</span></p>
+            <p><span class="h4">{!! trans('reg-profile.change_your_password') !!}</span></p>
             <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#password' }}">
               {{ csrf_field() }}
-              <text-box-form type="password" code="password" label="New Password"
-                  required placeholder="New Password" value="" no-validate
+              <text-box-form type="password" code="password" label="{!! trans('reg-profile.new_password') !!}"
+                  required placeholder="{!! trans('reg-profile.new_password') !!}" value="" no-validate
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-              <text-box-form type="password" code="password_confirm" label="Repeat new Password"
-                  required placeholder="Repeat new Password" value="" no-validate
+              <text-box-form type="password" code="password_confirm" label="{!! trans('reg-profile.repeat_new_password') !!}"
+                  required placeholder="{!! trans('reg-profile.repeat_new_password') !!}" value="" no-validate
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <hr>
-              <button type="submit" class="btn btn-primary">Save new password</button>
+              <button type="submit" class="btn btn-primary">{!! trans('reg-profile.save_new_password') !!}</button>
             </form>
           </div>
           <!-- End of content -->
