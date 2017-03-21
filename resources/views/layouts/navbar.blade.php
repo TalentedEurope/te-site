@@ -24,13 +24,13 @@
         <!-- Right Side Of Navbar -->
         <ul class="nav navbar-nav navbar-right languages-nav">
           <li><a href="?lang=en">EN</a></li>
-          {{--
+
           <li><a href="?lang=es">ES</a></li>
           <li><a href="?lang=it">IT</a></li>
           <li><a href="?lang=de">DE</a></li>
           <li><a href="?lang=fr">FR</a></li>
           <li><a href="?lang=sk">SK</a></li>
-          --}}
+
         </ul>
 
         <ul class="nav navbar-nav navbar-right">

@@ -91,10 +91,20 @@ return [
     
         'footer_partners' => 'Partenaires',
     
-        'cookie_text' => '',
+        'cookie_text' => 'This website uses cookies to help us give you the best experience when you visit. By using this website you consent to our use of these cookies. Find out more about how we use cookies and how to manage them by reading our <a href="/privacy-policy">cookie notice</a>',
     
         'cookie_accept' => 'fermer',
     
         'logout_btn' => 'Se déconnecter',
+    
+        'less_btn' => 'View less',
+    
+        'not_enough_data_to_show_profile' => 'We don&apos;t have enough data from you to be able to show your profile.',
+    
+        'click_on_link_to_fill_required_fields' => 'Please click on the following link to fill the required fields.',
+    
+        'set_up_my_profile' => 'Set up my profile',
+    
+        'or' => 'or',
     
 ];
