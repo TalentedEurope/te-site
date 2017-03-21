@@ -97,4 +97,14 @@ return [
     
         'logout_btn' => 'Cerrar Sesión',
     
+        'less_btn' => 'View less',
+    
+        'not_enough_data_to_show_profile' => 'We don&apos;t have enough data from you to be able to show your profile.',
+    
+        'click_on_link_to_fill_required_fields' => 'Please click on the following link to fill the required fields.',
+    
+        'set_up_my_profile' => 'Set up my profile',
+    
+        'or' => 'or',
+    
 ];

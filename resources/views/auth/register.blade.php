@@ -24,7 +24,7 @@
 
         @if ($errors->count())
           <div class="alert alert-danger" role="alert">
-            There have been some errors
+            {!! trans('register.there_have_been_some_errors') !!}
           </div>
         @endif
         <div>
@@ -33,7 +33,7 @@
             <strong>{{ $errors->first('type') }}</strong>
           </span>
           @endif
-          <p><strong>I am a:</strong></p>
+          <p><strong>{!! trans('register.i_am_a') !!}:</strong></p>
           <div class="user-type @if ($errors->has('type')) alert alert-danger @endif">
             <div class="radio-check" @if (isset($request)) style="display:none" @endif>
               <input id="Student" type="radio" name="type" value="student"             @if (old('type') == "student") checked @endif>
@@ -82,10 +82,10 @@
           @endif
           <div class="checkbox @if ($errors->has('terms')) alert alert-danger @endif">
             <label>
-              <input required type="checkbox"  name="terms"></input> I agree with <a target="_blank" href="{{ url('/terms') }}"> the terms of use</a>
+              <input required type="checkbox"  name="terms"></input> {!! trans('reg-profile.i_agree_with') !!} <a target="_blank" href="{{ url('/terms') }}">{!! trans('reg-profile.the_terms_of_use') !!}</a>
             </label>
           </div>
-          <p class="text-center"><em>All fields are required</em></p>
+          <p class="text-center"><em>{!! trans('register.all_fields_are_required') !!}</em></p>
 
           <button type="submit" class="btn btn-primary">
             {!! trans('global.register_btn') !!}

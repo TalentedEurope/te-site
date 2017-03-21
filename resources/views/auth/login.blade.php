@@ -23,11 +23,11 @@
                     <input id="password" name="password" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="{!! trans('reg-profile.password') !!}">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="remember"> Remember Me
+                            <input type="checkbox" name="remember"> {!! trans('login.remember_me') !!}
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary">
-                        Sign in
+                        {!! trans('login.sign_in') !!}
                     </button>
                 </div>
             </form>

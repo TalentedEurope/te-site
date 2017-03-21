@@ -3,7 +3,7 @@ import { profileResource } from 'resources/profile';
 var parsedLabel = function () {
     var required_text = '';
     if (!_.isUndefined(this.required)) {
-        required_text = ' (Required)';
+        required_text = ` (${this.$t('reg-profile.required')})`;
     }
     return `${this.label}${required_text}`;
 };
@@ -11,7 +11,7 @@ var parsedLabel = function () {
 var parsedPlaceholder = function () {
     var required_text = '';
     if (!_.isUndefined(this.required)) {
-        required_text = ' (Required)';
+        required_text = ` (${this.$t('reg-profile.required')})`;
     }
     return `${this.placeholder}${required_text}`;
 };

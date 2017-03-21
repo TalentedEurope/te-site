@@ -1,6 +1,6 @@
 <template>
     <button class="pull-right remove btn-danger btn btn-sm" @click.prevent="removeItem()" v-if="!item.locked">
-        <i class="fa fa-close" aria-hidden="true"></i> remove
+        <i class="fa fa-close" aria-hidden="true"></i> {{ $t('reg-profile.remove_btn') }}
     </button>
 </template>
 

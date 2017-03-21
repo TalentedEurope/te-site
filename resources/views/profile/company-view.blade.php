@@ -12,7 +12,7 @@
   <div class="row profile">
     @if($public)
     <div class="col-xs-12 alert alert-danger">
-        <p>Do you want to show this company how talented you are? <a href="{{ url('/register') }}">{!! trans('global.register_btn') !!}</a></p>
+        <p>{!! trans('reg-profile.want_to_show_this_company_how_talented_you_are') !!} <a href="{{ url('/register') }}">{!! trans('global.register_btn') !!}</a></p>
     </div>
     @endif
 
@@ -25,12 +25,12 @@
       </div>
 
       <div class="well">
-        <h3 class="section-title"> <i class="fa fa-info" aria-hidden="true"></i> About</h3>
+        <h3 class="section-title"> <i class="fa fa-info" aria-hidden="true"></i> {!! trans('reg-profile.about') !!}</h3>
         <ul class="student-specs">
-        <li><strong><i class="icon fa fa-map-marker"></i>  We are in: </strong> {{ $user->city }}
+        <li><strong><i class="icon fa fa-map-marker"></i> {!! trans('reg-profile.we_are_in') !!}: </strong> {{ $user->city }}
         @if ($user->country) , <em>{{ $countries[$user->country] }}</em></li> @endif
         @if ($company->personalSkills)
-        <li><strong><i class="icon fa fa-cogs"></i> We're looking for people skilled in: </strong>
+        <li><strong><i class="icon fa fa-cogs"></i> {!! trans('reg-profile.we_are_looking_for_people_skilled_in') !!}: </strong>
               <ul class="skills">
                 @foreach ($company->personalSkills as $skill)
                   <li>{{ $skill->name }}</li>
@@ -39,7 +39,7 @@
         </li>
         @endif
         @if ($company->talent)
-        <li><strong><i class="icon fa fa-lightbulb-o"></i>We think that talent is:</strong> {{ $company->talent }}</li>
+        <li><strong><i class="icon fa fa-lightbulb-o"></i>{!! trans('reg-profile.we_think_that_talent_is') !!}:</strong> {{ $company->talent }}</li>
         @endif
         </ul>
       </div>
@@ -54,7 +54,7 @@
         </figure>
         @endif
         <div class="contact">
-          <h3>Get in contact</h3>
+          <h3>{!! trans('reg-profile.get_in_contact') !!}</h3>
             {{-- <alert-button :company-id="{{ $company->id }}" :alertable="{{ $company->alertable }}" placement="bottom"></alert-button> --}}
           <hr>
           @if (!$public)

@@ -15,15 +15,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Account Collector, Accounting Clerk, Administrative Assistant, Administrative Coordinator, Administrative Director, Administrative Manager, Administrative Services Manager, Administrative Services Officer, Administrative Specialist, Administrative Support Manager, Administrative Support Supervisor, Administrator, Auditing Clerk, Assistant Director, Billing Clerk, Billing Collector, Billing Coordinator, Bookkeeper, Client Relations Manager, Contract Administrator, Credit Clerk, Data Entry, Executive Assistant, Executive Services Administrator, Facility Manager, File Clerk, Financial Clerk, General Office Clerk, Human Resources Administrator, Information Clerk, Legal Secretary, Mail Clerk, Mail Clerk Leader, Material Recording Clerk, Medical Secretary, Office Assistant, Office Clerk, Office Manager, Office Support Manager, Office Support Supervisor, Program Administrator, Program Manager, Receptionist, Records Management Analyst, Secretary, Senior Administrative Analyst, Senior Administrative Coordinator, Senior Administrative Services Officer, Senior Coordinator, Senior Executive Assistant, Senior Special Events Coordinator, Senior Support Assistant, Senior Support Specialist, Special Events Coordinator, Special Programs Coordinator, Staff Assistant, Support Assistant, Support Specialist, Typist, Virtual Assistant, Virtual Receptionist, Word Processor,Corporate Secretary,Treasurer/Chief Financial Officer,General / Operations Manager,Office Manager,Environmental Health & Safety Manager,Safety Manager, Functional Manager,Human Resources Manager,Project Coordinator',                    
                 
-                    'es' => '',                    
+                    'es' => 'Account Collector, Accounting Clerk, Administrative Assistant, Administrative Coordinator, Administrative Director, Administrative Manager, Administrative Services Manager, Administrative Services Officer, Administrative Specialist, Administrative Support Manager, Administrative Support Supervisor, Administrator, Auditing Clerk, Assistant Director, Billing Clerk, Billing Collector, Billing Coordinator, Bookkeeper, Client Relations Manager, Contract Administrator, Credit Clerk, Data Entry, Executive Assistant, Executive Services Administrator, Facility Manager, File Clerk, Financial Clerk, General Office Clerk, Human Resources Administrator, Information Clerk, Legal Secretary, Mail Clerk, Mail Clerk Leader, Material Recording Clerk, Medical Secretary, Office Assistant, Office Clerk, Office Manager, Office Support Manager, Office Support Supervisor, Program Administrator, Program Manager, Receptionist, Records Management Analyst, Secretary, Senior Administrative Analyst, Senior Administrative Coordinator, Senior Administrative Services Officer, Senior Coordinator, Senior Executive Assistant, Senior Special Events Coordinator, Senior Support Assistant, Senior Support Specialist, Special Events Coordinator, Special Programs Coordinator, Staff Assistant, Support Assistant, Support Specialist, Typist, Virtual Assistant, Virtual Receptionist, Word Processor,Corporate Secretary,Treasurer/Chief Financial Officer,General / Operations Manager,Office Manager,Environmental Health & Safety Manager,Safety Manager, Functional Manager,Human Resources Manager,Project Coordinator',                    
                 
-                    'it' => '',                    
+                    'it' => 'Esattore fiscale, contabile, assistente amministrativo, coordinatore amministrativo, direttore amministrativo, manager amministrativo, manager amministrativo dei servizi, agente amministrativo dei servizi, specialista amministrativo, support manager amministrativo, support supervisore amministrativo, amministratore, revisore, assistente direttore, impiegato della fatturazione, esattore fiscale, coordinatore della fatturazione, contabile, manager delle relazioni coi clienti, amministratore di contratto, impiegato di credito, inserimento dei dati, assistente esecutivo, amministratore esecutivo dei servizi, facility manager, impiegato d’archivio, impiegato finanziario, impiegato, amministratore delle risorse umane, information clerk , segretario legale, mail clerk, capo dei mail clerk, material recording clerk, segretario medico, assistente d’ufficio, impiegato, manager dell’ufficio, manager di supporto d’ufficio, supervisore di supporto d’ufficio, amministratore di programma, manager di programma, receptionist, record management analyst, segretario, analista senior amministrativo, coordinatore senior amministrativo, agente dei servizi, coordinatore senior, assistente esecutivo senior, coordinatore senior di eventi speciali, assistente di supporto senior, specialista di supporto senior, coordinatore di eventi speciali, coordinatore di programmi speciali, assistente dello staff, assistente di supporto, specialista di supporto,dattilografo, assistente virtuale, receptionist virtuale, processore word, segretario societario, tesoriere/capo dell’ufficio finanziale, manager generale/delle operazioni, office manager, manager della salute e sicurezza ambientale, manager della sicurezza, functional manager, manager delle risorse umane, coordinatore di progetti.',                    
                 
-                    'de' => '',                    
+                    'de' => 'Account Collector, Accounting Clerk, Administrative Assistant, Administrative Coordinator, Administrative Director, Administrative Manager, Administrative Services Manager, Administrative Services Officer, Administrative Specialist, Administrative Support Manager, Administrative Support Supervisor, Administrator, Auditing Clerk, Assistant Director, Billing Clerk, Billing Collector, Billing Coordinator, Bookkeeper, Client Relations Manager, Contract Administrator, Credit Clerk, Data Entry, Executive Assistant, Executive Services Administrator, Facility Manager, File Clerk, Financial Clerk, General Office Clerk, Human Resources Administrator, Information Clerk, Legal Secretary, Mail Clerk, Mail Clerk Leader, Material Recording Clerk, Medical Secretary, Office Assistant, Office Clerk, Office Manager, Office Support Manager, Office Support Supervisor, Program Administrator, Program Manager, Receptionist, Records Management Analyst, Secretary, Senior Administrative Analyst, Senior Administrative Coordinator, Senior Administrative Services Officer, Senior Coordinator, Senior Executive Assistant, Senior Special Events Coordinator, Senior Support Assistant, Senior Support Specialist, Special Events Coordinator, Special Programs Coordinator, Staff Assistant, Support Assistant, Support Specialist, Typist, Virtual Assistant, Virtual Receptionist, Word Processor,Corporate Secretary,Treasurer/Chief Financial Officer,General / Operations Manager,Office Manager,Environmental Health & Safety Manager,Safety Manager, Functional Manager,Human Resources Manager,Project Coordinator',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Account Collector, Accounting Clerk, Administrative Assistant, Administrative Coordinator, Administrative Director, Administrative Manager, Administrative Services Manager, Administrative Services Officer, Administrative Specialist, Administrative Support Manager, Administrative Support Supervisor, Administrator, Auditing Clerk, Assistant Director, Billing Clerk, Billing Collector, Billing Coordinator, Bookkeeper, Client Relations Manager, Contract Administrator, Credit Clerk, Data Entry, Executive Assistant, Executive Services Administrator, Facility Manager, File Clerk, Financial Clerk, General Office Clerk, Human Resources Administrator, Information Clerk, Legal Secretary, Mail Clerk, Mail Clerk Leader, Material Recording Clerk, Medical Secretary, Office Assistant, Office Clerk, Office Manager, Office Support Manager, Office Support Supervisor, Program Administrator, Program Manager, Receptionist, Records Management Analyst, Secretary, Senior Administrative Analyst, Senior Administrative Coordinator, Senior Administrative Services Officer, Senior Coordinator, Senior Executive Assistant, Senior Special Events Coordinator, Senior Support Assistant, Senior Support Specialist, Special Events Coordinator, Special Programs Coordinator, Staff Assistant, Support Assistant, Support Specialist, Typist, Virtual Assistant, Virtual Receptionist, Word Processor,Corporate Secretary,Treasurer/Chief Financial Officer,General / Operations Manager,Office Manager,Environmental Health & Safety Manager,Safety Manager, Functional Manager,Human Resources Manager,Project Coordinator',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Account Collector, Accounting Clerk, Administrative Assistant, Administrative Coordinator, Administrative Director, Administrative Manager, Administrative Services Manager, Administrative Services Officer, Administrative Specialist, Administrative Support Manager, Administrative Support Supervisor, Administrator, Auditing Clerk, Assistant Director, Billing Clerk, Billing Collector, Billing Coordinator, Bookkeeper, Client Relations Manager, Contract Administrator, Credit Clerk, Data Entry, Executive Assistant, Executive Services Administrator, Facility Manager, File Clerk, Financial Clerk, General Office Clerk, Human Resources Administrator, Information Clerk, Legal Secretary, Mail Clerk, Mail Clerk Leader, Material Recording Clerk, Medical Secretary, Office Assistant, Office Clerk, Office Manager, Office Support Manager, Office Support Supervisor, Program Administrator, Program Manager, Receptionist, Records Management Analyst, Secretary, Senior Administrative Analyst, Senior Administrative Coordinator, Senior Administrative Services Officer, Senior Coordinator, Senior Executive Assistant, Senior Special Events Coordinator, Senior Support Assistant, Senior Support Specialist, Special Events Coordinator, Special Programs Coordinator, Staff Assistant, Support Assistant, Support Specialist, Typist, Virtual Assistant, Virtual Receptionist, Word Processor,Corporate Secretary,Treasurer/Chief Financial Officer,General / Operations Manager,Office Manager,Environmental Health & Safety Manager,Safety Manager, Functional Manager,Human Resources Manager,Project Coordinator',                    
                 
                     'key' => 'administration',                    
                 
@@ -33,15 +33,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Architect, Civil engineer,Quantity surveyor, Interior designer,Construction manager,Landscape architect,Electrician,Architectural drafter,Land surveyor,Urban and regional planner, Designer, Project Architect,Job Captain,CAD Coordinator,Land Planner,Erosion Control Specialist,Carpenter,Drywall Finisher,General Labor,Glazier,Electrician,Flagger,Traffic Control Supervisor,Mason,Millwright,Painter,Pipefitter,Plumbing,Sheetmetal,Roofer,Structural Ironworker,Reinforcing Ironworker,Welder,Equipment Manager,Project Manager,Project Engineer,Foreman,Field Superintendent,Field Office Manager,Estimator,Preconstruction Manager,Detailer,Purchasing Agent,Vice President of Construction',                    
                 
-                    'es' => '',                    
+                    'es' => 'Architect, Civil engineer,Quantity surveyor, Interior designer,Construction manager,Landscape architect,Electrician,Architectural drafter,Land surveyor,Urban and regional planner, Designer, Project Architect,Job Captain,CAD Coordinator,Land Planner,Erosion Control Specialist,Carpenter,Drywall Finisher,General Labor,Glazier,Electrician,Flagger,Traffic Control Supervisor,Mason,Millwright,Painter,Pipefitter,Plumbing,Sheetmetal,Roofer,Structural Ironworker,Reinforcing Ironworker,Welder,Equipment Manager,Project Manager,Project Engineer,Foreman,Field Superintendent,Field Office Manager,Estimator,Preconstruction Manager,Detailer,Purchasing Agent,Vice President of Construction',                    
                 
-                    'it' => '',                    
+                    'it' => 'Architetto, ingegnere civile, geometra, interior designer, direttore dei lavori, architetto di opere pubbliche, elettricista, elaboratore architettonico, agrimensore, pianificatore urbano e regionale, designer, architetto progettista, capo dei lavori, coordinatore CAD, specialista del controllo erosione, carpentiere, rifinitore di cartongesso, lavoro generale, vetraio, elettricista, persona che dirige momentaneamente il traffico, supervisore controllore del traffico, muratore, ingegnere, pittore, idraulico, idraulica, lamine di metallo, costruttore di tetti, fabbro strutturale, fabbro rinforzatore, saldatore, manager delle apparecchiature, manager dei progetti, ingegnere dei progetti, caposquadra, sovrintendente del settore, manager dell’ufficio del settore, estimatore, manager delle precostruzioni, collaboratore di vendita, responsabile degli acquisti, vice presidente della costruzione.',                    
                 
-                    'de' => '',                    
+                    'de' => 'Architect, Civil engineer,Quantity surveyor, Interior designer,Construction manager,Landscape architect,Electrician,Architectural drafter,Land surveyor,Urban and regional planner, Designer, Project Architect,Job Captain,CAD Coordinator,Land Planner,Erosion Control Specialist,Carpenter,Drywall Finisher,General Labor,Glazier,Electrician,Flagger,Traffic Control Supervisor,Mason,Millwright,Painter,Pipefitter,Plumbing,Sheetmetal,Roofer,Structural Ironworker,Reinforcing Ironworker,Welder,Equipment Manager,Project Manager,Project Engineer,Foreman,Field Superintendent,Field Office Manager,Estimator,Preconstruction Manager,Detailer,Purchasing Agent,Vice President of Construction',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Architect, Civil engineer,Quantity surveyor, Interior designer,Construction manager,Landscape architect,Electrician,Architectural drafter,Land surveyor,Urban and regional planner, Designer, Project Architect,Job Captain,CAD Coordinator,Land Planner,Erosion Control Specialist,Carpenter,Drywall Finisher,General Labor,Glazier,Electrician,Flagger,Traffic Control Supervisor,Mason,Millwright,Painter,Pipefitter,Plumbing,Sheetmetal,Roofer,Structural Ironworker,Reinforcing Ironworker,Welder,Equipment Manager,Project Manager,Project Engineer,Foreman,Field Superintendent,Field Office Manager,Estimator,Preconstruction Manager,Detailer,Purchasing Agent,Vice President of Construction',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Architect, Civil engineer,Quantity surveyor, Interior designer,Construction manager,Landscape architect,Electrician,Architectural drafter,Land surveyor,Urban and regional planner, Designer, Project Architect,Job Captain,CAD Coordinator,Land Planner,Erosion Control Specialist,Carpenter,Drywall Finisher,General Labor,Glazier,Electrician,Flagger,Traffic Control Supervisor,Mason,Millwright,Painter,Pipefitter,Plumbing,Sheetmetal,Roofer,Structural Ironworker,Reinforcing Ironworker,Welder,Equipment Manager,Project Manager,Project Engineer,Foreman,Field Superintendent,Field Office Manager,Estimator,Preconstruction Manager,Detailer,Purchasing Agent,Vice President of Construction',                    
                 
                     'key' => 'architecture-amp-construction',                    
                 
@@ -51,15 +51,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Actor, Animator, Art therapist, Arts administrator, Ceramics designer, Community arts worker, Dancer, Exhibition designer, Fashion designer, Fine artist, Furniture conservator/restorer, Furniture designer, Glass blower/designer, Graphic designer, Illustrator, Industrial/product designer, Interior and spatial designer, Jewellery designer, Make-up artist, Medical illustrator, Museum/gallery conservator, Museum/gallery curator, Museum/gallery exhibitions officer, Musician, Photographer, Press photographer, Printmaker, Production designer, theatre/television/film, Textile designer, Web designer,',                    
                 
-                    'es' => '',                    
+                    'es' => 'Actor, Animator, Art therapist, Arts administrator, Ceramics designer, Community arts worker, Dancer, Exhibition designer, Fashion designer, Fine artist, Furniture conservator/restorer, Furniture designer, Glass blower/designer, Graphic designer, Illustrator, Industrial/product designer, Interior and spatial designer, Jewellery designer, Make-up artist, Medical illustrator, Museum/gallery conservator, Museum/gallery curator, Museum/gallery exhibitions officer, Musician, Photographer, Press photographer, Printmaker, Production designer, theatre/television/film, Textile designer, Web designer,',                    
                 
-                    'it' => '',                    
+                    'it' => 'Attore, animatore, art therapist, amministratore dell’arte, designer di ceramica, community art worker, ballerino, designer di esibizioni, designer di moda, fine artist, restauratore di mobili, designer di mobili, disegnatore/soffiatore di vetro, graphic designer, illustratore, designer di prodotti industriali, designer di interni ed esterni, creatore di gioielli, truccatore, illustratore medico, tutore di museo/galleria, curatore di museo/galleria, ufficiale delle esibizioni di museo/galleria, musicista, fotografo, fotografo giornalista, incisore, designer di produzione, teatro/televisione/film, designer tessile, web designer',                    
                 
-                    'de' => '',                    
+                    'de' => 'Actor, Animator, Art therapist, Arts administrator, Ceramics designer, Community arts worker, Dancer, Exhibition designer, Fashion designer, Fine artist, Furniture conservator/restorer, Furniture designer, Glass blower/designer, Graphic designer, Illustrator, Industrial/product designer, Interior and spatial designer, Jewellery designer, Make-up artist, Medical illustrator, Museum/gallery conservator, Museum/gallery curator, Museum/gallery exhibitions officer, Musician, Photographer, Press photographer, Printmaker, Production designer, theatre/television/film, Textile designer, Web designer,',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Actor, Animator, Art therapist, Arts administrator, Ceramics designer, Community arts worker, Dancer, Exhibition designer, Fashion designer, Fine artist, Furniture conservator/restorer, Furniture designer, Glass blower/designer, Graphic designer, Illustrator, Industrial/product designer, Interior and spatial designer, Jewellery designer, Make-up artist, Medical illustrator, Museum/gallery conservator, Museum/gallery curator, Museum/gallery exhibitions officer, Musician, Photographer, Press photographer, Printmaker, Production designer, theatre/television/film, Textile designer, Web designer,',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Actor, Animator, Art therapist, Arts administrator, Ceramics designer, Community arts worker, Dancer, Exhibition designer, Fashion designer, Fine artist, Furniture conservator/restorer, Furniture designer, Glass blower/designer, Graphic designer, Illustrator, Industrial/product designer, Interior and spatial designer, Jewellery designer, Make-up artist, Medical illustrator, Museum/gallery conservator, Museum/gallery curator, Museum/gallery exhibitions officer, Musician, Photographer, Press photographer, Printmaker, Production designer, theatre/television/film, Textile designer, Web designer,',                    
                 
                     'key' => 'art-amp-culture',                    
                 
@@ -69,15 +69,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Accounting technician, Actuarial analyst, Actuary, Chartered accountant, Chartered certified accountant, Chartered loss adjuster, Chartered management accountant, Chartered public finance accountant, Corporate investment banker, Corporate treasurer, Financial adviser, Financial manager, Financial risk analyst, Financial trader, Forensic accountant, Insurance account manager, Insurance broker, Insurance claims handler, Insurance risk surveyor, Insurance underwriter, Internal auditor, Investment analyst, Operational investment banker, Pension scheme manager, Pensions consultant, Retail banker, Risk manager, Senior tax professional/tax inspector, Stockbroker, Tax adviser',                    
                 
-                    'es' => '',                    
+                    'es' => 'Accounting technician, Actuarial analyst, Actuary, Chartered accountant, Chartered certified accountant, Chartered loss adjuster, Chartered management accountant, Chartered public finance accountant, Corporate investment banker, Corporate treasurer, Financial adviser, Financial manager, Financial risk analyst, Financial trader, Forensic accountant, Insurance account manager, Insurance broker, Insurance claims handler, Insurance risk surveyor, Insurance underwriter, Internal auditor, Investment analyst, Operational investment banker, Pension scheme manager, Pensions consultant, Retail banker, Risk manager, Senior tax professional/tax inspector, Stockbroker, Tax adviser',                    
                 
-                    'it' => '',                    
+                    'it' => 'Tecnico della contabilità, analista attuariale, attuario, commercialista, commercialista certificato, gestore dei sinistri a tempo determinato, commercialista a tempo determinato, ragioniere delle pubbliche finanze a tempo determinato, banchiere d’investimenti aziendale, tesoriere aziendale, consulente finanziario, manager finanziario, analista di rischi finanziari, operatore finanziario, contabile forense, manager di conto di assicurazione, intermediario di assicurazione, responsabile dell’assicurazione, ispettore dei rischi assicuratore, sottoscrittore di assicurazione, revisore interno, analista di investimenti, banchiere d’investimento operativo, manager del sistema pensionistico, consulente di pensioni, banchiere di vendita al dettaglio, manager dei rischi, professionista senior delle tasse/ ispettore delle tasse, agente di borsa, consulente delle tasse',                    
                 
-                    'de' => '',                    
+                    'de' => 'Accounting technician, Actuarial analyst, Actuary, Chartered accountant, Chartered certified accountant, Chartered loss adjuster, Chartered management accountant, Chartered public finance accountant, Corporate investment banker, Corporate treasurer, Financial adviser, Financial manager, Financial risk analyst, Financial trader, Forensic accountant, Insurance account manager, Insurance broker, Insurance claims handler, Insurance risk surveyor, Insurance underwriter, Internal auditor, Investment analyst, Operational investment banker, Pension scheme manager, Pensions consultant, Retail banker, Risk manager, Senior tax professional/tax inspector, Stockbroker, Tax adviser',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Accounting technician, Actuarial analyst, Actuary, Chartered accountant, Chartered certified accountant, Chartered loss adjuster, Chartered management accountant, Chartered public finance accountant, Corporate investment banker, Corporate treasurer, Financial adviser, Financial manager, Financial risk analyst, Financial trader, Forensic accountant, Insurance account manager, Insurance broker, Insurance claims handler, Insurance risk surveyor, Insurance underwriter, Internal auditor, Investment analyst, Operational investment banker, Pension scheme manager, Pensions consultant, Retail banker, Risk manager, Senior tax professional/tax inspector, Stockbroker, Tax adviser',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Accounting technician, Actuarial analyst, Actuary, Chartered accountant, Chartered certified accountant, Chartered loss adjuster, Chartered management accountant, Chartered public finance accountant, Corporate investment banker, Corporate treasurer, Financial adviser, Financial manager, Financial risk analyst, Financial trader, Forensic accountant, Insurance account manager, Insurance broker, Insurance claims handler, Insurance risk surveyor, Insurance underwriter, Internal auditor, Investment analyst, Operational investment banker, Pension scheme manager, Pensions consultant, Retail banker, Risk manager, Senior tax professional/tax inspector, Stockbroker, Tax adviser',                    
                 
                     'key' => 'banking-and-or-finance-amp-insurance',                    
                 
@@ -87,15 +87,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Chartered management accountant, Civil Service fast streamer, Economist, Environmental consultant, Ergonomist, Fast food restaurant manager, Financial manager, Financial risk analyst, Health service manager, Hotel manager, Internal auditor, IT consultant, Management consultant, Office manager, Operational researcher, Product manager, Project manager, Public affairs consultant, Recruitment consultant, Retail manager, Risk manager, Secretary/administrator, Statistician',                    
                 
-                    'es' => '',                    
+                    'es' => 'Chartered management accountant, Civil Service fast streamer, Economist, Environmental consultant, Ergonomist, Fast food restaurant manager, Financial manager, Financial risk analyst, Health service manager, Hotel manager, Internal auditor, IT consultant, Management consultant, Office manager, Operational researcher, Product manager, Project manager, Public affairs consultant, Recruitment consultant, Retail manager, Risk manager, Secretary/administrator, Statistician',                    
                 
-                    'it' => '',                    
+                    'it' => 'Ragioniere di gestione a tempo determinato, fast streamer civil service, economista, consulente ambientale, ergonomo, manager di ristorante fast food, manager finanziario, analista finanziario dei rischi, manager dei servizi di salute, manager di hotel, revisore interno, consulente IT, consulente del management, manager d’ufficio, ricercatore operativo, manager dei prodotti, manager dei progetti, consulente degli affari pubblici, consulente di assunzione, manager di vendita al dettaglio, manager dei rischi, segretario/amministratore, statistico',                    
                 
-                    'de' => '',                    
+                    'de' => 'Chartered management accountant, Civil Service fast streamer, Economist, Environmental consultant, Ergonomist, Fast food restaurant manager, Financial manager, Financial risk analyst, Health service manager, Hotel manager, Internal auditor, IT consultant, Management consultant, Office manager, Operational researcher, Product manager, Project manager, Public affairs consultant, Recruitment consultant, Retail manager, Risk manager, Secretary/administrator, Statistician',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Chartered management accountant, Civil Service fast streamer, Economist, Environmental consultant, Ergonomist, Fast food restaurant manager, Financial manager, Financial risk analyst, Health service manager, Hotel manager, Internal auditor, IT consultant, Management consultant, Office manager, Operational researcher, Product manager, Project manager, Public affairs consultant, Recruitment consultant, Retail manager, Risk manager, Secretary/administrator, Statistician',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Chartered management accountant, Civil Service fast streamer, Economist, Environmental consultant, Ergonomist, Fast food restaurant manager, Financial manager, Financial risk analyst, Health service manager, Hotel manager, Internal auditor, IT consultant, Management consultant, Office manager, Operational researcher, Product manager, Project manager, Public affairs consultant, Recruitment consultant, Retail manager, Risk manager, Secretary/administrator, Statistician',                    
                 
                     'key' => 'business-amp-consulting',                    
                 
@@ -105,15 +105,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'PR Agency',                    
                 
-                    'es' => '',                    
+                    'es' => 'PR Agency',                    
                 
                     'it' => 'Agenzia PR',                    
                 
-                    'de' => '',                    
+                    'de' => 'PR Agency',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'PR Agency',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'PR Agency',                    
                 
                     'key' => 'communication-amp-media-amp-pr',                    
                 
@@ -123,15 +123,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Supermarket',                    
                 
-                    'es' => '',                    
+                    'es' => 'Supermarket',                    
                 
                     'it' => 'Supermercato',                    
                 
-                    'de' => '',                    
+                    'de' => 'Supermarket',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Supermarket',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Supermarket',                    
                 
                     'key' => 'consumer-goods',                    
                 
@@ -141,15 +141,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Customer Support',                    
                 
-                    'es' => '',                    
+                    'es' => 'Customer Support',                    
                 
                     'it' => 'Assistenza clienti',                    
                 
-                    'de' => '',                    
+                    'de' => 'Customer Support',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Customer Support',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Customer Support',                    
                 
                     'key' => 'customer-service',                    
                 
@@ -159,15 +159,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Design Agency',                    
                 
-                    'es' => '',                    
+                    'es' => 'Design Agency',                    
                 
                     'it' => 'Agenzia di design',                    
                 
-                    'de' => '',                    
+                    'de' => 'Design Agency',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Design Agency',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Design Agency',                    
                 
                     'key' => 'design',                    
                 
@@ -177,15 +177,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Early years teacher, Education administrator, Educational psychologist, English as a foreign language teacher, Environmental education officer, Further education teacher, Higher education lecturer, Learning mentor, Museum education officer, Primary school teacher, Private music teacher, Secondary school teacher, Special educational needs teacher',                    
                 
-                    'es' => '',                    
+                    'es' => 'Early years teacher, Education administrator, Educational psychologist, English as a foreign language teacher, Environmental education officer, Further education teacher, Higher education lecturer, Learning mentor, Museum education officer, Primary school teacher, Private music teacher, Secondary school teacher, Special educational needs teacher',                    
                 
-                    'it' => '',                    
+                    'it' => 'Insegnante di scuola della prima infanzia, amministratore educativo, psicopedagogista, insegnante di inglese come lingua straniera, ufficiale di istruzione ambientale, docente di scuola superiore, docente di scuola superiore, insegnante privato, ufficiale educativo di museo, insegnante di scuola primaria, insegnante privato di musica, insegnante di scuola secondaria, insegnante di sostegno',                    
                 
-                    'de' => '',                    
+                    'de' => 'Early years teacher, Education administrator, Educational psychologist, English as a foreign language teacher, Environmental education officer, Further education teacher, Higher education lecturer, Learning mentor, Museum education officer, Primary school teacher, Private music teacher, Secondary school teacher, Special educational needs teacher',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Early years teacher, Education administrator, Educational psychologist, English as a foreign language teacher, Environmental education officer, Further education teacher, Higher education lecturer, Learning mentor, Museum education officer, Primary school teacher, Private music teacher, Secondary school teacher, Special educational needs teacher',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Early years teacher, Education administrator, Educational psychologist, English as a foreign language teacher, Environmental education officer, Further education teacher, Higher education lecturer, Learning mentor, Museum education officer, Primary school teacher, Private music teacher, Secondary school teacher, Special educational needs teacher',                    
                 
                     'key' => 'education-amp-training',                    
                 
@@ -195,15 +195,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Aerospace engineer, Automotive engineer, Biomedical engineer, Chemical engineer, Communications engineer, Consulting civil engineer, Contracting civil engineer, Control and instrumentation engineer, Drilling engineer, Electrical engineer, Electronics engineer, Energy engineer, Engineering geologist, Geochemist, Maintenance engineer, Manufacturing engineer, Manufacturing systems engineer, Materials engineer, Mechanical engineer, Naval architect, Petroleum engineer, Production manager, Quality manager, Structural engineer, Technical brewer, Technical sales engineer, Water engineer',                    
                 
-                    'es' => '',                    
+                    'es' => 'Aerospace engineer, Automotive engineer, Biomedical engineer, Chemical engineer, Communications engineer, Consulting civil engineer, Contracting civil engineer, Control and instrumentation engineer, Drilling engineer, Electrical engineer, Electronics engineer, Energy engineer, Engineering geologist, Geochemist, Maintenance engineer, Manufacturing engineer, Manufacturing systems engineer, Materials engineer, Mechanical engineer, Naval architect, Petroleum engineer, Production manager, Quality manager, Structural engineer, Technical brewer, Technical sales engineer, Water engineer',                    
                 
-                    'it' => '',                    
+                    'it' => 'Ingegnere aerospaziale, ingegnere automobilistico, ingegnere biomedico, ingegnere chimico, ingegnere delle comunicazioni, ingegnere civile consulente, ingegnere civile contraente, ingegnere del controllo e della strumentazione, ingegnere di trivellazioni, ingegnere elettrico, ingegnere elettronico, ingegnere geologo, geochimico, ingegnere di manutenzione, ingegnere di fabbricazione, ingegnere di fabbricazione di sistemi, ingegnere dei materiali, ingegnere meccanico, architetto navale, ingegnere del petrolio, manager della produzione, manager della qualità, ingegnere strutturale, tecnico fabbricatore di birra, ingegnere tecnico delle vendite, ingegnere idrico',                    
                 
-                    'de' => '',                    
+                    'de' => 'Aerospace engineer, Automotive engineer, Biomedical engineer, Chemical engineer, Communications engineer, Consulting civil engineer, Contracting civil engineer, Control and instrumentation engineer, Drilling engineer, Electrical engineer, Electronics engineer, Energy engineer, Engineering geologist, Geochemist, Maintenance engineer, Manufacturing engineer, Manufacturing systems engineer, Materials engineer, Mechanical engineer, Naval architect, Petroleum engineer, Production manager, Quality manager, Structural engineer, Technical brewer, Technical sales engineer, Water engineer',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Aerospace engineer, Automotive engineer, Biomedical engineer, Chemical engineer, Communications engineer, Consulting civil engineer, Contracting civil engineer, Control and instrumentation engineer, Drilling engineer, Electrical engineer, Electronics engineer, Energy engineer, Engineering geologist, Geochemist, Maintenance engineer, Manufacturing engineer, Manufacturing systems engineer, Materials engineer, Mechanical engineer, Naval architect, Petroleum engineer, Production manager, Quality manager, Structural engineer, Technical brewer, Technical sales engineer, Water engineer',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Aerospace engineer, Automotive engineer, Biomedical engineer, Chemical engineer, Communications engineer, Consulting civil engineer, Contracting civil engineer, Control and instrumentation engineer, Drilling engineer, Electrical engineer, Electronics engineer, Energy engineer, Engineering geologist, Geochemist, Maintenance engineer, Manufacturing engineer, Manufacturing systems engineer, Materials engineer, Mechanical engineer, Naval architect, Petroleum engineer, Production manager, Quality manager, Structural engineer, Technical brewer, Technical sales engineer, Water engineer',                    
                 
                     'key' => 'engineering',                    
                 
@@ -213,15 +213,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Accommodation manager, Catering manager, Conference centre manager, Customer service manager, Event organiser, Exhibition designer, Fast food restaurant manager, Hotel manager, Human resources officer, Marketing executive, Public house manager, Restaurant manager, Holiday representative, Theme park manager, Tour manager, Tourism officer, Tourist information centre manager, Travel agency manager',                    
                 
-                    'es' => '',                    
+                    'es' => 'Accommodation manager, Catering manager, Conference centre manager, Customer service manager, Event organiser, Exhibition designer, Fast food restaurant manager, Hotel manager, Human resources officer, Marketing executive, Public house manager, Restaurant manager, Holiday representative, Theme park manager, Tour manager, Tourism officer, Tourist information centre manager, Travel agency manager',                    
                 
-                    'it' => '',                    
+                    'it' => 'Manager di sistemazioni/alloggio, manager del catering, manager del centro conferenze, manager del servizio clienti, organizzatore di eventi, designer di esibizioni, manager di ristorante fast food, manager di hotel,agente delle risorse umane, marketing executive, manager di pub/bar, mananger di ristorante, rappresentante di viaggi/promoter turistico, manager di parco a tema, tour manager, agente turistico, manager del centro turistico informazioni, manager dell’agenzia di viaggi.',                    
                 
-                    'de' => '',                    
+                    'de' => 'Accommodation manager, Catering manager, Conference centre manager, Customer service manager, Event organiser, Exhibition designer, Fast food restaurant manager, Hotel manager, Human resources officer, Marketing executive, Public house manager, Restaurant manager, Holiday representative, Theme park manager, Tour manager, Tourism officer, Tourist information centre manager, Travel agency manager',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Accommodation manager, Catering manager, Conference centre manager, Customer service manager, Event organiser, Exhibition designer, Fast food restaurant manager, Hotel manager, Human resources officer, Marketing executive, Public house manager, Restaurant manager, Holiday representative, Theme park manager, Tour manager, Tourism officer, Tourist information centre manager, Travel agency manager',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Accommodation manager, Catering manager, Conference centre manager, Customer service manager, Event organiser, Exhibition designer, Fast food restaurant manager, Hotel manager, Human resources officer, Marketing executive, Public house manager, Restaurant manager, Holiday representative, Theme park manager, Tour manager, Tourism officer, Tourist information centre manager, Travel agency manager',                    
                 
                     'key' => 'hospitality-amp-tourism',                    
                 
@@ -231,15 +231,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Careers adviser, Human resources officer, IT trainer, Management consultant, Occupational psychologist, Office manager, Recruitment consultant, Sales executive, Training and development officer',                    
                 
-                    'es' => '',                    
+                    'es' => 'Careers adviser, Human resources officer, IT trainer, Management consultant, Occupational psychologist, Office manager, Recruitment consultant, Sales executive, Training and development officer',                    
                 
-                    'it' => '',                    
+                    'it' => 'Consulente di carriera, agente delle risorse umane, formatore IT, management consultant, psicologo occupazionale, manager d’ufficio, consulente reclutatore, esecutivo delle vendite, agente di formazione e sviluppo',                    
                 
-                    'de' => '',                    
+                    'de' => 'Careers adviser, Human resources officer, IT trainer, Management consultant, Occupational psychologist, Office manager, Recruitment consultant, Sales executive, Training and development officer',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Careers adviser, Human resources officer, IT trainer, Management consultant, Occupational psychologist, Office manager, Recruitment consultant, Sales executive, Training and development officer',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Careers adviser, Human resources officer, IT trainer, Management consultant, Occupational psychologist, Office manager, Recruitment consultant, Sales executive, Training and development officer',                    
                 
                     'key' => 'human-resources',                    
                 
@@ -249,15 +249,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Applications developer, Business analyst, Cartographer, Database administrator, Games developer, Geographical information systems officer, Information security specialist, Information systems manager, IT consultant, IT sales professional, IT technical support officer, Network engineer, SEO specialist, Software tester, Systems analyst, Systems developer, Technical author, Web designer, Web developer',                    
                 
-                    'es' => '',                    
+                    'es' => 'Applications developer, Business analyst, Cartographer, Database administrator, Games developer, Geographical information systems officer, Information security specialist, Information systems manager, IT consultant, IT sales professional, IT technical support officer, Network engineer, SEO specialist, Software tester, Systems analyst, Systems developer, Technical author, Web designer, Web developer',                    
                 
-                    'it' => '',                    
+                    'it' => 'Sviluppatore di applicazioni, analista di mercato, cartografo, amministratore del database, sviluppatore di giochi, agente di sistemi di informazioni geografiche, specialista di informazioni sicure, manager del sistema di informazioni, consulente IT, venditore professionale IT, agente tecnico di supporto IT, ingegnere di rete, specialista SEO, collaudatore di software, analista di sistema, sviluppatore di sistema, autore tecnico, designer del web, sviluppatore del web.',                    
                 
-                    'de' => '',                    
+                    'de' => 'Applications developer, Business analyst, Cartographer, Database administrator, Games developer, Geographical information systems officer, Information security specialist, Information systems manager, IT consultant, IT sales professional, IT technical support officer, Network engineer, SEO specialist, Software tester, Systems analyst, Systems developer, Technical author, Web designer, Web developer',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Applications developer, Business analyst, Cartographer, Database administrator, Games developer, Geographical information systems officer, Information security specialist, Information systems manager, IT consultant, IT sales professional, IT technical support officer, Network engineer, SEO specialist, Software tester, Systems analyst, Systems developer, Technical author, Web designer, Web developer',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Applications developer, Business analyst, Cartographer, Database administrator, Games developer, Geographical information systems officer, Information security specialist, Information systems manager, IT consultant, IT sales professional, IT technical support officer, Network engineer, SEO specialist, Software tester, Systems analyst, Systems developer, Technical author, Web designer, Web developer',                    
                 
                     'key' => 'it-amp-web',                    
                 
@@ -267,15 +267,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Barrister, Barrister&apos;s clerk, Chartered legal executive (England and Wales), Company secretary, Licensed conveyancer, Patent attorney, Solicitor, Solicitor, Scotland, Tax adviser, Trade mark attorney',                    
                 
-                    'es' => '',                    
+                    'es' => 'Barrister, Barrister&apos;s clerk, Chartered legal executive (England and Wales), Company secretary, Licensed conveyancer, Patent attorney, Solicitor, Solicitor, Scotland, Tax adviser, Trade mark attorney',                    
                 
-                    'it' => '',                    
+                    'it' => 'Avvocato/magistrato, impiegato del magistrate, dirigente d’azienda legale a tempo determinato, segretario della compagnia, notaio autorizzato, avvocato di brevetti, rappresentate legale, Scozia, consulente delle tasse, avvocato di marchio commerciale',                    
                 
-                    'de' => '',                    
+                    'de' => 'Barrister, Barrister&apos;s clerk, Chartered legal executive (England and Wales), Company secretary, Licensed conveyancer, Patent attorney, Solicitor, Solicitor, Scotland, Tax adviser, Trade mark attorney',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Barrister, Barrister&apos;s clerk, Chartered legal executive (England and Wales), Company secretary, Licensed conveyancer, Patent attorney, Solicitor, Solicitor, Scotland, Tax adviser, Trade mark attorney',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Barrister, Barrister&apos;s clerk, Chartered legal executive (England and Wales), Company secretary, Licensed conveyancer, Patent attorney, Solicitor, Solicitor, Scotland, Tax adviser, Trade mark attorney',                    
                 
                     'key' => 'legal',                    
                 
@@ -285,15 +285,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Air cabin crew, Air traffic controller, Airline pilot, Electrical engineer, Freight forwarder, IT consultant, Logistics and distribution manager, Maintenance engineer, Marketing executive, Merchant navy officer, Passenger transport manager, Transport planner,',                    
                 
-                    'es' => '',                    
+                    'es' => 'Air cabin crew, Air traffic controller, Airline pilot, Electrical engineer, Freight forwarder, IT consultant, Logistics and distribution manager, Maintenance engineer, Marketing executive, Merchant navy officer, Passenger transport manager, Transport planner,',                    
                 
-                    'it' => '',                    
+                    'it' => 'Equipaggio della cabina aerea, controllore del traffico aereo, pilota di linea, ingegnere elettrico, speditore di merci/nolo, consulente IT, manager logistico e della distribuzione, ingegnere della manutenzione, esecutivo del marketing, agente di commercio/mercato navale, manager del trasporto passeggeri, pianificatore di trasporto',                    
                 
-                    'de' => '',                    
+                    'de' => 'Air cabin crew, Air traffic controller, Airline pilot, Electrical engineer, Freight forwarder, IT consultant, Logistics and distribution manager, Maintenance engineer, Marketing executive, Merchant navy officer, Passenger transport manager, Transport planner,',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Air cabin crew, Air traffic controller, Airline pilot, Electrical engineer, Freight forwarder, IT consultant, Logistics and distribution manager, Maintenance engineer, Marketing executive, Merchant navy officer, Passenger transport manager, Transport planner,',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Air cabin crew, Air traffic controller, Airline pilot, Electrical engineer, Freight forwarder, IT consultant, Logistics and distribution manager, Maintenance engineer, Marketing executive, Merchant navy officer, Passenger transport manager, Transport planner,',                    
                 
                     'key' => 'logistics',                    
                 
@@ -303,15 +303,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Factory',                    
                 
-                    'es' => '',                    
+                    'es' => 'Factory',                    
                 
                     'it' => 'Fabbrica',                    
                 
-                    'de' => '',                    
+                    'de' => 'Factory',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Factory',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Factory',                    
                 
                     'key' => 'manufacturing',                    
                 
@@ -321,15 +321,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Advertising account executive, Advertising account planner, Advertising art director, Advertising copywriter, Digital marketer, Market researcher, Marketing executive, Media buyer, Media planner, Public affairs consultant, Public relations account executive, Public relations officer, Sales promotion account executive',                    
                 
-                    'es' => '',                    
+                    'es' => 'Advertising account executive, Advertising account planner, Advertising art director, Advertising copywriter, Digital marketer, Market researcher, Marketing executive, Media buyer, Media planner, Public affairs consultant, Public relations account executive, Public relations officer, Sales promotion account executive',                    
                 
-                    'it' => '',                    
+                    'it' => 'Dirigente contabile della pubblicità, pianificatore di pubblicità, direttore artistic di pubblicità, copywriter pubblicitario, venditore digitale, ricercatore di mercato, esecutivo di mercato, acquirente di media, pianificatore di media, consulente degli affari pubblici, responsabile clienti e relazioni pubbliche, agente delle pubbliche relazioni, esecutivo delle promozioni di vendita',                    
                 
-                    'de' => '',                    
+                    'de' => 'Advertising account executive, Advertising account planner, Advertising art director, Advertising copywriter, Digital marketer, Market researcher, Marketing executive, Media buyer, Media planner, Public affairs consultant, Public relations account executive, Public relations officer, Sales promotion account executive',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Advertising account executive, Advertising account planner, Advertising art director, Advertising copywriter, Digital marketer, Market researcher, Marketing executive, Media buyer, Media planner, Public affairs consultant, Public relations account executive, Public relations officer, Sales promotion account executive',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Advertising account executive, Advertising account planner, Advertising art director, Advertising copywriter, Digital marketer, Market researcher, Marketing executive, Media buyer, Media planner, Public affairs consultant, Public relations account executive, Public relations officer, Sales promotion account executive',                    
                 
                     'key' => 'marketing-amp-advertising',                    
                 
@@ -339,15 +339,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Acupuncturist, Adult nurse, Art therapist, Biomedical scientist, Children&apos;s nurse, Chiropractor, Clinical psychologist, Community pharmacist, Counselling psychologist, Dance movement psychotherapist, Dentist, Diagnostic radiographer, Dietitian, Dispensing optician, Dramatherapist, Epidemiologist, Exercise physiologist, Forensic psychologist, General practice doctor, Health promotion specialist, Health service manager, Health visitor, Healthcare scientist, audiology, Healthcare scientist, clinical biochemistry, Healthcare scientist, clinical embryology, Healthcare scientist, genetics, Healthcare scientist, haematology, Healthcare scientist, histocompatibility and immunogenetics, Healthcare scientist, immunology, Healthcare scientist, medical physics, Healthcare scientist, physiology, Herbalist, Homeopath, Horticultural therapist, Hospital doctor, Hospital pharmacist, Learning disability nurse, Medical sales representative, Mental health nurse, Microbiologist, Midwife, Music therapist, Nutritional therapist, Nutritionist, Occupational therapist, Ophthalmologist, Optometrist, Orthoptist, Osteopath, Paramedic, Physiotherapist, Podiatrist, Radiation protection practitioner, Speech and language therapist, Sports therapist, Therapeutic radiographer',                    
                 
-                    'es' => '',                    
+                    'es' => 'Acupuncturist, Adult nurse, Art therapist, Biomedical scientist, Children&apos;s nurse, Chiropractor, Clinical psychologist, Community pharmacist, Counselling psychologist, Dance movement psychotherapist, Dentist, Diagnostic radiographer, Dietitian, Dispensing optician, Dramatherapist, Epidemiologist, Exercise physiologist, Forensic psychologist, General practice doctor, Health promotion specialist, Health service manager, Health visitor, Healthcare scientist, audiology, Healthcare scientist, clinical biochemistry, Healthcare scientist, clinical embryology, Healthcare scientist, genetics, Healthcare scientist, haematology, Healthcare scientist, histocompatibility and immunogenetics, Healthcare scientist, immunology, Healthcare scientist, medical physics, Healthcare scientist, physiology, Herbalist, Homeopath, Horticultural therapist, Hospital doctor, Hospital pharmacist, Learning disability nurse, Medical sales representative, Mental health nurse, Microbiologist, Midwife, Music therapist, Nutritional therapist, Nutritionist, Occupational therapist, Ophthalmologist, Optometrist, Orthoptist, Osteopath, Paramedic, Physiotherapist, Podiatrist, Radiation protection practitioner, Speech and language therapist, Sports therapist, Therapeutic radiographer',                    
                 
-                    'it' => '',                    
+                    'it' => 'Agopuntirista, infermiera di adulti, terapista dell’arte, scientifico biomedico, infermiera di bambini, chiropratico, psicologo clinico, farmacista comunitario, psicologo consigliere, psicoterapista movimenti di ballo, dentista, radiografo diagnostico, dietologo, ottico, dramma terapista, epidemiologo, fisiologi sta dell’esercizio, psicologo forense, dottore di famiglia, specialista di promozione di salute, manager del servizio di salute, medico/assitente sociale, scienziato del settore sanitario, biochimico clinico, scienziato del settore sanitario,clinico embriologia clinica, scienziato del settore sanitario, immunologo, scienziato del settore sanitario, fisico medico, scienziato del settore sanitario, fisiologo, erborista, omeopata, terapista orticulture, dottore ospedaliere, farmacista ospedaliere, infermiera speciale per problemi di apprendimento, rappresentate di vendita medica, infermiera per problemi mentali, microbiologo, ostetrica, terapista della musica, terapista nutrizionale, nutrizionista, terapista occupazionale, oftalmologo, optometrista, ortopedico, paramedico, fisioterapista, podologo, professionista di protezione da radiazioni, terapista del linguaggio, terapista sportivo, radiografo terapeutico',                    
                 
-                    'de' => '',                    
+                    'de' => 'Acupuncturist, Adult nurse, Art therapist, Biomedical scientist, Children&apos;s nurse, Chiropractor, Clinical psychologist, Community pharmacist, Counselling psychologist, Dance movement psychotherapist, Dentist, Diagnostic radiographer, Dietitian, Dispensing optician, Dramatherapist, Epidemiologist, Exercise physiologist, Forensic psychologist, General practice doctor, Health promotion specialist, Health service manager, Health visitor, Healthcare scientist, audiology, Healthcare scientist, clinical biochemistry, Healthcare scientist, clinical embryology, Healthcare scientist, genetics, Healthcare scientist, haematology, Healthcare scientist, histocompatibility and immunogenetics, Healthcare scientist, immunology, Healthcare scientist, medical physics, Healthcare scientist, physiology, Herbalist, Homeopath, Horticultural therapist, Hospital doctor, Hospital pharmacist, Learning disability nurse, Medical sales representative, Mental health nurse, Microbiologist, Midwife, Music therapist, Nutritional therapist, Nutritionist, Occupational therapist, Ophthalmologist, Optometrist, Orthoptist, Osteopath, Paramedic, Physiotherapist, Podiatrist, Radiation protection practitioner, Speech and language therapist, Sports therapist, Therapeutic radiographer',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Acupuncturist, Adult nurse, Art therapist, Biomedical scientist, Children&apos;s nurse, Chiropractor, Clinical psychologist, Community pharmacist, Counselling psychologist, Dance movement psychotherapist, Dentist, Diagnostic radiographer, Dietitian, Dispensing optician, Dramatherapist, Epidemiologist, Exercise physiologist, Forensic psychologist, General practice doctor, Health promotion specialist, Health service manager, Health visitor, Healthcare scientist, audiology, Healthcare scientist, clinical biochemistry, Healthcare scientist, clinical embryology, Healthcare scientist, genetics, Healthcare scientist, haematology, Healthcare scientist, histocompatibility and immunogenetics, Healthcare scientist, immunology, Healthcare scientist, medical physics, Healthcare scientist, physiology, Herbalist, Homeopath, Horticultural therapist, Hospital doctor, Hospital pharmacist, Learning disability nurse, Medical sales representative, Mental health nurse, Microbiologist, Midwife, Music therapist, Nutritional therapist, Nutritionist, Occupational therapist, Ophthalmologist, Optometrist, Orthoptist, Osteopath, Paramedic, Physiotherapist, Podiatrist, Radiation protection practitioner, Speech and language therapist, Sports therapist, Therapeutic radiographer',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Acupuncturist, Adult nurse, Art therapist, Biomedical scientist, Children&apos;s nurse, Chiropractor, Clinical psychologist, Community pharmacist, Counselling psychologist, Dance movement psychotherapist, Dentist, Diagnostic radiographer, Dietitian, Dispensing optician, Dramatherapist, Epidemiologist, Exercise physiologist, Forensic psychologist, General practice doctor, Health promotion specialist, Health service manager, Health visitor, Healthcare scientist, audiology, Healthcare scientist, clinical biochemistry, Healthcare scientist, clinical embryology, Healthcare scientist, genetics, Healthcare scientist, haematology, Healthcare scientist, histocompatibility and immunogenetics, Healthcare scientist, immunology, Healthcare scientist, medical physics, Healthcare scientist, physiology, Herbalist, Homeopath, Horticultural therapist, Hospital doctor, Hospital pharmacist, Learning disability nurse, Medical sales representative, Mental health nurse, Microbiologist, Midwife, Music therapist, Nutritional therapist, Nutritionist, Occupational therapist, Ophthalmologist, Optometrist, Orthoptist, Osteopath, Paramedic, Physiotherapist, Podiatrist, Radiation protection practitioner, Speech and language therapist, Sports therapist, Therapeutic radiographer',                    
                 
                     'key' => 'medicine-amp-pharmaceutics',                    
                 
@@ -357,15 +357,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Civil Service fast streamer,Government social research officer,Politician&apos;s assistant,Public affairs consultant,Public relations account executive,Social researcher,Charity officer,Diplomatic Services operational officer,Forensic accountant,Human resources officer,Local government officer,Market researcher,Marketing executive,Newspaper journalist,Public relations officer,Stockbroker',                    
                 
-                    'es' => '',                    
+                    'es' => 'Civil Service fast streamer,Government social research officer,Politician&apos;s assistant,Public affairs consultant,Public relations account executive,Social researcher,Charity officer,Diplomatic Services operational officer,Forensic accountant,Human resources officer,Local government officer,Market researcher,Marketing executive,Newspaper journalist,Public relations officer,Stockbroker',                    
                 
-                    'it' => '',                    
+                    'it' => 'Civil service fast streamer, ufficiale di ricerca sociale e statale, assistente di uomo politico, consulente di affair pubblici, commerciale degli affari pubblici, ricercatore sociale, agente della carità, agente operazionale dei servizi diplomatici, contabile forense, agente delle risorse umane, gente delle amministrazioni locali, ricercatore di mercato, esecutivo di marketing, giornalista, agente delle pubbliche relazioni, agente di borsa',                    
                 
-                    'de' => '',                    
+                    'de' => 'Civil Service fast streamer,Government social research officer,Politician&apos;s assistant,Public affairs consultant,Public relations account executive,Social researcher,Charity officer,Diplomatic Services operational officer,Forensic accountant,Human resources officer,Local government officer,Market researcher,Marketing executive,Newspaper journalist,Public relations officer,Stockbroker',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Civil Service fast streamer,Government social research officer,Politician&apos;s assistant,Public affairs consultant,Public relations account executive,Social researcher,Charity officer,Diplomatic Services operational officer,Forensic accountant,Human resources officer,Local government officer,Market researcher,Marketing executive,Newspaper journalist,Public relations officer,Stockbroker',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Civil Service fast streamer,Government social research officer,Politician&apos;s assistant,Public affairs consultant,Public relations account executive,Social researcher,Charity officer,Diplomatic Services operational officer,Forensic accountant,Human resources officer,Local government officer,Market researcher,Marketing executive,Newspaper journalist,Public relations officer,Stockbroker',                    
                 
                     'key' => 'politics',                    
                 
@@ -375,15 +375,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Quality Assurance & Safety',                    
                 
-                    'es' => '',                    
+                    'es' => 'Quality Assurance & Safety',                    
                 
-                    'it' => '',                    
+                    'it' => 'Garanzia di qualità e sicurezza',                    
                 
-                    'de' => '',                    
+                    'de' => 'Quality Assurance & Safety',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Quality Assurance & Safety',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Quality Assurance & Safety',                    
                 
                     'key' => 'quality-assurance-amp-safety',                    
                 
@@ -393,15 +393,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Real Estate',                    
                 
-                    'es' => '',                    
+                    'es' => 'Real Estate',                    
                 
-                    'it' => '',                    
+                    'it' => 'Immobiliare',                    
                 
-                    'de' => '',                    
+                    'de' => 'Real Estate',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Real Estate',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Real Estate',                    
                 
                     'key' => 'real-estate',                    
                 
@@ -411,15 +411,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Laboratories',                    
                 
-                    'es' => '',                    
+                    'es' => 'Laboratories',                    
                 
-                    'it' => '',                    
+                    'it' => 'Laboratori',                    
                 
-                    'de' => '',                    
+                    'de' => 'Laboratories',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Laboratories',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Laboratories',                    
                 
                     'key' => 'research-amp-development',                    
                 
@@ -429,15 +429,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Bookseller, Call centre manager, Commercial art gallery manager, Customer service manager, Dispensing optician, Financial adviser, Logistics and distribution manager, Purchasing manager, Retail buyer, Retail manager, Retail merchandiser, Sales executive, Visual merchandiser, Warehouse manager',                    
                 
-                    'es' => '',                    
+                    'es' => 'Bookseller, Call centre manager, Commercial art gallery manager, Customer service manager, Dispensing optician, Financial adviser, Logistics and distribution manager, Purchasing manager, Retail buyer, Retail manager, Retail merchandiser, Sales executive, Visual merchandiser, Warehouse manager',                    
                 
-                    'it' => '',                    
+                    'it' => 'Libraio, manager di call center, manager commerciale di galleria d’arte, manager del servizio clienti, ottico, consulente finanziario, manager logistico e di distribuzione, manager responsabile degli acquisti, compratore al dettaglio, manager al dettaglio, esperto di merchandising al dettaglio, esecutivo di vendite, esperto di merchandising visivo, manager dell’impresa',                    
                 
-                    'de' => '',                    
+                    'de' => 'Bookseller, Call centre manager, Commercial art gallery manager, Customer service manager, Dispensing optician, Financial adviser, Logistics and distribution manager, Purchasing manager, Retail buyer, Retail manager, Retail merchandiser, Sales executive, Visual merchandiser, Warehouse manager',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Bookseller, Call centre manager, Commercial art gallery manager, Customer service manager, Dispensing optician, Financial adviser, Logistics and distribution manager, Purchasing manager, Retail buyer, Retail manager, Retail merchandiser, Sales executive, Visual merchandiser, Warehouse manager',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Bookseller, Call centre manager, Commercial art gallery manager, Customer service manager, Dispensing optician, Financial adviser, Logistics and distribution manager, Purchasing manager, Retail buyer, Retail manager, Retail merchandiser, Sales executive, Visual merchandiser, Warehouse manager',                    
                 
                     'key' => 'retail-amp-wholesale',                    
                 
@@ -447,15 +447,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Sales representative, sales professional, district sales manager, regional sales manager, VP of sales, account executive, account manager, sales executive, sales engineer, director of sales, sales support manager, regional sales representative, regional sales manager, channel sales manager, manufacturer representative, technical sales, medical sales representative, pharmaceutical sales, e-business sales manager, IT sales,solution selling, relationship building, relationship selling, relationship sales, customer service, customer relations, client relations, territory expansion, consultative sales, product marketing, negotiating and closing, channel sales, B2B/B2C, lead generation, OEMs, VARs, communication skills, new business development, sales presentations, PowerPoint, meeting and exceeding sales quotas, outside sales, inside sales, sales expansion',                    
                 
-                    'es' => '',                    
+                    'es' => 'Sales representative, sales professional, district sales manager, regional sales manager, VP of sales, account executive, account manager, sales executive, sales engineer, director of sales, sales support manager, regional sales representative, regional sales manager, channel sales manager, manufacturer representative, technical sales, medical sales representative, pharmaceutical sales, e-business sales manager, IT sales,solution selling, relationship building, relationship selling, relationship sales, customer service, customer relations, client relations, territory expansion, consultative sales, product marketing, negotiating and closing, channel sales, B2B/B2C, lead generation, OEMs, VARs, communication skills, new business development, sales presentations, PowerPoint, meeting and exceeding sales quotas, outside sales, inside sales, sales expansion',                    
                 
-                    'it' => '',                    
+                    'it' => 'Rappresentante di vendita, venditore professionale, responsabile di vendita del distretto, responsabile di vendita regionale, vice presidente delle vendite, addetto alla gestione del budget, responsabile gestione vendite, esperto di vendite, direttore di vendita, manager delle vendite, rappresentante regionale delle vendite, manager delle vendite di canale, manager regionale delle vendite, rappresentante manifatturiero, vendite tecniche, rappresentante vendite mediche, vendite farmaceutiche, manager delle vendite commercio elettronico, vendite IT, vendita di soluzioni, costruttore di rapporti, venditore di rapporti, venditore di rapporti, servizio clienti, relazioni col cliente, relazioni col cliente, espansione sul territorio, vendite consultative, prodotto di marketing, negoziazione e chiusura, venditore di canali, B2B/B2C, azione di marketing che consente di creare una nuova lista clienti, OEMs, VARs, competenze comunicative, sviluppo di un nuovo business, presentazione di vendita, powerpoint, raggiungere e superare le quote di vendita, vendite all’esterno, vendite all’interno, espansione di vendite',                    
                 
-                    'de' => '',                    
+                    'de' => 'Sales representative, sales professional, district sales manager, regional sales manager, VP of sales, account executive, account manager, sales executive, sales engineer, director of sales, sales support manager, regional sales representative, regional sales manager, channel sales manager, manufacturer representative, technical sales, medical sales representative, pharmaceutical sales, e-business sales manager, IT sales,solution selling, relationship building, relationship selling, relationship sales, customer service, customer relations, client relations, territory expansion, consultative sales, product marketing, negotiating and closing, channel sales, B2B/B2C, lead generation, OEMs, VARs, communication skills, new business development, sales presentations, PowerPoint, meeting and exceeding sales quotas, outside sales, inside sales, sales expansion',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Sales representative, sales professional, district sales manager, regional sales manager, VP of sales, account executive, account manager, sales executive, sales engineer, director of sales, sales support manager, regional sales representative, regional sales manager, channel sales manager, manufacturer representative, technical sales, medical sales representative, pharmaceutical sales, e-business sales manager, IT sales,solution selling, relationship building, relationship selling, relationship sales, customer service, customer relations, client relations, territory expansion, consultative sales, product marketing, negotiating and closing, channel sales, B2B/B2C, lead generation, OEMs, VARs, communication skills, new business development, sales presentations, PowerPoint, meeting and exceeding sales quotas, outside sales, inside sales, sales expansion',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Sales representative, sales professional, district sales manager, regional sales manager, VP of sales, account executive, account manager, sales executive, sales engineer, director of sales, sales support manager, regional sales representative, regional sales manager, channel sales manager, manufacturer representative, technical sales, medical sales representative, pharmaceutical sales, e-business sales manager, IT sales,solution selling, relationship building, relationship selling, relationship sales, customer service, customer relations, client relations, territory expansion, consultative sales, product marketing, negotiating and closing, channel sales, B2B/B2C, lead generation, OEMs, VARs, communication skills, new business development, sales presentations, PowerPoint, meeting and exceeding sales quotas, outside sales, inside sales, sales expansion',                    
                 
                     'key' => 'sales',                    
                 
@@ -465,15 +465,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Adult guidance worker, Advice worker, Care manager, Child psychotherapist, Community arts worker, Community development worker, Community education officer, Counselling psychologist, Counsellor, Educational psychologist, Equality and diversity officer, Family support worker, Play therapist, Primary care graduate mental health worker, Probation officer, Psychotherapist, Social worker, Youth worker',                    
                 
-                    'es' => '',                    
+                    'es' => 'Adult guidance worker, Advice worker, Care manager, Child psychotherapist, Community arts worker, Community development worker, Community education officer, Counselling psychologist, Counsellor, Educational psychologist, Equality and diversity officer, Family support worker, Play therapist, Primary care graduate mental health worker, Probation officer, Psychotherapist, Social worker, Youth worker',                    
                 
-                    'it' => '',                    
+                    'it' => 'Persona che aiuta I client a chiarificare opzioni e soluzioni migliore, consigliere dei lavoratori, persona chepropone al paziente le soluzioni più favorevoli per la sua condizione clinico assistenziale, psicoterapista per bambini, incoraggiatore dell’utilizzo dell’arte per sviluppare e migliorare la vita, lavoratore per lo sviluppo urbano della comunità, agente dell’educazione comunitaria, psicologo consigliere, consigliere, psicologo educazionale, agente di uguaglianza e differenza, lavoratore per il supporto familiare, terapista del gioco, specialisti di igiene mentale laureati in prime cure, ufficiale di sorveglianza, psicoterapeuta, assistente sociale, assistente sociale speciale per giovani',                    
                 
-                    'de' => '',                    
+                    'de' => 'Adult guidance worker, Advice worker, Care manager, Child psychotherapist, Community arts worker, Community development worker, Community education officer, Counselling psychologist, Counsellor, Educational psychologist, Equality and diversity officer, Family support worker, Play therapist, Primary care graduate mental health worker, Probation officer, Psychotherapist, Social worker, Youth worker',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Adult guidance worker, Advice worker, Care manager, Child psychotherapist, Community arts worker, Community development worker, Community education officer, Counselling psychologist, Counsellor, Educational psychologist, Equality and diversity officer, Family support worker, Play therapist, Primary care graduate mental health worker, Probation officer, Psychotherapist, Social worker, Youth worker',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Adult guidance worker, Advice worker, Care manager, Child psychotherapist, Community arts worker, Community development worker, Community education officer, Counselling psychologist, Counsellor, Educational psychologist, Equality and diversity officer, Family support worker, Play therapist, Primary care graduate mental health worker, Probation officer, Psychotherapist, Social worker, Youth worker',                    
                 
                     'key' => 'social-work',                    
                 
@@ -483,15 +483,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Fitness centre manager, Outdoor activities/education manager, Sport and exercise psychologist, Sports administrator, Sports coach, Sports development officer, Sports therapist',                    
                 
-                    'es' => '',                    
+                    'es' => 'Fitness centre manager, Outdoor activities/education manager, Sport and exercise psychologist, Sports administrator, Sports coach, Sports development officer, Sports therapist',                    
                 
-                    'it' => '',                    
+                    'it' => 'Manager di centro fitness, manager di attività/educazione fuoriporta, psicologo dello sport e dell’esercizio fisico, amministratore sportivo, allenatore, agente dello sviluppo sportivo, terapista dello sport',                    
                 
-                    'de' => '',                    
+                    'de' => 'Fitness centre manager, Outdoor activities/education manager, Sport and exercise psychologist, Sports administrator, Sports coach, Sports development officer, Sports therapist',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Fitness centre manager, Outdoor activities/education manager, Sport and exercise psychologist, Sports administrator, Sports coach, Sports development officer, Sports therapist',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Fitness centre manager, Outdoor activities/education manager, Sport and exercise psychologist, Sports administrator, Sports coach, Sports development officer, Sports therapist',                    
                 
                     'key' => 'sport-and-or-health-amp-wellness',                    
                 
@@ -501,15 +501,15 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Technology & Telecommunications',                    
                 
-                    'es' => '',                    
+                    'es' => 'Technology & Telecommunications',                    
                 
                     'it' => 'Tecnologia e telecomunicazione',                    
                 
-                    'de' => '',                    
+                    'de' => 'Technology & Telecommunications',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Technology & Telecommunications',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Technology & Telecommunications',                    
                 
                     'key' => 'technology-amp-telecommunications',                    
                 

@@ -3,54 +3,54 @@
 
 return [
     
-        'accountActivated_subject_1' => '',
+        'accountActivated_subject_1' => 'Azione richiesta. Attivare l&apos;account.',
     
-        'accountActivated_line_2' => '',
+        'accountActivated_line_2' => 'Grazie per la vostra registrazione su Talented Europe',
     
-        'accountActivated_line_3' => '',
+        'accountActivated_line_3' => 'Verificare l&apos;indirizzo email cliccando sul link qui sotto',
     
-        'accountActivated_action_4' => '',
+        'accountActivated_action_4' => 'Confermare il mio account',
     
-        'accountActivated_line_5' => '',
+        'accountActivated_line_5' => 'Grazie per utilizzare la nostra applicazione',
     
-        'changeInstitution_subject_1' => '',
+        'changeInstitution_subject_1' => '%s L&apos;ha invitato come referenza su Talented Europe.',
     
-        'changeInstitution_line_2' => '',
+        'changeInstitution_line_2' => '%s L&apos;ha invitato come referenza su Talented Europe.',
     
-        'changeInstitution_line_3' => '',
+        'changeInstitution_line_3' => 'Siccome Lei è già una referenza su Talented Europe, abbiamo bisogno che confermi questa modifica.',
     
-        'changeInstitution_action_4' => '',
+        'changeInstitution_action_4' => 'Confermare le modifiche',
     
-        'changeInstitution_line_5' => '',
+        'changeInstitution_line_5' => 'Grazie per utilizzare la nostra applicazione',
     
-        'institutionRemoved.subject_1' => '',
+        'institutionRemoved.subject_1' => '%s L&apos;ha rimosso dalla sua istituzione su Talented Europe.',
     
-        'institutionRemoved.line_2' => '',
+        'institutionRemoved.line_2' => '%s L&apos;ha rimosso dalla sua istituzione su Talented Europe. Se è stato rimosso per errore, contatti loro per risolvere la situazione.',
     
-        'institutionRemoved.line_3' => '',
+        'institutionRemoved.line_3' => 'Grazie per utilizzare la nostra applicazione',
     
-        'inviteCreated_subject_1' => '',
+        'inviteCreated_subject_1' => '%s L&apos;ha invitato come referenza su Talented Europe.',
     
-        'inviteCreated_line_2' => '',
+        'inviteCreated_line_2' => '%s L&apos;ha invitato come referenza su Talented Europe.',
     
-        'inviteCreated_line_3' => '',
+        'inviteCreated_line_3' => 'Create il vostro account cliccando sul seguente link.',
     
-        'inviteCreated_action_4' => '',
+        'inviteCreated_action_4' => 'Creare il mio account',
     
-        'inviteCreated_line_5' => '',
+        'inviteCreated_line_5' => 'Grazie per utilizzare la nostra applicazione',
     
-        'validatorRequested_subject_1' => '',
+        'validatorRequested_subject_1' => '%s L&apos;ha invitato come referenza su Talented Europe.',
     
-        'validatorRequested_line_2' => '',
+        'validatorRequested_line_2' => 'Ciao %s',
     
-        'validatorRequested_line_3' => '',
+        'validatorRequested_line_3' => '%s L&apos;ha invitato come referenza su Talented Europe.',
     
-        'validatorRequested_line_4' => '',
+        'validatorRequested_line_4' => 'Inviate questo link all&apos;istituzione nella quale lavorate perché possa registrarsi.',
     
-        'validatorRequested_line_5' => '',
+        'validatorRequested_line_5' => 'Se la vostra istituzione si registra utilizzando il seguente link, sarete invitati automaticamente a iscrivervi nel registro dell&apos;istituzione.',
     
-        'validatorRequested_action_6' => '',
+        'validatorRequested_action_6' => 'Creare l&apos;account dell&apos;istituzione',
     
-        'validatorRequested_line_7' => '',
+        'validatorRequested_line_7' => 'Grazie per utilizzare la nostra applicazione',
     
 ];

@@ -15,15 +15,15 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Brand, Brand image, Market Research, Customer, Consumer, Customer needs, Market segment, Price sensitive, Market map, Gap in the market, Added value, Entrepreneur, Risks, Services, Innovation, Patent, Copyright,Trademarks,Calculated Risk, Financial Objectives, SMART, Initiative, Taking risks,',                    
                 
-                    'es' => '',                    
+                    'es' => 'Brand, Brand image, Market Research, Customer, Consumer, Customer needs, Market segment, Price sensitive, Market map, Gap in the market, Added value, Entrepreneur, Risks, Services, Innovation, Patent, Copyright,Trademarks,Calculated Risk, Financial Objectives, SMART, Initiative, Taking risks,',                    
                 
-                    'it' => '',                    
+                    'it' => 'Marchio, Immagine del marchio, Ricerca di mercato, Cliente, Consumatore, Necessità del cliente, Intervallo di mercato, Sensibilità del prezzo, Apertura del mercato, Valore aggiunto, Imprenditore, Rischi, Servizi, Innovazione, Brevetto, Diritti d&apos;autore, Marchi di fabbrica, Rischio calcolato, Obiettivi finanziari, Smart, Iniziativa, Correre dei rischi.',                    
                 
-                    'de' => '',                    
+                    'de' => 'Brand, Brand image, Market Research, Customer, Consumer, Customer needs, Market segment, Price sensitive, Market map, Gap in the market, Added value, Entrepreneur, Risks, Services, Innovation, Patent, Copyright,Trademarks,Calculated Risk, Financial Objectives, SMART, Initiative, Taking risks,',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Brand, Brand image, Market Research, Customer, Consumer, Customer needs, Market segment, Price sensitive, Market map, Gap in the market, Added value, Entrepreneur, Risks, Services, Innovation, Patent, Copyright,Trademarks,Calculated Risk, Financial Objectives, SMART, Initiative, Taking risks,',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Brand, Brand image, Market Research, Customer, Consumer, Customer needs, Market segment, Price sensitive, Market map, Gap in the market, Added value, Entrepreneur, Risks, Services, Innovation, Patent, Copyright,Trademarks,Calculated Risk, Financial Objectives, SMART, Initiative, Taking risks,',                    
                 
                     'key' => 'business-studies-and-or-management-science',                    
                 
@@ -33,15 +33,15 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Mechanical Engineering, Electrical Engineering, Chemical Engineering, Civil Engineering, Electronic Engineering, Telecommunications, Materials Science.,Automation, Robotics Control Systems,Digital Systems, Digital Representation,Electronic circuits components and equipment,Electronic engineering,Embedded Systems and Real Time Systems,High Frequency Technology, Microwaves,Magnetic and superconductory materials/devices,Microengineering,Micromachining,Nanotechnologies related to electronics and microelectronics,Optical Networks and Systems,Peripherals Technologies (Mass Data Storage, Display Technologies) related to electronics and microelectronics, Printed circuits and integrated circuits,Quantum Informatics,Semiconductors,Smart cards and access systems,Environmental and Biometrics Sensors,Actuators,Audiovisual Equipment and Communication, Broadband Technologies, Mobile Communications, Radar, Narrow Band Technologies, Satellite Technology/Systems/Positioning/, Communication in GPS - Global Positioning System, e-Government, CRM - Customer relationship Management, ',                    
                 
-                    'es' => '',                    
+                    'es' => 'Mechanical Engineering, Electrical Engineering, Chemical Engineering, Civil Engineering, Electronic Engineering, Telecommunications, Materials Science.,Automation, Robotics Control Systems,Digital Systems, Digital Representation,Electronic circuits components and equipment,Electronic engineering,Embedded Systems and Real Time Systems,High Frequency Technology, Microwaves,Magnetic and superconductory materials/devices,Microengineering,Micromachining,Nanotechnologies related to electronics and microelectronics,Optical Networks and Systems,Peripherals Technologies (Mass Data Storage, Display Technologies) related to electronics and microelectronics, Printed circuits and integrated circuits,Quantum Informatics,Semiconductors,Smart cards and access systems,Environmental and Biometrics Sensors,Actuators,Audiovisual Equipment and Communication, Broadband Technologies, Mobile Communications, Radar, Narrow Band Technologies, Satellite Technology/Systems/Positioning/, Communication in GPS - Global Positioning System, e-Government, CRM - Customer relationship Management, ',                    
                 
-                    'it' => '',                    
+                    'it' => 'Ingegneria meccanica, ingegneria elettrica, ingegneria chimica, ingegneria civile, ingegneria elettronica, telecomunicazioni, scienze materiali, automatizzazione, sistema di controllo robotico, sistema digitale, rappresentazione digitale, componenti e attrezzature di circuiti elettronici, ingegneria elettronica, sistema incorporato e sistema in tempo reale, tecnologia ad alta frequenza, microonde, materiali e dispositivi magnetici e superconduttori, microingegnaria, microlavorazione, nanotecnologie legate a elettronica e microelettronica, rete ottica e sistemi, tecnologie periferiche ( sistemi di archiviazione di massa, tecnologie di display) legate a elettronica e microelettronica, circuiti stampati e circuiti integrati, informatica quantica, semiconduttori, carte smart e sistemi d’accesso, sensori ambientali e biometrici, attuatori, apparecchiatura audiovisiva e di comunicazione, tecnologie a banda larga, comunicazioni mobili, radar, tecnologie a banda stretta, tecnologie/sistemi/posizione satellitare, comunicazioni in GPS, Global Positioning System, e-Government, CRM - Customer relationship Management',                    
                 
-                    'de' => '',                    
+                    'de' => 'Mechanical Engineering, Electrical Engineering, Chemical Engineering, Civil Engineering, Electronic Engineering, Telecommunications, Materials Science.,Automation, Robotics Control Systems,Digital Systems, Digital Representation,Electronic circuits components and equipment,Electronic engineering,Embedded Systems and Real Time Systems,High Frequency Technology, Microwaves,Magnetic and superconductory materials/devices,Microengineering,Micromachining,Nanotechnologies related to electronics and microelectronics,Optical Networks and Systems,Peripherals Technologies (Mass Data Storage, Display Technologies) related to electronics and microelectronics, Printed circuits and integrated circuits,Quantum Informatics,Semiconductors,Smart cards and access systems,Environmental and Biometrics Sensors,Actuators,Audiovisual Equipment and Communication, Broadband Technologies, Mobile Communications, Radar, Narrow Band Technologies, Satellite Technology/Systems/Positioning/, Communication in GPS - Global Positioning System, e-Government, CRM - Customer relationship Management, ',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Mechanical Engineering, Electrical Engineering, Chemical Engineering, Civil Engineering, Electronic Engineering, Telecommunications, Materials Science.,Automation, Robotics Control Systems,Digital Systems, Digital Representation,Electronic circuits components and equipment,Electronic engineering,Embedded Systems and Real Time Systems,High Frequency Technology, Microwaves,Magnetic and superconductory materials/devices,Microengineering,Micromachining,Nanotechnologies related to electronics and microelectronics,Optical Networks and Systems,Peripherals Technologies (Mass Data Storage, Display Technologies) related to electronics and microelectronics, Printed circuits and integrated circuits,Quantum Informatics,Semiconductors,Smart cards and access systems,Environmental and Biometrics Sensors,Actuators,Audiovisual Equipment and Communication, Broadband Technologies, Mobile Communications, Radar, Narrow Band Technologies, Satellite Technology/Systems/Positioning/, Communication in GPS - Global Positioning System, e-Government, CRM - Customer relationship Management, ',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Mechanical Engineering, Electrical Engineering, Chemical Engineering, Civil Engineering, Electronic Engineering, Telecommunications, Materials Science.,Automation, Robotics Control Systems,Digital Systems, Digital Representation,Electronic circuits components and equipment,Electronic engineering,Embedded Systems and Real Time Systems,High Frequency Technology, Microwaves,Magnetic and superconductory materials/devices,Microengineering,Micromachining,Nanotechnologies related to electronics and microelectronics,Optical Networks and Systems,Peripherals Technologies (Mass Data Storage, Display Technologies) related to electronics and microelectronics, Printed circuits and integrated circuits,Quantum Informatics,Semiconductors,Smart cards and access systems,Environmental and Biometrics Sensors,Actuators,Audiovisual Equipment and Communication, Broadband Technologies, Mobile Communications, Radar, Narrow Band Technologies, Satellite Technology/Systems/Positioning/, Communication in GPS - Global Positioning System, e-Government, CRM - Customer relationship Management, ',                    
                 
                     'key' => 'engineering-and-or-technology',                    
                 
@@ -51,15 +51,15 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Political Science, Sociology, Economics, Psychology and Behavioural Sciences, Social Work, International Relations, European Studies, Area Studies.,Abstract,Academic,Brand,Capital,Celebrity,Civil Society,Community,Corporate,Design,Diversity,Emotion,Empathy,Enlightenment,Enterprise,Environment,Ethical,European,Excellence,Fair,Faith,Freedom / Liberty,Fundamentalism,Global / International ,Identity,Independent,Information,Legitimate,Life,Market,Marriage,Mentor,Opinion,Perform / Performance,Political,Property,Queer,Relativism',                    
                 
-                    'es' => '',                    
+                    'es' => 'Political Science, Sociology, Economics, Psychology and Behavioural Sciences, Social Work, International Relations, European Studies, Area Studies.,Abstract,Academic,Brand,Capital,Celebrity,Civil Society,Community,Corporate,Design,Diversity,Emotion,Empathy,Enlightenment,Enterprise,Environment,Ethical,European,Excellence,Fair,Faith,Freedom / Liberty,Fundamentalism,Global / International ,Identity,Independent,Information,Legitimate,Life,Market,Marriage,Mentor,Opinion,Perform / Performance,Political,Property,Queer,Relativism',                    
                 
-                    'it' => '',                    
+                    'it' => 'Scienze politiche, sociologia, economica, scienze psicologiche e comportamentali, lavoro sociale, relazioni internazionali, studi europei, Aree degli studi, astratto, accademico, marchi, capitale, celebrità, società civile, comunicazione, aziendale, design, diversità, emozione, empatia, illuminazione, impresa, ambiente, etica, europeo, eccellenza, equo, fiducia, libertà / fondamentalismo, globale/ internazionale,  identità, indipendente, informazione, legittimato, vita, mercato, matrimonio, mentore, opinione, azione/ prestazione, politico, proprietà, queer, relativismo',                    
                 
-                    'de' => '',                    
+                    'de' => 'Political Science, Sociology, Economics, Psychology and Behavioural Sciences, Social Work, International Relations, European Studies, Area Studies.,Abstract,Academic,Brand,Capital,Celebrity,Civil Society,Community,Corporate,Design,Diversity,Emotion,Empathy,Enlightenment,Enterprise,Environment,Ethical,European,Excellence,Fair,Faith,Freedom / Liberty,Fundamentalism,Global / International ,Identity,Independent,Information,Legitimate,Life,Market,Marriage,Mentor,Opinion,Perform / Performance,Political,Property,Queer,Relativism',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Political Science, Sociology, Economics, Psychology and Behavioural Sciences, Social Work, International Relations, European Studies, Area Studies.,Abstract,Academic,Brand,Capital,Celebrity,Civil Society,Community,Corporate,Design,Diversity,Emotion,Empathy,Enlightenment,Enterprise,Environment,Ethical,European,Excellence,Fair,Faith,Freedom / Liberty,Fundamentalism,Global / International ,Identity,Independent,Information,Legitimate,Life,Market,Marriage,Mentor,Opinion,Perform / Performance,Political,Property,Queer,Relativism',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Political Science, Sociology, Economics, Psychology and Behavioural Sciences, Social Work, International Relations, European Studies, Area Studies.,Abstract,Academic,Brand,Capital,Celebrity,Civil Society,Community,Corporate,Design,Diversity,Emotion,Empathy,Enlightenment,Enterprise,Environment,Ethical,European,Excellence,Fair,Faith,Freedom / Liberty,Fundamentalism,Global / International ,Identity,Independent,Information,Legitimate,Life,Market,Marriage,Mentor,Opinion,Perform / Performance,Political,Property,Queer,Relativism',                    
                 
                     'key' => 'social-sciences',                    
                 
@@ -69,15 +69,15 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Modern EC Languages, Linguistics, Translation, Interpretation, Classical Philology, Non EC Languages, Less Widely Taught Languages',                    
                 
-                    'es' => '',                    
+                    'es' => 'Modern EC Languages, Linguistics, Translation, Interpretation, Classical Philology, Non EC Languages, Less Widely Taught Languages',                    
                 
-                    'it' => '',                    
+                    'it' => 'Lingue moderne della comunità europea, linguistica, traduzione, interpretazione, filologia classica, lingue non europee, lingue meno diffuse',                    
                 
-                    'de' => '',                    
+                    'de' => 'Modern EC Languages, Linguistics, Translation, Interpretation, Classical Philology, Non EC Languages, Less Widely Taught Languages',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Modern EC Languages, Linguistics, Translation, Interpretation, Classical Philology, Non EC Languages, Less Widely Taught Languages',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Modern EC Languages, Linguistics, Translation, Interpretation, Classical Philology, Non EC Languages, Less Widely Taught Languages',                    
                 
                     'key' => 'languages-and-philological-sciences',                    
                 
@@ -87,15 +87,15 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Journalism, Radio/TV Broadcasting, Public Relations, Publicity, Advertising, Library Science, Documentation, Archiving, Museum Studies, Conservation,E-Publishing, Digital Content',                    
                 
-                    'es' => '',                    
+                    'es' => 'Journalism, Radio/TV Broadcasting, Public Relations, Publicity, Advertising, Library Science, Documentation, Archiving, Museum Studies, Conservation,E-Publishing, Digital Content',                    
                 
-                    'it' => '',                    
+                    'it' => 'Giornalismo, trasmissione radio/tv, relazioni pubbliche, pubblicità (publicity/advertising), scienza libraria, documentazione, archiviazione, studi museali, conservazione, e-publishing, contenuto digitale',                    
                 
-                    'de' => '',                    
+                    'de' => 'Journalism, Radio/TV Broadcasting, Public Relations, Publicity, Advertising, Library Science, Documentation, Archiving, Museum Studies, Conservation,E-Publishing, Digital Content',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Journalism, Radio/TV Broadcasting, Public Relations, Publicity, Advertising, Library Science, Documentation, Archiving, Museum Studies, Conservation,E-Publishing, Digital Content',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Journalism, Radio/TV Broadcasting, Public Relations, Publicity, Advertising, Library Science, Documentation, Archiving, Museum Studies, Conservation,E-Publishing, Digital Content',                    
                 
                     'key' => 'communication-and-information-sciences',                    
                 
@@ -105,15 +105,15 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Philosophy,Theology,History,Archaeology',                    
                 
-                    'es' => '',                    
+                    'es' => 'Philosophy,Theology,History,Archaeology',                    
                 
-                    'it' => '',                    
+                    'it' => 'Filosofia, teologia, storia, archeologia',                    
                 
-                    'de' => '',                    
+                    'de' => 'Philosophy,Theology,History,Archaeology',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Philosophy,Theology,History,Archaeology',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Philosophy,Theology,History,Archaeology',                    
                 
                     'key' => 'humanities',                    
                 
@@ -123,15 +123,15 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Teacher Training, Primary Education, Secondary Education, Special Education, Educational Science, Comparative Education, Educational Psychology.',                    
                 
-                    'es' => '',                    
+                    'es' => 'Teacher Training, Primary Education, Secondary Education, Special Education, Educational Science, Comparative Education, Educational Psychology.',                    
                 
-                    'it' => '',                    
+                    'it' => 'Formazione docenti, scuola primary, scuola secondaria, educazione speciale, educazione scientific, educazione comparata, educazione psicologica.',                    
                 
-                    'de' => '',                    
+                    'de' => 'Teacher Training, Primary Education, Secondary Education, Special Education, Educational Science, Comparative Education, Educational Psychology.',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Teacher Training, Primary Education, Secondary Education, Special Education, Educational Science, Comparative Education, Educational Psychology.',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Teacher Training, Primary Education, Secondary Education, Special Education, Educational Science, Comparative Education, Educational Psychology.',                    
                 
                     'key' => 'education-and-or-teacher-training',                    
                 
@@ -141,15 +141,15 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Comparative Law, Law with Languages, International Law, Civil Law, Criminal Law, Criminology, Constitutional /Public Law, Public Administration, European Community/EU Law',                    
                 
-                    'es' => '',                    
+                    'es' => 'Comparative Law, Law with Languages, International Law, Civil Law, Criminal Law, Criminology, Constitutional /Public Law, Public Administration, European Community/EU Law',                    
                 
-                    'it' => '',                    
+                    'it' => 'Diritto comparato, diritto e lingue, diritto internazionale, diritto civile, diritto penale, criminologia, costituzione/legge pubblica, amministrazione pubblica, legislazione della comunità europea.',                    
                 
-                    'de' => '',                    
+                    'de' => 'Comparative Law, Law with Languages, International Law, Civil Law, Criminal Law, Criminology, Constitutional /Public Law, Public Administration, European Community/EU Law',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Comparative Law, Law with Languages, International Law, Civil Law, Criminal Law, Criminology, Constitutional /Public Law, Public Administration, European Community/EU Law',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Comparative Law, Law with Languages, International Law, Civil Law, Criminal Law, Criminology, Constitutional /Public Law, Public Administration, European Community/EU Law',                    
                 
                     'key' => 'law',                    
                 
@@ -159,15 +159,15 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Fine Art, Music and Musicology, Design, History of Art.',                    
                 
-                    'es' => '',                    
+                    'es' => 'Fine Art, Music and Musicology, Design, History of Art.',                    
                 
-                    'it' => '',                    
+                    'it' => 'Belle arti, musica e musicologia, design, storia dell&apos;arte',                    
                 
-                    'de' => '',                    
+                    'de' => 'Fine Art, Music and Musicology, Design, History of Art.',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Fine Art, Music and Musicology, Design, History of Art.',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Fine Art, Music and Musicology, Design, History of Art.',                    
                 
                     'key' => 'art-and-design',                    
                 
@@ -177,15 +177,15 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Urban Planning, Regional Planning',                    
                 
-                    'es' => '',                    
+                    'es' => 'Urban Planning, Regional Planning',                    
                 
-                    'it' => '',                    
+                    'it' => 'Painificazione urbana, pianificazione regionale',                    
                 
-                    'de' => '',                    
+                    'de' => 'Urban Planning, Regional Planning',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Urban Planning, Regional Planning',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Urban Planning, Regional Planning',                    
                 
                     'key' => 'architecture-and-or-urban-and-regional-planning',                    
                 
@@ -195,15 +195,15 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Biology, Physics, Chemistry, Microbiology, Biotechnology, Nuclear and High Energy Physics, Biochemistry, Astronomy, Astrophysics',                    
                 
-                    'es' => '',                    
+                    'es' => 'Biology, Physics, Chemistry, Microbiology, Biotechnology, Nuclear and High Energy Physics, Biochemistry, Astronomy, Astrophysics',                    
                 
-                    'it' => '',                    
+                    'it' => 'Biologia, fisica, chimica, microbiologia, microtecnologia, fisica nucleare, fisica delle alte energie, biochimica, astronomia, astrofisica',                    
                 
-                    'de' => '',                    
+                    'de' => 'Biology, Physics, Chemistry, Microbiology, Biotechnology, Nuclear and High Energy Physics, Biochemistry, Astronomy, Astrophysics',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Biology, Physics, Chemistry, Microbiology, Biotechnology, Nuclear and High Energy Physics, Biochemistry, Astronomy, Astrophysics',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Biology, Physics, Chemistry, Microbiology, Biotechnology, Nuclear and High Energy Physics, Biochemistry, Astronomy, Astrophysics',                    
                 
                     'key' => 'natural-sciences',                    
                 
@@ -213,15 +213,15 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Mathematics, Statistics; Informatics, Computer Science',                    
                 
-                    'es' => '',                    
+                    'es' => 'Mathematics, Statistics; Informatics, Computer Science',                    
                 
-                    'it' => '',                    
+                    'it' => 'Matematica, statistica, informatica',                    
                 
-                    'de' => '',                    
+                    'de' => 'Mathematics, Statistics; Informatics, Computer Science',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Mathematics, Statistics; Informatics, Computer Science',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Mathematics, Statistics; Informatics, Computer Science',                    
                 
                     'key' => 'mathematics-and-or-informatics',                    
                 
@@ -231,15 +231,15 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Medicine, Public Health, Medical Technology',                    
                 
-                    'es' => '',                    
+                    'es' => 'Medicine, Public Health, Medical Technology',                    
                 
-                    'it' => '',                    
+                    'it' => 'Medicina, sanità pubblica, tecnologia medica',                    
                 
-                    'de' => '',                    
+                    'de' => 'Medicine, Public Health, Medical Technology',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Medicine, Public Health, Medical Technology',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Medicine, Public Health, Medical Technology',                    
                 
                     'key' => 'medical-sciences',                    
                 
@@ -249,15 +249,15 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Geography, Environmental Sciences, Ecology, Geology, Soil and Water Sciences, Geodesy, Cartography, Remote Sensing',                    
                 
-                    'es' => '',                    
+                    'es' => 'Geography, Environmental Sciences, Ecology, Geology, Soil and Water Sciences, Geodesy, Cartography, Remote Sensing',                    
                 
-                    'it' => '',                    
+                    'it' => 'Geografia, scienze ambientali, ecologia, geologia, scienza del suolo e idrologia, geodesia, cartografia, telerilevamento',                    
                 
-                    'de' => '',                    
+                    'de' => 'Geography, Environmental Sciences, Ecology, Geology, Soil and Water Sciences, Geodesy, Cartography, Remote Sensing',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Geography, Environmental Sciences, Ecology, Geology, Soil and Water Sciences, Geodesy, Cartography, Remote Sensing',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Geography, Environmental Sciences, Ecology, Geology, Soil and Water Sciences, Geodesy, Cartography, Remote Sensing',                    
                 
                     'key' => 'geography-and-or-geology',                    
                 
@@ -267,15 +267,15 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Agriculture, Food Science and Technology, Fisheries, Forestry,Farming, tractors, ',                    
                 
-                    'es' => '',                    
+                    'es' => 'Agriculture, Food Science and Technology, Fisheries, Forestry,Farming, tractors, ',                    
                 
-                    'it' => '',                    
+                    'it' => 'Settore agricolo, scienze e tecnologie alimentary, pesca, selvicoltura, agricoltura, trattori.',                    
                 
-                    'de' => '',                    
+                    'de' => 'Agriculture, Food Science and Technology, Fisheries, Forestry,Farming, tractors, ',                    
                 
-                    'fr' => '',                    
+                    'fr' => 'Agriculture, Food Science and Technology, Fisheries, Forestry,Farming, tractors, ',                    
                 
-                    'sk' => '',                    
+                    'sk' => 'Agriculture, Food Science and Technology, Fisheries, Forestry,Farming, tractors, ',                    
                 
                     'key' => 'agriculture-sciences',                    
                 

@@ -49,12 +49,7 @@ class Language
             $locale = $urlLang;
         }
 
-        // This is just for the beta
-        if ($request->url() != url()->to('/')) {
-            App::setLocale('en');
-        } else {
-            App::setLocale($locale);
-        }
+        App::setLocale($locale);
 
         if ($request->hasCookie('locale') && $cookieLang == $locale) {
             return $next($request);

@@ -11,10 +11,10 @@
             <text-box-form type="hidden" code="id" group-code="experiences" :group-id="experience.id" :value="experience.id"></text-box-form>
 
             <div class="row">
-                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="experience.id" :label="$t('reg-profile.student_study_from')"
-                    required placeholder="Work from" :value="experience.from" :readonly="!!experience.locked" :errors="errors"></date-form>
-                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="experience.id" :label="$t('reg-profile.student_study_to')"
-                    placeholder="Work to" :value="experience.until" :readonly="!!experience.locked" :errors="errors"></date-form>
+                <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="experience.id" :label="$t('reg-profile.student_work_experience_from')"
+                    required :placeholder="$t('reg-profile.student_work_experience_from')" :value="experience.from" :readonly="!!experience.locked" :errors="errors"></date-form>
+                <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="experience.id" :label="$t('reg-profile.student_work_experience_to')"
+                    :placeholder="$t('reg-profile.student_work_experience_to')" :value="experience.until" :readonly="!!experience.locked" :errors="errors"></date-form>
             </div>
 
             <text-box-form code="company" group-code="experiences" :group-id="experience.id" :label="$t('reg-profile.student_experience_company')"
@@ -31,9 +31,9 @@
             </header>
             <div class="row">
                 <date-form class="col-sm-6" code="from" group-code="experiences" :group-id="new_experience.id"
-                    required :label="$t('reg-profile.student_study_from')" placeholder="Work from" :value="new_experience.from"></date-form>
+                    required :label="$t('reg-profile.student_work_experience_from')" :placeholder="$t('reg-profile.student_work_experience_from')" :value="new_experience.from"></date-form>
                 <date-form class="col-sm-6" code="until" group-code="experiences" :group-id="new_experience.id"
-                    :label="$t('reg-profile.student_study_to')" placeholder="Work to" :value="new_experience.until"></date-form>
+                    :label="$t('reg-profile.student_work_experience_to')" :placeholder="$t('reg-profile.student_work_experience_to')" :value="new_experience.until"></date-form>
             </div>
 
             <text-box-form code="company" group-code="experiences" :group-id="new_experience.id" :label="$t('reg-profile.student_experience_company')"
@@ -83,7 +83,7 @@ export default {
     },
     computed: {
         addButtonText: function () {
-            return this.total == 0 ? 'add a work experience' : 'add more work experiences';
+            return this.total == 0 ? this.$t('reg-profile.student_work_experience_add') : this.$t('reg-profile.student_work_experience_add_more');
         }
     },
     watch: {

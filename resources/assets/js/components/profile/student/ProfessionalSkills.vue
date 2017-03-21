@@ -6,12 +6,12 @@
             <li class="btn" v-for="skill in selected_items">
                 <input type="hidden" name="professionalSkills[]" :value="skill.name"/>
                 {{ skill.name }}
-                <a title="Remove professional skill" @click.prevent="removeSkill(skill)"><i class="fa fa-close" aria-hidden="true"></i></a>
+                <a :title="$t('reg-profile.student_professional_skills_remove')" @click.prevent="removeSkill(skill)"><i class="fa fa-close" aria-hidden="true"></i></a>
             </li>
         </ul>
 
         <div class="dropdown suggestions-dropdown col-sm-10 no-padding" v-bind:class="{'open': openSuggestion}">
-            <input type="text" class="form-control" id="professionalSkillsInput" v-model="model" placeholder="Add a professional skill"
+            <input type="text" class="form-control" id="professionalSkillsInput" v-model="model" :placeholder="$t('reg-profile.student_professional_skills_add')"
                @keydown.enter.prevent="enter" @keydown.down="down" @keydown.up="up" @input="change" :disabled="selected_items.length >= max_professional_skills"/>
             <ul class="dropdown-menu suggestions-menu">
                 <li v-for="(index, item) in matches" v-bind:class="{'active': isActive(index)}" @click="selectItem(index)">
@@ -20,7 +20,7 @@
             </ul>
         </div>
         <div class="col-sm-2 no-padding">
-            <button class="btn btn-primary button-add-skill" @click.prevent="enter()" :disabled="selected_items.length >= max_professional_skills">Add</button>
+            <button class="btn btn-primary button-add-skill" @click.prevent="enter()" :disabled="selected_items.length >= max_professional_skills">{{ $t('reg-profile.add_btn') }}</button>
         </div>
 
         <span v-if="has_error" class="help-block">

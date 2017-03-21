@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('page-title') Error 404: Page not found @endsection
+@section('page-title') Error 404: {!! trans('error-page.page_not_found') !!} @endsection
 
 @section('content')
 <div class="container">
@@ -9,8 +9,8 @@
                 <i class="fa fa-warning" aria-hidden="true"></i>
             </div>
             <h2 class="page-title">404</h2>
-            <h3> Page not found</h3>
-            <p>We didn't find the page you were looking for.<br/> You can try searching for <a href="{{ route('searchStudents') }}">students</a> or <a href="{{ route('searchCompanies') }}">companies</a>  </p>
+            <h3>{!! trans('error-page.page_not_found') !!}</h3>
+            <p>{!! trans('error-page.we_didnt_find_the_page') !!}<br/> {!! trans('error-page.can_try_searching_for') !!} <a href="{{ route('searchStudents') }}">{!! trans_choice('global.student', 2) !!}</a> {!! trans('global.or') !!} <a href="{{ route('searchCompanies') }}">{!! trans_choice('global.company', 2) !!}</a>  </p>
         </div>
     </div>
 </div>

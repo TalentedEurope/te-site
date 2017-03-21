@@ -3,11 +3,11 @@
         <div class="options-title">
             <span class="h3"><i class="fa fa-filter" aria-hidden="true"></i>Filters</span>
             <button class="btn btn-primary button-toggle-filters" @click.prevent="toggleFilters()">
-                <i class="fa fa-bars" aria-hidden="true"></i> Toggle
+                <i class="fa fa-bars" aria-hidden="true"></i> {{ $t('search.toggle') }}
             </button>
         </div>
         <div class="current-search" v-if="current_search.length > 0">
-            <h3>Current Search</h3>
+            <h3>{{ $t('search.current_search') }}</h3>
             <ul>
                 <li v-for="filter in current_search">
                     {{filter.item.name}} <button class="remove-item" @click.prevent="removeCurrentSearchFilter(filter)"><i class="fa fa-close" aria-hidden="true"></i></button>
