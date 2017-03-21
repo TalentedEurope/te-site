@@ -1,6 +1,6 @@
 @extends('../layouts.app')
 
-@section('page-title') {!! trans('reg-profile.my-profile') !!} @endsection
+@section('page-title') {!! trans('reg-profile.my_profile') !!} @endsection
 @section('page-class') my-profile @endsection
 
 @section('meta')
@@ -14,7 +14,7 @@
 <div class="container v-container edit-profile">
   <div class="row">
     <div class="col-md-12 col-xs-12">
-      <h1 class="page-title">{!! trans('reg-profile.my-profile') !!}</h1>
+      <h1 class="page-title">{!! trans('reg-profile.my_profile') !!}</h1>
       <div class="col-sm-4 col-md-4 col-xs-12">
         <img src="{{ asset($user->getPhoto()) }}" alt="" class="img-responsive" />
       </div>
