@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title')Register success @endsection
+@section('page-title') {!! trans('register.register_success') !!} @endsection
 
 @section('content')
 <div class="container">
@@ -9,9 +9,10 @@
       <h2>{!! trans('register.thank_you_for_signing_up') !!}</h2>
 
       @if ($type == "validator")
-      <p>Registration complete successfully you may log in now.</p>
+      <p>{!! trans('register.registration_complete_successfully') !!}</p>
       @else
       <p>{!! trans('register.you_will_receive_an_email') !!}</p>
+      <p>{!! trans('register.confirmation_email_may_take_few_minutes') !!}</p>
       @endif
 
       <p>

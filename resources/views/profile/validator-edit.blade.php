@@ -1,6 +1,6 @@
 @extends('../layouts.app')
 
-@section('page-title') {!! trans('reg-profile.my-profile') !!} @endsection
+@section('page-title') {!! trans('reg-profile.my_profile') !!} @endsection
 @section('page-class') my-profile @endsection
 
 @section('content')
@@ -12,7 +12,7 @@
 <div class="container v-container edit-profile">
   <div class="row">
     <div class="col-md-12 col-xs-12">
-      <h1 class="col-sm-8 col-md-8 col-xs-12 col-sm-offset-2 page-title">{!! trans('reg-profile.my-profile') !!}</h1>
+      <h1 class="col-sm-8 col-md-8 col-xs-12 col-sm-offset-2 page-title">{!! trans('reg-profile.my_profile') !!}</h1>
       <div class="col-sm-8 col-md-8 col-xs-12 col-sm-offset-2">
         <!-- Content -->
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">

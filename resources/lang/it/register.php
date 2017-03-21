@@ -21,4 +21,10 @@ return [
     
         'all_fields_are_required' => 'All fields are required',
     
+        'confirmation_email_may_take_few_minutes' => 'Your confirmation email may take a few minutes to arrive, make sure you also check out your spam folder',
+    
+        'registration_complete_successfully' => 'Registration complete successfully you may log in now.',
+    
+        'register_success' => 'Register success',
+    
 ];
