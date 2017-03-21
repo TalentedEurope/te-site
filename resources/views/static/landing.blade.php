@@ -152,8 +152,13 @@
       <div class="content">
         <div class="vertical-centered">
           <h1 class="text-center">{!! trans('landing.what_is_title') !!}</h1>
-          <p class="col-md-6">{!! trans('landing.what_is_text_1') !!}</p>
-          <p class="col-md-6">{!! trans('landing.what_is_text_2') !!}</p>
+          <p class="col-md-6 text-justify">{!! trans('landing.what_is_text_1') !!}</p>
+          <p class="col-md-6 text-justify">{!! trans('landing.what_is_text_2') !!}</p>
+
+          <h3 class="text-center col-md-12">{!! trans('landing.join_talented_europe_today') !!}</h3>
+          <p class="col-md-6 text-justify">{!! trans('landing.talented_for_students') !!}</p>
+          <p class="col-md-6 text-justify">{!! trans('landing.talented_for_employers') !!}</p>
+
           <h3 class="text-center col-md-12">{!! trans('landing.what_is_cta') !!}</h3>
           <div class="text-center col-md-12">
             <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureC.pdf') }}" target="_blank" class="btn" onclick="ga('send', 'event', 'Brochure Company', 'Download', '{{ App::getLocale() }}');">
