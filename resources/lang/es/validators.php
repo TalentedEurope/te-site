@@ -3,11 +3,11 @@
 
 return [
     
-        'my_students' => 'My students',
+        'my_students' => 'Mis estudiantes',
     
-        'enable' => 'Enable',
+        'enable' => 'Habilitado',
     
-        'disable' => 'Disable',
+        'disable' => 'Deshabilitado',
     
         'add_new' => 'Add a new referee',
     
@@ -15,9 +15,9 @@ return [
     
         'validating' => 'Refereeing',
     
-        'student_already_validated' => 'You&apos;ve already validated this student',
+        'student_already_validated' => 'Has validado ya a este estudiante',
     
-        'jump_to_results' => 'Jump to results',
+        'jump_to_results' => 'Ir a los resultados',
     
         'you_are_validating_following_student' => 'You&apos;re validating the following student',
     
@@ -29,36 +29,36 @@ return [
     
         'student_passed_validation_successfully' => 'The student passed your validation successfully',
     
-        'your_comments' => 'Your comments',
+        'your_comments' => 'Tus comentarios',
     
-        'your_chosen_skills' => 'Your chosen skills',
+        'your_chosen_skills' => 'Tus habilidades elegidas',
     
-        'invalid' => 'Invalid',
+        'invalid' => 'No válido',
     
-        'student_didnt_meet_criteria' => 'The student didn&apos;t meet the criteria',
+        'student_didnt_meet_criteria' => 'El estudiante no cumplió con los criterios',
     
         'make_sure_you_have_reviewed_student' => 'Please make sure you have reviewed the student profile carefully before validating it',
     
-        'this_student_is' => 'This student is',
+        'this_student_is' => 'Este estudiante es',
     
-        'finish_validation' => 'Finish_validation',
+        'finish_validation' => 'Validación finalizada',
     
-        'give_us_explanation_of_student_is_invalid' => 'Please give us an explanation of the reason the student is invalid.',
+        'give_us_explanation_of_student_is_not_valid' => 'Por favor, proporciona un motivo por el que el/la estudiante no es válido',
     
         'note_if_validation_is_passed_as_no_student' => 'Note: If the validation is passed as "No student" the student will be able to validate his profile again.',
     
         'user_hasnt_complete_filling_its_profile' => 'hasn&apos;t complete filling it&apos;s profile. Until this process is complete you cannot validate any student',
     
-        'manage_validators' => 'Manage referees',
+        'manage_validators' => 'gestionar validadores',
     
-        'validators' => 'Referees',
+        'validators' => 'validadores',
     
-        'invites_pending' => 'Invites pending',
+        'invites_pending' => 'Invitaciones pendientes',
     
-        'date_sent' => 'Date sent',
+        'date_sent' => 'Fecha de envío',
     
         'note_invites_are_only_valid_14_days' => 'Note: invites are only valid 14 days after being sent, and they will disapear from this list afterwards',
     
-        'cancel' => 'Cancel',
+        'cancel' => 'Cancelar',
     
 ];

@@ -3,13 +3,13 @@
 
 return [
     
-        'not_allowed' => 'Not allowed',
+        'not_allowed' => 'No disponible',
     
-        'not_allowed_to_do_this_action' => 'You&apos;re not allowed to do this action.',
+        'not_allowed_to_do_this_action' => 'No tienes permitido realizar esta acción',
     
-        'can_try_searching_for' => 'You can try searching for',
+        'can_try_searching_for' => 'Puedes intentar buscar ',
     
-        'page_not_found' => 'Page not found',
+        'page_not_found' => 'Página no encontrada',
     
         'we_didnt_find_the_page' => 'We didn&apos;t find the page you were looking for.',
     

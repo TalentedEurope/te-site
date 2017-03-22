@@ -3,8 +3,8 @@
 
 return [
     
-        'remember_me' => 'Remember Me',
+        'remember_me' => 'Recuérdame',
     
-        'sign_in' => 'Sign in',
+        'sign_in' => 'Registrarse',
     
 ];
