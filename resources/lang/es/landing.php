@@ -59,8 +59,8 @@ return [
     
         'join_talented_europe_today' => '¡Unéte a Talented Europe hoy!',
     
-        'talented_for_students' => '<strong>For students</strong> - Talented Europe will enhance your employability with the endorsement of your tutors and put you in touch with employers across Europe for internships or first career jobs.',
+        'talented_for_students' => 'Para estudiantes - Talented Europe mejorará la posibilidad de conseguir un empleo con el respaldo de sus tutores y les pondrá en contacto con los empresas y autónomos de toda Europa para encontrar prácticas en empresas o conseguir sus primeros empleos.',
     
-        'talented_for_employers' => '<strong>For employers</strong> - Talented Europe will link you with talented young students across Europe and help you find the right person who can contribute to your organisation’s success with the special talents and skills that you are looking for.',
+        'talented_for_employers' => 'Para empresas y autónomos: Talented Europe los vinculará con jóvenes estudiantes con talento de toda Europa y les ayudará a encontrar a la persona adecuada que puede contribuir al éxito de su organización con el talento y las habilidades especiales que está buscando.',
     
 ];

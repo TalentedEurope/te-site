@@ -5,7 +5,7 @@ return [
     
         'loading' => 'Loading',
     
-        'toggle' => 'Toggle',
+        'toggle' => 'Show/Hide',
     
         'current_search' => 'Current search',
     

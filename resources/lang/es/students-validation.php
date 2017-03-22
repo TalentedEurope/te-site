@@ -3,11 +3,11 @@
 
 return [
     
-        'date_of_request' => 'Date of request',
+        'date_of_request' => 'Fecha de solicitud',
     
-        'status' => 'Status',
+        'status' => 'Estado',
     
-        'pending' => 'Pending',
+        'pending' => 'Pendiente',
     
         'validated' => 'Validated',
     

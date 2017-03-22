@@ -1,9 +1,9 @@
 <template>
     <div class="col-sm-4 col-md-3 search-options">
-        <div class="options-title">
+        <div class="options-title clearfix">
             <span class="h3"><i class="fa fa-filter" aria-hidden="true"></i>Filters</span>
             <button class="btn btn-primary button-toggle-filters" @click.prevent="toggleFilters()">
-                <i class="fa fa-bars" aria-hidden="true"></i> {{ $t('search.toggle') }}
+                <i class="fa fa-filter" aria-hidden="true"></i><i class="fa" v-bind:class="[show_filters ? 'fa-minus' : 'fa-plus']" aria-hidden="true"></i>
             </button>
         </div>
         <div class="current-search" v-if="current_search.length > 0">
@@ -116,6 +116,9 @@ h3, .h3 {
     text-transform: uppercase;
     span {
         font-weight: bold;
+        display: inline-block;
+        margin-top: 2px;
+        margin-bottom: 2px;
     }
     .fa {
         padding-right: 10px;
@@ -123,14 +126,19 @@ h3, .h3 {
 }
 
 .button-toggle-filters {
-    padding: 3px 7px;
-    border-radius: 5px;
+    padding: 2px 6px;
     margin-left: 7px;
     vertical-align: top;
+    float: right;
 
     .fa {
-        padding-right: 2px;
+        padding-right: 0;
     }
+    .fa-plus, .fa-minus {
+        margin-left: 2px;
+        font-size: 10px;
+    }
+
 }
 
 .current-search {

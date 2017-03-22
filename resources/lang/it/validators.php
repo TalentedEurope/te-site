@@ -43,7 +43,7 @@ return [
     
         'finish_validation' => 'Finish_validation',
     
-        'give_us_explanation_of_student_is_invalid' => 'Please give us an explanation of the reason the student is invalid.',
+        'give_us_explanation_of_student_is_not_valid' => 'Please give us an explanation of the reason the student is not valid.',
     
         'note_if_validation_is_passed_as_no_student' => 'Note: If the validation is passed as "No student" the student will be able to validate his profile again.',
     

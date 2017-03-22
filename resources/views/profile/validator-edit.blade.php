@@ -77,7 +77,7 @@
               {{ csrf_field() }}
               <p>Do you want to leave the institution? this will send the pending validation requests back to it, and you won't be able to validate anyone until another institution invites you back</p>
               <input type="hidden" name="leave" value="1">
-              <button type="submit" class="btn btn-primary">Yes! Leave school</button>
+              <button type="submit" class="btn btn-primary">Yes! Leave this academic institution</button>
             </form>
           </div>
           @endif

@@ -109,7 +109,7 @@
             {{ csrf_field() }}
             <input type="hidden" name="status" value="invalid">
             <hr/>
-            <p>{!! trans('validators.give_us_explanation_of_student_is_invalid') !!}</p>
+            <p>{!! trans('validators.give_us_explanation_of_student_is_not_valid') !!}</p>
             <p><em>{!! trans('validators.note_if_validation_is_passed_as_no_student') !!}</em></p>
 
             <select-form code="reason" label="{!! trans('validate.reason') !!}" placeholder=" - {!! trans('reg-profile.reason') !!} - " required

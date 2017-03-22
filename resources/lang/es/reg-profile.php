@@ -325,21 +325,21 @@ return [
     
         'want_to_show_this_company_how_talented_you_are' => 'Do you want to show this company how talented you are?',
     
-        'we_are_in' => 'We are in',
+        'we_are_in' => 'Estamos en',
     
         'we_are_looking_for_people_skilled_in' => 'We&apos;re looking for people skilled in',
     
-        'we_think_that_talent_is' => 'We think that talent is',
+        'we_think_that_talent_is' => 'Creemos que el talento es',
     
-        'not_enough_information' => 'Not enough information',
+        'not_enough_information' => 'No hay suficiente información',
     
-        'fix_the_following_errors' => 'You&apos;ll need to fix the following errors',
+        'fix_the_following_errors' => 'Necesitas corregir los siguientes errores',
     
         'click_on_button_to_fill_required_fields' => 'Please click the following button to fill the required fields.',
     
         'institution_fix_the_following_errors' => 'You&apos;ll need to fix the following errors or your referees won&apos;t be able to validate profiles',
     
-        'my_institution' => 'My Institution',
+        'my_institution' => 'Mi institución',
     
         'required' => 'Required',
     
@@ -365,25 +365,25 @@ return [
     
         'student_language_name' => 'Language name',
     
-        'student_language_level' => 'Language level',
+        'student_language_level' => 'Nivel de idioma',
     
-        'student_language_add' => 'add a language',
+        'student_language_add' => 'añadir un idioma',
     
-        'student_language_add_more' => 'add more languages',
+        'student_language_add_more' => 'añadir más idiomas',
     
         'student_work_experience_to' => 'Work to',
     
         'student_work_experience_from' => 'Work from',
     
-        'student_work_experience_add' => 'add a work experience',
+        'student_work_experience_add' => 'añadir experiencia laboral',
     
-        'student_work_experience_add_more' => 'add more work experiences',
+        'student_work_experience_add_more' => 'añadir más experiencia laboral',
     
-        'add_btn' => 'Add',
+        'add_btn' => 'Añadir',
     
-        'student_professional_skills_remove' => 'Remove professional skill',
+        'student_professional_skills_remove' => 'Eliminar una habilidad profesional',
     
-        'student_professional_skills_add' => 'Add a professional skill',
+        'student_professional_skills_add' => 'Añadir una habilidad profesional',
     
         'profile_readiness' => 'Profile readiness',
     
@@ -403,17 +403,17 @@ return [
     
         'referee_said_about_you' => 'This is what your referee said about you',
     
-        'profile_validated_denied' => 'Your profile was denied',
+        'profile_validated_denied' => 'Tu perfil fué rechazado',
     
         'not_enough_data_to_do_a_refeer' => 'We don&apos;t have enough data from you to be able to do a refeer.',
     
-        'progress_account_setup' => 'Account setup',
+        'progress_account_setup' => 'Configuración de la cuenta',
     
         'progress_refer_your_profile' => 'Refer your profile',
     
         'progress_not_refereed' => 'Not refereed',
     
-        'progress_completed' => 'Completed',
+        'progress_completed' => 'Completado',
     
         'you_must_put_referee_email' => '<strong>Please note:</strong> You must put the referee email, not the one form the institution',
     

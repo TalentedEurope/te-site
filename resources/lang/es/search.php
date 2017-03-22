@@ -3,11 +3,11 @@
 
 return [
     
-        'loading' => 'Loading',
+        'loading' => 'Cargando',
     
-        'toggle' => 'Toggle',
+        'toggle' => 'Show/Hide',
     
-        'current_search' => 'Current search',
+        'current_search' => 'Búsqueda actual',
     
         'refereed' => 'Refereed',
     

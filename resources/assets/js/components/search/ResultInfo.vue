@@ -32,7 +32,7 @@ export default {
                     return `We found ${this.numberOfResults} ${collective} matching your needs`;
                 }
             }
-            return `There exists ${this.numberOfResults} ${this.collective} in the database`;
+            return `We found ${this.numberOfResults} ${this.collective}`;
         }
     }
 }

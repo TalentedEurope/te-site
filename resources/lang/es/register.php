@@ -3,28 +3,28 @@
 
 return [
     
-        'thank_you_for_signing_up' => 'Thank You for Signing Up!',
+        'thank_you_for_signing_up' => '¡Gracias por registrarte!',
     
         'you_will_receive_an_email' => 'You will receive an email with instructions about how to confirm your account in a few minutes.',
     
-        'go_back_to_home' => 'Go back to home',
+        'go_back_to_home' => 'Volver a la página principal',
     
-        'search_students' => 'Search students',
+        'search_students' => 'Buscar estudiantes',
     
-        'search_companies' => 'Search companies',
+        'search_companies' => 'Buscar empresas',
     
         'register_as_validator' => 'Register as referee',
     
-        'there_have_been_some_errors' => 'There have been some errors',
+        'there_have_been_some_errors' => 'Hay más de un error',
     
-        'i_am_a' => 'I am a',
+        'i_am_a' => 'Soy un',
     
-        'all_fields_are_required' => 'All fields are required',
+        'all_fields_are_required' => 'Todos los campos son obligatorios',
     
         'confirmation_email_may_take_few_minutes' => 'Your confirmation email may take a few minutes to arrive, make sure you also check out your spam folder',
     
-        'registration_complete_successfully' => 'Registration complete successfully you may log in now.',
+        'registration_complete_successfully' => 'registro completado satisfactoriamente',
     
-        'register_success' => 'Register success',
+        'register_success' => 'registro completado',
     
 ];

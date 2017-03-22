@@ -105,7 +105,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'PR Agency',                    
                 
-                    'es' => 'PR Agency',                    
+                    'es' => 'Agencia PR',                    
                 
                     'it' => 'Agenzia PR',                    
                 
@@ -123,7 +123,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Supermarket',                    
                 
-                    'es' => 'Supermarket',                    
+                    'es' => 'Supermercado',                    
                 
                     'it' => 'Supermercato',                    
                 
@@ -141,7 +141,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Customer Support',                    
                 
-                    'es' => 'Customer Support',                    
+                    'es' => 'Atención al cliente',                    
                 
                     'it' => 'Assistenza clienti',                    
                 
@@ -375,7 +375,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Quality Assurance & Safety',                    
                 
-                    'es' => 'Quality Assurance & Safety',                    
+                    'es' => 'Garantía de calidad y seguridad',                    
                 
                     'it' => 'Garanzia di qualità e sicurezza',                    
                 
@@ -393,7 +393,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Real Estate',                    
                 
-                    'es' => 'Real Estate',                    
+                    'es' => 'Inmobiliaria',                    
                 
                     'it' => 'Immobiliare',                    
                 
@@ -411,7 +411,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Laboratories',                    
                 
-                    'es' => 'Laboratories',                    
+                    'es' => 'Laboratorios',                    
                 
                     'it' => 'Laboratori',                    
                 
