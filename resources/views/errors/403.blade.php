@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('page-title') Error 403: {!! trans('error-page.not_allowed') !!} @endsection
+@section('page-title') {!! trans('global.error') !!} 403: {!! trans('error-page.not_allowed') !!} @endsection
 
 @section('content')
 <div class="container">

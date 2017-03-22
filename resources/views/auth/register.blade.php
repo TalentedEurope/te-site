@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('page-title')Register @endsection
+@section('page-title') {!! trans('register.register') !!} @endsection
 
 @section('content')
 <div class="container">
   <div class="row">
         @if (isset($request))
           <div class="alert alert-success col-sm-6 col-sm-offset-3  col-md-4 col-md-offset-4" role="alert">
-            You have been invited by {{ $request->validator_name }}
+            {!! trans('register.invited_by') !!} {{ $request->validator_name }}
           </div>
         @endif
 
@@ -19,7 +19,7 @@
       action="{{ url('/register') }}">
       @endif
         {!! csrf_field() !!}
-        <h2 class="page-title">Register</h2>
+        <h2 class="page-title">{!! trans('register.register') !!}</h2>
 
 
         @if ($errors->count())

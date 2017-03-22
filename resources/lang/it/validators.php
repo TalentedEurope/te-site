@@ -61,4 +61,14 @@ return [
     
         'cancel' => 'Cancel',
     
+        'cannot_change_institution' => 'Cannot change institution',
+    
+        'invitation_is_not_valid_or_you_accepted_it' => 'Either your invitation is not valid anymore, or you already accepted it',
+    
+        'changed_institution_successfully' => 'Changed Institution successfully',
+    
+        'youll_receive_notifications_from' => 'From now on you&apos;ll receive validation notifications from',
+    
+        'cannot_complete_invitation' => 'Cannot complete invitation',
+    
 ];

@@ -33,8 +33,8 @@ import AlertButton from './components/common/AlertButton.vue';
 
 
 Vue.use(VueI18n);
-Vue.config.lang = 'en';
-Vue.locale('en', TE.translations.en);
+Vue.config.lang = 'translations';
+Vue.locale('translations', TE.translations);
 
 if (document.querySelector('.v-container')) {
     new Vue({

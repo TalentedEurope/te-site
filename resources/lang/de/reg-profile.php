@@ -417,4 +417,18 @@ return [
     
         'you_must_put_referee_email' => '<strong>Please note:</strong> You must put the referee email, not the one form the institution',
     
+        'leave_institution' => 'Leave institution?',
+    
+        'do_you_want_to_leave_institution' => 'Do you want to leave the institution? this will send the pending validation requests back to it, and you won&apos;t be able to validate anyone until another institution invites you back',
+    
+        'leave_institution_button' => 'Yes! Leave this academic institution',
+    
+        'your_profile_is_empty' => 'Your profile is empty!',
+    
+        'tab_changes_not_saved' => 'Tab changes haven&apos;t been saved, you may lose some data',
+    
+        'save_changes' => 'Save changes',
+    
+        'continue_without_saving' => 'Continue without saving',
+    
 ];

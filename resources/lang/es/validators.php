@@ -9,11 +9,11 @@ return [
     
         'disable' => 'Deshabilitado',
     
-        'add_new' => 'Add a new referee',
+        'add_new' => 'Añadir un nuevo validador',
     
-        'send_invitation' => 'Send invitation to referee',
+        'send_invitation' => 'Enviar invitación a un validador',
     
-        'validating' => 'Refereeing',
+        'validating' => 'Validando',
     
         'student_already_validated' => 'Has validado ya a este estudiante',
     
@@ -21,13 +21,13 @@ return [
     
         'you_are_validating_following_student' => 'You&apos;re validating the following student',
     
-        'jump_to_validation' => 'Jump to validation',
+        'jump_to_validation' => 'Ir a la validación',
     
-        'student_validation' => 'Student validation',
+        'student_validation' => 'Validación de Estudiante',
     
-        'valid' => 'Valid',
+        'valid' => 'Válido',
     
-        'student_passed_validation_successfully' => 'The student passed your validation successfully',
+        'student_passed_validation_successfully' => 'El estudiante pasó tu validación correctamente',
     
         'your_comments' => 'Tus comentarios',
     
@@ -60,5 +60,15 @@ return [
         'note_invites_are_only_valid_14_days' => 'Note: invites are only valid 14 days after being sent, and they will disapear from this list afterwards',
     
         'cancel' => 'Cancelar',
+    
+        'cannot_change_institution' => 'Cannot change institution',
+    
+        'invitation_is_not_valid_or_you_accepted_it' => 'Either your invitation is not valid anymore, or you already accepted it',
+    
+        'changed_institution_successfully' => 'Changed Institution successfully',
+    
+        'youll_receive_notifications_from' => 'From now on you&apos;ll receive validation notifications from',
+    
+        'cannot_complete_invitation' => 'Cannot complete invitation',
     
 ];

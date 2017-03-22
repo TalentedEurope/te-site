@@ -5,8 +5,6 @@ return [
     
         'date_of_request' => 'Date of request',
     
-        'status' => 'Status',
-    
         'pending' => 'Pending',
     
         'validated' => 'Validated',

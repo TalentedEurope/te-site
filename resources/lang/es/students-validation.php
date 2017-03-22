@@ -5,12 +5,10 @@ return [
     
         'date_of_request' => 'Fecha de solicitud',
     
-        'status' => 'Estado',
-    
         'pending' => 'Pendiente',
     
-        'validated' => 'Validated',
+        'validated' => 'Validado',
     
-        'not_validated' => 'Not validated',
+        'not_validated' => 'No validado',
     
 ];
