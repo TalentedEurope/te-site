@@ -18,7 +18,7 @@
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">
           <li class="active"><a data-target="#profile" data-toggle="tab">{!! trans('reg-profile.profile') !!}</a></li>
           @if ($validator->institution)
-          <li><a data-target="#leave-institution" data-toggle="tab">Leave institution?</a></li>
+          <li><a data-target="#leave-institution" data-toggle="tab">{!! trans('reg-profile.leave_institution') !!}</a></li>
           @endif
           <li><a data-target="#password" data-toggle="tab">{!! trans('reg-profile.change_your_password') !!}</a></li>
         </ul>
@@ -43,7 +43,7 @@
               <hr>
 
               @if ($validator->institution)
-              <h4>Status</h4>
+              <h4>{!! trans('global.status') !!}</h4>
               <div class="radio">
                 <label><input type="radio" @if ($validator->enabled == true) checked @endif name="enabled" value="1">{!! trans('reg-profile.notifications_enabled') !!}</label>
               </div>
@@ -72,12 +72,12 @@
 
           @if ($validator->institution)
           <div class="tab-pane fade" id="leave-institution">
-            <p><span class="h4">Leave institution?</span></p>
+            <p><span class="h4">{!! trans('reg-profile.leave_institution') !!}</span></p>
             <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#leave-institution' }}">
               {{ csrf_field() }}
-              <p>Do you want to leave the institution? this will send the pending validation requests back to it, and you won't be able to validate anyone until another institution invites you back</p>
+              <p>{!! trans('reg-profile.do_you_want_to_leave_institution') !!}</p>
               <input type="hidden" name="leave" value="1">
-              <button type="submit" class="btn btn-primary">Yes! Leave this academic institution</button>
+              <button type="submit" class="btn btn-primary">{!! trans('reg-profile.leave_institution_button') !!}</button>
             </form>
           </div>
           @endif

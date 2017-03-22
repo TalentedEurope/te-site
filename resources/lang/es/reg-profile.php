@@ -233,17 +233,17 @@ return [
     
         'logo' => 'Logo',
     
-        'my_profile' => 'My profile',
+        'my_profile' => 'Mi perfil',
     
-        'profile' => 'Profile',
+        'profile' => 'Perfil',
     
-        'profile_visibility' => 'Profile Visibility',
+        'profile_visibility' => 'Visibilidad del perfil',
     
-        'profile_visibility_visible' => 'Visible. Can be searched, viewed',
+        'profile_visibility_visible' => 'Visible. Puede ser buscado, visto',
     
-        'profile_visibility_hidden' => 'Hidden. Cannot be searched or viewed',
+        'profile_visibility_hidden' => 'Oculto. No puede ser buscado ni visto',
     
-        'notifications' => 'Notifications',
+        'notifications' => 'Notificaciones',
     
         'notifications_enabled' => 'Enabled. You&apos;ll receive emails once a day if a student wants to get in contact with you',
     
@@ -281,9 +281,9 @@ return [
     
         'career_and_skills' => 'Career and Skills',
     
-        'my_photo' => 'My Photo',
+        'my_photo' => 'Mi fotografía de perfil',
     
-        'download_curriculum' => 'Download curriculum',
+        'download_curriculum' => 'Descargar curriculum',
     
         'my_talent' => 'My talent',
     
@@ -327,7 +327,7 @@ return [
     
         'we_are_in' => 'Estamos en',
     
-        'we_are_looking_for_people_skilled_in' => 'We&apos;re looking for people skilled in',
+        'we_are_looking_for_people_skilled_in' => 'Estamos buscando personas con habilidades en',
     
         'we_think_that_talent_is' => 'Creemos que el talento es',
     
@@ -371,9 +371,9 @@ return [
     
         'student_language_add_more' => 'añadir más idiomas',
     
-        'student_work_experience_to' => 'Work to',
+        'student_work_experience_to' => 'Trabajó hasta',
     
-        'student_work_experience_from' => 'Work from',
+        'student_work_experience_from' => 'Trabajó desde',
     
         'student_work_experience_add' => 'añadir experiencia laboral',
     
@@ -391,13 +391,13 @@ return [
     
         'get_a_better_refeer' => 'Get a better refeer improving your profile readiness and improve possibility of company contact',
     
-        'request_is_managed_by' => 'Your request is being managed by',
+        'request_is_managed_by' => 'Tu solicitud está siendo gestionada por',
     
         'cant_find_your_institution' => 'Can&apos;t find your institution? ask your referee and institution to join Talented Europe',
     
         'this_step_sends_an_email_to_your_referee' => 'This step sends an email to your referee with instructions on how to join Talented Europe, automatically registers him as referee once his institution joins, and adds you to the refeeral queue',
     
-        'send_invitation' => 'Send invitation',
+        'send_invitation' => 'Enviar invitación',
     
         'profile_validated_successfully' => 'Your profile was validated successfully',
     
@@ -409,12 +409,26 @@ return [
     
         'progress_account_setup' => 'Configuración de la cuenta',
     
-        'progress_refer_your_profile' => 'Refer your profile',
+        'progress_refer_your_profile' => 'Validar tu perfil',
     
-        'progress_not_refereed' => 'Not refereed',
+        'progress_not_refereed' => 'No validado',
     
         'progress_completed' => 'Completado',
     
         'you_must_put_referee_email' => '<strong>Please note:</strong> You must put the referee email, not the one form the institution',
+    
+        'leave_institution' => '¿Abandonas la institución educativa?',
+    
+        'do_you_want_to_leave_institution' => 'Do you want to leave the institution? this will send the pending validation requests back to it, and you won&apos;t be able to validate anyone until another institution invites you back',
+    
+        'leave_institution_button' => 'Sí. Abandono la institución académica',
+    
+        'your_profile_is_empty' => '¡Tu perfil está vacío!',
+    
+        'tab_changes_not_saved' => 'Tab changes haven&apos;t been saved, you may lose some data',
+    
+        'save_changes' => 'Save changes',
+    
+        'continue_without_saving' => 'Continue without saving',
     
 ];

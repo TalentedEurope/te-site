@@ -27,4 +27,8 @@ return [
     
         'register_success' => 'Register success',
     
+        'register' => 'Register',
+    
+        'invited_by' => 'You have been invited by',
+    
 ];

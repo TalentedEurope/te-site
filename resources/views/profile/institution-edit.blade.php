@@ -22,7 +22,7 @@
         <!-- Content -->
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">
           <li class="active"><a data-target="#profile" data-toggle="tab">{!! trans('reg-profile.profile') !!}</a></li>
-          <li><a data-target="#contact" data-toggle="tab">Contact Person</a></li>
+          <li><a data-target="#contact" data-toggle="tab">{!! trans('reg-profile.company_contact_person') !!}</a></li>
           <li><a data-target="#password" data-toggle="tab">{!! trans('reg-profile.change_your_password') !!}</a></li>
         </ul>
         <div id="profileTab" class="tab-content well">

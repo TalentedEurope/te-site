@@ -11,4 +11,12 @@ return [
     
         'refereed' => 'Refereed',
     
+        'there_are_no' => 'There are no',
+    
+        'matching_the_selected_filters' => 'matching the selected filters at the moment',
+    
+        'we_found' => 'We found',
+    
+        'matching_your_needs' => 'matching your needs',
+    
 ];

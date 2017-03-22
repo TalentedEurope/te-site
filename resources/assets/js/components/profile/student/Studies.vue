@@ -72,7 +72,7 @@
 
         <p class="text-center">
             <button class="btn btn-default" @click.prevent="addNewStudy()">
-                <i class="fa fa-plus" aria-hidden="true"></i> {{ $t('reg-profile.add_more_studies') }}
+                <i class="fa fa-plus" aria-hidden="true"></i> {{ $t('reg-profile.student_study_add_more') }}
             </button>
         </p>
         <hr class="separator">

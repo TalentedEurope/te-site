@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('page-title') Error 404: {!! trans('error-page.page_not_found') !!} @endsection
+@section('page-title') {!! trans('global.error') !!} 404: {!! trans('error-page.page_not_found') !!} @endsection
 
 @section('content')
 <div class="container">

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('page-title') Error 500: {!! trans('error-page.internal_server_error') !!} @endsection
+@section('page-title') {!! trans('global.error') !!} 500: {!! trans('error-page.internal_server_error') !!} @endsection
 
 @section('content')
 <div class="container">

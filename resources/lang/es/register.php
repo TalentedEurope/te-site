@@ -13,7 +13,7 @@ return [
     
         'search_companies' => 'Buscar empresas',
     
-        'register_as_validator' => 'Register as referee',
+        'register_as_validator' => 'Registro como validador',
     
         'there_have_been_some_errors' => 'Hay más de un error',
     
@@ -26,5 +26,9 @@ return [
         'registration_complete_successfully' => 'registro completado satisfactoriamente',
     
         'register_success' => 'registro completado',
+    
+        'register' => 'Registro',
+    
+        'invited_by' => 'Has sido invitado por',
     
 ];

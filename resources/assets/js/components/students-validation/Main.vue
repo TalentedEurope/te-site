@@ -8,7 +8,7 @@
                 <tr>
                     <th>{{ $tc('global.student', 1) }}</th>
                     <th>{{ $t('students-validation.date_of_request') }}</th>
-                    <th>{{ $t('students-validation.status') }}</th>
+                    <th>{{ $t('global.status') }}</th>
                 </tr>
             </thead>
             <tbody>

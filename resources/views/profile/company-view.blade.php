@@ -1,6 +1,6 @@
 @extends('../layouts.app')
 
-@section('page-title') Company Profile @endsection
+@section('page-title') {!! trans_choice('global.company', 1) !!} {!! trans('reg-profile.profile') !!} @endsection
 @section('page-class') unique-profile company @endsection
 
 @section('meta')

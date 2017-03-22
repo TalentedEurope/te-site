@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('page-title') Your profile is empty! @endsection
+@section('page-title') {!! trans('reg-profile.your_profile_is_empty') !!} @endsection
 
 @section ('profile_warning')
 @endsection

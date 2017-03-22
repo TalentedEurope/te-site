@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('page-title') Changed Institution successfully @endsection
+@section('page-title') {!! trans('validators.changed_institution_successfully') !!} @endsection
 
 @section('content')
 <div class="container">
@@ -8,9 +8,9 @@
             <div class="avatar-placeholder">
                 <i class="fa fa-check" aria-hidden="true"></i>
             </div>
-            <h2 class="page-title">Success</h2>
-            <h3>Changed your Institution successfully</h3>
-            <p>From now on you'll receive validation notifications from {{ $institution }}</p>
+            <h2 class="page-title">{!! trans('global.success') !!}</h2>
+            <h3>{!! trans('validators.changed_institution_successfully') !!}</h3>
+            <p>{!! trans('validators.youll_receive_notifications_from') !!} {{ $institution }}</p>
         </div>
     </div>
 </div>
