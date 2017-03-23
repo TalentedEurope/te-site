@@ -123,7 +123,7 @@ return [
     
         'captcha' => 'Captcha',
     
-        'terms_of_use' => 'Súhlasím s podmienkami',
+        'terms_of_use' => 'Súhlasím s podmienkami používania',
     
         'i_agree_with' => 'I agree with',
     
@@ -234,159 +234,159 @@ Obchodná a poradenská činnosť',
     
         'logo' => 'Logo',
     
-        'my_profile' => 'My profile',
+        'my_profile' => 'Môj profil',
     
-        'profile' => 'Profile',
+        'profile' => 'Profil',
     
-        'profile_visibility' => 'Profile Visibility',
+        'profile_visibility' => 'Vidteľnosť profilu',
     
-        'profile_visibility_visible' => 'Visible. Can be searched, viewed',
+        'profile_visibility_visible' => 'Viditeľný. Možné vyhľadať, prezerať.',
     
-        'profile_visibility_hidden' => 'Hidden. Cannot be searched or viewed',
+        'profile_visibility_hidden' => 'Skrytý. Nedá sa vyhľadať, prezerať.',
     
-        'notifications' => 'Notifications',
+        'notifications' => 'Notifikácie',
     
-        'notifications_enabled' => 'Enabled. You&apos;ll receive emails once a day if a student wants to get in contact with you',
+        'notifications_enabled' => 'Povolené. Mail obdržíte každý deň ak sa s vami študent chce skontaktovať.',
     
-        'notifications_disabled' => 'Disabled. You won&apos;t receive any emails, except for announcements about the service',
+        'notifications_disabled' => 'Nepovolené. Neobdržíte žiaden mail okrem oznámení o servisných úkonoch.',
     
-        'about' => 'About',
+        'about' => 'Obsah/O',
     
-        'company_logo' => 'Company Logo',
+        'company_logo' => 'Lgo spoločnosti',
     
-        'social_and_web' => 'Social networks and website',
+        'social_and_web' => 'Sociálne siete a webstránka',
     
-        'facebook_page_url' => 'Facebook page url',
+        'facebook_page_url' => 'Facebook url',
     
-        'twitter_page_url' => 'Twitter page url',
+        'twitter_page_url' => 'Twitter url',
     
-        'linkedin_page_url' => 'Linkedin page url',
+        'linkedin_page_url' => 'Linkedin url',
     
-        'web_url' => 'Website url',
+        'web_url' => 'Webstránka url',
     
-        'what_is_talent_for_you_in_a_few_words' => 'Explain us what is talent for you in a few words',
+        'what_is_talent_for_you_in_a_few_words' => 'Stručne vysvetlite, čo pre vás znamená talent. ',
     
-        'most_valuable_skills_for_company' => 'A list of the most valuable skills for the company',
+        'most_valuable_skills_for_company' => 'Zoznam zručností, ktorú sú pre vás ako spoločnosť najcennejšie. ',
     
-        'setup_alternative_contact' => 'Setup an alternative contact user that will receive all the notifications instead of the main account',
+        'setup_alternative_contact' => 'Zadajte alternatívny kontakt používateľa, ktorý obdrží všetky notifikácie namiesto zasielania do hlavného účtu. ',
     
-        'update_settings' => 'Update settings',
+        'update_settings' => 'Update nastavení',
     
-        'change_your_password' => 'Change your password',
+        'change_your_password' => 'Zmena hesla',
     
-        'new_password' => 'New password',
+        'new_password' => 'Nové heslo',
     
-        'repeat_new_password' => 'Repeat new password',
+        'repeat_new_password' => 'Znovu zadajte nové heslo ',
     
-        'save_new_password' => 'Save new password',
+        'save_new_password' => 'Uložte nové heslo',
     
-        'career_and_skills' => 'Career and Skills',
+        'career_and_skills' => 'Kariéra a zručnosti',
     
-        'my_photo' => 'My Photo',
+        'my_photo' => 'Moja fotografia',
     
-        'download_curriculum' => 'Download curriculum',
+        'download_curriculum' => 'Pridajte CV',
     
-        'my_talent' => 'My talent',
+        'my_talent' => 'Môj talent',
     
-        'referee_name' => 'Referee name',
+        'referee_name' => 'Meno posudzovateľa',
     
-        'referee_email' => 'Referee email',
+        'referee_email' => 'Email posudzovateľa',
     
-        'get_your_profile_refereed' => 'Get your profile refereed',
+        'get_your_profile_refereed' => 'Nechajte si ohodnotiť svoj profil',
     
-        'want_to_view_all_details_of_student' => 'Do you want to view all the details of this student?',
+        'want_to_view_all_details_of_student' => 'Chcete si pozrieť podrobné informácie o študentovi?',
     
-        'education' => 'Education',
+        'education' => 'Vzdelanie',
     
-        'lives_in' => 'Lives in',
+        'lives_in' => 'Bydlisko',
     
-        'born_on' => 'Born on',
+        'born_on' => 'Dátum narodenia',
     
-        'refereed_by' => 'Refereed by',
+        'refereed_by' => 'Hodnotený kým',
     
-        'refereeing_pending' => 'Refereeing pending',
+        'refereeing_pending' => 'Čaká sa na hodnotenie',
     
-        'skills' => 'Skills',
+        'skills' => 'Zručnosti',
     
-        'professional' => 'Professional',
+        'professional' => 'Profesijné',
     
-        'personal' => 'Personal',
+        'personal' => 'Osobné',
     
-        'legend' => 'Legend',
+        'legend' => 'Legenda',
     
-        'set_by_both_parties' => 'Set by both parties',
+        'set_by_both_parties' => 'Uvádzajú obe strany',
     
-        'set_by_referee_or_student' => 'Set by either the referee or the student',
+        'set_by_referee_or_student' => 'Uvádza hodnotiteľ alebo študent',
     
-        'study' => 'Study|Studies',
+        'study' => 'Štúdium',
     
-        'date_not_specified' => 'Date not specified',
+        'date_not_specified' => 'Dátum nešpecifikovaný',
     
-        'get_in_contact' => 'Get in contact',
+        'get_in_contact' => 'Nadviažte spojenie',
     
-        'want_to_show_this_company_how_talented_you_are' => 'Do you want to show this company how talented you are?',
+        'want_to_show_this_company_how_talented_you_are' => 'Chcete ukázať tejto spoločnosti aký ste talentovaný?',
     
-        'we_are_in' => 'We are in',
+        'we_are_in' => 'Sme v',
     
-        'we_are_looking_for_people_skilled_in' => 'We&apos;re looking for people skilled in',
+        'we_are_looking_for_people_skilled_in' => 'Hľadáme ľudí so zručnosťami v....',
     
-        'we_think_that_talent_is' => 'We think that talent is',
+        'we_think_that_talent_is' => 'Myslíme si, že talent je...',
     
-        'not_enough_information' => 'Not enough information',
+        'not_enough_information' => 'Nepostačujúce informácie',
     
-        'fix_the_following_errors' => 'You&apos;ll need to fix the following errors',
+        'fix_the_following_errors' => 'Potrebné opraviť nasledujúcu chybu.',
     
-        'click_on_button_to_fill_required_fields' => 'Please click the following button to fill the required fields.',
+        'click_on_button_to_fill_required_fields' => 'Prosíme kliknúť na nasledujúci gombík ak chcete vyplniť požadované políčka.',
     
-        'institution_fix_the_following_errors' => 'You&apos;ll need to fix the following errors or your referees won&apos;t be able to validate profiles',
+        'institution_fix_the_following_errors' => 'Potrebné opraviť nasledujúce chyby, ináč nebudú môcť vaši hodnotitelia validovať váš profil.',
     
-        'my_institution' => 'My Institution',
+        'my_institution' => 'Moja inštitúcia',
     
-        'required' => 'Required',
+        'required' => 'Požadované',
     
-        'remove_btn' => 'Remove',
+        'remove_btn' => 'Odstrániť',
     
-        'student_study_institution_name' => 'Institution name',
+        'student_study_institution_name' => 'Názov inštitúcie',
     
-        'student_study_course_studies_name' => 'Course/Studies name',
+        'student_study_course_studies_name' => 'Názov kurzu/štúdia',
     
-        'student_download_certificate' => 'Download Certificate',
+        'student_download_certificate' => 'Nahrať certifikát',
     
-        'student_download_grade_card' => 'Download Gradecard',
+        'student_download_grade_card' => 'Nahrať hodnotiacu tabuľku',
     
-        'student_study_add_more' => 'add more studies',
+        'student_study_add_more' => 'pridaj ďalšie šúdium',
     
-        'student_training_course_name' => 'Course name',
+        'student_training_course_name' => 'názov kurzu',
     
-        'student_training_add' => 'add a training',
+        'student_training_add' => 'pridaj zaškolenie/prax',
     
-        'student_training_add_more' => 'add more trainings',
+        'student_training_add_more' => 'pridaj ďalšie zaškolenie/prax',
     
-        'student_language' => 'Language',
+        'student_language' => 'jazyk',
     
-        'student_language_name' => 'Language name',
+        'student_language_name' => 'názov',
     
-        'student_language_level' => 'Language level',
+        'student_language_level' => 'úroveň',
     
-        'student_language_add' => 'add a language',
+        'student_language_add' => 'pridaj jazyk',
     
-        'student_language_add_more' => 'add more languages',
+        'student_language_add_more' => 'pridaj ďalšie jazyky',
     
         'student_work_experience_to' => 'Work to',
     
         'student_work_experience_from' => 'Work from',
     
-        'student_work_experience_add' => 'add a work experience',
+        'student_work_experience_add' => 'pridaj pracovnú skúsenosť',
     
-        'student_work_experience_add_more' => 'add more work experiences',
+        'student_work_experience_add_more' => 'pridaj ďalšie pracovné skúsenosti',
     
-        'add_btn' => 'Add',
+        'add_btn' => 'pridaj',
     
-        'student_professional_skills_remove' => 'Remove professional skill',
+        'student_professional_skills_remove' => 'odstráň profesnú zručnosť',
     
-        'student_professional_skills_add' => 'Add a professional skill',
+        'student_professional_skills_add' => 'pridaj rofesnú zručnosť',
     
-        'profile_readiness' => 'Profile readiness',
+        'profile_readiness' => 'Pripravenosť profilu',
     
         'profile_readiness_explanation' => 'Getting your profile refereed gives a third party opinion of you and helps increasing the possibilities of contact from a company',
     
@@ -418,18 +418,18 @@ Obchodná a poradenská činnosť',
     
         'you_must_put_referee_email' => '<strong>Please note:</strong> You must put the referee email, not the one form the institution',
     
-        'leave_institution' => 'Leave institution?',
+        'leave_institution' => 'Opustiť inštitúciu?',
     
-        'do_you_want_to_leave_institution' => 'Do you want to leave the institution? this will send the pending validation requests back to it, and you won&apos;t be able to validate anyone until another institution invites you back',
+        'do_you_want_to_leave_institution' => 'Chcete opustiť túto inštitúciu?',
     
-        'leave_institution_button' => 'Yes! Leave this academic institution',
+        'leave_institution_button' => 'Áno! Opúšťam túto akademickú inštitúciu!',
     
-        'your_profile_is_empty' => 'Your profile is empty!',
+        'your_profile_is_empty' => 'Váš profil je prázdny!',
     
-        'tab_changes_not_saved' => 'Tab changes haven&apos;t been saved, you may lose some data',
+        'tab_changes_not_saved' => 'Zmeny neboli uložené, môže dôjsť k strate údajov ',
     
-        'save_changes' => 'Save changes',
+        'save_changes' => 'Ulož zmeny',
     
-        'continue_without_saving' => 'Continue without saving',
+        'continue_without_saving' => 'Pokračuj bez uloženia',
     
 ];

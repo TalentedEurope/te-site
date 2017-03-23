@@ -3,12 +3,12 @@
 
 return [
     
-        'date_of_request' => 'Date of request',
+        'date_of_request' => 'Dátum požiadavky',
     
-        'pending' => 'Pending',
+        'pending' => 'Čakajúci',
     
-        'validated' => 'Validated',
+        'validated' => 'Ohodnotený',
     
-        'not_validated' => 'Not validated',
+        'not_validated' => 'Neohodnotený',
     
 ];

@@ -3,20 +3,20 @@
 
 return [
     
-        'loading' => 'Loading',
+        'loading' => 'načítavanie',
     
-        'toggle' => 'Show/Hide',
+        'toggle' => 'Ukáž/Skry',
     
-        'current_search' => 'Current search',
+        'current_search' => 'aktuálne vyhľadávanie ',
     
-        'refereed' => 'Refereed',
+        'refereed' => 'Hodnotil',
     
         'there_are_no' => 'There are no',
     
         'matching_the_selected_filters' => 'matching the selected filters at the moment',
     
-        'we_found' => 'We found',
+        'we_found' => 'Našli sme...',
     
-        'matching_your_needs' => 'matching your needs',
+        'matching_your_needs' => 'spĺňa vaše ptreby',
     
 ];

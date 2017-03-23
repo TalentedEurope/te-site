@@ -97,20 +97,20 @@ return [
     
         'logout_btn' => 'Odhlásiť sa',
     
-        'less_btn' => 'View less',
+        'less_btn' => 'pozri si menej',
     
         'status' => 'Status',
     
-        'not_enough_data_to_show_profile' => 'We don&apos;t have enough data from you to be able to show your profile.',
+        'not_enough_data_to_show_profile' => 'Pre zobrazenie vášho profilu nemáme dostatok údajov',
     
-        'click_on_link_to_fill_required_fields' => 'Please click on the following link to fill the required fields.',
+        'click_on_link_to_fill_required_fields' => 'Kliknite na nasledujúci link a vyplnite požadované údaje',
     
-        'set_up_my_profile' => 'Set up my profile',
+        'set_up_my_profile' => 'Založiť profil ',
     
-        'or' => 'or',
+        'or' => 'alebo',
     
-        'error' => 'Error',
+        'error' => 'Chyba',
     
-        'success' => 'Success',
+        'success' => 'Úspešný',
     
 ];
