@@ -323,7 +323,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'it' => 'flessibile',                    
                 
-                    'de' => 'flexible',                    
+                    'de' => 'flexibel',                    
                 
                     'fr' => 'flexible',                    
                 

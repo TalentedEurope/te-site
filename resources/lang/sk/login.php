@@ -3,8 +3,8 @@
 
 return [
     
-        'remember_me' => 'Remember Me',
+        'remember_me' => 'Zapamätať si ',
     
-        'sign_in' => 'Sign in',
+        'sign_in' => 'Prihlásenie',
     
 ];

@@ -38,13 +38,13 @@
         </div>
 
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">
-          <li class="active"><a data-target="#profile" data-toggle="tab">{!! trans('reg-profile.profile') !!}</a></li>
-          <li><a data-target="#career" data-toggle="tab">{!! trans('reg-profile.career_and_skills') !!}</a></li>
-          <li><a data-target="#refer" data-toggle="tab">{!! trans('reg-profile.get_your_profile_refereed') !!}</a></li>
-          <li><a data-target="#password" data-toggle="tab">{!! trans('reg-profile.change_your_password') !!}</a></li>
+          <li class="active"><a data-target="#_profile" data-toggle="tab">{!! trans('reg-profile.profile') !!}</a></li>
+          <li><a data-target="#_career" data-toggle="tab">{!! trans('reg-profile.career_and_skills') !!}</a></li>
+          <li><a data-target="#_refer" data-toggle="tab">{!! trans('reg-profile.get_your_profile_refereed') !!}</a></li>
+          <li><a data-target="#_change-password" data-toggle="tab">{!! trans('reg-profile.change_your_password') !!}</a></li>
         </ul>
         <div id="profileTab" class="tab-content well">
-          <div class="tab-pane active in" id="profile">
+          <div class="tab-pane active in" id="_profile">
             <form enctype="multipart/form-data" class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#profile' }}">
               {{ csrf_field() }}
 
@@ -119,7 +119,7 @@
             </form>
           </div>
 
-          <div class="tab-pane fade" id="career">
+          <div class="tab-pane fade" id="_career">
             <form class="form-vertical" enctype="multipart/form-data" role="form" method="POST" action="{{ route('update_profile'). '#career' }}">
               {{ csrf_field() }}
               <h4>{!! trans('reg-profile.student_academic_info') !!}</h4>
@@ -168,7 +168,7 @@
             </form>
           </div>
 
-          <div class="tab-pane fade" id="refer">
+          <div class="tab-pane fade" id="_refer">
             <h4>{!! trans('reg-profile.profile_readiness') !!}</h4>
 
             <p>{!! trans('reg-profile.profile_readiness_explanation') !!}</p>
@@ -195,7 +195,7 @@
                 <p>{{ sprintf('If your request hasn\'t been completed in %s days you will be able to create a new request', env('CLEANUP_DAYS',14)) }}
                 </div>
               @else
-                <form class="form-vertical" role="form" method="POST" action="{{ route('request-validation') }}">
+                <form class="form-vertical" role="form" method="POST" action="{{ route('request-validation'). '#refer'}}">
                   {{ csrf_field() }}
                   <request-validation countries='{!! json_encode($institutionCountries, JSON_HEX_APOS) !!}'></request-validation>
                 </form>
@@ -206,16 +206,16 @@
                 <p>{!! trans('reg-profile.this_step_sends_an_email_to_your_referee') !!}</p>
                 <p>{!! trans('reg-profile.you_must_put_referee_email') !!}</p>
 
-                <form class="form-vertical" role="form" method="POST" action="{{ route('invite-school') }}">
+                <form class="form-vertical" role="form" method="POST" action="{{ route('invite-school'). '#refer' }}">
                 {{ csrf_field() }}
 
                 <div class="row">
                   <text-box-form class="col-sm-6" code="validator_name" label="{!! trans('reg-profile.referee_name') !!}" placeholder="{!! trans('reg-profile.referee_name') !!}"
-                        value="{{ old('validator_name', $user->validator_name) }}"
+                        value="{{ old('validator_name', $user->validator_name) }}" required
                         errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'> </text-box-form>
 
                   <text-box-form class="col-sm-6" code="validator_email" label="{!! trans('reg-profile.referee_email') !!}" placeholder="{!! trans('reg-profile.referee_email') !!}"
-                        value="{{ old('validator_email', $user->validator_email) }}"
+                        value="{{ old('validator_email', $user->validator_email) }}" required
                         errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'> </text-box-form>
                         </div>
                 <div class="row">
@@ -253,9 +253,9 @@
 
           </div>
 
-          <div class="tab-pane fade" id="password">
+          <div class="tab-pane fade" id="_change-password">
             <h4>{!! trans('reg-profile.change_your_password') !!}</h4>
-            <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#password' }}">
+            <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#change-password' }}">
               {{ csrf_field() }}
               <text-box-form type="password" code="password" label="{!! trans('reg-profile.new_password') !!}" placeholder="{!! trans('reg-profile.new_password') !!}" value="" required
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}' no-validate></text-box-form>

@@ -3,23 +3,23 @@
 
 return [
     
-        'thank_you_for_signing_up' => 'Thank You for Signing Up!',
+        'thank_you_for_signing_up' => 'Ďakujeme za vašu registráciu!',
     
-        'you_will_receive_an_email' => 'You will receive an email with instructions about how to confirm your account in a few minutes.',
+        'you_will_receive_an_email' => 'O nikeľoko minút obdržíte mail s inštrukciami pre potvrdenie vášho účtu.',
     
-        'go_back_to_home' => 'Go back to home',
+        'go_back_to_home' => 'Návrat na domovskú stránku',
     
-        'search_students' => 'Search students',
+        'search_students' => 'Vyhľdávaj študentov',
     
-        'search_companies' => 'Search companies',
+        'search_companies' => 'Vyhľadávaj spoločnosti',
     
-        'register_as_validator' => 'Register as referee',
+        'register_as_validator' => 'Zaregistruj sa ako hodnotiteľ',
     
-        'there_have_been_some_errors' => 'There have been some errors',
+        'there_have_been_some_errors' => 'Vyskytli sa nejaké chyby',
     
-        'i_am_a' => 'I am a',
+        'i_am_a' => 'Som',
     
-        'all_fields_are_required' => 'All fields are required',
+        'all_fields_are_required' => 'Potrebné vyplniť všetky políčka',
     
         'confirmation_email_may_take_few_minutes' => 'Your confirmation email may take a few minutes to arrive, make sure you also check out your spam folder',
     
@@ -27,8 +27,8 @@ return [
     
         'register_success' => 'Register success',
     
-        'register' => 'Register',
+        'register' => 'Registrujte sa',
     
-        'invited_by' => 'You have been invited by',
+        'invited_by' => 'Pozval vás...',
     
 ];

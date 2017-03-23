@@ -3,15 +3,15 @@
 
 return [
     
-        'my_students' => 'My students',
+        'my_students' => 'Moji študenti',
     
-        'enable' => 'Enable',
+        'enable' => 'Povoľ',
     
-        'disable' => 'Disable',
+        'disable' => 'Nepovoľ/Zruš',
     
-        'add_new' => 'Add a new referee',
+        'add_new' => 'Pridaj nového hodnotiteľa',
     
-        'send_invitation' => 'Send invitation to referee',
+        'send_invitation' => 'Pošli pozvanie hodnotiteľovi',
     
         'validating' => 'Refereeing',
     
@@ -61,14 +61,14 @@ return [
     
         'cancel' => 'Cancel',
     
-        'cannot_change_institution' => 'Cannot change institution',
+        'cannot_change_institution' => 'Zmena inštitúcie nemožná',
     
-        'invitation_is_not_valid_or_you_accepted_it' => 'Either your invitation is not valid anymore, or you already accepted it',
+        'invitation_is_not_valid_or_you_accepted_it' => 'Vaše pozvanie je neplatné alebo už akceptované',
     
-        'changed_institution_successfully' => 'Changed Institution successfully',
+        'changed_institution_successfully' => 'Inštitúcia úspešne zmenená',
     
-        'youll_receive_notifications_from' => 'From now on you&apos;ll receive validation notifications from',
+        'youll_receive_notifications_from' => 'Odteraz budete dostávať notifikácie o validácii od...',
     
-        'cannot_complete_invitation' => 'Cannot complete invitation',
+        'cannot_complete_invitation' => 'Nemožno ukončiť pozvanie',
     
 ];

@@ -21,12 +21,12 @@
       <div class="col-sm-8 col-md-8 col-xs-12">
         <!-- Content -->
         <ul id="profile-tabs" class="nav nav-tabs" data-hashtab="true">
-          <li class="active"><a data-target="#profile" data-toggle="tab">{!! trans('reg-profile.profile') !!}</a></li>
-          <li><a data-target="#contact" data-toggle="tab">{!! trans('reg-profile.company_contact_person') !!}</a></li>
-          <li><a data-target="#password" data-toggle="tab">{!! trans('reg-profile.change_your_password') !!}</a></li>
+          <li class="active"><a data-target="#_profile" data-toggle="tab">{!! trans('reg-profile.profile') !!}</a></li>
+          <li><a data-target="#_contact" data-toggle="tab">{!! trans('reg-profile.company_contact_person') !!}</a></li>
+          <li><a data-target="#_change-password" data-toggle="tab">{!! trans('reg-profile.change_your_password') !!}</a></li>
         </ul>
         <div id="profileTab" class="tab-content well">
-          <div class="tab-pane active in" id="profile">
+          <div class="tab-pane active in" id="_profile">
             <form enctype='multipart/form-data'  class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#profile' }}" >
               {{ csrf_field() }}
               <h4>{!! trans('reg-profile.about') !!}</h4>
@@ -98,7 +98,7 @@
               <button type="submit" class="btn btn-primary">{!! trans('reg-profile.update_settings') !!}</button>
             </form>
           </div>
-          <div class="tab-pane fade" id="contact">
+          <div class="tab-pane fade" id="_contact">
             <h4>{!! trans('reg-profile.company_contact_person') !!}</h4>
             <label>{!! trans('reg-profile.setup_alternative_contact') !!}</label>
             <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#contact' }}" >
@@ -115,9 +115,9 @@
             </form>
           </div>
 
-          <div class="tab-pane fade" id="password">
+          <div class="tab-pane fade" id="_change-password">
             <p><span class="h4">{!! trans('reg-profile.change_your_password') !!}</span></p>
-            <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#password' }}">
+            <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#change-password' }}">
               {{ csrf_field() }}
               <text-box-form type="password" code="password" label="{!! trans('reg-profile.new_password') !!}"
                   required placeholder="{!! trans('reg-profile.new_password') !!}" value="" no-validate

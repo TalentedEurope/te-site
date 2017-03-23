@@ -3,21 +3,21 @@
 
 return [
     
-        'not_allowed' => 'Not allowed',
+        'not_allowed' => 'Nepovolené',
     
-        'not_allowed_to_do_this_action' => 'You&apos;re not allowed to do this action.',
+        'not_allowed_to_do_this_action' => 'Táto akcia nie je povolená',
     
-        'can_try_searching_for' => 'You can try searching for',
+        'can_try_searching_for' => 'Môžete skúsiť vyhľadávať...',
     
-        'page_not_found' => 'Page not found',
+        'page_not_found' => 'Stránka nenájdená',
     
-        'we_didnt_find_the_page' => 'We didn&apos;t find the page you were looking for.',
+        'we_didnt_find_the_page' => 'Nenašli sme stránku, ktorú hľadáte.',
     
-        'internal_server_error' => 'Internal server error',
+        'internal_server_error' => 'Internal server chyba',
     
-        'an_error_happened' => 'An error happened, administrators have been notified and this issue will be fixed soon, please try later.',
+        'an_error_happened' => 'vykytla sa chyba, administrátori upovedomení, chyba bude čoskoro opravená, skúste prosím neskôr.',
     
-        'meanwhile_can_searching_for' => 'Meanwhile you can try searching for',
+        'meanwhile_can_searching_for' => 'Zatiaľ môžete skúsiť vyhľadávať...',
     
         'be_right_back' => 'Be right back',
     
