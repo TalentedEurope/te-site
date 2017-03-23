@@ -173,24 +173,28 @@
     $(document).ready(function() {
       $('[data-toggle="tooltip"]').tooltip();
 
-      var profile_tabs = $('#profile-tabs');
-      if (profile_tabs.data("hashtab")) {
-        var hash = window.location.hash;
-        profile_tabs.find('a[data-target="' + hash + '"]').tab('show');
-      }
-
       var validate_tabs = $('#validate-tabs');
       if (validate_tabs.data("hashtab")) {
         var hash = window.location.hash;
         validate_tabs.find('a[href="' + hash + '"]').tab('show');
       }
 
+      var profile_tabs = $('#profile-tabs');
+      if (profile_tabs.data("hashtab")) {
+        // #_ is a hack for avoid anchor jump on load
+        var hash = window.location.hash.replace('#', '#_');
+        profile_tabs.find('a[data-target="' + hash + '"]').tab('show');
+      }
+
       $('#profile-tabs a').on('click', function(event) {
         event.stopPropagation();
+
         var element = $(event.target);
+        var hash = element.attr('data-target').replace('#_', '#');
+
         if (!TE.profile.modified_fields) {
           element.tab('show');
-          location.hash = element.attr("data-target");
+          location.hash = hash;
         } else {
           $.confirm({
             title: null,
@@ -201,7 +205,7 @@
                 text: TE.translations['reg-profile']['continue_without_saving'],
                 action: function() {
                   element.tab('show');
-                  location.hash = element.attr("data-target");
+                  location.hash = hash;
                   TE.profile.modified_fields = false;
                   return true;
                 }
