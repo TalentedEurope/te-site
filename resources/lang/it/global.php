@@ -53,11 +53,11 @@ return [
     
         'SI' => 'Slovenia',
     
-        'SP' => 'Spagna',
+        'ES' => 'Spagna',
     
         'SE' => 'Svezia',
     
-        'UK' => 'Regno Unito',
+        'GB' => 'Regno Unito',
     
         'follow_us' => 'Seguici su',
     
@@ -91,7 +91,7 @@ return [
     
         'footer_partners' => 'Partners',
     
-        'cookie_text' => 'Questo sito web utilizza i cookie per garantire il corretto funzionamento delle procedure e migliorare l&apos;esperienza di utilizzazione dei servizi offerti online. Continuando la navigazione sul sito, si acconsente all&apos;utilizzo dei cookie. Per sapere di più sull‘uso dei cookie e sulla loro gestione, leggi <a href="/privacy-policy">cookie notice</a>',
+        'cookie_text' => 'Questo sito web utilizza i cookie per garantire il corretto funzionamento delle procedure e migliorare l\'esperienza di utilizzazione dei servizi offerti online. Continuando la navigazione sul sito, si acconsente all\'utilizzo dei cookie. Per sapere di più sull‘uso dei cookie e sulla loro gestione, leggi <a href="/privacy-policy">cookie notice</a>',
     
         'cookie_accept' => 'chiudere',
     
@@ -101,7 +101,7 @@ return [
     
         'status' => 'Status',
     
-        'not_enough_data_to_show_profile' => 'We don&apos;t have enough data from you to be able to show your profile.',
+        'not_enough_data_to_show_profile' => 'We don\'t have enough data from you to be able to show your profile.',
     
         'click_on_link_to_fill_required_fields' => 'Please click on the following link to fill the required fields.',
     
@@ -112,5 +112,13 @@ return [
         'error' => 'Error',
     
         'success' => 'Success',
+    
+        'older' => 'Older',
+    
+        'next' => 'Next',
+    
+        'yes' => 'Yes',
+    
+        'no' => 'No',
     
 ];

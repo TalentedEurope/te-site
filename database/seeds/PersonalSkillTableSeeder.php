@@ -63,7 +63,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'en' => 'Amiable',                    
                 
-                    'es' => 'amistoso',                    
+                    'es' => 'amigable',                    
                 
                     'it' => 'amichevole',                    
                 
@@ -207,7 +207,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'en' => 'Confident',                    
                 
-                    'es' => 'confiado',                    
+                    'es' => 'seguro de si mismo',                    
                 
                     'it' => 'sicuro di sé',                    
                 
@@ -383,7 +383,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'en' => 'Innovative',                    
                 
-                    'es' => 'innovativo',                    
+                    'es' => 'innovador',                    
                 
                     'it' => 'innovativo',                    
                 
@@ -399,7 +399,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'en' => 'Leadership',                    
                 
-                    'es' => 'líder',                    
+                    'es' => 'liderazgo',                    
                 
                     'it' => 'leader',                    
                 
@@ -479,7 +479,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'en' => 'Persevering',                    
                 
-                    'es' => 'pertinaz',                    
+                    'es' => 'perseverante',                    
                 
                     'it' => 'persistente',                    
                 
@@ -623,7 +623,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'en' => 'Versatile',                    
                 
-                    'es' => 'universal',                    
+                    'es' => 'versátil',                    
                 
                     'it' => 'versatile',                    
                 

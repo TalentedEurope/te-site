@@ -15,11 +15,11 @@ return [
     
         'validating' => 'Refereeing',
     
-        'student_already_validated' => 'You&apos;ve already validated this student',
+        'student_already_validated' => 'You\'ve already validated this student',
     
         'jump_to_results' => 'Jump to results',
     
-        'you_are_validating_following_student' => 'You&apos;re validating the following student',
+        'you_are_validating_following_student' => 'You\'re validating the following student',
     
         'jump_to_validation' => 'Jump to validation',
     
@@ -35,7 +35,7 @@ return [
     
         'invalid' => 'Invalid',
     
-        'student_didnt_meet_criteria' => 'The student didn&apos;t meet the criteria',
+        'student_didnt_meet_criteria' => 'The student didn\'t meet the criteria',
     
         'make_sure_you_have_reviewed_student' => 'Please make sure you have reviewed the student profile carefully before validating it',
     
@@ -47,7 +47,7 @@ return [
     
         'note_if_validation_is_passed_as_no_student' => 'Note: If the validation is passed as "No student" the student will be able to validate his profile again.',
     
-        'user_hasnt_complete_filling_its_profile' => 'hasn&apos;t complete filling it&apos;s profile. Until this process is complete you cannot validate any student',
+        'user_hasnt_complete_filling_its_profile' => 'hasn\'t complete filling it\'s profile. Until this process is complete you cannot validate any student',
     
         'manage_validators' => 'Manage referees',
     
@@ -67,8 +67,24 @@ return [
     
         'changed_institution_successfully' => 'Changed Institution successfully',
     
-        'youll_receive_notifications_from' => 'From now on you&apos;ll receive validation notifications from',
+        'youll_receive_notifications_from' => 'From now on you\'ll receive validation notifications from',
     
         'cannot_complete_invitation' => 'Cannot complete invitation',
+    
+        'no_alerts_found' => 'No alerts found',
+    
+        'study_level' => 'Study level',
+    
+        'when_it_was_sent' => 'When it was sent?',
+    
+        'no_referees' => 'No referees',
+    
+        'remove_referee' => 'Remove referee',
+    
+        'do_you_want_to_remove_referee' => 'Do you want to remove %s from your institution?',
+    
+        'remove' => 'Remove',
+    
+        'removing' => 'Removing',
     
 ];

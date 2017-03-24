@@ -11,12 +11,14 @@ return [
     
         'refereed' => 'Hodnotil',
     
-        'there_are_no' => 'There are no',
+        'there_are_no' => 'Nie sú ',
     
-        'matching_the_selected_filters' => 'matching the selected filters at the moment',
+        'matching_the_selected_filters' => 'žiadne zhody s vybranými filtrami.',
     
         'we_found' => 'Našli sme...',
     
         'matching_your_needs' => 'spĺňa vaše ptreby',
+    
+        'filters' => 'Filters',
     
 ];

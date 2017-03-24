@@ -21,11 +21,11 @@ return [
     
         'all_fields_are_required' => 'Potrebné vyplniť všetky políčka',
     
-        'confirmation_email_may_take_few_minutes' => 'Your confirmation email may take a few minutes to arrive, make sure you also check out your spam folder',
+        'confirmation_email_may_take_few_minutes' => 'Mail s potvrdením vám príde do niekoľkých minút,určite overte aj priečinok spam.',
     
-        'registration_complete_successfully' => 'Registration complete successfully you may log in now.',
+        'registration_complete_successfully' => 'Registrácia úspešne ukončená.',
     
-        'register_success' => 'Register success',
+        'register_success' => 'Úspešná registrácia',
     
         'register' => 'Registrujte sa',
     

@@ -302,6 +302,10 @@ Obchodná a poradenská činnosť',
     
         'born_on' => 'Dátum narodenia',
     
+        'studied_in' => 'Studied in',
+    
+        'skilled_in' => 'Skilled in',
+    
         'refereed_by' => 'Hodnotený kým',
     
         'refereeing_pending' => 'Čaká sa na hodnotenie',
@@ -388,35 +392,35 @@ Obchodná a poradenská činnosť',
     
         'profile_readiness' => 'Pripravenosť profilu',
     
-        'profile_readiness_explanation' => 'Getting your profile refereed gives a third party opinion of you and helps increasing the possibilities of contact from a company',
+        'profile_readiness_explanation' => 'Hodnotenie vášho profilu dáva tretej osobe možnosť vytvoriť si o vás mienku a zvyšuje možnosť, že vás bude spoločnosť kontaktovať.',
     
-        'get_a_better_refeer' => 'Get a better refeer improving your profile readiness and improve possibility of company contact',
+        'get_a_better_refeer' => 'Získajte lepšie hodnotenie vášho profilu, ktoré sa prejaví  v jeho pripravenosti a v zlepšení možnosti kontaktovania zo strany spoločnosti.',
     
-        'request_is_managed_by' => 'Your request is being managed by',
+        'request_is_managed_by' => 'Vaša žiadosť sa spracováva.',
     
-        'cant_find_your_institution' => 'Can&apos;t find your institution? ask your referee and institution to join Talented Europe',
+        'cant_find_your_institution' => 'Neviete nájsť vašu inštitúciu? Požiadajte vášho hodnotiteľa a inštitúciu, aby sa pridali k Talentovanej Európe.',
     
-        'this_step_sends_an_email_to_your_referee' => 'This step sends an email to your referee with instructions on how to join Talented Europe, automatically registers him as referee once his institution joins, and adds you to the refeeral queue',
+        'this_step_sends_an_email_to_your_referee' => 'V tomto kroku je vášmu hodnotiteľovi zaslaný email s návodom ako sa pridať k Talentovanej Európe. Hodnotieľ je automaticky zaregistrovaný ak sa k nám pridá jeho inštitúcia a vy ste zaradený na zoznama čakateľov na hodnotenie.',
     
-        'send_invitation' => 'Send invitation',
+        'send_invitation' => 'Pošli pozvanie',
     
-        'profile_validated_successfully' => 'Your profile was validated successfully',
+        'profile_validated_successfully' => 'Váš profil bol úspešne validovaný.',
     
-        'referee_said_about_you' => 'This is what your referee said about you',
+        'referee_said_about_you' => 'Toto o vás povedal váš hodnotiteľ.',
     
-        'profile_validated_denied' => 'Your profile was denied',
+        'profile_validated_denied' => 'Vš profil bol zamietnutý.',
     
-        'not_enough_data_to_do_a_refeer' => 'We don&apos;t have enough data from you to be able to do a refeer.',
+        'not_enough_data_to_do_a_refeer' => 'Nemáme od vás dostatok údajov pre vytvorenie vášho hodnotenia.',
     
-        'progress_account_setup' => 'Account setup',
+        'progress_account_setup' => 'Nastavenie účtu',
     
-        'progress_refer_your_profile' => 'Refer your profile',
+        'progress_refer_your_profile' => 'Ohodnotiť profil.',
     
-        'progress_not_refereed' => 'Not refereed',
+        'progress_not_refereed' => 'Nehodnotený.',
     
-        'progress_completed' => 'Completed',
+        'progress_completed' => 'Ukončené.',
     
-        'you_must_put_referee_email' => '<strong>Please note:</strong> You must put the referee email, not the one form the institution',
+        'you_must_put_referee_email' => 'Zadajte mail hodnotiteľa, nie inštitúcie.',
     
         'leave_institution' => 'Opustiť inštitúciu?',
     
@@ -431,5 +435,25 @@ Obchodná a poradenská činnosť',
         'save_changes' => 'Ulož zmeny',
     
         'continue_without_saving' => 'Pokračuj bez uloženia',
+    
+        'im_here' => 'Ste tu!/Som tu!',
+    
+        'cannot_send_more_alerts_to_this_company_today' => 'Dnes nemôžete poslať tejto psoločnosti viac upozornení.',
+    
+        'tell_the_company_that_you_be_interested' => 'Povedzte spoločnosti, že máte záujem pre nich pracovať.',
+    
+        'alert_sent_successfully' => 'Upozornenie bolo úspešne zaslané spoločnosti.',
+    
+        'you_have_already_sent_an_alert_to_this_company' => 'Tejto spoločnsoti ste už zaslali upozornenie.',
+    
+        'no_matches' => 'No matches',
+    
+        'find_your_academic_institution' => 'Find your Academic Institution',
+    
+        'choose_referee' => 'Choose referee',
+    
+        'refer_request' => 'Refer request',
+    
+        'any_referee' => 'Any referee',
     
 ];

@@ -7,4 +7,8 @@ return [
     
         'sign_in' => 'Prihlásenie',
     
+        'login_title' => 'Login',
+    
+        'login_btn' => 'Login',
+    
 ];

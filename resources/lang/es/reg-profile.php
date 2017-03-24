@@ -245,9 +245,9 @@ return [
     
         'notifications' => 'Notificaciones',
     
-        'notifications_enabled' => 'Enabled. You&apos;ll receive emails once a day if a student wants to get in contact with you',
+        'notifications_enabled' => 'Enabled. You\'ll receive emails once a day if a student wants to get in contact with you',
     
-        'notifications_disabled' => 'Disabled. You won&apos;t receive any emails, except for announcements about the service',
+        'notifications_disabled' => 'Disabled. You won\'t receive any emails, except for announcements about the service',
     
         'about' => 'About',
     
@@ -301,6 +301,10 @@ return [
     
         'born_on' => 'Born on',
     
+        'studied_in' => 'Studied in',
+    
+        'skilled_in' => 'Skilled in',
+    
         'refereed_by' => 'Refereed by',
     
         'refereeing_pending' => 'Refereeing pending',
@@ -337,11 +341,11 @@ return [
     
         'click_on_button_to_fill_required_fields' => 'Please click the following button to fill the required fields.',
     
-        'institution_fix_the_following_errors' => 'You&apos;ll need to fix the following errors or your referees won&apos;t be able to validate profiles',
+        'institution_fix_the_following_errors' => 'You\'ll need to fix the following errors or your referees won\'t be able to validate profiles',
     
         'my_institution' => 'Mi institución',
     
-        'required' => 'Required',
+        'required' => 'Requerido',
     
         'remove_btn' => 'Remove',
     
@@ -393,7 +397,7 @@ return [
     
         'request_is_managed_by' => 'Tu solicitud está siendo gestionada por',
     
-        'cant_find_your_institution' => 'Can&apos;t find your institution? ask your referee and institution to join Talented Europe',
+        'cant_find_your_institution' => 'Can\'t find your institution? ask your referee and institution to join Talented Europe',
     
         'this_step_sends_an_email_to_your_referee' => 'This step sends an email to your referee with instructions on how to join Talented Europe, automatically registers him as referee once his institution joins, and adds you to the refeeral queue',
     
@@ -405,7 +409,7 @@ return [
     
         'profile_validated_denied' => 'Tu perfil fué rechazado',
     
-        'not_enough_data_to_do_a_refeer' => 'We don&apos;t have enough data from you to be able to do a refeer.',
+        'not_enough_data_to_do_a_refeer' => 'We don\'t have enough data from you to be able to do a refeer.',
     
         'progress_account_setup' => 'Configuración de la cuenta',
     
@@ -419,16 +423,36 @@ return [
     
         'leave_institution' => '¿Abandonas la institución educativa?',
     
-        'do_you_want_to_leave_institution' => 'Do you want to leave the institution? this will send the pending validation requests back to it, and you won&apos;t be able to validate anyone until another institution invites you back',
+        'do_you_want_to_leave_institution' => 'Do you want to leave the institution? this will send the pending validation requests back to it, and you won\'t be able to validate anyone until another institution invites you back',
     
         'leave_institution_button' => 'Sí. Abandono la institución académica',
     
         'your_profile_is_empty' => '¡Tu perfil está vacío!',
     
-        'tab_changes_not_saved' => 'Tab changes haven&apos;t been saved, you may lose some data',
+        'tab_changes_not_saved' => 'Tab changes haven\'t been saved, you may lose some data',
     
-        'save_changes' => 'Save changes',
+        'save_changes' => 'Guardar los cambios',
     
-        'continue_without_saving' => 'Continue without saving',
+        'continue_without_saving' => 'Continuar sin guardar',
+    
+        'im_here' => 'I\'m here!',
+    
+        'cannot_send_more_alerts_to_this_company_today' => 'You cannot send more alerts to this company today',
+    
+        'tell_the_company_that_you_be_interested' => 'Tell the company that you may be interested to work for them',
+    
+        'alert_sent_successfully' => 'Alert sent successfully to the company',
+    
+        'you_have_already_sent_an_alert_to_this_company' => 'You have already sent an alert to this company',
+    
+        'no_matches' => 'No matches',
+    
+        'find_your_academic_institution' => 'Find your Academic Institution',
+    
+        'choose_referee' => 'Choose referee',
+    
+        'refer_request' => 'Refer request',
+    
+        'any_referee' => 'Any referee',
     
 ];

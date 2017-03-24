@@ -53,11 +53,11 @@ return [
     
         'SI' => 'Slovinsko',
     
-        'SP' => 'Španielsko',
+        'ES' => 'Španielsko',
     
         'SE' => 'Švédsko',
     
-        'UK' => 'Spojené kráľovstvo',
+        'GB' => 'Spojené kráľovstvo',
     
         'follow_us' => 'Följ oss',
     
@@ -112,5 +112,13 @@ return [
         'error' => 'Chyba',
     
         'success' => 'Úspešný',
+    
+        'older' => 'Staršie',
+    
+        'next' => 'Ďalšie',
+    
+        'yes' => 'Yes',
+    
+        'no' => 'No',
     
 ];

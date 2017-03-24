@@ -11,7 +11,7 @@ return [
     
         'page_not_found' => 'Página no encontrada',
     
-        'we_didnt_find_the_page' => 'We didn&apos;t find the page you were looking for.',
+        'we_didnt_find_the_page' => 'We didn\'t find the page you were looking for.',
     
         'internal_server_error' => 'Internal server error',
     

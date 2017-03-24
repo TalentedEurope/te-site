@@ -13,10 +13,12 @@ return [
     
         'there_are_no' => 'No hay',
     
-        'matching_the_selected_filters' => 'resultados con los filtros seleccionados en este momento',
+        'matching_the_selected_filters' => 'que se ajusten con los filtros seleccionados en este momento',
     
         'we_found' => 'Hemos encontrado',
     
         'matching_your_needs' => 'resultados que necesitas',
+    
+        'filters' => 'Filters',
     
 ];
