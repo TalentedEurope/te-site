@@ -6,7 +6,7 @@
     <div class="well auth-box col-sm-6 col-sm-offset-3  col-md-4 col-md-offset-4">
       <form class="form-horizontal" role="form" method="POST" action="{{ route('post_register_validator', $invite->uid) }}">
         {!! csrf_field() !!}
-        <h2 class="page-title">Register as validator</h2>
+        <h2 class="page-title">{!! trans('register.register_as_validator') !!}</h2>
         <div>
           <input type="hidden" value="{{ $invite->id }}" name="invite">
 
@@ -51,7 +51,7 @@
           <input id="password" name="password_confirm" class="{{ $errors->has('password_confirm') ? ' has-error' : '' }}" type="password" placeholder="{!! trans('reg-profile.confirm_password') !!}">
           <div class="checkbox">
             <label>
-              <input type="checkbox" required name="remember"></input> I agree with <a target="_blank" href="{{ url('/terms') }}"> the terms of use</a>
+              <input type="checkbox" required name="remember"></input> {!! trans('reg-profile.i_agree_with') !!} <a target="_blank" href="{{ url('/terms') }}">{!! trans('reg-profile.the_terms_of_use') !!}</a>
             </label>
           </div>
           <div class="captcha">

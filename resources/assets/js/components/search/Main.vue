@@ -8,7 +8,7 @@
             </div>
 
             <div class="well init-loading-box" v-if="init_loading">
-                Loading...
+                {{ $t('search.loading') }}...
             </div>
         </div>
     </div>

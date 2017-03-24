@@ -4,22 +4,22 @@
 
         <div class="language" :id="language.id" v-for="(index, language) in parsed_languages">
             <header class="clearfix">
-                <h4 class="pull-left">Language #{{ index + 1 }}</h4>
+                <h4 class="pull-left">{{ $t('reg-profile.student_language') }} #{{ index + 1 }}</h4>
                 <remove-item-button :items="parsed_languages" :item="language" group-name="Language"></remove-item-button>
             </header>
 
             <text-box-form type="hidden" code="id" group-code="languages" :group-id="language.id"
                 :value="language.id"></text-box-form>
 
-            <select-form code="name" group-code="languages" :group-id="language.id" label="Language name"
-                required placeholder=" - Language name - " :values="languageNames" :value="language.name" :disabled="!!language.locked" :errors="errors"></select-form>
-            <select-form code="level" group-code="languages" :group-id="language.id" label="Language level"
-                required placeholder=" - Language level - " :values="languageLevels" :value="language.level" :disabled="!!language.locked" :errors="errors"></select-form>
+            <select-form code="name" group-code="languages" :group-id="language.id" :label="$t('reg-profile.student_language_name')"
+                required :placeholder="' - ' + $t('reg-profile.student_language_name') + ' - '" :values="languageNames" :value="language.name" :disabled="!!language.locked" :errors="errors"></select-form>
+            <select-form code="level" group-code="languages" :group-id="language.id" :label="$t('reg-profile.student_language_level')"
+                required :placeholder="' - ' + $t('reg-profile.student_language_level') + ' - '" :values="languageLevels" :value="language.level" :disabled="!!language.locked" :errors="errors"></select-form>
 
             <div v-if="language.certificate || !language.locked">
                 <hr>
                 <file-form code="certificate" group-code="languages" :group-id="language.id" :label="$t('reg-profile.student_certificate')"
-                    download-text="Download Certificate" :has-file="language.certificate"
+                    :download-text="$t('reg-profile.student_download_certificate')" :has-file="language.certificate"
                     :file-url="getFileUrl(language.id, 'certificate')" :readonly="!!language.locked" :errors="errors"></file-form>
             </div>
             <hr>
@@ -27,18 +27,18 @@
 
         <div class="language" v-for="(index, new_language) in new_languages">
             <header class="clearfix">
-                <h4 class="pull-left">Language #{{ (parsed_languages.length + index + 1) }}</h4>
+                <h4 class="pull-left">{{ $t('reg-profile.student_language') }} #{{ (parsed_languages.length + index + 1) }}</h4>
                 <remove-item-button :items="new_languages" :item="new_language"></remove-item-button>
             </header>
 
-            <select-form code="name" group-code="languages" :group-id="new_language.id" label="Language name"
-                required placeholder=" - Language name - " :values="languageNames" :value="new_language.name"></select-form>
-            <select-form code="level" group-code="languages" :group-id="new_language.id" label="Language level"
-                required placeholder=" - Language level - " :values="languageLevels" :value="new_language.level"></select-form>
+            <select-form code="name" group-code="languages" :group-id="new_language.id" :label="$t('reg-profile.student_language_name')"
+                required :placeholder="' - ' + $t('reg-profile.student_language_name') + ' - '" :values="languageNames" :value="new_language.name"></select-form>
+            <select-form code="level" group-code="languages" :group-id="new_language.id" :label="$t('reg-profile.student_language_level')"
+                required :placeholder="' - ' + $t('reg-profile.student_language_level') + ' - '" :values="languageLevels" :value="new_language.level"></select-form>
 
             <hr>
             <file-form code="certificate" group-code="languages" :group-id="new_language.id" :label="$t('reg-profile.student_certificate')"
-                download-text="Download Certificate"></file-form>
+                :download-text="$t('reg-profile.student_download_certificate')"></file-form>
             <hr>
 
         </div>
@@ -86,7 +86,7 @@ export default {
     },
     computed: {
         addButtonText: function () {
-            return this.total == 0 ? 'add a language' : 'add more languages';
+            return this.total == 0 ? this.$t('reg-profile.student_language_add') : this.$t('reg-profile.student_language_add_more');
         }
     },
     watch: {

@@ -123,7 +123,11 @@ return [
     
         'captcha' => 'Captcha',
     
-        'terms_of_use' => 'Súhlasím s podmienkami',
+        'terms_of_use' => 'Súhlasím s podmienkami používania',
+    
+        'i_agree_with' => 'I agree with',
+    
+        'the_terms_of_use' => 'the terms of use',
     
         'create_account' => 'Vytvoriť nový účet',
     
@@ -227,5 +231,205 @@ Obchodná a poradenská činnosť',
         'Lang_level_C1' => 'C1: pokročilý',
     
         'Lang_level_C2' => 'C2: expert',
+    
+        'logo' => 'Logo',
+    
+        'my_profile' => 'Môj profil',
+    
+        'profile' => 'Profil',
+    
+        'profile_visibility' => 'Vidteľnosť profilu',
+    
+        'profile_visibility_visible' => 'Viditeľný. Možné vyhľadať, prezerať.',
+    
+        'profile_visibility_hidden' => 'Skrytý. Nedá sa vyhľadať, prezerať.',
+    
+        'notifications' => 'Notifikácie',
+    
+        'notifications_enabled' => 'Povolené. Mail obdržíte každý deň ak sa s vami študent chce skontaktovať.',
+    
+        'notifications_disabled' => 'Nepovolené. Neobdržíte žiaden mail okrem oznámení o servisných úkonoch.',
+    
+        'about' => 'Obsah/O',
+    
+        'company_logo' => 'Lgo spoločnosti',
+    
+        'social_and_web' => 'Sociálne siete a webstránka',
+    
+        'facebook_page_url' => 'Facebook url',
+    
+        'twitter_page_url' => 'Twitter url',
+    
+        'linkedin_page_url' => 'Linkedin url',
+    
+        'web_url' => 'Webstránka url',
+    
+        'what_is_talent_for_you_in_a_few_words' => 'Stručne vysvetlite, čo pre vás znamená talent. ',
+    
+        'most_valuable_skills_for_company' => 'Zoznam zručností, ktorú sú pre vás ako spoločnosť najcennejšie. ',
+    
+        'setup_alternative_contact' => 'Zadajte alternatívny kontakt používateľa, ktorý obdrží všetky notifikácie namiesto zasielania do hlavného účtu. ',
+    
+        'update_settings' => 'Update nastavení',
+    
+        'change_your_password' => 'Zmena hesla',
+    
+        'new_password' => 'Nové heslo',
+    
+        'repeat_new_password' => 'Znovu zadajte nové heslo ',
+    
+        'save_new_password' => 'Uložte nové heslo',
+    
+        'career_and_skills' => 'Kariéra a zručnosti',
+    
+        'my_photo' => 'Moja fotografia',
+    
+        'download_curriculum' => 'Pridajte CV',
+    
+        'my_talent' => 'Môj talent',
+    
+        'referee_name' => 'Meno posudzovateľa',
+    
+        'referee_email' => 'Email posudzovateľa',
+    
+        'get_your_profile_refereed' => 'Nechajte si ohodnotiť svoj profil',
+    
+        'want_to_view_all_details_of_student' => 'Chcete si pozrieť podrobné informácie o študentovi?',
+    
+        'education' => 'Vzdelanie',
+    
+        'lives_in' => 'Bydlisko',
+    
+        'born_on' => 'Dátum narodenia',
+    
+        'refereed_by' => 'Hodnotený kým',
+    
+        'refereeing_pending' => 'Čaká sa na hodnotenie',
+    
+        'skills' => 'Zručnosti',
+    
+        'professional' => 'Profesijné',
+    
+        'personal' => 'Osobné',
+    
+        'legend' => 'Legenda',
+    
+        'set_by_both_parties' => 'Uvádzajú obe strany',
+    
+        'set_by_referee_or_student' => 'Uvádza hodnotiteľ alebo študent',
+    
+        'study' => 'Štúdium',
+    
+        'date_not_specified' => 'Dátum nešpecifikovaný',
+    
+        'get_in_contact' => 'Nadviažte spojenie',
+    
+        'want_to_show_this_company_how_talented_you_are' => 'Chcete ukázať tejto spoločnosti aký ste talentovaný?',
+    
+        'we_are_in' => 'Sme v',
+    
+        'we_are_looking_for_people_skilled_in' => 'Hľadáme ľudí so zručnosťami v....',
+    
+        'we_think_that_talent_is' => 'Myslíme si, že talent je...',
+    
+        'not_enough_information' => 'Nepostačujúce informácie',
+    
+        'fix_the_following_errors' => 'Potrebné opraviť nasledujúcu chybu.',
+    
+        'click_on_button_to_fill_required_fields' => 'Prosíme kliknúť na nasledujúci gombík ak chcete vyplniť požadované políčka.',
+    
+        'institution_fix_the_following_errors' => 'Potrebné opraviť nasledujúce chyby, ináč nebudú môcť vaši hodnotitelia validovať váš profil.',
+    
+        'my_institution' => 'Moja inštitúcia',
+    
+        'required' => 'Požadované',
+    
+        'remove_btn' => 'Odstrániť',
+    
+        'student_study_institution_name' => 'Názov inštitúcie',
+    
+        'student_study_course_studies_name' => 'Názov kurzu/štúdia',
+    
+        'student_download_certificate' => 'Nahrať certifikát',
+    
+        'student_download_grade_card' => 'Nahrať hodnotiacu tabuľku',
+    
+        'student_study_add_more' => 'pridaj ďalšie šúdium',
+    
+        'student_training_course_name' => 'názov kurzu',
+    
+        'student_training_add' => 'pridaj zaškolenie/prax',
+    
+        'student_training_add_more' => 'pridaj ďalšie zaškolenie/prax',
+    
+        'student_language' => 'jazyk',
+    
+        'student_language_name' => 'názov',
+    
+        'student_language_level' => 'úroveň',
+    
+        'student_language_add' => 'pridaj jazyk',
+    
+        'student_language_add_more' => 'pridaj ďalšie jazyky',
+    
+        'student_work_experience_to' => 'Work to',
+    
+        'student_work_experience_from' => 'Work from',
+    
+        'student_work_experience_add' => 'pridaj pracovnú skúsenosť',
+    
+        'student_work_experience_add_more' => 'pridaj ďalšie pracovné skúsenosti',
+    
+        'add_btn' => 'pridaj',
+    
+        'student_professional_skills_remove' => 'odstráň profesnú zručnosť',
+    
+        'student_professional_skills_add' => 'pridaj rofesnú zručnosť',
+    
+        'profile_readiness' => 'Pripravenosť profilu',
+    
+        'profile_readiness_explanation' => 'Getting your profile refereed gives a third party opinion of you and helps increasing the possibilities of contact from a company',
+    
+        'get_a_better_refeer' => 'Get a better refeer improving your profile readiness and improve possibility of company contact',
+    
+        'request_is_managed_by' => 'Your request is being managed by',
+    
+        'cant_find_your_institution' => 'Can&apos;t find your institution? ask your referee and institution to join Talented Europe',
+    
+        'this_step_sends_an_email_to_your_referee' => 'This step sends an email to your referee with instructions on how to join Talented Europe, automatically registers him as referee once his institution joins, and adds you to the refeeral queue',
+    
+        'send_invitation' => 'Send invitation',
+    
+        'profile_validated_successfully' => 'Your profile was validated successfully',
+    
+        'referee_said_about_you' => 'This is what your referee said about you',
+    
+        'profile_validated_denied' => 'Your profile was denied',
+    
+        'not_enough_data_to_do_a_refeer' => 'We don&apos;t have enough data from you to be able to do a refeer.',
+    
+        'progress_account_setup' => 'Account setup',
+    
+        'progress_refer_your_profile' => 'Refer your profile',
+    
+        'progress_not_refereed' => 'Not refereed',
+    
+        'progress_completed' => 'Completed',
+    
+        'you_must_put_referee_email' => '<strong>Please note:</strong> You must put the referee email, not the one form the institution',
+    
+        'leave_institution' => 'Opustiť inštitúciu?',
+    
+        'do_you_want_to_leave_institution' => 'Chcete opustiť túto inštitúciu?',
+    
+        'leave_institution_button' => 'Áno! Opúšťam túto akademickú inštitúciu!',
+    
+        'your_profile_is_empty' => 'Váš profil je prázdny!',
+    
+        'tab_changes_not_saved' => 'Zmeny neboli uložené, môže dôjsť k strate údajov ',
+    
+        'save_changes' => 'Ulož zmeny',
+    
+        'continue_without_saving' => 'Pokračuj bez uloženia',
     
 ];

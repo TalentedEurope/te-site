@@ -41,16 +41,17 @@
     TE = {};
     TE.profile = {'modified_fields': false};
     TE.translations = {
-      'en': {
-        'auth': {!! json_encode(trans('auth'), JSON_HEX_APOS) !!},
-        'global': {!! json_encode(trans('global'), JSON_HEX_APOS) !!},
-        'landing': {!! json_encode(trans('landing'), JSON_HEX_APOS) !!},
-        'pagination': {!! json_encode(trans('pagination'), JSON_HEX_APOS) !!},
-        'passwords': {!! json_encode(trans('passwords'), JSON_HEX_APOS) !!},
-        'profile': {!! json_encode(trans('profile'), JSON_HEX_APOS) !!},
-        'reg-profile': {!! json_encode(trans('reg-profile'), JSON_HEX_APOS) !!},
-        'validation': {!! json_encode(trans('validation'), JSON_HEX_APOS) !!},
-      }
+      'auth': {!! json_encode(trans('auth'), JSON_HEX_APOS) !!},
+      'global': {!! json_encode(trans('global'), JSON_HEX_APOS) !!},
+      'landing': {!! json_encode(trans('landing'), JSON_HEX_APOS) !!},
+      'pagination': {!! json_encode(trans('pagination'), JSON_HEX_APOS) !!},
+      'passwords': {!! json_encode(trans('passwords'), JSON_HEX_APOS) !!},
+      'profile': {!! json_encode(trans('profile'), JSON_HEX_APOS) !!},
+      'reg-profile': {!! json_encode(trans('reg-profile'), JSON_HEX_APOS) !!},
+      'validation': {!! json_encode(trans('validation'), JSON_HEX_APOS) !!},
+      'search': {!! json_encode(trans('search'), JSON_HEX_APOS) !!},
+      'students-validation': {!! json_encode(trans('students-validation'), JSON_HEX_APOS) !!},
+      'validators': {!! json_encode(trans('validators'), JSON_HEX_APOS) !!},
     };
   </script>
 </head>
@@ -75,9 +76,9 @@
       @if (Auth::user()->isA('company') && !Auth::user()->is_filled && rand(0,5) == 0)
       <div class="container">
         <div class="alert alert-warning text-center" role="alert">
-          We don't have enough data from you to be able to show your profile.
-          Please click on the following link to fill the required fields.
-            <a href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i>  Set up my profile</a>
+          {!! trans('global.not_enough_data_to_show_profile') !!}
+          {!! trans('global.click_on_link_to_fill_required_fields') !!}
+            <a href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i> {{ trans('global.set_up_my_profile') }}</a>
         </div>
       </div>
       @endif
@@ -85,9 +86,9 @@
       @if (Auth::user()->isA('student') && !Auth::user()->is_filled)
       <div class="container">
         <div class="alert alert-warning text-center" role="alert">
-          We don't have enough data from you to be able to show your profile.
-          Please click on the following link to fill the required fields.
-            <a href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i>  Set up my profile</a>
+          {!! trans('global.not_enough_data_to_show_profile') !!}
+          {!! trans('global.click_on_link_to_fill_required_fields') !!}
+            <a href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i> {!! trans('global.set_up_my_profile') !!}</a>
         </div>
       </div>
       @endif
@@ -102,14 +103,14 @@
           <img class="te-logo" src="{{ asset('img/logo-header.png') }}" alt="{{ env('SITE_TITLE','Talented Europe') }}">
         </a>
         <ul class="navigation" role="nav">
-          <li><a href="{{ url('/') }}">Home</a></li>
-          <li><a href="http://blog.talentedeurope.eu" target="_blank">Blog</a></li>
-          <li><a href="{{ url('/cookies') }}">Cookies</a></li>
-          <li><a href="{{ url('/privacy-policy') }}">Privacy Policy</a></li>
+          <li><a href="{{ url('/') }}">{!! trans('global.home') !!}</a></li>
+          <li><a href="http://blog.talentedeurope.eu" target="_blank">{!! trans('global.blog') !!}</a></li>
+          <li><a href="{{ url('/cookies') }}">{!! trans('global.cookies') !!}</a></li>
+          <li><a href="{{ url('/privacy-policy') }}">{!! trans('global.privacy_policy') !!}</a></li>
         </ul>
         <ul class="navigation">
           <li>
-          Follow us:
+          {!! trans('global.follow_us') !!}:
           </li>
           <li>
             <a href="https://www.facebook.com/Talented-Europe-839419182764068/">
@@ -129,11 +130,11 @@
         </ul>
       </div>
       <div class="col-sm-6">
-        <h3>Partners</h3>
+        <h3>{!! trans('global.footer_partners') !!}</h3>
 
         <ul class="partner-list">
-          <li><a target="_blank" href="http://erasmusplus.iespuertodelacruz.es"><img src="/img/logo-iespto.png" alt="IES Puerto de la Cruz"></a></li>
           <li><a target="_blank" href="http://cifpcesarmanrique.es/"><img src="/img/logo-cifpcesar.png" alt="CIFP César Manrique"></a></li>
+          <li><a target="_blank" href="http://erasmusplus.iespuertodelacruz.es"><img src="/img/logo-iespto.png" alt="IES Puerto de la Cruz"></a></li>
           <li><a target="_blank" href="http://europeanprojects.org/"><img src="/img/logo-epa.png" alt="European Projects Association"></a></li>
           <li><a target="_blank" href="http://web.tuke.sk/kj/english_version.htm"><img src="/img/logo-tuke.png" alt="Technical University of Kosice"></a></li>
           <li><a target="_blank" href="http://www.beds.ac.uk/"><img src="/img/logo-ubbs.png" alt="University of Bedfordshire"></a></li>
@@ -172,39 +173,49 @@
     $(document).ready(function() {
       $('[data-toggle="tooltip"]').tooltip();
 
-      var profile_tabs = $('#profile-tabs');
-      if (profile_tabs.data("hashtab")) {
-        var hash = window.location.hash;
-        profile_tabs.find('a[data-target="' + hash + '"]').tab('show');
-      }
-
       var validate_tabs = $('#validate-tabs');
       if (validate_tabs.data("hashtab")) {
         var hash = window.location.hash;
         validate_tabs.find('a[href="' + hash + '"]').tab('show');
       }
 
+      var profile_tabs = $('#profile-tabs');
+      if (profile_tabs.data("hashtab")) {
+        // #_ is a hack for avoid anchor jump on load
+        var hash = window.location.hash.replace('#', '#_');
+        profile_tabs.find('a[data-target="' + hash + '"]').tab('show');
+      }
+
       $('#profile-tabs a').on('click', function(event) {
         event.stopPropagation();
+
         var element = $(event.target);
+        var hash = element.attr('data-target').replace('#_', '#');
+
         if (!TE.profile.modified_fields) {
           element.tab('show');
-          location.hash = element.attr("data-target");
+          location.hash = hash;
         } else {
           $.confirm({
             title: null,
-            content: 'Tab changes haven\'t been saved, you may lose some data',
+            content: TE.translations['reg-profile']['tab_changes_not_saved'],
             backgroundDismiss: true,
             buttons: {
-              back: {},
-              confirm: {
-                text: 'Continue without saving',
-                btnClass: 'btn-info',
+              back: {
+                text: TE.translations['reg-profile']['continue_without_saving'],
                 action: function() {
                   element.tab('show');
-                  location.hash = element.attr("data-target");
+                  location.hash = hash;
                   TE.profile.modified_fields = false;
                   return true;
+                }
+              },
+              confirm: {
+                text: TE.translations['reg-profile']['save_changes'],
+                btnClass: 'btn-info',
+                action: function() {
+                  var tab_pane_id = $('.nav-tabs .active a')[0].dataset.target;
+                  $(tab_pane_id + ' form')[0].submit();
                 }
               }
             }
@@ -213,7 +224,7 @@
       });
     });
   </script>
-  @yield('js');
+  @yield('js')
 </body>
 
 </html>

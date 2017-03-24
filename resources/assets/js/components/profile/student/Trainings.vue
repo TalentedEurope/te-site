@@ -10,7 +10,7 @@
 
             <text-box-form type="hidden" code="id" group-code="trainings" :group-id="training.id" :value="training.id" required></text-box-form>
 
-            <text-box-form code="name" group-code="trainings" :group-id="training.id" label="Course name" placeholder="Course name"
+            <text-box-form code="name" group-code="trainings" :group-id="training.id" :label="$t('reg-profile.student_training_course_name')" :placeholder="$t('reg-profile.student_training_course_name')"
                 required :value="training.name" :readonly="!!training.locked" :errors="errors"></text-box-form>
             <date-form code="date" group-code="trainings" :group-id="training.id" :label="$t('reg-profile.student_date')" :placeholder="$t('reg-profile.student_date')"
                 required :value="training.date" :readonly="!!training.locked" :errors="errors"></date-form>
@@ -18,7 +18,7 @@
             <div v-if="training.certificate || !training.locked">
                 <hr>
                 <file-form code="certificate" group-code="trainings" :group-id="training.id" :label="$t('reg-profile.student_certificate')"
-                    download-text="Download Certificate" :has-file="training.certificate" :readonly="!!training.locked"
+                    :download-text="$t('reg-profile.student_download_certificate')" :has-file="training.certificate" :readonly="!!training.locked"
                     :file-url="getFileUrl(training.id, 'certificate')" :errors="errors"></file-form>
             </div>
             <hr>
@@ -30,14 +30,14 @@
                 <remove-item-button :items="new_trainings" :item="new_training"></remove-item-button>
             </header>
 
-            <text-box-form code="name" group-code="trainings" :group-id="new_training.id" label="Course name"
-                required placeholder="Course name" :value="new_training.name"></text-box-form>
+            <text-box-form code="name" group-code="trainings" :group-id="new_training.id" :label="$t('reg-profile.student_training_course_name')"
+                required :placeholder="$t('reg-profile.student_training_course_name')" :value="new_training.name"></text-box-form>
             <date-form code="date" group-code="trainings" :group-id="new_training.id" :label="$t('reg-profile.student_date')"
                 required :placeholder="$t('reg-profile.student_date')" :value="new_training.date"></date-form>
 
             <hr>
             <file-form code="certificate" group-code="trainings" :group-id="new_training.id" :label="$t('reg-profile.student_certificate')"
-                download-text="Download Certificate"></file-form>
+                :download-text="$t('reg-profile.student_download_certificate')"></file-form>
             <hr>
 
         </div>
@@ -85,7 +85,7 @@ export default {
     },
     computed: {
         addButtonText: function () {
-            return this.total == 0 ? 'add a training' : 'add more trainings';
+            return this.total == 0 ? this.$t('reg-profile.student_training_add') : this.$t('reg-profile.student_training_add_more');
         }
     },
     watch: {

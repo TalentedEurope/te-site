@@ -10,7 +10,7 @@
                         <th><a href="#" v-on:click.prevent="sortBy('full_name')">{{ $t('reg-profile.name') }}</a></th>
                         <th><a href="#" v-on:click.prevent="sortBy('email')">{{ $t('reg-profile.email') }}</th>
                         <th><a href="#" v-on:click.prevent="sortBy('validator_deparment')">{{ $t('reg-profile.validator_department') }}</a></th>
-                        <th><a href="#" v-on:click.prevent="sortBy('position')">{{ $t('global.position') }}</a></th>
+                        <th><a href="#" v-on:click.prevent="sortBy('position')">{{ $t('reg-profile.position') }}</a></th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -23,15 +23,15 @@
                         <td>{{validator.position}}</td>
                         <td>
                             <button v-if="!validator.active" class="btn btn-primary" v-on:click="toggleValidatorStatus(validator)">
-                                <i class="fa fa-toggle-on" aria-hidden="true"></i> Enable
+                                <i class="fa fa-toggle-on" aria-hidden="true"></i> {{ $t('validators.enable') }}
                             </button>
                             <button v-if="validator.active" class="btn btn-warning" v-on:click="toggleValidatorStatus(validator)">
-                                <i class="fa fa-toggle-off" aria-hidden="true"></i> Disable
+                                <i class="fa fa-toggle-off" aria-hidden="true"></i> {{ $t('validators.disable') }}
                             </button>
                         </td>
                         <td>
                             <button class="btn btn-danger" v-on:click="onRemoveButton(validator)">
-                                <i class="fa fa-toggle-on" aria-hidden="true"></i> Remove
+                                <i class="fa fa-toggle-on" aria-hidden="true"></i> {{ $t('reg-profile.remove_btn') }}
                             </button>
                         </td>
                     </tr>

@@ -7,8 +7,8 @@
             <thead>
                 <tr>
                     <th>{{ $tc('global.student', 1) }}</th>
-                    <th>Date of request</th>
-                    <th>Status</th>
+                    <th>{{ $t('students-validation.date_of_request') }}</th>
+                    <th>{{ $t('global.status') }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -18,7 +18,7 @@
                     </td>
                     <td>{{student.date_of_request}}</td>
                     <td>
-                        <span :class="statusClass(student)">{{student.status}}</span>
+                        <span :class="getStatusClass(student)">{{getStatusText(student)}}</span>
                     </td>
                 </tr>
             </tbody>
@@ -48,12 +48,21 @@ export default {
                     defaultErrorToast();
                 });
         },
-        statusClass(student) {
+        getStatusClass(student) {
             return {
                 'label': true,
                 'label-warning': student.status == 'pending',
                 'label-success': student.status == 'validated',
                 'label-danger': student.status == 'denied'
+            }
+        },
+        getStatusText(student) {
+            if (student.status == 'pending') {
+                return this.$t('students-validation.pending');
+            } else if (student.status == 'validated') {
+                return this.$t('students-validation.validated');
+            } else {
+                return this.$t('students-validation.not_validated');
             }
         }
     }

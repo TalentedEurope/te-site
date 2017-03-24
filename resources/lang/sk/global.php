@@ -91,10 +91,26 @@ return [
     
         'footer_partners' => 'Partners',
     
-        'cookie_text' => '',
+        'cookie_text' => 'This website uses cookies to help us give you the best experience when you visit. By using this website you consent to our use of these cookies. Find out more about how we use cookies and how to manage them by reading our <a href="/privacy-policy">cookie notice</a>',
     
         'cookie_accept' => 'Zatvoriť',
     
         'logout_btn' => 'Odhlásiť sa',
+    
+        'less_btn' => 'pozri si menej',
+    
+        'status' => 'Status',
+    
+        'not_enough_data_to_show_profile' => 'Pre zobrazenie vášho profilu nemáme dostatok údajov',
+    
+        'click_on_link_to_fill_required_fields' => 'Kliknite na nasledujúci link a vyplnite požadované údaje',
+    
+        'set_up_my_profile' => 'Založiť profil ',
+    
+        'or' => 'alebo',
+    
+        'error' => 'Chyba',
+    
+        'success' => 'Úspešný',
     
 ];

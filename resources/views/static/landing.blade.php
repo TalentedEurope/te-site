@@ -152,8 +152,13 @@
       <div class="content">
         <div class="vertical-centered">
           <h1 class="text-center">{!! trans('landing.what_is_title') !!}</h1>
-          <p class="col-md-6">{!! trans('landing.what_is_text_1') !!}</p>
-          <p class="col-md-6">{!! trans('landing.what_is_text_2') !!}</p>
+          <p class="col-md-6 text-justify">{!! trans('landing.what_is_text_1') !!}</p>
+          <p class="col-md-6 text-justify">{!! trans('landing.what_is_text_2') !!}</p>
+
+          <h3 class="text-center col-md-12">{!! trans('landing.join_talented_europe_today') !!}</h3>
+          <p class="col-md-6 text-justify">{!! trans('landing.talented_for_students') !!}</p>
+          <p class="col-md-6 text-justify">{!! trans('landing.talented_for_employers') !!}</p>
+
           <h3 class="text-center col-md-12">{!! trans('landing.what_is_cta') !!}</h3>
           <div class="text-center col-md-12">
             <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureC.pdf') }}" target="_blank" class="btn" onclick="ga('send', 'event', 'Brochure Company', 'Download', '{{ App::getLocale() }}');">
@@ -202,7 +207,7 @@
     @if ($logos->count())
     <section class="logos-carousel-section content-section col-md-12">
       <div class="content">
-        <h3 class="text-center">{!! trans('landing.companies_institutions') !!}</h3>
+        <h1 class="text-center">{!! trans('landing.companies_institutions') !!}</h1>
 
         <div class="companies-and-institutions-logos">
           @foreach ($logos as $logo)
@@ -401,8 +406,8 @@
           <h3>{!! trans('global.footer_partners') !!}</h3>
 
           <ul class="partner-list">
-            <li><a target="_blank" href="http://erasmusplus.iespuertodelacruz.es"><img src="/img/logo-iespto.png" alt="IES Puerto de la Cruz"></a></li>
             <li><a target="_blank" href="http://cifpcesarmanrique.es/"><img src="/img/logo-cifpcesar.png" alt="CIFP César Manrique"></a></li>
+            <li><a target="_blank" href="http://erasmusplus.iespuertodelacruz.es"><img src="/img/logo-iespto.png" alt="IES Puerto de la Cruz"></a></li>
             <li><a target="_blank" href="http://europeanprojects.org/"><img src="/img/logo-epa.png" alt="European Projects Association"></a></li>
             <li><a target="_blank" href="http://web.tuke.sk/kj/english_version.htm"><img src="/img/logo-tuke.png" alt="Technical University of Kosice"></a></li>
             <li><a target="_blank" href="http://www.beds.ac.uk/"><img src="/img/logo-ubbs.png" alt="University of Bedfordshire"></a></li>
