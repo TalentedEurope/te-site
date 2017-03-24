@@ -13,53 +13,53 @@ return [
     
         'send_invitation' => 'Pošli pozvanie hodnotiteľovi',
     
-        'validating' => 'Refereeing',
+        'validating' => 'V proceae hodnotenia.',
     
-        'student_already_validated' => 'You&apos;ve already validated this student',
+        'student_already_validated' => 'Tento študent už bol validovaný.',
     
-        'jump_to_results' => 'Jump to results',
+        'jump_to_results' => 'Prejdi k výsledkom.',
     
-        'you_are_validating_following_student' => 'You&apos;re validating the following student',
+        'you_are_validating_following_student' => 'Hodnotíte nasledujúceho študenta.',
     
-        'jump_to_validation' => 'Jump to validation',
+        'jump_to_validation' => 'Prejdi k hodnoteniu.',
     
-        'student_validation' => 'Student validation',
+        'student_validation' => 'Hodnotenie študenta.',
     
-        'valid' => 'Valid',
+        'valid' => 'Validovaný',
     
-        'student_passed_validation_successfully' => 'The student passed your validation successfully',
+        'student_passed_validation_successfully' => 'Študent bol úspešne hodnotený.',
     
-        'your_comments' => 'Your comments',
+        'your_comments' => 'Váš komentár.',
     
-        'your_chosen_skills' => 'Your chosen skills',
+        'your_chosen_skills' => 'Vaše zvolené zručnosti.',
     
-        'invalid' => 'Invalid',
+        'invalid' => 'Neplatný.',
     
-        'student_didnt_meet_criteria' => 'The student didn&apos;t meet the criteria',
+        'student_didnt_meet_criteria' => 'Študent nespĺňa kritériá.',
     
-        'make_sure_you_have_reviewed_student' => 'Please make sure you have reviewed the student profile carefully before validating it',
+        'make_sure_you_have_reviewed_student' => 'Uistite sa prosím, že ste profil študenta  dôkladne vyplnili pred jeho validáciou.',
     
-        'this_student_is' => 'This student is',
+        'this_student_is' => 'Tento študent je...',
     
-        'finish_validation' => 'Finish_validation',
+        'finish_validation' => 'Ukončiť hodnotenie.',
     
-        'give_us_explanation_of_student_is_not_valid' => 'Please give us an explanation of the reason the student is not valid.',
+        'give_us_explanation_of_student_is_not_valid' => 'Prosíme vás aby ste nám vysvetlili, prečo je študentov profil neplatný.',
     
-        'note_if_validation_is_passed_as_no_student' => 'Note: If the validation is passed as "No student" the student will be able to validate his profile again.',
+        'note_if_validation_is_passed_as_no_student' => 'Ak je validácia ukončená ako "žiaden študent", študentov profil bude môcť byť znovu validovaný.',
     
-        'user_hasnt_complete_filling_its_profile' => 'hasn&apos;t complete filling it&apos;s profile. Until this process is complete you cannot validate any student',
+        'user_hasnt_complete_filling_its_profile' => 'Neukončený profil. Ak je profil nekompletný, nemožno hodnotiť žiadneho študenta.',
     
-        'manage_validators' => 'Manage referees',
+        'manage_validators' => 'Správa hodnotiteľov.',
     
-        'validators' => 'Referees',
+        'validators' => 'Hodnotitelia',
     
-        'invites_pending' => 'Invites pending',
+        'invites_pending' => 'Čakajúce pozvania',
     
-        'date_sent' => 'Date sent',
+        'date_sent' => 'Zaslané údaje',
     
-        'note_invites_are_only_valid_14_days' => 'Note: invites are only valid 14 days after being sent, and they will disapear from this list afterwards',
+        'note_invites_are_only_valid_14_days' => 'Pozvania sú platné 14 dní po ich zaslaní, potom budú zo zoznamu odstránené.',
     
-        'cancel' => 'Cancel',
+        'cancel' => 'Zrušiť',
     
         'cannot_change_institution' => 'Zmena inštitúcie nemožná',
     
@@ -70,5 +70,21 @@ return [
         'youll_receive_notifications_from' => 'Odteraz budete dostávať notifikácie o validácii od...',
     
         'cannot_complete_invitation' => 'Nemožno ukončiť pozvanie',
+    
+        'no_alerts_found' => 'Nenašli sme žiadne upozornenia',
+    
+        'study_level' => 'Úroveň štúdia',
+    
+        'when_it_was_sent' => 'Kedy to bolo zaslané?',
+    
+        'no_referees' => 'No referees',
+    
+        'remove_referee' => 'Remove referee',
+    
+        'do_you_want_to_remove_referee' => 'Do you want to remove %s from your institution?',
+    
+        'remove' => 'Remove',
+    
+        'removing' => 'Removing',
     
 ];

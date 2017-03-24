@@ -105,7 +105,7 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Philosophy,Theology,History,Archaeology',                    
                 
-                    'es' => 'Philosophy,Theology,History,Archaeology',                    
+                    'es' => 'Filosofía, Teología, Historia, Arqueología',                    
                 
                     'it' => 'Filosofia, teologia, storia, archeologia',                    
                 

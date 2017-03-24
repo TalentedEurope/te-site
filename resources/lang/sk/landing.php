@@ -57,7 +57,7 @@ return [
     
         'no_students' => 'Inga studenter tillgängliga',
     
-        'join_talented_europe_today' => 'Join Talented Europe today!',
+        'join_talented_europe_today' => 'Pridajte sa k Talentovanej  Európe už dnes!',
     
         'talented_for_students' => '<strong>For students</strong> - Talented Europe will enhance your employability with the endorsement of your tutors and put you in touch with employers across Europe for internships or first career jobs.',
     

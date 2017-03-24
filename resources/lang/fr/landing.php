@@ -37,11 +37,11 @@ return [
     
         'subscribe_text_question' => 'Recevez des nouvelles sur Talented Europe dans votre boîte de mail',
     
-        'meta_description' => 'Erasmus Plus est un projet qui permet de faciliter l&apos; accès des excellents étudiants au travail et aux stages en Europe',
+        'meta_description' => 'Erasmus Plus est un projet qui permet de faciliter l\' accès des excellents étudiants au travail et aux stages en Europe',
     
         'coming_soon' => 'le contenu sera bientot ajouté',
     
-        'search_placeholder' => 'Qu&apos; est-ce que vous cherchez? ',
+        'search_placeholder' => 'Qu\' est-ce que vous cherchez? ',
     
         'search_where' => 'où',
     

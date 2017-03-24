@@ -53,11 +53,11 @@ return [
     
         'SI' => 'Slowenien',
     
-        'SP' => 'Spanien',
+        'ES' => 'Spanien',
     
         'SE' => 'Schweden',
     
-        'UK' => 'Vereinigtes Königreich',
+        'GB' => 'Vereinigtes Königreich',
     
         'follow_us' => 'Folge uns',
     
@@ -101,7 +101,7 @@ return [
     
         'status' => 'Status',
     
-        'not_enough_data_to_show_profile' => 'We don&apos;t have enough data from you to be able to show your profile.',
+        'not_enough_data_to_show_profile' => 'We don\'t have enough data from you to be able to show your profile.',
     
         'click_on_link_to_fill_required_fields' => 'Please click on the following link to fill the required fields.',
     
@@ -112,5 +112,13 @@ return [
         'error' => 'Error',
     
         'success' => 'Success',
+    
+        'older' => 'Older',
+    
+        'next' => 'Next',
+    
+        'yes' => 'Yes',
+    
+        'no' => 'No',
     
 ];

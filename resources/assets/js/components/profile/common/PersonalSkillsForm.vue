@@ -13,7 +13,7 @@
 
         <div class="select-holder" v-if="!readonly">
             <select v-model="selected_skill" id="personalSkillsSelect" :disabled="selected_skills.length >= max_personal_skills" class="form-control">
-                <option :value="null"> - Personal skills - </option>
+                <option :value="null"> - {{ $t('reg-profile.student_personal_skills') }} - </option>
                 <option v-for="skill in posibleSkills" :value="skill">{{ skill.name }}</option>
             </select>
         </div>

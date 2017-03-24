@@ -1,7 +1,7 @@
 <template>
     <div class="panel panel-default col-sm-12">
         <div class="default-message" v-if="students.length == 0">
-            No students
+            {{ $t('students-validation.no_students') }}
         </div>
         <table v-if="students.length > 0" class="table table-striped table-hover table-responsive">
             <thead>

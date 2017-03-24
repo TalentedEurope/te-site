@@ -14,7 +14,7 @@
     "bootstrap-sass": "^3.3.7",
     "conditionizr": "^4.5.0",
     "css-loader": "^0.25.0",
-    "flatpickr": "2.0.6",
+    "flatpickr": "2.4.7",
     "gulp": "^3.9.1",
     "jquery": "^3.1.0",
     "jquery-confirm": "^3.0.3",

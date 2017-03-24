@@ -10,7 +10,7 @@
                 <div class="avatar-placeholder">
                     <i class="fa fa-user" aria-hidden="true"></i>
                 </div>
-                <h2 class="page-title">{!! trans('global.login_btn') !!}</h2>
+                <h2 class="page-title">{!! trans('login.login_title') !!}</h2>
                 <div>
                     @if ($errors->has('email'))
                     <span class="help-block">
@@ -27,7 +27,7 @@
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary">
-                        {!! trans('login.sign_in') !!}
+                        {!! trans('login.login_btn') !!}
                     </button>
                 </div>
             </form>

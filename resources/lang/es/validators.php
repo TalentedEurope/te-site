@@ -19,7 +19,7 @@ return [
     
         'jump_to_results' => 'Ir a los resultados',
     
-        'you_are_validating_following_student' => 'You&apos;re validating the following student',
+        'you_are_validating_following_student' => 'You\'re validating the following student',
     
         'jump_to_validation' => 'Ir a la validación',
     
@@ -47,7 +47,7 @@ return [
     
         'note_if_validation_is_passed_as_no_student' => 'Note: If the validation is passed as "No student" the student will be able to validate his profile again.',
     
-        'user_hasnt_complete_filling_its_profile' => 'hasn&apos;t complete filling it&apos;s profile. Until this process is complete you cannot validate any student',
+        'user_hasnt_complete_filling_its_profile' => 'hasn\'t complete filling it\'s profile. Until this process is complete you cannot validate any student',
     
         'manage_validators' => 'gestionar validadores',
     
@@ -61,14 +61,30 @@ return [
     
         'cancel' => 'Cancelar',
     
-        'cannot_change_institution' => 'Cannot change institution',
+        'cannot_change_institution' => 'No se puede cambiar la institución',
     
         'invitation_is_not_valid_or_you_accepted_it' => 'Either your invitation is not valid anymore, or you already accepted it',
     
-        'changed_institution_successfully' => 'Changed Institution successfully',
+        'changed_institution_successfully' => 'La institución se ha cambiado satisfactoriamente',
     
-        'youll_receive_notifications_from' => 'From now on you&apos;ll receive validation notifications from',
+        'youll_receive_notifications_from' => 'From now on you\'ll receive validation notifications from',
     
-        'cannot_complete_invitation' => 'Cannot complete invitation',
+        'cannot_complete_invitation' => 'No se puede completar la invitación',
+    
+        'no_alerts_found' => 'No alerts found',
+    
+        'study_level' => 'Study level',
+    
+        'when_it_was_sent' => 'When it was sent?',
+    
+        'no_referees' => 'No referees',
+    
+        'remove_referee' => 'Remove referee',
+    
+        'do_you_want_to_remove_referee' => 'Do you want to remove %s from your institution?',
+    
+        'remove' => 'Remove',
+    
+        'removing' => 'Removing',
     
 ];

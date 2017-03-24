@@ -4,7 +4,7 @@
 
         <div class="study" v-for="(index, study) in parsed_studies">
             <header class="clearfix">
-                <h4 class="pull-left">Study #{{ index + 1 }}</h4>
+                <h4 class="pull-left">{{ $tc('reg-profile.study', 1) }} #{{ index + 1 }}</h4>
                 <remove-item-button v-if="!showClearButton" :items="parsed_studies" :item="study" group-name="Study"></remove-item-button>
                 <button class="pull-right remove btn-warning btn btn-sm" v-if="study.locked != 1 && showClearButton" @click.prevent="clearForm()" >
                     <i class="fa fa-close" aria-hidden="true"></i> {{ $t('reg-profile.clear_btn') }}
@@ -43,7 +43,7 @@
 
         <div class="study" v-for="(index, new_study) in new_studies">
             <header class="clearfix">
-                <h4 class="pull-left">Study #{{ (parsed_studies.length + index + 1) }}</h4>
+                <h4 class="pull-left">{{ $tc('reg-profile.study', 1) }} #{{ (parsed_studies.length + index + 1) }}</h4>
                 <remove-item-button v-if="!showClearButton" :items="new_studies" :item="new_study" ></remove-item-button>
                 <button class="pull-right remove btn-warning btn btn-sm" v-if="showClearButton" @click.prevent="clearForm()" >
                     <i class="fa fa-close" aria-hidden="true"></i> {{ $t('reg-profile.clear_btn') }}

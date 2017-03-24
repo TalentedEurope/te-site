@@ -19,4 +19,6 @@ return [
     
         'matching_your_needs' => 'matching your needs',
     
+        'filters' => 'Filters',
+    
 ];
