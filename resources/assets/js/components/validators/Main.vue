@@ -2,7 +2,7 @@
     <div class="col-sm-12 sm-no-padding-left sm-no-padding-right">
         <div class="panel panel-default">
             <div class="default-message" v-if="validators.length == 0">
-                No referees
+                {{ $t('validators.no_referees') }}
             </div>
             <table v-if="validators.length > 0" class="table table-striped table-hover table-responsive">
                 <thead>
@@ -90,12 +90,12 @@ export default {
             var validator_info = validator.full_name.trim() != '' ? validator.full_name.trim() : validator.email;
             var that = this;
             $.confirm({
-                title: 'Remove referee',
-                content: `Do you want to remove ${validator_info} from your institution?`,
+                title: this.$t('validators.remove_referee'),
+                content: this.$t('validators.do_you_want_to_remove_referee').replace('%s', validator_info),
                 backgroundDismiss: true,
                 buttons: {
                     confirm: {
-                        text: 'Remove',
+                        text: this.$t('validators.remove'),
                         btnClass: 'btn-danger',
                         keys: ['enter'],
                         action: function() {
@@ -104,7 +104,7 @@ export default {
                             }
                             Vue.set(validator, 'loading', true);
 
-                            this.setContent('Removing...')
+                            this.setContent(this.$t('validators.removing') + '...')
                             that.removeValidator(validator, this)
 
                             return false;

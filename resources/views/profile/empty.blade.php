@@ -13,7 +13,7 @@
             </div>
             <h2 class="page-title">{!! trans('reg-profile.not_enough_information') !!}:</h2>
             <div class="text-left">
-            <p>{{ $t('global.not_enough_data_to_show_profile') }}</p>
+            <p>{{ trans('global.not_enough_data_to_show_profile') }}</p>
 
             <p>{!! trans('reg-profile.fix_the_following_errors') !!}:</p>
             @if ($profileErrors->all())

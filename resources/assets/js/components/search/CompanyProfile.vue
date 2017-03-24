@@ -6,16 +6,16 @@
                 <p><em class="h4">{{company.info}}</em></p>
                 <hr>
                 <p class="h4">
-                    <strong><i class="fa fa-map-marker"></i> We are in: </strong>
+                    <strong><i class="fa fa-map-marker"></i> {{ $t('reg-profile.we_are_in') }}: </strong>
                     {{company.we_are_in}}
                 </p>
                 <p>
-                    <strong>We're looking for people skilled in: </strong>
+                    <strong>{{ $t('reg-profile.we_are_looking_for_people_skilled_in') }}: </strong>
                 </p>
                 <skills-tags :skills="company.skills" :is-company="true"></skills-tags>
                 <p></p>
                 <p>
-                    <strong>We think that talent is: </strong>
+                    <strong>{{ $t('reg-profile.we_think_that_talent_is') }}: </strong>
                     {{company.talent_is}}
                 </p>
 

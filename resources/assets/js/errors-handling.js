@@ -1,6 +1,6 @@
 var defaultErrorToast = function () {
     jQuery.toast({
-        text : 'An error happened, administrators have been notified and this issue will be fixed soon, please try later.',
+        text : TE.translations['error-page']['an_error_happened'],
         showHideTransition : 'fade',
         bgColor : '#bf433c',
         textColor : '#FFFFFF',

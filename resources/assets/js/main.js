@@ -50,12 +50,12 @@ if (document.querySelector('.v-container')) {
 $(function() {
     var get_confirm_config = function (form) {
         return {
-            title: 'Confirm Validation',
-            content: 'Are you sure you want to finish refereeing this student?',
+            title: TE.translations['students-validation']['confirm_validation'],
+            content: TE.translations['students-validation']['are_you_sure_you_want_to_finish_refereeing'],
             backgroundDismiss: true,
             buttons: {
                 yes: {
-                    text: 'Yes',
+                    text: TE.translations['global']['yes'],
                     btnClass: 'btn-info',
                     action: function() {
                         form.submit();
@@ -63,7 +63,7 @@ $(function() {
                     }
                 },
                 no: {
-                    text: 'No',
+                    text: TE.translations['global']['no'],
                 }
             }
         }

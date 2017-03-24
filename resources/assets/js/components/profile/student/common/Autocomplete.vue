@@ -10,7 +10,7 @@
                 </li>
             </ul>
             <div class="no-matches" v-if="showMessageNoMatches">
-                <div class="text-center">No matches</div>
+                <div class="text-center">{{ $t('reg-profile.no_matches') }}</div>
             </div>
         </div>
     </div>

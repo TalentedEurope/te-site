@@ -1,15 +1,15 @@
 <template>
     <div class="well col-sm-12" id="alerts">
         <div v-if="!loading && alerts.length == 0">
-            No alerts found
+            {{ $t('validators.no_alerts_found') }}
         </div>
         <table v-if="!loading && alerts.length > 0" class="table table-striped table-hover table-responsive">
             <thead>
                 <tr>
-                    <th>Student</th>
-                    <th>Country</th>
-                    <th>Study Level</th>
-                    <th>When it was sent?</th>
+                    <th>{{ $tc('global.student', 1) }}</th>
+                    <th>{{ $t('reg-profile.country') }}</th>
+                    <th>{{ $t('validators.study_level') }}</th>
+                    <th>{{ $t('validators.when_it_was_sent') }}</th>
                     <!-- <th></th> -->
                 </tr>
             </thead>

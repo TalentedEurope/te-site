@@ -52,6 +52,7 @@
       'search': {!! json_encode(trans('search'), JSON_HEX_APOS) !!},
       'students-validation': {!! json_encode(trans('students-validation'), JSON_HEX_APOS) !!},
       'validators': {!! json_encode(trans('validators'), JSON_HEX_APOS) !!},
+      'error-page': {!! json_encode(trans('error-page'), JSON_HEX_APOS) !!},
     };
   </script>
 </head>

@@ -1,7 +1,7 @@
 <template>
     <div v-show="show_alert_button" v-bind:class="{ 'disabled': disabled }">
         <button class="btn btn-disabled btn-alert btn-lg" @click="sendAlert()" :disabled="disabled" v-bind:class="{ 'btn-primary': !disabled }">
-            <i class="fa fa-bell" aria-hidden="true"></i> I'm here!
+            <i class="fa fa-bell" aria-hidden="true"></i> {{ $t('reg-profile.im_here') }}
         </button>
         <button class="btn btn-primary btn-tooltip btn-lg" data-toggle="tooltip" :data-placement="placement" title="" :data-original-title="tooltip_text"> ? </button>
     </div>
@@ -34,9 +34,9 @@ export default {
     methods: {
         setTooltipText: function () {
             if (this.disabled) {
-                this.tooltip_text = 'You cannot send more alerts to this company today';
+                this.tooltip_text = this.$t('reg-profile.cannot_send_more_alerts_to_this_company_today');
             } else {
-                this.tooltip_text = 'Tell the company that you may be interested to work for them';
+                this.tooltip_text = this.$t('reg-profile.tell_the_company_that_you_be_interested');
             }
         },
         sendAlert: function () {
@@ -48,7 +48,7 @@ export default {
                 .then((response) => {
                     this.disabled = true;
                     $.toast({
-                        text : 'Alert sent successfully to the company',
+                        text : this.$t('reg-profile.alert_sent_successfully'),
                         showHideTransition : 'fade',
                         bgColor : '#31B47D',
                         textColor : '#FFFFFF',
@@ -64,7 +64,7 @@ export default {
                     if (errorResponse.status == 429) {
                         this.disabled = true;
                         $.toast({
-                            text : 'You have already sent an alert to this company',
+                            text : this.$t('reg-profile.you_have_already_sent_an_alert_to_this_company'),
                             showHideTransition : 'fade',
                             bgColor : '#bf433c',
                             textColor : '#FFFFFF',
