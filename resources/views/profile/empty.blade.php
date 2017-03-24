@@ -29,7 +29,7 @@
             <p>{!! trans('reg-profile.click_on_button_to_fill_required_fields') !!}<br/></p>
             </div>
             <p>
-              <a class="btn btn-primary" href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i> {{ $t('global.set_up_my_profile') }}</a></li>
+              <a class="btn btn-primary" href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i> {{ trans('global.set_up_my_profile') }}</a></li>
             </p>
 
         </div>

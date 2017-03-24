@@ -65,7 +65,7 @@ return [
     
         'student_study_level' => 'Livello',
     
-        'student_describe_talent' => 'Descrivi in breve il tuo talento',
+        'student_describe_talent' => 'Descrivi brevemente il tuo talento',
     
         'email' => 'Email',
     
@@ -159,7 +159,7 @@ return [
     
         'human-resources' => 'Risorse Umane',
     
-        'it-amp-web' => 'IT e web',
+        'it-amp-web' => 'IT e Web',
     
         'legal' => 'Diritto',
     
@@ -183,7 +183,7 @@ return [
     
         'sales' => 'Vendite',
     
-        'social-work' => 'Servizio sociale',
+        'social-work' => 'Servizio Sociale',
     
         'sport-and-or-health-amp-wellness' => 'Sport e/o salute e benessere',
     
@@ -205,7 +205,7 @@ return [
     
         'law' => 'Diritto',
     
-        'art-and-design' => 'Arte e design',
+        'art-and-design' => 'Arte e Design',
     
         'architecture-and-or-urban-and-regional-planning' => 'Architettura e/o pianificazione urbana e regionale',
     
@@ -215,9 +215,9 @@ return [
     
         'medical-sciences' => 'Scienze mediche',
     
-        'geography-and-or-geology' => 'Geografia e/o geologia',
+        'geography-and-or-geology' => 'Geografia e/o Geologia',
     
-        'agriculture-sciences' => 'Scienze agricole',
+        'agriculture-sciences' => 'Scienze Agrarie',
     
         'Lang_level_A1' => 'A1: Livello base',
     
