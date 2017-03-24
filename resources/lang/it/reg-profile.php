@@ -3,13 +3,13 @@
 
 return [
     
-        'studies_level_5' => 'istruzione terziaria di ciclo breve',
+        'studies_level_5' => 'Istruzione terziaria di ciclo breve',
     
-        'studies_level_6' => 'laurea di primo grado o equivalente',
+        'studies_level_6' => 'Laurea di primo grado o equivalente',
     
-        'studies_level_7' => 'laurea magistrale o equivalente',
+        'studies_level_7' => 'Laurea magistrale o equivalente',
     
-        'studies_level_8' => 'dottorato di ricerca o equivalente',
+        'studies_level_8' => 'Dottorato di ricerca o equivalente',
     
         'company_activity' => 'Settore di attività',
     
@@ -27,7 +27,7 @@ return [
     
         'institution_certificate_template_download' => 'Scarica il modello',
     
-        'fiscal_id' => 'Codice fiscale',
+        'fiscal_id' => 'Codice Fiscale',
     
         'institution_hei' => 'Istituto di educazione superiore',
     
@@ -53,7 +53,7 @@ return [
     
         'clear_btn' => 'Elimina',
     
-        'student_experience_company' => 'c',
+        'student_experience_company' => 'Impresa',
     
         'student_completed_studies' => 'Studi terminati',
     
@@ -73,7 +73,7 @@ return [
     
         'student_study_field' => 'Indirizzo di studi',
     
-        'student_study_from' => 'di',
+        'student_study_from' => 'Da',
     
         'student_study_grade_card' => 'Scheda di valutazione',
     
@@ -107,7 +107,7 @@ return [
     
         'surname' => 'Cognome',
     
-        'student_study_to' => 'a',
+        'student_study_to' => 'A',
     
         'student_training' => 'Tirocinio',
     
@@ -125,9 +125,9 @@ return [
     
         'terms_of_use' => 'Accetto le condizioni d\'uso',
     
-        'i_agree_with' => 'I agree with',
+        'i_agree_with' => 'Accetto',
     
-        'the_terms_of_use' => 'the terms of use',
+        'the_terms_of_use' => 'Le condizioni d´uso',
     
         'create_account' => 'Crea un nuovo account',
     
@@ -151,13 +151,13 @@ return [
     
         'design' => 'Design',
     
-        'education-amp-training' => 'Educazione',
+        'education-amp-training' => 'Educazione e Formazione',
     
         'engineering' => 'Ingegneria',
     
         'hospitality-amp-tourism' => 'Ospitalità e turismo',
     
-        'human-resources' => 'Risorse umane',
+        'human-resources' => 'Risorse Umane',
     
         'it-amp-web' => 'IT e web',
     

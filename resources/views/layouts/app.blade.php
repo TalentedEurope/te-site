@@ -40,6 +40,7 @@
   <script type="text/javascript">
     TE = {};
     TE.profile = {'modified_fields': false};
+    TE.locale = '{!! App::getLocale() !!}';
     TE.translations = {
       'auth': {!! json_encode(trans('auth'), JSON_HEX_APOS) !!},
       'global': {!! json_encode(trans('global'), JSON_HEX_APOS) !!},

@@ -85,13 +85,13 @@ return [
     
         'blog' => 'Blog',
     
-        'cookies' => 'Informazioni su cookie',
+        'cookies' => 'Informazioni sui cookies',
     
         'privacy_policy' => 'Politica sulla riservatezza',
     
         'footer_partners' => 'Partners',
     
-        'cookie_text' => 'Questo sito web utilizza i cookie per garantire il corretto funzionamento delle procedure e migliorare l\'esperienza di utilizzazione dei servizi offerti online. Continuando la navigazione sul sito, si acconsente all\'utilizzo dei cookie. Per sapere di più sull‘uso dei cookie e sulla loro gestione, leggi <a href="/privacy-policy">cookie notice</a>',
+        'cookie_text' => 'Questo sito web utilizza i cookie per garantire il corretto funzionamento delle procedure e migliorare l\'esperienza di uso delle applicazioni online. Continuando la navigazione sul sito, si acconsente all\'utilizzo dei cookie. Per sapere di più sull‘uso dei cookie e sulla loro gestione, leggi <a href="/privacy-policy">cookie notice</a>',
     
         'cookie_accept' => 'chiudere',
     

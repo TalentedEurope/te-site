@@ -3,9 +3,9 @@
 
 return [
     
-        'meta_title' => 'Talented Europe | Unisce i talenti giovani e i datori di lavoro di tutta l\'Europa',
+        'meta_title' => 'Talented Europe | Unisce i giovani talenti e i datori di lavoro di tutta Europa',
     
-        'tagline' => 'Unisce<br/> <strong>i talenti giovani</strong> e <strong>i datori di lavoro</strong><br/> di tutta <strong>l\'Europa</strong>',
+        'tagline' => 'Unisce<br/> <strong>i giovani talenti</strong> e <strong>i datori di lavoro</strong><br/> di tutta <strong>Europa</strong>',
     
         'days' => 'giorni',
     
@@ -17,9 +17,9 @@ return [
     
         'more' => 'per saperne di più',
     
-        'what_is_title' => 'Che cos\'è la Talented Europe?',
+        'what_is_title' => 'Che cos\'è Talented Europe?',
     
-        'what_is_cta' => '<strong>Scopri di più!</strong> Richiedi opuscolo!',
+        'what_is_cta' => '<strong>Scopri di più!</strong> Scarica la brochure!',
     
         'what_is_text_1' => 'Ti immagini di poter assumere i migliori studenti di qualsiasi paese europeo? Ti piacerebbe far parte di un elite studentesca in Europa? Migliaia di compagnie avranno un accesso diretto ai tuoi contatti e alle tue informazioni, migliori saranno i tuoi voti, maggiori saranno le possibilità di trovare un buon lavoro.',
     
@@ -43,7 +43,7 @@ return [
     
         'search_placeholder' => 'Che cosa stai cercando?',
     
-        'search_where' => 'dove',
+        'search_where' => 'Dove',
     
         'search_btn' => 'Cerca',
     

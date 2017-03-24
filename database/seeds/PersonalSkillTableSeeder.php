@@ -177,7 +177,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'es' => 'sistemático',                    
                 
-                    'it' => 'scrupoloso, preciso',                    
+                    'it' => 'meticoloso',                    
                 
                     'de' => 'pedant',                    
                 
@@ -241,7 +241,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'es' => 'pensador crítico',                    
                 
-                    'it' => 'pensatore critico',                    
+                    'it' => 'senso critico',                    
                 
                     'de' => 'kritisch denkend',                    
                 
@@ -401,7 +401,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'es' => 'liderazgo',                    
                 
-                    'it' => 'leader',                    
+                    'it' => 'Leadership',                    
                 
                     'de' => 'Führungskraft',                    
                 
@@ -481,7 +481,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'es' => 'perseverante',                    
                 
-                    'it' => 'persistente',                    
+                    'it' => 'perseverante',                    
                 
                     'de' => 'zäh',                    
                 

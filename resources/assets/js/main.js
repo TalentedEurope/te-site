@@ -11,7 +11,19 @@ require('jquery-confirm/dist/jquery-confirm.min.js');
 
 require('flatpickr/dist/flatpickr.min.css');
 var Flatpickr = require('flatpickr/dist/flatpickr.min.js');
-Flatpickr.l10n.firstDayOfWeek = 1;
+
+import {es as Spanish} from 'flatpickr/dist/l10n/es.js';
+import {it as Italian} from 'flatpickr/dist/l10n/it.js';
+import {de as German} from 'flatpickr/dist/l10n/de.js';
+import {fr as French} from 'flatpickr/dist/l10n/fr.js';
+import {sk as Slovak} from './helpers/flatpickr.l10n.sk.js';
+
+Flatpickr.l10ns.en.firstDayOfWeek = 1;
+
+var locales = {'es': Spanish, 'it': Italian, 'de': German, 'fr': French, 'sk': Slovak}
+if (TE.locale in locales) {
+    Flatpickr.localize(locales[TE.locale]);
+}
 
 import Search from './components/search/Main.vue';
 import Alerts from './components/alerts/Main.vue';
