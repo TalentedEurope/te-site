@@ -455,4 +455,6 @@ return [
     
         'any_referee' => 'Any referee',
     
+        'institution_type' => 'Institution type',
+    
 ];

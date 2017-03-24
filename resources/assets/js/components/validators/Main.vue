@@ -90,12 +90,12 @@ export default {
             var validator_info = validator.full_name.trim() != '' ? validator.full_name.trim() : validator.email;
             var that = this;
             $.confirm({
-                title: this.$t('validators.remove_referee'),
-                content: this.$t('validators.do_you_want_to_remove_referee').replace('%s', validator_info),
+                title: that.$t('validators.remove_referee'),
+                content: that.$t('validators.do_you_want_to_remove_referee').replace('%s', validator_info),
                 backgroundDismiss: true,
                 buttons: {
                     confirm: {
-                        text: this.$t('validators.remove'),
+                        text: that.$t('validators.remove'),
                         btnClass: 'btn-danger',
                         keys: ['enter'],
                         action: function() {
@@ -104,7 +104,7 @@ export default {
                             }
                             Vue.set(validator, 'loading', true);
 
-                            this.setContent(this.$t('validators.removing') + '...')
+                            this.setContent(that.$t('validators.removing') + '...')
                             that.removeValidator(validator, this)
 
                             return false;
