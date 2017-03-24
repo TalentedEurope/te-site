@@ -197,22 +197,24 @@
         if (!TE.profile.modified_fields) {
           element.tab('show');
           location.hash = hash;
+          $('.container > .alert').hide();
         } else {
           $.confirm({
             title: null,
             content: TE.translations['reg-profile']['tab_changes_not_saved'],
             backgroundDismiss: true,
             buttons: {
-              back: {
+              continue_without_saving: {
                 text: TE.translations['reg-profile']['continue_without_saving'],
                 action: function() {
                   element.tab('show');
                   location.hash = hash;
                   TE.profile.modified_fields = false;
+                  $('.container > .alert').hide();
                   return true;
                 }
               },
-              confirm: {
+              save_changes: {
                 text: TE.translations['reg-profile']['save_changes'],
                 btnClass: 'btn-info',
                 action: function() {
