@@ -208,8 +208,17 @@ class ProfileController extends Controller
             $fname = tempnam(public_path() . User::$photoPath, $user->id);
             unlink($fname);
             $fname .= '.jpg';
-            $img = Image::make($request->file('image'))
-            ->fit(User::$photoWidth, User::$photoHeight)->save($fname);
+            $img = Image::make($request->file('image'));
+            if ($img->width() > $img->height()) {
+                $img->resize(User::$photoWidth, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                });
+            } else {
+                $img->resize(null, User::$photoHeight, function ($constraint) {
+                    $constraint->aspectRatio();
+                });
+            }
+            $img->resizeCanvas(User::$photoWidth, User::$photoHeight, "center", false, "ffffff")->save($fname);
             $user->image = basename($fname);
         }
         if (!$request->has('validate')) {
