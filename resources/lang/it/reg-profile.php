@@ -117,7 +117,7 @@ return [
     
         'validator_department' => 'Dipartimento',
     
-        'password' => 'password',
+        'password' => 'Password',
     
         'confirm_password' => 'Conferma la password',
     
@@ -177,7 +177,7 @@ return [
     
         'real-estate' => 'Beni immobili',
     
-        'research-amp-development' => 'Ricerca e sviluppo',
+        'research-amp-development' => 'Ricerca e Sviluppo',
     
         'retail-amp-wholesale' => 'Commercio al dettaglio e all\'ingrosso',
     
@@ -187,17 +187,17 @@ return [
     
         'sport-and-or-health-amp-wellness' => 'Sport e/o salute e benessere',
     
-        'technology-amp-telecommunications' => 'Tecnologie e telecomunicazioni',
+        'technology-amp-telecommunications' => 'Tecnologie e Telecomunicazioni',
     
         'business-studies-and-or-management-science' => 'Economia aziendale e/o management',
     
-        'engineering-and-or-technology' => 'Ingegneria e/o tecnologie',
+        'engineering-and-or-technology' => 'Ingegneria e/o Tecnologia',
     
-        'social-sciences' => 'Scienze sociali',
+        'social-sciences' => 'Scienze Sociali',
     
         'languages-and-philological-sciences' => 'Lingue e scienze filologiche',
     
-        'communication-and-information-sciences' => 'Comunicazione e scienze informatiche',
+        'communication-and-information-sciences' => 'Scienze dell´informazione e della Comunicazione',
     
         'humanities' => 'Scienze umanistiche',
     
@@ -209,9 +209,9 @@ return [
     
         'architecture-and-or-urban-and-regional-planning' => 'Architettura e/o pianificazione urbana e regionale',
     
-        'natural-sciences' => 'Scienze naturali',
+        'natural-sciences' => 'Scienze Naturali',
     
-        'mathematics-and-or-informatics' => 'Matematica e/o informatica',
+        'mathematics-and-or-informatics' => 'Matematica e/o Informatica',
     
         'medical-sciences' => 'Scienze mediche',
     

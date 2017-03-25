@@ -13,7 +13,7 @@ return [
     
         'send_invitation' => 'Pošli pozvanie hodnotiteľovi',
     
-        'validating' => 'V proceae hodnotenia.',
+        'validating' => 'V procese hodnotenia.',
     
         'student_already_validated' => 'Tento študent už bol validovaný.',
     
@@ -21,11 +21,11 @@ return [
     
         'you_are_validating_following_student' => 'Hodnotíte nasledujúceho študenta.',
     
-        'jump_to_validation' => 'Prejdi k hodnoteniu.',
+        'jump_to_validation' => 'Prejdite na hodnotenie.',
     
         'student_validation' => 'Hodnotenie študenta.',
     
-        'valid' => 'Validovaný',
+        'valid' => 'Hodnotený',
     
         'student_passed_validation_successfully' => 'Študent bol úspešne hodnotený.',
     
@@ -37,15 +37,15 @@ return [
     
         'student_didnt_meet_criteria' => 'Študent nespĺňa kritériá.',
     
-        'make_sure_you_have_reviewed_student' => 'Uistite sa prosím, že ste profil študenta  dôkladne vyplnili pred jeho validáciou.',
+        'make_sure_you_have_reviewed_student' => 'Uistite sa, prosím, že ste profil študenta  dôkladne vyplnili pred jeho hodnotením.',
     
         'this_student_is' => 'Tento študent je...',
     
         'finish_validation' => 'Ukončiť hodnotenie.',
     
-        'give_us_explanation_of_student_is_not_valid' => 'Prosíme vás aby ste nám vysvetlili, prečo je študentov profil neplatný.',
+        'give_us_explanation_of_student_is_not_valid' => 'Prosím vysvetlite, prečo je študentov profil neplatný.',
     
-        'note_if_validation_is_passed_as_no_student' => 'Ak je validácia ukončená ako "žiaden študent", študentov profil bude môcť byť znovu validovaný.',
+        'note_if_validation_is_passed_as_no_student' => 'Ak je hodnotenie ukončené ako "žiaden študent", študentov profil bude môcť byť hodnotený znovu .',
     
         'user_hasnt_complete_filling_its_profile' => 'Neukončený profil. Ak je profil nekompletný, nemožno hodnotiť žiadneho študenta.',
     
@@ -77,14 +77,14 @@ return [
     
         'when_it_was_sent' => 'Kedy to bolo zaslané?',
     
-        'no_referees' => 'No referees',
+        'no_referees' => 'Žiadni hodnotitelia',
     
-        'remove_referee' => 'Remove referee',
+        'remove_referee' => 'Odstrániť hodnotiteľa',
     
-        'do_you_want_to_remove_referee' => 'Do you want to remove %s from your institution?',
+        'do_you_want_to_remove_referee' => 'Prajete si odstrániť % od Vašej inštitúcie?',
     
-        'remove' => 'Remove',
+        'remove' => 'Odstrániť',
     
-        'removing' => 'Removing',
+        'removing' => 'Odstraňuje sa',
     
 ];

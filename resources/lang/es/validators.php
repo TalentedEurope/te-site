@@ -49,9 +49,9 @@ return [
     
         'user_hasnt_complete_filling_its_profile' => 'hasn\'t complete filling it\'s profile. Until this process is complete you cannot validate any student',
     
-        'manage_validators' => 'gestionar validadores',
+        'manage_validators' => 'Gestionar validadores',
     
-        'validators' => 'validadores',
+        'validators' => 'Validadores',
     
         'invites_pending' => 'Invitaciones pendientes',
     

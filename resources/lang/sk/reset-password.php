@@ -3,8 +3,8 @@
 
 return [
     
-        'reset_password' => 'Restuj heslo',
+        'reset_password' => 'Obnov heslo',
     
-        'send_password_reset' => 'Pošli link na restovanie hesla',
+        'send_password_reset' => 'Pošli link na obnovenie hesla',
     
 ];

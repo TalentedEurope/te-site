@@ -3,22 +3,20 @@
 
 return [
     
-        'loading' => 'načítavanie',
+        'loading' => 'Načítavanie',
     
-        'toggle' => 'Ukáž/Skry',
+        'toggle' => 'Ukázať/Skryť',
     
-        'current_search' => 'aktuálne vyhľadávanie ',
+        'current_search' => 'Aktuálne vyhľadávanie ',
     
         'refereed' => 'Hodnotil',
     
-        'there_are_no' => 'Nie sú ',
+        'there_are_no_matching_the_selected_filters' => 'Nie sú žiadni/žiadne',
     
-        'matching_the_selected_filters' => 'žiadne zhody s vybranými filtrami.',
+        'we_found' => 'spĺňa vaše potreby',
     
-        'we_found' => 'Našli sme...',
+        'we_found_matching_your_needs' => 'Našli sme...',
     
-        'matching_your_needs' => 'spĺňa vaše ptreby',
-    
-        'filters' => 'Filters',
+        'filters' => 'Filtre',
     
 ];

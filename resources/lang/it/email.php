@@ -33,7 +33,7 @@ return [
     
         'inviteCreated_line_2' => '%s L\'ha invitato come referenza su Talented Europe.',
     
-        'inviteCreated_line_3' => 'Create il vostro account cliccando sul seguente link.',
+        'inviteCreated_line_3' => 'Crea il tuo account cliccando sul seguente link.',
     
         'inviteCreated_action_4' => 'Creare il mio account',
     

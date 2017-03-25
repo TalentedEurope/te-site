@@ -23,9 +23,9 @@ return [
     
         'confirmation_email_may_take_few_minutes' => 'Your confirmation email may take a few minutes to arrive, make sure you also check out your spam folder',
     
-        'registration_complete_successfully' => 'registro completado satisfactoriamente',
+        'registration_complete_successfully' => 'Registro completado satisfactoriamente',
     
-        'register_success' => 'registro completado',
+        'register_success' => 'Registro completado',
     
         'register' => 'Registro',
     
