@@ -7,7 +7,7 @@ return [
     
         'accountActivated_line_2' => 'Ďakujeme za vašu registráciu v Talented Europe',
     
-        'accountActivated_line_3' => 'Prosíme vás o povrdenie vašej e-mail adresy kliknutím na nasledujúci link.',
+        'accountActivated_line_3' => 'Prosíme vás o povrdenie vašej e-mailovej adresy kliknutím na nasledujúci link.',
     
         'accountActivated_action_4' => 'Potvrdiť môj účet',
     

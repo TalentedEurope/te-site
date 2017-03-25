@@ -54,7 +54,7 @@
               @if (Auth::user()->isA('company'))
                 <li><a href="{{ url('/alerts') }}"><i class="fa fa-btn fa-envelope"></i> {!! trans('navbar.alerts') !!}</a></li>
               @elseif (Auth::user()->isA('institution'))
-                <li><a href="{{ url('/validators') }}"><i class="fa fa-btn fa-users"></i> {!! trans('validators.validators') !!}</a></li>
+                <li><a href="{{ url('/validators') }}"><i class="fa fa-btn fa-balance-scale"></i> {!! trans('validators.validators') !!}</a></li>
               @elseif (Auth::user()->isA('validator'))
                 <li><a href="{{ url('/validate') }}"><i class="fa fa-btn fa-users"></i> {!! trans('validators.my_students') !!}</a></li>
               @endif
