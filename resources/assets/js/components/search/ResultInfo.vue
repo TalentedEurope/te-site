@@ -17,9 +17,9 @@ export default {
             var collective = this.getCollective().toLowerCase();
             if (this.isFiltering) {
                 if (this.numberOfResults == 0) {
-                    return `${this.$t('search.there_are_no')} ${collective} ${this.$t('search.matching_the_selected_filters')}`;
+                    return this.$t('search.there_are_no_matching_the_selected_filters').replace('%s', collective);
                 } else {
-                    return `${this.$t('search.we_found')} ${this.numberOfResults} ${collective} ${this.$t('search.matching_your_needs')}`;
+                    return this.$t('search.we_found_matching_your_needs').replace('%number%', this.numberOfResults).replace('%collective%', collective);
                 }
             }
             return `${this.$t('search.we_found')} ${this.numberOfResults} ${collective}`;
