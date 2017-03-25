@@ -125,9 +125,9 @@ return [
     
         'terms_of_use' => 'Súhlasím s podmienkami používania',
     
-        'i_agree_with' => 'I agree with',
+        'i_agree_with' => 'Súhlasím s',
     
-        'the_terms_of_use' => 'the terms of use',
+        'the_terms_of_use' => 'podmienky používania',
     
         'create_account' => 'Vytvoriť nový účet',
     
@@ -238,7 +238,7 @@ Obchodná a poradenská činnosť',
     
         'profile' => 'Profil',
     
-        'profile_visibility' => 'Vidteľnosť profilu',
+        'profile_visibility' => 'Viditeľnosť profilu',
     
         'profile_visibility_visible' => 'Viditeľný. Možné vyhľadať, prezerať.',
     
@@ -246,13 +246,13 @@ Obchodná a poradenská činnosť',
     
         'notifications' => 'Notifikácie',
     
-        'notifications_enabled' => 'Povolené. Mail obdržíte každý deň ak sa s vami študent chce skontaktovať.',
+        'notifications_enabled' => 'Povolené. Dostanete e-mail každý deň, ak sa s vami chce študent skontaktovať.',
     
-        'notifications_disabled' => 'Nepovolené. Neobdržíte žiaden mail okrem oznámení o servisných úkonoch.',
+        'notifications_disabled' => 'Nepovolené. Nebudete dostávať žiadne e-maily okrem oznámení o servisných úkonoch.',
     
         'about' => 'Obsah/O',
     
-        'company_logo' => 'Lgo spoločnosti',
+        'company_logo' => 'Logo spoločnosti',
     
         'social_and_web' => 'Sociálne siete a webstránka',
     
@@ -270,9 +270,9 @@ Obchodná a poradenská činnosť',
     
         'setup_alternative_contact' => 'Zadajte alternatívny kontakt používateľa, ktorý obdrží všetky notifikácie namiesto zasielania do hlavného účtu. ',
     
-        'update_settings' => 'Update nastavení',
+        'update_settings' => 'Updatovať nastavenia',
     
-        'change_your_password' => 'Zmena hesla',
+        'change_your_password' => 'Zmeniť heslo',
     
         'new_password' => 'Nové heslo',
     
@@ -284,7 +284,7 @@ Obchodná a poradenská činnosť',
     
         'my_photo' => 'Moja fotografia',
     
-        'download_curriculum' => 'Pridajte CV',
+        'download_curriculum' => 'Stiahnite si osnovy?',
     
         'my_talent' => 'Môj talent',
     
@@ -298,17 +298,17 @@ Obchodná a poradenská činnosť',
     
         'education' => 'Vzdelanie',
     
-        'lives_in' => 'Bydlisko',
+        'lives_in' => ' Bydlisko',
     
-        'born_on' => 'Dátum narodenia',
+        'born_on' => 'Narodený/á  ',
     
-        'studied_in' => 'Studied in',
+        'studied_in' => 'Študoval/a v',
     
-        'skilled_in' => 'Skilled in',
+        'skilled_in' => 'Talentovaný v oblasti',
     
         'refereed_by' => 'Hodnotený kým',
     
-        'refereeing_pending' => 'Čaká sa na hodnotenie',
+        'refereeing_pending' => 'Čaká sa na hodnotenie  / hodnotenie sa spracováva',
     
         'skills' => 'Zručnosti',
     
@@ -318,9 +318,9 @@ Obchodná a poradenská činnosť',
     
         'legend' => 'Legenda',
     
-        'set_by_both_parties' => 'Uvádzajú obe strany',
+        'set_by_both_parties' => 'Uvedené oboma stranami',
     
-        'set_by_referee_or_student' => 'Uvádza hodnotiteľ alebo študent',
+        'set_by_referee_or_student' => 'Uvedené hodnotiteľom alebo študentom',
     
         'study' => 'Štúdium',
     
@@ -328,7 +328,7 @@ Obchodná a poradenská činnosť',
     
         'get_in_contact' => 'Nadviažte spojenie',
     
-        'want_to_show_this_company_how_talented_you_are' => 'Chcete ukázať tejto spoločnosti aký ste talentovaný?',
+        'want_to_show_this_company_how_talented_you_are' => 'Chcete ukázať tejto spoločnosti, aký ste talentovaný?',
     
         'we_are_in' => 'Sme v',
     
@@ -340,9 +340,9 @@ Obchodná a poradenská činnosť',
     
         'fix_the_following_errors' => 'Potrebné opraviť nasledujúcu chybu.',
     
-        'click_on_button_to_fill_required_fields' => 'Prosíme kliknúť na nasledujúci gombík ak chcete vyplniť požadované políčka.',
+        'click_on_button_to_fill_required_fields' => 'Prosíme kliknúť na nasledujúce tlačidlo, ak chcete vyplniť požadované políčka.',
     
-        'institution_fix_the_following_errors' => 'Potrebné opraviť nasledujúce chyby, ináč nebudú môcť vaši hodnotitelia validovať váš profil.',
+        'institution_fix_the_following_errors' => 'Potrebné opraviť nasledujúce chyby, v opačnom prípade nebudú môcť vaši hodnotitelia validovať váš profil.',
     
         'my_institution' => 'Moja inštitúcia',
     
@@ -354,61 +354,61 @@ Obchodná a poradenská činnosť',
     
         'student_study_course_studies_name' => 'Názov kurzu/štúdia',
     
-        'student_download_certificate' => 'Nahrať certifikát',
+        'student_download_certificate' => 'Stiahnuť certifikát',
     
-        'student_download_grade_card' => 'Nahrať hodnotiacu tabuľku',
+        'student_download_grade_card' => 'Stiahnuť hodnotiacu tabuľku',
     
-        'student_study_add_more' => 'pridaj ďalšie šúdium',
+        'student_study_add_more' => 'Pridať ďalšie štúdium',
     
-        'student_training_course_name' => 'názov kurzu',
+        'student_training_course_name' => 'Názov kurzu',
     
-        'student_training_add' => 'pridaj zaškolenie/prax',
+        'student_training_add' => 'Pridať zaškolenie/prax',
     
-        'student_training_add_more' => 'pridaj ďalšie zaškolenie/prax',
+        'student_training_add_more' => 'Pridať ďalšie zaškolenie/prax',
     
-        'student_language' => 'jazyk',
+        'student_language' => 'Jazyk',
     
-        'student_language_name' => 'názov',
+        'student_language_name' => 'Názov jazyka',
     
-        'student_language_level' => 'úroveň',
+        'student_language_level' => 'Úroveň jazyka',
     
-        'student_language_add' => 'pridaj jazyk',
+        'student_language_add' => 'Pridať jazyk',
     
-        'student_language_add_more' => 'pridaj ďalšie jazyky',
+        'student_language_add_more' => 'Pridať ďalšie jazyky',
     
-        'student_work_experience_to' => 'Work to',
+        'student_work_experience_to' => 'Práca do',
     
-        'student_work_experience_from' => 'Work from',
+        'student_work_experience_from' => 'Práca od',
     
-        'student_work_experience_add' => 'pridaj pracovnú skúsenosť',
+        'student_work_experience_add' => 'Pridať pracovnú skúsenosť',
     
-        'student_work_experience_add_more' => 'pridaj ďalšie pracovné skúsenosti',
+        'student_work_experience_add_more' => 'Pridať ďalšie pracovné skúsenosti',
     
-        'add_btn' => 'pridaj',
+        'add_btn' => 'Pridať',
     
-        'student_professional_skills_remove' => 'odstráň profesnú zručnosť',
+        'student_professional_skills_remove' => 'Odstrániť profesijnú zručnosť',
     
-        'student_professional_skills_add' => 'pridaj rofesnú zručnosť',
+        'student_professional_skills_add' => 'Pridať profesijnú zručnosť',
     
         'profile_readiness' => 'Pripravenosť profilu',
     
-        'profile_readiness_explanation' => 'Hodnotenie vášho profilu dáva tretej osobe možnosť vytvoriť si o vás mienku a zvyšuje možnosť, že vás bude spoločnosť kontaktovať.',
+        'profile_readiness_explanation' => 'Hodnotenie vášho profilu dáva tretej osobe možnosť vytvoriť si o vás mienku a zvyšuje možnosť, že vás spoločnosť bude kontaktovať.',
     
         'get_a_better_refeer' => 'Získajte lepšie hodnotenie vášho profilu, ktoré sa prejaví  v jeho pripravenosti a v zlepšení možnosti kontaktovania zo strany spoločnosti.',
     
-        'request_is_managed_by' => 'Vaša žiadosť sa spracováva.',
+        'request_is_managed_by' => 'Vaša požiadavka sa spracováva.',
     
-        'cant_find_your_institution' => 'Neviete nájsť vašu inštitúciu? Požiadajte vášho hodnotiteľa a inštitúciu, aby sa pridali k Talentovanej Európe.',
+        'cant_find_your_institution' => 'Neviete nájsť vašu inštitúciu? Požiadajte vášho hodnotiteľa a inštitúciu, aby sa pridali k Talented Europe.',
     
-        'this_step_sends_an_email_to_your_referee' => 'V tomto kroku je vášmu hodnotiteľovi zaslaný email s návodom ako sa pridať k Talentovanej Európe. Hodnotieľ je automaticky zaregistrovaný ak sa k nám pridá jeho inštitúcia a vy ste zaradený na zoznama čakateľov na hodnotenie.',
+        'this_step_sends_an_email_to_your_referee' => 'V tomto kroku je vášmu hodnotiteľovi zaslaný email s návodom, ako sa pridať k Talented Europe. Hodnotiteľ sa automaticky zaregistruje, len čo sa k nám pridá jeho inštitúcia a vy ste zaradený na zoznam čakateľov na hodnotenie.',
     
-        'send_invitation' => 'Pošli pozvanie',
+        'send_invitation' => 'Pošlite pozvanie',
     
         'profile_validated_successfully' => 'Váš profil bol úspešne validovaný.',
     
         'referee_said_about_you' => 'Toto o vás povedal váš hodnotiteľ.',
     
-        'profile_validated_denied' => 'Vš profil bol zamietnutý.',
+        'profile_validated_denied' => 'Váš profil bol zamietnutý.',
     
         'not_enough_data_to_do_a_refeer' => 'Nemáme od vás dostatok údajov pre vytvorenie vášho hodnotenia.',
     
@@ -424,9 +424,9 @@ Obchodná a poradenská činnosť',
     
         'leave_institution' => 'Opustiť inštitúciu?',
     
-        'do_you_want_to_leave_institution' => 'Chcete opustiť túto inštitúciu?',
+        'do_you_want_to_leave_institution' => 'Chcete opustiť túto inštitúciu? Neukončené žiadosti o hodnotenie tak budú zaslané naspäť a vy nebudete môcť hodnotiť nikoho, kým vás iná inštitúcia nepozve späť.',
     
-        'leave_institution_button' => 'Áno! Opúšťam túto akademickú inštitúciu!',
+        'leave_institution_button' => 'Áno! Opustiť túto akademickú inštitúciu!',
     
         'your_profile_is_empty' => 'Váš profil je prázdny!',
     
@@ -436,26 +436,26 @@ Obchodná a poradenská činnosť',
     
         'continue_without_saving' => 'Pokračuj bez uloženia',
     
-        'im_here' => 'Ste tu!/Som tu!',
+        'im_here' => 'Som tu!',
     
-        'cannot_send_more_alerts_to_this_company_today' => 'Dnes nemôžete poslať tejto psoločnosti viac upozornení.',
+        'cannot_send_more_alerts_to_this_company_today' => 'Dnes nemôžete poslať tejto spoločnosti viac upozornení.',
     
         'tell_the_company_that_you_be_interested' => 'Povedzte spoločnosti, že máte záujem pre nich pracovať.',
     
         'alert_sent_successfully' => 'Upozornenie bolo úspešne zaslané spoločnosti.',
     
-        'you_have_already_sent_an_alert_to_this_company' => 'Tejto spoločnsoti ste už zaslali upozornenie.',
+        'you_have_already_sent_an_alert_to_this_company' => 'Tejto spoločnosti ste už zaslali upozornenie.',
     
-        'no_matches' => 'No matches',
+        'no_matches' => 'Žiadna zhoda',
     
-        'find_your_academic_institution' => 'Find your Academic Institution',
+        'find_your_academic_institution' => 'Nájdite svoju akademickú inštitúciu',
     
-        'choose_referee' => 'Choose referee',
+        'choose_referee' => 'Zvoľte hodnotiteľa',
     
-        'refer_request' => 'Refer request',
+        'refer_request' => 'Žiadosť o hodnotenie',
     
-        'any_referee' => 'Any referee',
+        'any_referee' => 'Ktorýkoľvek hodnotiteľ',
     
-        'institution_type' => 'Institution type',
+        'institution_type' => 'Typ inštitúcie',
     
 ];

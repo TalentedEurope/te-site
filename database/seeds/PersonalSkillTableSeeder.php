@@ -609,7 +609,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'es' => 'apto para trabajar en equipo',                    
                 
-                    'it' => 'disposto a lavorare in squadra',                    
+                    'it' => 'disposto a lavorare in gruppo',                    
                 
                     'de' => 'teamfähig',                    
                 

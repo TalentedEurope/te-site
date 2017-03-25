@@ -9,6 +9,6 @@ return [
     
         'login_title' => 'Login',
     
-        'login_btn' => 'Login',
+        'login_btn' => 'Prihlásiť sa',
     
 ];

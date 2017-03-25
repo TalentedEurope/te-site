@@ -13,12 +13,12 @@ return [
     
         'we_didnt_find_the_page' => 'Nenašli sme stránku, ktorú hľadáte.',
     
-        'internal_server_error' => 'Internal server chyba',
+        'internal_server_error' => 'Chyba interného servera',
     
-        'an_error_happened' => 'vykytla sa chyba, administrátori upovedomení, chyba bude čoskoro opravená, skúste prosím neskôr.',
+        'an_error_happened' => 'Vyskytla sa chyba, administrátori upovedomení, chyba bude čoskoro opravená, prosím,skúste neskôr.',
     
         'meanwhile_can_searching_for' => 'Zatiaľ môžete skúsiť vyhľadávať...',
     
-        'be_right_back' => 'Be right back',
+        'be_right_back' => 'O chvíľu sme späť',
     
 ];

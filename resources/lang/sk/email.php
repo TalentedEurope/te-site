@@ -41,11 +41,11 @@ return [
     
         'validatorRequested_subject_1' => '% vás pozvalo ako hodnotiteľa v Talentovanej Európe.',
     
-        'validatorRequested_line_2' => 'Hello %s',
+        'validatorRequested_line_2' => 'Ahoj',
     
         'validatorRequested_line_3' => '% vás pozvalo ako hodnotiteľa v Talentovanej Európe.',
     
-        'validatorRequested_line_4' => 'Pošlite tento odkaz inštitúcii, v ktorej ste zamestnaný, aby sa pomocou neho mohla zaregostrovať. ',
+        'validatorRequested_line_4' => 'Pošlite tento odkaz inštitúcii, v ktorej ste zamestnaný, aby sa pomocou neho mohla zaregistrovať. ',
     
         'validatorRequested_line_5' => 'Ak sa vaša inštitúcia pomocou kliknutia na nasledujúci odkaz zaregistruje, budete automaticky pozvaný do ich registra.',
     

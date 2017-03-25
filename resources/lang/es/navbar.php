@@ -9,6 +9,6 @@ return [
     
         'alerts' => 'Avisos',
     
-        'settings' => 'Configuraciones',
+        'settings' => 'Configuración',
     
 ];

@@ -3,6 +3,6 @@
 
 return [
     
-        'my_alerts' => 'Moje upozronenia',
+        'my_alerts' => 'Moje upozornenia',
     
 ];
