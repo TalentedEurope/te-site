@@ -17,13 +17,13 @@ return [
     
         'more' => 'zisti viac',
     
-        'what_is_title' => 'Čo je to Talentovaná Európa?',
+        'what_is_title' => 'Čo je to Talented Europe?',
     
         'what_is_cta' => '<strong>Zisti/te viac!</strong> Vyžiadaj/te si brožúru!',
     
         'what_is_text_1' => 'Viete si predstaviť možnosť prijať do zamestnania najlepších študentov z ktorejkoľvek európskej krajiny? Chcete byť súčasťou sektoru elitných európskych študentov? Tisícky spoločností budú mať priamy pístup k informáciám o vás, a čím lepšie hodnotenie získate, tým väčšie možnosti máte získať skvelú prácu.',
     
-        'what_is_text_2' => 'Presne to ponúka Talentovaná Európa. Výklad plný najlepších študentov v Európe. Jednoduchú myšlienku, ktorá spája zamestnávateľov a študentov. Miesto stretnutia tých najlepších .',
+        'what_is_text_2' => 'Presne to ponúka Talented Europe. Výklad plný najlepších študentov v Európe. Jednoduchú myšlienku, ktorá spája zamestnávateľov a študentov. Miesto stretnutia tých najlepších .',
     
         'subscribe_title' => 'Zaregistruj sa a sleduj naše  novinky.',
     
@@ -57,7 +57,7 @@ return [
     
         'no_students' => 'Inga studenter tillgängliga',
     
-        'join_talented_europe_today' => 'Pridajte sa k Talentovanej  Európe už dnes!',
+        'join_talented_europe_today' => 'Pridajte sa k Talented Europe už dnes!',
     
         'talented_for_students' => '<strong>Pre študentov</strong> Talented Europe zvýši vašu zamestnateľnosť pomocou schválenia od vašich vyučujúcich a umožní vám kontakt so zamestnávateľmi v celej Európe pre možnosti stáže alebo prvej pracovnej príležitosti.',
     

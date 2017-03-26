@@ -139,7 +139,7 @@ return [
     
         'art-amp-culture' => 'Umenie a kultúra',
     
-        'banking-and-or-finance-amp-insurance' => 'Bankovníctvo a/alebo Financie a Poisťovníctvo',
+        'banking-and-or-finance-amp-insurance' => 'Bankovníctvo a/alebo financie a poisťovníctvo',
     
         'business-amp-consulting' => '
 Obchodná a poradenská činnosť',
@@ -284,7 +284,7 @@ Obchodná a poradenská činnosť',
     
         'my_photo' => 'Moja fotografia',
     
-        'download_curriculum' => 'Stiahnite si osnovy?',
+        'download_curriculum' => 'Stiahnite si osnovy',
     
         'my_talent' => 'Môj talent',
     
@@ -304,11 +304,11 @@ Obchodná a poradenská činnosť',
     
         'studied_in' => 'Študoval/a v',
     
-        'skilled_in' => 'Talentovaný v oblasti',
+        'skilled_in' => 'Schopnosti v oblasti',
     
         'refereed_by' => 'Hodnotený kým',
     
-        'refereeing_pending' => 'Čaká sa na hodnotenie  / hodnotenie sa spracováva',
+        'refereeing_pending' => 'Hodnotenie sa spracováva',
     
         'skills' => 'Zručnosti',
     
