@@ -27,7 +27,7 @@ return [
     
         'valid' => 'Hodnotený',
     
-        'student_passed_validation_successfully' => 'Študent bol úspešne hodnotený.',
+        'student_passed_validation_successfully' => 'Študent prešiel vaším hodnotením úspešne .',
     
         'your_comments' => 'Váš komentár.',
     

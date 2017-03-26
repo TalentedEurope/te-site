@@ -13,7 +13,7 @@ return [
     
         'company_activity' => 'le domaine de l\' activité',
     
-        'company_contact_person' => 'la personne do contact',
+        'company_contact_person' => 'la personne a contacter',
     
         'company_representative' => 'le représentant légitime',
     
