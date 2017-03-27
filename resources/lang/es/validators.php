@@ -19,7 +19,7 @@ return [
     
         'jump_to_results' => 'Ir a los resultados',
     
-        'you_are_validating_following_student' => 'You\'re validating the following student',
+        'you_are_validating_following_student' => 'Estás validando el siguiente estudiante',
     
         'jump_to_validation' => 'Ir a la validación',
     
@@ -71,20 +71,20 @@ return [
     
         'cannot_complete_invitation' => 'No se puede completar la invitación',
     
-        'no_alerts_found' => 'No alerts found',
+        'no_alerts_found' => 'No se han encontrado alertas',
     
-        'study_level' => 'Study level',
+        'study_level' => 'Nivel de estudios',
     
-        'when_it_was_sent' => 'When it was sent?',
+        'when_it_was_sent' => '¿Cuando se envió?',
     
-        'no_referees' => 'No referees',
+        'no_referees' => 'Sin validadores',
     
-        'remove_referee' => 'Remove referee',
+        'remove_referee' => 'Eliminar validador',
     
-        'do_you_want_to_remove_referee' => 'Do you want to remove %s from your institution?',
+        'do_you_want_to_remove_referee' => '¿Desea eliminar a %s de tu institución?',
     
-        'remove' => 'Remove',
+        'remove' => 'Eliminar',
     
-        'removing' => 'Removing',
+        'removing' => 'Eliminando',
     
 ];

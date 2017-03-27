@@ -438,7 +438,7 @@ Obchodná a poradenská činnosť',
     
         'im_here' => 'Som tu!',
     
-        'cannot_send_more_alerts_to_this_company_today' => 'Dnes nemôžete poslať tejto spoločnosti viac upozornení.',
+        'cannot_send_more_alerts_to_this_company_today' => 'Dnes tejto spoločnosti nemôžete poslať viac upozornení.',
     
         'tell_the_company_that_you_be_interested' => 'Povedzte spoločnosti, že máte záujem pre nich pracovať.',
     
@@ -457,5 +457,7 @@ Obchodná a poradenská činnosť',
         'any_referee' => 'Ktorýkoľvek hodnotiteľ',
     
         'institution_type' => 'Typ inštitúcie',
+    
+        'complete_the_registration' => 'Complete the registration adding your information',
     
 ];

@@ -21,9 +21,9 @@ return [
     
         'what_is_cta' => '<strong>¡Descubre más!</strong> ¡Pide el folleto!',
     
-        'what_is_text_1' => '¿Os imagináis la posibilidad de contratar a los mejores estudiantes de cualquier país europeo? ¿Deseáis formar parte del sector de estudiantes europeos de élite? Miles de compañías van a tener acceso directo a las informaciones sobre vosotros y cuanto mejor sea la puntuación que obtenéis, más grandes serán vuestras oportunidades de conseguir un trabajo estupendo. ',
+        'what_is_text_1' => '¿Te imaginas la posibilidad de contratar a los mejores estudiantes de cualquier país europeo? ¿Deseas formar parte de los estudiantes europeos de élite? Miles de empresas van a tener acceso directo a información sobre vosotros y cuanto mejor sea la puntuación que obtenéis, más grandes serán vuestras oportunidades de conseguir un trabajo estupendo. ',
     
-        'what_is_text_2' => 'Es precisamente lo que ofrece la Europa con Talento. Un escaparate lleno de los mejores estudiantes en Europa. Una idea simple que une a los empleadores con los estudiantes. El lugar de encuentro de los mejores.',
+        'what_is_text_2' => 'Es precisamente lo que ofrece Talented Europe. Un escaparate lleno de los mejores estudiantes en Europa. Una idea simple que une a empleadores con estudiantes. El lugar de encuentro de los mejores.',
     
         'subscribe_title' => 'Suscríbete y sigue nuestras actualizaciones.',
     
@@ -57,7 +57,7 @@ return [
     
         'no_students' => 'No hay estudiantes',
     
-        'join_talented_europe_today' => '¡Unéte a Talented Europe hoy!',
+        'join_talented_europe_today' => '¡Unéte hoy a Talented Europe!',
     
         'talented_for_students' => '<strong>Para estudiantes</strong> - Talented Europe mejorará la posibilidad de conseguir un empleo con el respaldo de sus tutores y les pondrá en contacto con los empresas y autónomos de toda Europa para encontrar prácticas en empresas o conseguir sus primeros empleos.',
     

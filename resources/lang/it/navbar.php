@@ -3,12 +3,12 @@
 
 return [
     
-        'looking_for' => 'I\'m looking for',
+        'looking_for' => 'Sto cercando',
     
-        'profile' => 'Profile',
+        'profile' => 'Profilo',
     
-        'alerts' => 'Alerts',
+        'alerts' => 'Avvisi',
     
-        'settings' => 'Settings',
+        'settings' => 'Impostazioni',
     
 ];

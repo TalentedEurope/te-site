@@ -3,18 +3,18 @@
 
 return [
     
-        'date_of_request' => 'Date of request',
+        'date_of_request' => 'Data della richiesta',
     
-        'pending' => 'Pending',
+        'pending' => 'Pendente',
     
-        'validated' => 'Validated',
+        'validated' => 'Convalidato',
     
-        'not_validated' => 'Not validated',
+        'not_validated' => 'Non convalidato',
     
-        'no_students' => 'No students',
+        'no_students' => 'Senza studenti',
     
-        'confirm_validation' => 'Confirm refereeing',
+        'confirm_validation' => 'Confermare la validazione',
     
-        'are_you_sure_you_want_to_finish_refereeing' => 'Are you sure you want to finish refereeing this student?',
+        'are_you_sure_you_want_to_finish_refereeing' => 'Sei sicuro di voler concludere la validazione di questo studente?',
     
 ];

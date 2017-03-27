@@ -61,7 +61,7 @@ return [
     
         'follow_us' => 'Seguici su',
     
-        'login_btn' => 'Accedi',
+        'login_btn' => 'Accedere',
     
         'register_btn' => 'Registrati',
     
@@ -73,7 +73,7 @@ return [
     
         'student_plural' => 'Studenti',
     
-        'company' => 'Compagnia/Compagnie',
+        'company' => 'Impresa/Imprese',
     
         'institution' => 'Istituzione|Istituzioni',
     
@@ -97,27 +97,27 @@ return [
     
         'logout_btn' => 'Disconnettersi',
     
-        'less_btn' => 'View less',
+        'less_btn' => 'Vedere meno',
     
-        'status' => 'Status',
+        'status' => 'Stato',
     
-        'not_enough_data_to_show_profile' => 'We don\'t have enough data from you to be able to show your profile.',
+        'not_enough_data_to_show_profile' => 'Non abbiamo abbastanza dati per mostrare il tuo profilo',
     
-        'click_on_link_to_fill_required_fields' => 'Please click on the following link to fill the required fields.',
+        'click_on_link_to_fill_required_fields' => 'Per favore accedi al seguente link per riempire i campi richiesti',
     
-        'set_up_my_profile' => 'Set up my profile',
+        'set_up_my_profile' => 'Impostare il mio profilo',
     
-        'or' => 'or',
+        'or' => 'o',
     
-        'error' => 'Error',
+        'error' => 'Errore',
     
-        'success' => 'Success',
+        'success' => 'Successo',
     
-        'older' => 'Older',
+        'older' => 'Precedente',
     
-        'next' => 'Next',
+        'next' => 'Prossimo',
     
-        'yes' => 'Yes',
+        'yes' => 'Si',
     
         'no' => 'No',
     

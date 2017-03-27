@@ -249,83 +249,83 @@ return [
     
         'notifications_disabled' => 'Disabled. You won\'t receive any emails, except for announcements about the service',
     
-        'about' => 'About',
+        'about' => 'Acerca de',
     
-        'company_logo' => 'Company Logo',
+        'company_logo' => 'Logotipo de la empresa',
     
-        'social_and_web' => 'Social networks and website',
+        'social_and_web' => 'Redes sociales y página web personal',
     
-        'facebook_page_url' => 'Facebook page url',
+        'facebook_page_url' => 'URL de la página de Facebook',
     
-        'twitter_page_url' => 'Twitter page url',
+        'twitter_page_url' => 'URL de la página de Twitter',
     
-        'linkedin_page_url' => 'Linkedin page url',
+        'linkedin_page_url' => 'URL de la página de Linkedin',
     
-        'web_url' => 'Website url',
+        'web_url' => 'Dirección de la página Web',
     
         'what_is_talent_for_you_in_a_few_words' => 'Explain us what is talent for you in a few words',
     
-        'most_valuable_skills_for_company' => 'A list of the most valuable skills for the company',
+        'most_valuable_skills_for_company' => 'Un listado de las habilidades mas valoradas por la empresa',
     
-        'setup_alternative_contact' => 'Setup an alternative contact user that will receive all the notifications instead of the main account',
+        'setup_alternative_contact' => 'Seleccione un usuario de contacto alternativo para que reciba las notificaciones en lugar de la cuenta principal de la institución',
     
-        'update_settings' => 'Update settings',
+        'update_settings' => 'Modificar mi configuración',
     
-        'change_your_password' => 'Change your password',
+        'change_your_password' => 'Cambiar la contraseña',
     
-        'new_password' => 'New password',
+        'new_password' => 'Contraseña nueva',
     
-        'repeat_new_password' => 'Repeat new password',
+        'repeat_new_password' => 'Repetir la contraseña nueva',
     
-        'save_new_password' => 'Save new password',
+        'save_new_password' => 'Guardar la contraseña nueva',
     
-        'career_and_skills' => 'Career and Skills',
+        'career_and_skills' => 'Estudios y habilidades',
     
         'my_photo' => 'Mi fotografía de perfil',
     
         'download_curriculum' => 'Descargar curriculum',
     
-        'my_talent' => 'My talent',
+        'my_talent' => 'Mi talento',
     
-        'referee_name' => 'Referee name',
+        'referee_name' => 'nombre del validador',
     
-        'referee_email' => 'Referee email',
+        'referee_email' => 'email del validador',
     
-        'get_your_profile_refereed' => 'Get your profile refereed',
+        'get_your_profile_refereed' => 'obtén tu perfil validado',
     
-        'want_to_view_all_details_of_student' => 'Do you want to view all the details of this student?',
+        'want_to_view_all_details_of_student' => '¿Quiere ver todos los detalles del estudiante?',
     
-        'education' => 'Education',
+        'education' => 'Educación',
     
-        'lives_in' => 'Lives in',
+        'lives_in' => 'Vive en',
     
-        'born_on' => 'Born on',
+        'born_on' => 'Nacido en',
     
-        'studied_in' => 'Studied in',
+        'studied_in' => 'Estudió en',
     
-        'skilled_in' => 'Skilled in',
+        'skilled_in' => 'Competente en',
     
-        'refereed_by' => 'Refereed by',
+        'refereed_by' => 'Validado por',
     
-        'refereeing_pending' => 'Refereeing pending',
+        'refereeing_pending' => 'Pendiente de validación',
     
-        'skills' => 'Skills',
+        'skills' => 'Habilidades',
     
-        'professional' => 'Professional',
+        'professional' => 'Profesional',
     
         'personal' => 'Personal',
     
-        'legend' => 'Legend',
+        'legend' => 'Leyenda',
     
-        'set_by_both_parties' => 'Set by both parties',
+        'set_by_both_parties' => 'Seleccionado por ambas partes',
     
-        'set_by_referee_or_student' => 'Set by either the referee or the student',
+        'set_by_referee_or_student' => 'Selecionando por el validador o el estudiante',
     
-        'study' => 'Study|Studies',
+        'study' => 'Estudio|Estudios',
     
-        'date_not_specified' => 'Date not specified',
+        'date_not_specified' => 'Fecha no especificada',
     
-        'get_in_contact' => 'Get in contact',
+        'get_in_contact' => 'Mantente en contacto',
     
         'want_to_show_this_company_how_talented_you_are' => 'Do you want to show this company how talented you are?',
     
@@ -407,7 +407,7 @@ return [
     
         'referee_said_about_you' => 'This is what your referee said about you',
     
-        'profile_validated_denied' => 'Tu perfil fué rechazado',
+        'profile_validated_denied' => 'Tu perfil fue rechazado',
     
         'not_enough_data_to_do_a_refeer' => 'We don\'t have enough data from you to be able to do a refeer.',
     
@@ -435,26 +435,28 @@ return [
     
         'continue_without_saving' => 'Continuar sin guardar',
     
-        'im_here' => 'I\'m here!',
+        'im_here' => '¡Estoy aquí!',
     
         'cannot_send_more_alerts_to_this_company_today' => 'You cannot send more alerts to this company today',
     
         'tell_the_company_that_you_be_interested' => 'Tell the company that you may be interested to work for them',
     
-        'alert_sent_successfully' => 'Alert sent successfully to the company',
+        'alert_sent_successfully' => 'Alerta enviada satisfactoriamente a la empresa',
     
-        'you_have_already_sent_an_alert_to_this_company' => 'You have already sent an alert to this company',
+        'you_have_already_sent_an_alert_to_this_company' => 'Ya has enviado una alerta a esta empresa',
     
-        'no_matches' => 'No matches',
+        'no_matches' => 'No se cumplen los requisitos',
     
-        'find_your_academic_institution' => 'Find your Academic Institution',
+        'find_your_academic_institution' => 'Filtrar tu Institución Académica',
     
-        'choose_referee' => 'Choose referee',
+        'choose_referee' => 'Elegir validador',
     
-        'refer_request' => 'Refer request',
+        'refer_request' => 'Solicitar validador',
     
-        'any_referee' => 'Any referee',
+        'any_referee' => 'Cualquier validador',
     
-        'institution_type' => 'Institution type',
+        'institution_type' => 'Tipo de institución',
+    
+        'complete_the_registration' => 'Complete el registro añadiendo su información',
     
 ];

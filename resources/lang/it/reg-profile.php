@@ -11,9 +11,9 @@ return [
     
         'studies_level_8' => 'Dottorato di ricerca o equivalente',
     
-        'company_activity' => 'Settore di attività',
+        'company_activity' => 'Settore dell\' attività',
     
-        'company_contact_person' => 'Referente',
+        'company_contact_person' => 'Persona da contattare',
     
         'company_representative' => 'Rappresentante legale (responsabile)',
     
@@ -25,7 +25,7 @@ return [
     
         'country' => 'Stato',
     
-        'institution_certificate_template_download' => 'Scarica il modello',
+        'institution_certificate_template_download' => 'Scaricare il modello',
     
         'fiscal_id' => 'Codice Fiscale',
     
@@ -51,7 +51,7 @@ return [
     
         'student_certificate' => 'Certificato',
     
-        'clear_btn' => 'Elimina',
+        'clear_btn' => 'Cancellare',
     
         'student_experience_company' => 'Impresa',
     
@@ -81,7 +81,7 @@ return [
     
         'load_btn' => 'Caricare',
     
-        'input_max_characters' => 'max.',
+        'input_max_characters' => 'massimo',
     
         'name' => 'Nome',
     
@@ -95,11 +95,11 @@ return [
     
         'position' => 'Posizione',
     
-        'student_professional_skills' => 'Abilità professionali',
+        'student_professional_skills' => 'Competenze professionali',
     
         'student_proposed_validator' => 'Valutatore proposto',
     
-        'save_btn' => 'Salva',
+        'save_btn' => 'Salvare',
     
         'student_study_scanned_document' => 'Documento scannerizzato',
     
@@ -233,228 +233,230 @@ return [
     
         'logo' => 'Logo',
     
-        'my_profile' => 'My profile',
+        'my_profile' => 'Il mio profilo',
     
-        'profile' => 'Profile',
+        'profile' => 'Profilo',
     
-        'profile_visibility' => 'Profile Visibility',
+        'profile_visibility' => 'Visibilità del profilo',
     
-        'profile_visibility_visible' => 'Visible. Can be searched, viewed',
+        'profile_visibility_visible' => 'Visibile. Può essere cercato,visto',
     
-        'profile_visibility_hidden' => 'Hidden. Cannot be searched or viewed',
+        'profile_visibility_hidden' => 'Nascosto. Non può essere cercato o visto',
     
-        'notifications' => 'Notifications',
+        'notifications' => 'Notificazioni',
     
-        'notifications_enabled' => 'Enabled. You\'ll receive emails once a day if a student wants to get in contact with you',
+        'notifications_enabled' => 'Abilitato. Riceverai emails una volta al giorno se uno studente vuole mettersi in contatto con te',
     
-        'notifications_disabled' => 'Disabled. You won\'t receive any emails, except for announcements about the service',
+        'notifications_disabled' => 'Disabiltato. Non riceverai nessuna mail salvo quelle di servizio',
     
-        'about' => 'About',
+        'about' => 'Riguardo a',
     
-        'company_logo' => 'Company Logo',
+        'company_logo' => 'Logo dell´ impresa',
     
-        'social_and_web' => 'Social networks and website',
+        'social_and_web' => 'Social network e sito web',
     
-        'facebook_page_url' => 'Facebook page url',
+        'facebook_page_url' => 'url della pagina Facebook',
     
-        'twitter_page_url' => 'Twitter page url',
+        'twitter_page_url' => 'url della pagina Twitter',
     
-        'linkedin_page_url' => 'Linkedin page url',
+        'linkedin_page_url' => 'url della pagina Linkedin',
     
-        'web_url' => 'Website url',
+        'web_url' => 'url del sito web',
     
-        'what_is_talent_for_you_in_a_few_words' => 'Explain us what is talent for you in a few words',
+        'what_is_talent_for_you_in_a_few_words' => 'Spiegaci cosa é il talento per te in poche parole',
     
-        'most_valuable_skills_for_company' => 'A list of the most valuable skills for the company',
+        'most_valuable_skills_for_company' => 'Una lista delle tue competenze per l´impresa',
     
         'setup_alternative_contact' => 'Setup an alternative contact user that will receive all the notifications instead of the main account',
     
-        'update_settings' => 'Update settings',
+        'update_settings' => 'Aggiornare le impostazioni',
     
-        'change_your_password' => 'Change your password',
+        'change_your_password' => 'cambiare la password',
     
-        'new_password' => 'New password',
+        'new_password' => 'Nuova password',
     
-        'repeat_new_password' => 'Repeat new password',
+        'repeat_new_password' => 'Ripeti la nuova password',
     
-        'save_new_password' => 'Save new password',
+        'save_new_password' => 'Salva la nuova password',
     
-        'career_and_skills' => 'Career and Skills',
+        'career_and_skills' => 'Carriera e competenze',
     
-        'my_photo' => 'My Photo',
+        'my_photo' => 'Foto del profilo',
     
-        'download_curriculum' => 'Download curriculum',
+        'download_curriculum' => 'Scaricare il curriculum',
     
-        'my_talent' => 'My talent',
+        'my_talent' => 'Il mio talento',
     
-        'referee_name' => 'Referee name',
+        'referee_name' => 'nome del referente',
     
-        'referee_email' => 'Referee email',
+        'referee_email' => 'email del referente',
     
-        'get_your_profile_refereed' => 'Get your profile refereed',
+        'get_your_profile_refereed' => 'ottieni il tuo profilo referenziato',
     
-        'want_to_view_all_details_of_student' => 'Do you want to view all the details of this student?',
+        'want_to_view_all_details_of_student' => 'Vuoi vedere tutti i dettagli di questo studente?',
     
-        'education' => 'Education',
+        'education' => 'Istruzione',
     
-        'lives_in' => 'Lives in',
+        'lives_in' => 'Vive a',
     
-        'born_on' => 'Born on',
+        'born_on' => 'Nato a ',
     
-        'studied_in' => 'Studied in',
+        'studied_in' => 'Studiato presso',
     
-        'skilled_in' => 'Skilled in',
+        'skilled_in' => 'Competente in',
     
-        'refereed_by' => 'Refereed by',
+        'refereed_by' => 'Referenziato da',
     
-        'refereeing_pending' => 'Refereeing pending',
+        'refereeing_pending' => 'Referenze pendenti',
     
-        'skills' => 'Skills',
+        'skills' => 'Competenze',
     
-        'professional' => 'Professional',
+        'professional' => 'Professionale',
     
-        'personal' => 'Personal',
+        'personal' => 'Personale',
     
-        'legend' => 'Legend',
+        'legend' => 'Legenda',
     
-        'set_by_both_parties' => 'Set by both parties',
+        'set_by_both_parties' => 'Impostare da entrambe le parti',
     
-        'set_by_referee_or_student' => 'Set by either the referee or the student',
+        'set_by_referee_or_student' => 'Impostare o il referente o lo studente',
     
-        'study' => 'Study|Studies',
+        'study' => 'Studio|Studi',
     
-        'date_not_specified' => 'Date not specified',
+        'date_not_specified' => 'Data non specificata',
     
-        'get_in_contact' => 'Get in contact',
+        'get_in_contact' => 'Mettiti in contatto',
     
-        'want_to_show_this_company_how_talented_you_are' => 'Do you want to show this company how talented you are?',
+        'want_to_show_this_company_how_talented_you_are' => 'Vuoi mostrare a questa impresa il tuo talento?',
     
-        'we_are_in' => 'We are in',
+        'we_are_in' => 'Ci troviamo a',
     
-        'we_are_looking_for_people_skilled_in' => 'We\'re looking for people skilled in',
+        'we_are_looking_for_people_skilled_in' => 'Stiamo cercando persone competenti in',
     
-        'we_think_that_talent_is' => 'We think that talent is',
+        'we_think_that_talent_is' => 'Crediamo che il talento é',
     
-        'not_enough_information' => 'Not enough information',
+        'not_enough_information' => 'Informazioni insufficienti',
     
-        'fix_the_following_errors' => 'You\'ll need to fix the following errors',
+        'fix_the_following_errors' => 'E´necessario che tu corregga i seguenti errori',
     
-        'click_on_button_to_fill_required_fields' => 'Please click the following button to fill the required fields.',
+        'click_on_button_to_fill_required_fields' => 'Per favore esegui un click sul bottone di seguito per riempire i campi richiesti',
     
-        'institution_fix_the_following_errors' => 'You\'ll need to fix the following errors or your referees won\'t be able to validate profiles',
+        'institution_fix_the_following_errors' => 'E´necessario che tu corregga i seguenti errori o i tuoi referenti non saranno in grado di convalidare il tuo profilo',
     
-        'my_institution' => 'My Institution',
+        'my_institution' => 'Il mio istituto',
     
-        'required' => 'Required',
+        'required' => 'Richiesto',
     
-        'remove_btn' => 'Remove',
+        'remove_btn' => 'Rimuovi',
     
-        'student_study_institution_name' => 'Institution name',
+        'student_study_institution_name' => 'Nome Istituzione',
     
-        'student_study_course_studies_name' => 'Course/Studies name',
+        'student_study_course_studies_name' => 'Nome del Corso/Studi',
     
-        'student_download_certificate' => 'Download Certificate',
+        'student_download_certificate' => 'Scaricare Certificato',
     
-        'student_download_grade_card' => 'Download Gradecard',
+        'student_download_grade_card' => 'Scaricare scheda di valutazione',
     
-        'student_study_add_more' => 'add more studies',
+        'student_study_add_more' => 'Aggiungere piú studi',
     
-        'student_training_course_name' => 'Course name',
+        'student_training_course_name' => 'Nome del corso',
     
-        'student_training_add' => 'add a training',
+        'student_training_add' => 'aggiungere una formazione/tirocinio',
     
-        'student_training_add_more' => 'add more trainings',
+        'student_training_add_more' => 'aggiungere altre formazioni/tirocini',
     
-        'student_language' => 'Language',
+        'student_language' => 'Lingua',
     
-        'student_language_name' => 'Language name',
+        'student_language_name' => 'Nome iingua',
     
-        'student_language_level' => 'Language level',
+        'student_language_level' => 'Livello lingua',
     
-        'student_language_add' => 'add a language',
+        'student_language_add' => 'aggiungere una lingua',
     
-        'student_language_add_more' => 'add more languages',
+        'student_language_add_more' => 'aggiungere altre lingue',
     
-        'student_work_experience_to' => 'Work to',
+        'student_work_experience_to' => 'Lavorato fino al',
     
-        'student_work_experience_from' => 'Work from',
+        'student_work_experience_from' => 'Lavorato dal',
     
-        'student_work_experience_add' => 'add a work experience',
+        'student_work_experience_add' => 'aggiungere esperienza lavorativa',
     
-        'student_work_experience_add_more' => 'add more work experiences',
+        'student_work_experience_add_more' => 'aggiungere altre esperienze lavorative',
     
-        'add_btn' => 'Add',
+        'add_btn' => 'Aggiungere',
     
-        'student_professional_skills_remove' => 'Remove professional skill',
+        'student_professional_skills_remove' => 'Rimuovere competenza professionale',
     
-        'student_professional_skills_add' => 'Add a professional skill',
+        'student_professional_skills_add' => 'Aggiungere competenza professionale',
     
-        'profile_readiness' => 'Profile readiness',
+        'profile_readiness' => 'Profilo di preparazione',
     
         'profile_readiness_explanation' => 'Getting your profile refereed gives a third party opinion of you and helps increasing the possibilities of contact from a company',
     
         'get_a_better_refeer' => 'Get a better refeer improving your profile readiness and improve possibility of company contact',
     
-        'request_is_managed_by' => 'Your request is being managed by',
+        'request_is_managed_by' => 'La tua richiesta é in fase di gestione con',
     
-        'cant_find_your_institution' => 'Can\'t find your institution? ask your referee and institution to join Talented Europe',
+        'cant_find_your_institution' => 'Non riesci a trovare la tua istituzione? Chiedi al tuo referente o alla tua istituzione di unirsi al Talented Europe',
     
         'this_step_sends_an_email_to_your_referee' => 'This step sends an email to your referee with instructions on how to join Talented Europe, automatically registers him as referee once his institution joins, and adds you to the refeeral queue',
     
-        'send_invitation' => 'Send invitation',
+        'send_invitation' => 'Inviare invito',
     
-        'profile_validated_successfully' => 'Your profile was validated successfully',
+        'profile_validated_successfully' => 'Il tuo profilo e´stato convalidato con successo',
     
-        'referee_said_about_you' => 'This is what your referee said about you',
+        'referee_said_about_you' => 'Questo e´ ció che il tuo referente ha detto di te',
     
-        'profile_validated_denied' => 'Your profile was denied',
+        'profile_validated_denied' => 'Il tuo profilo e´stato rifiutato',
     
         'not_enough_data_to_do_a_refeer' => 'We don\'t have enough data from you to be able to do a refeer.',
     
-        'progress_account_setup' => 'Account setup',
+        'progress_account_setup' => 'Configurazione dell´account',
     
-        'progress_refer_your_profile' => 'Refer your profile',
+        'progress_refer_your_profile' => 'Referenzia il tuo profilo',
     
-        'progress_not_refereed' => 'Not refereed',
+        'progress_not_refereed' => 'Non referenziato',
     
-        'progress_completed' => 'Completed',
+        'progress_completed' => 'Completato',
     
         'you_must_put_referee_email' => '<strong>Please note:</strong> You must put the referee email, not the one form the institution',
     
-        'leave_institution' => 'Leave institution?',
+        'leave_institution' => 'Lasciare l´Istituzione?',
     
-        'do_you_want_to_leave_institution' => 'Do you want to leave the institution? this will send the pending validation requests back to it, and you won\'t be able to validate anyone until another institution invites you back',
+        'do_you_want_to_leave_institution' => 'Vuoi lasciare l\'istituzione? Ció comporterà che le richieste di validazione pendenti vengano reinviate indietro, non sarà possibile validare nessuno fino a quando un\'altra istituzione ti inviterà di nuovo',
     
-        'leave_institution_button' => 'Yes! Leave this academic institution',
+        'leave_institution_button' => 'Si! esco dall`Istituzione Accademica!',
     
-        'your_profile_is_empty' => 'Your profile is empty!',
+        'your_profile_is_empty' => 'Il tuo profilo é vuoto!',
     
-        'tab_changes_not_saved' => 'Tab changes haven\'t been saved, you may lose some data',
+        'tab_changes_not_saved' => 'I cambiamenti non sono stati salvati, potresti perdere alcuni dati',
     
-        'save_changes' => 'Save changes',
+        'save_changes' => 'Salvare i cambiamenti',
     
-        'continue_without_saving' => 'Continue without saving',
+        'continue_without_saving' => 'Continuare senza salvare',
     
-        'im_here' => 'I\'m here!',
+        'im_here' => 'Sono qui!',
     
-        'cannot_send_more_alerts_to_this_company_today' => 'You cannot send more alerts to this company today',
+        'cannot_send_more_alerts_to_this_company_today' => 'Non puoi inviare altri avvisi a questa impresa oggi',
     
-        'tell_the_company_that_you_be_interested' => 'Tell the company that you may be interested to work for them',
+        'tell_the_company_that_you_be_interested' => 'Comunica all´impresa che potresti essere interessato a lavorare con loro',
     
-        'alert_sent_successfully' => 'Alert sent successfully to the company',
+        'alert_sent_successfully' => 'Avviso inviato all´impresa con successo',
     
-        'you_have_already_sent_an_alert_to_this_company' => 'You have already sent an alert to this company',
+        'you_have_already_sent_an_alert_to_this_company' => 'Hai giá inviato un avviso a questa impresa',
     
-        'no_matches' => 'No matches',
+        'no_matches' => 'Nessun requisito è soddisfatto',
     
-        'find_your_academic_institution' => 'Find your Academic Institution',
+        'find_your_academic_institution' => 'Trova la tua Istituzione Accademica',
     
-        'choose_referee' => 'Choose referee',
+        'choose_referee' => 'Scegliere referente',
     
-        'refer_request' => 'Refer request',
+        'refer_request' => 'Richiedere referente',
     
-        'any_referee' => 'Any referee',
+        'any_referee' => 'Qualsiasi referente',
     
-        'institution_type' => 'Institution type',
+        'institution_type' => 'tipo Istituzione',
+    
+        'complete_the_registration' => 'Complete the registration adding your information',
     
 ];

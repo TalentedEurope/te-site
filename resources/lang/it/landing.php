@@ -21,7 +21,7 @@ return [
     
         'what_is_cta' => '<strong>Scopri di più!</strong> Scarica la brochure!',
     
-        'what_is_text_1' => 'Ti immagini la possibilità di poter assumere i migliori studenti di qualsiasi Paese europeo? Ti piacerebbe far parte di un elite studentesca in Europa? Migliaia di compagnie avranno un accesso diretto ai tuoi contatti e alle tue informazioni, migliori saranno i tuoi voti, maggiori saranno le possibilità di trovare un buon lavoro.',
+        'what_is_text_1' => 'Potresti immaginare la possibilità di poter assumere i migliori studenti di qualsiasi Paese europeo? Ti piacerebbe far parte di un elite studentesca in Europa? Migliaia di compagnie avranno un accesso diretto ai tuoi contatti e alle tue informazioni, migliori saranno i tuoi voti, maggiori saranno le possibilità di trovare un buon lavoro.',
     
         'what_is_text_2' => 'Questa è l’offerta che Talented Europe ti propone. Una vetrina in cui vengono messi in mostra i migliori studenti di tutta Europa. Un’idea semplice che unisce i datori di lavoro agli studenti. Il punto d’incontro per eccellenza.',
     
@@ -49,18 +49,18 @@ return [
     
         'statistics_title' => 'Statistiche',
     
-        'contacts' => 'Contatti tra studenti e aziende',
+        'contacts' => 'Contatti tra studenti e imprese',
     
-        'companies_institutions' => 'Aziende e istituzioni',
+        'companies_institutions' => 'Imprese e istituzioni',
     
         'students_title' => 'Studenti di talento',
     
         'no_students' => 'Nessuno studente disponibili',
     
-        'join_talented_europe_today' => 'Join Talented Europe today!',
+        'join_talented_europe_today' => 'Unisciti al Talented Europe oggi!',
     
-        'talented_for_students' => '<strong>For students</strong> - Talented Europe will enhance your employability with the endorsement of your tutors and put you in touch with employers across Europe for internships or first career jobs.',
+        'talented_for_students' => '<strong>Per studenti</strong> - Talented Europe aumenterà la possibilità di trovare un lavoro con il supporto dei vostri tutors e vi metterà in contatto con le imprese e i professionisti privati per trovare tirocini nelle imprese o ottenere il vostro primo lavoro',
     
-        'talented_for_employers' => '<strong>For employers</strong> - Talented Europe will link you with talented young students across Europe and help you find the right person who can contribute to your organisation’s success with the special talents and skills that you are looking for.',
+        'talented_for_employers' => '<strong>Per imprese pubbliche e private</strong> - Talented Europe vi metterá in contatto con i giovani studenti di talento di tutta Europa e vi aiuterà a incontrare la personsa adeguata che puó contribuire al successo della vostra impresa con il talento e le competenze specifiche che sta cercando.',
     
 ];

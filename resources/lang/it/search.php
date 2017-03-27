@@ -3,20 +3,20 @@
 
 return [
     
-        'loading' => 'Loading',
+        'loading' => 'Caricando',
     
-        'toggle' => 'Show/Hide',
+        'toggle' => 'Mostrare/Nascondere',
     
-        'current_search' => 'Current search',
+        'current_search' => 'Ricerca attuale',
     
-        'refereed' => 'Refereed',
+        'refereed' => 'Referenziato',
     
-        'there_are_no_matching_the_selected_filters' => 'There are no %s matching the selected filters at the moment',
+        'there_are_no_matching_the_selected_filters' => 'In questo momento non ci sono %s che si adeguino ai filtri selezionati',
     
-        'we_found' => 'We\'ve found',
+        'we_found' => 'Abbiamo trovato',
     
-        'we_found_matching_your_needs' => 'We\'ve found %number% %collective% matching your needs',
+        'we_found_matching_your_needs' => 'Abbiamo trovato %number% %collective% con i criteri selezionati',
     
-        'filters' => 'Filters',
+        'filters' => 'Filtri',
     
 ];

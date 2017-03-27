@@ -269,7 +269,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'es' => 'Barrister, Barrister&apos;s clerk, Chartered legal executive (England and Wales), Company secretary, Licensed conveyancer, Patent attorney, Solicitor, Solicitor, Scotland, Tax adviser, Trade mark attorney',                    
                 
-                    'it' => 'Avvocato/magistrato, impiegato del magistrate, dirigente d’azienda legale a tempo determinato, segretario della compagnia, notaio autorizzato, avvocato di brevetti, rappresentate legale, Scozia, consulente delle tasse, avvocato di marchio commerciale',                    
+                    'it' => 'Avvocato/magistrato, impiegato del magistrate, dirigente d’azienda legale a tempo determinato, segretario dell´impresa, notaio autorizzato, avvocato di brevetti, rappresentate legale, Scozia, consulente delle tasse, avvocato di marchio commerciale',                    
                 
                     'de' => 'Barrister, Barrister&apos;s clerk, Chartered legal executive (England and Wales), Company secretary, Licensed conveyancer, Patent attorney, Solicitor, Solicitor, Scotland, Tax adviser, Trade mark attorney',                    
                 

@@ -91,7 +91,7 @@ return [
     
         'footer_partners' => 'Partners',
     
-        'cookie_text' => 'Este sitio web utiliza cookies para ayudarnos a darle la mejor experiencia al visitar nuestro sitio web. Al continuar utilizando este sitio web, usted da su consentimiento a nuestro uso de estas cookies . Para saber más sobre cómo utilizamos las cookies y cómo manejarlas  lea <a href="/privacy-policy">cookie notice</a>',
+        'cookie_text' => 'Este sitio web utiliza cookies para ayudarnos a darle la mejor experiencia al visitar nuestro sitio web. Al continuar utilizando este sitio web, usted nos da su consentimiento para el uso de estas cookies . Para saber más sobre cómo utilizamos las cookies y cómo manejarlas  lea <a href="/privacy-policy">cookie notice</a>',
     
         'cookie_accept' => 'cerrar',
     
@@ -117,7 +117,7 @@ return [
     
         'next' => 'Siguiente',
     
-        'yes' => 'Yes',
+        'yes' => 'Si',
     
         'no' => 'No',
     

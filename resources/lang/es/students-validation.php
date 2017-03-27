@@ -11,10 +11,10 @@ return [
     
         'not_validated' => 'No validado',
     
-        'no_students' => 'No students',
+        'no_students' => 'Sin estudiantes',
     
-        'confirm_validation' => 'Confirm refereeing',
+        'confirm_validation' => 'Confirmar la validación',
     
-        'are_you_sure_you_want_to_finish_refereeing' => 'Are you sure you want to finish refereeing this student?',
+        'are_you_sure_you_want_to_finish_refereeing' => '¿Está seguro de que quiere finalizar la validación?',
     
 ];

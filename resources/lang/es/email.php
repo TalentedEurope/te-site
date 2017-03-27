@@ -7,17 +7,17 @@ return [
     
         'accountActivated_line_2' => 'Gracias por inscribirte en Talented Europe.',
     
-        'accountActivated_line_3' => 'Por favor, verifica tu dirección de correo electrónico haciendo clic en el enlace abajo.',
+        'accountActivated_line_3' => 'Por favor, verifica tu dirección de correo electrónico haciendo clic en el enlace a continuación.',
     
         'accountActivated_action_4' => 'Confirmar mi cuenta',
     
         'accountActivated_line_5' => 'Gracias por usar nuestra aplicación',
     
-        'changeInstitution_subject_1' => '%s te ha invitado como referencia en Talented Europe.',
+        'changeInstitution_subject_1' => '%s te ha invitado como validador en Talented Europe.',
     
-        'changeInstitution_line_2' => '%s te ha invitado como referencia en Talented Europe.',
+        'changeInstitution_line_2' => '%s te ha invitado como validador en Talented Europe.',
     
-        'changeInstitution_line_3' => 'Puesto que ya eres referencia de Talented Europe, necesitamos que confirmes este cambio.',
+        'changeInstitution_line_3' => 'Puesto que ya eres validador de Talented Europe, necesitamos que confirmes este cambio.',
     
         'changeInstitution_action_4' => 'Confirmar cambio',
     
@@ -29,9 +29,9 @@ return [
     
         'institutionRemoved.line_3' => '¡Gracias por usar nuestra aplicación!',
     
-        'inviteCreated_subject_1' => '%s te ha invitado como referencia en Talented Europe.',
+        'inviteCreated_subject_1' => '%s te ha invitado como validador en Talented Europe.',
     
-        'inviteCreated_line_2' => '%s te ha invitado como referencia en Talented Europe.',
+        'inviteCreated_line_2' => '%s te ha invitado como validador en Talented Europe.',
     
         'inviteCreated_line_3' => 'Crea tu cuenta haciendo clic en el siguiente enlace',
     
@@ -43,7 +43,7 @@ return [
     
         'validatorRequested_line_2' => 'Hola %s',
     
-        'validatorRequested_line_3' => '%s te ha invitado como referencia en Talented Europe.',
+        'validatorRequested_line_3' => '%s te ha invitado como validador en Talented Europe.',
     
         'validatorRequested_line_4' => 'Reenvía este correo electrónico a la institución para la que trabajas para que puedan registrarse a través del siguiente enlace',
     
