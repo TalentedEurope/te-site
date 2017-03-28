@@ -285,7 +285,7 @@ class SearchController extends SiteSearchController
                     ->where('banned', false)
                     ->where('userable_type', Student::class);
         })->select('student_languages.name')
-          ->groupBy('student_languages.level')
+          ->groupBy('student_languages.name')
           ->whereNotNull('student_languages.level')
           ->get();
 
