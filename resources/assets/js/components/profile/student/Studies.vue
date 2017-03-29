@@ -17,10 +17,14 @@
                 required :placeholder="$t('reg-profile.student_study_institution_name')" :value="study.institution_name" :readonly="!!study.locked" :errors="errors"></text-box-form>
 
             <div class="row">
-                <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_course_studies_name')"
-                    required :placeholder="$t('reg-profile.student_study_course_studies_name')" :value="study.name" :readonly="!!study.locked" :errors="errors"></text-box-form>
-                <select-form class="col-sm-4" code="level" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_level')"
-                    required :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyLevels" :value="study.level" :disabled="!!study.locked" :errors="errors"></select-form>
+                <div class="col-sm-8">
+                    <text-box-form code="name" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_course_studies_name')"
+                        required :placeholder="$t('reg-profile.student_study_course_studies_name')" :value="study.name" :readonly="!!study.locked" :errors="errors"></text-box-form>
+                </div>
+                <div class="col-sm-4">
+                    <select-form code="level" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_level')"
+                        required :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyLevels" :value="study.level" :disabled="!!study.locked" :errors="errors"></select-form>
+                </div>
             </div>
 
             <select-form code="field" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_field')"
@@ -54,10 +58,14 @@
                 required :placeholder="$t('reg-profile.student_study_institution_name')" :value="new_study.institution_name"></text-box-form>
 
             <div class="row">
-                <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="new_study.id"
-                    required :label="$t('reg-profile.student_study_course_studies_name')" :placeholder="$t('reg-profile.student_study_course_studies_name')" :value="new_study.name"></text-box-form>
-                <select-form class="col-sm-4" code="level" group-code="studies" :group-id="new_study.id"
-                    required :label="$t('reg-profile.student_study_level')" :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyLevels" :value="new_study.level"></select-form>
+                <div class="col-sm-8">
+                    <text-box-form code="name" group-code="studies" :group-id="new_study.id"
+                        required :label="$t('reg-profile.student_study_course_studies_name')" :placeholder="$t('reg-profile.student_study_course_studies_name')" :value="new_study.name"></text-box-form>
+                </div>
+                <div class="col-sm-4">
+                    <select-form code="level" group-code="studies" :group-id="new_study.id"
+                        required :label="$t('reg-profile.student_study_level')" :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyLevels" :value="new_study.level"></select-form>
+                </div>
             </div>
 
             <select-form code="field" group-code="studies" :group-id="new_study.id" :label="$t('reg-profile.student_study_field')"

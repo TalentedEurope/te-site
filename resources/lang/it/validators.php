@@ -3,88 +3,88 @@
 
 return [
     
-        'my_students' => 'My students',
+        'my_students' => 'I miei studenti',
     
-        'enable' => 'Enable',
+        'enable' => 'Abilitato',
     
-        'disable' => 'Disable',
+        'disable' => 'Disabilitato',
     
-        'add_new' => 'Add a new referee',
+        'add_new' => 'Aggiungere una nuova referenza',
     
-        'send_invitation' => 'Send invitation to referee',
+        'send_invitation' => 'Inviare un invito al referente',
     
-        'validating' => 'Refereeing',
+        'validating' => 'Convalizzando',
     
-        'student_already_validated' => 'You\'ve already validated this student',
+        'student_already_validated' => 'Hai giá convalidato questo studente',
     
-        'jump_to_results' => 'Jump to results',
+        'jump_to_results' => 'Andare ai risultati',
     
-        'you_are_validating_following_student' => 'You\'re validating the following student',
+        'you_are_validating_following_student' => 'Stai convalidando il seguente studente',
     
-        'jump_to_validation' => 'Jump to validation',
+        'jump_to_validation' => 'Andare alla convalida',
     
-        'student_validation' => 'Student validation',
+        'student_validation' => 'Convalida dello studente',
     
-        'valid' => 'Valid',
+        'valid' => 'Valido',
     
-        'student_passed_validation_successfully' => 'The student passed your validation successfully',
+        'student_passed_validation_successfully' => 'Lo studente ha superato con successo la tua convalida ',
     
-        'your_comments' => 'Your comments',
+        'your_comments' => 'I tuoi commenti',
     
-        'your_chosen_skills' => 'Your chosen skills',
+        'your_chosen_skills' => 'Le tue competenze scelte',
     
-        'invalid' => 'Invalid',
+        'invalid' => 'Non valido',
     
-        'student_didnt_meet_criteria' => 'The student didn\'t meet the criteria',
+        'student_didnt_meet_criteria' => 'Lo studente non ha soddisfatto i criteri ',
     
-        'make_sure_you_have_reviewed_student' => 'Please make sure you have reviewed the student profile carefully before validating it',
+        'make_sure_you_have_reviewed_student' => 'Per favore assicurati di aver revisionato attentamente il profilo dello studente prima di valutarlo',
     
-        'this_student_is' => 'This student is',
+        'this_student_is' => 'Questo studente é',
     
-        'finish_validation' => 'Finish_validation',
+        'finish_validation' => 'Convalida terminata',
     
-        'give_us_explanation_of_student_is_not_valid' => 'Please give us an explanation of the reason the student is not valid.',
+        'give_us_explanation_of_student_is_not_valid' => 'Per favore, fornisci una spiegazione del motivo per cui lo/la studente/ssa non é valido/a',
     
-        'note_if_validation_is_passed_as_no_student' => 'Note: If the validation is passed as "No student" the student will be able to validate his profile again.',
+        'note_if_validation_is_passed_as_no_student' => 'Nota: se la valutazione é approvata come "No studente" lo studente avrá la possibilitá di valutare il suo profilo di nuovo',
     
-        'user_hasnt_complete_filling_its_profile' => 'hasn\'t complete filling it\'s profile. Until this process is complete you cannot validate any student',
+        'user_hasnt_complete_filling_its_profile' => 'L\'usuario non ha completato la compilazione del profilo. Fino a quando questo processo non é completo non é possibile valutare gli studenti.',
     
-        'manage_validators' => 'Manage referees',
+        'manage_validators' => 'Gestire valutatori',
     
-        'validators' => 'Referees',
+        'validators' => 'Valutatori',
     
-        'invites_pending' => 'Invites pending',
+        'invites_pending' => 'Inviti pendenti',
     
-        'date_sent' => 'Date sent',
+        'date_sent' => 'Data di invio',
     
-        'note_invites_are_only_valid_14_days' => 'Note: invites are only valid 14 days after being sent, and they will disapear from this list afterwards',
+        'note_invites_are_only_valid_14_days' => 'Nota: gli inviti sono validi solamente 14 giorni dopo l\' invio e spariranno da questa lista dopo tale periodo',
     
-        'cancel' => 'Cancel',
+        'cancel' => 'Cancellare',
     
-        'cannot_change_institution' => 'Cannot change institution',
+        'cannot_change_institution' => 'Non e´possibile cambiare l´istituzione',
     
-        'invitation_is_not_valid_or_you_accepted_it' => 'Either your invitation is not valid anymore, or you already accepted it',
+        'invitation_is_not_valid_or_you_accepted_it' => 'O il tuo invito non é piú valido o é stato giá accettato',
     
-        'changed_institution_successfully' => 'Changed Institution successfully',
+        'changed_institution_successfully' => 'Il cambio di Istituzione é avvenuto con successo',
     
-        'youll_receive_notifications_from' => 'From now on you\'ll receive validation notifications from',
+        'youll_receive_notifications_from' => 'Da adesso riceverai notiche di approvazione da',
     
-        'cannot_complete_invitation' => 'Cannot complete invitation',
+        'cannot_complete_invitation' => 'Non si puó completare l\'invito',
     
-        'no_alerts_found' => 'No alerts found',
+        'no_alerts_found' => 'Nessun avviso trovato',
     
-        'study_level' => 'Study level',
+        'study_level' => 'Livello di studio',
     
-        'when_it_was_sent' => 'When it was sent?',
+        'when_it_was_sent' => 'Quando é stato inviato?',
     
-        'no_referees' => 'No referees',
+        'no_referees' => 'Senza referenti',
     
-        'remove_referee' => 'Remove referee',
+        'remove_referee' => 'Eliminare referente',
     
-        'do_you_want_to_remove_referee' => 'Do you want to remove %s from your institution?',
+        'do_you_want_to_remove_referee' => 'Vuoi rimuovere %s dalla tua Istituzione?',
     
-        'remove' => 'Remove',
+        'remove' => 'Eliminare',
     
-        'removing' => 'Removing',
+        'removing' => 'Eliminando',
     
 ];

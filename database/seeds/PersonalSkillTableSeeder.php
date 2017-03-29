@@ -129,7 +129,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'es' => 'comercial',                    
                 
-                    'it' => 'pragmatico, efficiente',                    
+                    'it' => 'commerciale',                    
                 
                     'de' => 'kommerziell',                    
                 

@@ -17,6 +17,6 @@ return [
     
         'we_found_matching_your_needs' => 'Hemos encontrado %number% %collective% con los criterios seleccionados',
     
-        'filters' => 'Filters',
+        'filters' => 'Filtros',
     
 ];
