@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController as SiteProfileController;
 use App\Models\Student;
 use App\Models\Company;
 use App\Models\User;
+use \App\Models\Institution;
 use App\Models\ValidationRequest;
 use App\Models\StudentStudy;
 use App\Models\StudentLanguage;
@@ -22,6 +23,12 @@ class ProfileController extends SiteProfileController
     {
         $this->middleware('jwt.auth', ['except' => array('index')]);
     }
+
+    public function getInstitutions()
+    {
+        return User::where('is_filled', 1)->where('userable_type', Institution::class)->select('name')->get();
+    }
+
 
     public function update(Request $request)
     {
