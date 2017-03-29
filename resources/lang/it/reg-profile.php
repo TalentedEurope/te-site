@@ -389,7 +389,7 @@ return [
     
         'student_professional_skills_add' => 'Aggiungere competenza professionale',
     
-        'profile_readiness' => 'Profilo di preparazione',
+        'profile_readiness' => 'Preparazione del profilo',
     
         'profile_readiness_explanation' => 'Avere il tuo profilo vidimato permette a terzi di crearsi un opinione su di te e aumenta la possibilità che le imprese si mettano in contatto con te ',
     
