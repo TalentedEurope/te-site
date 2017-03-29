@@ -25,6 +25,8 @@ return [
     
         'country' => 'Land',
     
+        'countries' => 'Countries',
+    
         'institution_certificate_template_download' => 'Muster herunterladen',
     
         'fiscal_id' => 'Steueridentifikationsnummer',

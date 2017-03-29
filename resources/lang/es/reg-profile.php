@@ -25,6 +25,8 @@ return [
     
         'country' => 'País',
     
+        'countries' => 'Países',
+    
         'institution_certificate_template_download' => 'Descargar plantilla',
     
         'fiscal_id' => 'Número de identificación fiscal',

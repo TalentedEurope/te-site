@@ -25,6 +25,8 @@ return [
     
         'country' => 'Krajina',
     
+        'countries' => 'Countries',
+    
         'institution_certificate_template_download' => 'Stiahnite si šablónu',
     
         'fiscal_id' => 'IČO',

@@ -25,6 +25,8 @@ return [
     
         'country' => 'Stato',
     
+        'countries' => 'Countries',
+    
         'institution_certificate_template_download' => 'Scaricare il modello',
     
         'fiscal_id' => 'Codice Fiscale',
