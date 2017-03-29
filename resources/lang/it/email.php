@@ -3,7 +3,7 @@
 
 return [
     
-        'accountActivated_subject_1' => 'Azione richiesta. Attivare l\'account.',
+        'accountActivated_subject_1' => 'Azione richiesta: Attiva il tuo account.',
     
         'accountActivated_line_2' => 'Grazie per la tua registrazione su Talented Europe',
     
@@ -13,11 +13,11 @@ return [
     
         'accountActivated_line_5' => 'Grazie per utilizzare la nostra applicazione',
     
-        'changeInstitution_subject_1' => '%s Ti ha invitato come referente su Talented Europe.',
+        'changeInstitution_subject_1' => '%s Ti ha invitato come attestatore su Talented Europe.',
     
-        'changeInstitution_line_2' => '%s Ti ha invitato come referente su Talented Europe.',
+        'changeInstitution_line_2' => '%s Ti ha invitato come attestatore su Talented Europe.',
     
-        'changeInstitution_line_3' => 'Dato che sei già una referente su Talented Europe, abbiamo bisogno che confermi questa modifica.',
+        'changeInstitution_line_3' => 'Dato che sei già un attestatore su Talented Europe, abbiamo bisogno che confermi questa modifica.',
     
         'changeInstitution_action_4' => 'Confermare le modifiche',
     
@@ -29,9 +29,9 @@ return [
     
         'institutionRemoved.line_3' => 'Grazie per utilizzare la nostra applicazione',
     
-        'inviteCreated_subject_1' => '%s Ti ha invitato come referente su Talented Europe.',
+        'inviteCreated_subject_1' => '%s Ti ha invitato come attestatore su Talented Europe.',
     
-        'inviteCreated_line_2' => '%s Ti ha invitato come referente su Talented Europe.',
+        'inviteCreated_line_2' => '%s Ti ha invitato come attestatore su Talented Europe.',
     
         'inviteCreated_line_3' => 'Crea il tuo account cliccando sul seguente link.',
     
@@ -39,13 +39,13 @@ return [
     
         'inviteCreated_line_5' => 'Grazie per utilizzare la nostra applicazione',
     
-        'validatorRequested_subject_1' => '%s Ti ha invitato come referente su Talented Europe.',
+        'validatorRequested_subject_1' => '%s Ti ha invitato come attestatore su Talented Europe.',
     
         'validatorRequested_line_2' => 'Ciao %s',
     
-        'validatorRequested_line_3' => '%s Ti ha invitato come referenza su Talented Europe.',
+        'validatorRequested_line_3' => '%s Ti ha invitato come attestatore su Talented Europe.',
     
-        'validatorRequested_line_4' => 'Inviate questo link all\'istituzione nella quale lavorate perché possa registrarsi.',
+        'validatorRequested_line_4' => 'Inviate questo link all\'istituzione nella quale lavorate affinché possano registrarsi.',
     
         'validatorRequested_line_5' => 'Se la vostra istituzione si registra utilizzando il seguente link, sarete invitati automaticamente a iscrivervi nel registro dell\'istituzione.',
     

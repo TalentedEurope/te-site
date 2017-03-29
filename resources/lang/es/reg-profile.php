@@ -457,6 +457,6 @@ return [
     
         'institution_type' => 'Tipo de institución',
     
-        'complete_the_registration' => 'Complete el registro añadiendo su información',
+        'complete_the_registration' => 'Complete el registro añadiendo la siguiente información',
     
 ];

@@ -11,7 +11,7 @@ return [
     
         'add_new' => 'Aggiungere una nuova referenza',
     
-        'send_invitation' => 'Inviare un invito al referente',
+        'send_invitation' => 'Inviare un invito all\'attestatore',
     
         'validating' => 'Convalizzando',
     
@@ -45,13 +45,13 @@ return [
     
         'give_us_explanation_of_student_is_not_valid' => 'Per favore, fornisci una spiegazione del motivo per cui lo/la studente/ssa non é valido/a',
     
-        'note_if_validation_is_passed_as_no_student' => 'Nota: se la valutazione é approvata come "No studente" lo studente avrá la possibilitá di valutare il suo profilo di nuovo',
+        'note_if_validation_is_passed_as_no_student' => 'Nota: se l\'attestazione ha come esito "Nessun studente" lo studente avrá la possibilitá di far attestare il suo profilo di nuovo',
     
         'user_hasnt_complete_filling_its_profile' => 'L\'usuario non ha completato la compilazione del profilo. Fino a quando questo processo non é completo non é possibile valutare gli studenti.',
     
-        'manage_validators' => 'Gestire valutatori',
+        'manage_validators' => 'Gestire attestatori',
     
-        'validators' => 'Valutatori',
+        'validators' => 'Attestatori',
     
         'invites_pending' => 'Inviti pendenti',
     
@@ -77,9 +77,9 @@ return [
     
         'when_it_was_sent' => 'Quando é stato inviato?',
     
-        'no_referees' => 'Senza referenti',
+        'no_referees' => 'Senza attestatori',
     
-        'remove_referee' => 'Eliminare referente',
+        'remove_referee' => 'Eliminare attestatore',
     
         'do_you_want_to_remove_referee' => 'Vuoi rimuovere %s dalla tua Istituzione?',
     

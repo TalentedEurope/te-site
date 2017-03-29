@@ -7,7 +7,7 @@
             </select-form>
         </div>
         <div class="col-sm-6">
-            <autocomplete code="institution" :items="institutions" :placeholder="$t('reg-profile.student_study_institution_name')" :disabled="isInstitutionsDisabled" required>
+            <autocomplete code="institution" :items="institutions" :placeholder="$t('reg-profile.student_study_institution_name')" only-matches="true" open-on-click="true" :disabled="isInstitutionsDisabled" no-validate required>
             </autocomplete>
         </div>
 

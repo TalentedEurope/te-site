@@ -13,8 +13,9 @@
 
             <text-box-form type="hidden" code="id" group-code="studies" :group-id="study.id" :value="study.id"></text-box-form>
 
-            <text-box-form code="institution_name" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_institution_name')"
-                required :placeholder="$t('reg-profile.student_study_institution_name')" :value="study.institution_name" :readonly="!!study.locked" :errors="errors"></text-box-form>
+            <autocomplete code="institution_name" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_institution_name')"
+                :items="institutions" required :placeholder="$t('reg-profile.student_study_institution_name')" :value="study.institution_name" :readonly="!!study.locked" :errors="errors">
+            </autocomplete>
 
             <div class="row">
                 <div class="col-sm-8">
@@ -54,8 +55,9 @@
                 </button>
             </header>
 
-            <text-box-form code="institution_name" group-code="studies" :group-id="new_study.id" :label="$t('reg-profile.student_study_institution_name')"
-                required :placeholder="$t('reg-profile.student_study_institution_name')" :value="new_study.institution_name"></text-box-form>
+            <autocomplete code="institution_name" group-code="studies" :group-id="new_study.id" :label="$t('reg-profile.student_study_institution_name')"
+                :items="institutions" required :placeholder="$t('reg-profile.student_study_institution_name')" :value="new_study.institution_name">
+            </autocomplete>
 
             <div class="row">
                 <div class="col-sm-8">
@@ -92,16 +94,19 @@ import RemoveItemButton from './common/RemoveItemButton.vue';
 import TextBoxForm from '../common/TextBoxForm.vue';
 import SelectForm from '../common/SelectForm.vue';
 import FileForm from '../common/FileForm.vue';
+import Autocomplete from './common/Autocomplete.vue';
+import { institutionsResource } from 'resources/institutions';
 import EventBus from 'event-bus.js';
 
 export default {
     props: ['studies', 'studyLevels', 'studyFields', 'userId', 'errors'],
-    components: { RemoveItemButton, TextBoxForm, SelectForm, FileForm },
+    components: { RemoveItemButton, TextBoxForm, SelectForm, FileForm, Autocomplete },
     data() {
         return {
             parsed_studies: JSON.parse(this.studies),
             new_studies: [],
-            remove_studies: []
+            remove_studies: [],
+            institutions: []
         }
     },
     ready() {
@@ -111,6 +116,11 @@ export default {
         EventBus.$on('onRemoveStudy', (study) => {
             this.remove_studies.push(study.id);
         });
+
+        institutionsResource.get()
+            .then((response) => {
+                this.institutions = response.body;
+            })
     },
     methods: {
         clearForm: function () {

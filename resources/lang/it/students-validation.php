@@ -13,8 +13,8 @@ return [
     
         'no_students' => 'Senza studenti',
     
-        'confirm_validation' => 'Confermare la validazione',
+        'confirm_validation' => 'Confermare l\' attestazione',
     
-        'are_you_sure_you_want_to_finish_refereeing' => 'Sei sicuro di voler concludere la validazione di questo studente?',
+        'are_you_sure_you_want_to_finish_refereeing' => 'Sei sicuro di voler concludere l\'attestazione di questo studente?',
     
 ];
