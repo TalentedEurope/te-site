@@ -55,12 +55,12 @@ return [
     
         'students_title' => 'Studenti di talento',
     
-        'no_students' => 'Nessuno studente disponibili',
+        'no_students' => 'Nessun studente disponibile',
     
         'join_talented_europe_today' => 'Unisciti al Talented Europe oggi!',
     
-        'talented_for_students' => '<strong>Per studenti</strong> - Talented Europe aumenterà la possibilità di trovare un lavoro con il supporto dei vostri tutors e vi metterà in contatto con le imprese e i professionisti privati per trovare tirocini nelle imprese o ottenere il vostro primo lavoro',
+        'talented_for_students' => '<strong>Per studenti</strong> - Talented Europe aumenterà la possibilità di trovare un lavoro con il supporto dei vostri tutors e vi metterà in contatto con le imprese e i professionisti per trovare tirocini nelle imprese o ottenere il vostro primo lavoro',
     
-        'talented_for_employers' => '<strong>Per imprese pubbliche e private</strong> - Talented Europe vi metterá in contatto con i giovani studenti di talento di tutta Europa e vi aiuterà a incontrare la personsa adeguata che puó contribuire al successo della vostra impresa con il talento e le competenze specifiche che sta cercando.',
+        'talented_for_employers' => '<strong>Per imprese e professionisti</strong> - Talented Europe vi metterá in contatto con i giovani studenti di talento di tutta Europa e vi aiuterà a incontrare la persona adeguata che puó contribuire al successo della vostra impresa con il talento e le competenze specifiche che sta cercando.',
     
 ];

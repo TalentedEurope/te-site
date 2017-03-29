@@ -37,7 +37,7 @@ return [
     
         'student_didnt_meet_criteria' => 'El estudiante no cumplió con los criterios',
     
-        'make_sure_you_have_reviewed_student' => 'Please make sure you have reviewed the student profile carefully before validating it',
+        'make_sure_you_have_reviewed_student' => 'Por favor, asegúrese de revisar cuidadosamente el perfil del estudiante antes de validarlo',
     
         'this_student_is' => 'Este estudiante es',
     
@@ -45,9 +45,9 @@ return [
     
         'give_us_explanation_of_student_is_not_valid' => 'Por favor, proporciona un motivo por el que el/la estudiante no es válido',
     
-        'note_if_validation_is_passed_as_no_student' => 'Note: If the validation is passed as "No student" the student will be able to validate his profile again.',
+        'note_if_validation_is_passed_as_no_student' => 'Nota: Si la validación se concluye como "Ningún estudiante" el estudiante podrá validar su perfil otra vez.',
     
-        'user_hasnt_complete_filling_its_profile' => 'hasn\'t complete filling it\'s profile. Until this process is complete you cannot validate any student',
+        'user_hasnt_complete_filling_its_profile' => 'Perfil no acabado. Si el perfil no está completo, no se puede validar a ningún estudiante. ',
     
         'manage_validators' => 'Gestionar validadores',
     
@@ -57,7 +57,7 @@ return [
     
         'date_sent' => 'Fecha de envío',
     
-        'note_invites_are_only_valid_14_days' => 'Note: invites are only valid 14 days after being sent, and they will disapear from this list afterwards',
+        'note_invites_are_only_valid_14_days' => 'Nota: las invitaciones son válidas solamente 14 días después de ser enviadas, y después desaparecerán de esta lista',
     
         'cancel' => 'Cancelar',
     
@@ -67,7 +67,7 @@ return [
     
         'changed_institution_successfully' => 'La institución se ha cambiado satisfactoriamente',
     
-        'youll_receive_notifications_from' => 'From now on you\'ll receive validation notifications from',
+        'youll_receive_notifications_from' => 'A partir de ahora recibirás notificaciones de validación de',
     
         'cannot_complete_invitation' => 'No se puede completar la invitación',
     

@@ -13,15 +13,15 @@ return [
     
         'search_companies' => 'Ceca imprese',
     
-        'register_as_validator' => 'Register as referee',
+        'register_as_validator' => 'Registrati come valutatore',
     
-        'there_have_been_some_errors' => 'Ci sono stati degli errori',
+        'there_have_been_some_errors' => 'Sono stati rilevati degli errori',
     
         'i_am_a' => 'Sono un',
     
-        'all_fields_are_required' => 'Sono richiesti tutti i campi',
+        'all_fields_are_required' => 'Tutti i campi sono obbligatori',
     
-        'confirmation_email_may_take_few_minutes' => 'Your confirmation email may take a few minutes to arrive, make sure you also check out your spam folder',
+        'confirmation_email_may_take_few_minutes' => 'La mail di conferma richiederá qualche minuto per essere ricevuta, per essere sicuro del suo arrivo puoi controllare la tua cartella spam',
     
         'registration_complete_successfully' => 'Registrazione completata con successo',
     

@@ -19,6 +19,6 @@ return [
     
         'meanwhile_can_searching_for' => 'Intanto puoi provare a cercare ',
     
-        'be_right_back' => 'Torno subito',
+        'be_right_back' => 'Torniamo subito',
     
 ];

@@ -239,15 +239,15 @@ return [
     
         'profile_visibility' => 'Visibilità del profilo',
     
-        'profile_visibility_visible' => 'Visibile. Può essere cercato,visto',
+        'profile_visibility_visible' => 'Visibile. Può essere cercato, visto',
     
         'profile_visibility_hidden' => 'Nascosto. Non può essere cercato o visto',
     
-        'notifications' => 'Notificazioni',
+        'notifications' => 'Notifiche',
     
-        'notifications_enabled' => 'Abilitato. Riceverai emails una volta al giorno se uno studente vuole mettersi in contatto con te',
+        'notifications_enabled' => 'Abilitato. Se uno studente vuole mettersi in contatto con te, riceverari un email una volta al giorno.',
     
-        'notifications_disabled' => 'Disabiltato. Non riceverai nessuna mail salvo quelle di servizio',
+        'notifications_disabled' => 'Disabiltato. Non riceverai nessuna mail salvo le comunicazioni di servizio',
     
         'about' => 'Riguardo a',
     
@@ -265,9 +265,9 @@ return [
     
         'what_is_talent_for_you_in_a_few_words' => 'Spiegaci cosa é il talento per te in poche parole',
     
-        'most_valuable_skills_for_company' => 'Una lista delle tue competenze per l´impresa',
+        'most_valuable_skills_for_company' => 'Una lista delle competenze piú importanti per l´impresa',
     
-        'setup_alternative_contact' => 'Setup an alternative contact user that will receive all the notifications instead of the main account',
+        'setup_alternative_contact' => 'Impostare user di contatto alternativo all\' account principale per ricevere tutte le informazioni',
     
         'update_settings' => 'Aggiornare le impostazioni',
     
@@ -275,9 +275,9 @@ return [
     
         'new_password' => 'Nuova password',
     
-        'repeat_new_password' => 'Ripeti la nuova password',
+        'repeat_new_password' => 'Ripetere la nuova password',
     
-        'save_new_password' => 'Salva la nuova password',
+        'save_new_password' => 'Salvare la nuova password',
     
         'career_and_skills' => 'Carriera e competenze',
     
@@ -291,7 +291,7 @@ return [
     
         'referee_email' => 'email del referente',
     
-        'get_your_profile_refereed' => 'ottieni il tuo profilo referenziato',
+        'get_your_profile_refereed' => 'Fai valutare il tuo profilo',
     
         'want_to_view_all_details_of_student' => 'Vuoi vedere tutti i dettagli di questo studente?',
     
@@ -305,9 +305,9 @@ return [
     
         'skilled_in' => 'Competente in',
     
-        'refereed_by' => 'Referenziato da',
+        'refereed_by' => 'Valutato da',
     
-        'refereeing_pending' => 'Referenze pendenti',
+        'refereeing_pending' => 'Valutazioni pendenti',
     
         'skills' => 'Competenze',
     
@@ -317,9 +317,9 @@ return [
     
         'legend' => 'Legenda',
     
-        'set_by_both_parties' => 'Impostare da entrambe le parti',
+        'set_by_both_parties' => 'Selezionato da entrambe le parti',
     
-        'set_by_referee_or_student' => 'Impostare o il referente o lo studente',
+        'set_by_referee_or_student' => 'Impostare il referente o lo studente',
     
         'study' => 'Studio|Studi',
     
@@ -337,11 +337,11 @@ return [
     
         'not_enough_information' => 'Informazioni insufficienti',
     
-        'fix_the_following_errors' => 'E´necessario che tu corregga i seguenti errori',
+        'fix_the_following_errors' => 'E´necessario correggere i seguenti errori',
     
         'click_on_button_to_fill_required_fields' => 'Per favore esegui un click sul bottone di seguito per riempire i campi richiesti',
     
-        'institution_fix_the_following_errors' => 'E´necessario che tu corregga i seguenti errori o i tuoi referenti non saranno in grado di convalidare il tuo profilo',
+        'institution_fix_the_following_errors' => 'E´necessario che corregga i seguenti errori o i tuoi referenti non saranno in grado di valutare il tuo profilo',
     
         'my_institution' => 'Il mio istituto',
     
@@ -391,7 +391,7 @@ return [
     
         'profile_readiness' => 'Profilo di preparazione',
     
-        'profile_readiness_explanation' => 'Getting your profile refereed gives a third party opinion of you and helps increasing the possibilities of contact from a company',
+        'profile_readiness_explanation' => 'Avere il tuo profilo convalidato permette che all\'esterno si abbia una opinione di te ',
     
         'get_a_better_refeer' => 'Get a better refeer improving your profile readiness and improve possibility of company contact',
     
@@ -409,7 +409,7 @@ return [
     
         'profile_validated_denied' => 'Il tuo profilo e´stato rifiutato',
     
-        'not_enough_data_to_do_a_refeer' => 'We don\'t have enough data from you to be able to do a refeer.',
+        'not_enough_data_to_do_a_refeer' => 'Non abbiamo abbastanza tuoi dati per fare una referenza',
     
         'progress_account_setup' => 'Configurazione dell´account',
     
@@ -419,11 +419,11 @@ return [
     
         'progress_completed' => 'Completato',
     
-        'you_must_put_referee_email' => '<strong>Please note:</strong> You must put the referee email, not the one form the institution',
+        'you_must_put_referee_email' => '<strong>Per favore nota che:</strong> Devi mettere la mail del referente, non quella dell´\'Istituzione',
     
         'leave_institution' => 'Lasciare l´Istituzione?',
     
-        'do_you_want_to_leave_institution' => 'Vuoi lasciare l\'istituzione? Ció comporterà che le richieste di validazione pendenti vengano reinviate indietro, non sarà possibile validare nessuno fino a quando un\'altra istituzione ti inviterà di nuovo',
+        'do_you_want_to_leave_institution' => 'Vuoi lasciare l\'istituzione? Ció comporterà che le richieste di validazione pendenti vengano reinviate indietro, non sarà possibile convalidare nessuno fino a quando un\'altra istituzione ti inviterà di nuovo',
     
         'leave_institution_button' => 'Si! esco dall`Istituzione Accademica!',
     
@@ -457,6 +457,6 @@ return [
     
         'institution_type' => 'tipo Istituzione',
     
-        'complete_the_registration' => 'Complete the registration adding your information',
+        'complete_the_registration' => 'Completa la registrazione aggiungendo le tue informazioni',
     
 ];

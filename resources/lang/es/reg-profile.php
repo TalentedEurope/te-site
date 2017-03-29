@@ -263,7 +263,7 @@ return [
     
         'web_url' => 'Dirección de la página Web',
     
-        'what_is_talent_for_you_in_a_few_words' => 'Explain us what is talent for you in a few words',
+        'what_is_talent_for_you_in_a_few_words' => 'Explícanos brevemente qué es talento para ti.',
     
         'most_valuable_skills_for_company' => 'Un listado de las habilidades mas valoradas por la empresa',
     
@@ -287,11 +287,11 @@ return [
     
         'my_talent' => 'Mi talento',
     
-        'referee_name' => 'nombre del validador',
+        'referee_name' => 'Nombre del validador',
     
-        'referee_email' => 'email del validador',
+        'referee_email' => 'Email del validador',
     
-        'get_your_profile_refereed' => 'obtén tu perfil validado',
+        'get_your_profile_refereed' => 'Obtén tu perfil validado',
     
         'want_to_view_all_details_of_student' => '¿Quiere ver todos los detalles del estudiante?',
     
@@ -327,7 +327,7 @@ return [
     
         'get_in_contact' => 'Mantente en contacto',
     
-        'want_to_show_this_company_how_talented_you_are' => 'Do you want to show this company how talented you are?',
+        'want_to_show_this_company_how_talented_you_are' => '¿Quieres mostrar a esta empresa tu talento?',
     
         'we_are_in' => 'Estamos en',
     
@@ -339,35 +339,35 @@ return [
     
         'fix_the_following_errors' => 'Necesitas corregir los siguientes errores',
     
-        'click_on_button_to_fill_required_fields' => 'Please click the following button to fill the required fields.',
+        'click_on_button_to_fill_required_fields' => 'Haz click en el siguiente botón para rellenar los campos requeridos.',
     
-        'institution_fix_the_following_errors' => 'You\'ll need to fix the following errors or your referees won\'t be able to validate profiles',
+        'institution_fix_the_following_errors' => 'Corrige los siguientes errores o los validadores no podrán validar perfiles',
     
         'my_institution' => 'Mi institución',
     
         'required' => 'Requerido',
     
-        'remove_btn' => 'Remove',
+        'remove_btn' => 'Eliminar',
     
-        'student_study_institution_name' => 'Institution name',
+        'student_study_institution_name' => 'Nombre de la institución',
     
-        'student_study_course_studies_name' => 'Course/Studies name',
+        'student_study_course_studies_name' => 'Nombre del Curso / Estudios',
     
-        'student_download_certificate' => 'Download Certificate',
+        'student_download_certificate' => 'Descargar certificado',
     
-        'student_download_grade_card' => 'Download Gradecard',
+        'student_download_grade_card' => 'Descargar la tabla de valuación',
     
-        'student_study_add_more' => 'add more studies',
+        'student_study_add_more' => 'Añadir más estudios',
     
-        'student_training_course_name' => 'Course name',
+        'student_training_course_name' => 'Nombre del curso',
     
-        'student_training_add' => 'add a training',
+        'student_training_add' => 'Añadir un curso',
     
-        'student_training_add_more' => 'add more trainings',
+        'student_training_add_more' => 'Añadir más cursos',
     
-        'student_language' => 'Language',
+        'student_language' => 'Idioma',
     
-        'student_language_name' => 'Language name',
+        'student_language_name' => 'Nombre del idioma',
     
         'student_language_level' => 'Nivel de idioma',
     
@@ -389,27 +389,27 @@ return [
     
         'student_professional_skills_add' => 'Añadir una habilidad profesional',
     
-        'profile_readiness' => 'Profile readiness',
+        'profile_readiness' => 'Preparación del perfil',
     
-        'profile_readiness_explanation' => 'Getting your profile refereed gives a third party opinion of you and helps increasing the possibilities of contact from a company',
+        'profile_readiness_explanation' => 'La validación de tu perfil ayuda a terceros a formar una opinión de ti y aumenta las posibilidades de que una empresa se ponga en contacto contigo',
     
-        'get_a_better_refeer' => 'Get a better refeer improving your profile readiness and improve possibility of company contact',
+        'get_a_better_refeer' => 'Obtén mejor validación de tu perfil aumentando su preparación y al mismo tiempo aumentando las posibilidades que estar contactado por la empresa',
     
         'request_is_managed_by' => 'Tu solicitud está siendo gestionada por',
     
-        'cant_find_your_institution' => 'Can\'t find your institution? ask your referee and institution to join Talented Europe',
+        'cant_find_your_institution' => '¿No puedes encontrar tu institución? Pide a tu validador y a la institución que se unan a Talented Europe',
     
         'this_step_sends_an_email_to_your_referee' => 'This step sends an email to your referee with instructions on how to join Talented Europe, automatically registers him as referee once his institution joins, and adds you to the refeeral queue',
     
         'send_invitation' => 'Enviar invitación',
     
-        'profile_validated_successfully' => 'Your profile was validated successfully',
+        'profile_validated_successfully' => 'Tu perfil ha sido validado',
     
-        'referee_said_about_you' => 'This is what your referee said about you',
+        'referee_said_about_you' => 'Esto ha dicho tu validador sobre ti',
     
         'profile_validated_denied' => 'Tu perfil fue rechazado',
     
-        'not_enough_data_to_do_a_refeer' => 'We don\'t have enough data from you to be able to do a refeer.',
+        'not_enough_data_to_do_a_refeer' => 'No tenemos suficientes datos para hacer la validación.',
     
         'progress_account_setup' => 'Configuración de la cuenta',
     
@@ -419,17 +419,17 @@ return [
     
         'progress_completed' => 'Completado',
     
-        'you_must_put_referee_email' => '<strong>Please note:</strong> You must put the referee email, not the one form the institution',
+        'you_must_put_referee_email' => '<strong>Por favor, tenga en cuenta:</strong> Tiene que introducir el correo electrónico del validador no de la institución',
     
         'leave_institution' => '¿Abandonas la institución educativa?',
     
-        'do_you_want_to_leave_institution' => 'Do you want to leave the institution? this will send the pending validation requests back to it, and you won\'t be able to validate anyone until another institution invites you back',
+        'do_you_want_to_leave_institution' => '¿Quieres abandonar la institución? Las solicitudes de validación pendientes serán devueltas y usted no podrá validar a nadie hasta que otra institución no lo invite de nuevo',
     
         'leave_institution_button' => 'Sí. Abandono la institución académica',
     
         'your_profile_is_empty' => '¡Tu perfil está vacío!',
     
-        'tab_changes_not_saved' => 'Tab changes haven\'t been saved, you may lose some data',
+        'tab_changes_not_saved' => 'Los cambios no se han guardado, es posible que se pierdan algunos datos',
     
         'save_changes' => 'Guardar los cambios',
     
@@ -437,9 +437,9 @@ return [
     
         'im_here' => '¡Estoy aquí!',
     
-        'cannot_send_more_alerts_to_this_company_today' => 'You cannot send more alerts to this company today',
+        'cannot_send_more_alerts_to_this_company_today' => 'No se pueden enviar más alertas a esta empresa hoy.',
     
-        'tell_the_company_that_you_be_interested' => 'Tell the company that you may be interested to work for them',
+        'tell_the_company_that_you_be_interested' => 'Dile a la empresa que estás interesado en trabajar para ellos',
     
         'alert_sent_successfully' => 'Alerta enviada satisfactoriamente a la empresa',
     

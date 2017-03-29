@@ -37,7 +37,7 @@ return [
     
         'student_didnt_meet_criteria' => 'Lo studente non ha soddisfatto i criteri ',
     
-        'make_sure_you_have_reviewed_student' => 'Per favore assicurati di aver revisionato attentamente il profilo dello studente prima di convalidarlo',
+        'make_sure_you_have_reviewed_student' => 'Per favore assicurati di aver revisionato attentamente il profilo dello studente prima di valutarlo',
     
         'this_student_is' => 'Questo studente é',
     
@@ -45,43 +45,43 @@ return [
     
         'give_us_explanation_of_student_is_not_valid' => 'Per favore, fornisci una spiegazione del motivo per cui lo/la studente/ssa non é valido/a',
     
-        'note_if_validation_is_passed_as_no_student' => 'Note: If the validation is passed as "No student" the student will be able to validate his profile again.',
+        'note_if_validation_is_passed_as_no_student' => 'Nota: se la valutazione é approvata come "No studente" lo studente avrá la possibilitá di valutare il suo profilo di nuovo',
     
-        'user_hasnt_complete_filling_its_profile' => 'hasn\'t complete filling it\'s profile. Until this process is complete you cannot validate any student',
+        'user_hasnt_complete_filling_its_profile' => 'L\'usuario non ha completato la compilazione del profilo. Fino a quando questo processo non é completo non é possibile valutare gli studenti.',
     
-        'manage_validators' => 'Gestire referenti',
+        'manage_validators' => 'Gestire valutatori',
     
-        'validators' => 'Referenti',
+        'validators' => 'Valutatori',
     
         'invites_pending' => 'Inviti pendenti',
     
         'date_sent' => 'Data di invio',
     
-        'note_invites_are_only_valid_14_days' => 'Note: invites are only valid 14 days after being sent, and they will disapear from this list afterwards',
+        'note_invites_are_only_valid_14_days' => 'Nota: gli inviti sono validi solamente 14 giorni dopo l\' invio e spariranno da questa lista dopo tale periodo',
     
         'cancel' => 'Cancellare',
     
         'cannot_change_institution' => 'Non e´possibile cambiare l´istituzione',
     
-        'invitation_is_not_valid_or_you_accepted_it' => 'Either your invitation is not valid anymore, or you already accepted it',
+        'invitation_is_not_valid_or_you_accepted_it' => 'O il tuo invito non é piú valido o é stato giá accettato',
     
         'changed_institution_successfully' => 'Il cambio di Istituzione é avvenuto con successo',
     
         'youll_receive_notifications_from' => 'Da adesso riceverai notiche di approvazione da',
     
-        'cannot_complete_invitation' => 'Non si puó completare ',
+        'cannot_complete_invitation' => 'Non si puó completare l\'invito',
     
         'no_alerts_found' => 'Nessun avviso trovato',
     
         'study_level' => 'Livello di studio',
     
-        'when_it_was_sent' => 'Quando fu inviato?',
+        'when_it_was_sent' => 'Quando é stato inviato?',
     
         'no_referees' => 'Senza referenti',
     
         'remove_referee' => 'Eliminare referente',
     
-        'do_you_want_to_remove_referee' => 'Vuoi rimuovere %s dalla tua Istituzione',
+        'do_you_want_to_remove_referee' => 'Vuoi rimuovere %s dalla tua Istituzione?',
     
         'remove' => 'Eliminare',
     

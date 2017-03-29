@@ -101,9 +101,9 @@ return [
     
         'status' => 'Estado',
     
-        'not_enough_data_to_show_profile' => 'We don\'t have enough data from you to be able to show your profile.',
+        'not_enough_data_to_show_profile' => 'No tenemos suficientes datos de ti para poder mostrar tu perfil.',
     
-        'click_on_link_to_fill_required_fields' => 'Please click on the following link to fill the required fields.',
+        'click_on_link_to_fill_required_fields' => 'Haz click en el siguiente enlace para rellenar los campos requeridos.',
     
         'set_up_my_profile' => 'Editar mi perfil',
     

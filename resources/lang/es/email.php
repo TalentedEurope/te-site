@@ -39,7 +39,7 @@ return [
     
         'inviteCreated_line_5' => '¡Gracias por usar nuestra aplicación!',
     
-        'validatorRequested_subject_1' => '%s has asked you as referee his profile in Talented europe',
+        'validatorRequested_subject_1' => '%s te ha invitado como validador en Talented Europe.',
     
         'validatorRequested_line_2' => 'Hola %s',
     
