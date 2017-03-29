@@ -271,7 +271,7 @@ return [
     
         'update_settings' => 'Aggiornare le impostazioni',
     
-        'change_your_password' => 'cambiare la password',
+        'change_your_password' => 'Cambiare la password',
     
         'new_password' => 'Nuova password',
     
