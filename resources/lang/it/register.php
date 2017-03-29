@@ -13,7 +13,7 @@ return [
     
         'search_companies' => 'Ceca imprese',
     
-        'register_as_validator' => 'Registrati come valutatore',
+        'register_as_validator' => 'Registrati come vidimatore',
     
         'there_have_been_some_errors' => 'Sono stati rilevati degli errori',
     

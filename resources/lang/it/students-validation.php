@@ -7,9 +7,9 @@ return [
     
         'pending' => 'Pendente',
     
-        'validated' => 'Convalidato',
+        'validated' => 'Vidimato',
     
-        'not_validated' => 'Non convalidato',
+        'not_validated' => 'Non vidimato',
     
         'no_students' => 'Senza studenti',
     

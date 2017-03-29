@@ -9,7 +9,7 @@ return [
     
         'current_search' => 'Ricerca attuale',
     
-        'refereed' => 'Referenziato',
+        'refereed' => 'Vidimato',
     
         'there_are_no_matching_the_selected_filters' => 'In questo momento non ci sono %s che si adeguino ai filtri selezionati',
     
