@@ -53,7 +53,7 @@ class ValidatorRequested extends Notification
                     ->line(sprintf('%s has invited you as referee on Talented Europe.', $validatorName))
                     ->line('We need you to resend this email to the institution you work for so they can register using the following link')
                     ->line('Please note that if they register using clicking the following button you will be invited automatically into their institution')
-                    ->action('Create Institution account', route('register').'?req_id='.urlencode($requestID))
+                    ->action('Create Institution account', route('invite-school').'?req_id='.urlencode($requestID))
                     ->line('Thank you for using our application!');
     }
 
