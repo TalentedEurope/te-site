@@ -73,7 +73,7 @@ return [
     
         'student_plural' => 'Studenti',
     
-        'company' => 'Impresa/Imprese',
+        'company' => 'Impresa|Imprese',
     
         'institution' => 'Istituzione|Istituzioni',
     

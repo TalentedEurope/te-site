@@ -57,7 +57,7 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'de' => 'Politologie, Soziologie, Wirtschaft, Psychologie und Verhaltenswissenschaften, Sozialarbeit, Internationale Beziehungen, Europäische Studien, Territoriale Studien, Abstrakt, Akademiker, Marke, Kapital, Bekannten Persönlichkeiten, Bürgergesellschaft, Genossenschaft, Korporationsgesellschaft, Design, Diversität, Emotionen, Empathie, Aufklärung, Unternehmen, Umwelt, Ethik, europäisch, Exzellent, Fair, Glaube, Freiheit, Fundamentalismus, Globaler/Internationaler, Identität, Unabhängigkeit, Informationen, legitim, Leben, Markt, Ehe, Mentor, Meinung, Leistung, politisch, Gut, Queer, Relativismus',                    
                 
-                    'fr' => 'Politologie, Sociologie, Economie, Psychologie,  Travail social,  Relations internationalles,Etudes européennes, Etudes territoriales, Abrégé, Académiciens, Marque, Capital, Vedettes, Société civile, Communauté, Société corporative, Design, Diversité, Emotions, Empathie, Illumination, Entreprise, ',                    
+                    'fr' => 'Politologie, Sociologie, Economie, Psychologie,  Travail social,  Relations internationalles,Etudes européennes, Etudes territoriales, Abrégé, Académiciens, Marque, Capital, Vedettes, Société civile, Communauté, Société corporative, Design, Diversité, Emotions, Empathie, Illumination, Entreprise, Environnement, Caractere ethique, Européen, Excellence, Fair, Croyance,Liberté, Fundamentalisme, Global, International, Identité, Indépendance, Informations, Légitime, Vie, Marché, Mariage, Mentor, Opinion, Effectuer/ acte, Politique, Bien, Queer, Relativisme',                    
                 
                     'sk' => '
 Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociálna práca, Medzinárodné vzťahy, Európske štúdiá, Teritoriálne štúdiá, Abstrakt, Akademici, Značka, Kapitál, Celebrity, Občianska spoločnosť, Spoločenstvo, Korporátna spoločnosť, Dizajn, Diverzita, Emócie, Empatia, Osvietenie, Podnikanie, Životné prostredie, Etickosť, Európsky, Excelentnosť, Fair, Viera, Voľnosť/Sloboda, Fundamentalizmus, Globálny/Internacionálny, Identita, Nezávislosť, Informácie, Legitímny, Život, Trh, Manželstvo, Mentor, Názor, Vykonávať/výkon, Politický, Majetok, Queer, Relativizmus',                    
@@ -76,7 +76,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'de' => 'Moderne europäische Sprachen, Lingvistik, Übersetzen, Dolmetschen, Klassische Philologie, Nichteuropäische Sprachen, Weniger unterrichtete Sprachen',                    
                 
-                    'fr' => 'Modern EC Languages, Linguistics, Translation, Interpretation, Classical Philology, Non EC Languages, Less Widely Taught Languages',                    
+                    'fr' => 'Langues européennes modernes,Linguistique, Traduction,Intérprétation, Filologie classique, Langues non européennes, Langues moins ensignées',                    
                 
                     'sk' => 'Moderné európske jazyky, Lingvistika, Prekladateľstvo, Tlmočníctvo, Klasická filológia, Neeurópske jazyky, Menej vyučované jazyky',                    
                 
@@ -112,7 +112,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'de' => 'Philosophie, Theologie, Geschichte, Archeologie',                    
                 
-                    'fr' => 'Philosophy,Theology,History,Archaeology',                    
+                    'fr' => 'Philosophie, Théologie, Histoire, Archéologie',                    
                 
                     'sk' => 'Filozofia, Teológia, História, Archeológia',                    
                 

@@ -163,15 +163,15 @@
           <div class="text-center col-md-12">
             <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureC.pdf') }}" target="_blank" class="btn" onclick="ga('send', 'event', 'Brochure Company', 'Download', '{{ App::getLocale() }}');">
               <i class="fi flaticon-cloud-download"></i>
-                {!! explode("|", trans('global.company'))[1] !!}
+                {!! trans_choice('global.company', 1) !!}
             </a>
             <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureI.pdf') }}" target="_blank" class="btn" onclick="ga('send', 'event', 'Brochure Institution', 'Download', '{{ App::getLocale() }}');">
               <i class="fi flaticon-cloud-download"></i>
-                {!! explode("|", trans('global.institution'))[1] !!}
+                {!! trans_choice('global.institution', 1) !!}
             </a>
             <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureS.pdf') }}" target="_blank" class="btn" onclick="ga('send', 'event', 'Brochure Student', 'Download', '{{ App::getLocale() }}');">
               <i class="fi flaticon-cloud-download"></i>
-                {!! explode("|", trans('global.student'))[1] !!}
+                {!! trans_choice('global.student', 1) !!}
             </a>
           </div>
         </div>
