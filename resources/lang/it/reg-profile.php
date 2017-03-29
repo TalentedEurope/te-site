@@ -287,9 +287,9 @@ return [
     
         'my_talent' => 'Il mio talento',
     
-        'referee_name' => 'nome dell\'attestatore',
+        'referee_name' => 'nome del vidimatore',
     
-        'referee_email' => 'email dell\'attestatore',
+        'referee_email' => 'email del vidimatore',
     
         'get_your_profile_refereed' => 'Fai valutare il tuo profilo',
     
@@ -305,9 +305,9 @@ return [
     
         'skilled_in' => 'Competente in',
     
-        'refereed_by' => 'Valutato da',
+        'refereed_by' => 'Vidimato da',
     
-        'refereeing_pending' => 'Valutazioni pendenti',
+        'refereeing_pending' => 'In attesa di vidimazione',
     
         'skills' => 'Competenze',
     
@@ -319,7 +319,7 @@ return [
     
         'set_by_both_parties' => 'Selezionato da entrambe le parti',
     
-        'set_by_referee_or_student' => 'Selezionato dall\'attestatore o dallo studente',
+        'set_by_referee_or_student' => 'Selezionato dal vidimatore o dallo studente',
     
         'study' => 'Studio|Studi',
     
@@ -341,7 +341,7 @@ return [
     
         'click_on_button_to_fill_required_fields' => 'Per favore esegui un click sul bottone di seguito per riempire i campi richiesti',
     
-        'institution_fix_the_following_errors' => 'E´necessario che corregga i seguenti errori o i tuoi referenti non saranno in grado di valutare il tuo profilo',
+        'institution_fix_the_following_errors' => 'E´necessario che corregga i seguenti errori o i tuoi vidimatori non saranno in grado di valutare il tuo profilo',
     
         'my_institution' => 'Il mio istituto',
     
@@ -391,21 +391,21 @@ return [
     
         'profile_readiness' => 'Profilo di preparazione',
     
-        'profile_readiness_explanation' => 'Avere il tuo profilo attestato permette a terzi di crearsi un opinione su di te e aumenta la possibilità che le imprese si mettano in contatto con te ',
+        'profile_readiness_explanation' => 'Avere il tuo profilo vidimato permette a terzi di crearsi un opinione su di te e aumenta la possibilità che le imprese si mettano in contatto con te ',
     
-        'get_a_better_refeer' => 'Avere una migliore attestazione del tuo profilo per aumentare la sua visibilità e allo stesso tempo per aumentare le possibilità di essere contattati dalle imprese.',
+        'get_a_better_refeer' => 'Avere una migliore vidimazione del tuo profilo per aumentare la sua visibilità e allo stesso tempo per aumentare le possibilità di essere contattati dalle imprese.',
     
         'request_is_managed_by' => 'La tua richiesta é in fase di gestione con',
     
-        'cant_find_your_institution' => 'Non riesci a trovare la tua istituzione? Chiedi al tuo attestatore o alla tua istituzione di unirsi al Talented Europe',
+        'cant_find_your_institution' => 'Non riesci a trovare la tua istituzione? Chiedi al tuo vidimatore o alla tua istituzione di unirsi al Talented Europe',
     
         'this_step_sends_an_email_to_your_referee' => 'This step sends an email to your referee with instructions on how to join Talented Europe, automatically registers him as referee once his institution joins, and adds you to the refeeral queue',
     
         'send_invitation' => 'Inviare invito',
     
-        'profile_validated_successfully' => 'Il tuo profilo e´stato attestato con successo',
+        'profile_validated_successfully' => 'Il tuo profilo e´stato vidimato con successo',
     
-        'referee_said_about_you' => 'Ció che il tuo attestatore ha detto di te',
+        'referee_said_about_you' => 'Ció che il tuo vidimatore ha detto di te',
     
         'profile_validated_denied' => 'Il tuo profilo e´stato rifiutato',
     
@@ -413,17 +413,17 @@ return [
     
         'progress_account_setup' => 'Configurazione dell´account',
     
-        'progress_refer_your_profile' => 'Referenzia il tuo profilo',
+        'progress_refer_your_profile' => 'Vidimare il tuo profilo',
     
-        'progress_not_refereed' => 'Non referenziato',
+        'progress_not_refereed' => 'Non vidimato',
     
         'progress_completed' => 'Completato',
     
-        'you_must_put_referee_email' => '<strong>Per favore nota che:</strong> Devi mettere la mail dell\'attestatore, non quella dell´\'Istituzione',
+        'you_must_put_referee_email' => '<strong>Per favore nota che:</strong> Devi mettere la mail del vidimatore, non quella dell´\'Istituzione',
     
         'leave_institution' => 'Lasciare l´Istituzione?',
     
-        'do_you_want_to_leave_institution' => 'Vuoi lasciare l\'istituzione? Ció comporterà che le richieste di attestazione pendenti vengano reinviate indietro, non sarà possibile attestare nessuno fino a quando un\'altra istituzione ti inviterà di nuovo',
+        'do_you_want_to_leave_institution' => 'Vuoi lasciare l\'istituzione? Ció comporterà che le richieste di vidimazione pendenti vengano reinviate indietro, non sarà possibile vidimare nessuno fino a quando un\'altra istituzione ti inviterà di nuovo',
     
         'leave_institution_button' => 'Si! esco dall`Istituzione Accademica!',
     
@@ -449,14 +449,14 @@ return [
     
         'find_your_academic_institution' => 'Trova la tua Istituzione Accademica',
     
-        'choose_referee' => 'Scegliere attestatore',
+        'choose_referee' => 'Scegliere vidimatore',
     
-        'refer_request' => 'Richiedere attestatore',
+        'refer_request' => 'Richiedere vidimatore',
     
-        'any_referee' => 'Qualsiasi attestatore',
+        'any_referee' => 'Qualsiasi vidimatore',
     
         'institution_type' => 'tipo Istituzione',
     
-        'complete_the_registration' => 'Complete the registration by adding the following information',
+        'complete_the_registration' => 'Completa la registrazione aggiungendo la seguente informazione',
     
 ];

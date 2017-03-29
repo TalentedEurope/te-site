@@ -9,25 +9,25 @@ return [
     
         'disable' => 'Disabilitato',
     
-        'add_new' => 'Aggiungere una nuova referenza',
+        'add_new' => 'Aggiungere un nuovo vidimatore',
     
-        'send_invitation' => 'Inviare un invito all\'attestatore',
+        'send_invitation' => 'Inviare un invito al vidimatore',
     
-        'validating' => 'Convalizzando',
+        'validating' => 'Vidimizzando',
     
-        'student_already_validated' => 'Hai giá convalidato questo studente',
+        'student_already_validated' => 'Hai giá vidimato questo studente',
     
         'jump_to_results' => 'Andare ai risultati',
     
-        'you_are_validating_following_student' => 'Stai convalidando il seguente studente',
+        'you_are_validating_following_student' => 'Stai vidimando il seguente studente',
     
-        'jump_to_validation' => 'Andare alla convalida',
+        'jump_to_validation' => 'Vai alla vidimazione',
     
-        'student_validation' => 'Convalida dello studente',
+        'student_validation' => 'Vidimazione dello studente',
     
         'valid' => 'Valido',
     
-        'student_passed_validation_successfully' => 'Lo studente ha superato con successo la tua convalida ',
+        'student_passed_validation_successfully' => 'Lo studente ha superato con successo la tua vidimazione ',
     
         'your_comments' => 'I tuoi commenti',
     
@@ -37,17 +37,17 @@ return [
     
         'student_didnt_meet_criteria' => 'Lo studente non ha soddisfatto i criteri ',
     
-        'make_sure_you_have_reviewed_student' => 'Per favore assicurati di aver revisionato attentamente il profilo dello studente prima di valutarlo',
+        'make_sure_you_have_reviewed_student' => 'Per favore assicurati di aver revisionato attentamente il profilo dello studente prima di vidimarlo',
     
         'this_student_is' => 'Questo studente é',
     
-        'finish_validation' => 'Convalida terminata',
+        'finish_validation' => 'Vidimazione terminata',
     
         'give_us_explanation_of_student_is_not_valid' => 'Per favore, fornisci una spiegazione del motivo per cui lo/la studente/ssa non é valido/a',
     
-        'note_if_validation_is_passed_as_no_student' => 'Nota: se l\'attestazione ha come esito "Nessun studente" lo studente avrá la possibilitá di far attestare il suo profilo di nuovo',
+        'note_if_validation_is_passed_as_no_student' => 'Nota: se la vidimazione ha come esito "Nessun studente" lo studente avrá la possibilitá di far vidimare il suo profilo di nuovo',
     
-        'user_hasnt_complete_filling_its_profile' => 'L\'usuario non ha completato la compilazione del profilo. Fino a quando questo processo non é completo non é possibile valutare gli studenti.',
+        'user_hasnt_complete_filling_its_profile' => 'L\'usuario non ha completato la compilazione del profilo. Fino a quando questo processo non é completo non é possibile vidimare gli studenti.',
     
         'manage_validators' => 'Gestire attestatori',
     
@@ -79,7 +79,7 @@ return [
     
         'no_referees' => 'Senza attestatori',
     
-        'remove_referee' => 'Eliminare attestatore',
+        'remove_referee' => 'Eliminare vidimatore',
     
         'do_you_want_to_remove_referee' => 'Vuoi rimuovere %s dalla tua Istituzione?',
     
