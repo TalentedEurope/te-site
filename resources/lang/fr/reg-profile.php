@@ -25,6 +25,8 @@ return [
     
         'country' => 'le pays',
     
+        'countries' => 'Countries',
+    
         'institution_certificate_template_download' => 'téléchargez le modèle',
     
         'fiscal_id' => 'le numéro national d\'identification',

@@ -25,6 +25,8 @@ return [
     
         'country' => 'Country',
     
+        'countries' => 'Countries',
+    
         'institution_certificate_template_download' => 'Download template',
     
         'fiscal_id' => 'Fiscal ID',

@@ -392,7 +392,7 @@ class SearchController extends SiteSearchController
 
         $data[] = array(
             'id' => 'countries',
-            'title' => 'Countries',
+            'title' => trans('reg-profile.countries'),
             'items' => $countries
         );
 
