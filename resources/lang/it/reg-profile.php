@@ -43,7 +43,7 @@ return [
     
         'institution_sig_stamp_text' => 'Firma e timbro',
     
-        'institution_vet' => 'Formazione professionale e tirocinio',
+        'institution_vet' => 'Formazione professionale e tirocini',
     
         'student_academic_info' => 'Informazioni accademiche',
     
@@ -55,7 +55,7 @@ return [
     
         'student_experience_company' => 'Impresa',
     
-        'student_completed_studies' => 'Studi terminati',
+        'student_completed_studies' => 'Studi completati',
     
         'student_course' => 'Corso',
     
@@ -81,7 +81,7 @@ return [
     
         'load_btn' => 'Caricare',
     
-        'input_max_characters' => 'massimo',
+        'input_max_characters' => 'max.',
     
         'name' => 'Nome',
     
@@ -127,7 +127,7 @@ return [
     
         'i_agree_with' => 'Accetto',
     
-        'the_terms_of_use' => 'Le condizioni d´uso',
+        'the_terms_of_use' => 'le condizioni d´uso',
     
         'create_account' => 'Crea un nuovo account',
     
@@ -135,19 +135,19 @@ return [
     
         'administration' => 'Amministrazione',
     
-        'architecture-amp-construction' => 'Architettura e costruzioni',
+        'architecture-amp-construction' => 'Architettura e Costruzioni',
     
         'art-amp-culture' => 'Arte e cultura',
     
         'banking-and-or-finance-amp-insurance' => 'Settore bancario e/o finanza e assicurazioni',
     
-        'business-amp-consulting' => 'Commercio e consulenza',
+        'business-amp-consulting' => 'Commercio e Consulenza',
     
         'communication-amp-media-amp-pr' => 'Comunicazione, media e PR',
     
         'consumer-goods' => 'Beni di consumo',
     
-        'customer-service' => 'Servizio clienti',
+        'customer-service' => 'Servizio Clienti',
     
         'design' => 'Design',
     
@@ -167,9 +167,9 @@ return [
     
         'manufacturing' => 'Produzione',
     
-        'marketing-amp-advertising' => 'Marketing e pubblicità',
+        'marketing-amp-advertising' => 'Marketing e Pubblicità',
     
-        'medicine-amp-pharmaceutics' => 'Medicina e farmacia',
+        'medicine-amp-pharmaceutics' => 'Medicina e Farmacia',
     
         'politics' => 'Politica',
     
@@ -189,17 +189,17 @@ return [
     
         'technology-amp-telecommunications' => 'Tecnologie e Telecomunicazioni',
     
-        'business-studies-and-or-management-science' => 'Economia aziendale e/o management',
+        'business-studies-and-or-management-science' => 'Economia aziendale e/o Management',
     
         'engineering-and-or-technology' => 'Ingegneria e/o Tecnologia',
     
         'social-sciences' => 'Scienze Sociali',
     
-        'languages-and-philological-sciences' => 'Lingue e scienze filologiche',
+        'languages-and-philological-sciences' => 'Lingue e Scienze Filologiche',
     
         'communication-and-information-sciences' => 'Scienze dell´informazione e della Comunicazione',
     
-        'humanities' => 'Scienze umanistiche',
+        'humanities' => 'Scienze Umanistiche',
     
         'education-and-or-teacher-training' => 'Educazione e/o corso per insegnanti',
     
@@ -213,7 +213,7 @@ return [
     
         'mathematics-and-or-informatics' => 'Matematica e/o Informatica',
     
-        'medical-sciences' => 'Scienze mediche',
+        'medical-sciences' => 'Scienze Mediche',
     
         'geography-and-or-geology' => 'Geografia e/o Geologia',
     
@@ -287,9 +287,9 @@ return [
     
         'my_talent' => 'Il mio talento',
     
-        'referee_name' => 'nome del referente',
+        'referee_name' => 'nome dell\'attestatore',
     
-        'referee_email' => 'email del referente',
+        'referee_email' => 'email dell\'attestatore',
     
         'get_your_profile_refereed' => 'Fai valutare il tuo profilo',
     
@@ -319,7 +319,7 @@ return [
     
         'set_by_both_parties' => 'Selezionato da entrambe le parti',
     
-        'set_by_referee_or_student' => 'Impostare il referente o lo studente',
+        'set_by_referee_or_student' => 'Selezionato dall\'attestatore o dallo studente',
     
         'study' => 'Studio|Studi',
     
@@ -391,21 +391,21 @@ return [
     
         'profile_readiness' => 'Profilo di preparazione',
     
-        'profile_readiness_explanation' => 'Avere il tuo profilo convalidato permette che all\'esterno si abbia una opinione di te ',
+        'profile_readiness_explanation' => 'Avere il tuo profilo attestato permette a terzi di crearsi un opinione su di te e aumenta la possibilità che le imprese si mettano in contatto con te ',
     
-        'get_a_better_refeer' => 'Get a better refeer improving your profile readiness and improve possibility of company contact',
+        'get_a_better_refeer' => 'Avere una migliore attestazione del tuo profilo per aumentare la sua visibilità e allo stesso tempo per aumentare le possibilità di essere contattati dalle imprese.',
     
         'request_is_managed_by' => 'La tua richiesta é in fase di gestione con',
     
-        'cant_find_your_institution' => 'Non riesci a trovare la tua istituzione? Chiedi al tuo referente o alla tua istituzione di unirsi al Talented Europe',
+        'cant_find_your_institution' => 'Non riesci a trovare la tua istituzione? Chiedi al tuo attestatore o alla tua istituzione di unirsi al Talented Europe',
     
         'this_step_sends_an_email_to_your_referee' => 'This step sends an email to your referee with instructions on how to join Talented Europe, automatically registers him as referee once his institution joins, and adds you to the refeeral queue',
     
         'send_invitation' => 'Inviare invito',
     
-        'profile_validated_successfully' => 'Il tuo profilo e´stato convalidato con successo',
+        'profile_validated_successfully' => 'Il tuo profilo e´stato attestato con successo',
     
-        'referee_said_about_you' => 'Questo e´ ció che il tuo referente ha detto di te',
+        'referee_said_about_you' => 'Ció che il tuo attestatore ha detto di te',
     
         'profile_validated_denied' => 'Il tuo profilo e´stato rifiutato',
     
@@ -419,11 +419,11 @@ return [
     
         'progress_completed' => 'Completato',
     
-        'you_must_put_referee_email' => '<strong>Per favore nota che:</strong> Devi mettere la mail del referente, non quella dell´\'Istituzione',
+        'you_must_put_referee_email' => '<strong>Per favore nota che:</strong> Devi mettere la mail dell\'attestatore, non quella dell´\'Istituzione',
     
         'leave_institution' => 'Lasciare l´Istituzione?',
     
-        'do_you_want_to_leave_institution' => 'Vuoi lasciare l\'istituzione? Ció comporterà che le richieste di validazione pendenti vengano reinviate indietro, non sarà possibile convalidare nessuno fino a quando un\'altra istituzione ti inviterà di nuovo',
+        'do_you_want_to_leave_institution' => 'Vuoi lasciare l\'istituzione? Ció comporterà che le richieste di attestazione pendenti vengano reinviate indietro, non sarà possibile attestare nessuno fino a quando un\'altra istituzione ti inviterà di nuovo',
     
         'leave_institution_button' => 'Si! esco dall`Istituzione Accademica!',
     
@@ -449,14 +449,14 @@ return [
     
         'find_your_academic_institution' => 'Trova la tua Istituzione Accademica',
     
-        'choose_referee' => 'Scegliere referente',
+        'choose_referee' => 'Scegliere attestatore',
     
-        'refer_request' => 'Richiedere referente',
+        'refer_request' => 'Richiedere attestatore',
     
-        'any_referee' => 'Qualsiasi referente',
+        'any_referee' => 'Qualsiasi attestatore',
     
         'institution_type' => 'tipo Istituzione',
     
-        'complete_the_registration' => 'Completa la registrazione aggiungendo le tue informazioni',
+        'complete_the_registration' => 'Complete the registration by adding the following information',
     
 ];

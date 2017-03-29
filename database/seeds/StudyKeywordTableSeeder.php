@@ -150,7 +150,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'fr' => 'Comparative Law, Law with Languages, International Law, Civil Law, Criminal Law, Criminology, Constitutional /Public Law, Public Administration, European Community/EU Law',                    
                 
-                    'sk' => 'Comparative Law, Law with Languages, International Law, Civil Law, Criminal Law, Criminology, Constitutional /Public Law, Public Administration, European Community/EU Law',                    
+                    'sk' => 'Porovnávacie právo, Právo jazykové, Medzinárodné právo, Občianske právo, Trestné právo, Kriminológia, Ústavné/Verejné právo, Verejná správa, právo Európskeho spoločenstva/EÚ',                    
                 
                     'key' => 'law',                    
                 
@@ -168,7 +168,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'fr' => 'Fine Art, Music and Musicology, Design, History of Art.',                    
                 
-                    'sk' => 'Fine Art, Music and Musicology, Design, History of Art.',                    
+                    'sk' => 'Výtvarné umenie, Hudba, Dizajn, Dejiny umenia',                    
                 
                     'key' => 'art-and-design',                    
                 
@@ -186,7 +186,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'fr' => 'Urban Planning, Regional Planning',                    
                 
-                    'sk' => 'Urban Planning, Regional Planning',                    
+                    'sk' => 'Mestské plánovanie, Regionálne plánovanie',                    
                 
                     'key' => 'architecture-and-or-urban-and-regional-planning',                    
                 
@@ -204,7 +204,8 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'fr' => 'Biology, Physics, Chemistry, Microbiology, Biotechnology, Nuclear and High Energy Physics, Biochemistry, Astronomy, Astrophysics',                    
                 
-                    'sk' => 'Biology, Physics, Chemistry, Microbiology, Biotechnology, Nuclear and High Energy Physics, Biochemistry, Astronomy, Astrophysics',                    
+                    'sk' => '
+Biológia, Fyzika, Chémia, Mikrobiológia, Biotechnológia, Jadrová fyzika a fyzika vysokých energií, Biochémia, Astronómia, Astrofyzika',                    
                 
                     'key' => 'natural-sciences',                    
                 
@@ -222,7 +223,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'fr' => 'Mathematics, Statistics; Informatics, Computer Science',                    
                 
-                    'sk' => 'Mathematics, Statistics; Informatics, Computer Science',                    
+                    'sk' => 'Matematika, Štatistika, Informatika, Počítačová veda',                    
                 
                     'key' => 'mathematics-and-or-informatics',                    
                 
@@ -240,7 +241,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'fr' => 'Medicine, Public Health, Medical Technology',                    
                 
-                    'sk' => 'Medicine, Public Health, Medical Technology',                    
+                    'sk' => 'Medicína, Verejné zdravotníctvo, Medicínske technológie',                    
                 
                     'key' => 'medical-sciences',                    
                 
@@ -258,7 +259,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'fr' => 'Geography, Environmental Sciences, Ecology, Geology, Soil and Water Sciences, Geodesy, Cartography, Remote Sensing',                    
                 
-                    'sk' => 'Geography, Environmental Sciences, Ecology, Geology, Soil and Water Sciences, Geodesy, Cartography, Remote Sensing',                    
+                    'sk' => 'Geografia, Environmentálne vedy, Ekológia, Geológia, Vedy o pôde a vode, Geodézia, Kartografia, diaľkový prieskum Zeme',                    
                 
                     'key' => 'geography-and-or-geology',                    
                 
@@ -276,7 +277,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'fr' => 'Agriculture, Food Science and Technology, Fisheries, Forestry,Farming, tractors, ',                    
                 
-                    'sk' => 'Agriculture, Food Science and Technology, Fisheries, Forestry,Farming, tractors, ',                    
+                    'sk' => 'Vyberač účtu, Účtovnícky úradník, Administratívny asistent, Administratívny koordinátor, Správny riaditeľ, Manažér administratívnychg služieb, Administratívny úradník, Administratívny špecialista, Administratívny manažér pre podporu, Administratívny supervízor pre podporu, Administrátor, Audit úradník, Zástupca riaditeľa, Fakturačný úradník, Vyberač faktúr, Fakturčný koordinátor, Účtovník, Manažér vzťahov s klientmi,  Administrátor zmlúv, Kredit úradník, Zadávanie dát, Exekutívny asistent, Facility manažér, Fakturantky súborov, Finančný úradník, Úradník bežnej kancelárie , Správca ľudských zdrojov, informačný úradník, Právna asistentka, Úradník pre poštu, Vedúci úradníkov pre poštu, Úradník pre záznam o materiáloch, Lekárska sekretárka, Office Asistent, Office Úradník, Office Menežér, Menežér Office podpory, Supervízor Office podpory, Programový správca, Programový menežér, Recepčný, Analytik správy záznamov, Sekretárka, Senior administratívny analytik, Senior administratívny koordinátor, Senior úradník administratívnych služieb, Senior koordinátor, Senior výkonný asistent, Senior koordinátor špeciálnych podujatí, Senior asistent pre podporu, Senior  špecialista pre podporu, Koordinátor špeciálnych podujatí, Koordinátor špeciálnych programov, Asistent personálu, Asistent podpory, Špecialista podpory, Zapisovateľ, Virtuálna asistentka, Virtuálna recepčná, Textový procesor, Korporátna sekretárka, Pokladník / Finančný riaditeľ, Generálny / Operačný menežér, Office menežér, Menežér environmentálneho zdravia a bezpečnosti, Bezpečnostný menežér, Funkčný menežér, Menežér ľudských zdrojov, Projektový koordinátor',                    
                 
                     'key' => 'agriculture-sciences',                    
                 

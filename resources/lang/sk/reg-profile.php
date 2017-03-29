@@ -458,6 +458,6 @@ Obchodná a poradenská činnosť',
     
         'institution_type' => 'Typ inštitúcie',
     
-        'complete_the_registration' => 'Complete the registration adding your information',
+        'complete_the_registration' => 'Complete the registration by adding the following information',
     
 ];

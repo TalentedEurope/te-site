@@ -61,13 +61,13 @@ return [
     
         'follow_us' => 'Seguici su',
     
-        'login_btn' => 'Accedere',
+        'login_btn' => 'Accedi',
     
         'register_btn' => 'Registrati',
     
         'search_info' => 'Cerca',
     
-        'company_plural' => 'Compagnie',
+        'company_plural' => 'Imprese ',
     
         'institution_plural' => 'Istituzioni',
     
@@ -95,7 +95,7 @@ return [
     
         'cookie_accept' => 'chiudere',
     
-        'logout_btn' => 'Disconnettersi',
+        'logout_btn' => 'Esci',
     
         'less_btn' => 'Vedere meno',
     
