@@ -267,7 +267,7 @@ return [
     
         'what_is_talent_for_you_in_a_few_words' => 'Explícanos brevemente qué es talento para ti.',
     
-        'most_valuable_skills_for_company' => 'Un listado de las habilidades mas valoradas por la empresa',
+        'most_valuable_skills_for_company' => 'Un listado de las habilidades más valoradas por la empresa',
     
         'setup_alternative_contact' => 'Seleccione un usuario de contacto alternativo para que reciba las notificaciones en lugar de la cuenta principal de la institución',
     
@@ -401,7 +401,7 @@ return [
     
         'cant_find_your_institution' => '¿No puedes encontrar tu institución? Pide a tu validador y a la institución que se unan a Talented Europe',
     
-        'this_step_sends_an_email_to_your_referee' => 'This step sends an email to your referee with instructions on how to join Talented Europe, automatically registers him as referee once his institution joins, and adds you to the refeeral queue',
+        'this_step_sends_an_email_to_your_referee' => 'Este paso envía un correo electrónico a su validador con instrucciones sobre cómo unirse a Talented Europe, lo registra automáticamente como validador una vez que su institución se una también a Talented Europe y te agrega ti a la lista de validaciones pendientes de revisar de ese validador',
     
         'send_invitation' => 'Enviar invitación',
     
@@ -460,5 +460,19 @@ return [
         'institution_type' => 'Tipo de institución',
     
         'complete_the_registration' => 'Complete el registro añadiendo la siguiente información',
+    
+        'changes_saved_successfully' => 'Changes saved successfully',
+    
+        'warning_some_fields_has_errors' => 'Warning: Some fields couldn\'t be saved because there were errors, check each field to see the issues',
+    
+        'successfully_requested_validation_request' => 'Successfully requested validation request',
+    
+        'invitation_sent_successfully' => 'Invitation sent successfully',
+    
+        'referee_is_part_of_institution' => 'Referee is part of %s get in contact with him to ask a institution change if required',
+    
+        'referee_isnt_part_of_any_institution' => 'Referee isn\'t part of any institution. Please ask him to get invited by one',
+    
+        'this_email_user_cannot_be_a_referee' => 'This email address is registered to an user that cannot be a referee',
     
 ];

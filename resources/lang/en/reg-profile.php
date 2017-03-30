@@ -29,7 +29,7 @@ return [
     
         'institution_certificate_template_download' => 'Download template',
     
-        'fiscal_id' => 'Fiscal ID',
+        'fiscal_id' => 'Fiscal ID or company registration number',
     
         'institution_hei' => 'Higher education institution',
     
@@ -99,13 +99,13 @@ return [
     
         'student_professional_skills' => 'Professional skills',
     
-        'student_proposed_validator' => 'Proposed validator',
+        'student_proposed_validator' => 'Proposed referee',
     
         'save_btn' => 'Save',
     
         'student_study_scanned_document' => 'Scanned document',
     
-        'student_validator' => 'If you don\'t specify a validator it will be automatically asigned',
+        'student_validator' => 'If you don\'t specify a referee it will be automatically asigned',
     
         'surname' => 'Surname',
     
@@ -460,5 +460,19 @@ return [
         'institution_type' => 'Institution type',
     
         'complete_the_registration' => 'Complete the registration by adding the following information',
+    
+        'changes_saved_successfully' => 'Changes saved successfully',
+    
+        'warning_some_fields_has_errors' => 'Warning: Some fields couldn\'t be saved because there were errors, check each field to see the issues',
+    
+        'successfully_requested_validation_request' => 'Successfully requested validation request',
+    
+        'invitation_sent_successfully' => 'Invitation sent successfully',
+    
+        'referee_is_part_of_institution' => 'Referee is part of %s get in contact with him to ask a institution change if required',
+    
+        'referee_isnt_part_of_any_institution' => 'Referee isn\'t part of any institution. Please ask him to get invited by one',
+    
+        'this_email_user_cannot_be_a_referee' => 'This email address is registered to an user that cannot be a referee',
     
 ];

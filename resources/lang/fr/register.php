@@ -3,32 +3,32 @@
 
 return [
     
-        'thank_you_for_signing_up' => 'Thank You for Signing Up!',
+        'thank_you_for_signing_up' => 'Merci de vous être inscrit!',
     
-        'you_will_receive_an_email' => 'You will receive an email with instructions about how to confirm your account in a few minutes.',
+        'you_will_receive_an_email' => 'Dans quelques minutes vous recevrez un courriel avec des instructions sur la confirmation de votre compte dans quelques minutes.',
     
-        'go_back_to_home' => 'Go back to home',
+        'go_back_to_home' => 'Retour à la page d\'accueil',
     
-        'search_students' => 'Search students',
+        'search_students' => 'Rechercher des étudiants',
     
-        'search_companies' => 'Search companies',
+        'search_companies' => 'Rechercher d\'entreprises',
     
-        'register_as_validator' => 'Register as referee',
+        'register_as_validator' => 'Inscrivez-vous comme évaluateur',
     
-        'there_have_been_some_errors' => 'There have been some errors',
+        'there_have_been_some_errors' => 'Il y a eu quelques erreurs',
     
-        'i_am_a' => 'I am a',
+        'i_am_a' => 'Je suis',
     
-        'all_fields_are_required' => 'All fields are required',
+        'all_fields_are_required' => 'Il est nécessaire de remplir tous les champs',
     
-        'confirmation_email_may_take_few_minutes' => 'Your confirmation email may take a few minutes to arrive, make sure you also check out your spam folder',
+        'confirmation_email_may_take_few_minutes' => 'E-mail de confirmation peut prendre quelques minutes pour arriver, assurez-vous également avoir vérifié votre dossier spam',
     
-        'registration_complete_successfully' => 'Registration complete successfully you may log in now.',
+        'registration_complete_successfully' => 'Ll\'enregistrement complet avec succès vous pouvez vous connecter maintenant ',
     
-        'register_success' => 'Register success',
+        'register_success' => 'nscription réussie',
     
-        'register' => 'Register',
+        'register' => 'Enscrivez- vous',
     
-        'invited_by' => 'You have been invited by',
+        'invited_by' => 'Vous avez été invité par',
     
 ];

@@ -5,11 +5,11 @@ return [
     
         'studies_level_5' => 'kurzfristige tertiäre Ausbildung',
     
-        'studies_level_6' => 'Bachelor oder Ekvivalent',
+        'studies_level_6' => 'Bachelor oder Equivalent',
     
-        'studies_level_7' => 'Magister oder Ekvivalent',
+        'studies_level_7' => 'Magister oder Equivalent',
     
-        'studies_level_8' => 'Doktor oder Ekvivalent',
+        'studies_level_8' => 'Doktor oder Equivalent',
     
         'company_activity' => 'Feld',
     
@@ -67,7 +67,7 @@ return [
     
         'student_study_level' => 'Niveau',
     
-        'student_describe_talent' => 'Beschreiben Sie kurz euer Talent',
+        'student_describe_talent' => 'Beschreibe kurz dein Talent',
     
         'email' => 'E-mail',
     
@@ -97,15 +97,15 @@ return [
     
         'position' => 'Position',
     
-        'student_professional_skills' => 'Professionelle  Fähigkeite',
+        'student_professional_skills' => 'Professionelle  Fähigkeiten',
     
         'student_proposed_validator' => 'Vorgeschlagener Gutachter',
     
         'save_btn' => 'Speichern',
     
-        'student_study_scanned_document' => 'Gescannte Dokument',
+        'student_study_scanned_document' => 'Gescanntes Dokument',
     
-        'student_validator' => 'Falls Sie den Gutachter nich angeben, wird Ihnen ein Gutachter automatisch zugeteilt',
+        'student_validator' => 'Falls Sie den Gutachter nicht angeben, wird Ihnen ein Gutachter automatisch zugeteilt',
     
         'surname' => 'Nachname',
     
@@ -119,9 +119,9 @@ return [
     
         'validator_department' => 'Abteilung/ Lehrstuhl',
     
-        'password' => 'Password',
+        'password' => 'Passwort',
     
-        'confirm_password' => 'Password bestätigen',
+        'confirm_password' => 'Passwort bestätigen',
     
         'captcha' => 'Captcha',
     
@@ -133,7 +133,7 @@ return [
     
         'create_account' => 'Ein Konto erstellen',
     
-        'forgot_password' => 'Password vergessen?',
+        'forgot_password' => 'Passwort vergessen?',
     
         'administration' => 'Administration',
     
@@ -145,7 +145,7 @@ return [
     
         'business-amp-consulting' => 'Handels- und Beratungstätigkeit',
     
-        'communication-amp-media-amp-pr' => 'Kommunikatio, Medien und PR',
+        'communication-amp-media-amp-pr' => 'Kommunikation, Medien und PR',
     
         'consumer-goods' => 'Verbrauchsware',
     
@@ -157,7 +157,7 @@ return [
     
         'engineering' => 'Ingenieurwesen',
     
-        'hospitality-amp-tourism' => 'Fremdenverkehr und Tourismus',
+        'hospitality-amp-tourism' => 'Hotellerie und Tourismus',
     
         'human-resources' => 'Human Resources',
     
@@ -185,7 +185,7 @@ return [
     
         'sales' => 'Verkauf',
     
-        'social-work' => 'Sozialdienstleistungen',
+        'social-work' => 'Soziale Arbeit',
     
         'sport-and-or-health-amp-wellness' => 'Sport, Gesundheit und Wellness',
     
@@ -231,7 +231,7 @@ return [
     
         'Lang_level_C1' => 'C1: Fortgeschritten',
     
-        'Lang_level_C2' => 'C2: Expert',
+        'Lang_level_C2' => 'C2: Experte',
     
         'logo' => 'Logo',
     
@@ -460,5 +460,19 @@ return [
         'institution_type' => 'Institution type',
     
         'complete_the_registration' => 'Complete the registration by adding the following information',
+    
+        'changes_saved_successfully' => 'Changes saved successfully',
+    
+        'warning_some_fields_has_errors' => 'Warning: Some fields couldn\'t be saved because there were errors, check each field to see the issues',
+    
+        'successfully_requested_validation_request' => 'Successfully requested validation request',
+    
+        'invitation_sent_successfully' => 'Invitation sent successfully',
+    
+        'referee_is_part_of_institution' => 'Referee is part of %s get in contact with him to ask a institution change if required',
+    
+        'referee_isnt_part_of_any_institution' => 'Referee isn\'t part of any institution. Please ask him to get invited by one',
+    
+        'this_email_user_cannot_be_a_referee' => 'This email address is registered to an user that cannot be a referee',
     
 ];

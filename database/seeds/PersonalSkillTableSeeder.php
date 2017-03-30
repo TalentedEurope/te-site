@@ -99,7 +99,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'it' => 'assertivo',                    
                 
-                    'de' => 'assertiv',                    
+                    'de' => 'durchsetzungsfähig',                    
                 
                     'fr' => 'qui a de l´assurance',                    
                 
@@ -195,7 +195,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'it' => 'competente',                    
                 
-                    'de' => 'komplet',                    
+                    'de' => 'kompetent',                    
                 
                     'fr' => 'compétent',                    
                 
@@ -275,7 +275,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'it' => 'determinato',                    
                 
-                    'de' => 'ausdauerfähig',                    
+                    'de' => 'entschlossen',                    
                 
                     'fr' => 'déterminé',                    
                 
@@ -627,7 +627,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'it' => 'versatile',                    
                 
-                    'de' => 'universell',                    
+                    'de' => 'vielseitig',                    
                 
                     'fr' => 'aux talents variés',                    
                 
@@ -643,7 +643,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'it' => 'desideroso di imparare',                    
                 
-                    'de' => 'willig / willig zu lernen',                    
+                    'de' => 'gewillt zu lernen',                    
                 
                     'fr' => 'prêt à apprendre',                    
                 

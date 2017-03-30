@@ -69,13 +69,13 @@ return [
     
         'company_plural' => 'Unternehmen',
     
-        'institution_plural' => 'Institutions',
+        'institution_plural' => 'Institutionen',
     
         'student_plural' => 'Studenten',
     
         'company' => 'Unternehmen|Unternehmen',
     
-        'institution' => 'Institution|Institutions',
+        'institution' => 'Institution|Institutionen',
     
         'student' => 'Student|Studenten',
     

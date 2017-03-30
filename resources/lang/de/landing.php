@@ -21,7 +21,7 @@ return [
     
         'what_is_cta' => '<strong>Erfahre mehr!</strong> Eine Broschühre anfordern!',
     
-        'what_is_text_1' => 'Können Sie sich vorstellen, die besten Studenten aus einem beliebigen europäische Land einzustellen? Möchten Sie ein Teil der europäischen Top-Studenten sein? Tausende Unternehmen gewinnen einen direkten Zugang zu Informationen über Sie und je besser Ihre Bewertung, desto mehr Möglichkeiten haben Sie, eine bessere Arbeit zu finden.',
+        'what_is_text_1' => 'Können Sie sich vorstellen, die besten Studenten aus einem beliebigen europäischen Land einzustellen? Möchten Sie ein Teil der europäischen Top-Studenten sein? Tausende Unternehmen gewinnen einen direkten Zugang zu Informationen über Sie und je besser Ihre Bewertung, desto mehr Möglichkeiten haben Sie, eine bessere Arbeit zu finden.',
     
         'what_is_text_2' => 'Genau das bietet Talentiertes Europa an. Ein Ausstellfenster voller besten Studenten in Europa. Eine einfache Idee, die Arbeitgeber mit Studenten verbindet. Der Treffpunkt für die Besten.',
     
@@ -33,7 +33,7 @@ return [
     
         'subscribe_btn_text' => 'Registrieren',
     
-        'subscribe_follow_text' => 'Bitte folgen auf:',
+        'subscribe_follow_text' => 'Bitte folg uns auf:',
     
         'subscribe_text_question' => 'Neuigkeiten über Talented Europe per E-Mail bekommen',
     
@@ -41,7 +41,7 @@ return [
     
         'coming_soon' => 'Inhalt in Bearbeitung',
     
-        'search_placeholder' => 'Was suchen Sie?',
+        'search_placeholder' => 'Was suchst du?',
     
         'search_where' => 'Wo',
     
