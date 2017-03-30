@@ -29,7 +29,7 @@
         <ul class="student-specs">
         <li><strong><i class="icon fa fa-map-marker"></i> {!! trans('reg-profile.we_are_in') !!}: </strong> {{ $user->city }}
         @if ($user->country) , <em>{{ $countries[$user->country] }}</em></li> @endif
-        @if ($company->personalSkills)
+        @if ($company->personalSkills->count())
         <li><strong><i class="icon fa fa-cogs"></i> {!! trans('reg-profile.we_are_looking_for_people_skilled_in') !!}: </strong>
               <ul class="skills">
                 @foreach ($company->personalSkills as $skill)

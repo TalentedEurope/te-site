@@ -7,11 +7,11 @@
                 <hr>
                 <p><strong><i class="fa fa-map-marker"></i> {{ $t('reg-profile.lives_in') }}: </strong> {{student.lives_in}}</p>
                 <p><strong>{{ $t('reg-profile.studied_in') }}: </strong> {{student.studied_in}}</p>
-                <p>
+                <p v-if="student.skills.length > 0">
                     <strong>{{ $t('reg-profile.skilled_in') }}: </strong>
                     <skills-tags :skills="student.skills"></skills-tags>
                 </p>
-                <p><strong>{{ $t('reg-profile.student_languages') }}: </strong>
+                <p v-if="student.languages.length > 0"><strong>{{ $t('reg-profile.student_languages') }}: </strong>
                     <ul class="languages">
                         <li v-for="language in student.languages" track-by="$index">{{language}}</li>
                     </ul>
