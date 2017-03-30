@@ -21,8 +21,8 @@ return [
     
         'be_right_back' => 'O chvíľu sme späť',
     
-        'not_found' => 'Not found',
+        'not_found' => 'Nenájdené.',
     
-        'unauthorized_action' => 'Unauthorized action',
+        'unauthorized_action' => 'Nepovolený krok',
     
 ];

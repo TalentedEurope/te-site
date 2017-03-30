@@ -15,6 +15,10 @@ return [
     
         'company_contact_person' => 'la personne a contacter',
     
+        'company_contact_person_name' => 'Contact person name',
+    
+        'company_contact_person_email' => 'Contact person email',
+    
         'company_representative' => 'le représentant légitime',
     
         'company_what_is_talent' => 'Qu\' est-ce que pour vous le talent?',
@@ -481,5 +485,7 @@ Sur',
         'referee_isnt_part_of_any_institution' => 'Referee isn\'t part of any institution. Please ask him to get invited by one',
     
         'this_email_user_cannot_be_a_referee' => 'This email address is registered to an user that cannot be a referee',
+    
+        'field' => 'Field',
     
 ];
