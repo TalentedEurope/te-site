@@ -161,7 +161,7 @@
               <professional-skills selected-skills='{!! json_encode($student->professionalSkills, JSON_HEX_APOS) !!}'
                   skills='{!! json_encode($professionalSkills, JSON_HEX_APOS) !!}'
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></professional-skills>
-              <personal-skills-form label="{!! trans('reg-profile.student_personal_skills') !!} (max 6)"
+              <personal-skills-form label="{!! trans('reg-profile.student_personal_skills') !!} ({!! trans('reg-profile.input_max_characters') !!} 6)"
                   values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}' readonly='{!! !!$validationReqDate !!}'
                   value='{!! json_encode($student->personalSkills()->wherePivot('validator',false)->get(), JSON_HEX_APOS) !!}'
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></personal-skills-form>

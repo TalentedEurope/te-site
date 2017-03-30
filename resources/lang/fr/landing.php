@@ -57,10 +57,10 @@ return [
     
         'no_students' => 'Aucun étudiant disponible',
     
-        'join_talented_europe_today' => 'Join Talented Europe today!',
+        'join_talented_europe_today' => 'Joignez-vous à l\'Europe talentueuse aujourd\'hui!',
     
-        'talented_for_students' => '<strong>For students</strong> - Talented Europe will enhance your employability with the endorsement of your tutors and put you in touch with employers across Europe for internships or first career jobs.',
+        'talented_for_students' => '<Strong> Pour les étudiants </ strong> - Europe talentueuse améliorera votre employabilité avec l\'aval de vos tuteurs et vous mettra en contact avec les employeurs en Europe pour des stages ou des emplois de première carrière.',
     
-        'talented_for_employers' => '<strong>For employers</strong> - Talented Europe will link you with talented young students across Europe and help you find the right person who can contribute to your organisation’s success with the special talents and skills that you are looking for.',
+        'talented_for_employers' => 'Srong> Pour les étudiants </ strong> - Europe talentueuse améliorera votre employabilité <strong> Pour les employeurs </ strong> - Europe talentueuse vous liera avec de jeunes étudiants talentueux en Europe et vous aidera à trouver la bonne personne qui peut contribuer à l\'organisation de votre entreprise Réussir avec les talents spéciaux et les compétences que vous recherchez.',
     
 ];

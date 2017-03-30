@@ -15,6 +15,10 @@ return [
     
         'company_contact_person' => 'Kontaktná osoba',
     
+        'company_contact_person_name' => 'Contact person name',
+    
+        'company_contact_person_email' => 'Contact person email',
+    
         'company_representative' => 'Zákonný zástupca (oprávnená osoba)',
     
         'company_what_is_talent' => 'Čo je pre vás talent?',
@@ -460,6 +464,22 @@ Obchodná a poradenská činnosť',
     
         'institution_type' => 'Typ inštitúcie',
     
-        'complete_the_registration' => 'Complete the registration by adding the following information',
+        'complete_the_registration' => 'Dokončite registráciu tým, že uvediete nasledovné informácie',
+    
+        'changes_saved_successfully' => 'Zmeny boli úspešne uložené',
+    
+        'warning_some_fields_has_errors' => 'Upozornenie: Niektoré položky neboli uložené kvôli chybám, skontrolujte si, prosím, pozorne každú položku.',
+    
+        'successfully_requested_validation_request' => 'Úspečne odoslaná žiadosť o ohodnotenie.',
+    
+        'invitation_sent_successfully' => 'Pozvánka úspešne odoslaná.',
+    
+        'referee_is_part_of_institution' => 'Hodnotiteľ je členom %s skontaktuje sa s ním kvôli prípadnej zmene inštitúcie',
+    
+        'referee_isnt_part_of_any_institution' => 'Hodnotiteľ nie je členom žiadnej inštitúcie. Prosím, požiadajte ho, aby sa nechal nejakou osloviť???',
+    
+        'this_email_user_cannot_be_a_referee' => 'Táto e-mailová adresa je registrovaná na používateľa, ktorý nemôže byť hodnotiteľom.',
+    
+        'field' => 'Pole',
     
 ];

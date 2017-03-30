@@ -21,4 +21,8 @@ return [
     
         'be_right_back' => 'Be right back',
     
+        'not_found' => 'Not found',
+    
+        'unauthorized_action' => 'Unauthorized action',
+    
 ];

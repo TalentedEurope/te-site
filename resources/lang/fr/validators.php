@@ -3,88 +3,88 @@
 
 return [
     
-        'my_students' => 'My students',
+        'my_students' => 'Mes étudiants',
     
-        'enable' => 'Enable',
+        'enable' => 'Activer',
     
-        'disable' => 'Disable',
+        'disable' => 'Désactiver',
     
-        'add_new' => 'Add a new referee',
+        'add_new' => 'Ajouter un nouvel évaluateur',
     
-        'send_invitation' => 'Send invitation to referee',
+        'send_invitation' => 'Envoyer l\'invitation à l\'évaluateur',
     
-        'validating' => 'Refereeing',
+        'validating' => 'Validation',
     
-        'student_already_validated' => 'You\'ve already validated this student',
+        'student_already_validated' => 'Cet étudiant a été déjà validé',
     
-        'jump_to_results' => 'Jump to results',
+        'jump_to_results' => 'Aller aux résultats',
     
-        'you_are_validating_following_student' => 'You\'re validating the following student',
+        'you_are_validating_following_student' => 'Vous validez l\'étudiant suivant',
     
-        'jump_to_validation' => 'Jump to validation',
+        'jump_to_validation' => 'Aller à la validation',
     
-        'student_validation' => 'Student validation',
+        'student_validation' => 'Validation de l étudiant',
     
-        'valid' => 'Valid',
+        'valid' => 'Validé',
     
-        'student_passed_validation_successfully' => 'The student passed your validation successfully',
+        'student_passed_validation_successfully' => 'L\'étudiant a passé votre validation avec succès',
     
-        'your_comments' => 'Your comments',
+        'your_comments' => 'Vos commentaires',
     
-        'your_chosen_skills' => 'Your chosen skills',
+        'your_chosen_skills' => 'Vos compétences choisies',
     
-        'invalid' => 'Invalid',
+        'invalid' => 'Invalide',
     
-        'student_didnt_meet_criteria' => 'The student didn\'t meet the criteria',
+        'student_didnt_meet_criteria' => 'L\'étudiant n\'a pas répondu aux critères',
     
-        'make_sure_you_have_reviewed_student' => 'Please make sure you have reviewed the student profile carefully before validating it',
+        'make_sure_you_have_reviewed_student' => 'Veuillez vous assurer d\'avoir soigneusement examiné le profil de l\'étudiant avant de le valider',
     
-        'this_student_is' => 'This student is',
+        'this_student_is' => 'Cet étudiant est...',
     
-        'finish_validation' => 'Finish_validation',
+        'finish_validation' => 'Terminer la validation',
     
-        'give_us_explanation_of_student_is_not_valid' => 'Please give us an explanation of the reason the student is not valid.',
+        'give_us_explanation_of_student_is_not_valid' => 'Veuillez nous donnez une explication de la raison pour laquelle l\'élève n\'est pas valide.',
     
-        'note_if_validation_is_passed_as_no_student' => 'Note: If the validation is passed as "No student" the student will be able to validate his profile again.',
+        'note_if_validation_is_passed_as_no_student' => 'Note: Si la validation est passée comme "Aucun étudiant", l\'étudiant sera en mesure de valider son profil à nouveau.',
     
-        'user_hasnt_complete_filling_its_profile' => 'hasn\'t complete filling it\'s profile. Until this process is complete you cannot validate any student',
+        'user_hasnt_complete_filling_its_profile' => 'Profil inachevé. Jusqu\'à ce que ce processus soit terminé, vous ne pouvez pas valider un étudiant',
     
-        'manage_validators' => 'Manage referees',
+        'manage_validators' => ' Rapport d évaluateurs ',
     
-        'validators' => 'Referees',
+        'validators' => 'Évaluateurs',
     
-        'invites_pending' => 'Invites pending',
+        'invites_pending' => 'Invite en attente',
     
-        'date_sent' => 'Date sent',
+        'date_sent' => 'Date d\'envoi',
     
-        'note_invites_are_only_valid_14_days' => 'Note: invites are only valid 14 days after being sent, and they will disapear from this list afterwards',
+        'note_invites_are_only_valid_14_days' => 'Remarque: les invitations ne sont valables que 14 jours après leur envoi et elles disparaîtront ensuite de cette liste',
     
-        'cancel' => 'Cancel',
+        'cancel' => 'Annuler ',
     
-        'cannot_change_institution' => 'Cannot change institution',
+        'cannot_change_institution' => 'Impossible de changer d\'établissement',
     
-        'invitation_is_not_valid_or_you_accepted_it' => 'Either your invitation is not valid anymore, or you already accepted it',
+        'invitation_is_not_valid_or_you_accepted_it' => 'Soit votre invitation n\'est plus valide, soit vous l\'avez déjà acceptée',
     
-        'changed_institution_successfully' => 'Changed Institution successfully',
+        'changed_institution_successfully' => 'Changé l\'établissement avec succès',
     
-        'youll_receive_notifications_from' => 'From now on you\'ll receive validation notifications from',
+        'youll_receive_notifications_from' => 'A partir de maintenant, vous recevrez des notifications de validation',
     
-        'cannot_complete_invitation' => 'Cannot complete invitation',
+        'cannot_complete_invitation' => 'Impossible de terminer l\'invitation',
     
-        'no_alerts_found' => 'No alerts found',
+        'no_alerts_found' => 'Aucune alerte trouvé',
     
-        'study_level' => 'Study level',
+        'study_level' => 'Niveau d\'études',
     
-        'when_it_was_sent' => 'When it was sent?',
+        'when_it_was_sent' => 'Quand ça a été envoyé?',
     
-        'no_referees' => 'No referees',
+        'no_referees' => 'Aucuns évaluateurs',
     
-        'remove_referee' => 'Remove referee',
+        'remove_referee' => 'Supprimer l\'évaluateur',
     
-        'do_you_want_to_remove_referee' => 'Do you want to remove %s from your institution?',
+        'do_you_want_to_remove_referee' => 'Voulez-vous supprimer% s de votre établissement?',
     
-        'remove' => 'Remove',
+        'remove' => 'Supprimer',
     
-        'removing' => 'Removing',
+        'removing' => 'Suppression',
     
 ];

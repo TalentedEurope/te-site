@@ -15,6 +15,10 @@ return [
     
         'company_contact_person' => 'Persona da contattare',
     
+        'company_contact_person_name' => 'Contact person name',
+    
+        'company_contact_person_email' => 'Contact person email',
+    
         'company_representative' => 'Rappresentante legale (responsabile)',
     
         'company_what_is_talent' => 'Che cosa significa il talento per te?',
@@ -460,5 +464,21 @@ return [
         'institution_type' => 'tipo Istituzione',
     
         'complete_the_registration' => 'Completa la registrazione aggiungendo la seguente informazione',
+    
+        'changes_saved_successfully' => 'Changes saved successfully',
+    
+        'warning_some_fields_has_errors' => 'Warning: Some fields couldn\'t be saved because there were errors, check each field to see the issues',
+    
+        'successfully_requested_validation_request' => 'Successfully requested validation request',
+    
+        'invitation_sent_successfully' => 'Invitation sent successfully',
+    
+        'referee_is_part_of_institution' => 'Referee is part of %s get in contact with him to ask a institution change if required',
+    
+        'referee_isnt_part_of_any_institution' => 'Referee isn\'t part of any institution. Please ask him to get invited by one',
+    
+        'this_email_user_cannot_be_a_referee' => 'This email address is registered to an user that cannot be a referee',
+    
+        'field' => 'Field',
     
 ];

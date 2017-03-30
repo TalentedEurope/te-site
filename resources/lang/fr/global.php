@@ -97,28 +97,28 @@ return [
     
         'logout_btn' => 'Se déconnecter',
     
-        'less_btn' => 'View less',
+        'less_btn' => 'Voir moins',
     
-        'status' => 'Status',
+        'status' => 'Statut',
     
-        'not_enough_data_to_show_profile' => 'We don\'t have enough data from you to be able to show your profile.',
+        'not_enough_data_to_show_profile' => 'Nous ne disposons pas de suffisamment de données pour pouvoir afficher votre profil.',
     
-        'click_on_link_to_fill_required_fields' => 'Please click on the following link to fill the required fields.',
+        'click_on_link_to_fill_required_fields' => 'Veuillez cliquer sur le lien suivant pour remplir les champs obligatoires.',
     
-        'set_up_my_profile' => 'Set up my profile',
+        'set_up_my_profile' => 'Créer mon profil',
     
-        'or' => 'or',
+        'or' => 'Ou bien',
     
-        'error' => 'Error',
+        'error' => 'Erreur',
     
-        'success' => 'Success',
+        'success' => 'Réussi',
     
-        'older' => 'Older',
+        'older' => 'Précedents',
     
-        'next' => 'Next',
+        'next' => 'Suivants',
     
-        'yes' => 'Yes',
+        'yes' => 'Oui',
     
-        'no' => 'No',
+        'no' => 'Non',
     
 ];

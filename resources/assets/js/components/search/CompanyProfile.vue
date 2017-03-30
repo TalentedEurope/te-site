@@ -9,12 +9,12 @@
                     <strong><i class="fa fa-map-marker"></i> {{ $t('reg-profile.we_are_in') }}: </strong>
                     {{company.we_are_in}}
                 </p>
-                <p>
+                <p v-if="company.skills.length > 0">
                     <strong>{{ $t('reg-profile.we_are_looking_for_people_skilled_in') }}: </strong>
+                    <skills-tags :skills="company.skills" :is-company="true"></skills-tags>
                 </p>
-                <skills-tags :skills="company.skills" :is-company="true"></skills-tags>
                 <p></p>
-                <p>
+                <p v-if="company.talent_is != ''">
                     <strong>{{ $t('reg-profile.we_think_that_talent_is') }}: </strong>
                     {{company.talent_is}}
                 </p>

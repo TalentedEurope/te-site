@@ -74,7 +74,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'it' => 'Lingue moderne della comunità europea, linguistica, traduzione, interpretazione, filologia classica, lingue non europee, lingue meno diffuse',                    
                 
-                    'de' => 'Moderne europäische Sprachen, Lingvistik, Übersetzen, Dolmetschen, Klassische Philologie, Nichteuropäische Sprachen, Weniger unterrichtete Sprachen',                    
+                    'de' => 'Moderne europäische Sprachen, Linguistik, Übersetzen, Dolmetschen, Klassische Philologie, Nichteuropäische Sprachen, Weniger unterrichtete Sprachen',                    
                 
                     'fr' => 'Langues européennes modernes,Linguistique, Traduction,Intérprétation, Filologie classique, Langues non européennes, Langues moins ensignées',                    
                 
@@ -130,7 +130,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'de' => 'Lehrerausbildung, Primärausbildung, Sekundärausbildung, Spezielle Ausbildung, Ausbildungswissenschaft, Komparative Ausbildung, Ausbildungspsychologie, ',                    
                 
-                    'fr' => 'Teacher Training, Primary Education, Secondary Education, Special Education, Educational Science, Comparative Education, Educational Psychology.',                    
+                    'fr' => 'Formation des enseignants, Enseignement primaire, Enseignement secondaire, Education spéciale, Science de l éducation, Enseignement comparatif, Psychologie de l éducation',                    
                 
                     'sk' => 'Vzdelávanie učiteľov, Pimárne vzdelávanie, Sekundárne vzdelávanie, Špeciálne vzdelávanie, Veda o vzdelávaní, Komparatívne vzdelávanie, Psychológia vzdelávania ',                    
                 
@@ -148,7 +148,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'de' => 'Comparative Law, Law with Languages, International Law, Civil Law, Criminal Law, Criminology, Constitutional /Public Law, Public Administration, European Community/EU Law',                    
                 
-                    'fr' => 'Comparative Law, Law with Languages, International Law, Civil Law, Criminal Law, Criminology, Constitutional /Public Law, Public Administration, European Community/EU Law',                    
+                    'fr' => 'Droit comparé, Droits linguistiques, Droit international, Droits civiques, Droit pénal, Criminologie, Droit constitutionnel, Droit publique, Droit de l&apos;Union européenne, UE',                    
                 
                     'sk' => 'Porovnávacie právo, Právo jazykové, Medzinárodné právo, Občianske právo, Trestné právo, Kriminológia, Ústavné/Verejné právo, Verejná správa, právo Európskeho spoločenstva/EÚ',                    
                 
@@ -166,7 +166,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'de' => 'Fine Art, Music and Musicology, Design, History of Art.',                    
                 
-                    'fr' => 'Fine Art, Music and Musicology, Design, History of Art.',                    
+                    'fr' => 'Beaux arts, Musique, Design,histoire de l&apos;art',                    
                 
                     'sk' => 'Výtvarné umenie, Hudba, Dizajn, Dejiny umenia',                    
                 
@@ -184,7 +184,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'de' => 'Urban Planning, Regional Planning',                    
                 
-                    'fr' => 'Urban Planning, Regional Planning',                    
+                    'fr' => 'Urbanisme, Aménagement du territoire',                    
                 
                     'sk' => 'Mestské plánovanie, Regionálne plánovanie',                    
                 
@@ -202,7 +202,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'de' => 'Biology, Physics, Chemistry, Microbiology, Biotechnology, Nuclear and High Energy Physics, Biochemistry, Astronomy, Astrophysics',                    
                 
-                    'fr' => 'Biology, Physics, Chemistry, Microbiology, Biotechnology, Nuclear and High Energy Physics, Biochemistry, Astronomy, Astrophysics',                    
+                    'fr' => 'Biologie, Physique, Chimie, Microbiologie, Biotechnologie, Physique nucléaire et Physique des hautes énergies, Biochimie, Astronomie, Astrophysique',                    
                 
                     'sk' => '
 Biológia, Fyzika, Chémia, Mikrobiológia, Biotechnológia, Jadrová fyzika a fyzika vysokých energií, Biochémia, Astronómia, Astrofyzika',                    
@@ -221,7 +221,7 @@ Biológia, Fyzika, Chémia, Mikrobiológia, Biotechnológia, Jadrová fyzika a f
                 
                     'de' => 'Mathematics, Statistics; Informatics, Computer Science',                    
                 
-                    'fr' => 'Mathematics, Statistics; Informatics, Computer Science',                    
+                    'fr' => 'Mathématiques,Statistiques, Informatique,',                    
                 
                     'sk' => 'Matematika, Štatistika, Informatika, Počítačová veda',                    
                 
@@ -239,7 +239,7 @@ Biológia, Fyzika, Chémia, Mikrobiológia, Biotechnológia, Jadrová fyzika a f
                 
                     'de' => 'Medicine, Public Health, Medical Technology',                    
                 
-                    'fr' => 'Medicine, Public Health, Medical Technology',                    
+                    'fr' => 'Médecine,Santé publique, Technologie médicale',                    
                 
                     'sk' => 'Medicína, Verejné zdravotníctvo, Medicínske technológie',                    
                 
@@ -257,7 +257,7 @@ Biológia, Fyzika, Chémia, Mikrobiológia, Biotechnológia, Jadrová fyzika a f
                 
                     'de' => 'Geography, Environmental Sciences, Ecology, Geology, Soil and Water Sciences, Geodesy, Cartography, Remote Sensing',                    
                 
-                    'fr' => 'Geography, Environmental Sciences, Ecology, Geology, Soil and Water Sciences, Geodesy, Cartography, Remote Sensing',                    
+                    'fr' => 'Géographie, Sciences de l&apos;environnement, Ecologie,Géologie,Science du sol et de l&apos;eau, Géodésie, Cartographie,Télédétection',                    
                 
                     'sk' => 'Geografia, Environmentálne vedy, Ekológia, Geológia, Vedy o pôde a vode, Geodézia, Kartografia, diaľkový prieskum Zeme',                    
                 
@@ -275,7 +275,8 @@ Biológia, Fyzika, Chémia, Mikrobiológia, Biotechnológia, Jadrová fyzika a f
                 
                     'de' => 'Agriculture, Food Science and Technology, Fisheries, Forestry,Farming, tractors, ',                    
                 
-                    'fr' => 'Agriculture, Food Science and Technology, Fisheries, Forestry,Farming, tractors, ',                    
+                    'fr' => 'Traiteur du compte,comptable,Assistant administratif, oordinateur administratif,
+Directeur administratif, Directeur services administratifs, Agent administratif, Spécialiste administratif, irecteur administratif de soutien, Superviseur administratif de soutien, administrateur, Auditeur, Directeur adjoint, Employé de facturation, ',                    
                 
                     'sk' => 'Vyberač účtu, Účtovnícky úradník, Administratívny asistent, Administratívny koordinátor, Správny riaditeľ, Manažér administratívnychg služieb, Administratívny úradník, Administratívny špecialista, Administratívny manažér pre podporu, Administratívny supervízor pre podporu, Administrátor, Audit úradník, Zástupca riaditeľa, Fakturačný úradník, Vyberač faktúr, Fakturčný koordinátor, Účtovník, Manažér vzťahov s klientmi,  Administrátor zmlúv, Kredit úradník, Zadávanie dát, Exekutívny asistent, Facility manažér, Fakturantky súborov, Finančný úradník, Úradník bežnej kancelárie , Správca ľudských zdrojov, informačný úradník, Právna asistentka, Úradník pre poštu, Vedúci úradníkov pre poštu, Úradník pre záznam o materiáloch, Lekárska sekretárka, Office Asistent, Office Úradník, Office Menežér, Menežér Office podpory, Supervízor Office podpory, Programový správca, Programový menežér, Recepčný, Analytik správy záznamov, Sekretárka, Senior administratívny analytik, Senior administratívny koordinátor, Senior úradník administratívnych služieb, Senior koordinátor, Senior výkonný asistent, Senior koordinátor špeciálnych podujatí, Senior asistent pre podporu, Senior  špecialista pre podporu, Koordinátor špeciálnych podujatí, Koordinátor špeciálnych programov, Asistent personálu, Asistent podpory, Špecialista podpory, Zapisovateľ, Virtuálna asistentka, Virtuálna recepčná, Textový procesor, Korporátna sekretárka, Pokladník / Finančný riaditeľ, Generálny / Operačný menežér, Office menežér, Menežér environmentálneho zdravia a bezpečnosti, Bezpečnostný menežér, Funkčný menežér, Menežér ľudských zdrojov, Projektový koordinátor',                    
                 
@@ -295,7 +296,7 @@ Biológia, Fyzika, Chémia, Mikrobiológia, Biotechnológia, Jadrová fyzika a f
                 
                     'fr' => 'Accessory, Accolade, Adjustment, Adopt, Advance, Affect, Affectation, Allure, Alteration, Antique, Apparel, Appeal, Applaud, Applique, Appraise, Apron, Array, Artificial, Artistry, Attire, Attract, Attractive, Audience, Availability, Avid, Award,Backdrop, Ballet-length, Bargain, Basic blank, Batik, Beading, Beautiful, Becoming, Bias-cut, Blend, Bodice, Bold, Boutique, Bows, Braiding, Brand, Breathable, Brocade, Bulky, Bustle, Buttons,Cachet, Camisole, Career, Casual, Catwalk, Celebrities, Cheap, Chemise, Choices, Classic, Client, Cloche, Clothing, Collection, Collector, Color, Combination, Comfortable, Commercial, Competition, Condition, Conformity, Conservation, Conservative, Construction, Consumer, Contemporary, Corset, Cosmetics, Costly, Couture, Cowl neck, Craftsmanship, Creative, Crimp, Culottes, Current, Cut,Daring, Darn, Dated, Dealer, Decolte, Decorative, Delivery, Demand, Department, Design, Designer, Desirable, Device, Devise, Devotee, Different, Dimension, Direction, Display, Distinctive, Dominate, Dramatic, Dresses, Dressing, Dressy, Duster, Dye,Ease, Easy, Ecru, Edge, Effect, Effective, Elaborate, Elegance, Embellish, Embroidery, Emphasis, Enhance, Ensemble, Enthusiastic, Eponymous, Especially, Etiquette, Evening gown, Exclusive, Expensive, Experiment, Extensions, Extraordinary, Extreme,Fabric, Fad, Fashion, Fashionable, Favored, Feature, Fiber, Financial, Finery, Fit, Flamboyant, Flattering, Flawless, Flow, Focus, Folded, Form, Formal, Foulard, Fragrance, Frequently, Fringe, Frivolous, Frock, Frog, Frumpy, Function, Furs, Futuristic,Garment, Garter, Genius, Gild, Glitter, Glossy, Goods, Gown, Grunge, Guide, Guru,Hair, Halter, Hand-made, Handbag, Handbag, Handwork, Hanger, Hat pin, Haute-couture, High heels, High-quality, High-style, Hippie, Horizontal, Hose, Hue,Identity, Illustration, Imaginative, Immediate, Impeccable, Imprint, Independent, Indicator, Indispensable, Industry, Inexpensive, Influence, Innovate, Inset, Inspection, Inspiration, Intricate, Item,Jacket, Jeans, Jersey, Jewelry, Jumper,Knee-length, Knickers, Knit,Label, Lace, Lenses, Leotard, Limited, Lingerie, Lining, Long-lasting, Look, Luxurious, Luxury,Macrame, Mainstream, Make up, Mannequin, Manufacture, Matronly, Maven, Measurement, Midriff, Minaudiere, Minimalist, Mode, Model, Modern, Modest, Modification, Modish, Motif, Movement,Necessity, Neckline, Niche, Noteworthy,Old-fashioned, Omnipresent, One-of-a-kind, Original, Ornamentation, Ostentatious, Outfit, Outlet, Outrageous, Oversize,Padding, Palette, Paparazzi, Parasol, Passe, Pastel, Pattern, Pedal pushers, Peignoir, Petticoat, Phenomenon, Photographer, Photography, Piece, Piping, Pleated, Plumage, Ply, Popular, Pose, Possibilities, Posture, Practical, Precise, Prediction, Preference, Pret-a-porter, Price, Print, Prize, Production, Prominent, Proportion, Provenance, Pumps, Purchase, Purse,Quality, Quantity,Radical, Rag, Ready-made, Recognition, Replacement, Replicate, Represent, Requests, Resistance, Restoration, Retailer, Revealing, Review, Ribbons, Risk-taker, Rivalry, Roll, Ruffles, Runway,Sari, Sarong, Savvy, Screened, Seamstress, Sequin, Sewing, Shade, Shape, Shawl, Sheer, Shift, Showcase, Showroom, Showy, Shrinkage, Signature, Simple, Skillful, Skirt, Sleeveless, Slip, Smile, Smock, Society, Soft, Sophisticated, Spats, Special, Sportswear, Staff, Stain, Stain-resistant, Stitching, Stock, Stole, Stretching, Stride, Strut, Studio, Style, Stylish, Stylist, Substitute, Subtle, Sun-dress, Swim-wear, Swingy, Synthetic,Tailor, Tailored, Talent, Tapestry, Tassel, Tasteful, Tatting, Technique, Textile, Texture, Tiara, Tie-dye, Tiered, Tones, Touch, Trade, Traditional, Transformation, Trend, Trim, Triumph, Tuft, Tunic, Turban, Twill, Typify,Ubiquitous, Understated, Unique, Unlimited, Unsuitable, Upscale, Urban, Use,Valuable, Value, Variety, Veil, Version, Vintage, Visual, Vogue,Waistline, Wale, Walk, Wardrobe, Washable, Wearable, Wearing, Weave, Well-made, Western, Wholesale, Widely, Widespread, Worthy, Woven, Wrinkle',                    
                 
-                    'sk' => 'Accessory, Accolade, Adjustment, Adopt, Advance, Affect, Affectation, Allure, Alteration, Antique, Apparel, Appeal, Applaud, Applique, Appraise, Apron, Array, Artificial, Artistry, Attire, Attract, Attractive, Audience, Availability, Avid, Award,Backdrop, Ballet-length, Bargain, Basic blank, Batik, Beading, Beautiful, Becoming, Bias-cut, Blend, Bodice, Bold, Boutique, Bows, Braiding, Brand, Breathable, Brocade, Bulky, Bustle, Buttons,Cachet, Camisole, Career, Casual, Catwalk, Celebrities, Cheap, Chemise, Choices, Classic, Client, Cloche, Clothing, Collection, Collector, Color, Combination, Comfortable, Commercial, Competition, Condition, Conformity, Conservation, Conservative, Construction, Consumer, Contemporary, Corset, Cosmetics, Costly, Couture, Cowl neck, Craftsmanship, Creative, Crimp, Culottes, Current, Cut,Daring, Darn, Dated, Dealer, Decolte, Decorative, Delivery, Demand, Department, Design, Designer, Desirable, Device, Devise, Devotee, Different, Dimension, Direction, Display, Distinctive, Dominate, Dramatic, Dresses, Dressing, Dressy, Duster, Dye,Ease, Easy, Ecru, Edge, Effect, Effective, Elaborate, Elegance, Embellish, Embroidery, Emphasis, Enhance, Ensemble, Enthusiastic, Eponymous, Especially, Etiquette, Evening gown, Exclusive, Expensive, Experiment, Extensions, Extraordinary, Extreme,Fabric, Fad, Fashion, Fashionable, Favored, Feature, Fiber, Financial, Finery, Fit, Flamboyant, Flattering, Flawless, Flow, Focus, Folded, Form, Formal, Foulard, Fragrance, Frequently, Fringe, Frivolous, Frock, Frog, Frumpy, Function, Furs, Futuristic,Garment, Garter, Genius, Gild, Glitter, Glossy, Goods, Gown, Grunge, Guide, Guru,Hair, Halter, Hand-made, Handbag, Handbag, Handwork, Hanger, Hat pin, Haute-couture, High heels, High-quality, High-style, Hippie, Horizontal, Hose, Hue,Identity, Illustration, Imaginative, Immediate, Impeccable, Imprint, Independent, Indicator, Indispensable, Industry, Inexpensive, Influence, Innovate, Inset, Inspection, Inspiration, Intricate, Item,Jacket, Jeans, Jersey, Jewelry, Jumper,Knee-length, Knickers, Knit,Label, Lace, Lenses, Leotard, Limited, Lingerie, Lining, Long-lasting, Look, Luxurious, Luxury,Macrame, Mainstream, Make up, Mannequin, Manufacture, Matronly, Maven, Measurement, Midriff, Minaudiere, Minimalist, Mode, Model, Modern, Modest, Modification, Modish, Motif, Movement,Necessity, Neckline, Niche, Noteworthy,Old-fashioned, Omnipresent, One-of-a-kind, Original, Ornamentation, Ostentatious, Outfit, Outlet, Outrageous, Oversize,Padding, Palette, Paparazzi, Parasol, Passe, Pastel, Pattern, Pedal pushers, Peignoir, Petticoat, Phenomenon, Photographer, Photography, Piece, Piping, Pleated, Plumage, Ply, Popular, Pose, Possibilities, Posture, Practical, Precise, Prediction, Preference, Pret-a-porter, Price, Print, Prize, Production, Prominent, Proportion, Provenance, Pumps, Purchase, Purse,Quality, Quantity,Radical, Rag, Ready-made, Recognition, Replacement, Replicate, Represent, Requests, Resistance, Restoration, Retailer, Revealing, Review, Ribbons, Risk-taker, Rivalry, Roll, Ruffles, Runway,Sari, Sarong, Savvy, Screened, Seamstress, Sequin, Sewing, Shade, Shape, Shawl, Sheer, Shift, Showcase, Showroom, Showy, Shrinkage, Signature, Simple, Skillful, Skirt, Sleeveless, Slip, Smile, Smock, Society, Soft, Sophisticated, Spats, Special, Sportswear, Staff, Stain, Stain-resistant, Stitching, Stock, Stole, Stretching, Stride, Strut, Studio, Style, Stylish, Stylist, Substitute, Subtle, Sun-dress, Swim-wear, Swingy, Synthetic,Tailor, Tailored, Talent, Tapestry, Tassel, Tasteful, Tatting, Technique, Textile, Texture, Tiara, Tie-dye, Tiered, Tones, Touch, Trade, Traditional, Transformation, Trend, Trim, Triumph, Tuft, Tunic, Turban, Twill, Typify,Ubiquitous, Understated, Unique, Unlimited, Unsuitable, Upscale, Urban, Use,Valuable, Value, Variety, Veil, Version, Vintage, Visual, Vogue,Waistline, Wale, Walk, Wardrobe, Washable, Wearable, Wearing, Weave, Well-made, Western, Wholesale, Widely, Widespread, Worthy, Woven, Wrinkle',                    
+                    'sk' => 'Architekt, Stavebný inžinier, Zememerač, Interiérový dizajnér, Správca stavby, Záhradný architekt, Elektrikár, Kreslič - architektúra , Mestský a regionálny plánovač, Návrhár, Projektový architekt, Job kapitán, CAD koordinátor, Územný plánovač, Špecialista ochrany pred eróziou, Tesár, Ukončovač sadrokartónových obkladov,  Námedzná sila, Glazovač, Elektrikár, Supervízor kontroly premávky, Murár, Mlynár, Maliar, Inštalatér,  Pokrývač, Štrukturálny hutník, Armovací hutník, Zvárač, Manažér pre vybavenie, Projektový manažér, Projektový inžinier, Predák, Field dozorca, Field Office manažér, Odhadca, Pred-výstavbový manažér,  Detailista, Nákupca, Viceprezident pre stavebníctvo',                    
                 
                     'key' => 'fashion-clothing',                    
                 
