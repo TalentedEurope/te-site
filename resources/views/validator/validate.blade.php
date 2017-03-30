@@ -89,7 +89,7 @@
             {{ csrf_field() }}
             <input type="hidden" name="status" value="valid">
             <hr/>
-            <personal-skills-form label="{!! trans('reg-profile.student_personal_skills') !!} (max 6)"
+            <personal-skills-form label="{!! trans('reg-profile.student_personal_skills') !!} ({!! trans('reg-profile.input_max_characters') !!} 6)"
                 values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}'
                 value='{!! json_encode($student->personalSkills()->wherePivot('validator',true)->get(), JSON_HEX_APOS) !!}'
                 errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></personal-skills-form>

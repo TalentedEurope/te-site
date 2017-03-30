@@ -88,7 +88,7 @@
                 <span class="help-block">
                     <strong>{{ $errors->first('image') }}</strong>
                 </span> @endif
-                <label for="image">{!! trans('reg-profile.company-logo') !!}</label>
+                <label for="image">{!! trans('reg-profile.company_logo') !!}</label>
                 <input type="file" id="image" name="image" accept="image/*">
               </div>
 
@@ -134,12 +134,12 @@
 
               <hr class="separator">
 
-              <text-area-form code="talent" label="{!! trans('reg-profile.company_what_is_talent') !!} (Max 300 characters)"
-                  placeholder="{!! trans('reg-profile.what_is_talent_for_you_in_a_few_words') !!} (max 300)." required
+              <text-area-form code="talent" label="{!! trans('reg-profile.company_what_is_talent') !!} ({!! trans('reg-profile.input_max_characters') !!} 300 characters)"
+                  placeholder="{!! trans('reg-profile.what_is_talent_for_you_in_a_few_words') !!} ({!! trans('reg-profile.input_max_characters') !!} 300)." required
                   value="{{ old('talent', $company->talent) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-area-form>
 
 
-              <personal-skills-form label="{!! trans('reg-profile.student_personal_skills') !!} (max 6)"
+              <personal-skills-form label="{!! trans('reg-profile.student_personal_skills') !!} ({!! trans('reg-profile.input_max_characters') !!} 6)"
                   sublabel="{!! trans('reg-profile.most_valuable_skills_for_company') !!}"
                   values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}'
                   value='{!! json_encode($company->personalSkills, JSON_HEX_APOS) !!}'
