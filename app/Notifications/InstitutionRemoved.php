@@ -46,9 +46,9 @@ class InstitutionRemoved extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage())
-                    ->subject(sprintf('%s has removed you from his Institution on Talented Europe', $this->institution->user->name))
-                    ->line(sprintf('%s has removed you from his Institution on Talented Europe. Please get in contact with them if you were removed by error, so they can fix this situation', $this->institution->user->name))
-                    ->line('Thank you for using our application!');
+                    ->subject(sprintf(trans('email.institutionRemoved.subject_1'), $this->institution->user->name))
+                    ->line(sprintf(trans('email.institutionRemoved.institutionRemoved.line_2'))
+                    ->line(trans('email.institutionRemoved.institutionRemoved.line_3'));
     }
 
     /**

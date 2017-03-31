@@ -199,8 +199,8 @@
               @if($user->userable->validationRequest)
                 <h4>{!! trans('reg-profile.request_is_managed_by') !!}: {{ $user->userable->validationRequest->getValidator() }}</h4>
                 <div class="alert alert-info">
-                <p>{{ sprintf('Your request was created %s', $user->userable->validationRequest->created_at->diffForHumans()) }}</p>
-                <p>{{ sprintf('If your request hasn\'t been completed in %s days you will be able to create a new request', env('CLEANUP_DAYS',14)) }}
+                <p>{{ sprintf(trans('reg-profile.your_request_was_created'), $user->userable->validationRequest->created_at->diffForHumans()) }}</p>
+                <p>{{ sprintf(trans('reg-profile.if_request_hasnt_been_completed'), env('CLEANUP_DAYS',14)) }}
                 </div>
               @else
                 <form class="form-vertical" role="form" method="POST" action="{{ route('request-validation'). '#refer'}}">

@@ -49,12 +49,12 @@ class ChangeInstitution extends Notification
         $institution = $this->invite->institution->user->fullName;
 
         return (new MailMessage())
-                    ->subject(sprintf('%s has invited you as referee on Talented Europe', $institution))
-                    ->line(sprintf('%s has invited you as referee on Talented Europe.', $institution))
-                    ->line('Since you\'re already a Talented Europe referee we need to you to confirm your change to this institution')
+                    ->subject(sprintf(trans('email.changeInstitution_subject_1'), $institution))
+                    ->line(sprintf(trans('email.changeInstitution_line_2'), $institution))
+                    ->line(trans('email.changeInstitution_line_3'))
 
-                    ->action('Confirm change', route('change_institution', $this->invite->uid).'?email='.urlencode($this->invite->email))
-                    ->line('Thank you for using our application!');
+                    ->action(trans('email.changeInstitution_action_4'), route('change_institution', $this->invite->uid).'?email='.urlencode($this->invite->email))
+                    ->line(trans('email.changeInstitution_line_5'));
     }
 
     /**

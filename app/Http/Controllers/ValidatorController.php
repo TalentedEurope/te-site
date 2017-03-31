@@ -133,13 +133,13 @@ class ValidatorController extends Controller
                 return true;
             },
             array(
-                'Cannot invite, either this email is registered to another type of user or he already has an invitation pending from this institution'
+                trans('validators.cannot_invite')
             )
         );
         $v = Validator::make($request->all(), ValidatorInvite::rules());
         if ($v->passes()) {
             $this->addValidator($v->valid()['email'], Auth::user()->userable->id);
-            $request->session()->flash('success_message', sprintf('Sent invitation to %s', $v->valid()['email']));
+            $request->session()->flash('success_message', sprintf(trans('validators.send_invitation_to'), $v->valid()['email']));
             return back();
         } else {
             return back()->withInput()->withErrors($v->errors());
@@ -177,7 +177,7 @@ class ValidatorController extends Controller
             $val->user->notify(new InstitutionRemoved($val->user, Auth::user()->userable));
             return Response::json($val, 200);
         }
-        return Response::json('Cannot find user', 404);
+        return Response::json(trans('validators.cannot_find_user'), 404);
     }
 
 
@@ -186,9 +186,9 @@ class ValidatorController extends Controller
         $this->institutionOnly();
         $res = ValidatorInvite::where('id', $id)->where("institution_id", Auth::user()->userable->id)->delete();
         if ($res != 0) {
-            $request->session()->flash('success_message', 'Deleted invitation successfully');
+            $request->session()->flash('success_message', trans('validators.deleted_invitation_successfully'));
         } else {
-            $request->session()->flash('error_message', 'Cannot find invitation to delete, please try again later');
+            $request->session()->flash('error_message', trans('validators.cannot_find_invitation_to_delete'));
         }
         return back();
     }
