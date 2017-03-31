@@ -48,13 +48,13 @@ class ValidatorRequested extends Notification
         $requestID = $this->validatorRequest->id;
 
         return (new MailMessage())
-                    ->subject(sprintf('%s has asked you as referee his profile in Talented europe', $studentName))
-                    ->line(sprintf('Hello %s', $validatorName))
-                    ->line(sprintf('%s has invited you as referee on Talented Europe.', $validatorName))
-                    ->line('We need you to resend this email to the institution you work for so they can register using the following link')
-                    ->line('Please note that if they register using clicking the following button you will be invited automatically into their institution')
-                    ->action('Create Institution account', route('invite-school').'?req_id='.urlencode($requestID))
-                    ->line('Thank you for using our application!');
+                    ->subject(sprintf(trans('email.validatorRequested_subject_1'), $studentName))
+                    ->line(sprintf(trans('email.validatorRequested_line_2'), $validatorName))
+                    ->line(sprintf(trans('email.validatorRequested_line_3'), $validatorName))
+                    ->line(trans('email.validatorRequested_line_4'))
+                    ->line(trans('email.validatorRequested_line_5'))
+                    ->action(trans('email.validatorRequested_action_6'), route('invite-school').'?req_id='.urlencode($requestID))
+                    ->line(trans('email.validatorRequested_line_7'));
     }
 
     /**

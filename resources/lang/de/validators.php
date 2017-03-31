@@ -87,4 +87,18 @@ return [
     
         'removing' => 'Removing',
     
+        'validation_was_removed' => 'The validation was removed because you indicated that %s wasn\'t a student from this institution',
+    
+        'validation_complete' => '%s validation complete',
+    
+        'cannot_invite' => 'Cannot invite, either this email is registered to another type of user or he already has an invitation pending from this institution',
+    
+        'send_invitation_to' => 'Sent invitation to %s',
+    
+        'cannot_find_user' => 'Cannot find user',
+    
+        'deleted_invitation_successfully' => 'Deleted invitation successfully',
+    
+        'cannot_find_invitation_to_delete' => 'Cannot find invitation to delete, please try again later',
+    
 ];
