@@ -31,7 +31,7 @@ class Student extends Model
     {
         $filter = array(
             'nationality' => 'sometimes|required|in:'.implode(',', Student::$nationalities),
-            'birthdate' => 'sometimes|required|date',
+            'birthdate' => 'sometimes|date',
             'curriculum' => 'mimes:pdf',
             'renewed_at' => 'sometimes|required',
             'talent' => 'sometimes|required|max:300',
