@@ -11,12 +11,12 @@ return [
     
         'refereed' => 'Validado',
     
-        'there_are_no' => 'No hay',
-    
-        'matching_the_selected_filters' => 'resultados con los filtros seleccionados en este momento',
+        'there_are_no_matching_the_selected_filters' => 'No hay %s que se ajusten con los filtros seleccionados en este momento',
     
         'we_found' => 'Hemos encontrado',
     
-        'matching_your_needs' => 'resultados que necesitas',
+        'we_found_matching_your_needs' => 'Hemos encontrado %number% %collective% con los criterios seleccionados',
+    
+        'filters' => 'Filtros',
     
 ];

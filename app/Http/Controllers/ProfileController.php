@@ -62,7 +62,7 @@ class ProfileController extends Controller
         $user = User::findOrFail($id);
         $public = Auth::user() == null;
         if (!$user->is_filled || !$user->visible || $user->banned) {
-            App::abort(404, 'Not found.');
+            App::abort(404, trans('error-page.not_found'));
         }
         return $this->showProfile($user, $public);
     }
@@ -115,9 +115,9 @@ class ProfileController extends Controller
     {
         $user = Auth::User();
         $errors = $this->processUser($request, $user);
-        $request->session()->flash('success_message', 'Changes saved succesfully');
+        $request->session()->flash('success_message', trans('reg-profile.changes_saved_successfully'));
         if (sizeof($errors)) {
-            $request->session()->flash('error_message', 'Warning: Some fields couldn\'t be saved because there were errors, check each field to see the issues');
+            $request->session()->flash('error_message', trans('reg-profile.warning_some_fields_has_errors'));
         }
         return back()->withInput()->withErrors($errors);
     }
@@ -895,7 +895,7 @@ class ProfileController extends Controller
         if ($user->userable && $user->userable->curriculum) {
             return response()->download(public_path().Student::$curriculumPath.$user->userable->curriculum);
         }
-        App::abort(403, 'Unauthorized action.');
+        App::abort(403, trans('error-page.unauthorized_action'));
     }
 
     public function getStudyGradeCard(Request $request, $id, $studyId)
@@ -904,7 +904,7 @@ class ProfileController extends Controller
         if ($user->userable && $user->userable->studies()->find($studyId) && $user->userable->studies()->find($studyId)->gradecard) {
             return response()->download(public_path().Student::$studyGradeCardPath.$user->userable->studies()->find($studyId)->gradecard);
         }
-        App::abort(403, 'Unauthorized action.');
+        App::abort(403, trans('error-page.unauthorized_action'));
     }
 
     public function getStudyCertificate(Request $request, $id, $studyId)
@@ -913,7 +913,7 @@ class ProfileController extends Controller
         if ($user->userable && $user->userable->studies()->find($studyId) && $user->userable->studies()->find($studyId)->certificate) {
             return response()->download(public_path().Student::$studyCertificatePath.$user->userable->studies()->find($studyId)->certificate);
         }
-        App::abort(403, 'Unauthorized action.');
+        App::abort(403, trans('error-page.unauthorized_action'));
     }
 
     public function getInstitutionCertificate(Request $request, $id)
@@ -923,7 +923,7 @@ class ProfileController extends Controller
         if ($user->userable && $user->userable->certificate) {
             return response()->download(public_path().Institution::$certificatePath.$user->userable->certificate);
         }
-        App::abort(403, 'Unauthorized action.');
+        App::abort(403, trans('error-page.unauthorized_action'));
     }
 
 
@@ -933,7 +933,7 @@ class ProfileController extends Controller
         if ($user->userable && $user->userable->training()->find($studyId) && $user->userable->training()->find($studyId)->certificate) {
             return response()->download(public_path().Student::$studyCertificatePath.$user->userable->training()->find($studyId)->certificate);
         }
-        App::abort(403, 'Unauthorized action.');
+        App::abort(403, trans('error-page.unauthorized_action'));
     }
 
     public function getLanguageCertificate(Request $request, $id, $studyId)
@@ -942,7 +942,7 @@ class ProfileController extends Controller
         if ($user->userable && $user->userable->languages()->find($studyId) && $user->userable->languages()->find($studyId)->certificate) {
             return response()->download(public_path().Student::$studyCertificatePath.$user->userable->languages()->find($studyId)->certificate);
         }
-        App::abort(403, 'Unauthorized action.');
+        App::abort(403, trans('error-page.unauthorized_action'));
     }
 
     private function formatRelatedErrors($errors, $mainKey, $subKey)
@@ -959,7 +959,7 @@ class ProfileController extends Controller
         if ($request->has('referee')) {
             $val = \App\Models\Validator::find($request->input('referee'));
             if (!$val) {
-                App::abort(404, 'Not found.');
+                App::abort(404, trans('error-page.not_found'));
             }
             ValidationRequest::create([
                 'student_id' => Auth::user()->userable->id,
@@ -968,7 +968,7 @@ class ProfileController extends Controller
         } else {
             $ins = Institution::find($request->input('institution'));
             if (!$ins) {
-                App::abort(404, 'Not found.');
+                App::abort(404, trans('error-page.not_found'));
             }
             $lowest = INF;
             $lowestValidatorId = null;
@@ -987,7 +987,7 @@ class ProfileController extends Controller
                 'validator_id' => $lowestValidatorId
             ]);
         }
-        $request->session()->flash('success_message', 'Successfully requested validation request');
+        $request->session()->flash('success_message', trans('reg-profile.successfully_requested_validation_request'));
         return back();
     }
 
@@ -1003,16 +1003,16 @@ class ProfileController extends Controller
             if ($existing) {
                 if ($existing->userable_type == Validator::class) {
                     if ($existing->userable->institution) {
-                        $validator->errors()->add('validator_email', sprintf('Referee is part of %s get in contact with him to ask a institution change if required', $existing->userable->institution->user->name));
+                        $validator->errors()->add('validator_email', sprintf(trans('reg-profile.referee_is_part_of_institution'), $existing->userable->institution->user->name));
                     } else {
-                        $validator->errors()->add('validator_email', 'Referee isn\'t part of any institution. Please ask him to get invited by one');
+                        $validator->errors()->add('validator_email', trans('reg-profile.referee_isnt_part_of_any_institution'));
                     }
                 } else {
-                    $validator->errors()->add('validator_email', 'This email address is registered to an user that cannot be a referee');
+                    $validator->errors()->add('validator_email', trans('reg-profile.this_email_user_cannot_be_a_referee'));
                 }
             } else {
                 $this->inviteUser($request->input('validator_name'), $request->input('validator_email'));
-                $request->session()->flash('success_message', 'Invitation sent succesfully');
+                $request->session()->flash('success_message', trans('reg-profile.invitation_sent_successfully'));
                 return back();
             }
         }

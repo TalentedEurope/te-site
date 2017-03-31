@@ -17,7 +17,7 @@ return [
     
         'changeInstitution_line_2' => '%s has invited you as referee on Talented Europe.',
     
-        'changeInstitution_line_3' => 'Since you&apos;re already a Talented Europe referee we need to you to confirm your change to this institution',
+        'changeInstitution_line_3' => 'Since you\'re already a Talented Europe referee we need to you to confirm your change to this institution',
     
         'changeInstitution_action_4' => 'Confirm change',
     

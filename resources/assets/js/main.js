@@ -11,7 +11,19 @@ require('jquery-confirm/dist/jquery-confirm.min.js');
 
 require('flatpickr/dist/flatpickr.min.css');
 var Flatpickr = require('flatpickr/dist/flatpickr.min.js');
-Flatpickr.l10n.firstDayOfWeek = 1;
+
+import {es as Spanish} from 'flatpickr/dist/l10n/es.js';
+import {it as Italian} from 'flatpickr/dist/l10n/it.js';
+import {de as German} from 'flatpickr/dist/l10n/de.js';
+import {fr as French} from 'flatpickr/dist/l10n/fr.js';
+import {sk as Slovak} from './helpers/flatpickr.l10n.sk.js';
+
+Flatpickr.l10ns.en.firstDayOfWeek = 1;
+
+var locales = {'es': Spanish, 'it': Italian, 'de': German, 'fr': French, 'sk': Slovak}
+if (TE.locale in locales) {
+    Flatpickr.localize(locales[TE.locale]);
+}
 
 import Search from './components/search/Main.vue';
 import Alerts from './components/alerts/Main.vue';
@@ -50,12 +62,12 @@ if (document.querySelector('.v-container')) {
 $(function() {
     var get_confirm_config = function (form) {
         return {
-            title: 'Confirm Validation',
-            content: 'Are you sure you want to finish refereeing this student?',
+            title: TE.translations['students-validation']['confirm_validation'],
+            content: TE.translations['students-validation']['are_you_sure_you_want_to_finish_refereeing'],
             backgroundDismiss: true,
             buttons: {
                 yes: {
-                    text: 'Yes',
+                    text: TE.translations['global']['yes'],
                     btnClass: 'btn-info',
                     action: function() {
                         form.submit();
@@ -63,7 +75,7 @@ $(function() {
                     }
                 },
                 no: {
-                    text: 'No',
+                    text: TE.translations['global']['no'],
                 }
             }
         }

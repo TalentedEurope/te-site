@@ -4,7 +4,7 @@
 
         <div class="study" v-for="(index, study) in parsed_studies">
             <header class="clearfix">
-                <h4 class="pull-left">Study #{{ index + 1 }}</h4>
+                <h4 class="pull-left">{{ $tc('reg-profile.study', 1) }} #{{ index + 1 }}</h4>
                 <remove-item-button v-if="!showClearButton" :items="parsed_studies" :item="study" group-name="Study"></remove-item-button>
                 <button class="pull-right remove btn-warning btn btn-sm" v-if="study.locked != 1 && showClearButton" @click.prevent="clearForm()" >
                     <i class="fa fa-close" aria-hidden="true"></i> {{ $t('reg-profile.clear_btn') }}
@@ -13,14 +13,19 @@
 
             <text-box-form type="hidden" code="id" group-code="studies" :group-id="study.id" :value="study.id"></text-box-form>
 
-            <text-box-form code="institution_name" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_institution_name')"
-                required :placeholder="$t('reg-profile.student_study_institution_name')" :value="study.institution_name" :readonly="!!study.locked" :errors="errors"></text-box-form>
+            <autocomplete code="institution_name" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_institution_name')"
+                :items="institutions" required :placeholder="$t('reg-profile.student_study_institution_name')" :value="study.institution_name" :readonly="!!study.locked" :errors="errors">
+            </autocomplete>
 
             <div class="row">
-                <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_course_studies_name')"
-                    required :placeholder="$t('reg-profile.student_study_course_studies_name')" :value="study.name" :readonly="!!study.locked" :errors="errors"></text-box-form>
-                <select-form class="col-sm-4" code="level" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_level')"
-                    required :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyLevels" :value="study.level" :disabled="!!study.locked" :errors="errors"></select-form>
+                <div class="col-sm-8">
+                    <text-box-form code="name" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_course_studies_name')"
+                        required :placeholder="$t('reg-profile.student_study_course_studies_name')" :value="study.name" :readonly="!!study.locked" :errors="errors"></text-box-form>
+                </div>
+                <div class="col-sm-4">
+                    <select-form code="level" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_level')"
+                        required :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyLevels" :value="study.level" :disabled="!!study.locked" :errors="errors"></select-form>
+                </div>
             </div>
 
             <select-form code="field" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_field')"
@@ -43,21 +48,26 @@
 
         <div class="study" v-for="(index, new_study) in new_studies">
             <header class="clearfix">
-                <h4 class="pull-left">Study #{{ (parsed_studies.length + index + 1) }}</h4>
+                <h4 class="pull-left">{{ $tc('reg-profile.study', 1) }} #{{ (parsed_studies.length + index + 1) }}</h4>
                 <remove-item-button v-if="!showClearButton" :items="new_studies" :item="new_study" ></remove-item-button>
                 <button class="pull-right remove btn-warning btn btn-sm" v-if="showClearButton" @click.prevent="clearForm()" >
                     <i class="fa fa-close" aria-hidden="true"></i> {{ $t('reg-profile.clear_btn') }}
                 </button>
             </header>
 
-            <text-box-form code="institution_name" group-code="studies" :group-id="new_study.id" :label="$t('reg-profile.student_study_institution_name')"
-                required :placeholder="$t('reg-profile.student_study_institution_name')" :value="new_study.institution_name"></text-box-form>
+            <autocomplete code="institution_name" group-code="studies" :group-id="new_study.id" :label="$t('reg-profile.student_study_institution_name')"
+                :items="institutions" required :placeholder="$t('reg-profile.student_study_institution_name')" :value="new_study.institution_name">
+            </autocomplete>
 
             <div class="row">
-                <text-box-form class="col-sm-8" code="name" group-code="studies" :group-id="new_study.id"
-                    required :label="$t('reg-profile.student_study_course_studies_name')" :placeholder="$t('reg-profile.student_study_course_studies_name')" :value="new_study.name"></text-box-form>
-                <select-form class="col-sm-4" code="level" group-code="studies" :group-id="new_study.id"
-                    required :label="$t('reg-profile.student_study_level')" :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyLevels" :value="new_study.level"></select-form>
+                <div class="col-sm-8">
+                    <text-box-form code="name" group-code="studies" :group-id="new_study.id"
+                        required :label="$t('reg-profile.student_study_course_studies_name')" :placeholder="$t('reg-profile.student_study_course_studies_name')" :value="new_study.name"></text-box-form>
+                </div>
+                <div class="col-sm-4">
+                    <select-form code="level" group-code="studies" :group-id="new_study.id"
+                        required :label="$t('reg-profile.student_study_level')" :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyLevels" :value="new_study.level"></select-form>
+                </div>
             </div>
 
             <select-form code="field" group-code="studies" :group-id="new_study.id" :label="$t('reg-profile.student_study_field')"
@@ -84,16 +94,19 @@ import RemoveItemButton from './common/RemoveItemButton.vue';
 import TextBoxForm from '../common/TextBoxForm.vue';
 import SelectForm from '../common/SelectForm.vue';
 import FileForm from '../common/FileForm.vue';
+import Autocomplete from './common/Autocomplete.vue';
+import { institutionsResource } from 'resources/institutions';
 import EventBus from 'event-bus.js';
 
 export default {
     props: ['studies', 'studyLevels', 'studyFields', 'userId', 'errors'],
-    components: { RemoveItemButton, TextBoxForm, SelectForm, FileForm },
+    components: { RemoveItemButton, TextBoxForm, SelectForm, FileForm, Autocomplete },
     data() {
         return {
             parsed_studies: JSON.parse(this.studies),
             new_studies: [],
-            remove_studies: []
+            remove_studies: [],
+            institutions: []
         }
     },
     ready() {
@@ -103,6 +116,11 @@ export default {
         EventBus.$on('onRemoveStudy', (study) => {
             this.remove_studies.push(study.id);
         });
+
+        institutionsResource.get()
+            .then((response) => {
+                this.institutions = response.body;
+            })
     },
     methods: {
         clearForm: function () {

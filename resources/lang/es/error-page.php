@@ -11,14 +11,18 @@ return [
     
         'page_not_found' => 'Página no encontrada',
     
-        'we_didnt_find_the_page' => 'We didn&apos;t find the page you were looking for.',
+        'we_didnt_find_the_page' => 'No hemos encontrado la página que buscabas.',
     
-        'internal_server_error' => 'Internal server error',
+        'internal_server_error' => 'Error del servidor interno',
     
-        'an_error_happened' => 'An error happened, administrators have been notified and this issue will be fixed soon, please try later.',
+        'an_error_happened' => 'Se ha producido un error, se ha notificado a los administradores y este problema se solucionará pronto. Inténtalo más tarde.',
     
-        'meanwhile_can_searching_for' => 'Meanwhile you can try searching for',
+        'meanwhile_can_searching_for' => 'Mientras tanto, puedes intentar buscar',
     
-        'be_right_back' => 'Be right back',
+        'be_right_back' => 'Vuelvo enseguida',
+    
+        'not_found' => 'Not found',
+    
+        'unauthorized_action' => 'Unauthorized action',
     
 ];

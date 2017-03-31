@@ -53,21 +53,29 @@
                   required errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <div class="row">
-                <text-box-form class="col-sm-6" code="fiscal_id" label="{!! trans('reg-profile.fiscal_id') !!}" placeholder="{!! trans('reg-profile.fiscal_id') !!}"
-                    required value="{{ old('fiscal_id', $company->fiscal_id) }}"
-                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-                <text-box-form class="col-sm-6" code="overseer" label="{!! trans('reg-profile.legal_representative') !!}"
-                    placeholder="{!! trans('reg-profile.legal_representative') !!}" value="{{ old('overseer', $company->overseer) }}"
-                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                <div class="col-sm-6">
+                  <text-box-form code="fiscal_id" label="{!! trans('reg-profile.fiscal_id') !!}" placeholder="{!! trans('reg-profile.fiscal_id') !!}"
+                      required value="{{ old('fiscal_id', $company->fiscal_id) }}"
+                      errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                </div>
+                <div class="col-sm-6">
+                  <text-box-form code="overseer" label="{!! trans('reg-profile.legal_representative') !!}"
+                      placeholder="{!! trans('reg-profile.legal_representative') !!}" value="{{ old('overseer', $company->overseer) }}"
+                      errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                </div>
               </div>
 
               <div class="row">
-                <text-box-form class="col-sm-6" code="email" label="{!! trans('reg-profile.email') !!}" placeholder="{!! trans('reg-profile.email') !!}" readonly
-                    value="{{ old('email', $user->email) }}"
-                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-                <text-box-form class="col-sm-6" code="phone" label="{!! trans('reg-profile.phone') !!}" placeholder="{!! trans('reg-profile.phone') !!}"
-                    value="{{ old('phone', $user->phone) }}"
-                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                <div class="col-sm-6">
+                  <text-box-form code="email" label="{!! trans('reg-profile.email') !!}" placeholder="{!! trans('reg-profile.email') !!}" readonly
+                      value="{{ old('email', $user->email) }}"
+                      errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                </div>
+                <div class="col-sm-6">
+                  <text-box-form code="phone" label="{!! trans('reg-profile.phone') !!}" placeholder="{!! trans('reg-profile.phone') !!}"
+                      value="{{ old('phone', $user->phone) }}"
+                      errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                </div>
               </div>
 
               <select-form code="activity" label="{!! trans('reg-profile.company_activity') !!}" placeholder=" - {!! trans('reg-profile.company_activity') !!} - " required
@@ -80,7 +88,7 @@
                 <span class="help-block">
                     <strong>{{ $errors->first('image') }}</strong>
                 </span> @endif
-                <label for="image">{!! trans('reg-profile.company-logo') !!}</label>
+                <label for="image">{!! trans('reg-profile.company_logo') !!}</label>
                 <input type="file" id="image" name="image" accept="image/*">
               </div>
 
@@ -108,12 +116,16 @@
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <div class="row">
-                <text-box-form class="col-sm-4" code="postal_code" label="{!! trans('reg-profile.postal_code') !!}" placeholder="{!! trans('reg-profile.postal_code') !!}"
-                    value="{{ old('postal_code', $user->postal_code) }}" minlength="3"
-                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-                <text-box-form class="col-sm-8" code="city" label="{!! trans('reg-profile.city') !!}" placeholder="{!! trans('reg-profile.city') !!}"
-                    required value="{{ old('city', $user->city) }}"
-                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                <div class="col-sm-4">
+                  <text-box-form code="postal_code" label="{!! trans('reg-profile.postal_code') !!}" placeholder="{!! trans('reg-profile.postal_code') !!}"
+                      value="{{ old('postal_code', $user->postal_code) }}" minlength="3"
+                      errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                </div>
+                <div class="col-sm-8">
+                  <text-box-form code="city" label="{!! trans('reg-profile.city') !!}" placeholder="{!! trans('reg-profile.city') !!}"
+                      required value="{{ old('city', $user->city) }}"
+                      errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                </div>
               </div>
 
               <select-form code="country" label="{!! trans('reg-profile.country') !!}" placeholder=" - {!! trans('reg-profile.country') !!} - " required
@@ -122,12 +134,12 @@
 
               <hr class="separator">
 
-              <text-area-form code="talent" label="{!! trans('reg-profile.company_what_is_talent') !!} (Max 300 characters)"
-                  placeholder="{!! trans('reg-profile.what_is_talent_for_you_in_a_few_words') !!} (max 300)." required
+              <text-area-form code="talent" label="{!! trans('reg-profile.company_what_is_talent') !!} ({!! trans('reg-profile.input_max_characters') !!} 300 characters)"
+                  placeholder="{!! trans('reg-profile.what_is_talent_for_you_in_a_few_words') !!} ({!! trans('reg-profile.input_max_characters') !!} 300)." required
                   value="{{ old('talent', $company->talent) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-area-form>
 
 
-              <personal-skills-form label="{!! trans('reg-profile.student_personal_skills') !!} (max 6)"
+              <personal-skills-form label="{!! trans('reg-profile.student_personal_skills') !!} ({!! trans('reg-profile.input_max_characters') !!} 6)"
                   sublabel="{!! trans('reg-profile.most_valuable_skills_for_company') !!}"
                   values='{!! json_encode($personalSkills, JSON_HEX_APOS) !!}'
                   value='{!! json_encode($company->personalSkills, JSON_HEX_APOS) !!}'

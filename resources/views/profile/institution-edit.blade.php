@@ -39,12 +39,16 @@
                   required errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <div class="row">
-                <text-box-form class="col-sm-6" code="email" label="{!! trans('reg-profile.email') !!}" placeholder="{!! trans('reg-profile.email') !!}" readonly
-                    value="{{ old('email', $user->email) }}"
-                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-                <text-box-form class="col-sm-6" code="phone" label="{!! trans('reg-profile.phone') !!}" placeholder="{!! trans('reg-profile.phone') !!}"
-                    value="{{ old('phone', $user->phone) }}"
-                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                <div class="col-sm-6">
+                  <text-box-form code="email" label="{!! trans('reg-profile.email') !!}" placeholder="{!! trans('reg-profile.email') !!}" readonly
+                      value="{{ old('email', $user->email) }}"
+                      errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                </div>
+                <div class="col-sm-6">
+                  <text-box-form code="phone" label="{!! trans('reg-profile.phone') !!}" placeholder="{!! trans('reg-profile.phone') !!}"
+                      value="{{ old('phone', $user->phone) }}"
+                      errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                </div>
               </div>
 
               <text-box-form code="overseer" label="{!! trans('reg-profile.legal_representative') !!}"
@@ -52,13 +56,16 @@
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <div class="row">
-                <text-box-form class="col-sm-6" code="fiscal_id" label="{!! trans('reg-profile.fiscal_id') !!}" placeholder="{!! trans('reg-profile.fiscal_id') !!}"
-                  required value="{{ old('fiscal_id', $institution->fiscal_id) }}"
-                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-
-                <text-box-form class="col-sm-6" code="pic" label="{!! trans('reg-profile.institution_pic') !!}" placeholder="{!! trans('reg-profile.institution_pic') !!}"
-                  value="{{ old('pic', $institution->pic) }}"
-                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                <div class="col-sm-6">
+                  <text-box-form code="fiscal_id" label="{!! trans('reg-profile.fiscal_id') !!}" placeholder="{!! trans('reg-profile.fiscal_id') !!}"
+                    required value="{{ old('fiscal_id', $institution->fiscal_id) }}"
+                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                </div>
+                <div class="col-sm-6">
+                  <text-box-form code="pic" label="{!! trans('reg-profile.institution_pic') !!}" placeholder="{!! trans('reg-profile.institution_pic') !!}"
+                    value="{{ old('pic', $institution->pic) }}"
+                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                </div>
               </div>
 
               <div class="form-group @if ($errors->has('image')) alert alert-danger   @endif  ">
@@ -82,12 +89,16 @@
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <div class="row">
-                <text-box-form class="col-sm-4" code="postal_code" label="{!! trans('reg-profile.postal_code') !!}" placeholder="{!! trans('reg-profile.postal_code') !!}"
-                    value="{{ old('postal_code', $user->postal_code) }}" minlength="3"
-                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
-                <text-box-form class="col-sm-8" code="city" label="{!! trans('reg-profile.city') !!}" placeholder="{!! trans('reg-profile.city') !!}"
-                    required value="{{ old('city', $user->city) }}"
-                    errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                <div class="col-sm-4">
+                  <text-box-form code="postal_code" label="{!! trans('reg-profile.postal_code') !!}" placeholder="{!! trans('reg-profile.postal_code') !!}"
+                      value="{{ old('postal_code', $user->postal_code) }}" minlength="3"
+                      errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                </div>
+                <div class="col-sm-8">
+                  <text-box-form code="city" label="{!! trans('reg-profile.city') !!}" placeholder="{!! trans('reg-profile.city') !!}"
+                      required value="{{ old('city', $user->city) }}"
+                      errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+                </div>
               </div>
 
               <select-form code="country" label="{!! trans('reg-profile.country') !!}" placeholder=" - {!! trans('reg-profile.country') !!} - " required

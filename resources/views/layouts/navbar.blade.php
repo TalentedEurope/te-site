@@ -44,15 +44,22 @@
               @if (isset($alertCount))
                 <span class="badge">{{ $alertCount }}</span>
               @endif
-              {{ Auth::user()->name ? Auth::user()->name . " " . Auth::user()->surname : Auth::user()->email }} <span class="caret"></span>
+              <span class="user">{{ Auth::user()->name ? Auth::user()->name . " " . Auth::user()->surname : Auth::user()->email }}</span> <span class="caret"></span>
             </a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i> {!! trans('navbar.profile') !!}</a></li>
-              @if (Auth::user()->isA('company'))
-              <li><a href="{{ url('/alerts') }}"><i class="fa fa-btn fa-envelope"></i> {!! trans('navbar.alerts') !!}</a></li>
+              @if (Auth::user()->isA('student') || Auth::user()->isA('company'))
+                <li><a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i> {!! trans('navbar.profile') !!}</a></li>
               @endif
-              <li><a href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i> {!! trans('navbar.settings') !!}</a></li>
 
+              @if (Auth::user()->isA('company'))
+                <li><a href="{{ url('/alerts') }}"><i class="fa fa-btn fa-envelope"></i> {!! trans('navbar.alerts') !!}</a></li>
+              @elseif (Auth::user()->isA('institution'))
+                <li><a href="{{ url('/validators') }}"><i class="fa fa-btn fa-balance-scale"></i> {!! trans('validators.validators') !!}</a></li>
+              @elseif (Auth::user()->isA('validator'))
+                <li><a href="{{ url('/validate') }}"><i class="fa fa-btn fa-users"></i> {!! trans('validators.my_students') !!}</a></li>
+              @endif
+
+              <li><a href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i> {!! trans('navbar.settings') !!}</a></li>
               <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i> {!! trans('global.logout_btn') !!}</a></li>
             </ul>
           </li>

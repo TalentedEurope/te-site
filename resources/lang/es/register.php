@@ -5,7 +5,7 @@ return [
     
         'thank_you_for_signing_up' => '¡Gracias por registrarte!',
     
-        'you_will_receive_an_email' => 'You will receive an email with instructions about how to confirm your account in a few minutes.',
+        'you_will_receive_an_email' => 'Recibirás un correo electrónico con instrucciones sobre cómo confirmar tu cuenta en unos minutos.',
     
         'go_back_to_home' => 'Volver a la página principal',
     
@@ -21,11 +21,11 @@ return [
     
         'all_fields_are_required' => 'Todos los campos son obligatorios',
     
-        'confirmation_email_may_take_few_minutes' => 'Your confirmation email may take a few minutes to arrive, make sure you also check out your spam folder',
+        'confirmation_email_may_take_few_minutes' => 'El correo electrónico de confirmación puede tardar unos minutos en llegar, no se olvide de controlar su carpeta de spam también',
     
-        'registration_complete_successfully' => 'registro completado satisfactoriamente',
+        'registration_complete_successfully' => 'Registro completado satisfactoriamente',
     
-        'register_success' => 'registro completado',
+        'register_success' => 'Registro completado',
     
         'register' => 'Registro',
     

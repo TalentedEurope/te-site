@@ -5,11 +5,11 @@ return [
     
         'thank_you_for_signing_up' => 'Ďakujeme za vašu registráciu!',
     
-        'you_will_receive_an_email' => 'O nikeľoko minút obdržíte mail s inštrukciami pre potvrdenie vášho účtu.',
+        'you_will_receive_an_email' => 'O niekoľko minút vám príde e-mail s inštrukciami pre potvrdenie vášho účtu.',
     
         'go_back_to_home' => 'Návrat na domovskú stránku',
     
-        'search_students' => 'Vyhľdávaj študentov',
+        'search_students' => 'Vyhľadávaj študentov',
     
         'search_companies' => 'Vyhľadávaj spoločnosti',
     
@@ -21,11 +21,11 @@ return [
     
         'all_fields_are_required' => 'Potrebné vyplniť všetky políčka',
     
-        'confirmation_email_may_take_few_minutes' => 'Your confirmation email may take a few minutes to arrive, make sure you also check out your spam folder',
+        'confirmation_email_may_take_few_minutes' => 'Mail s potvrdením vám príde do niekoľkých minút, nezabudnite si skontrolovať spamový priečinok.',
     
-        'registration_complete_successfully' => 'Registration complete successfully you may log in now.',
+        'registration_complete_successfully' => 'Registrácia úspešne ukončená.',
     
-        'register_success' => 'Register success',
+        'register_success' => 'Úspešná registrácia',
     
         'register' => 'Registrujte sa',
     

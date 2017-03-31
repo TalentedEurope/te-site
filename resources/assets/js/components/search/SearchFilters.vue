@@ -1,7 +1,7 @@
 <template>
     <div class="col-sm-4 col-md-3 search-options">
         <div class="options-title clearfix">
-            <span class="h3"><i class="fa fa-filter" aria-hidden="true"></i>Filters</span>
+            <span class="h3"><i class="fa fa-filter" aria-hidden="true"></i>{{ $t('search.filters') }}</span>
             <button class="btn btn-primary button-toggle-filters" @click.prevent="toggleFilters()">
                 <i class="fa fa-filter" aria-hidden="true"></i><i class="fa" v-bind:class="[show_filters ? 'fa-minus' : 'fa-plus']" aria-hidden="true"></i>
             </button>

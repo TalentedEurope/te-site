@@ -53,11 +53,11 @@ return [
     
         'SI' => 'Eslovenia',
     
-        'SP' => 'España',
+        'ES' => 'España',
     
         'SE' => 'Suecia',
     
-        'UK' => 'Reino Unido',
+        'GB' => 'Reino Unido',
     
         'follow_us' => 'Síguenos',
     
@@ -91,7 +91,7 @@ return [
     
         'footer_partners' => 'Partners',
     
-        'cookie_text' => 'Este sitio web utiliza cookies para ayudarnos a darle la mejor experiencia al visitar nuestro sitio web. Al continuar utilizando este sitio web, usted da su consentimiento a nuestro uso de estas cookies . Para saber más sobre cómo utilizamos las cookies y cómo manejarlas  lea <a href="/privacy-policy">cookie notice</a>',
+        'cookie_text' => 'Este sitio web utiliza cookies para ayudarnos a darle la mejor experiencia al visitar nuestro sitio web. Al continuar utilizando este sitio web, usted nos da su consentimiento para el uso de estas cookies . Para saber más sobre cómo utilizamos las cookies y cómo manejarlas  lea <a href="/privacy-policy">cookie notice</a>',
     
         'cookie_accept' => 'cerrar',
     
@@ -101,9 +101,9 @@ return [
     
         'status' => 'Estado',
     
-        'not_enough_data_to_show_profile' => 'We don&apos;t have enough data from you to be able to show your profile.',
+        'not_enough_data_to_show_profile' => 'No tenemos suficientes datos de ti para poder mostrar tu perfil.',
     
-        'click_on_link_to_fill_required_fields' => 'Please click on the following link to fill the required fields.',
+        'click_on_link_to_fill_required_fields' => 'Haz click en el siguiente enlace para rellenar los campos requeridos.',
     
         'set_up_my_profile' => 'Editar mi perfil',
     
@@ -112,5 +112,13 @@ return [
         'error' => 'Error',
     
         'success' => 'Success',
+    
+        'older' => 'Anterior',
+    
+        'next' => 'Siguiente',
+    
+        'yes' => 'Si',
+    
+        'no' => 'No',
     
 ];

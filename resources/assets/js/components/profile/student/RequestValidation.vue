@@ -1,21 +1,24 @@
 <template>
     <div class="row">
-        <h4 class="col-sm-12">Find your Academic Institution</h4>
+        <h4 class="col-sm-12">{{ $t('reg-profile.find_your_academic_institution') }}</h4>
 
-        <select-form class="col-sm-6" code="country" :label="$t('reg-profile.country')" :placeholder="' - ' + $t('reg-profile.country') + ' - '" required :values="countries" :value="country" no-validate>
-        </select-form>
-
-        <autocomplete class="col-sm-6" code="institution" :items="institutions" :placeholder="$t('reg-profile.student_study_institution_name')" :disabled="isInstitutionsDisabled" required>
-        </autocomplete>
+        <div class="col-sm-6">
+            <select-form code="country" :label="$t('reg-profile.country')" :placeholder="' - ' + $t('reg-profile.country') + ' - '" required :values="countries" :value="country" no-validate>
+            </select-form>
+        </div>
+        <div class="col-sm-6">
+            <autocomplete code="institution" :items="institutions" :placeholder="$t('reg-profile.student_study_institution_name')" only-matches="true" open-on-click="true" :disabled="isInstitutionsDisabled" no-validate required>
+            </autocomplete>
+        </div>
 
         <div class="form-group col-sm-12">
-            <label for="referee">Choose referee</label>
-            <select-form code="referee" label="Referee" placeholder=" - Any Referee - " :parsed-values="referees" :disabled="isRefereesDisabled" no-validate>
+            <label for="referee">{{ $t('reg-profile.choose_referee') }}</label>
+            <select-form code="referee" label="Referee" :placeholder="' - ' + $t('reg-profile.any_referee') + ' - '" :parsed-values="referees" :disabled="isRefereesDisabled" no-validate>
             </select-form>
         </div>
         <hr>
         <p class="col-sm-12 text-right">
-            <button type="submit" class="btn btn-primary">Refer request</button>
+            <button type="submit" class="btn btn-primary">{{ $t('reg-profile.refer_request') }}</button>
         </p>
     </div>
 </template>

@@ -3,12 +3,18 @@
 
 return [
     
-        'date_of_request' => 'Date of request',
+        'date_of_request' => 'Date de demande',
     
-        'pending' => 'Pending',
+        'pending' => 'En attendant',
     
-        'validated' => 'Validated',
+        'validated' => 'Validé',
     
-        'not_validated' => 'Not validated',
+        'not_validated' => 'Pas validé',
+    
+        'no_students' => 'Aucuns étudiants',
+    
+        'confirm_validation' => 'Confirmer l\'évaluation',
+    
+        'are_you_sure_you_want_to_finish_refereeing' => 'Voulez-vous vraiment terminer l\'dévaluation de cet étudiant?',
     
 ];

@@ -7,7 +7,7 @@ return [
     
         'accountActivated_line_2' => 'Vielen Dank für die Registrierung bei Talented Europe',
     
-        'accountActivated_line_3' => 'Bitte Ihre E-Mail-Adresse bestätigen. Klicken Sie den folgenden Link an.',
+        'accountActivated_line_3' => 'Bitte bestätige deine E-Mail-Adresse. Klicke auf den folgenden Link.',
     
         'accountActivated_action_4' => 'Mein Konto bestätigen.',
     
@@ -23,9 +23,9 @@ return [
     
         'changeInstitution_line_5' => 'Danke, dass Sie unsere App nutzen.',
     
-        'institutionRemoved.subject_1' => '... hat Sie aus Ihrer Institution bei Talented Europe ausgeschieden.',
+        'institutionRemoved.subject_1' => '... hat dich aus Ihrer Institution bei Talented Europe ausgeschieden.',
     
-        'institutionRemoved.line_2' => '... hat Sie aus Ihrer Institution bei Talented Europe ausgeschieden. Wenn es ein Versehen war, tretten Sie mit ihn in Kontakt, um die Situation rückgängig zu machen.',
+        'institutionRemoved.line_2' => '... hat dich aus Ihrer Institution bei Talented Europe ausgeschieden. Wenn es ein Versehen war, tritt mit ihm in Kontakt, um die Situation rückgängig zu machen.',
     
         'institutionRemoved.line_3' => 'Danke, dass Sie unsere App nutzen.',
     

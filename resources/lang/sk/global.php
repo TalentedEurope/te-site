@@ -53,11 +53,11 @@ return [
     
         'SI' => 'Slovinsko',
     
-        'SP' => 'Španielsko',
+        'ES' => 'Španielsko',
     
         'SE' => 'Švédsko',
     
-        'UK' => 'Spojené kráľovstvo',
+        'GB' => 'Spojené kráľovstvo',
     
         'follow_us' => 'Följ oss',
     
@@ -91,26 +91,34 @@ return [
     
         'footer_partners' => 'Partners',
     
-        'cookie_text' => 'This website uses cookies to help us give you the best experience when you visit. By using this website you consent to our use of these cookies. Find out more about how we use cookies and how to manage them by reading our <a href="/privacy-policy">cookie notice</a>',
+        'cookie_text' => 'Táto webová stránka používa súbory cookies na zlepšenie vašej používateľskej skúsenosti pri návšteve stránky. Používaním tejto webovej stránky vyjadrujete súhlas s ich používaním. Viac informácií o nás a o tom, ako tieto súbory používame a ako s nimi nakladáme, nájdete v našom <a href="/vyhlásení o ochrane osobných údajov">oznámenie súborov cookies</a>',
     
         'cookie_accept' => 'Zatvoriť',
     
         'logout_btn' => 'Odhlásiť sa',
     
-        'less_btn' => 'pozri si menej',
+        'less_btn' => 'Zobraziť menej',
     
         'status' => 'Status',
     
         'not_enough_data_to_show_profile' => 'Pre zobrazenie vášho profilu nemáme dostatok údajov',
     
-        'click_on_link_to_fill_required_fields' => 'Kliknite na nasledujúci link a vyplnite požadované údaje',
+        'click_on_link_to_fill_required_fields' => 'Kliknite na nasledujúci link a vyplňte požadované údaje',
     
-        'set_up_my_profile' => 'Založiť profil ',
+        'set_up_my_profile' => 'Založiť si svoj profil ',
     
-        'or' => 'alebo',
+        'or' => 'Alebo',
     
         'error' => 'Chyba',
     
         'success' => 'Úspešný',
+    
+        'older' => 'Staršie',
+    
+        'next' => 'Ďalšie',
+    
+        'yes' => 'Áno',
+    
+        'no' => 'Nie',
     
 ];

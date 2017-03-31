@@ -40,6 +40,7 @@
   <script type="text/javascript">
     TE = {};
     TE.profile = {'modified_fields': false};
+    TE.locale = '{!! App::getLocale() !!}';
     TE.translations = {
       'auth': {!! json_encode(trans('auth'), JSON_HEX_APOS) !!},
       'global': {!! json_encode(trans('global'), JSON_HEX_APOS) !!},
@@ -52,6 +53,7 @@
       'search': {!! json_encode(trans('search'), JSON_HEX_APOS) !!},
       'students-validation': {!! json_encode(trans('students-validation'), JSON_HEX_APOS) !!},
       'validators': {!! json_encode(trans('validators'), JSON_HEX_APOS) !!},
+      'error-page': {!! json_encode(trans('error-page'), JSON_HEX_APOS) !!},
     };
   </script>
 </head>
@@ -195,22 +197,24 @@
         if (!TE.profile.modified_fields) {
           element.tab('show');
           location.hash = hash;
+          $('.container > .alert').hide();
         } else {
           $.confirm({
             title: null,
             content: TE.translations['reg-profile']['tab_changes_not_saved'],
             backgroundDismiss: true,
             buttons: {
-              back: {
+              continue_without_saving: {
                 text: TE.translations['reg-profile']['continue_without_saving'],
                 action: function() {
                   element.tab('show');
                   location.hash = hash;
                   TE.profile.modified_fields = false;
+                  $('.container > .alert').hide();
                   return true;
                 }
               },
-              confirm: {
+              save_changes: {
                 text: TE.translations['reg-profile']['save_changes'],
                 btnClass: 'btn-info',
                 action: function() {

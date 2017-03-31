@@ -19,11 +19,11 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'it' => 'Marchio, Immagine del marchio, Ricerca di mercato, Cliente, Consumatore, Necessità del cliente, Intervallo di mercato, Sensibilità del prezzo, Apertura del mercato, Valore aggiunto, Imprenditore, Rischi, Servizi, Innovazione, Brevetto, Diritti d&apos;autore, Marchi di fabbrica, Rischio calcolato, Obiettivi finanziari, Smart, Iniziativa, Correre dei rischi.',                    
                 
-                    'de' => 'Brand, Brand image, Market Research, Customer, Consumer, Customer needs, Market segment, Price sensitive, Market map, Gap in the market, Added value, Entrepreneur, Risks, Services, Innovation, Patent, Copyright,Trademarks,Calculated Risk, Financial Objectives, SMART, Initiative, Taking risks,',                    
+                    'de' => 'Marke, Markenimage, Markterforschung, Kunde, Verbraucher, Verbraucherbedürfnisse, Marktsegment, Preisverwundbar, Marktkarte, Marktlücke, Mehrwert, Unternehmer, Risiken, Dienstleistungen, Innovation, Patent, Copyright, Geschäftsmarke, kalkuliertes Risiko, Finanzziele, SMART, Initiative, Risiko angehen',                    
                 
-                    'fr' => 'Brand, Brand image, Market Research, Customer, Consumer, Customer needs, Market segment, Price sensitive, Market map, Gap in the market, Added value, Entrepreneur, Risks, Services, Innovation, Patent, Copyright,Trademarks,Calculated Risk, Financial Objectives, SMART, Initiative, Taking risks,',                    
+                    'fr' => 'Marque, Image de marque, Analyse du marché, Client,Consommateur, Besoins de clientele, Segment de marché,  le coût est vulnérable, Carte du marché, Marché de niche, Valeur ajoutée, Homme d affaire, Risques, Services, Innovation, Brevet, Droit d auteur, Marque de commerce, Risque calculé, Objectifs financiers, SMART, Iniciative, La prise de risque',                    
                 
-                    'sk' => 'Brand, Brand image, Market Research, Customer, Consumer, Customer needs, Market segment, Price sensitive, Market map, Gap in the market, Added value, Entrepreneur, Risks, Services, Innovation, Patent, Copyright,Trademarks,Calculated Risk, Financial Objectives, SMART, Initiative, Taking risks,',                    
+                    'sk' => 'Značka, Imidž značky, Prieskum trhu, Zákazník, Spotrebiteľ, Zákaznícke potreby, Segment trhu, Cenovo zraniteľný, Mapa trhu, Medzrea na trhu, Pridaná hodnota, Podnikateľ, Riziká, Služby, Inovácia, Patent, Copyright, Obchodné značky/Trademarks, Kalkulované riziko, Finančné ciele, SMART, Iniciatíva, Podstúpenie rizík  ',                    
                 
                     'key' => 'business-studies-and-or-management-science',                    
                 
@@ -37,11 +37,11 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'it' => 'Ingegneria meccanica, ingegneria elettrica, ingegneria chimica, ingegneria civile, ingegneria elettronica, telecomunicazioni, scienze materiali, automatizzazione, sistema di controllo robotico, sistema digitale, rappresentazione digitale, componenti e attrezzature di circuiti elettronici, ingegneria elettronica, sistema incorporato e sistema in tempo reale, tecnologia ad alta frequenza, microonde, materiali e dispositivi magnetici e superconduttori, microingegnaria, microlavorazione, nanotecnologie legate a elettronica e microelettronica, rete ottica e sistemi, tecnologie periferiche ( sistemi di archiviazione di massa, tecnologie di display) legate a elettronica e microelettronica, circuiti stampati e circuiti integrati, informatica quantica, semiconduttori, carte smart e sistemi d’accesso, sensori ambientali e biometrici, attuatori, apparecchiatura audiovisiva e di comunicazione, tecnologie a banda larga, comunicazioni mobili, radar, tecnologie a banda stretta, tecnologie/sistemi/posizione satellitare, comunicazioni in GPS, Global Positioning System, e-Government, CRM - Customer relationship Management',                    
                 
-                    'de' => 'Mechanical Engineering, Electrical Engineering, Chemical Engineering, Civil Engineering, Electronic Engineering, Telecommunications, Materials Science.,Automation, Robotics Control Systems,Digital Systems, Digital Representation,Electronic circuits components and equipment,Electronic engineering,Embedded Systems and Real Time Systems,High Frequency Technology, Microwaves,Magnetic and superconductory materials/devices,Microengineering,Micromachining,Nanotechnologies related to electronics and microelectronics,Optical Networks and Systems,Peripherals Technologies (Mass Data Storage, Display Technologies) related to electronics and microelectronics, Printed circuits and integrated circuits,Quantum Informatics,Semiconductors,Smart cards and access systems,Environmental and Biometrics Sensors,Actuators,Audiovisual Equipment and Communication, Broadband Technologies, Mobile Communications, Radar, Narrow Band Technologies, Satellite Technology/Systems/Positioning/, Communication in GPS - Global Positioning System, e-Government, CRM - Customer relationship Management, ',                    
+                    'de' => 'Maschinenbau, Elektrotechnik, Chemieingenieur, Bauwesen, Elektronik, Telekommunikation, Materialwissenschaften, Automatisation, Robotische Steuersysteme, Digitale Systeme, Digitale Repräsentationen, Elektronische  Schaltung, Teile und Anlagen, Eingebaute Systeme und Systeme realer Zeit, Hochfrequenztechnologien, Mikrowellenstrahlung, Magnetische und supraleitende Materialien/Einrichtungen, Micro Ingenieure, Nanotechnologien in Bezug auf Elektronik und Micro Elektronik,  Schaltkreise, Quanteninformatik,  Halbleiter, Chipkarten und Zutrittssysteme, Environmentale und biometrische Sensoren, Antriebe, Audiovisuelle Technik und Kommunikation, Breitbandtechnologien, Mobilkommunikation, Radar, Narrow band Technologien, Satelliten Technologien /Positioniersystem / Kommunikation in GPS – Global Positioning System, e-Goverment, CRM Beziehungsleitung mit Kunden',                    
                 
-                    'fr' => 'Mechanical Engineering, Electrical Engineering, Chemical Engineering, Civil Engineering, Electronic Engineering, Telecommunications, Materials Science.,Automation, Robotics Control Systems,Digital Systems, Digital Representation,Electronic circuits components and equipment,Electronic engineering,Embedded Systems and Real Time Systems,High Frequency Technology, Microwaves,Magnetic and superconductory materials/devices,Microengineering,Micromachining,Nanotechnologies related to electronics and microelectronics,Optical Networks and Systems,Peripherals Technologies (Mass Data Storage, Display Technologies) related to electronics and microelectronics, Printed circuits and integrated circuits,Quantum Informatics,Semiconductors,Smart cards and access systems,Environmental and Biometrics Sensors,Actuators,Audiovisual Equipment and Communication, Broadband Technologies, Mobile Communications, Radar, Narrow Band Technologies, Satellite Technology/Systems/Positioning/, Communication in GPS - Global Positioning System, e-Government, CRM - Customer relationship Management, ',                    
+                    'fr' => 'Construction des machines, éléctrotechnique, Génie chimique,  Batiment, Éléctronique, Télécommunication, Sciences des matieres, Automation, Systemes de commande robotiques, Systemes de numérisation, Représentations digitales, Circuits et appareils éléctroniques, Systemes incorporals et systenes du temps réel, Technologie haute fréquence, Micro- ondes, Matérieaux magnétiques et supraconducteurs, Microgénie, Microfaconnage, Nanotechnologies liées a l éléctronique et micro-éléctronique, Réseaux et systemes optiques, Technologies péripheriques ( Mass data, Conserver,Technologies d affichage),   Circuits imprimés et intégrés, Informatique quantique, Cartes a puce et systemes d acces, Capteurs enviromentals et biométriques, Mécanismes, Technique et communication audio- visuelle, Radar, Narow Band technologies, Technologies satellites/ systemes/ positionneurs/ GPS communication, E- Gouvernement, CRM Customer relationship Management',                    
                 
-                    'sk' => 'Mechanical Engineering, Electrical Engineering, Chemical Engineering, Civil Engineering, Electronic Engineering, Telecommunications, Materials Science.,Automation, Robotics Control Systems,Digital Systems, Digital Representation,Electronic circuits components and equipment,Electronic engineering,Embedded Systems and Real Time Systems,High Frequency Technology, Microwaves,Magnetic and superconductory materials/devices,Microengineering,Micromachining,Nanotechnologies related to electronics and microelectronics,Optical Networks and Systems,Peripherals Technologies (Mass Data Storage, Display Technologies) related to electronics and microelectronics, Printed circuits and integrated circuits,Quantum Informatics,Semiconductors,Smart cards and access systems,Environmental and Biometrics Sensors,Actuators,Audiovisual Equipment and Communication, Broadband Technologies, Mobile Communications, Radar, Narrow Band Technologies, Satellite Technology/Systems/Positioning/, Communication in GPS - Global Positioning System, e-Government, CRM - Customer relationship Management, ',                    
+                    'sk' => 'Strojárstvo, Elektrotechnika, Chemické inžinierstvo, Stavebníctvo, Elektronika, Telekomunikácie, Materiálové vedy., Automatizácia, Robotické riadiace systémy, Digitálne systémy, Digitálne reprezentácie, Elektronické obvody, časti a zariadenia, Vstavané systémy a systémy reálneho času, Vysoko frekvenčné technológie, Mikrovlnné žiarenie,  Magnetické a supervodivé materiály /zariadenia, Mikroinžinierstvo, Mikroobrábanie,  Nanotechnológie vzťahujúce sa k elektronike a mikroelektronike, Optické siete a systémy, Periferálne  technológie (Mass dáta úložiská, zobrazovacie technológie) vzťahujúce sa k elektronike a mikroelektronike, Tlačené obvody a integrované obvody, Kvantová informatika, Polovodiče, Čipové karty a prístupové systémy, Environmentálne a biometrické snímače, Pohony, Audiovizuálna technika a komunikácia, Širokopásmové technológie, Mobilná  komunikácia, Radar, Narrow Band technológie, Satelitné technológie /systémy/ polohovanie / komunikácia v GPS - Global Positioning System , e-Government, CRM - riadenie vzťahov so zákazníkmi,',                    
                 
                     'key' => 'engineering-and-or-technology',                    
                 
@@ -55,11 +55,12 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'it' => 'Scienze politiche, sociologia, economica, scienze psicologiche e comportamentali, lavoro sociale, relazioni internazionali, studi europei, Aree degli studi, astratto, accademico, marchi, capitale, celebrità, società civile, comunicazione, aziendale, design, diversità, emozione, empatia, illuminazione, impresa, ambiente, etica, europeo, eccellenza, equo, fiducia, libertà / fondamentalismo, globale/ internazionale,  identità, indipendente, informazione, legittimato, vita, mercato, matrimonio, mentore, opinione, azione/ prestazione, politico, proprietà, queer, relativismo',                    
                 
-                    'de' => 'Political Science, Sociology, Economics, Psychology and Behavioural Sciences, Social Work, International Relations, European Studies, Area Studies.,Abstract,Academic,Brand,Capital,Celebrity,Civil Society,Community,Corporate,Design,Diversity,Emotion,Empathy,Enlightenment,Enterprise,Environment,Ethical,European,Excellence,Fair,Faith,Freedom / Liberty,Fundamentalism,Global / International ,Identity,Independent,Information,Legitimate,Life,Market,Marriage,Mentor,Opinion,Perform / Performance,Political,Property,Queer,Relativism',                    
+                    'de' => 'Politologie, Soziologie, Wirtschaft, Psychologie und Verhaltenswissenschaften, Sozialarbeit, Internationale Beziehungen, Europäische Studien, Territoriale Studien, Abstrakt, Akademiker, Marke, Kapital, Bekannten Persönlichkeiten, Bürgergesellschaft, Genossenschaft, Korporationsgesellschaft, Design, Diversität, Emotionen, Empathie, Aufklärung, Unternehmen, Umwelt, Ethik, europäisch, Exzellent, Fair, Glaube, Freiheit, Fundamentalismus, Globaler/Internationaler, Identität, Unabhängigkeit, Informationen, legitim, Leben, Markt, Ehe, Mentor, Meinung, Leistung, politisch, Gut, Queer, Relativismus',                    
                 
-                    'fr' => 'Political Science, Sociology, Economics, Psychology and Behavioural Sciences, Social Work, International Relations, European Studies, Area Studies.,Abstract,Academic,Brand,Capital,Celebrity,Civil Society,Community,Corporate,Design,Diversity,Emotion,Empathy,Enlightenment,Enterprise,Environment,Ethical,European,Excellence,Fair,Faith,Freedom / Liberty,Fundamentalism,Global / International ,Identity,Independent,Information,Legitimate,Life,Market,Marriage,Mentor,Opinion,Perform / Performance,Political,Property,Queer,Relativism',                    
+                    'fr' => 'Politologie, Sociologie, Economie, Psychologie,  Travail social,  Relations internationalles,Etudes européennes, Etudes territoriales, Abrégé, Académiciens, Marque, Capital, Vedettes, Société civile, Communauté, Société corporative, Design, Diversité, Emotions, Empathie, Illumination, Entreprise, Environnement, Caractere ethique, Européen, Excellence, Fair, Croyance,Liberté, Fundamentalisme, Global, International, Identité, Indépendance, Informations, Légitime, Vie, Marché, Mariage, Mentor, Opinion, Effectuer/ acte, Politique, Bien, Queer, Relativisme',                    
                 
-                    'sk' => 'Political Science, Sociology, Economics, Psychology and Behavioural Sciences, Social Work, International Relations, European Studies, Area Studies.,Abstract,Academic,Brand,Capital,Celebrity,Civil Society,Community,Corporate,Design,Diversity,Emotion,Empathy,Enlightenment,Enterprise,Environment,Ethical,European,Excellence,Fair,Faith,Freedom / Liberty,Fundamentalism,Global / International ,Identity,Independent,Information,Legitimate,Life,Market,Marriage,Mentor,Opinion,Perform / Performance,Political,Property,Queer,Relativism',                    
+                    'sk' => '
+Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociálna práca, Medzinárodné vzťahy, Európske štúdiá, Teritoriálne štúdiá, Abstrakt, Akademici, Značka, Kapitál, Celebrity, Občianska spoločnosť, Spoločenstvo, Korporátna spoločnosť, Dizajn, Diverzita, Emócie, Empatia, Osvietenie, Podnikanie, Životné prostredie, Etickosť, Európsky, Excelentnosť, Fair, Viera, Voľnosť/Sloboda, Fundamentalizmus, Globálny/Internacionálny, Identita, Nezávislosť, Informácie, Legitímny, Život, Trh, Manželstvo, Mentor, Názor, Vykonávať/výkon, Politický, Majetok, Queer, Relativizmus',                    
                 
                     'key' => 'social-sciences',                    
                 
@@ -73,11 +74,11 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'it' => 'Lingue moderne della comunità europea, linguistica, traduzione, interpretazione, filologia classica, lingue non europee, lingue meno diffuse',                    
                 
-                    'de' => 'Modern EC Languages, Linguistics, Translation, Interpretation, Classical Philology, Non EC Languages, Less Widely Taught Languages',                    
+                    'de' => 'Moderne europäische Sprachen, Linguistik, Übersetzen, Dolmetschen, Klassische Philologie, Nichteuropäische Sprachen, Weniger unterrichtete Sprachen',                    
                 
-                    'fr' => 'Modern EC Languages, Linguistics, Translation, Interpretation, Classical Philology, Non EC Languages, Less Widely Taught Languages',                    
+                    'fr' => 'Langues européennes modernes,Linguistique, Traduction,Intérprétation, Filologie classique, Langues non européennes, Langues moins ensignées',                    
                 
-                    'sk' => 'Modern EC Languages, Linguistics, Translation, Interpretation, Classical Philology, Non EC Languages, Less Widely Taught Languages',                    
+                    'sk' => 'Moderné európske jazyky, Lingvistika, Prekladateľstvo, Tlmočníctvo, Klasická filológia, Neeurópske jazyky, Menej vyučované jazyky',                    
                 
                     'key' => 'languages-and-philological-sciences',                    
                 
@@ -105,15 +106,15 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'en' => 'Philosophy,Theology,History,Archaeology',                    
                 
-                    'es' => 'Philosophy,Theology,History,Archaeology',                    
+                    'es' => 'Filosofía, Teología, Historia, Arqueología',                    
                 
                     'it' => 'Filosofia, teologia, storia, archeologia',                    
                 
-                    'de' => 'Philosophy,Theology,History,Archaeology',                    
+                    'de' => 'Philosophie, Theologie, Geschichte, Archeologie',                    
                 
-                    'fr' => 'Philosophy,Theology,History,Archaeology',                    
+                    'fr' => 'Philosophie, Théologie, Histoire, Archéologie',                    
                 
-                    'sk' => 'Philosophy,Theology,History,Archaeology',                    
+                    'sk' => 'Filozofia, Teológia, História, Archeológia',                    
                 
                     'key' => 'humanities',                    
                 
@@ -127,11 +128,11 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'it' => 'Formazione docenti, scuola primary, scuola secondaria, educazione speciale, educazione scientific, educazione comparata, educazione psicologica.',                    
                 
-                    'de' => 'Teacher Training, Primary Education, Secondary Education, Special Education, Educational Science, Comparative Education, Educational Psychology.',                    
+                    'de' => 'Lehrerausbildung, Primärausbildung, Sekundärausbildung, Spezielle Ausbildung, Ausbildungswissenschaft, Komparative Ausbildung, Ausbildungspsychologie, ',                    
                 
-                    'fr' => 'Teacher Training, Primary Education, Secondary Education, Special Education, Educational Science, Comparative Education, Educational Psychology.',                    
+                    'fr' => 'Formation des enseignants, Enseignement primaire, Enseignement secondaire, Education spéciale, Science de l éducation, Enseignement comparatif, Psychologie de l éducation',                    
                 
-                    'sk' => 'Teacher Training, Primary Education, Secondary Education, Special Education, Educational Science, Comparative Education, Educational Psychology.',                    
+                    'sk' => 'Vzdelávanie učiteľov, Pimárne vzdelávanie, Sekundárne vzdelávanie, Špeciálne vzdelávanie, Veda o vzdelávaní, Komparatívne vzdelávanie, Psychológia vzdelávania ',                    
                 
                     'key' => 'education-and-or-teacher-training',                    
                 
@@ -147,9 +148,9 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'de' => 'Comparative Law, Law with Languages, International Law, Civil Law, Criminal Law, Criminology, Constitutional /Public Law, Public Administration, European Community/EU Law',                    
                 
-                    'fr' => 'Comparative Law, Law with Languages, International Law, Civil Law, Criminal Law, Criminology, Constitutional /Public Law, Public Administration, European Community/EU Law',                    
+                    'fr' => 'Droit comparé, Droits linguistiques, Droit international, Droits civiques, Droit pénal, Criminologie, Droit constitutionnel, Droit publique, Droit de l&apos;Union européenne, UE',                    
                 
-                    'sk' => 'Comparative Law, Law with Languages, International Law, Civil Law, Criminal Law, Criminology, Constitutional /Public Law, Public Administration, European Community/EU Law',                    
+                    'sk' => 'Porovnávacie právo, Právo jazykové, Medzinárodné právo, Občianske právo, Trestné právo, Kriminológia, Ústavné/Verejné právo, Verejná správa, právo Európskeho spoločenstva/EÚ',                    
                 
                     'key' => 'law',                    
                 
@@ -165,9 +166,9 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'de' => 'Fine Art, Music and Musicology, Design, History of Art.',                    
                 
-                    'fr' => 'Fine Art, Music and Musicology, Design, History of Art.',                    
+                    'fr' => 'Beaux arts, Musique, Design,histoire de l&apos;art',                    
                 
-                    'sk' => 'Fine Art, Music and Musicology, Design, History of Art.',                    
+                    'sk' => 'Výtvarné umenie, Hudba, Dizajn, Dejiny umenia',                    
                 
                     'key' => 'art-and-design',                    
                 
@@ -183,9 +184,9 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'de' => 'Urban Planning, Regional Planning',                    
                 
-                    'fr' => 'Urban Planning, Regional Planning',                    
+                    'fr' => 'Urbanisme, Aménagement du territoire',                    
                 
-                    'sk' => 'Urban Planning, Regional Planning',                    
+                    'sk' => 'Mestské plánovanie, Regionálne plánovanie',                    
                 
                     'key' => 'architecture-and-or-urban-and-regional-planning',                    
                 
@@ -201,9 +202,10 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'de' => 'Biology, Physics, Chemistry, Microbiology, Biotechnology, Nuclear and High Energy Physics, Biochemistry, Astronomy, Astrophysics',                    
                 
-                    'fr' => 'Biology, Physics, Chemistry, Microbiology, Biotechnology, Nuclear and High Energy Physics, Biochemistry, Astronomy, Astrophysics',                    
+                    'fr' => 'Biologie, Physique, Chimie, Microbiologie, Biotechnologie, Physique nucléaire et Physique des hautes énergies, Biochimie, Astronomie, Astrophysique',                    
                 
-                    'sk' => 'Biology, Physics, Chemistry, Microbiology, Biotechnology, Nuclear and High Energy Physics, Biochemistry, Astronomy, Astrophysics',                    
+                    'sk' => '
+Biológia, Fyzika, Chémia, Mikrobiológia, Biotechnológia, Jadrová fyzika a fyzika vysokých energií, Biochémia, Astronómia, Astrofyzika',                    
                 
                     'key' => 'natural-sciences',                    
                 
@@ -219,9 +221,9 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'de' => 'Mathematics, Statistics; Informatics, Computer Science',                    
                 
-                    'fr' => 'Mathematics, Statistics; Informatics, Computer Science',                    
+                    'fr' => 'Mathématiques,Statistiques, Informatique,',                    
                 
-                    'sk' => 'Mathematics, Statistics; Informatics, Computer Science',                    
+                    'sk' => 'Matematika, Štatistika, Informatika, Počítačová veda',                    
                 
                     'key' => 'mathematics-and-or-informatics',                    
                 
@@ -237,9 +239,9 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'de' => 'Medicine, Public Health, Medical Technology',                    
                 
-                    'fr' => 'Medicine, Public Health, Medical Technology',                    
+                    'fr' => 'Médecine,Santé publique, Technologie médicale',                    
                 
-                    'sk' => 'Medicine, Public Health, Medical Technology',                    
+                    'sk' => 'Medicína, Verejné zdravotníctvo, Medicínske technológie',                    
                 
                     'key' => 'medical-sciences',                    
                 
@@ -255,9 +257,9 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'de' => 'Geography, Environmental Sciences, Ecology, Geology, Soil and Water Sciences, Geodesy, Cartography, Remote Sensing',                    
                 
-                    'fr' => 'Geography, Environmental Sciences, Ecology, Geology, Soil and Water Sciences, Geodesy, Cartography, Remote Sensing',                    
+                    'fr' => 'Géographie, Sciences de l&apos;environnement, Ecologie,Géologie,Science du sol et de l&apos;eau, Géodésie, Cartographie,Télédétection',                    
                 
-                    'sk' => 'Geography, Environmental Sciences, Ecology, Geology, Soil and Water Sciences, Geodesy, Cartography, Remote Sensing',                    
+                    'sk' => 'Geografia, Environmentálne vedy, Ekológia, Geológia, Vedy o pôde a vode, Geodézia, Kartografia, diaľkový prieskum Zeme',                    
                 
                     'key' => 'geography-and-or-geology',                    
                 
@@ -273,9 +275,10 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'de' => 'Agriculture, Food Science and Technology, Fisheries, Forestry,Farming, tractors, ',                    
                 
-                    'fr' => 'Agriculture, Food Science and Technology, Fisheries, Forestry,Farming, tractors, ',                    
+                    'fr' => 'Traiteur du compte,comptable,Assistant administratif, oordinateur administratif,
+Directeur administratif, Directeur services administratifs, Agent administratif, Spécialiste administratif, irecteur administratif de soutien, Superviseur administratif de soutien, administrateur, Auditeur, Directeur adjoint, Employé de facturation, ',                    
                 
-                    'sk' => 'Agriculture, Food Science and Technology, Fisheries, Forestry,Farming, tractors, ',                    
+                    'sk' => 'Vyberač účtu, Účtovnícky úradník, Administratívny asistent, Administratívny koordinátor, Správny riaditeľ, Manažér administratívnychg služieb, Administratívny úradník, Administratívny špecialista, Administratívny manažér pre podporu, Administratívny supervízor pre podporu, Administrátor, Audit úradník, Zástupca riaditeľa, Fakturačný úradník, Vyberač faktúr, Fakturčný koordinátor, Účtovník, Manažér vzťahov s klientmi,  Administrátor zmlúv, Kredit úradník, Zadávanie dát, Exekutívny asistent, Facility manažér, Fakturantky súborov, Finančný úradník, Úradník bežnej kancelárie , Správca ľudských zdrojov, informačný úradník, Právna asistentka, Úradník pre poštu, Vedúci úradníkov pre poštu, Úradník pre záznam o materiáloch, Lekárska sekretárka, Office Asistent, Office Úradník, Office Menežér, Menežér Office podpory, Supervízor Office podpory, Programový správca, Programový menežér, Recepčný, Analytik správy záznamov, Sekretárka, Senior administratívny analytik, Senior administratívny koordinátor, Senior úradník administratívnych služieb, Senior koordinátor, Senior výkonný asistent, Senior koordinátor špeciálnych podujatí, Senior asistent pre podporu, Senior  špecialista pre podporu, Koordinátor špeciálnych podujatí, Koordinátor špeciálnych programov, Asistent personálu, Asistent podpory, Špecialista podpory, Zapisovateľ, Virtuálna asistentka, Virtuálna recepčná, Textový procesor, Korporátna sekretárka, Pokladník / Finančný riaditeľ, Generálny / Operačný menežér, Office menežér, Menežér environmentálneho zdravia a bezpečnosti, Bezpečnostný menežér, Funkčný menežér, Menežér ľudských zdrojov, Projektový koordinátor',                    
                 
                     'key' => 'agriculture-sciences',                    
                 
@@ -293,7 +296,7 @@ class StudyKeywordTableSeeder extends Seeder
                 
                     'fr' => 'Accessory, Accolade, Adjustment, Adopt, Advance, Affect, Affectation, Allure, Alteration, Antique, Apparel, Appeal, Applaud, Applique, Appraise, Apron, Array, Artificial, Artistry, Attire, Attract, Attractive, Audience, Availability, Avid, Award,Backdrop, Ballet-length, Bargain, Basic blank, Batik, Beading, Beautiful, Becoming, Bias-cut, Blend, Bodice, Bold, Boutique, Bows, Braiding, Brand, Breathable, Brocade, Bulky, Bustle, Buttons,Cachet, Camisole, Career, Casual, Catwalk, Celebrities, Cheap, Chemise, Choices, Classic, Client, Cloche, Clothing, Collection, Collector, Color, Combination, Comfortable, Commercial, Competition, Condition, Conformity, Conservation, Conservative, Construction, Consumer, Contemporary, Corset, Cosmetics, Costly, Couture, Cowl neck, Craftsmanship, Creative, Crimp, Culottes, Current, Cut,Daring, Darn, Dated, Dealer, Decolte, Decorative, Delivery, Demand, Department, Design, Designer, Desirable, Device, Devise, Devotee, Different, Dimension, Direction, Display, Distinctive, Dominate, Dramatic, Dresses, Dressing, Dressy, Duster, Dye,Ease, Easy, Ecru, Edge, Effect, Effective, Elaborate, Elegance, Embellish, Embroidery, Emphasis, Enhance, Ensemble, Enthusiastic, Eponymous, Especially, Etiquette, Evening gown, Exclusive, Expensive, Experiment, Extensions, Extraordinary, Extreme,Fabric, Fad, Fashion, Fashionable, Favored, Feature, Fiber, Financial, Finery, Fit, Flamboyant, Flattering, Flawless, Flow, Focus, Folded, Form, Formal, Foulard, Fragrance, Frequently, Fringe, Frivolous, Frock, Frog, Frumpy, Function, Furs, Futuristic,Garment, Garter, Genius, Gild, Glitter, Glossy, Goods, Gown, Grunge, Guide, Guru,Hair, Halter, Hand-made, Handbag, Handbag, Handwork, Hanger, Hat pin, Haute-couture, High heels, High-quality, High-style, Hippie, Horizontal, Hose, Hue,Identity, Illustration, Imaginative, Immediate, Impeccable, Imprint, Independent, Indicator, Indispensable, Industry, Inexpensive, Influence, Innovate, Inset, Inspection, Inspiration, Intricate, Item,Jacket, Jeans, Jersey, Jewelry, Jumper,Knee-length, Knickers, Knit,Label, Lace, Lenses, Leotard, Limited, Lingerie, Lining, Long-lasting, Look, Luxurious, Luxury,Macrame, Mainstream, Make up, Mannequin, Manufacture, Matronly, Maven, Measurement, Midriff, Minaudiere, Minimalist, Mode, Model, Modern, Modest, Modification, Modish, Motif, Movement,Necessity, Neckline, Niche, Noteworthy,Old-fashioned, Omnipresent, One-of-a-kind, Original, Ornamentation, Ostentatious, Outfit, Outlet, Outrageous, Oversize,Padding, Palette, Paparazzi, Parasol, Passe, Pastel, Pattern, Pedal pushers, Peignoir, Petticoat, Phenomenon, Photographer, Photography, Piece, Piping, Pleated, Plumage, Ply, Popular, Pose, Possibilities, Posture, Practical, Precise, Prediction, Preference, Pret-a-porter, Price, Print, Prize, Production, Prominent, Proportion, Provenance, Pumps, Purchase, Purse,Quality, Quantity,Radical, Rag, Ready-made, Recognition, Replacement, Replicate, Represent, Requests, Resistance, Restoration, Retailer, Revealing, Review, Ribbons, Risk-taker, Rivalry, Roll, Ruffles, Runway,Sari, Sarong, Savvy, Screened, Seamstress, Sequin, Sewing, Shade, Shape, Shawl, Sheer, Shift, Showcase, Showroom, Showy, Shrinkage, Signature, Simple, Skillful, Skirt, Sleeveless, Slip, Smile, Smock, Society, Soft, Sophisticated, Spats, Special, Sportswear, Staff, Stain, Stain-resistant, Stitching, Stock, Stole, Stretching, Stride, Strut, Studio, Style, Stylish, Stylist, Substitute, Subtle, Sun-dress, Swim-wear, Swingy, Synthetic,Tailor, Tailored, Talent, Tapestry, Tassel, Tasteful, Tatting, Technique, Textile, Texture, Tiara, Tie-dye, Tiered, Tones, Touch, Trade, Traditional, Transformation, Trend, Trim, Triumph, Tuft, Tunic, Turban, Twill, Typify,Ubiquitous, Understated, Unique, Unlimited, Unsuitable, Upscale, Urban, Use,Valuable, Value, Variety, Veil, Version, Vintage, Visual, Vogue,Waistline, Wale, Walk, Wardrobe, Washable, Wearable, Wearing, Weave, Well-made, Western, Wholesale, Widely, Widespread, Worthy, Woven, Wrinkle',                    
                 
-                    'sk' => 'Accessory, Accolade, Adjustment, Adopt, Advance, Affect, Affectation, Allure, Alteration, Antique, Apparel, Appeal, Applaud, Applique, Appraise, Apron, Array, Artificial, Artistry, Attire, Attract, Attractive, Audience, Availability, Avid, Award,Backdrop, Ballet-length, Bargain, Basic blank, Batik, Beading, Beautiful, Becoming, Bias-cut, Blend, Bodice, Bold, Boutique, Bows, Braiding, Brand, Breathable, Brocade, Bulky, Bustle, Buttons,Cachet, Camisole, Career, Casual, Catwalk, Celebrities, Cheap, Chemise, Choices, Classic, Client, Cloche, Clothing, Collection, Collector, Color, Combination, Comfortable, Commercial, Competition, Condition, Conformity, Conservation, Conservative, Construction, Consumer, Contemporary, Corset, Cosmetics, Costly, Couture, Cowl neck, Craftsmanship, Creative, Crimp, Culottes, Current, Cut,Daring, Darn, Dated, Dealer, Decolte, Decorative, Delivery, Demand, Department, Design, Designer, Desirable, Device, Devise, Devotee, Different, Dimension, Direction, Display, Distinctive, Dominate, Dramatic, Dresses, Dressing, Dressy, Duster, Dye,Ease, Easy, Ecru, Edge, Effect, Effective, Elaborate, Elegance, Embellish, Embroidery, Emphasis, Enhance, Ensemble, Enthusiastic, Eponymous, Especially, Etiquette, Evening gown, Exclusive, Expensive, Experiment, Extensions, Extraordinary, Extreme,Fabric, Fad, Fashion, Fashionable, Favored, Feature, Fiber, Financial, Finery, Fit, Flamboyant, Flattering, Flawless, Flow, Focus, Folded, Form, Formal, Foulard, Fragrance, Frequently, Fringe, Frivolous, Frock, Frog, Frumpy, Function, Furs, Futuristic,Garment, Garter, Genius, Gild, Glitter, Glossy, Goods, Gown, Grunge, Guide, Guru,Hair, Halter, Hand-made, Handbag, Handbag, Handwork, Hanger, Hat pin, Haute-couture, High heels, High-quality, High-style, Hippie, Horizontal, Hose, Hue,Identity, Illustration, Imaginative, Immediate, Impeccable, Imprint, Independent, Indicator, Indispensable, Industry, Inexpensive, Influence, Innovate, Inset, Inspection, Inspiration, Intricate, Item,Jacket, Jeans, Jersey, Jewelry, Jumper,Knee-length, Knickers, Knit,Label, Lace, Lenses, Leotard, Limited, Lingerie, Lining, Long-lasting, Look, Luxurious, Luxury,Macrame, Mainstream, Make up, Mannequin, Manufacture, Matronly, Maven, Measurement, Midriff, Minaudiere, Minimalist, Mode, Model, Modern, Modest, Modification, Modish, Motif, Movement,Necessity, Neckline, Niche, Noteworthy,Old-fashioned, Omnipresent, One-of-a-kind, Original, Ornamentation, Ostentatious, Outfit, Outlet, Outrageous, Oversize,Padding, Palette, Paparazzi, Parasol, Passe, Pastel, Pattern, Pedal pushers, Peignoir, Petticoat, Phenomenon, Photographer, Photography, Piece, Piping, Pleated, Plumage, Ply, Popular, Pose, Possibilities, Posture, Practical, Precise, Prediction, Preference, Pret-a-porter, Price, Print, Prize, Production, Prominent, Proportion, Provenance, Pumps, Purchase, Purse,Quality, Quantity,Radical, Rag, Ready-made, Recognition, Replacement, Replicate, Represent, Requests, Resistance, Restoration, Retailer, Revealing, Review, Ribbons, Risk-taker, Rivalry, Roll, Ruffles, Runway,Sari, Sarong, Savvy, Screened, Seamstress, Sequin, Sewing, Shade, Shape, Shawl, Sheer, Shift, Showcase, Showroom, Showy, Shrinkage, Signature, Simple, Skillful, Skirt, Sleeveless, Slip, Smile, Smock, Society, Soft, Sophisticated, Spats, Special, Sportswear, Staff, Stain, Stain-resistant, Stitching, Stock, Stole, Stretching, Stride, Strut, Studio, Style, Stylish, Stylist, Substitute, Subtle, Sun-dress, Swim-wear, Swingy, Synthetic,Tailor, Tailored, Talent, Tapestry, Tassel, Tasteful, Tatting, Technique, Textile, Texture, Tiara, Tie-dye, Tiered, Tones, Touch, Trade, Traditional, Transformation, Trend, Trim, Triumph, Tuft, Tunic, Turban, Twill, Typify,Ubiquitous, Understated, Unique, Unlimited, Unsuitable, Upscale, Urban, Use,Valuable, Value, Variety, Veil, Version, Vintage, Visual, Vogue,Waistline, Wale, Walk, Wardrobe, Washable, Wearable, Wearing, Weave, Well-made, Western, Wholesale, Widely, Widespread, Worthy, Woven, Wrinkle',                    
+                    'sk' => 'Architekt, Stavebný inžinier, Zememerač, Interiérový dizajnér, Správca stavby, Záhradný architekt, Elektrikár, Kreslič - architektúra , Mestský a regionálny plánovač, Návrhár, Projektový architekt, Job kapitán, CAD koordinátor, Územný plánovač, Špecialista ochrany pred eróziou, Tesár, Ukončovač sadrokartónových obkladov,  Námedzná sila, Glazovač, Elektrikár, Supervízor kontroly premávky, Murár, Mlynár, Maliar, Inštalatér,  Pokrývač, Štrukturálny hutník, Armovací hutník, Zvárač, Manažér pre vybavenie, Projektový manažér, Projektový inžinier, Predák, Field dozorca, Field Office manažér, Odhadca, Pred-výstavbový manažér,  Detailista, Nákupca, Viceprezident pre stavebníctvo',                    
                 
                     'key' => 'fashion-clothing',                    
                 

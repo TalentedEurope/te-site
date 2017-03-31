@@ -7,4 +7,8 @@ return [
     
         'sign_in' => 'Registrarse',
     
+        'login_title' => 'Iniciar sesión',
+    
+        'login_btn' => 'Acceder',
+    
 ];

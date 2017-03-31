@@ -13,9 +13,9 @@
             </div>
             <h2 class="page-title">{!! trans('reg-profile.not_enough_information') !!}:</h2>
             <div class="text-left">
-            <p>{{ $t('global.not_enough_data_to_show_profile') }}</p>
+            <p>{{ trans('global.not_enough_data_to_show_profile') }}</p>
 
-            <p>{!! trans('reg-profile.fix_the_following_errors') !!}:</p>
+            <p>{!! trans('reg-profile.complete_the_registration') !!}:</p>
             @if ($profileErrors->all())
               <div class="alert alert-warning">
               <ul>
@@ -29,7 +29,7 @@
             <p>{!! trans('reg-profile.click_on_button_to_fill_required_fields') !!}<br/></p>
             </div>
             <p>
-              <a class="btn btn-primary" href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i> {{ $t('global.set_up_my_profile') }}</a></li>
+              <a class="btn btn-primary" href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i> {{ trans('global.set_up_my_profile') }}</a></li>
             </p>
 
         </div>

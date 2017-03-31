@@ -11,4 +11,10 @@ return [
     
         'not_validated' => 'Neohodnotený',
     
+        'no_students' => 'Žiadni študenti',
+    
+        'confirm_validation' => 'Potvrďte hodnotenie',
+    
+        'are_you_sure_you_want_to_finish_refereeing' => 'Skutočne chcete ukončiť hodnotenie tohto študenta?',
+    
 ];

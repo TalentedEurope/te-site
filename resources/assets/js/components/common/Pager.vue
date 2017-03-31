@@ -8,12 +8,12 @@
             </li>
             <li class="previous" v-bind:class="{ 'disabled': current_page == 1 }">
                 <a role="button" @click.prevent="goToPreviousPage()">
-                    <span aria-hidden="true">&larr;</span> Older
+                    <span aria-hidden="true">&larr;</span> {{ $t('global.older') }}
                 </a>
             </li>
             <li class="next" v-bind:class="{ 'disabled': current_page == pages }">
                 <a role="button" @click.prevent="goToNextPage()">
-                    Next <span aria-hidden="true">&rarr;</span>
+                    {{ $t('global.next') }} <span aria-hidden="true">&rarr;</span>
                 </a>
             </li>
         </ul>

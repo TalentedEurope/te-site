@@ -3,32 +3,32 @@
 
 return [
     
-        'thank_you_for_signing_up' => 'Thank You for Signing Up!',
+        'thank_you_for_signing_up' => 'Grazie per esserti registrato!',
     
-        'you_will_receive_an_email' => 'You will receive an email with instructions about how to confirm your account in a few minutes.',
+        'you_will_receive_an_email' => 'A breve riceverai una email con le istruzioni per confermare la tua registrazione ',
     
-        'go_back_to_home' => 'Go back to home',
+        'go_back_to_home' => 'Torna alla pagina principale',
     
-        'search_students' => 'Search students',
+        'search_students' => 'Cerca studenti',
     
-        'search_companies' => 'Search companies',
+        'search_companies' => 'Ceca imprese',
     
-        'register_as_validator' => 'Register as referee',
+        'register_as_validator' => 'Registrati come vidimatore',
     
-        'there_have_been_some_errors' => 'There have been some errors',
+        'there_have_been_some_errors' => 'Sono stati rilevati degli errori',
     
-        'i_am_a' => 'I am a',
+        'i_am_a' => 'Sono un',
     
-        'all_fields_are_required' => 'All fields are required',
+        'all_fields_are_required' => 'Tutti i campi sono obbligatori',
     
-        'confirmation_email_may_take_few_minutes' => 'Your confirmation email may take a few minutes to arrive, make sure you also check out your spam folder',
+        'confirmation_email_may_take_few_minutes' => 'La mail di conferma richiederá qualche minuto per essere ricevuta, per essere sicuro del suo arrivo puoi controllare la tua cartella spam',
     
-        'registration_complete_successfully' => 'Registration complete successfully you may log in now.',
+        'registration_complete_successfully' => 'Registrazione completata con successo',
     
-        'register_success' => 'Register success',
+        'register_success' => 'Registrazione completata',
     
-        'register' => 'Register',
+        'register' => 'Iscriversi',
     
-        'invited_by' => 'You have been invited by',
+        'invited_by' => 'Sei stato invitato da',
     
 ];

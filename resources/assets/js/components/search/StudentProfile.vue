@@ -5,13 +5,13 @@
                 <h2 class="title"><a :href="profileUrl">{{student.full_name}}</a></h2>
                 <p><em class="h4">{{student.studied}}</em></p>
                 <hr>
-                <p><strong><i class="fa fa-map-marker"></i> Lives in: </strong> {{student.lives_in}}</p>
-                <p><strong>In: </strong> {{student.studied_in}}</p>
-                <p>
-                    <strong>Skilled in: </strong>
+                <p><strong><i class="fa fa-map-marker"></i> {{ $t('reg-profile.lives_in') }}: </strong> {{student.lives_in}}</p>
+                <p><strong>{{ $t('reg-profile.studied_in') }}: </strong> {{student.studied_in}}</p>
+                <p v-if="student.skills.length > 0">
+                    <strong>{{ $t('reg-profile.skilled_in') }}: </strong>
                     <skills-tags :skills="student.skills"></skills-tags>
                 </p>
-                <p><strong>{{ $t('reg-profile.student_languages') }}: </strong>
+                <p v-if="student.languages.length > 0"><strong>{{ $t('reg-profile.student_languages') }}: </strong>
                     <ul class="languages">
                         <li v-for="language in student.languages" track-by="$index">{{language}}</li>
                     </ul>
