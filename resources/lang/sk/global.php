@@ -111,6 +111,8 @@ return [
     
         'error' => 'Chyba',
     
+        'successfully_done' => 'Successfully done',
+    
         'success' => 'Úspešný',
     
         'older' => 'Staršie',

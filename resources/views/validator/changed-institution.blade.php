@@ -8,7 +8,7 @@
             <div class="avatar-placeholder">
                 <i class="fa fa-check" aria-hidden="true"></i>
             </div>
-            <h2 class="page-title">{!! trans('global.success') !!}</h2>
+            <h2 class="page-title">{!! trans('global.successfully_done') !!}</h2>
             <h3>{!! trans('validators.changed_institution_successfully') !!}</h3>
             <p>{!! trans('validators.youll_receive_notifications_from') !!} {{ $institution }}</p>
         </div>

@@ -6,6 +6,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Silber\Bouncer\Database\HasRolesAndAbilities;
 use Illuminate\Notifications\Notifiable;
 use Sofa\Eloquence\Eloquence;
+use Auth;
 
 class User extends Authenticatable
 {
@@ -67,20 +68,46 @@ class User extends Authenticatable
         }
     }
 
-    public static $niceNames = array(
-                        'visible' => 'Profile visibility',
-                        'notify_me' => 'Notifications',
-                        'name' => 'Name',
-                        'phone' => 'Phone',
-                        'facebook' => 'Facebook URL',
-                        'twitter' => 'Twitter URL',
-                        'linkedin' => 'Linkedin URL',
-                        'address' => 'Address',
-                        'postal_code' => 'Postal Code',
-                        'city' => 'City',
-                        'country' => 'Country',
-                        'image' => 'Photo/Logo',
-        );
+    public static function niceNames()
+    {
+        $niceNames = array();
+        if (Auth::user()->isA('student')) {
+            $niceNames = array(
+                'visible' => trans('reg-profile.profile_visibility'),
+                'notify_me' => trans('reg-profile.notifications'),
+                'name' => trans('reg-profile.name'),
+                'phone' => trans('reg-profile.phone'),
+                'facebook' => trans('reg-profile.facebook_page_url'),
+                'twitter' => trans('reg-profile.twitter_page_url'),
+                'linkedin' => trans('reg-profile.linkedin_page_url'),
+                'address' => trans('reg-profile.address'),
+                'postal_code' => trans('reg-profile.postal_code'),
+                'city' => trans('reg-profile.city'),
+                'country' => trans('reg-profile.country'),
+                'image' => trans('reg-profile.my_photo'),
+            );
+        } else {
+            $niceNames = array(
+                'visible' => trans('reg-profile.profile_visibility'),
+                'notify_me' => trans('reg-profile.notifications'),
+                'name' => trans('reg-profile.name'),
+                'phone' => trans('reg-profile.phone'),
+                'fiscal_id' => trans('reg-profile.fiscal_id'),
+                'overseer' => trans('reg-profile.company_representative'),
+                'pic' => trans('reg-profile.company_representative'),
+                'activity' => trans('reg-profile.company_activity'),
+                'website' => trans('reg-profile.web_url'),
+                'address' => trans('reg-profile.address'),
+                'postal_code' => trans('reg-profile.postal_code'),
+                'city' => trans('reg-profile.city'),
+                'country' => trans('reg-profile.country'),
+                'talent' => '"' . trans('reg-profile.company_what_is_talent') . '" ' . trans('reg-profile.field'),
+                'contact_name' => trans('reg-profile.company_contact_person_name'),
+                'contact_email' => trans('reg-profile.company_contact_person_email')
+            );
+        }
+        return $niceNames;
+    }
 
 
     /**

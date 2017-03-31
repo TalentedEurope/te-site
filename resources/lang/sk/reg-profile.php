@@ -470,13 +470,13 @@ Obchodná a poradenská činnosť',
     
         'warning_some_fields_has_errors' => 'Upozornenie: Niektoré položky neboli uložené kvôli chybám, skontrolujte si, prosím, pozorne každú položku.',
     
-        'successfully_requested_validation_request' => 'Úspečne odoslaná žiadosť o ohodnotenie.',
+        'successfully_requested_validation_request' => 'Úspešne odoslaná žiadosť o ohodnotenie.',
     
         'invitation_sent_successfully' => 'Pozvánka úspešne odoslaná.',
     
-        'referee_is_part_of_institution' => 'Hodnotiteľ je členom %s skontaktuje sa s ním kvôli prípadnej zmene inštitúcie',
+        'referee_is_part_of_institution' => 'Hodnotiteľ je členom %s skontaktujte sa s ním kvôli prípadnej zmene inštitúcie',
     
-        'referee_isnt_part_of_any_institution' => 'Hodnotiteľ nie je členom žiadnej inštitúcie. Prosím, požiadajte ho, aby sa nechal nejakou osloviť???',
+        'referee_isnt_part_of_any_institution' => 'Hodnotiteľ nie je členom žiadnej inštitúcie. Prosím, požiadajte ho, aby sa nechal nejakou pozvať.',
     
         'this_email_user_cannot_be_a_referee' => 'Táto e-mailová adresa je registrovaná na používateľa, ktorý nemôže byť hodnotiteľom.',
     
