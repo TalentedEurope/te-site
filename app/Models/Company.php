@@ -64,7 +64,7 @@ class Company extends Model
 
     public static function getRandom()
     {
-        $items = \App\Models\User::where('userable_type', \App\Models\Company::class)->inRandomOrder()->where('image', '!=', '')->limit(18)->select('userable_id')->get()->map(function ($item, $key) {
+        $items = \App\Models\User::where('userable_type', \App\Models\Company::class)->where('visible', 1)->inRandomOrder()->where('image', '!=', '')->limit(18)->select('userable_id')->get()->map(function ($item, $key) {
             return $item->userable_id;
         })->toArray();
         return \App\Models\Company::whereIn('id', $items)->get();
