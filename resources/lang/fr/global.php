@@ -111,6 +111,8 @@ return [
     
         'error' => 'Erreur',
     
+        'successfully_done' => 'Successfully done',
+    
         'success' => 'Réussi',
     
         'older' => 'Précedents',

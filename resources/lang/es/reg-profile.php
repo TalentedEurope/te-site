@@ -15,9 +15,9 @@ return [
     
         'company_contact_person' => 'Persona de contacto',
     
-        'company_contact_person_name' => 'Contact person name',
+        'company_contact_person_name' => 'Nombre de la persona de contacto',
     
-        'company_contact_person_email' => 'Contact person email',
+        'company_contact_person_email' => 'Correo electrónico de la persona de contacto',
     
         'company_representative' => 'Representante legal (Persona a cargo)',
     
@@ -465,20 +465,20 @@ return [
     
         'complete_the_registration' => 'Complete el registro añadiendo la siguiente información',
     
-        'changes_saved_successfully' => 'Changes saved successfully',
+        'changes_saved_successfully' => 'Cambios guardados satisfactoriamente',
     
-        'warning_some_fields_has_errors' => 'Warning: Some fields couldn\'t be saved because there were errors, check each field to see the issues',
+        'warning_some_fields_has_errors' => 'Cuidado: Algunos campos no pudieron ser guardados porque tienen errores, comprueba cada campo para detectar los problemas',
     
-        'successfully_requested_validation_request' => 'Successfully requested validation request',
+        'successfully_requested_validation_request' => 'Solicitud de validación procesada con éxito',
     
-        'invitation_sent_successfully' => 'Invitation sent successfully',
+        'invitation_sent_successfully' => 'Invitación enviada satisfactoriamente',
     
-        'referee_is_part_of_institution' => 'Referee is part of %s get in contact with him to ask a institution change if required',
+        'referee_is_part_of_institution' => 'Validador forma parte de %s. Ponte en contacto con el o ella para que, si fuerea necesario, solicite un cambio de institución',
     
-        'referee_isnt_part_of_any_institution' => 'Referee isn\'t part of any institution. Please ask him to get invited by one',
+        'referee_isnt_part_of_any_institution' => 'Validador no está asociado a ninguna institución académica. Por favor, pregúntale a él o ella para que consiga ser validador de una institución',
     
-        'this_email_user_cannot_be_a_referee' => 'This email address is registered to an user that cannot be a referee',
+        'this_email_user_cannot_be_a_referee' => 'Este email está registrado para un usuario que no puede ser un validador',
     
-        'field' => 'Field',
+        'field' => 'Campo',
     
 ];
