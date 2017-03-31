@@ -87,10 +87,10 @@ class ValidationController extends Controller
                     $student->valid = ValidationRequest::$status[0];
                     $student->save();
                     $validation->delete();
-                    $request->session()->flash('error_message', sprintf('The validation was removed because you indicated that %s wasn\'t a student from this institution', $studentName));
+                    $request->session()->flash('error_message', sprintf(trans('validators.validation_was_removed'), $studentName));
                 }
             }
-            $request->session()->flash('success_message', sprintf('%s validation complete', $studentName));
+            $request->session()->flash('success_message', sprintf(trans('validators.validation_complete'), $studentName));
             return redirect()->action('ValidationController@index');
         } else {
             return back()->withInput()->withErrors($v->errors());

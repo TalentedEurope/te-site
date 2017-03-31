@@ -482,4 +482,8 @@ Obchodná a poradenská činnosť',
     
         'field' => 'Pole',
     
+        'your_request_was_created' => 'Your request was created %s',
+    
+        'if_request_hasnt_been_completed' => 'If your request hasn\'t been completed in %s days you will be able to create a new request',
+    
 ];

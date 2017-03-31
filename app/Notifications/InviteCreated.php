@@ -45,12 +45,12 @@ class InviteCreated extends Notification
         $institution = $this->user->institution->user->fullName;
 
         return (new MailMessage())
-                    ->subject(sprintf('%s has invited you as referee on Talented Europe', $institution))
-                    ->line(sprintf('%s has invited you as referee on Talented Europe.', $institution))
-                    ->line('We need you to create your user clicking the following link.')
+                    ->subject(sprintf(trans('email.inviteCreated_subject_1'), $institution))
+                    ->line(sprintf(trans('email.inviteCreated_line_2'), $institution))
+                    ->line(trans('email.inviteCreated_line_3'))
 
-                    ->action('Create my account', route('get_register_validator', $this->user->uid).'?email='.urlencode($this->user->email))
-                    ->line('Thank you for using our application!');
+                    ->action(trans('email.inviteCreated_action_4'), route('get_register_validator', $this->user->uid).'?email='.urlencode($this->user->email))
+                    ->line(trans('email.inviteCreated_line_5'));
     }
 
     /**

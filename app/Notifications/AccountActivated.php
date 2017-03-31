@@ -43,11 +43,11 @@ class AccountActivated extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage())
-                    ->subject('Action required: Activate your account')
-                    ->line('Thank you for signing up on Talented Europe.')
-                    ->line('Please verify Your Email Address by clicking the link below.')
-                    ->action('Confirm my account', route('email-verification.check', $this->user->verification_token).'?email='.urlencode($this->user->email))
-                    ->line('Thank you for using our application!');
+                    ->subject(trans('email.accountActivated_subject_1'))
+                    ->line(trans('email.accountActivated_line_2'))
+                    ->line(trans('email.accountActivated_line_3'))
+                    ->action(trans('email.accountActivated_action_4'), route('email-verification.check', $this->user->verification_token).'?email='.urlencode($this->user->email))
+                    ->line(trans('email.accountActivated_line_5'));
     }
 
     /**
