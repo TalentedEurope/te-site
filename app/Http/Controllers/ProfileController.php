@@ -176,7 +176,7 @@ class ProfileController extends Controller
         $errors = new MessageBag();
 
         $v = Validator::make($request->all(), User::rules(false, false, $user));
-        $v->setAttributeNames(User::$niceNames);
+        $v->setAttributeNames(User::niceNames());
 
         $errors = $errors->merge($v);
         foreach ($v->valid() as $key => $value) {
