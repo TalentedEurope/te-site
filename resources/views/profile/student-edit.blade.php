@@ -81,7 +81,7 @@
                   value="{{ old('nationality', $student->nationality) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></select-form>
 
-              <date-form code="birthdate" label="{!! trans('reg-profile.student_birthdate') !!}" placeholder="{!! trans('reg-profile.student_birthdate') !!}" required
+              <date-form code="birthdate" label="{!! trans('reg-profile.student_birthdate') !!}" placeholder="{!! trans('reg-profile.student_birthdate') !!}"
                   value="{{ old('birthdate', $student->birthdate) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></date-form>
 
