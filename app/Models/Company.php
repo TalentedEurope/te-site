@@ -16,7 +16,7 @@ class Company extends Model
 
     public static function rules($company, $keyOnly = false)
     {
-        $filter = array( 'fiscal_id' => ['sometimes', 'required','alpha_dash', Rule::unique('companies')->ignore($company->id)] ,
+        $filter = array( 'fiscal_id' => ['sometimes','alpha_dash', Rule::unique('companies')->ignore($company->id)] ,
                         'overseer' => 'regex:/^[\pL\s\-\,\.]+$/u' ,
                         'activity' => 'sometimes|required|in:'.implode(',', Company::$activities),
                         'website' => 'active_url' ,

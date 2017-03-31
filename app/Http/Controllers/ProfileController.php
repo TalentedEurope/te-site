@@ -24,6 +24,7 @@ use Image;
 use Session;
 use JWTAuth;
 use Config;
+use File;
 
 class ProfileController extends Controller
 {
@@ -221,6 +222,15 @@ class ProfileController extends Controller
             $img->resizeCanvas(User::$photoWidth, User::$photoHeight, "center", false, "ffffff")->save($fname);
             $user->image = basename($fname);
         }
+        if ($request->has('remove-image')) {
+            $file = public_path() . User::$photoPath . $user->image;
+            $user->image = "";
+            if (File::exists($file)) {
+                File::delete($file);
+            }
+        }
+
+
         if (!$request->has('validate')) {
             $user->save();
         }

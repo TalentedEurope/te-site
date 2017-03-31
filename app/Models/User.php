@@ -73,42 +73,40 @@ class User extends Authenticatable
         $niceNames = array();
         if (Auth::user()->isA('student')) {
             $niceNames = array(
-                'visible' => trans('reg-profile.profile_visibility'),
-                'notify_me' => trans('reg-profile.notifications'),
-                'name' => trans('reg-profile.name'),
-                'phone' => trans('reg-profile.phone'),
-                'facebook' => trans('reg-profile.facebook_page_url'),
-                'twitter' => trans('reg-profile.twitter_page_url'),
-                'linkedin' => trans('reg-profile.linkedin_page_url'),
-                'address' => trans('reg-profile.address'),
-                'postal_code' => trans('reg-profile.postal_code'),
-                'city' => trans('reg-profile.city'),
-                'country' => trans('reg-profile.country'),
-                'image' => trans('reg-profile.my_photo'),
-            );
+               'visible' => trans('reg-profile.profile_visibility'),
+               'notify_me' => trans('reg-profile.notifications'),
+               'name' => trans('reg-profile.name'),
+               'phone' => trans('reg-profile.phone'),
+               'facebook' => trans('reg-profile.facebook_page_url'),
+               'twitter' => trans('reg-profile.twitter_page_url'),
+               'linkedin' => trans('reg-profile.linkedin_page_url'),
+               'address' => trans('reg-profile.address'),
+               'postal_code' => trans('reg-profile.postal_code'),
+               'city' => trans('reg-profile.city'),
+               'country' => trans('reg-profile.country'),
+               'image' => trans('reg-profile.my_photo'),
+             );
         } else {
             $niceNames = array(
-                'visible' => trans('reg-profile.profile_visibility'),
-                'notify_me' => trans('reg-profile.notifications'),
-                'name' => trans('reg-profile.name'),
-                'phone' => trans('reg-profile.phone'),
-                'fiscal_id' => trans('reg-profile.fiscal_id'),
-                'overseer' => trans('reg-profile.company_representative'),
-                'pic' => trans('reg-profile.company_representative'),
-                'activity' => trans('reg-profile.company_activity'),
-                'website' => trans('reg-profile.web_url'),
-                'address' => trans('reg-profile.address'),
-                'postal_code' => trans('reg-profile.postal_code'),
-                'city' => trans('reg-profile.city'),
-                'country' => trans('reg-profile.country'),
-                'talent' => '"' . trans('reg-profile.company_what_is_talent') . '" ' . trans('reg-profile.field'),
-                'contact_name' => trans('reg-profile.company_contact_person_name'),
-                'contact_email' => trans('reg-profile.company_contact_person_email')
+               'visible' => trans('reg-profile.profile_visibility'),
+               'notify_me' => trans('reg-profile.notifications'),
+               'name' => trans('reg-profile.name'),
+               'phone' => trans('reg-profile.phone'),
+               'fiscal_id' => trans('reg-profile.fiscal_id'),
+               'overseer' => trans('reg-profile.company_representative'),
+               'activity' => trans('reg-profile.company_activity'),
+               'website' => trans('reg-profile.web_url'),
+               'address' => trans('reg-profile.address'),
+               'postal_code' => trans('reg-profile.postal_code'),
+               'city' => trans('reg-profile.city'),
+               'country' => trans('reg-profile.country'),
+               'talent' => '"' . trans('reg-profile.company_what_is_talent') . '" ' . trans('reg-profile.field'),
+               'contact_name' => trans('reg-profile.company_contact_person_name'),
+               'contact_email' => trans('reg-profile.company_contact_person_email')
             );
         }
         return $niceNames;
     }
-
 
     /**
      * The attributes that should be hidden for arrays.
