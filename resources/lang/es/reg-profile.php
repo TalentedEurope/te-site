@@ -483,10 +483,10 @@ return [
     
         'your_request_was_created' => 'Tu petición fue creada %s',
     
-        'if_request_hasnt_been_completed' => 'If your request hasn\'t been completed in %s days you will be able to create a new request',
+        'if_request_hasnt_been_completed' => 'Si tu solicitud no ha sido completada en %s días, podrás crear una nueva.',
     
-        'you_havent_set_any_personal_skills' => 'You haven\'t set any personal skills yet. If you request referee you cannot modify them.',
+        'you_havent_set_any_personal_skills' => 'No has establecido ninguna característica personal. Si solicitas la validación, no podrás modificarlas.',
     
-        'to_see_more_details' => 'To see more details you must be registered',
+        'to_see_more_details' => 'Para poder ver más detalles, debes registrarte',
     
 ];

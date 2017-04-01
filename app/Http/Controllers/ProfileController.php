@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 use App\Models\Student;
 use App\Models\Company;
 use App\Models\Institution;
@@ -62,7 +61,7 @@ class ProfileController extends Controller
     public function getProfile(Request $request, $slug, $id)
     {
         if (!Auth::user()) {
-            return Redirect::route('register', ['see_more' => 1]);
+            return redirect()->route('register', ['see_more' => 1]);
         }
 
         $user = User::findOrFail($id);
