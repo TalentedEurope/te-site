@@ -18,6 +18,10 @@
             </select>
         </div>
 
+        <div v-if="readonly && selectedSkills.length == 0">
+            {{ $t('reg-profile.you_havent_set_any_personal_skills') }}
+        </div>
+
         <span v-if="has_error" class="help-block">
             <strong>{{error_message}}</strong>
         </span>

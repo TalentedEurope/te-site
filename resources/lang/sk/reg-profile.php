@@ -486,4 +486,6 @@ Obchodná a poradenská činnosť',
     
         'if_request_hasnt_been_completed' => 'If your request hasn\'t been completed in %s days you will be able to create a new request',
     
+        'you_havent_set_any_personal_skills' => 'You haven\'t set any personal skills yet. If you request referee you cannot modify them.',
+    
 ];
