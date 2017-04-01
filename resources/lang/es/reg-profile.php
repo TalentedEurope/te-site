@@ -481,7 +481,7 @@ return [
     
         'field' => 'Campo',
     
-        'your_request_was_created' => 'Your request was created %s',
+        'your_request_was_created' => 'Tu petición fue creada %s',
     
         'if_request_hasnt_been_completed' => 'If your request hasn\'t been completed in %s days you will be able to create a new request',
     
