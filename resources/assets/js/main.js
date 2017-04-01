@@ -9,6 +9,12 @@ require('jquery-toast-plugin/dist/jquery.toast.min.js');
 require('jquery-confirm/dist/jquery-confirm.min.css');
 require('jquery-confirm/dist/jquery-confirm.min.js');
 
+import moment from 'moment';
+window.moment = moment;
+moment.locale(TE.locale);
+
+require('./libs/combodate-1.1.0/combodate.js');
+
 require('flatpickr/dist/flatpickr.min.css');
 var Flatpickr = require('flatpickr/dist/flatpickr.min.js');
 
@@ -35,6 +41,7 @@ import TextBoxForm from './components/profile/common/TextBoxForm.vue';
 import PersonalSkillsForm from './components/profile/common/PersonalSkillsForm.vue';
 import FileForm from './components/profile/common/FileForm.vue';
 import DateForm from './components/profile/common/DateForm.vue';
+import BirthdateForm from './components/profile/student/BirthdateForm.vue';
 import ProfessionalSkills from './components/profile/student/ProfessionalSkills.vue';
 import Studies from './components/profile/student/Studies.vue';
 import Trainings from './components/profile/student/Trainings.vue';
@@ -53,7 +60,7 @@ if (document.querySelector('.v-container')) {
         el: '.v-container',
         components: {
             Search, Alerts, Validators, StudentsValidation,
-            SelectForm, TextAreaForm, TextBoxForm, PersonalSkillsForm, FileForm, DateForm,
+            SelectForm, TextAreaForm, TextBoxForm, PersonalSkillsForm, FileForm, DateForm, BirthdateForm,
             ProfessionalSkills, Studies, Trainings, Languages, Experiences, RequestValidation,
             AlertButton },
     })
