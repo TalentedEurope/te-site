@@ -89,7 +89,7 @@ return [
     
         'validation_was_removed' => 'La validación fué eliminada debido a que indicaste que %s no era estudiante de tu institución',
     
-        'validation_complete' => '%s valiación completada',
+        'validation_complete' => '%s validación completada',
     
         'cannot_invite' => 'No se puede invitar debido a que este email fue registrado para otro tipo de usuario o bien porque dicho usuario está pendiente de su institución',
     
