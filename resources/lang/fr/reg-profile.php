@@ -29,7 +29,7 @@ return [
     
         'country' => 'le pays',
     
-        'countries' => 'Countries',
+        'countries' => 'Pays',
     
         'institution_certificate_template_download' => 'téléchargez le modèle',
     
@@ -129,11 +129,11 @@ return [
     
         'captcha' => 'Captcha',
     
-        'terms_of_use' => 'Je suis d\'accord avec les conditions',
+        'terms_of_use' => 'Je suis d\'accord avec les conditionsd\'utilisation',
     
-        'i_agree_with' => 'I agree with',
+        'i_agree_with' => 'Je suis d\'accord avec ',
     
-        'the_terms_of_use' => 'the terms of use',
+        'the_terms_of_use' => 'les conditions d\'utilisation',
     
         'create_account' => 'créer un nouveau compte',
     
@@ -470,23 +470,23 @@ Sur',
     
         'institution_type' => 'Type d\'établissement',
     
-        'complete_the_registration' => 'Complete the registration by adding the following information',
+        'complete_the_registration' => 'Complétez l\'enregistrement, indiquant les informations suivantes',
     
-        'changes_saved_successfully' => 'Changes saved successfully',
+        'changes_saved_successfully' => 'Modifications enregistrées avec succès',
     
-        'warning_some_fields_has_errors' => 'Warning: Some fields couldn\'t be saved because there were errors, check each field to see the issues',
+        'warning_some_fields_has_errors' => 'Attention: Certains champs ne pouvait pas être sauvé parce qu\'il y avait des erreurs, vérifiez chaque champ pour voir les questions',
     
-        'successfully_requested_validation_request' => 'Successfully requested validation request',
+        'successfully_requested_validation_request' => 'Une demande d\'évaluation envoyé avec succès',
     
-        'invitation_sent_successfully' => 'Invitation sent successfully',
+        'invitation_sent_successfully' => 'Invitation envoyée avec succès',
     
-        'referee_is_part_of_institution' => 'Referee is part of %s get in contact with him to ask a institution change if required',
+        'referee_is_part_of_institution' => 'L\'évaluateur fait partie de% s mettez- vous en contact avec lui pour demander un changement d\'institution si nécessaire',
     
-        'referee_isnt_part_of_any_institution' => 'Referee isn\'t part of any institution. Please ask him to get invited by one',
+        'referee_isnt_part_of_any_institution' => 'L\'évaluateur ne fait partie d\'aucune institution. Demandez-lui de vous inviter par un',
     
-        'this_email_user_cannot_be_a_referee' => 'This email address is registered to an user that cannot be a referee',
+        'this_email_user_cannot_be_a_referee' => 'Cette adresse électronique est enregistrée auprès d\'un utilisateur qui ne peut être évaluateur',
     
-        'field' => 'Field',
+        'field' => 'Champ',
     
         'your_request_was_created' => 'Your request was created %s',
     
