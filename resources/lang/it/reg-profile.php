@@ -487,4 +487,6 @@ return [
     
         'you_havent_set_any_personal_skills' => 'You haven\'t set any personal skills yet. If you request referee you cannot modify them.',
     
+        'to_see_more_details' => 'To see more details you must be registered',
+    
 ];
