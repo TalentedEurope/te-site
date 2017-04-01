@@ -101,4 +101,6 @@ return [
     
         'cannot_find_invitation_to_delete' => 'No se puede encontrar la invitación a eliminar, por favor inténtalo de nuevo más tarde',
     
+        'comment' => 'Comentario',
+    
 ];
