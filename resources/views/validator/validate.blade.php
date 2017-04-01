@@ -78,7 +78,7 @@
 
       <div class="clearfix">
       <h4 class="pull-left">{!! trans('validators.this_student_is') !!}:</h4>
-      <ul class="nav nav-pills" id="validate-tabs" data-hashtab="true">
+      <ul class="nav nav-pills validate-tabs" id="validate-tabs" data-hashtab="true">
         <li><a  href="#valid" data-toggle="tab"><i class="fa fa-check" aria-hidden="true"></i> {!! trans('validators.valid') !!}</a></li>
         <li><a href="#invalid" data-toggle="tab"><i class="fa fa-times" aria-hidden="true"></i> {!! trans('validators.invalid') !!}</a></li>
       </ul>
@@ -94,8 +94,8 @@
                 value='{!! json_encode($student->personalSkills()->wherePivot('validator',true)->get(), JSON_HEX_APOS) !!}'
                 errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></personal-skills-form>
 
-            <text-area-form code="comment" label="{!! trans('validate.comment') !!}"
-                  placeholder="{!! trans('validate.comment') !!}" required
+            <text-area-form code="comment" label="{!! trans('validators.comment') !!}"
+                  placeholder="{!! trans('validators.comment') !!}" required
                   value="{{ old('comment', $student->validation_comment) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-area-form>
             <hr>
