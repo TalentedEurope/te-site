@@ -4,7 +4,7 @@
 
         <div>
             <div class="form-inline select-holder">
-                <input type="text" class="form-control" id="birthdate" data-format="DD/MM/YYYY" data-template="D MMMM YYYY" name="birthdate" :value="value">
+                <input type="text" class="form-control" id="birthdate" data-format="YYYY-MM-DD" data-template="D MMMM YYYY" name="birthdate" :value="value">
             </div>
         </div>
 
