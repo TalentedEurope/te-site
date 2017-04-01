@@ -239,35 +239,35 @@ return [
     
         'logo' => 'Logo',
     
-        'my_profile' => 'My profile',
+        'my_profile' => 'Mein Profil',
     
-        'profile' => 'Profile',
+        'profile' => 'Profil',
     
-        'profile_visibility' => 'Profile Visibility',
+        'profile_visibility' => 'Sichtbarkeit des Profils',
     
-        'profile_visibility_visible' => 'Visible. Can be searched, viewed',
+        'profile_visibility_visible' => 'Sichtbar. Kann ausgesucht und gesehen werden.',
     
-        'profile_visibility_hidden' => 'Hidden. Cannot be searched or viewed',
+        'profile_visibility_hidden' => 'Versteckt. Kann nicht ausgesucht und gesehen werden.',
     
-        'notifications' => 'Notifications',
+        'notifications' => 'Benahrichtigungen',
     
-        'notifications_enabled' => 'Enabled. You\'ll receive emails once a day if a student wants to get in contact with you',
+        'notifications_enabled' => 'Erlaubt. Sie bekommen jeden Tag eine E-Mail, falls ein Student mit Ihnen in Kontakt tretten will.',
     
         'notifications_disabled' => 'Disabled. You won\'t receive any emails, except for announcements about the service',
     
-        'about' => 'About',
+        'about' => 'Inhalt',
     
-        'company_logo' => 'Company Logo',
+        'company_logo' => 'Unternehmenslogo',
     
-        'social_and_web' => 'Social networks and website',
+        'social_and_web' => 'Sozialle Netzwerke und die Webseite',
     
-        'facebook_page_url' => 'Facebook page url',
+        'facebook_page_url' => 'Facebook url',
     
-        'twitter_page_url' => 'Twitter page url',
+        'twitter_page_url' => 'Twitter url',
     
-        'linkedin_page_url' => 'Linkedin page url',
+        'linkedin_page_url' => 'Linkedin url',
     
-        'web_url' => 'Website url',
+        'web_url' => 'Webseite url',
     
         'what_is_talent_for_you_in_a_few_words' => 'Explain us what is talent for you in a few words',
     
@@ -480,5 +480,9 @@ return [
         'this_email_user_cannot_be_a_referee' => 'This email address is registered to an user that cannot be a referee',
     
         'field' => 'Field',
+    
+        'your_request_was_created' => 'Your request was created %s',
+    
+        'if_request_hasnt_been_completed' => 'If your request hasn\'t been completed in %s days you will be able to create a new request',
     
 ];

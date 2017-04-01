@@ -211,13 +211,7 @@
 
         <div class="companies-and-institutions-logos">
           @foreach ($logos as $logo)
-            @if ($logo->user->userable_type == \App\Models\Company::class)
-            <a href="{{ route('get_profile', [str_slug($logo->user->name),$logo->user->id]) }}">
             <img width="150" src="{{ asset('uploads/photo/'.$logo->user->image) }}"/>
-            </a>
-            @else
-            <img width="150" src="{{ asset('uploads/photo/'.$logo->user->image) }}"/>
-            @endif
           @endforeach
         </div>
       </div>

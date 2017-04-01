@@ -58,7 +58,7 @@
               <div class="row">
                 <div class="col-sm-6">
                   <text-box-form code="fiscal_id" label="{!! trans('reg-profile.fiscal_id') !!}" placeholder="{!! trans('reg-profile.fiscal_id') !!}"
-                    required value="{{ old('fiscal_id', $institution->fiscal_id) }}"
+                    value="{{ old('fiscal_id', $institution->fiscal_id) }}"
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
                 </div>
                 <div class="col-sm-6">
