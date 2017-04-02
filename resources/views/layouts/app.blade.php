@@ -39,6 +39,7 @@
 
   <script type="text/javascript">
     TE = {};
+    TE.logged_in = @if (Auth::user()) true @else false @endif;
     TE.profile = {'modified_fields': false};
     TE.locale = '{!! App::getLocale() !!}';
     TE.translations = {

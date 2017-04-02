@@ -77,7 +77,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'fr' => 'Accounting technician, Actuarial analyst, Actuary, Chartered accountant, Chartered certified accountant, Chartered loss adjuster, Chartered management accountant, Chartered public finance accountant, Corporate investment banker, Corporate treasurer, Financial adviser, Financial manager, Financial risk analyst, Financial trader, Forensic accountant, Insurance account manager, Insurance broker, Insurance claims handler, Insurance risk surveyor, Insurance underwriter, Internal auditor, Investment analyst, Operational investment banker, Pension scheme manager, Pensions consultant, Retail banker, Risk manager, Senior tax professional/tax inspector, Stockbroker, Tax adviser',                    
                 
-                    'sk' => 'Accounting technician, Actuarial analyst, Actuary, Chartered accountant, Chartered certified accountant, Chartered loss adjuster, Chartered management accountant, Chartered public finance accountant, Corporate investment banker, Corporate treasurer, Financial adviser, Financial manager, Financial risk analyst, Financial trader, Forensic accountant, Insurance account manager, Insurance broker, Insurance claims handler, Insurance risk surveyor, Insurance underwriter, Internal auditor, Investment analyst, Operational investment banker, Pension scheme manager, Pensions consultant, Retail banker, Risk manager, Senior tax professional/tax inspector, Stockbroker, Tax adviser',                    
+                    'sk' => 'Účtovný technik, poistný analytik, poistný matematik, autorizovaný účtovník, certifikovaný účtovník, autorizovaný likvidátor škôd, autorizovaný manažérsky účtovník, autorizovaný účtovník verejných financií, podnikový investičný bankár, podnikový pokladník, finančný poradca, finančný manažér, analytik finančných rizík, finančný obchodník, forenzný účtovník, poisťovací manažér, poisťovací maklér, pracovník zabezpečujúci poistné plnenie, inšpektor poistného rizika, poisťovací upisovateľ, interný audítor, investičný analytik, bankár prevádzkových investícií, manažér dôchodkového systému, poradca dôchodkového systému, retailový bankár, manažér rizík, vrcholový daňový pracovník/ daňový inšpektor, burzový maklér , daňový poradca',                    
                 
                     'key' => 'banking-and-or-finance-amp-insurance',                    
                 
@@ -95,7 +95,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'fr' => 'Chartered management accountant, Civil Service fast streamer, Economist, Environmental consultant, Ergonomist, Fast food restaurant manager, Financial manager, Financial risk analyst, Health service manager, Hotel manager, Internal auditor, IT consultant, Management consultant, Office manager, Operational researcher, Product manager, Project manager, Public affairs consultant, Recruitment consultant, Retail manager, Risk manager, Secretary/administrator, Statistician',                    
                 
-                    'sk' => 'Chartered management accountant, Civil Service fast streamer, Economist, Environmental consultant, Ergonomist, Fast food restaurant manager, Financial manager, Financial risk analyst, Health service manager, Hotel manager, Internal auditor, IT consultant, Management consultant, Office manager, Operational researcher, Product manager, Project manager, Public affairs consultant, Recruitment consultant, Retail manager, Risk manager, Secretary/administrator, Statistician',                    
+                    'sk' => 'autorizovaný manažérsky účtovník, líder verejnej služby, ekonóm, poradca pre životné prostredie, ergonóm, manažér reštaurácie s rýchlym občerstvením, finančný manažér, analytik finančných rizík, manažér zdravotnej služby, hotelový manažér, interný audítor, IT konzultant, poradca pre oblasť riadenia, manažér kancelárie, operačný výskumník, produktový manažér, projektový manažér, konzultant v oblasti verejnej politiky, náborový konzultant, retailový manažér, manažér rizík, tajomník/administrátor, štatistik',                    
                 
                     'key' => 'business-amp-consulting',                    
                 
@@ -113,7 +113,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'fr' => 'PR Agency',                    
                 
-                    'sk' => 'PR Agency',                    
+                    'sk' => 'PR agentúra',                    
                 
                     'key' => 'communication-amp-media-amp-pr',                    
                 
@@ -149,7 +149,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'fr' => 'Customer Support',                    
                 
-                    'sk' => 'Customer Support',                    
+                    'sk' => 'Zákaznícka podpora',                    
                 
                     'key' => 'customer-service',                    
                 
@@ -167,7 +167,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'fr' => 'Package DesignerAdvertisement,Announcement,Article,Artwork,Award,Banner,Billboard,Blog Post,Book,Booth,Branding,Brochure,Button,Callout,Card,Case Study,Catalog,Channel,Collateral,Combo Shot,Concept,Content,Contest,Copy,Corporate,Coupon,Cover Art,Creative,Customer Service,Customer Story,Demonstration,Design,Diagram,Direct Marketing,Distributor,Documentation,Email,Event,Flyer,Footer,Header,Headshot,Icon,Landscape,Legal,Letterhead,Logo,Magazine,Mailer,Manual,Media Kit,Mockup,Newsletter,Packaging,Partners,Photo,PodcastPoint-of-sale,Portrait,Postcard,Prepress,Presentation,Price Sheet,Print,Product Shot,Production,Promotion,Proof,Pull-up,Quote,Rebate,Report,Reseller,Retail,Roadmap,Sales Flyer,Sales,Sign,Slide,Slip Sheet,Social Networking,Sticker,Stock,Style Guide,Survey,Television,Template,Text,Description,UPC,Web,Webcast,Whitepaper,Wireframe,Adobe,Agency,Artist,Brand,Client,Color,Concepts,Creative,Detail,Digital,Graphic,Illustrator,InDesign,Layout,Marketing,Media,Photoshop,Print,Production,Strategy,Typography,Visual,Web',                    
                 
-                    'sk' => 'Package DesignerAdvertisement,Announcement,Article,Artwork,Award,Banner,Billboard,Blog Post,Book,Booth,Branding,Brochure,Button,Callout,Card,Case Study,Catalog,Channel,Collateral,Combo Shot,Concept,Content,Contest,Copy,Corporate,Coupon,Cover Art,Creative,Customer Service,Customer Story,Demonstration,Design,Diagram,Direct Marketing,Distributor,Documentation,Email,Event,Flyer,Footer,Header,Headshot,Icon,Landscape,Legal,Letterhead,Logo,Magazine,Mailer,Manual,Media Kit,Mockup,Newsletter,Packaging,Partners,Photo,PodcastPoint-of-sale,Portrait,Postcard,Prepress,Presentation,Price Sheet,Print,Product Shot,Production,Promotion,Proof,Pull-up,Quote,Rebate,Report,Reseller,Retail,Roadmap,Sales Flyer,Sales,Sign,Slide,Slip Sheet,Social Networking,Sticker,Stock,Style Guide,Survey,Television,Template,Text,Description,UPC,Web,Webcast,Whitepaper,Wireframe,Adobe,Agency,Artist,Brand,Client,Color,Concepts,Creative,Detail,Digital,Graphic,Illustrator,InDesign,Layout,Marketing,Media,Photoshop,Print,Production,Strategy,Typography,Visual,Web',                    
+                    'sk' => 'Marketingová agentúra',                    
                 
                     'key' => 'design',                    
                 
@@ -185,7 +185,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'fr' => 'professeur d&apos;éducation préscolaire, administrateur scolaire, psychologue pédagogique, professeur d anglais langue étrangere, responsable de l&apos;éducation environnementale,enseignant formation continue,professeur d&apos;université, mentor apprentissage, conférencier au musée, professeur d&apos;école primaire, professeur privé de la musique, professeur de lycée et college, professeur d&apos;éducation spéciale',                    
                 
-                    'sk' => 'učiteľ predškolského vzdelávania, školský správca, pedagogický psychológ, učiteľ angličtiny ako cudzieho jazyka, environmentalistický pracovník, učiteľ pre ďalšie vzdelávanie, vysokoškolský lektor, mentor učenia sa, lektor v múzeu, učiteľ na základnej škole, súkromný učiteľ hudby, stredoškolský učiteľ, špeciálny pedagóg',                    
+                    'sk' => 'Učiteľ v materskej škole, školský administrátor, školský psychológ, učiteľ angličtiny ako cudzieho jazyka, pracovník environmentálnej výchovy, učiteľ ďalšieho vzdelávania, akademický pracovník vyššieho vzdelávania, mentor učenia sa, pracovník muzeálneho vzdelávania, učiteľ na základnej škole, súkromný učiteľ hudby, učiteľ na strednej škole, učiteľ študentov so špeciálnymi výchovno-vzdelávacími potrebami',                    
                 
                     'key' => 'education-amp-training',                    
                 
@@ -221,7 +221,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'fr' => 'Gestionnaire d&apos;hébergement Gestionnaire de restauration Gestionnaire de centre de conférence, Gestionnaire de service à la clientèle, Organisateur d&apos;événement, Concepteur d&apos;exposition, Directeur de restauration rapide, Directeur de l&apos;hôtel, Directeur des ressources humaines, Directeur du marketing, Gestionnaire de maison de ville, Directeur de restaurant, Représentant de vacances, Responsable de parc d&apos;attraction, Responsable de tour, Responsable de tourisme,Agent de tourisme, Directeur de centre d&apos;information touristique, Directeur d&apos;agence de voyage',                    
                 
-                    'sk' => 'vedúci ubytovacieho zariadenia, manažér pre catering, manažér konferenčného centra, manažér zákazníckeho servisu, organizátor akcií, výstavný dizajnér, manažér fast-foodu,m nažér reštaurácie, hotelový manažér, riaditeľ ľudských zdrojov, marketingový manažér, manažér v pohostinských službách, manažér reštaurácie, dovolenkový delegát, manažér zábavného parku, zástupca cestovnej kancelárie, referent pre cestovný ruch, manažér turistického informačného centra, manažér cestovnej kancelárie',                    
+                    'sk' => 'manažér ubytovacieho zariadenia, manažér pre catering, manažér konferenčného centra, manažér zákazníckeho servisu, organizátor podujatí, dizajnér výstav, manažér reštaurácie s rýchlym občerstvením, hotelový manažér, referent ľudských zdrojov, marketingový špecialista, manažér propagácie podniku, manažér reštaurácie, delegát, manažér lunaparku, vedúci zájazdu, referent cestovného ruchu, manažér turistického informačného centra, manažér cestovnej kancelárie',                    
                 
                     'key' => 'hospitality-amp-tourism',                    
                 
@@ -239,7 +239,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'fr' => 'Conseiller en ressources humaines, Agent des ressources humaines, IT trainer, Conseiller en gestion, Psychologue professionnel, Gestionnaire de bureau, Conseiller en recrutement, Sales executive, Agent de formation et de perfectionnement, Développeur d&apos;applications, Analyste d&apos;affaires,',                    
                 
-                    'sk' => 'kariérny poradca, pracovník ľudských zdrojov, IT tréner, konzultant managementu, pracovný psychológ, manažér kancelárie, náborový poradca, vedúci predaja,referent pre vzdelávanie a rozvoj',                    
+                    'sk' => 'Kariérny poradca, správca úseku pre ľudské zdroje, IT školiteľ, konzultant manažmentu, pracovný psychológ, manažér kancelárie, náborový poradca, vedúci pracovník v oblasti obchodu, pracovník vzdelávania a rozvoja',                    
                 
                     'key' => 'human-resources',                    
                 
@@ -257,7 +257,7 @@ class CompanyKeywordTableSeeder extends Seeder
                 
                     'fr' => 'Développeur d&apos;applications, Analyste d&apos;affaires, Cartographe, Administrateur de base de données, Développeur de jeux, Responsable des systèmes d&apos;information géographique, Spécialiste de la sécurité de l&apos;information, Gestionnaire de systèmes d&apos;information, consultant informatique, professionnel des ventes informatiques, Technicien de soutien technique, ingénieur réseau, spécialiste en SEO, testeur de logiciels, Analyste de systèmes, éveloppeur de systèmes, Auteur technique, Concepteur Web, Développeur Web',                    
                 
-                    'sk' => 'developer aplikácií, obchodný analytik, kartograf, správca databázy, developer hier, pracovník pre geografické informačné systémy, špecialista pre informačnú bezpečnosť, manažér pre informačné systémy, IT konzultant, odborník pre IT predaj, pracovník IT technickej podpory, sieťový inžinier, SEO špecialista, testovač softwaru, systémový analytik, systémový vývojár, technický autor, webový dizajnér,webový vývojár',                    
+                    'sk' => 'Vývojár aplikácií, obchodný analytik, kartograf, správca databázy, vývojár hier, správca geografických informačných systémov, špecialista informačnej bezpečnosti, manažér informačných systémov, IT konzultant, obchodný zástupca v oblasti IT, zástupca IT technickej podpory , sieťový inžinier, SEO špecialista, testér softwaru, systémový analytik, systémový vývojár, technický dokumentarista, webový dizajnér, webový vývojár',                    
                 
                     'key' => 'it-amp-web',                    
                 

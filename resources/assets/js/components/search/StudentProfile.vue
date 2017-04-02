@@ -2,7 +2,7 @@
     <li class="well profile clearfix">
         <div>
             <div class="col-xs-12 col-sm-8 col-md-9">
-                <h2 class="title"><a :href="profileUrl">{{student.full_name}}</a></h2>
+                <h2 class="title"><a :href="seeMoreUrl">{{student.full_name}}</a></h2>
                 <p><em class="h4">{{student.studied}}</em></p>
                 <hr>
                 <p><strong><i class="fa fa-map-marker"></i> {{ $t('reg-profile.lives_in') }}: </strong> {{student.lives_in}}</p>
@@ -26,7 +26,7 @@
                         </span>
                     </figcaption>
                 </figure>
-                <a class="btn-primary btn view-more" :href="profileUrl">{{ $t('global.more_btn') }}</a>
+                <a class="btn-primary btn view-more" :href="seeMoreUrl">{{ $t('global.more_btn') }}</a>
             </div>
         </div>
     </li>
@@ -41,8 +41,8 @@ export default {
     },
     props: ['student'],
     computed: {
-        profileUrl: function () {
-            return `/profile/${this.student.slug}/${this.student.id}`;
+        seeMoreUrl: function () {
+            return TE.logged_in ? `/profile/${this.student.slug}/${this.student.id}` : '/register?see_more=1';
         }
     }
 }
