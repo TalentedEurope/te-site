@@ -496,4 +496,34 @@ Sur',
     
         'to_see_more_details' => 'To see more details you must be registered',
     
+        'study_institution_name' => 'Study Institution name',
+    
+        'study_name' => 'Study name',
+    
+        'study_level' => 'Study level',
+    
+        'study_field' => 'Study field',
+    
+        'study_certificate' => 'Study certificate',
+    
+        'study_gradecard' => 'Study gradecard',
+    
+        'training_name' => 'Training name',
+    
+        'training_date' => 'Training date',
+    
+        'training_certificate' => 'Training certificate',
+    
+        'language_certificate' => 'Language certificate',
+    
+        'professional_skills_name' => 'Professional Skills name',
+    
+        'work_experience_company' => 'Work experience company',
+    
+        'work_experience_from' => 'Work experience from',
+    
+        'work_experience_until' => 'Work experience until',
+    
+        'work_experience_position' => 'Work experience position',
+    
 ];
