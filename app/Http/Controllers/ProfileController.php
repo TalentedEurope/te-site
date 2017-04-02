@@ -68,10 +68,6 @@ class ProfileController extends Controller
 
     public function getProfile(Request $request, $slug, $id)
     {
-        if (!Auth::user()) {
-            return redirect()->route('register', ['see_more' => 1]);
-        }
-
         $user = User::findOrFail($id);
         $public = Auth::user() == null;
         if (!$user->is_filled || !$user->visible || $user->banned) {

@@ -28,8 +28,8 @@ class Validator extends Model
     public static function niceNames()
     {
         $niceNames = array(
-            'department' => 'Department',
-            'position' => 'Position',
+            'department' => trans('reg-profile.validator_department'),
+            'position' => trans('reg-profile.position'),
         );
         return $niceNames;
     }
