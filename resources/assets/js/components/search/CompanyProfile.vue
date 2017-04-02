@@ -2,7 +2,7 @@
     <li class="well profile clearfix">
         <div>
             <div class="col-xs-12 col-sm-8 col-md-9">
-                <h2 class="title"><a :href="profileUrl">{{company.name}}</a></h2>
+                <h2 class="title"><a :href="seeMoreUrl">{{company.name}}</a></h2>
                 <p><em class="h4">{{company.info}}</em></p>
                 <hr>
                 <p class="h4">
@@ -50,7 +50,7 @@
                     </li>
                 </ul>
 
-                <a class="btn-primary btn view-more" :href="profileUrl">{{ $t('global.more_btn') }}</a>
+                <a class="btn-primary btn view-more" :href="seeMoreUrl">{{ $t('global.more_btn') }}</a>
             </div>
         </div>
     </li>
@@ -64,8 +64,8 @@ export default {
     components: { SkillsTags, AlertButton },
     props: ['company'],
     computed: {
-        profileUrl: function () {
-            return `/profile/${this.company.slug}/${this.company.id}`;
+        seeMoreUrl: function () {
+            return TE.logged_in ? `/profile/${this.company.slug}/${this.company.id}` : '/register?see_more=1';
         }
     }
 }
