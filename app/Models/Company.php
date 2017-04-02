@@ -47,15 +47,20 @@ class Company extends Model
         }
     }
 
-    public static $niceNames = array(
-                        'fiscal_id' => 'Fiscal ID',
-                        'overseer' => 'Person in charge',
-                        'activity' => 'Activity Sector',
-                        'website' => 'Website URL',
-                        'talent' => '"What is talent for you?" field',
-                        'contact_name' => 'Contact person name',
-                        'contact_email' => 'Contact person email'
+    public static function niceNames()
+    {
+        $niceNames = array(
+            'fiscal_id' => 'Fiscal ID',
+            'overseer' => 'Person in charge',
+            'activity' => 'Activity Sector',
+            'website' => 'Website URL',
+            'talent' => '"What is talent for you?" field',
+            'contact_name' => 'Contact person name',
+            'contact_email' => 'Contact person email'
         );
+        return $niceNames;
+    }
+
 
     public static function getRandomTalent()
     {

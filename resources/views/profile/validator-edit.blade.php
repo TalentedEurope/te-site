@@ -53,7 +53,7 @@
               @endif
 
               <h4>{!! trans('reg-profile.my_institution') !!}</h4>
-              @if ($validator->institution)
+              @if ($validator->institution && $validator->institution->name)
               <text-box-form code="institution_name" label="{!! trans('reg-profile.institution') !!}" placeholder="{!! trans('reg-profile.institution') !!}" readonly
                     value="{{ old('institution', $validator->institution->user->name) }}"
                     errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>

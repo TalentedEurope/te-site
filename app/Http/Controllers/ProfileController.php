@@ -46,10 +46,12 @@ class ProfileController extends Controller
             $errors = Validator::make($user->toArray(), User::Rules(false, true));
             if ($user->isA('student')) {
                 $filledVal = Validator::make($user->userable->toArray(), Student::Rules(true));
+                $filledVal->setAttributeNames(Student::niceNames());
                 $errors->errors()->merge($filledVal);
             }
             if ($user->isA('company')) {
                 $filledVal = Validator::make($user->userable->toArray(), Company::Rules($user->userable));
+                $filledVal->setAttributeNames(Company::niceNames());
                 $errors->errors()->merge($filledVal);
             }
             $data['profileErrors'] = $errors->errors();
@@ -262,6 +264,7 @@ class ProfileController extends Controller
             $company->user()->save($user);
         }
         $v = Validator::make($request->all(), Company::rules($company));
+        $v->setAttributeNames(Company::niceNames());
 
         foreach ($v->valid() as $key => $value) {
             if (array_has($company['attributes'], $key) && !$request->has('validate')) {
@@ -317,7 +320,7 @@ class ProfileController extends Controller
             $institution->user()->save($user);
         }
         $v = Validator::make($request->all(), Institution::rules($institution));
-
+        $v->setAttributeNames(Institution::niceNames());
         foreach ($v->valid() as $key => $value) {
             if ($key == "certificate" && !$request->has('validate')) {
                 $fname = tempnam(public_path() . Institution::$certificatePath, $user->id);
@@ -361,7 +364,7 @@ class ProfileController extends Controller
             $validator->user()->save($user);
         }
         $v = Validator::make($request->all(), \App\Models\Validator::rules($validator));
-
+        $v->setAttributeNames(\App\Models\Validator::niceNames());
         foreach ($v->valid() as $key => $value) {
             if (array_has($validator['attributes'], $key) && !$request->has('validate')) {
                 $validator->$key = $value;
@@ -473,6 +476,7 @@ class ProfileController extends Controller
         }
 
         $v = Validator::make($request->all(), Student::rules());
+        $v->setAttributeNames(Student::niceNames());
         $errors = $errors->merge($v);
 
         foreach ($v->valid() as $key => $value) {
@@ -498,6 +502,8 @@ class ProfileController extends Controller
             $studyIds = array();
             foreach ($v->valid()['studies'] as $key => $stud) {
                 $itemVal = Validator::make($stud, Student::rulesRelated('studies'));
+                $itemVal->setAttributeNames(Student::relatedNiceNames('studies'));
+
                 $study = new StudentStudy();
 
                 if (isset($stud['id'])) {
@@ -562,6 +568,8 @@ class ProfileController extends Controller
             $trainIds = array();
             foreach ($v->valid()['trainings'] as $key => $train) {
                 $itemVal = Validator::make($train, Student::rulesRelated('trainings'));
+                $itemVal->setAttributeNames(Student::relatedNiceNames('trainings'));
+
                 $training = new StudentTraining();
 
                 if (isset($train['id'])) {
@@ -606,6 +614,7 @@ class ProfileController extends Controller
             $langIds = array();
             foreach ($v->valid()['languages'] as $key => $lang) {
                 $itemVal = Validator::make($lang, Student::rulesRelated('languages'));
+                $itemVal->setAttributeNames(Student::relatedNiceNames('languages'));
                 $language = new StudentLanguage();
 
                 if (isset($lang['id'])) {
@@ -650,6 +659,8 @@ class ProfileController extends Controller
             $expIds = array();
             foreach ($v->valid()['experiences'] as $key => $exp) {
                 $itemVal = Validator::make($exp, Student::rulesRelated('experiences'));
+                $itemVal->setAttributeNames(Student::relatedNiceNames('experiences'));
+
                 $experience = new StudentExperience();
 
                 if (isset($exp['id'])) {
@@ -971,6 +982,7 @@ class ProfileController extends Controller
     private function formatRelatedErrors($errors, $mainKey, $subKey)
     {
         $erray = array();
+
         foreach ($errors->keys() as $key) {
             $erray[$mainKey.'.'.$subKey .'.'. $key] = $errors->get($key);
         }
