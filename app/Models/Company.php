@@ -50,13 +50,21 @@ class Company extends Model
     public static function niceNames()
     {
         $niceNames = array(
-            'fiscal_id' => 'Fiscal ID',
-            'overseer' => 'Person in charge',
-            'activity' => 'Activity Sector',
-            'website' => 'Website URL',
-            'talent' => '"What is talent for you?" field',
-            'contact_name' => 'Contact person name',
-            'contact_email' => 'Contact person email'
+            'visible' => trans('reg-profile.profile_visibility'),
+            'notify_me' => trans('reg-profile.notifications'),
+            'name' => trans('reg-profile.name'),
+            'phone' => trans('reg-profile.phone'),
+            'fiscal_id' => trans('reg-profile.fiscal_id'),
+            'overseer' => trans('reg-profile.company_representative'),
+            'activity' => trans('reg-profile.company_activity'),
+            'website' => trans('reg-profile.web_url'),
+            'address' => trans('reg-profile.address'),
+            'postal_code' => trans('reg-profile.postal_code'),
+            'city' => trans('reg-profile.city'),
+            'country' => trans('reg-profile.country'),
+            'talent' => '"' . trans('reg-profile.company_what_is_talent') . '" ' . trans('reg-profile.field'),
+            'contact_name' => trans('reg-profile.company_contact_person_name'),
+            'contact_email' => trans('reg-profile.company_contact_person_email')
         );
         return $niceNames;
     }

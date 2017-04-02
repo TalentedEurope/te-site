@@ -32,11 +32,12 @@ class Institution extends Model
     public static function niceNames()
     {
         $niceNames = array(
-            'overseer' => 'Person in charge',
-            'type' => 'type',
-            'pic' => 'PIC',
-            'fiscal_id' => 'Fiscal ID',
-            'certificate' => 'Certificate'
+            'overseer' => trans('reg-profile.legal_representative'),
+            'type' => trans('reg-profile.institution_type'),
+            'pic' => trans('reg-profile.institution_pic'),
+            'fiscal_id' => trans('reg-profile.fiscal_id'),
+            'certificate' => trans('reg-profile.institution_certificate')
+
         );
         return $niceNames;
     }

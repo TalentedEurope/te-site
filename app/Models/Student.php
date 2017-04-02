@@ -64,33 +64,32 @@ class Student extends Model
     public static function niceNames()
     {
         $niceNames = array(
-
-            'nationality' => 'Nationality',
-            'birthdate' => 'Birthday',
-            'curriculum' => 'Curriculum',
+            'nationality' => trans('reg-profile.nationality'),
+            'birthdate' => trans('reg-profile.student_birthdate'),
+            'curriculum' => trans('reg-profile.student_europass'),
             'renewed_at' => 'Renewed At',
-            'talent' => 'Talent',
-            'studies' => 'Studies',
-            'languages' => 'Languages',
-            'personalSkills' => 'Personal Skills',
-            'professionalSkills' => 'Professional Skills',
-            'studies.*.institution_name' => 'Institution Name',
-            'studies.*.name' => 'Studies name',
-            'studies.*.level' => 'Studies level',
-            'studies.*.field' => 'Studies Field',
-            'studies.*.certificate' => 'Studies certificate',
-            'studies.*.gradecard' => 'Studies gradecard',
-            'trainings.*.name' => 'Training name',
-            'trainings.*.date' => 'Training date',
-            'trainings.*.certificate' => 'Training certificate',
-            'languages.*.name' =>  'Language name',
-            'languages.*.level' =>  'Language level',
-            'languages.*.certificate' => 'Language certificate',
-            'professionalSkills.*.name' =>  'Professional Skills name',
-            'experiences.*.company' =>  'Work experience company',
-            'experiences.*.from' =>  'Work experience from',
-            'experiences.*.until' =>  'Work experience until',
-            'experiences.*.position' =>  'Work experience position',
+            'talent' => trans('reg-profile.my_talent'),
+            'studies' => trans_choice('reg-profile.study', 2),
+            'languages' => trans('reg-profile.student_languages'),
+            'personalSkills' => trans('reg-profile.student_personal_skills'),
+            'professionalSkills' => trans('reg-profile.student_professional_skills'),
+            'studies.*.institution_name' => trans('reg-profile.study_institution_name'),
+            'studies.*.name' => trans('reg-profile.study_name'),
+            'studies.*.level' => trans('reg-profile.study_level'),
+            'studies.*.field' => trans('reg-profile.study_field'),
+            'studies.*.certificate' => trans('reg-profile.study_certificate'),
+            'studies.*.gradecard' => trans('reg-profile.study_gradecard'),
+            'trainings.*.name' => trans('reg-profile.training_name'),
+            'trainings.*.date' => trans('reg-profile.training_date'),
+            'trainings.*.certificate' => trans('reg-profile.training_certificate'),
+            'languages.*.name' =>  trans('reg-profile.student_language_name'),
+            'languages.*.level' =>  trans('reg-profile.student_language_level'),
+            'languages.*.certificate' => trans('reg-profile.language_certificate'),
+            'professionalSkills.*.name' =>  trans('reg-profile.professional_skills_name'),
+            'experiences.*.company' =>  trans('reg-profile.work_experience_company'),
+            'experiences.*.from' =>  trans('reg-profile.work_experience_from'),
+            'experiences.*.until' =>  trans('reg-profile.work_experience_until'),
+            'experiences.*.position' =>  trans('reg-profile.work_experience_position'),
         );
         return $niceNames;
     }
@@ -99,35 +98,35 @@ class Student extends Model
     {
         $relatedNames = array(
             'studies' => array(
-                'institution_name' => 'Institution name',
-                'name' => 'Studies Name',
-                'level' => 'Studies Level',
-                'field' => 'Studies Field',
-                'certificate' => 'Studies Certificate',
-                'gradecard' => 'Studies Gradecard'
+                'institution_name' => trans('reg-profile.study_institution_name'),
+                'name' => trans('reg-profile.study_name'),
+                'level' => trans('reg-profile.study_level'),
+                'field' => trans('reg-profile.study_field'),
+                'certificate' => trans('reg-profile.study_certificate'),
+                'gradecard' => trans('reg-profile.study_gradecard')
             ),
 
             'trainings' => array (
-                'name' => 'Training name',
-                'date' => 'Training date',
-                'certificate' => 'Training certificate',
+                'name' =>  trans('reg-profile.training_name'),
+                'date' => trans('reg-profile.training_date'),
+                'certificate' => trans('reg-profile.training_certificate'),
             ),
 
             'languages' => array (
-                'name' =>  'Language Name',
-                'level' =>  'Language Level',
-                'certificate' => 'Language Certificate',
+                'name' =>  trans('reg-profile.student_language_name'),
+                'level' =>  trans('reg-profile.student_language_level'),
+                'certificate' => trans('reg-profile.language_certificate'),
             ),
 
             'professionalSkills' => array (
-                'name' =>  'Professional Skills Name',
+                'name' =>  trans('reg-profile.professional_skills_name'),
             ),
 
             'experiences' => array (
-                'company' =>  'Work experience company',
-                'from' =>  'Work experience from',
-                'until' =>  'Work experience to',
-                'position' =>  'Work experience position',
+                'company' =>  trans('reg-profile.work_experience_company'),
+                'from' =>  trans('reg-profile.work_experience_from'),
+                'until' =>  trans('reg-profile.work_experience_until'),
+                'position' =>  trans('reg-profile.work_experience_position'),
             ),
         );
         $filter = $relatedNames[$related];
