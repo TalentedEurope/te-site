@@ -71,12 +71,14 @@ class ValidationController extends Controller
                     $student->validation_comment = $v->valid()['comment'];
                 }
                 $student->save();
-                foreach ($v->valid()['personalSkills'] as $skillID) {
-                    $skill = PersonalSkill::find($skillID);
-                    $skillExists = $student->personalSkills()->wherePivot('validator', true)->where('id', $skillID)->first();
+                if (isset($v->valid()['personalSkills'])) {
+                    foreach ($v->valid()['personalSkills'] as $skillID) {
+                        $skill = PersonalSkill::find($skillID);
+                        $skillExists = $student->personalSkills()->wherePivot('validator', true)->where('id', $skillID)->first();
 
-                    if ($skill && !$skillExists) {
-                        $student->personalSkills()->attach($skill, ['validator' => true]);
+                        if ($skill && !$skillExists) {
+                            $student->personalSkills()->attach($skill, ['validator' => true]);
+                        }
                     }
                 }
             } else {
