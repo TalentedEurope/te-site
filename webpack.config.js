@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
     resolve: {
@@ -16,6 +17,9 @@ module.exports = {
         path: '/public/js',
         filename: '[name]-build.js'
     },
+    plugins: [
+        new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /es|fr|it|de|sk/)
+    ],
     module: {
         loaders: [
             {

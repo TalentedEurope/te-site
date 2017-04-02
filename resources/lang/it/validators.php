@@ -101,4 +101,6 @@ return [
     
         'cannot_find_invitation_to_delete' => 'Cannot find invitation to delete, please try again later',
     
+        'comment' => 'Comment',
+    
 ];

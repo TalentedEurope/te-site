@@ -11,6 +11,12 @@
           </div>
         @endif
 
+    @if (app('request')->input('see_more'))
+      <div class="alert alert-warning col-sm-6 col-sm-offset-3  col-md-4 col-md-offset-4" role="alert">
+        {!! trans('reg-profile.to_see_more_details') !!}.
+      </div>
+    @endif
+
     <div class="well auth-box col-sm-6 col-sm-offset-3  col-md-4 col-md-offset-4">
       <form class="form-horizontal" role="form" method="POST"
       @if (isset($request))

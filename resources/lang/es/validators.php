@@ -87,18 +87,20 @@ return [
     
         'removing' => 'Eliminando',
     
-        'validation_was_removed' => 'The validation was removed because you indicated that %s wasn\'t a student from this institution',
+        'validation_was_removed' => 'La validación fué eliminada debido a que indicaste que %s no era estudiante de tu institución',
     
-        'validation_complete' => '%s validation complete',
+        'validation_complete' => '%s validación completada',
     
-        'cannot_invite' => 'Cannot invite, either this email is registered to another type of user or he already has an invitation pending from this institution',
+        'cannot_invite' => 'No se puede invitar debido a que este email fue registrado para otro tipo de usuario o bien porque dicho usuario está pendiente de su institución',
     
-        'send_invitation_to' => 'Sent invitation to %s',
+        'send_invitation_to' => 'Enviar la invitación a %s',
     
-        'cannot_find_user' => 'Cannot find user',
+        'cannot_find_user' => 'No se puede encontrar al usuario',
     
-        'deleted_invitation_successfully' => 'Deleted invitation successfully',
+        'deleted_invitation_successfully' => 'Invitación eliminada satisfactoriamente',
     
-        'cannot_find_invitation_to_delete' => 'Cannot find invitation to delete, please try again later',
+        'cannot_find_invitation_to_delete' => 'No se puede encontrar la invitación a eliminar, por favor inténtalo de nuevo más tarde',
+    
+        'comment' => 'Comentario',
     
 ];

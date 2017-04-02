@@ -22,10 +22,10 @@
                         <td>{{validator.department}}</td>
                         <td>{{validator.position}}</td>
                         <td>
-                            <button v-if="!validator.active" class="btn btn-primary" v-on:click="toggleValidatorStatus(validator)">
+                            <button v-if="validator.active" class="btn btn-primary" v-on:click="toggleValidatorStatus(validator)">
                                 <i class="fa fa-toggle-on" aria-hidden="true"></i> {{ $t('validators.enable') }}
                             </button>
-                            <button v-if="validator.active" class="btn btn-warning" v-on:click="toggleValidatorStatus(validator)">
+                            <button v-if="!validator.active" class="btn btn-warning" v-on:click="toggleValidatorStatus(validator)">
                                 <i class="fa fa-toggle-off" aria-hidden="true"></i> {{ $t('validators.disable') }}
                             </button>
                         </td>

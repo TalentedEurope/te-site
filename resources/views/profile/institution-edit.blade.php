@@ -80,7 +80,7 @@
               <file-form code="certificate" label="{!! trans('reg-profile.institution_certificate') !!}" download-text="{!! trans('reg-profile.student_download_certificate') !!}" has-file="{{ $institution->certificate }}"
                   file-url="{{ URL::to('/profile/certificate/' . $user->id . '/institution') }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></file-form>
 
-              <p class="help-block"><a target="_blank" href="{{ asset('docs/certificate_template.pdf') }} ">{!! trans('reg-profile.institution_certificate_template_download') !!}. </a></p>
+              <p class="help-block"><a target="_blank" href="{{ URL::asset('docs/'.App::getLocale().'/ProofOfAuthenticityForEducationInstitute.docx') }}">{!! trans('reg-profile.institution_certificate_template_download') !!}</a></p>
 
               <hr>
               <h4>{!! trans('reg-profile.address') !!}</h4>
