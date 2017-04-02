@@ -72,6 +72,15 @@ class ProfileController extends Controller
         return $this->showProfile($user, $public);
     }
 
+    public function quit(Request $request)
+    {
+        $user = Auth::user();
+        Auth::logout();
+        $user->delete();
+        $request->session()->flash('success_message', trans('reg-profile.leave'));
+        return redirect('login');
+    }
+
     public function getEdit(Request $request)
     {
         $user = Auth::user();
