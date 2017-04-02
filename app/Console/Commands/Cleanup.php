@@ -5,6 +5,11 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Models\ValidationRequest;
 use App\Models\ValidatorInvite;
+use App\Models\Company;
+use App\Models\Validator;
+use App\Models\Alert;
+use App\Notifications\NewAlerts;
+use App\Notifications\ValidationsPending;
 
 class Cleanup extends Command
 {
@@ -20,7 +25,7 @@ class Cleanup extends Command
      *
      * @var string
      */
-    protected $description = 'Does the cleanup for Talented Europe entities';
+    protected $description = 'Does the cleanup and other daily tasks for Talented Europe entities';
 
     /**
      * Create a new command instance.
@@ -41,5 +46,15 @@ class Cleanup extends Command
     {
         ValidationRequest::cleanup();
         ValidatorInvite::cleanup();
+        $validators = Validator::whereHas('user', function ($query) {
+            $query->where('notify_me', true);
+        })->whereHas('validationRequest')->get();
+        $alerts = Alert::get();
+        foreach ($validators as $val) {
+            $val->user->notify(new ValidationsPending($val->user));
+        }
+        foreach ($alerts as $al) {
+            $al->target->notify(new NewAlerts($al->target));
+        }
     }
 }
