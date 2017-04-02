@@ -25,6 +25,15 @@ class Validator extends Model
         }
     }
 
+    public static function niceNames()
+    {
+        $niceNames = array(
+            'department' => 'Department',
+            'position' => 'Position',
+        );
+        return $niceNames;
+    }
+
     public function institution()
     {
         return $this->belongsTo('App\Models\Institution');

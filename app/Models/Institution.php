@@ -29,6 +29,19 @@ class Institution extends Model
         }
     }
 
+    public static function niceNames()
+    {
+        $niceNames = array(
+            'overseer' => 'Person in charge',
+            'type' => 'type',
+            'pic' => 'PIC',
+            'fiscal_id' => 'Fiscal ID',
+            'certificate' => 'Certificate'
+        );
+        return $niceNames;
+    }
+
+
     public static $certificatePath = '/uploads/certificate/';
 
     public static $types = ['HEI_VET','HEI_HIS','UFA'];

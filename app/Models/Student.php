@@ -61,6 +61,84 @@ class Student extends Model
         }
     }
 
+    public static function niceNames()
+    {
+        $niceNames = array(
+
+            'nationality' => 'Nationality',
+            'birthdate' => 'Birthday',
+            'curriculum' => 'Curriculum',
+            'renewed_at' => 'Renewed At',
+            'talent' => 'Talent',
+            'studies' => 'Studies',
+            'languages' => 'Languages',
+            'personalSkills' => 'Personal Skills',
+            'professionalSkills' => 'Professional Skills',
+            'studies.*.institution_name' => 'Institution Name',
+            'studies.*.name' => 'Studies name',
+            'studies.*.level' => 'Studies level',
+            'studies.*.field' => 'Studies Field',
+            'studies.*.certificate' => 'Studies certificate',
+            'studies.*.gradecard' => 'Studies gradecard',
+            'trainings.*.name' => 'Training name',
+            'trainings.*.date' => 'Training date',
+            'trainings.*.certificate' => 'Training certificate',
+            'languages.*.name' =>  'Language name',
+            'languages.*.level' =>  'Language level',
+            'languages.*.certificate' => 'Language certificate',
+            'professionalSkills.*.name' =>  'Professional Skills name',
+            'experiences.*.company' =>  'Work experience company',
+            'experiences.*.from' =>  'Work experience from',
+            'experiences.*.until' =>  'Work experience until',
+            'experiences.*.position' =>  'Work experience position',
+        );
+        return $niceNames;
+    }
+
+    public static function relatedNiceNames($related, $keyOnly = false)
+    {
+        $relatedNames = array(
+            'studies' => array(
+                'institution_name' => 'Institution name',
+                'name' => 'Studies Name',
+                'level' => 'Studies Level',
+                'field' => 'Studies Field',
+                'certificate' => 'Studies Certificate',
+                'gradecard' => 'Studies Gradecard'
+            ),
+
+            'trainings' => array (
+                'name' => 'Training name',
+                'date' => 'Training date',
+                'certificate' => 'Training certificate',
+            ),
+
+            'languages' => array (
+                'name' =>  'Language Name',
+                'level' =>  'Language Level',
+                'certificate' => 'Language Certificate',
+            ),
+
+            'professionalSkills' => array (
+                'name' =>  'Professional Skills Name',
+            ),
+
+            'experiences' => array (
+                'company' =>  'Work experience company',
+                'from' =>  'Work experience from',
+                'until' =>  'Work experience to',
+                'position' =>  'Work experience position',
+            ),
+        );
+        $filter = $relatedNames[$related];
+        if ($keyOnly) {
+            return array($keyOnly => $filter[$keyOnly]);
+        } else {
+            return $filter;
+        }
+    }
+
+
 
     public static function rulesRelated($related, $keyOnly = false)
     {
