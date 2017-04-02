@@ -58,14 +58,6 @@ class LoginController extends Controller
         Validator::extend('verified', function ($attribute, $value, $parameters, $validator) {
             $user = User::where('email', $value)->first();
             if ($user && $user->verified == 0) {
-                UserVerification::generate($user);
-                UserVerification::send(
-                    $user,
-                    'Registration confirmation at Talented Europe',
-                    env('MAIL_ADDRESS', 'noreply@talentedeurope.eu'),
-                    env('MAIL_NAME', 'Talented Europe')
-                );
-
                 return false;
             }
 
@@ -80,7 +72,7 @@ class LoginController extends Controller
      */
     protected function validateLogin(Request $request)
     {
-        $messages = array($this->username().'.verified' => 'Email has not been verified, we have sent you the verification email again. Please verify your email and try to log in again');
+        $messages = array($this->username().'.verified' => 'Account has not been verified. Please verify your email and activate your account');
 
         $this->validate($request, [
             $this->username() => 'required|verified', 'password' => 'required',

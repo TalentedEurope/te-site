@@ -81,6 +81,11 @@ class ValidatorController extends Controller
 
     public function getInstitutionValidators($id)
     {
+
+        $validators = \App\Models\Validator::where('institution_id', 1)->where('enabled', 1)->whereHas('user', function ($q) {
+            $q->where('is_filled', '=', 1);
+        })->get();
+
         $validators = \App\Models\Validator::where('institution_id', $id)->whereHas('user')->get();
         return $validators->map(
             function ($validator) {

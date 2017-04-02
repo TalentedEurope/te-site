@@ -15,6 +15,11 @@
             <strong>{{ $errors->first('email') }}</strong>
           </span>
           @endif
+          @if (session('status'))
+              <div class="alert alert-success">
+                  {{ session('status') }}
+              </div>
+          @endif
           <input id="email" name="email" class="{{ $errors->has('email') ? ' has-error' : '' }}" type="text" placeholder="{!! trans('reg-profile.email') !!}" value="{{ old('email') }}">
           <button type="submit" class="btn btn-primary">
             {!! trans('reset-password.send_password_reset') !!}
