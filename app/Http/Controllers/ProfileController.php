@@ -223,16 +223,20 @@ class ProfileController extends Controller
             unlink($fname);
             $fname .= '.jpg';
             $img = Image::make($request->file('image'));
-            if ($img->width() > $img->height()) {
-                $img->resize(User::$photoWidth, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                });
+            if (auth::user()->isA('student')) {
+                $img->fit(User::$photoHeight, User::$photoHeight)->save($fname);
             } else {
-                $img->resize(null, User::$photoHeight, function ($constraint) {
-                    $constraint->aspectRatio();
-                });
+                if ($img->width() > $img->height()) {
+                    $img->resize(User::$photoWidth, null, function ($constraint) {
+                        $constraint->aspectRatio();
+                    });
+                } else {
+                    $img->resize(null, User::$photoHeight, function ($constraint) {
+                        $constraint->aspectRatio();
+                    });
+                }
+                $img->resizeCanvas(User::$photoWidth, User::$photoHeight, "center", false, "ffffff")->save($fname);
             }
-            $img->resizeCanvas(User::$photoWidth, User::$photoHeight, "center", false, "ffffff")->save($fname);
             $user->image = basename($fname);
         }
         if ($request->has('remove-image')) {
