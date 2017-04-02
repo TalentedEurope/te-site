@@ -16,11 +16,11 @@
             <p>{{ trans('global.not_enough_data_to_show_profile') }}</p>
 
             <p>{!! trans('reg-profile.complete_the_registration') !!}:</p>
-            @if ($profileErrors->all())
+            @if ($profileErrors)
               <div class="alert alert-warning">
               <ul>
-              @foreach ($profileErrors->all() as $error)
-                <li>{{ $error }}</li>
+              @foreach ($profileErrors as $error)
+                <li>{{ $error[0] }}</li>
               @endforeach
               </ul>
               </div>

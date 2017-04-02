@@ -54,7 +54,13 @@ class ProfileController extends Controller
                 $filledVal->setAttributeNames(Company::niceNames());
                 $errors->errors()->merge($filledVal);
             }
-            $data['profileErrors'] = $errors->errors();
+
+            $data['profileErrors'] = array();
+            foreach ($errors->errors()->messages() as $error) {
+                if (!in_array($error, $data['profileErrors'])) {
+                    $data['profileErrors'][] = $error;
+                }
+            }
             return view('profile.empty', $data);
         }
         return $this->showProfile($user);
