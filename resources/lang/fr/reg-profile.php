@@ -526,4 +526,12 @@ Sur',
     
         'work_experience_position' => 'Work experience position',
     
+        'about_me' => 'About me',
+    
+        'social_networks' => 'Social networks',
+    
+        'account_activation_successful' => 'Account activation was successful, you may log in now',
+    
+        'account_has_not_been_verified' => 'Account has not been verified. Please verify your email and activate your account',
+    
 ];

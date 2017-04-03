@@ -519,4 +519,12 @@ return [
     
         'work_experience_position' => 'puesto de trabajo',
     
+        'about_me' => 'Sobre mí',
+    
+        'social_networks' => 'Redes sociales',
+    
+        'account_activation_successful' => 'Account activation was successful, you may log in now',
+    
+        'account_has_not_been_verified' => 'Account has not been verified. Please verify your email and activate your account',
+    
 ];
