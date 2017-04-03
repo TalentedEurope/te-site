@@ -43,7 +43,7 @@ return [
     
         'legal_representative' => 'Representante legal (Persona a cargo)',
     
-        'institution_pic' => 'Foto',
+        'institution_pic' => 'PIC',
     
         'postal_code' => 'Código postal',
     
@@ -251,9 +251,9 @@ return [
     
         'notifications' => 'Notificaciones',
     
-        'notifications_enabled' => 'Enabled. You\'ll receive emails once a day if a student wants to get in contact with you',
+        'notifications_enabled' => 'Activado. Recibirá un correo electrónico una vez al día cuando un estudiante se quiere poner en contacto con usted.',
     
-        'notifications_disabled' => 'Disabled. You won\'t receive any emails, except for announcements about the service',
+        'notifications_disabled' => 'Deactivado. Usted no recibirá ningún correo electrónico, a excepción de los anuncios sobre el servicio.',
     
         'about' => 'Acerca de',
     
@@ -489,34 +489,42 @@ return [
     
         'to_see_more_details' => 'Para poder ver más detalles, debes registrarte',
     
-        'study_institution_name' => 'Study Institution name',
+        'study_institution_name' => 'Nombre de la Institución de los estudios',
     
-        'study_name' => 'Study name',
+        'study_name' => 'Nombre de los estudios',
     
-        'study_level' => 'Study level',
+        'study_level' => 'Nivel del estudio',
     
-        'study_field' => 'Study field',
+        'study_field' => 'Ámbito de estudio',
     
-        'study_certificate' => 'Study certificate',
+        'study_certificate' => 'Certificado del estudio',
     
-        'study_gradecard' => 'Study gradecard',
+        'study_gradecard' => 'Calificaciones del estudio',
     
-        'training_name' => 'Training name',
+        'training_name' => 'Nombre del curso de formación',
     
-        'training_date' => 'Training date',
+        'training_date' => 'Fecha de la formación',
     
-        'training_certificate' => 'Training certificate',
+        'training_certificate' => 'Certificado del curso de formación',
     
-        'language_certificate' => 'Language certificate',
+        'language_certificate' => 'Idioma del certificado',
     
-        'professional_skills_name' => 'Professional Skills name',
+        'professional_skills_name' => 'Nombre de la habilidad profesional',
     
-        'work_experience_company' => 'Work experience company',
+        'work_experience_company' => 'la empresa en la que trabajó',
     
-        'work_experience_from' => 'Work experience from',
+        'work_experience_from' => 'Experiencia profesional desde',
     
-        'work_experience_until' => 'Work experience until',
+        'work_experience_until' => 'Experiencia profesional hasta',
     
-        'work_experience_position' => 'Work experience position',
+        'work_experience_position' => 'puesto de trabajo',
+    
+        'about_me' => 'Sobre mí',
+    
+        'social_networks' => 'Redes sociales',
+    
+        'account_activation_successful' => 'Account activation was successful, you may log in now',
+    
+        'account_has_not_been_verified' => 'Account has not been verified. Please verify your email and activate your account',
     
 ];

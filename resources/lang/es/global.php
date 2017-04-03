@@ -139,9 +139,9 @@ return [
     
         'AI' => 'Anguilla',
     
-        'AQ' => 'Antarctica',
+        'AQ' => 'Antártida',
     
-        'AG' => 'Antigua and Barbuda',
+        'AG' => 'Antigua y Barbuda',
     
         'AR' => 'Argentina',
     
@@ -161,7 +161,7 @@ return [
     
         'BB' => 'Barbados',
     
-        'BY' => 'Belarus',
+        'BY' => 'Bielorrusia',
     
         'BZ' => 'Belize',
     
@@ -171,19 +171,19 @@ return [
     
         'BT' => 'Bhutan',
     
-        'BO' => 'Bolivia (Plurinational State of)',
+        'BO' => 'Bolivia',
     
-        'BQ' => 'Bonaire, Sint Eustatius and Saba',
+        'BQ' => 'Bonaire, Sint Eustatius y Saba',
     
-        'BA' => 'Bosnia and Herzegovina',
+        'BA' => 'Bosnia y Herzegovina',
     
         'BW' => 'Botswana',
     
-        'BV' => 'Bouvet Island',
+        'BV' => 'Isla de Bouvet',
     
         'BR' => 'Brazil',
     
-        'IO' => 'British Indian Ocean Territory',
+        'IO' => 'Territorio británico del océano Índico',
     
         'BN' => 'Brunei Darussalam',
     
@@ -193,15 +193,15 @@ return [
     
         'CV' => 'Cabo Verde',
     
-        'KH' => 'Cambodia',
+        'KH' => 'Camboya',
     
-        'CM' => 'Cameroon',
+        'CM' => 'Camerún',
     
         'CA' => 'Canada',
     
-        'KY' => 'Cayman Islands',
+        'KY' => 'Islas Cayman',
     
-        'CF' => 'Central African Republic',
+        'CF' => 'Rep. de África Central',
     
         'TD' => 'Chad',
     
@@ -209,9 +209,9 @@ return [
     
         'CN' => 'China',
     
-        'CX' => 'Christmas Island',
+        'CX' => 'Islas Christmas',
     
-        'CC' => 'Cocos (Keeling) Islands',
+        'CC' => 'Islas Cocos (Keeling)',
     
         'CO' => 'Colombia',
     
@@ -219,13 +219,13 @@ return [
     
         'CG' => 'Congo',
     
-        'CD' => 'Congo (Democratic Republic of the)',
+        'CD' => 'Rep. Democrática del Congo',
     
         'CK' => 'Cook Islands',
     
         'CR' => 'Costa Rica',
     
-        'CI' => 'Côte d\'Ivoire',
+        'CI' => 'Costa de Marfil',
     
         'CU' => 'Cuba',
     
@@ -235,31 +235,31 @@ return [
     
         'DM' => 'Dominica',
     
-        'DO' => 'Dominican Republic',
+        'DO' => 'Rep. Dominicana',
     
         'EC' => 'Ecuador',
     
-        'EG' => 'Egypt',
+        'EG' => 'Egipto',
     
         'SV' => 'El Salvador',
     
-        'GQ' => 'Equatorial Guinea',
+        'GQ' => 'Guinea Ecuatorial',
     
         'ER' => 'Eritrea',
     
-        'ET' => 'Ethiopia',
+        'ET' => 'Etiopia',
     
-        'FK' => 'Falkland Islands (Malvinas)',
+        'FK' => 'Islas Malvinas',
     
-        'FO' => 'Faroe Islands',
+        'FO' => 'Islas Faroe',
     
         'FJ' => 'Fiji',
     
-        'GF' => 'French Guiana',
+        'GF' => 'Guiana Francesa',
     
-        'PF' => 'French Polynesia',
+        'PF' => 'Polynesia Francesa',
     
-        'TF' => 'French Southern Territories',
+        'TF' => 'Territorios Franceses del Sur',
     
         'GA' => 'Gabon',
     
@@ -275,7 +275,7 @@ return [
     
         'GD' => 'Grenada',
     
-        'GP' => 'Guadeloupe',
+        'GP' => 'Guadalupe',
     
         'GU' => 'Guam',
     
@@ -291,7 +291,7 @@ return [
     
         'HT' => 'Haiti',
     
-        'HM' => 'Heard Island and McDonald Islands',
+        'HM' => 'Isla de Heard e Islas McDonald',
     
         'VA' => 'Holy See',
     
@@ -299,23 +299,23 @@ return [
     
         'HK' => 'Hong Kong',
     
-        'IS' => 'Iceland',
+        'IS' => 'Islandia',
     
         'IN' => 'India',
     
         'ID' => 'Indonesia',
     
-        'IR' => 'Iran (Islamic Republic of)',
+        'IR' => 'Rep. Islámica de Iran',
     
         'IQ' => 'Iraq',
     
-        'IM' => 'Isle of Man',
+        'IM' => 'Isla de Man',
     
         'IL' => 'Israel',
     
         'JM' => 'Jamaica',
     
-        'JP' => 'Japan',
+        'JP' => 'Japón',
     
         'JE' => 'Jersey',
     
@@ -327,29 +327,29 @@ return [
     
         'KI' => 'Kiribati',
     
-        'KP' => 'Korea (Democratic People\'s Republic of)',
+        'KP' => 'Rep. Popular Democrática de Korea',
     
-        'KR' => 'Korea (Republic of)',
+        'KR' => 'Rep. de Korea',
     
         'KW' => 'Kuwait',
     
         'KG' => 'Kyrgyzstan',
     
-        'LA' => 'Lao People\'s Democratic Republic',
+        'LA' => 'Rep. Popular Democrática de Lao',
     
-        'LB' => 'Lebanon',
+        'LB' => 'Líbano',
     
         'LS' => 'Lesotho',
     
         'LR' => 'Liberia',
     
-        'LY' => 'Libya',
+        'LY' => 'Libia',
     
         'LI' => 'Liechtenstein',
     
         'MO' => 'Macao',
     
-        'MK' => 'Macedonia (the former Yugoslav Republic of)',
+        'MK' => 'Macedonia (formada Rep. de Yugoslavia)',
     
         'MG' => 'Madagascar',
     
@@ -357,13 +357,13 @@ return [
     
         'MY' => 'Malaysia',
     
-        'MV' => 'Maldives',
+        'MV' => 'Maldivas',
     
         'ML' => 'Mali',
     
-        'MH' => 'Marshall Islands',
+        'MH' => 'Islas Marshall',
     
-        'MQ' => 'Martinique',
+        'MQ' => 'Martinica',
     
         'MR' => 'Mauritania',
     
@@ -373,11 +373,11 @@ return [
     
         'MX' => 'Mexico',
     
-        'FM' => 'Micronesia (Federated States of)',
+        'FM' => 'Micronesia (Estados federados)',
     
-        'MD' => 'Moldova (Republic of)',
+        'MD' => 'Rep. Moldova',
     
-        'MC' => 'Monaco',
+        'MC' => 'Mónaco',
     
         'MN' => 'Mongolia',
     
@@ -385,7 +385,7 @@ return [
     
         'MS' => 'Montserrat',
     
-        'MA' => 'Morocco',
+        'MA' => 'Marruecos',
     
         'MZ' => 'Mozambique',
     
@@ -397,9 +397,9 @@ return [
     
         'NP' => 'Nepal',
     
-        'NC' => 'New Caledonia',
+        'NC' => 'Nueva Caledonia',
     
-        'NZ' => 'New Zealand',
+        'NZ' => 'Nueva Zelanda',
     
         'NI' => 'Nicaragua',
     
@@ -409,11 +409,11 @@ return [
     
         'NU' => 'Niue',
     
-        'NF' => 'Norfolk Island',
+        'NF' => 'Isla Norfolk',
     
-        'MP' => 'Northern Mariana Islands',
+        'MP' => 'Islas Northern Mariana',
     
-        'NO' => 'Norway',
+        'NO' => 'Noruega',
     
         'OM' => 'Oman',
     
@@ -421,9 +421,9 @@ return [
     
         'PW' => 'Palau',
     
-        'PS' => 'Palestine, State of',
+        'PS' => 'Estado de Palestina',
     
-        'PA' => 'Panama',
+        'PA' => 'Panamá',
     
         'PG' => 'Papua New Guinea',
     
@@ -431,7 +431,7 @@ return [
     
         'PE' => 'Peru',
     
-        'PH' => 'Philippines',
+        'PH' => 'Filipinas',
     
         'PN' => 'Pitcairn',
     
@@ -441,29 +441,29 @@ return [
     
         'RE' => 'Réunion',
     
-        'RU' => 'Russian Federation',
+        'RU' => 'Federación Rusa',
     
-        'RW' => 'Rwanda',
+        'RW' => 'Ruanda',
     
         'BL' => 'Saint Barthélemy',
     
-        'SH' => 'Saint Helena, Ascension and Tristan da Cunha',
+        'SH' => 'Saint Helena, Ascension y Tristan da Cunha',
     
-        'KN' => 'Saint Kitts and Nevis',
+        'KN' => 'Saint Kitts y Nevis',
     
-        'LC' => 'Saint Lucia',
+        'LC' => 'Santa Lucia',
     
-        'MF' => 'Saint Martin (French part)',
+        'MF' => 'Sant Martin (parte francesa)',
     
-        'PM' => 'Saint Pierre and Miquelon',
+        'PM' => 'Saint Pierre y Miquelon',
     
-        'VC' => 'Saint Vincent and the Grenadines',
+        'VC' => 'Saint Vincent y las Grenadines',
     
         'WS' => 'Samoa',
     
         'SM' => 'San Marino',
     
-        'ST' => 'Sao Tome and Principe',
+        'ST' => 'Sao Tome y Principe',
     
         'SA' => 'Saudi Arabia',
     
@@ -485,9 +485,9 @@ return [
     
         'ZA' => 'South Africa',
     
-        'GS' => 'South Georgia and the South Sandwich Islands',
+        'GS' => 'South Georgia y las islas de South Sandwich',
     
-        'SS' => 'South Sudan',
+        'SS' => 'Sudan del sur',
     
         'LK' => 'Sri Lanka',
     
@@ -495,7 +495,7 @@ return [
     
         'SR' => 'Suriname',
     
-        'SJ' => 'Svalbard and Jan Mayen',
+        'SJ' => 'Svalbard y Jan Mayen',
     
         'SZ' => 'Swaziland',
     
@@ -503,11 +503,11 @@ return [
     
         'SY' => 'Syrian Arab Republic',
     
-        'TW' => 'Taiwan, Province of China',
+        'TW' => 'Taiwan, provincia de China',
     
         'TJ' => 'Tajikistan',
     
-        'TZ' => 'Tanzania, United Republic of',
+        'TZ' => 'Tanzania, Rep unida de',
     
         'TH' => 'Thailand',
     
@@ -519,25 +519,25 @@ return [
     
         'TO' => 'Tonga',
     
-        'TT' => 'Trinidad and Tobago',
+        'TT' => 'Trinidad y Tobago',
     
-        'TN' => 'Tunisia',
+        'TN' => 'Túnez',
     
-        'TR' => 'Turkey',
+        'TR' => 'Turquía',
     
         'TM' => 'Turkmenistan',
     
-        'TC' => 'Turks and Caicos Islands',
+        'TC' => 'Turks e Islas Caicos',
     
         'TV' => 'Tuvalu',
     
         'UG' => 'Uganda',
     
-        'UA' => 'Ukraine',
+        'UA' => 'Ucrania',
     
-        'AE' => 'United Arab Emirates',
+        'AE' => 'Emiratos Árabes Unidos',
     
-        'US' => 'United States of America',
+        'US' => 'Estados Unidos de América',
     
         'UM' => 'United States Minor Outlying Islands',
     
@@ -547,22 +547,22 @@ return [
     
         'VU' => 'Vanuatu',
     
-        'VE' => 'Venezuela (Bolivarian Republic of)',
+        'VE' => 'Venezuela (Rep. Bolivariana de)',
     
         'VN' => 'Viet Nam',
     
-        'VG' => 'Virgin Islands (British)',
+        'VG' => 'Islas Vírgenes (Británicas)',
     
-        'VI' => 'Virgin Islands (U.S.)',
+        'VI' => 'Islas Vírgenes (USA)',
     
-        'WF' => 'Wallis and Futuna',
+        'WF' => 'Wallis y Futuna',
     
-        'EH' => 'Western Sahara',
+        'EH' => 'República Árabe Saharaui Democrática',
     
         'YE' => 'Yemen',
     
         'ZM' => 'Zambia',
     
-        'ZW' => 'Zimbabwe',
+        'ZW' => 'Zimbawe',
     
 ];

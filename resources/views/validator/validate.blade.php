@@ -23,7 +23,7 @@
     </div>
   </div>
 </div>
-@include('profile.student-profile')
+@include('profile.student-profile', ['validating' => true])
 @if ($student->valid != 'pending')
 <a id="validate"></a>
 <div class="container v-container">

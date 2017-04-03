@@ -3,89 +3,89 @@
 
 return [
     
-        'my_students' => 'My students',
+        'my_students' => 'Meine Studenten',
     
-        'enable' => 'Enable',
+        'enable' => 'erlaube',
     
-        'disable' => 'Disable',
+        'disable' => 'verweigere/lösche',
     
-        'add_new' => 'Add a new referee',
+        'add_new' => 'Neuen Gutacher hinzufügen',
     
-        'send_invitation' => 'Send invitation to referee',
+        'send_invitation' => 'Lade Begutachter ein',
     
-        'validating' => 'Refereeing',
+        'validating' => 'Wird validiert',
     
-        'student_already_validated' => 'You\'ve already validated this student',
+        'student_already_validated' => 'Dieser Student wurde bereits validiert',
     
-        'jump_to_results' => 'Jump to results',
+        'jump_to_results' => 'Zum Ergebnissen',
     
-        'you_are_validating_following_student' => 'You\'re validating the following student',
+        'you_are_validating_following_student' => 'Sie bewerten den nächsten Studenten',
     
-        'jump_to_validation' => 'Jump to validation',
+        'jump_to_validation' => 'Zur Bewertung',
     
-        'student_validation' => 'Student validation',
+        'student_validation' => 'Bewertung des Studenten',
     
-        'valid' => 'Valid',
+        'valid' => 'berwertet',
     
-        'student_passed_validation_successfully' => 'The student passed your validation successfully',
+        'student_passed_validation_successfully' => 'Student wurde erfolgreich bewertet',
     
-        'your_comments' => 'Your comments',
+        'your_comments' => 'Ihr Kommentar',
     
-        'your_chosen_skills' => 'Your chosen skills',
+        'your_chosen_skills' => 'Ihre ausgewählte Fähigkeiten',
     
-        'invalid' => 'Invalid',
+        'invalid' => 'Nicht gültig',
     
-        'student_didnt_meet_criteria' => 'The student didn\'t meet the criteria',
+        'student_didnt_meet_criteria' => 'Student erfüllt die Kriterien nicht',
     
-        'make_sure_you_have_reviewed_student' => 'Please make sure you have reviewed the student profile carefully before validating it',
+        'make_sure_you_have_reviewed_student' => 'Vergewissern Sie sich, dass Sie das Profil vor dem Senden gründlich ausgefüllt haben.',
     
-        'this_student_is' => 'This student is',
+        'this_student_is' => 'Dieser Student ist...',
     
-        'finish_validation' => 'Finish_validation',
+        'finish_validation' => 'Die Bewertung beenden.',
     
-        'give_us_explanation_of_student_is_not_valid' => 'Please give us an explanation of the reason the student is not valid.',
+        'give_us_explanation_of_student_is_not_valid' => 'Bitte erläutern SIe, warum das Profil des Studenten ungültig ist.',
     
-        'note_if_validation_is_passed_as_no_student' => 'Note: If the validation is passed as "No student" the student will be able to validate his profile again.',
+        'note_if_validation_is_passed_as_no_student' => 'Wenn die Bewertung als "kein Student" endet, kann das Profil des Studenten nochmals bewertet werden.',
     
-        'user_hasnt_complete_filling_its_profile' => 'hasn\'t complete filling it\'s profile. Until this process is complete you cannot validate any student',
+        'user_hasnt_complete_filling_its_profile' => 'Das Profil nicht beendet. Wenn das Profil nicht komplet ist, kann man keinen Studenten bewerten.',
     
-        'manage_validators' => 'Manage referees',
+        'manage_validators' => 'Bericht des Begutachters.',
     
-        'validators' => 'Referees',
+        'validators' => 'Begutachter',
     
-        'invites_pending' => 'Invites pending',
+        'invites_pending' => 'Wartende Einladungen',
     
-        'date_sent' => 'Date sent',
+        'date_sent' => 'Gesendete Angaben',
     
-        'note_invites_are_only_valid_14_days' => 'Note: invites are only valid 14 days after being sent, and they will disapear from this list afterwards',
+        'note_invites_are_only_valid_14_days' => 'Die Einladungen sind 14 Tage nach dem Absenden gültig, dann werden Sie von der Liste gelöscht.',
     
-        'cancel' => 'Cancel',
+        'cancel' => 'Löschen',
     
-        'cannot_change_institution' => 'Cannot change institution',
+        'cannot_change_institution' => 'Änderung der Institution ist unmöglich',
     
-        'invitation_is_not_valid_or_you_accepted_it' => 'Either your invitation is not valid anymore, or you already accepted it',
+        'invitation_is_not_valid_or_you_accepted_it' => 'Ihre Einladung ist ungültig oder bereits akzeptiert',
     
-        'changed_institution_successfully' => 'Changed Institution successfully',
+        'changed_institution_successfully' => 'Institution erfolgreich geändert.',
     
-        'youll_receive_notifications_from' => 'From now on you\'ll receive validation notifications from',
+        'youll_receive_notifications_from' => 'Seit jetzt bekommen Sie Benachritigungen von...',
     
-        'cannot_complete_invitation' => 'Cannot complete invitation',
+        'cannot_complete_invitation' => 'Die Einladung kann nicht beendet werden',
     
-        'no_alerts_found' => 'No alerts found',
+        'no_alerts_found' => 'Wir haben keine Benachrichtingungen gefunden.',
     
-        'study_level' => 'Study level',
+        'study_level' => 'Niveau des Studiums',
     
-        'when_it_was_sent' => 'When it was sent?',
+        'when_it_was_sent' => 'Wann wurde esgesendet?',
     
-        'no_referees' => 'No referees',
+        'no_referees' => 'Keine Begutacher',
     
-        'remove_referee' => 'Remove referee',
+        'remove_referee' => 'Begutachter entfernen',
     
-        'do_you_want_to_remove_referee' => 'Do you want to remove %s from your institution?',
+        'do_you_want_to_remove_referee' => 'Möchten SIe aus Ihrer Institution entfernen?',
     
-        'remove' => 'Remove',
+        'remove' => 'Löschen',
     
-        'removing' => 'Removing',
+        'removing' => 'Wird gelöscht',
     
         'validation_was_removed' => 'The validation was removed because you indicated that %s wasn\'t a student from this institution',
     

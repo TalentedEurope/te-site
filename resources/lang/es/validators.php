@@ -63,7 +63,7 @@ return [
     
         'cannot_change_institution' => 'No se puede cambiar la institución',
     
-        'invitation_is_not_valid_or_you_accepted_it' => 'Either your invitation is not valid anymore, or you already accepted it',
+        'invitation_is_not_valid_or_you_accepted_it' => 'Tu invitación no es válida o ya se había aceptado.',
     
         'changed_institution_successfully' => 'La institución se ha cambiado satisfactoriamente',
     
