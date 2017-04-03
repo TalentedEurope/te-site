@@ -56,7 +56,7 @@
                 <label><input @if ($user->visible != true) checked @endif type="radio" name="visible" value="0">{!! trans('reg-profile.profile_visibility_hidden') !!}</label>
               </div>
               <hr class="separator">
-              <h4>About me</h4>
+              <h4>{!! trans('reg-profile.about_me') !!}</h4>
 
               <text-box-form code="name" label="{!! trans('reg-profile.name') !!}" placeholder="{!! trans('reg-profile.name') !!}" value="{{ old('name', $user->name) }}"
                   required errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
@@ -89,7 +89,7 @@
 
               <hr class="separator">
 
-              <h4>Social networks</h4>
+              <h4>{!! trans('reg-profile.social_networks') !!}</h4>
               <text-box-form code="facebook" label="{!! trans('reg-profile.facebook_page_url') !!}" placeholder="{!! trans('reg-profile.facebook_page_url') !!}"
                   value="{{ old('facebook', $user->facebook) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
