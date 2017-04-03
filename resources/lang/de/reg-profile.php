@@ -43,7 +43,7 @@ return [
     
         'legal_representative' => 'Erziehungsberechtigte',
     
-        'institution_pic' => 'Bild',
+        'institution_pic' => 'PIC',
     
         'postal_code' => 'PLZ',
     
@@ -131,9 +131,9 @@ return [
     
         'terms_of_use' => 'Ich bin mit den Bedingungen einverstanden',
     
-        'i_agree_with' => 'I agree with',
+        'i_agree_with' => 'Bin eiverstanden',
     
-        'the_terms_of_use' => 'the terms of use',
+        'the_terms_of_use' => 'Nützungsbedingungen',
     
         'create_account' => 'Ein Konto erstellen',
     
@@ -253,7 +253,7 @@ return [
     
         'notifications_enabled' => 'Erlaubt. Sie bekommen jeden Tag eine E-Mail, falls ein Student mit Ihnen in Kontakt tretten will.',
     
-        'notifications_disabled' => 'Disabled. You won\'t receive any emails, except for announcements about the service',
+        'notifications_disabled' => 'Nicht erlaubt. Sie werden keine E-Mails bekommen. Außer  der Benachrichtigungen über die Service-Dienste.',
     
         'about' => 'Inhalt',
     
@@ -269,217 +269,217 @@ return [
     
         'web_url' => 'Webseite url',
     
-        'what_is_talent_for_you_in_a_few_words' => 'Explain us what is talent for you in a few words',
+        'what_is_talent_for_you_in_a_few_words' => 'Erläutern Sie kurz, was für Sie Talent bedeutet.',
     
-        'most_valuable_skills_for_company' => 'A list of the most valuable skills for the company',
+        'most_valuable_skills_for_company' => 'Liste der Fähigkeiten, die für Sie als Unternehmen wichtig sind.',
     
-        'setup_alternative_contact' => 'Setup an alternative contact user that will receive all the notifications instead of the main account',
+        'setup_alternative_contact' => 'Geben Sie einen alternativen Konatakt des Users an, der alle Benachrichtungen bekommt.',
     
-        'update_settings' => 'Update settings',
+        'update_settings' => 'Update der Eisntellungen.',
     
-        'change_your_password' => 'Change your password',
+        'change_your_password' => 'Password ändern',
     
-        'new_password' => 'New password',
+        'new_password' => 'Neuese Password',
     
-        'repeat_new_password' => 'Repeat new password',
+        'repeat_new_password' => 'Geben Sie das neue Password erneut an',
     
-        'save_new_password' => 'Save new password',
+        'save_new_password' => 'Das neue Password speichern',
     
-        'career_and_skills' => 'Career and Skills',
+        'career_and_skills' => 'Karriere und Fähigkeiten',
     
-        'my_photo' => 'My Photo',
+        'my_photo' => 'Mein Foto',
     
-        'download_curriculum' => 'Download curriculum',
+        'download_curriculum' => 'Konzept herunterladen',
     
-        'my_talent' => 'My talent',
+        'my_talent' => 'Mein Talent',
     
-        'referee_name' => 'Referee name',
+        'referee_name' => 'Name des Begutachters',
     
-        'referee_email' => 'Referee email',
+        'referee_email' => 'E-Mail des Begutachters',
     
-        'get_your_profile_refereed' => 'Get your profile refereed',
+        'get_your_profile_refereed' => 'Dein Profil begutachten',
     
-        'want_to_view_all_details_of_student' => 'Do you want to view all the details of this student?',
+        'want_to_view_all_details_of_student' => 'Möchten Sie  detailierte Infos über den Studenten sehen?',
     
-        'education' => 'Education',
+        'education' => 'Bildung',
     
-        'lives_in' => 'Lives in',
+        'lives_in' => 'Wohnort',
     
-        'born_on' => 'Born on',
+        'born_on' => 'Geboren',
     
-        'studied_in' => 'Studied in',
+        'studied_in' => 'Studium',
     
-        'skilled_in' => 'Skilled in',
+        'skilled_in' => 'Fähigkeiten im Bereich',
     
-        'refereed_by' => 'Refereed by',
+        'refereed_by' => 'Bewertet von',
     
-        'refereeing_pending' => 'Refereeing pending',
+        'refereeing_pending' => 'Bewertung wird verarbeitet',
     
-        'skills' => 'Skills',
+        'skills' => 'Fähigkeiten ',
     
-        'professional' => 'Professional',
+        'professional' => 'Professionell',
     
-        'personal' => 'Personal',
+        'personal' => 'Persönlich',
     
-        'legend' => 'Legend',
+        'legend' => 'Legende',
     
-        'set_by_both_parties' => 'Set by both parties',
+        'set_by_both_parties' => 'Von beiden Seiten angeführt',
     
-        'set_by_referee_or_student' => 'Set by either the referee or the student',
+        'set_by_referee_or_student' => 'Von Begutachter oder Studenten angeführt',
     
-        'study' => 'Study|Studies',
+        'study' => 'Studium',
     
-        'date_not_specified' => 'Date not specified',
+        'date_not_specified' => 'Datum nicht angegeben',
     
-        'get_in_contact' => 'Get in contact',
+        'get_in_contact' => 'Kontak aufnehmen',
     
-        'want_to_show_this_company_how_talented_you_are' => 'Do you want to show this company how talented you are?',
+        'want_to_show_this_company_how_talented_you_are' => 'Möchten Sie diesem Unternehmen zeigen, wie talentiert Sie sind?',
     
-        'we_are_in' => 'We are in',
+        'we_are_in' => 'Wir sind in',
     
-        'we_are_looking_for_people_skilled_in' => 'We\'re looking for people skilled in',
+        'we_are_looking_for_people_skilled_in' => 'Wir suchen Menschen mit Fähigkeiten in ...',
     
-        'we_think_that_talent_is' => 'We think that talent is',
+        'we_think_that_talent_is' => 'Ich denke, dass Talent ist...',
     
-        'not_enough_information' => 'Not enough information',
+        'not_enough_information' => 'Ungenügende Informationen.',
     
-        'fix_the_following_errors' => 'You\'ll need to fix the following errors',
+        'fix_the_following_errors' => 'Es ist nötig den folgenden Fehler zu korrigieren.',
     
-        'click_on_button_to_fill_required_fields' => 'Please click the following button to fill the required fields.',
+        'click_on_button_to_fill_required_fields' => 'Bitte den Button anklicken, wenn Sie die Felder füllen möchten.',
     
-        'institution_fix_the_following_errors' => 'You\'ll need to fix the following errors or your referees won\'t be able to validate profiles',
+        'institution_fix_the_following_errors' => 'Es ist nötig die folgenden Fehler zu korrigieren, sonst können Ihre Begutachter Ihr Profil nicht validieren.',
     
-        'my_institution' => 'My Institution',
+        'my_institution' => 'Meine Institution',
     
-        'required' => 'Required',
+        'required' => 'Benötigt',
     
-        'remove_btn' => 'Remove',
+        'remove_btn' => 'Löschen',
     
-        'student_study_institution_name' => 'Institution name',
+        'student_study_institution_name' => 'Name der Institution',
     
-        'student_study_course_studies_name' => 'Course/Studies name',
+        'student_study_course_studies_name' => 'Name des Kurses/ Studiums',
     
-        'student_download_certificate' => 'Download Certificate',
+        'student_download_certificate' => 'Zertifikat herunterladen',
     
-        'student_download_grade_card' => 'Download Gradecard',
+        'student_download_grade_card' => 'Bewertungstabelle herunterladen',
     
-        'student_study_add_more' => 'add more studies',
+        'student_study_add_more' => 'Studium hinzufügen',
     
-        'student_training_course_name' => 'Course name',
+        'student_training_course_name' => 'Name des Kurses',
     
-        'student_training_add' => 'add a training',
+        'student_training_add' => 'Praxis / Weiterbildung hinzufügen',
     
-        'student_training_add_more' => 'add more trainings',
+        'student_training_add_more' => 'weitere Praxis / Weiterbildung hinzufügen',
     
-        'student_language' => 'Language',
+        'student_language' => 'Sprache',
     
-        'student_language_name' => 'Language name',
+        'student_language_name' => 'Name der Sprache',
     
-        'student_language_level' => 'Language level',
+        'student_language_level' => 'Niveau der Sprache',
     
-        'student_language_add' => 'add a language',
+        'student_language_add' => 'Sprache hinzufügen',
     
-        'student_language_add_more' => 'add more languages',
+        'student_language_add_more' => 'andere Sprachen hinzufügen',
     
-        'student_work_experience_to' => 'Work to',
+        'student_work_experience_to' => 'Arbeit von',
     
-        'student_work_experience_from' => 'Work from',
+        'student_work_experience_from' => 'Arbeit bis',
     
-        'student_work_experience_add' => 'add a work experience',
+        'student_work_experience_add' => 'Arbeitserfahrung hinzufügen',
     
-        'student_work_experience_add_more' => 'add more work experiences',
+        'student_work_experience_add_more' => 'andere Arbeitserfahrungen hinzufügen',
     
-        'add_btn' => 'Add',
+        'add_btn' => 'hinzufügen',
     
-        'student_professional_skills_remove' => 'Remove professional skill',
+        'student_professional_skills_remove' => 'Professionelle Fähigkeit löschen',
     
-        'student_professional_skills_add' => 'Add a professional skill',
+        'student_professional_skills_add' => 'Professionelle Fähigkeit hinzufügen',
     
-        'profile_readiness' => 'Profile readiness',
+        'profile_readiness' => 'Bereitschaft des Profils',
     
-        'profile_readiness_explanation' => 'Getting your profile refereed gives a third party opinion of you and helps increasing the possibilities of contact from a company',
+        'profile_readiness_explanation' => 'Die Bewertung des Profil erlaubt es der dritten Person sich über Sie eine Meinung zu bilden und Sie erhöht die Möglichkeit, dass ein Unternehmen mit Ihnen uin Kontakt kommt.',
     
-        'get_a_better_refeer' => 'Get a better refeer improving your profile readiness and improve possibility of company contact',
+        'get_a_better_refeer' => 'Bekommen Sie eine bessere Bewertung Ihres Profils, das man an Ihrer Bereitschaft sieht und der besseren Kontaktnahme seitens des Unternehmen sieht.',
     
-        'request_is_managed_by' => 'Your request is being managed by',
+        'request_is_managed_by' => 'Ihre Anforderung wird bearbeitet.',
     
-        'cant_find_your_institution' => 'Can\'t find your institution? ask your referee and institution to join Talented Europe',
+        'cant_find_your_institution' => 'Können Sie Ihre Institution nicht finden? Fragen Sie Ihren Gutachter und Institution um bei Talented Europe mitzumachen.',
     
-        'this_step_sends_an_email_to_your_referee' => 'This step sends an email to your referee with instructions on how to join Talented Europe, automatically registers him as referee once his institution joins, and adds you to the refeeral queue',
+        'this_step_sends_an_email_to_your_referee' => 'In diesem Schritt bekommt Ihr Gutachter eine E-Mail mit der Anleitung bei Talented Europe mitzumachen.Der Gutachter wird automatisch registriert, gleich nach dem seine Institution bei uns mitmacht uns Sie landen auf der Warteliste für die Bewertung. ',
     
-        'send_invitation' => 'Send invitation',
+        'send_invitation' => 'Einladung senden.',
     
-        'profile_validated_successfully' => 'Your profile was validated successfully',
+        'profile_validated_successfully' => 'Ihr Profil wurde erfolgreich validiert.',
     
-        'referee_said_about_you' => 'This is what your referee said about you',
+        'referee_said_about_you' => 'Das hat Ihr Gutachter über Sie gesagt.',
     
-        'profile_validated_denied' => 'Your profile was denied',
+        'profile_validated_denied' => 'Ihr Profil wurde verweigert.',
     
-        'not_enough_data_to_do_a_refeer' => 'We don\'t have enough data from you to be able to do a refeer.',
+        'not_enough_data_to_do_a_refeer' => 'Wir haben nicht genügend Angaben zum Erstellen einer Begutachtung.',
     
-        'progress_account_setup' => 'Account setup',
+        'progress_account_setup' => 'Kontoeinstellungen',
     
-        'progress_refer_your_profile' => 'Refer your profile',
+        'progress_refer_your_profile' => 'Profil bewerten',
     
-        'progress_not_refereed' => 'Not refereed',
+        'progress_not_refereed' => 'Nicht bewertet',
     
-        'progress_completed' => 'Completed',
+        'progress_completed' => 'Beendet',
     
-        'you_must_put_referee_email' => '<strong>Please note:</strong> You must put the referee email, not the one form the institution',
+        'you_must_put_referee_email' => 'Geben Sie die E-Mail des Begutachters.',
     
-        'leave_institution' => 'Leave institution?',
+        'leave_institution' => 'Die Insitution verlassen?',
     
-        'do_you_want_to_leave_institution' => 'Do you want to leave the institution? this will send the pending validation requests back to it, and you won\'t be able to validate anyone until another institution invites you back',
+        'do_you_want_to_leave_institution' => 'Möchten Sie die Institution verlassen? Die nicht beendeten Anträge zur Bewertung werden zurückgeschickt und Sie können niemanden bewerten, bis Sie von der Institution nicht eingeladen werden.',
     
-        'leave_institution_button' => 'Yes! Leave this academic institution',
+        'leave_institution_button' => 'Ja! Diese akademische Institutiion verlassen.',
     
-        'your_profile_is_empty' => 'Your profile is empty!',
+        'your_profile_is_empty' => 'Ihr Profil ist leer!',
     
-        'tab_changes_not_saved' => 'Tab changes haven\'t been saved, you may lose some data',
+        'tab_changes_not_saved' => 'Die Änderungen wurden nicht gespeichert, es kann zum Datenverlust kommen.',
     
-        'save_changes' => 'Save changes',
+        'save_changes' => 'Änderungen speichern',
     
-        'continue_without_saving' => 'Continue without saving',
+        'continue_without_saving' => 'Weitermachen ohne Speichern.',
     
-        'im_here' => 'I\'m here!',
+        'im_here' => 'Bin hier!',
     
-        'cannot_send_more_alerts_to_this_company_today' => 'You cannot send more alerts to this company today',
+        'cannot_send_more_alerts_to_this_company_today' => 'Heute können Sie keine Benachrichtigungen an dieses Unternehmen senden.',
     
-        'tell_the_company_that_you_be_interested' => 'Tell the company that you may be interested to work for them',
+        'tell_the_company_that_you_be_interested' => 'Sagen Sie dem Unternehmen, dass Sie Interesse haben, bei Ihnen zu arbeiten.',
     
-        'alert_sent_successfully' => 'Alert sent successfully to the company',
+        'alert_sent_successfully' => 'Die Benachrichtigung wurde erfolgreich an das Unternehmen gesendet.',
     
-        'you_have_already_sent_an_alert_to_this_company' => 'You have already sent an alert to this company',
+        'you_have_already_sent_an_alert_to_this_company' => 'Diesem Unternehmenhaben Sie bereits eine Benachrichtigung gesendet.',
     
-        'no_matches' => 'No matches',
+        'no_matches' => 'Kein Übereinstimmung',
     
-        'find_your_academic_institution' => 'Find your Academic Institution',
+        'find_your_academic_institution' => 'Finden Sie Ihre akademische Institution',
     
-        'choose_referee' => 'Choose referee',
+        'choose_referee' => 'Wählen SIe den Gutachter',
     
-        'refer_request' => 'Refer request',
+        'refer_request' => 'Antrag zur Begutachtung',
     
-        'any_referee' => 'Any referee',
+        'any_referee' => 'Jeder Begutachter',
     
-        'institution_type' => 'Institution type',
+        'institution_type' => 'Typ der Institution',
     
-        'complete_the_registration' => 'Complete the registration by adding the following information',
+        'complete_the_registration' => 'Beenden Sie die Registrierung in dem Sie folgende Informationen anführen.',
     
-        'changes_saved_successfully' => 'Changes saved successfully',
+        'changes_saved_successfully' => 'Die Änderungenwurden erfolgreich gespeichert.',
     
-        'warning_some_fields_has_errors' => 'Warning: Some fields couldn\'t be saved because there were errors, check each field to see the issues',
+        'warning_some_fields_has_errors' => 'Vorsicht: Manche Angaben wurden wegen Fehler nicht beendet. Kontrollieren Sie gründlich jede Angabe.',
     
-        'successfully_requested_validation_request' => 'Successfully requested validation request',
+        'successfully_requested_validation_request' => 'Erfolgreich versendeter Antrag zur Bewertung.',
     
-        'invitation_sent_successfully' => 'Invitation sent successfully',
+        'invitation_sent_successfully' => 'Einladung erfolgreich gesendet.',
     
-        'referee_is_part_of_institution' => 'Referee is part of %s get in contact with him to ask a institution change if required',
+        'referee_is_part_of_institution' => 'Der Gutachter ist ein Mitglied, treten Sie mit Ihn in Kontakt wegen einer möglichen Änderung der Institution.',
     
-        'referee_isnt_part_of_any_institution' => 'Referee isn\'t part of any institution. Please ask him to get invited by one',
+        'referee_isnt_part_of_any_institution' => 'Der Gutachter ist kein Mitglied einer Institution. Bitte forden Sie an, dass er sich von einer Institution einladen lässt. ',
     
-        'this_email_user_cannot_be_a_referee' => 'This email address is registered to an user that cannot be a referee',
+        'this_email_user_cannot_be_a_referee' => 'Unter dieser E-Mail Adresse ist eine Nutzer registriert, der kein Gutachter seine kann.',
     
-        'field' => 'Field',
+        'field' => 'Feld',
     
         'your_request_was_created' => 'Your request was created %s',
     

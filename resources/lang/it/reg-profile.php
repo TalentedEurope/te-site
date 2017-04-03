@@ -43,7 +43,7 @@ return [
     
         'legal_representative' => 'Rappresentante legale (responsabile)',
     
-        'institution_pic' => 'Foto',
+        'institution_pic' => 'PIC',
     
         'postal_code' => 'CAP',
     

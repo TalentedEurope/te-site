@@ -43,7 +43,7 @@ return [
     
         'legal_representative' => 'Zákonný zástupca (oprávnená osoba)',
     
-        'institution_pic' => 'foto',
+        'institution_pic' => 'PIC',
     
         'postal_code' => 'PSČ',
     

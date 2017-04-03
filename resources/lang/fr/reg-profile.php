@@ -43,7 +43,7 @@ return [
     
         'legal_representative' => 'le représentant légitime',
     
-        'institution_pic' => 'la photo',
+        'institution_pic' => 'PIC',
     
         'postal_code' => 'le code postal',
     

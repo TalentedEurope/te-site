@@ -3,26 +3,26 @@
 
 return [
     
-        'not_allowed' => 'Not allowed',
+        'not_allowed' => 'Nich erlaubt',
     
-        'not_allowed_to_do_this_action' => 'You\'re not allowed to do this action.',
+        'not_allowed_to_do_this_action' => 'Dieser vorgang ist erlaubt',
     
-        'can_try_searching_for' => 'You can try searching for',
+        'can_try_searching_for' => 'Suchen Sie...',
     
-        'page_not_found' => 'Page not found',
+        'page_not_found' => 'Seite nicht gefunden',
     
-        'we_didnt_find_the_page' => 'We didn\'t find the page you were looking for.',
+        'we_didnt_find_the_page' => 'Haben Sie die Seite, die Sie suchen, nicht gefunden.',
     
-        'internal_server_error' => 'Internal server error',
+        'internal_server_error' => 'Fehler - interner Server',
     
-        'an_error_happened' => 'An error happened, administrators have been notified and this issue will be fixed soon, please try later.',
+        'an_error_happened' => 'Es ist ein Fehler aufgetreten, die Administratoren wurde benachrichtigt. Der Fehler wird im kürzem behoben, versuchen Sie es später.',
     
-        'meanwhile_can_searching_for' => 'Meanwhile you can try searching for',
+        'meanwhile_can_searching_for' => 'Sie können das Suchen probieren...',
     
-        'be_right_back' => 'Be right back',
+        'be_right_back' => 'Wir melden uns gleich.',
     
-        'not_found' => 'Not found',
+        'not_found' => 'Nicht gefunden.',
     
-        'unauthorized_action' => 'Unauthorized action',
+        'unauthorized_action' => 'Unerlaubter Schritt',
     
 ];

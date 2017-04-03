@@ -3,12 +3,12 @@
 
 return [
     
-        'remember_me' => 'Remember Me',
+        'remember_me' => 'Merken',
     
-        'sign_in' => 'Sign in',
+        'sign_in' => 'Anmelden',
     
-        'login_title' => 'Login',
+        'login_title' => 'Benutzername',
     
-        'login_btn' => 'Login',
+        'login_btn' => 'Anmelden',
     
 ];
