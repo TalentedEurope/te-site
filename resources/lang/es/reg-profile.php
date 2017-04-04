@@ -537,4 +537,8 @@ return [
     
         'remove_account_button_cancel' => 'Cancel',
     
+        'refereed_students' => 'Refereed students',
+    
+        'no_refereed_students' => 'No refereed students',
+    
 ];

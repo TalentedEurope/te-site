@@ -7,7 +7,7 @@
       @endif
 
     <div class="col-xs-12 col-sm-8 col-md-9 sm-no-padding-left">
-      <div class="well student-name">
+      <div class="well profile-main-info">
         <h2 class="title">{{ $user->name }} {{ $user->surname }}</h2>
         @if (isset($mainStudy))
         <p class="subtitle">{{ $mainStudy['name'] }}</p>
