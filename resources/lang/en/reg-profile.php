@@ -229,7 +229,7 @@ return [
     
         'Lang_level_A2' => 'A2: Waystage or elementary',
     
-        'Lang_level_B1' => 'B1: Threshold or intermediate        ',
+        'Lang_level_B1' => '',
     
         'Lang_level_B2' => 'B2: Vantage or upper intermediate',
     
@@ -469,7 +469,7 @@ return [
     
         'warning_some_fields_has_errors' => 'Warning: Some fields couldn\'t be saved because there were errors, check each field to see the issues',
     
-        'successfully_requested_validation_request' => 'Successfully requested validation request',
+        'successfully_requested_validation_request' => 'Successfully requested refereence request',
     
         'invitation_sent_successfully' => 'Invitation sent successfully',
     
@@ -528,5 +528,13 @@ return [
         'account_has_not_been_verified' => 'Account has not been verified. Please verify your email and activate your account',
     
         'at' => 'at',
+    
+        'remove_account_button' => 'Delete account',
+    
+        'remove_account_confirm' => 'Are you really sure that you wish delete your account? It\'s going to remove all your information',
+    
+        'remove_account_button_ok' => 'Ok',
+    
+        'remove_account_button_cancel' => 'Cancel',
     
 ];

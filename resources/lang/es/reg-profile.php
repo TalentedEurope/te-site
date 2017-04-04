@@ -529,4 +529,12 @@ return [
     
         'at' => 'en',
     
+        'remove_account_button' => 'Delete account',
+    
+        'remove_account_confirm' => 'Are you really sure that you wish delete your account? It\'s going to remove all your information',
+    
+        'remove_account_button_ok' => 'Ok',
+    
+        'remove_account_button_cancel' => 'Cancel',
+    
 ];
