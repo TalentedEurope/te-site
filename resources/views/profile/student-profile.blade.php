@@ -81,15 +81,17 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-12">
-            <h5>{!! trans('reg-profile.legend') !!}</h5>
-            <ul class="legend">
-              <li><span class="important"> </span> {!! trans('reg-profile.set_by_both_parties') !!}</li>
-              <li><span> </span> {!! trans('reg-profile.set_by_referee_or_student') !!}</li>
-            </ul>
+        @if (!isset($validating))
+          <div class="row">
+            <div class="col-sm-12">
+              <h5>{!! trans('reg-profile.legend') !!}</h5>
+              <ul class="legend">
+                <li><span class="important"> </span> {!! trans('reg-profile.set_by_both_parties') !!}</li>
+                <li><span> </span> {!! trans('reg-profile.set_by_referee_or_student') !!}</li>
+              </ul>
+            </div>
           </div>
-        </div>
+        @endif
       </div>
       @endif
 

@@ -91,37 +91,37 @@ return [
     
         'footer_partners' => 'Partners',
     
-        'cookie_text' => 'This website uses cookies to help us give you the best experience when you visit. By using this website you consent to our use of these cookies. Find out more about how we use cookies and how to manage them by reading our <a href="/privacy-policy">cookie notice</a>',
+        'cookie_text' => 'Diese Webseite nützt cookies um Ihre User-Erfahrungen auf dieser Webseite zu verbessern.Mit dem Benutzen dieser Webseite sind Sie mit der cookies- Aktivität einverstanden. Mehr Informaationen über uns und über das Nützen von cookies finden Sie in <a href="/ unserer Erklärung über den Schutz von personenbezogenen Daten ">Benachrichtigung über cookies</a>',
     
         'cookie_accept' => 'Schliessen',
     
         'logout_btn' => 'Ausloggen',
     
-        'less_btn' => 'View less',
+        'less_btn' => 'weniger anzeigen',
     
         'status' => 'Status',
     
-        'not_enough_data_to_show_profile' => 'We don\'t have enough data from you to be able to show your profile.',
+        'not_enough_data_to_show_profile' => 'Für das Anzeigen Ihres Profils haben wor nicht genügend Angaben.',
     
-        'click_on_link_to_fill_required_fields' => 'Please click on the following link to fill the required fields.',
+        'click_on_link_to_fill_required_fields' => 'Klicken Sie dne folgenden Link an und füllen Sie Angaben aus.',
     
-        'set_up_my_profile' => 'Set up my profile',
+        'set_up_my_profile' => 'Das Profil anlegen',
     
-        'or' => 'or',
+        'or' => 'oder',
     
-        'error' => 'Error',
+        'error' => 'Fehler',
     
         'successfully_done' => 'Successfully done',
     
-        'success' => 'Success',
+        'success' => 'erfolgreich',
     
-        'older' => 'Older',
+        'older' => 'älter',
     
-        'next' => 'Next',
+        'next' => 'Weiter',
     
-        'yes' => 'Yes',
+        'yes' => 'Ja',
     
-        'no' => 'No',
+        'no' => 'Nein',
     
         'AF' => 'Afghanistan',
     

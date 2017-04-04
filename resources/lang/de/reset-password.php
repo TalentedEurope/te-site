@@ -3,8 +3,8 @@
 
 return [
     
-        'reset_password' => 'Reset password',
+        'reset_password' => 'Das Password erneuern ',
     
-        'send_password_reset' => 'Send password reset link',
+        'send_password_reset' => 'Sende Link zum erneuern des Paswords',
     
 ];

@@ -3,18 +3,18 @@
 
 return [
     
-        'date_of_request' => 'Date of request',
+        'date_of_request' => 'ersucht am',
     
-        'pending' => 'Pending',
+        'pending' => 'wartend',
     
-        'validated' => 'Validated',
+        'validated' => 'begutachtet',
     
-        'not_validated' => 'Not validated',
+        'not_validated' => 'nicht begutachtet',
     
-        'no_students' => 'No students',
+        'no_students' => 'Keine Studente',
     
-        'confirm_validation' => 'Confirm refereeing',
+        'confirm_validation' => 'Gutachtung bestätigen',
     
-        'are_you_sure_you_want_to_finish_refereeing' => 'Are you sure you want to finish refereeing this student?',
+        'are_you_sure_you_want_to_finish_refereeing' => 'Möchten SIe die Bewertung des Studenten beenden?',
     
 ];

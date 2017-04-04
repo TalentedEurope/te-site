@@ -3,32 +3,32 @@
 
 return [
     
-        'thank_you_for_signing_up' => 'Thank You for Signing Up!',
+        'thank_you_for_signing_up' => 'Danke für Ihre Registrierung',
     
-        'you_will_receive_an_email' => 'You will receive an email with instructions about how to confirm your account in a few minutes.',
+        'you_will_receive_an_email' => 'In einpaar Minuten bekommen Sie eine E-Mail mit den Instruktionen für die Validierung Ihres Kontos.',
     
-        'go_back_to_home' => 'Go back to home',
+        'go_back_to_home' => 'Zurück zur Hauptseite',
     
-        'search_students' => 'Search students',
+        'search_students' => 'Studenten suchen',
     
-        'search_companies' => 'Search companies',
+        'search_companies' => 'Unternehmen suchen',
     
-        'register_as_validator' => 'Register as referee',
+        'register_as_validator' => 'Als Gutachter registrieren',
     
-        'there_have_been_some_errors' => 'There have been some errors',
+        'there_have_been_some_errors' => 'Fehler',
     
-        'i_am_a' => 'I am a',
+        'i_am_a' => 'bin',
     
-        'all_fields_are_required' => 'All fields are required',
+        'all_fields_are_required' => 'Alle Felder müssen ausgefüllt sein',
     
-        'confirmation_email_may_take_few_minutes' => 'Your confirmation email may take a few minutes to arrive, make sure you also check out your spam folder',
+        'confirmation_email_may_take_few_minutes' => 'Sie bekommen die Bestätigungs-Mail in paar Minuten. Kontrollieren Sie Ihren Spam-ordner.',
     
-        'registration_complete_successfully' => 'Registration complete successfully you may log in now.',
+        'registration_complete_successfully' => 'Registrierung erfolgreich beendet.',
     
-        'register_success' => 'Register success',
+        'register_success' => 'Registrierung erfolgreich.',
     
-        'register' => 'Register',
+        'register' => 'Bitte registrieren',
     
-        'invited_by' => 'You have been invited by',
+        'invited_by' => 'Eingeladen von...',
     
 ];

@@ -41,7 +41,7 @@ class LoginController extends Controller
     public function showLoginForm(Request $request)
     {
         if ($request->has('success')) {
-            $request->session()->flash('success_message', 'Account activation was successful, you may log in now');
+            $request->session()->flash('success_message', trans('reg-profile.account_activation_successful'));
 
             return redirect('/login');
         }
@@ -72,7 +72,7 @@ class LoginController extends Controller
      */
     protected function validateLogin(Request $request)
     {
-        $messages = array($this->username().'.verified' => 'Account has not been verified. Please verify your email and activate your account');
+        $messages = array($this->username().'.verified' => trans('reg-profile.account_has_not_been_verified'));
 
         $this->validate($request, [
             $this->username() => 'required|verified', 'password' => 'required',
