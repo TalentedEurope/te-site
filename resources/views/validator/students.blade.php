@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="container">
-  <div class="row">
+  <div class="row col-sm-12">
     <h1 class="page-title">{!! trans('validators.my_students') !!}</h1>
     @if (!Auth::user()->userable->canValidate() && Auth::user()->userable->institution)
     <div class="alert alert-warning">
