@@ -1,9 +1,10 @@
 <template>
-    <div class="panel panel-default col-sm-12">
+    <div class="panel panel-default">
         <div class="default-message" v-if="students.length == 0">
-            {{ $t('students-validation.no_students') }}
+            <span v-if="!data_loaded">{{ $t('search.loading') }}...</span>
+            <span v-if="data_loaded">{{ $t('students-validation.no_students') }}</span>
         </div>
-        <table v-if="students.length > 0" class="table table-striped table-hover table-responsive">
+        <table v-if="data_loaded && students.length > 0" class="table table-striped table-hover table-responsive">
             <thead>
                 <tr>
                     <th>{{ $tc('global.student', 1) }}</th>
@@ -33,7 +34,8 @@ import { defaultErrorToast } from 'errors-handling.js';
 export default {
     data() {
         return {
-            'students': []
+            'students': [],
+            'data_loaded': false
         }
     },
     ready() {
@@ -44,6 +46,7 @@ export default {
             studentsValidationResource.get()
                 .then((response) => {
                     this.students = response.body;
+                    this.data_loaded = true;
                 }, (errorResponse) => {
                     defaultErrorToast();
                 });
