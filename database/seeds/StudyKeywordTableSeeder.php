@@ -233,7 +233,7 @@ Biológia, Fyzika, Chémia, Mikrobiológia, Biotechnológia, Jadrová fyzika a f
                 
                     'en' => 'Medicine, Public Health, Medical Technology',                    
                 
-                    'es' => 'Medicina, Salud pública, Tecnologóa médica',                    
+                    'es' => 'Medicina, Salud Pública, Tecnología Médica',                    
                 
                     'it' => 'Medicina, sanità pubblica, tecnologia medica',                    
                 
