@@ -147,7 +147,7 @@ class SearchController extends SiteSearchController
                 'first_study_name' => $firstStudyName,
                 'first_study_level' => $firstStudyLevel,
                 'first_study_institution' => $firstStudyInstitution,
-                'studied' => $firstStudyName . ' at ' . $firstStudyInstitution,
+                'studied' => $firstStudyName . ' ' . trans('reg-profile.at') . ' ' . $firstStudyInstitution,
                 'studied_in' => $firstStudyInstitution,
                 'languages' => $languages,
             );
