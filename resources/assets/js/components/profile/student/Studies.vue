@@ -29,7 +29,7 @@
             </div>
 
             <select-form code="field" group-code="studies" :group-id="study.id" :label="$t('reg-profile.student_study_field')"
-                required :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyFields" :value="study.field" :disabled="!!study.locked" :errors="errors"></select-form>
+                required :placeholder="' - ' + $t('reg-profile.student_study_field') + ' - '" :values="studyFields" :value="study.field" :disabled="!!study.locked" :errors="errors"></select-form>
 
             <div v-if="study.certificate || !study.locked">
                 <hr>
@@ -71,7 +71,7 @@
             </div>
 
             <select-form code="field" group-code="studies" :group-id="new_study.id" :label="$t('reg-profile.student_study_field')"
-                required :placeholder="' - ' + $t('reg-profile.student_study_level') + ' - '" :values="studyFields" :value="new_study.field"></select-form>
+                required :placeholder="' - ' + $t('reg-profile.student_study_field') + ' - '" :values="studyFields" :value="new_study.field"></select-form>
 
             <hr>
             <file-form code="certificate" group-code="studies" :group-id="new_study.id" :label="$t('reg-profile.student_certificate')"></file-form>
