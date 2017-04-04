@@ -65,7 +65,10 @@
                   required errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <hr>
-              <button type="submit" class="btn btn-primary">{!! trans('reg-profile.update_settings') !!}</button>
+              <div>
+                <button type="submit" class="btn btn-primary">{!! trans('reg-profile.update_settings') !!}</button>
+                <remove-account></remove-account>
+              </div>
             </form>
           </div>
 

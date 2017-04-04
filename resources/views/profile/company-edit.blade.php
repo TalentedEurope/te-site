@@ -147,7 +147,10 @@
 
               <hr>
 
-              <button type="submit" class="btn btn-primary">{!! trans('reg-profile.update_settings') !!}</button>
+              <div>
+                <button type="submit" class="btn btn-primary">{!! trans('reg-profile.update_settings') !!}</button>
+                <remove-account></remove-account>
+              </div>
             </form>
           </div>
 

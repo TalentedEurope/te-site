@@ -106,7 +106,10 @@
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></select-form>
 
               <hr class="separator">
-              <button type="submit" class="btn btn-primary">{!! trans('reg-profile.update_settings') !!}</button>
+              <div>
+                <button type="submit" class="btn btn-primary">{!! trans('reg-profile.update_settings') !!}</button>
+                <remove-account></remove-account>
+              </div>
             </form>
           </div>
           <div class="tab-pane fade" id="_contact">
