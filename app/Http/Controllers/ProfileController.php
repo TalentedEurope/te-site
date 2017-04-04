@@ -156,7 +156,7 @@ class ProfileController extends Controller
         }
         if ($user->isA('validator')) {
             $data = $this->getValidatorPrivateData($user);
-            $data['validator']->with(['institution', 'validationRequest.student' =>
+            $data['validator']->load(['institution', 'validationRequest.student' =>
                 function ($q) {
                     $q->where('valid', 'validated');
                 }]);
