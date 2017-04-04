@@ -528,4 +528,6 @@ Obchodná a poradenská činnosť',
     
         'account_has_not_been_verified' => 'Account has not been verified. Please verify your email and activate your account',
     
+        'at' => 'at',
+    
 ];
