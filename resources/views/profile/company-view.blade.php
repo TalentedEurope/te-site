@@ -17,7 +17,7 @@
     @endif
 
     <div class="col-xs-12 col-sm-8 col-md-9 sm-no-padding-left">
-      <div class="well student-name">
+      <div class="well profile-main-info">
         <h2 class="title">{{ $user->name }} </h2>
         @if ($company->activity)
           <p class="subtitle">{{ $activities[$company->activity] }}</p>
