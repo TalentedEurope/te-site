@@ -154,6 +154,15 @@ class ProfileController extends Controller
 
             return view('profile.company-view', $data);
         }
+        if ($user->isA('validator')) {
+            $data = $this->getValidatorPrivateData($user);
+            $data['validator']->with(['institution', 'validationRequest.student' =>
+                function ($q) {
+                    $q->where('valid', 'validated');
+                }]);
+            $data['token'] = LoginController::userToken();
+            return view('profile.validator-view', $data);
+        }
     }
 
 
