@@ -20,11 +20,13 @@
         @if ($validator->validationRequest->count())
           <ul class="validated-students-cards clearfix">
             @foreach ($validator->validationRequest as $validation_request)
-              <li>
-                <a href="/profile/{{$validation_request->student->user->getSlug()}}/{{$validation_request->student->user->id}}">
-                  <strong><i class="icon fa fa-user"></i>  {{$validation_request->student->user->getFullNameAttribute()}}</strong>
-                </a>
-              </li>
+              @if ($validation_request->student->valid == 'validated')
+                <li>
+                  <a href="/profile/{{$validation_request->student->user->getSlug()}}/{{$validation_request->student->user->id}}">
+                    <strong><i class="icon fa fa-user"></i>  {{$validation_request->student->user->getFullNameAttribute()}}</strong>
+                  </a>
+                </li>
+              @endif
             @endforeach
           </ul>
         @else
