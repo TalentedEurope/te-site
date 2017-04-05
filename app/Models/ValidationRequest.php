@@ -35,8 +35,8 @@ class ValidationRequest extends Model
     public static function invalidReasons()
     {
         return array(
-            'nocriteria' => trans('validation.criteria'),
-            'nostudent' => trans('validation.nostudent'),
+            'nocriteria' => trans('students-validation.criteria'),
+            'nostudent' => trans('students-validation.nostudent'),
         );
     }
 

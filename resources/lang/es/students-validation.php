@@ -17,4 +17,10 @@ return [
     
         'are_you_sure_you_want_to_finish_refereeing' => '¿Está seguro de que quiere finalizar la validación?',
     
+        'reason' => 'Reason',
+    
+        'criteria' => 'Student does not meet criteria',
+    
+        'nostudent' => 'Student hasn\'t attended this school/institution',
+    
 ];

@@ -17,4 +17,10 @@ return [
     
         'are_you_sure_you_want_to_finish_refereeing' => 'Voulez-vous vraiment terminer l\'dévaluation de cet étudiant?',
     
+        'reason' => 'Reason',
+    
+        'criteria' => 'Student does not meet criteria',
+    
+        'nostudent' => 'Student hasn\'t attended this school/institution',
+    
 ];
