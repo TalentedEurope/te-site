@@ -7,7 +7,7 @@
       @endif
 
     <div class="col-xs-12 col-sm-8 col-md-9 sm-no-padding-left">
-      <div class="well student-name">
+      <div class="well profile-main-info">
         <h2 class="title">{{ $user->name }} {{ $user->surname }}</h2>
         @if (isset($mainStudy))
         <p class="subtitle">{{ $mainStudy['name'] }}</p>
@@ -19,7 +19,7 @@
         <ul class="student-specs">
         @if (isset($mainStudy))
         <li><strong><i class="icon fa fa-graduation-cap"></i>  {!! trans('reg-profile.education') !!}: </strong>
-        {{ $mainStudy['level'] }} in {{ $mainStudy['name'] }}</li>
+        {{ $mainStudy['level'] }} {{ trans('reg-profile.at') }} {{ $mainStudy['name'] }}</li>
         @endif
         @if ($user->country && $student->nationality)
           <li><strong><i class="icon fa fa-map-marker"></i>  {!! trans('reg-profile.lives_in') !!}: </strong> {{ $user->city }}, <em>{{ $countries[$user->country] }} </em> | <strong> {!! trans('reg-profile.nationality') !!}: </strong> {{ $nationalities[$student->nationality]  }} </li>
@@ -75,7 +75,9 @@
             <div class="col-sm-6"><h4>{!! trans('reg-profile.personal') !!}</h4>
               <ul class="skills">
                 @foreach ($student->groupedPersonalSkills() as $skill)
-                  <li @if($skill['repeated']) class="important" @endif >{{ $skill['name'] }}</li>
+                  <li @if($skill['repeated']) class="important" @endif >
+                    @if($skill['repeated'])<i class="fa fa-star-o" aria-hidden="true"></i> @endif{{ $skill['name'] }}
+                  </li>
                 @endforeach
               </ul>
             </div>

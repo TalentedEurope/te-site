@@ -90,6 +90,11 @@
                   <i class="fi flaticon-youtube"></i>
                 </a>
               </li>
+              <li>
+                <a href="https://www.linkedin.com/in/talentedeurope">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
             </ul>
 
             @if (Auth::user())
@@ -184,8 +189,8 @@
       <div class="overlay"></div>
       <div class="content text-center">
         @if ($talentQuote->user->image)
-        <a href="{{ route('get_profile', [str_slug($talentQuote->user->name),$talentQuote->user->id]) }}">
-        <img width="150" class="round" src="{{ asset('uploads/photo/'.$talentQuote->user->image) }}"/>
+        <a href="{{ url('/search/companies') }}">
+          <img width="150" class="round" src="{{ asset('uploads/photo/'.$talentQuote->user->image) }}"/>
         </a>
         @endif
         <p class="quote-text">{{ $talentQuote->talent }}</p>
@@ -211,7 +216,9 @@
 
         <div class="companies-and-institutions-logos">
           @foreach ($logos as $logo)
-            <img width="150" src="{{ asset('uploads/photo/'.$logo->user->image) }}"/>
+            <a href="{{ url('/search/companies') }}">
+              <img width="150" src="{{ asset('uploads/photo/'.$logo->user->image) }}"/>
+            </a>
           @endforeach
         </div>
       </div>
@@ -357,6 +364,11 @@
                 <i class="fi flaticon-youtube"></i>
               </a>
             </li>
+            <li>
+              <a class="linkedin" href="https://www.linkedin.com/in/talentedeurope">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -394,6 +406,11 @@
                 <i class="fi flaticon-youtube"></i>
               </a>
             </li>
+            <li>
+              <a href="https://www.linkedin.com/in/talentedeurope">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </li>
           </ul>
         </div>
         <div class="col-sm-6">
@@ -402,7 +419,7 @@
           <ul class="partner-list">
             <li><a target="_blank" href="http://cifpcesarmanrique.es/"><img src="/img/logo-cifpcesar.png" alt="CIFP César Manrique"></a></li>
             <li><a target="_blank" href="http://erasmusplus.iespuertodelacruz.es"><img src="/img/logo-iespto.png" alt="IES Puerto de la Cruz"></a></li>
-            <li><a target="_blank" href="http://europeanprojects.org/"><img src="/img/logo-epa.png" alt="European Projects Association"></a></li>
+            <li class="logo-epa"><a target="_blank" href="http://europeanprojects.org/"><img src="/img/logo-epa.png" alt="European Projects Association"></a></li>
             <li><a target="_blank" href="http://web.tuke.sk/kj/english_version.htm"><img src="/img/logo-tuke.png" alt="Technical University of Kosice"></a></li>
             <li><a target="_blank" href="http://www.beds.ac.uk/"><img src="/img/logo-ubbs.png" alt="University of Bedfordshire"></a></li>
           </ul>

@@ -528,4 +528,18 @@ Obchodná a poradenská činnosť',
     
         'account_has_not_been_verified' => 'Account has not been verified. Please verify your email and activate your account',
     
+        'at' => 'at',
+    
+        'remove_account_button' => 'Delete account',
+    
+        'remove_account_confirm' => 'Are you really sure that you wish delete your account? It\'s going to remove all your information',
+    
+        'remove_account_button_ok' => 'Ok',
+    
+        'remove_account_button_cancel' => 'Cancel',
+    
+        'refereed_students' => 'Refereed students',
+    
+        'no_refereed_students' => 'No refereed students',
+    
 ];

@@ -16,7 +16,7 @@ export default {
     padding: 0;
     li {
         display: inline-block;
-        padding: 5px 20px;
+        padding: 5px 13px;
         background: $light-gray;
         margin-right: 5px;
         margin-bottom: 5px;

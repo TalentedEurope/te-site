@@ -112,7 +112,7 @@
             <p>{!! trans('validators.give_us_explanation_of_student_is_not_valid') !!}</p>
             <p><em>{!! trans('validators.note_if_validation_is_passed_as_no_student') !!}</em></p>
 
-            <select-form code="reason" label="{!! trans('validate.reason') !!}" placeholder=" - {!! trans('reg-profile.reason') !!} - " required
+            <select-form code="reason" label="{!! trans('students-validation.reason') !!}" placeholder=" - {!! trans('students-validation.reason') !!} - " required
                               values='{!! json_encode($reasons, JSON_HEX_APOS) !!}'
                               value="{{ old('reason') }}"
                               errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></select-form>

@@ -122,7 +122,7 @@ class SearchController extends SiteSearchController
 
             foreach ($student->languages as $item) {
                 if ($item->name) {
-                    $languages[] = StudentLanguage::$languages[$item->name]['eng'];
+                    $languages[] = StudentLanguage::$languages[$item->name]['name'];
                 }
             }
 
@@ -315,7 +315,7 @@ class SearchController extends SiteSearchController
         foreach ($availableStudyLanguages as $language) {
             $languages[] = array(
                 'id' => $language->name,
-                'name' => StudentLanguage::$languages[$language->name]["eng"]
+                'name' => StudentLanguage::$languages[$language->name]["name"]
             );
         }
 
