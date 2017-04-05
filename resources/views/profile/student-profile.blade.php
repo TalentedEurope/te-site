@@ -75,7 +75,9 @@
             <div class="col-sm-6"><h4>{!! trans('reg-profile.personal') !!}</h4>
               <ul class="skills">
                 @foreach ($student->groupedPersonalSkills() as $skill)
-                  <li @if($skill['repeated']) class="important" @endif >{{ $skill['name'] }}</li>
+                  <li @if($skill['repeated']) class="important" @endif >
+                    @if($skill['repeated'])<i class="fa fa-star-o" aria-hidden="true"></i> @endif{{ $skill['name'] }}
+                  </li>
                 @endforeach
               </ul>
             </div>
