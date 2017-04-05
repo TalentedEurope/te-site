@@ -55,52 +55,56 @@
         @endif
         <div class="contact">
           <h3>{!! trans('reg-profile.get_in_contact') !!}</h3>
-            {{-- <alert-button :company-id="{{ $company->id }}" :alertable="{{ $company->alertable }}" placement="bottom"></alert-button> --}}
           <hr>
-          @if (!$public)
-          <p><i class="fa icon fa-envelope"></i> {!! trans('reg-profile.email') !!}: <a href="mailto:{{ $company->notification_email ? $company->notification_email : $user->email }}">
-          {{ $company->notification_email ? $company->notification_email : $user->email }}</a></p>
-          @endif
-          @if ($user->phone)
-          <p><i class="fa icon fa-phone"></i> {!! trans('reg-profile.phone') !!}:  <a href="tel:{{ $user->phone }}">{{ $user->phone }}</a></p>
-          @endif
-          @if ($user->country)
-          <address>
-            {{ $user->address }}<br/>
-            {{ $user->postal_code }} {{ $user->city }}, {{ $countries[$user->country] }}
-          </address>
-          @endif
-          <ul class="social">
-            @if ($user->facebook)
-            <li>
-              <a target="_blank" href="{{ $user->facebook }}" rel="noopener noreferrer" class="icon-link">
-                <i class="fi flaticon-facebook"></i>
-              </a>
-            </li>
-            @endif
-            @if ($user->twitter)
-            <li>
-              <a target="_blank" href="{{ $user->twitter }}" rel="noopener noreferrer" class="icon-link">
-                <i class="fi flaticon-twitter"></i>
-              </a>
-            </li>
-            @endif
-            @if ($user->linkedin)
-            <li>
-              <a target="_blank" href="{{ $user->linkedin }}" rel="noopener noreferrer" class="icon-link">
-                <i class="fa fa-linkedin"></i>
-              </a>
-            </li>
-            @endif
-            @if ($company->website)
-            <li>
-              <a target="_blank" href="{{ $company->website }}" rel="noopener noreferrer" class="icon-link">
-                <i class="fa fa-external-link"></i>
-              </a>
-            </li>
-            @endif
 
-          </ul>
+          <button type="button" class="btn btn-primary see-contact-details">{!! trans('reg-profile.view_contact_details') !!}</button>
+
+          <div class="contact-details hidden">
+            @if (!$public)
+              <p><i class="fa icon fa-envelope"></i> {!! trans('reg-profile.email') !!}: <a href="mailto:{{ $company->notification_email ? $company->notification_email : $user->email }}">
+              {{ $company->notification_email ? $company->notification_email : $user->email }}</a></p>
+            @endif
+            @if ($user->phone)
+              <p><i class="fa icon fa-phone"></i> {!! trans('reg-profile.phone') !!}:  <a href="tel:{{ $user->phone }}">{{ $user->phone }}</a></p>
+            @endif
+            @if ($user->country)
+              <address>
+                {{ $user->address }}<br/>
+                {{ $user->postal_code }} {{ $user->city }}, {{ $countries[$user->country] }}
+              </address>
+            @endif
+            <ul class="social">
+              @if ($user->facebook)
+                <li>
+                  <a target="_blank" href="{{ $user->facebook }}" rel="noopener noreferrer" class="icon-link">
+                    <i class="fi flaticon-facebook"></i>
+                  </a>
+                </li>
+              @endif
+              @if ($user->twitter)
+                <li>
+                  <a target="_blank" href="{{ $user->twitter }}" rel="noopener noreferrer" class="icon-link">
+                    <i class="fi flaticon-twitter"></i>
+                  </a>
+                </li>
+              @endif
+              @if ($user->linkedin)
+                <li>
+                  <a target="_blank" href="{{ $user->linkedin }}" rel="noopener noreferrer" class="icon-link">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              @endif
+              @if ($company->website)
+                <li>
+                  <a target="_blank" href="{{ $company->website }}" rel="noopener noreferrer" class="icon-link">
+                    <i class="fa fa-external-link"></i>
+                  </a>
+                </li>
+              @endif
+            </ul>
+          </div>
+
         </div>
       </div>
     </div>

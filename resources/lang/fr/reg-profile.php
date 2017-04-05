@@ -548,4 +548,6 @@ Sur',
     
         'no_refereed_students' => 'There are no refereed students',
     
+        'view_contact_details' => 'View contact details',
+    
 ];
