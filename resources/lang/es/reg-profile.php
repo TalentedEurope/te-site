@@ -323,9 +323,9 @@ return [
     
         'legend' => 'Leyenda',
     
-        'set_by_both_parties' => 'Seleccionado por ambas partes',
+        'set_by_both_parties' => 'Seleccionado por el validador y el estudiante',
     
-        'set_by_referee_or_student' => 'Selecionando por el validador o el estudiante',
+        'set_by_referee_or_student' => 'Seleccionado por el validador o el estudiante',
     
         'study' => 'Estudio|Estudios',
     
