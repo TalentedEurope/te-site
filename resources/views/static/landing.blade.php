@@ -189,8 +189,8 @@
       <div class="overlay"></div>
       <div class="content text-center">
         @if ($talentQuote->user->image)
-        <a href="{{ route('get_profile', [str_slug($talentQuote->user->name),$talentQuote->user->id]) }}">
-        <img width="150" class="round" src="{{ asset('uploads/photo/'.$talentQuote->user->image) }}"/>
+        <a href="{{ url('/search/companies') }}">
+          <img width="150" class="round" src="{{ asset('uploads/photo/'.$talentQuote->user->image) }}"/>
         </a>
         @endif
         <p class="quote-text">{{ $talentQuote->talent }}</p>
@@ -216,7 +216,9 @@
 
         <div class="companies-and-institutions-logos">
           @foreach ($logos as $logo)
-            <img width="150" src="{{ asset('uploads/photo/'.$logo->user->image) }}"/>
+            <a href="{{ url('/search/companies') }}">
+              <img width="150" src="{{ asset('uploads/photo/'.$logo->user->image) }}"/>
+            </a>
           @endforeach
         </div>
       </div>
