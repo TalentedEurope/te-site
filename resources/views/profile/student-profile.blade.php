@@ -19,7 +19,7 @@
         <ul class="student-specs">
         @if (isset($mainStudy))
         <li><strong><i class="icon fa fa-graduation-cap"></i>  {!! trans('reg-profile.education') !!}: </strong>
-        {{ $mainStudy['level'] }} in {{ $mainStudy['name'] }}</li>
+        {{ $mainStudy['level'] }} {{ trans('reg-profile.at') }} {{ $mainStudy['name'] }}</li>
         @endif
         @if ($user->country && $student->nationality)
           <li><strong><i class="icon fa fa-map-marker"></i>  {!! trans('reg-profile.lives_in') !!}: </strong> {{ $user->city }}, <em>{{ $countries[$user->country] }} </em> | <strong> {!! trans('reg-profile.nationality') !!}: </strong> {{ $nationalities[$student->nationality]  }} </li>

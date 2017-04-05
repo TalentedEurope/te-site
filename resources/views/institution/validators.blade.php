@@ -7,20 +7,26 @@
 <div class="container validators">
   <div class="row">
     <h1 class="page-title">{!! trans('validators.validators') !!}</h1>
-          @if (isset($profileErrors) && $profileErrors->all())
-            <div class="text-left">
-            <p>{!! trans('reg-profile.institution_fix_the_following_errors') !!}:</p>
-            @if ($profileErrors->all())
-              <div class="alert alert-warning">
-              <ul>
+
+    @if (isset($profileErrors) && $profileErrors->all())
+      <div class="text-left">
+        <p>{!! trans('reg-profile.institution_fix_the_following_errors') !!}:</p>
+        @if ($profileErrors->all())
+          <div class="alert alert-warning">
+            <ul>
               @foreach ($profileErrors->all() as $error)
                 <li>{{ $error }}</li>
               @endforeach
-              </ul>
-              </div>
-            @endif
-            </div>
-          @endif
+            </ul>
+          </div>
+        @endif
+        <p>{!! trans('reg-profile.click_on_button_to_fill_required_fields') !!}<br/></p>
+        <p>
+          <a class="btn btn-primary" href="{{ url('/profile/edit') }}"><i class="fa fa-btn fa-cogs"></i> {{ trans('global.set_up_my_profile') }}</a></li>
+        </p>
+        <br/>
+      </div>
+    @endif
 
     <div class="v-container">
       <validators></validators>
