@@ -94,18 +94,22 @@
         padding: 0;
         list-style: none;
 
-        a {
+        li {
             display: inline-block;
-            background: $light-gray;
-            box-shadow: 0 1px 1px rgba(36, 39, 41, 0.28);
-            padding: 5px 15px;
-            margin: 7px;
-            text-decoration: none;
-            color: $blue;
 
-            &:hover, &:focus, &:active {
+            a {
+                display: inline-block;
+                background: $light-gray;
+                box-shadow: 0 1px 1px rgba(36, 39, 41, 0.28);
+                padding: 5px 8px;
+                margin: 7px;
+                text-decoration: none;
                 color: $blue;
-                background: rgb(246, 246, 246);
+
+                &:hover, &:focus, &:active {
+                    color: $blue;
+                    background: rgb(246, 246, 246);
+                }
             }
         }
     }
@@ -134,14 +138,14 @@
 
         li {
             display: inline-block;
-            padding: 5px 20px;
+            padding: 5px 13px;
             background: $blue;
             color: $white;
             margin-bottom: 5px;
         }
 
         li.important {
-            background: $brand-success;
+            background: #E6BB08;
             color: $white;
         }
     }
@@ -152,7 +156,7 @@
 
         li {
             display: inline-block;
-            padding: 5px 20px;
+            padding: 5px 13px;
             margin-bottom: 5px;
 
             span {
@@ -163,7 +167,7 @@
             }
 
             span.important {
-                background: $brand-success;
+                background: #E6BB08;
                 color: $white;
             }
         }

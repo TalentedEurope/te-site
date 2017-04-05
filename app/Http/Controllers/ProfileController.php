@@ -156,10 +156,11 @@ class ProfileController extends Controller
         }
         if ($user->isA('validator')) {
             $data = $this->getValidatorPrivateData($user);
-            $data['validator']->load(['institution', 'validationRequest.student' =>
-                function ($q) {
-                    $q->where('valid', 'validated');
-                }]);
+            $data['validator'] = App\Models\Validator::where('id', $data['validator']->id)->with(['validationRequest' => function($q) {
+                $q->whereHas('student', function($q) {
+                    $q->where('valid','validated');
+                });
+            }])->first();
             $data['token'] = LoginController::userToken();
             return view('profile.validator-view', $data);
         }
