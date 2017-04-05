@@ -323,7 +323,7 @@ return [
     
         'legend' => 'Legend',
     
-        'set_by_both_parties' => 'Set by both parties',
+        'set_by_both_parties' => 'Chosen by both referee and student',
     
         'set_by_referee_or_student' => 'Set by either the referee or the student',
     

@@ -7,7 +7,7 @@
             <select v-if="!relatedOptions" class="form-control" v-model="value"
                     @input="onInput" @blur="onBlur" :disabled="disabled" :required="required">
                 <option value="">{{ parsedPlaceholder }}</option>
-                <option v-for="(v_code, v_name) in parsedValues" :value="v_code">{{ v_name }}</option>
+                <option v-for="(v_code, v_name) in parsedValues | orderBy '$value'" :value="v_code">{{ v_name }}</option>
             </select>
 
             <select v-if="relatedOptions" class="form-control" v-model="value"

@@ -827,7 +827,7 @@ class ProfileController extends Controller
         $languages = array();
         $nationalities = array();
         foreach (StudentLanguage::$languages as $key => $item) {
-            $languages[$key] = $item['eng'];
+            $languages[$key] = $item['name'];
         }
         foreach (StudentStudy::$levels as $item) {
             $studyLevels[$item] = trans('reg-profile.'.$item);
