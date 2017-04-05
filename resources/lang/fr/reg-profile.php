@@ -546,6 +546,6 @@ Sur',
     
         'refereed_students' => 'Refereed students',
     
-        'no_refereed_students' => 'No refereed students',
+        'no_refereed_students' => 'There are no refereed students',
     
 ];

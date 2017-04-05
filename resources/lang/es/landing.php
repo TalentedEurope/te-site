@@ -35,7 +35,7 @@ return [
     
         'subscribe_follow_text' => 'o síguenos en ',
     
-        'subscribe_text_question' => 'Recibe las noticias de Talented Europe en tu buzón de correo electrónico .<br/>Feel free to give us your answer for: What is talent for you?',
+        'subscribe_text_question' => 'Recibe las noticias de Talented Europe en tu buzón de correo electrónico .<br/>Agradeceríamos que nos respondieses a la pregunta: ¿Qué es el talento para ti?',
     
         'meta_description' => 'Un proyecto Erasmus Plus, que enlaza más fácilmente a los mejores estudiantes con las oportunidades de empleo y prácticas en toda Europa',
     
