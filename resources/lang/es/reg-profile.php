@@ -541,4 +541,6 @@ return [
     
         'no_refereed_students' => 'No hay estudiantes validados',
     
+        'view_contact_details' => 'Ver datos de contacto',
+    
 ];

@@ -92,4 +92,13 @@ $(function() {
         var confirm_config = get_confirm_config($(this).parents('form'));
         $.confirm(confirm_config);
     });
+
+    $('.unique-profile.company .see-contact-details').on('click', function () {
+        $('.see-contact-details').addClass('hidden');
+        $('.contact-details').removeClass('hidden');
+    });
+    $('.unique-profile.student .see-contact-details').on('click', function () {
+        $('.see-contact-details').addClass('hidden');
+        $('.contact-details').removeClass('hidden');
+    });
 });
