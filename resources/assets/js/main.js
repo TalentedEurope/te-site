@@ -94,10 +94,12 @@ $(function() {
     });
 
     $('.unique-profile.company .see-contact-details').on('click', function () {
+        ga('send', 'event', 'Contact', 'see_info', 'company');
         $('.see-contact-details').addClass('hidden');
         $('.contact-details').removeClass('hidden');
     });
     $('.unique-profile.student .see-contact-details').on('click', function () {
+        ga('send', 'event', 'Contact', 'see_info', 'student');
         $('.see-contact-details').addClass('hidden');
         $('.contact-details').removeClass('hidden');
     });
