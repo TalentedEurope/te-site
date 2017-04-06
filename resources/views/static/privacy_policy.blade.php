@@ -18,13 +18,13 @@
 
           We may collect the following information:
           <ul>
-            <li>For registered stakeholders: You can be part of Talented Europe community being a Student, an Educational Institution (University / Faculty /High School) or a Company.
+            <li>For registered stakeholders: you can be part of Talented Europe community being a Student, an Educational Institution (University / Faculty /High School) or a Company.
               <ul>
-                <li>Students and graduates: Personal information, academic information, training and work experience, languages, skills.</li>
+                <li>Students and graduates: personal information, academic information, training and work experience, languages, skills.</li>
                 <li>Educational Institutions / Companies: Institutional information, Contacts, Addressing.</li>
               </ul>
             </li>
-            <li>For the newsletters subscription: Email address for contact information.</li>
+            <li>For the newsletters subscription: email address for contact information.</li>
           </ul>
 
           <h3>What we do with the information we gather</h3>
@@ -56,19 +56,19 @@
           <p>You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.</p>
 
           <h3>Links to other websites</h3>
-          <p>Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.</p>
+          <p>Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites which are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.</p>
 
           <h3>Controlling your personal information</h3>
           <p>You may choose to restrict the collection or use of your personal information in the following ways:</p>
           <ul>
             <li>
-              Whenever you are asked to fill in a form on the website you should know that the information won’t be used by anybody for direct marketing purposes. Only the registered stakeholders, as part of the community, could access to your information for possible contacts.
+              Whenever you are asked to fill in a form on the website you should know that the information won’t be used by anybody for direct marketing purposes. Only the registered stakeholders, as part of the community, are allowed to access to your information for possible contacts.
             </li>
             <li>
-              If you have registered Talented Europe and you want your information to be removed from the platform, you may change your mind at any time by writing to or emailing us at {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}.
+              If you have registered Talented Europe and you want your information to be removed from the platform, you may change your mind at any time by emailing us at {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}.
             </li>
             <li>
-              The same way, if you have subscribed Talented Europe’s newsletter and you want to stop receiving emails, you may change your mind at any time by writing to or emailing us at {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}.
+              The same way, if you have subscribed Talented Europe’s newsletter and you want to stop receiving emails, you may change your mind at any time by emailing us at {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}.
             </li>
           </ul>
           <p>

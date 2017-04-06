@@ -523,22 +523,24 @@ return [
     
         'social_networks' => 'Redes sociales',
     
-        'account_activation_successful' => 'Account activation was successful, you may log in now',
+        'account_activation_successful' => 'La activación de la cuenta fué correcta, deberías poder acceder ahora',
     
-        'account_has_not_been_verified' => 'Account has not been verified. Please verify your email and activate your account',
+        'account_has_not_been_verified' => 'La cuenta no fué verificada. Por favor, comprueba si has recibido nuestro email y activa tu cuenta',
     
         'at' => 'en',
     
-        'remove_account_button' => 'Delete account',
+        'remove_account_button' => 'Eliminar cuenta',
     
-        'remove_account_confirm' => 'Are you really sure that you wish delete your account? It\'s going to remove all your information',
+        'remove_account_confirm' => '¿Está seguro de que deseas dar de baja tu cuenta? Se eliminará toda tu información',
     
-        'remove_account_button_ok' => 'Ok',
+        'remove_account_button_ok' => 'Aceptar',
     
-        'remove_account_button_cancel' => 'Cancel',
+        'remove_account_button_cancel' => 'Cancelar',
     
-        'refereed_students' => 'Refereed students',
+        'refereed_students' => 'Estudiantes validados',
     
-        'no_refereed_students' => 'No refereed students',
+        'no_refereed_students' => 'No hay estudiantes validados',
+    
+        'view_contact_details' => 'Ver datos de contacto',
     
 ];

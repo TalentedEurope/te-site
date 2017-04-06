@@ -66,7 +66,6 @@
           <div class="row">
             <div class="col-sm-6"><h4>{!! trans('reg-profile.professional') !!}</h4>
               <ul class="skills">
-                <!-- <li class="important">Lorem ipsum</li> -->
                 @foreach ($student->professionalSkills as $skill)
                   <li>{{ $skill->name }}</li>
                 @endforeach
@@ -215,40 +214,48 @@
         <div class="contact">
           <h3>{!! trans('reg-profile.get_in_contact') !!}</h3>
           <hr>
-          <p><i class="fa icon fa-envelope"></i> {!! trans('reg-profile.email') !!}: <a href="mailto:{{ $user->email }}">
-          {{ $user->email }}</a></p>
-          @if ($user->phone)
-          <p><i class="fa icon fa-phone"></i> {!! trans('reg-profile.phone') !!}:  <a href="tel:{{ $user->phone }}">{{ $user->phone }}</a></p>
+
+          @if (Auth::user())
+            <button type="button" class="btn btn-primary see-contact-details">{!! trans('reg-profile.view_contact_details') !!}</button>
           @endif
-          @if ($user->country)
-          <address>
-            {{ $user->address }}<br/>
-            {{ $user->postal_code }} {{ $user->city }}, {{ $countries[$user->country] }}
-          </address>
-          @endif
-          @if ($user->facebook || $user->twitter)
-          <ul class="social">
-            @if ($user->facebook)
-            <li>
-              <a target="_blank" href="{{ $user->facebook }}" rel="noopener noreferrer" class="icon-link">
-                <i class="fi flaticon-facebook"></i>
-              </a>
-            </li>
+
+          <div class="contact-details @if (Auth::user()) hidden @endif">
+            <p><i class="fa icon fa-envelope"></i> {!! trans('reg-profile.email') !!}: <a href="mailto:{{ $user->email }}">
+            {{ $user->email }}</a></p>
+            @if ($user->phone)
+            <p><i class="fa icon fa-phone"></i> {!! trans('reg-profile.phone') !!}:  <a href="tel:{{ $user->phone }}">{{ $user->phone }}</a></p>
             @endif
-            @if ($user->twitter)
-            <li>
-              <a target="_blank" href="{{ $user->twitter }}" rel="noopener noreferrer" class="icon-link">
-                <i class="fi flaticon-twitter"></i>
-              </a>
-            </li>
+            @if ($user->country)
+            <address>
+              {{ $user->address }}<br/>
+              {{ $user->postal_code }} {{ $user->city }}, {{ $countries[$user->country] }}
+            </address>
             @endif
-            <li>
-              <a href="#">
-                <i class="fa fa-email"></i>
-              </a>
-            </li>
-          </ul>
-          @endif
+            @if ($user->facebook || $user->twitter)
+            <ul class="social">
+              @if ($user->facebook)
+              <li>
+                <a target="_blank" href="{{ $user->facebook }}" rel="noopener noreferrer" class="icon-link">
+                  <i class="fi flaticon-facebook"></i>
+                </a>
+              </li>
+              @endif
+              @if ($user->twitter)
+              <li>
+                <a target="_blank" href="{{ $user->twitter }}" rel="noopener noreferrer" class="icon-link">
+                  <i class="fi flaticon-twitter"></i>
+                </a>
+              </li>
+              @endif
+              <li>
+                <a href="#">
+                  <i class="fa fa-email"></i>
+                </a>
+              </li>
+            </ul>
+            @endif
+          </div>
+
         </div>
       </div>
     </div>

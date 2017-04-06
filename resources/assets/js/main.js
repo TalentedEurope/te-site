@@ -92,4 +92,15 @@ $(function() {
         var confirm_config = get_confirm_config($(this).parents('form'));
         $.confirm(confirm_config);
     });
+
+    $('.unique-profile.company .see-contact-details').on('click', function () {
+        ga('send', 'event', 'Contact', 'see_company_info', TE.user_type);
+        $('.see-contact-details').addClass('hidden');
+        $('.contact-details').removeClass('hidden');
+    });
+    $('.unique-profile.student .see-contact-details').on('click', function () {
+        ga('send', 'event', 'Contact', 'see_student_info', TE.user_type);
+        $('.see-contact-details').addClass('hidden');
+        $('.contact-details').removeClass('hidden');
+    });
 });
