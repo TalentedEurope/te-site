@@ -48,7 +48,10 @@ class Cleanup extends Command
         ValidatorInvite::cleanup();
         $validators = Validator::whereHas('user', function ($query) {
             $query->where('notify_me', true);
-        })->whereHas('validationRequest')->get();
+        })->whereHas('validationRequest.student.user', function ($f) {
+            $f->where('valid', '!=', 'validated');
+        })->get();
+
         $alerts = Alert::get();
         foreach ($validators as $val) {
             $val->user->notify(new ValidationsPending($val->user));
