@@ -39,6 +39,7 @@
 
   <script type="text/javascript">
     TE = {};
+    TE.user_type = @if(!Auth::user())'anonymous'@elseif(Auth::user()->isA('student'))'student'@elseif(Auth::user()->isA('company'))'company'@elseif(Auth::user()->isA('institution'))'institution'@elseif(Auth::user()->isA('validator'))'validator'@endif;
     TE.logged_in = @if (Auth::user()) true @else false @endif;
     TE.profile = {'modified_fields': false};
     TE.locale = '{!! App::getLocale() !!}';

@@ -94,12 +94,12 @@ $(function() {
     });
 
     $('.unique-profile.company .see-contact-details').on('click', function () {
-        ga('send', 'event', 'Contact', 'see_info', 'company');
+        ga('send', 'event', 'Contact', 'see_company_info', TE.user_type);
         $('.see-contact-details').addClass('hidden');
         $('.contact-details').removeClass('hidden');
     });
     $('.unique-profile.student .see-contact-details').on('click', function () {
-        ga('send', 'event', 'Contact', 'see_info', 'student');
+        ga('send', 'event', 'Contact', 'see_student_info', TE.user_type);
         $('.see-contact-details').addClass('hidden');
         $('.contact-details').removeClass('hidden');
     });
