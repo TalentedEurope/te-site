@@ -5,7 +5,7 @@ return [
     
         'meta_title' => 'Talented Europe | Une jóvenes talentos con los empleadores en toda Europa',
     
-        'tagline' => 'Une<br/> <strong>a talentos jóvenes</strong> con <strong>los empleadores</strong><br/> en toda <strong>Europa</strong>',
+        'tagline' => 'Une<br/> <strong>a jóvenes talentos</strong> con <strong>empresas y autónomos</strong><br/> en toda <strong>Europa</strong>',
     
         'days' => 'días',
     

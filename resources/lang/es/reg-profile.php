@@ -253,7 +253,7 @@ return [
     
         'notifications_enabled' => 'Activado. Recibirá un correo electrónico una vez al día cuando un estudiante se quiere poner en contacto con usted.',
     
-        'notifications_disabled' => 'Deactivado. Usted no recibirá ningún correo electrónico, a excepción de los anuncios sobre el servicio.',
+        'notifications_disabled' => 'Desactivado. No recibirá ningún correo electrónico, a excepción de los anuncios sobre el servicio.',
     
         'about' => 'Acerca de',
     

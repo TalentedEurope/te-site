@@ -35,7 +35,7 @@ return [
     
         'invalid' => 'Invalide',
     
-        'student_didnt_meet_criteria' => 'L\'étudiant n\'a pas répondu aux critères',
+        'student_didnt_meet_criteria' => 'L\'étudiant n\'a pas répondu aux  rempli les critères',
     
         'make_sure_you_have_reviewed_student' => 'Veuillez vous assurer d\'avoir soigneusement examiné le profil de l\'étudiant avant de le valider',
     
@@ -53,7 +53,7 @@ return [
     
         'validators' => 'Évaluateurs',
     
-        'invites_pending' => 'Invite en attente',
+        'invites_pending' => 'Invitée en attente',
     
         'date_sent' => 'Date d\'envoi',
     
@@ -65,17 +65,18 @@ return [
     
         'invitation_is_not_valid_or_you_accepted_it' => 'Soit votre invitation n\'est plus valide, soit vous l\'avez déjà acceptée',
     
-        'changed_institution_successfully' => 'Changé l\'établissement avec succès',
+        'changed_institution_successfully' => 'Changé l\'établissement avec succès
+Le changement d\'institution a bien été pris en compte',
     
         'youll_receive_notifications_from' => 'A partir de maintenant, vous recevrez des notifications de validation',
     
-        'cannot_complete_invitation' => 'Impossible de terminer l\'invitation',
+        'cannot_complete_invitation' => 'Impossible de terminer valider l\'invitation',
     
         'no_alerts_found' => 'Aucune alerte trouvé',
     
         'study_level' => 'Niveau d\'études',
     
-        'when_it_was_sent' => 'Quand ça a été envoyé?',
+        'when_it_was_sent' => 'Quand ça cela a été envoyé?',
     
         'no_referees' => 'Aucuns évaluateurs',
     
@@ -87,20 +88,20 @@ return [
     
         'removing' => 'Suppression',
     
-        'validation_was_removed' => 'The validation was removed because you indicated that %s wasn\'t a student from this institution',
+        'validation_was_removed' => 'La validation a été retirée parce que vous avez indiqué que %s n\'était pas une étudiant de cette institution',
     
-        'validation_complete' => '%s validation complete',
+        'validation_complete' => 'Validation finalisée',
     
         'cannot_invite' => 'Cannot invite, either this email is registered to another type of user or he already has an invitation pending from this institution',
     
-        'send_invitation_to' => 'Sent invitation to %s',
+        'send_invitation_to' => 'Envoyer l\'invitation',
     
-        'cannot_find_user' => 'Cannot find user',
+        'cannot_find_user' => 'L\'utilisateur ne peut être trouvé',
     
-        'deleted_invitation_successfully' => 'Deleted invitation successfully',
+        'deleted_invitation_successfully' => 'La supression de l\'invitation a bien été prise en compte',
     
-        'cannot_find_invitation_to_delete' => 'Cannot find invitation to delete, please try again later',
+        'cannot_find_invitation_to_delete' => 'L\'invitation à supprimer n\'a pas été trouvé, pouvez vous réeessayer?',
     
-        'comment' => 'Comment',
+        'comment' => 'Commentaires',
     
 ];

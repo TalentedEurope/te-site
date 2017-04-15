@@ -213,7 +213,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'de' => 'selbstbewusst',                    
                 
-                    'fr' => 'assuré',                    
+                    'fr' => 'assuré/sur de soi',                    
                 
                     'sk' => 'sebavedomý',                    
                 
@@ -565,7 +565,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'de' => 'verlässlich',                    
                 
-                    'fr' => 'sur qui on peut compter',                    
+                    'fr' => 'sur qui on peut compter/fiable',                    
                 
                     'sk' => 'spoľahlivý',                    
                 

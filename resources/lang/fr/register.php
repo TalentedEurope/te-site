@@ -21,13 +21,13 @@ return [
     
         'all_fields_are_required' => 'Il est nécessaire de remplir tous les champs',
     
-        'confirmation_email_may_take_few_minutes' => 'E-mail de confirmation peut prendre quelques minutes pour arriver, assurez-vous également avoir vérifié votre dossier spam',
+        'confirmation_email_may_take_few_minutes' => 'L\' e-mail de confirmation peut prendre quelques minutes pour arriver, assurez-vous également avoir vérifié votre dossier spam',
     
-        'registration_complete_successfully' => 'Ll\'enregistrement complet avec succès vous pouvez vous connecter maintenant ',
+        'registration_complete_successfully' => 'L\'enregistrement a bien été effectué, vous pouvez vous connecter maintenant ',
     
-        'register_success' => 'nscription réussie',
+        'register_success' => 'Inscription réussie',
     
-        'register' => 'Enscrivez- vous',
+        'register' => 'E  Inscrivez- vous',
     
         'invited_by' => 'Vous avez été invité par',
     

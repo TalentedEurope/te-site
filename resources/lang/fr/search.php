@@ -11,11 +11,12 @@ return [
     
         'refereed' => 'Évaluateur',
     
-        'there_are_no_matching_the_selected_filters' => 'Il n\'y a aucuns correspondant aux filtres sélectionnés actuellement',
+        'there_are_no_matching_the_selected_filters' => 'Il n\'y a aucuns correspondants aux filtres sélectionnés actuellement',
     
-        'we_found' => 'Répond à vos besoins',
+        'we_found' => 'Répond à vos besoins 
+Nous avons trouvé',
     
-        'we_found_matching_your_needs' => 'Nous avons trouvé',
+        'we_found_matching_your_needs' => 'Nous avons trouvé X% correspondant à vos besoins',
     
         'filters' => 'Filtres',
     
