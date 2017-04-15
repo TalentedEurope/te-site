@@ -99,7 +99,7 @@
 
             @if (Auth::user())
             <ul class="nav navbar-nav navbar-right login">
-              <li><a href="{{ URL::to('/register') }}">{!! trans('landing.search_btn') !!}</a></li>
+              <li><a href="{{ URL::to('/profile') }}">{!! trans('landing.go_to_app') !!}</a></li>
               <li><a href="{{ URL::to('/logout') }}">{!! trans('global.logout_btn') !!}</a></li>
             </ul>
             @else

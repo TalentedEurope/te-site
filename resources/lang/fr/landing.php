@@ -77,4 +77,6 @@ Vous recherchez?',
     
         'talented_for_employers' => 'Srong> Pour les étudiants </ strong> - Europe talentueuse améliorera votre employabilité <strong> Pour les employeurs </ strong> - Europe talentueuse vous liera avec de jeunes étudiants talentueux en Europe et vous aidera à trouver la bonne personne qui peut contribuer à l\'organisation de votre entreprise Réussir avec les talents spéciaux  de vrais talents et  ayant les compétences que vous recherchez.',
     
+        'go_to_app' => 'Go to application',
+    
 ];

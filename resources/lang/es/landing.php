@@ -63,4 +63,6 @@ return [
     
         'talented_for_employers' => '<strong>Para empresas y autónomos</strong> - Talented Europe los vinculará con jóvenes estudiantes con talento de toda Europa y les ayudará a encontrar a la persona adecuada que puede contribuir al éxito de su organización con el talento y las habilidades especiales que está buscando.',
     
+        'go_to_app' => 'Ir a la aplicación',
+    
 ];

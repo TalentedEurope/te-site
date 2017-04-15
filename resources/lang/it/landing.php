@@ -63,4 +63,6 @@ return [
     
         'talented_for_employers' => '<strong>Per imprese e professionisti</strong> - Talented Europe vi metterá in contatto con i giovani studenti di talento di tutta Europa e vi aiuterà a incontrare la persona adeguata che puó contribuire al successo della vostra impresa con il talento e le competenze specifiche che sta cercando.',
     
+        'go_to_app' => 'Go to application',
+    
 ];
