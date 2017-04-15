@@ -57,7 +57,7 @@ class SearchController extends SiteSearchController
 
         if (isset($v->valid()['level_of_studies']) ||
                 isset($v->valid()['field_of_studies'])
-                || sizeof($searchKeyword)) {
+                ) {
             $results->whereHas('studies', function ($q) use ($v, $searchKeyword) {
 
                 if (isset($v->valid()['level_of_studies'])) {
