@@ -28,6 +28,10 @@
         color: $blue;
     }
 
+    .well {
+        word-wrap: break-word;
+    }
+
     .student-specs {
         list-style: none;
         padding: 0;
@@ -125,6 +129,7 @@
     .validated-by {
         .btn {
             cursor: default;
+            white-space: inherit;
 
             &:active {
                 box-shadow: none;

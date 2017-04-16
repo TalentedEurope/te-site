@@ -5,7 +5,7 @@ return [
     
         'meta_title' => 'Talented Europe | Une jóvenes talentos con los empleadores en toda Europa',
     
-        'tagline' => 'Une<br/> <strong>a talentos jóvenes</strong> con <strong>los empleadores</strong><br/> en toda <strong>Europa</strong>',
+        'tagline' => 'Une<br/> <strong>a jóvenes talentos</strong> con <strong>empresas y autónomos</strong><br/> en toda <strong>Europa</strong>',
     
         'days' => 'días',
     
@@ -62,5 +62,7 @@ return [
         'talented_for_students' => '<strong>Para estudiantes</strong> - Talented Europe mejorará la posibilidad de conseguir un empleo con el respaldo de sus tutores y les pondrá en contacto con los empresas y autónomos de toda Europa para encontrar prácticas en empresas o conseguir sus primeros empleos.',
     
         'talented_for_employers' => '<strong>Para empresas y autónomos</strong> - Talented Europe los vinculará con jóvenes estudiantes con talento de toda Europa y les ayudará a encontrar a la persona adecuada que puede contribuir al éxito de su organización con el talento y las habilidades especiales que está buscando.',
+    
+        'go_to_app' => 'Ir a la aplicación',
     
 ];

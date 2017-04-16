@@ -18,19 +18,6 @@ class StaticController extends Controller
     {
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function getHome()
-    {
-        $user = Auth::user();
-        if ($user) {
-            return redirect(route('view_profile'));
-        }
-        return $this->getLanding();
-    }
 
     /**
      * Show the landing page.
