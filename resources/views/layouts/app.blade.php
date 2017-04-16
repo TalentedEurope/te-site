@@ -10,7 +10,7 @@
   <title>@yield('page-title') | {{ env('SITE_TITLE','Talented Europe') }}</title>
   <!-- Fonts -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700,400italic,200italic,700italic,900' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:200,400,700,400italic,200italic,700italic,900&amp;subset=latin-ext' rel='stylesheet' type='text/css'>
   <!-- Styles -->
   <link rel="stylesheet" type="text/css" href="{{ elixir('css/site.css') }}">
   <link rel="apple-touch-icon" sizes="57x57" href="{{ URL::asset('img/favicon/apple-icon-57x57.png') }}">
