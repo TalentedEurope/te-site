@@ -783,37 +783,37 @@ class ProfileController extends Controller
             }
         }
         if ($public) {
-            $user->email = preg_replace('/./', '■', $user->email);
-            $user->phone = preg_replace('/./', '■', $user->phone);
-            $user->address = preg_replace('/./', '■', $user->address);
-            $user->postal_code = preg_replace('/./', '■', $user->postal_code);
-            $user->facebook = preg_replace('/./', '■', $user->facebook);
-            $user->twitter = preg_replace('/./', '■', $user->twitter);
+            $user->email = '?';
+            $user->phone = '?';
+            $user->address = '?';
+            $user->postal_code = '?';
+            $user->facebook = '?';
+            $user->twitter = '?';
             foreach ($data['studyLevels'] as $key => $value) {
-                $data['studyLevels'][$key] = preg_replace('/./', '■', $value);
+                $data['studyLevels'][$key] = '?';
             }
             foreach ($data['studyFields'] as $key => $value) {
-                $data['studyFields'][$key] = preg_replace('/./', '■', $value);
+                $data['studyFields'][$key] = '?';
             }
             foreach ($data['languages'] as $key => $value) {
-                $data['languages'][$key] = preg_replace('/./', '■', $value);
+                $data['languages'][$key] = '?';
             }
             foreach ($data['languageLevels'] as $key => $value) {
-                $data['languageLevels'][$key] = preg_replace('/./', '■', $value);
+                $data['languageLevels'][$key] = '?';
             }
             foreach ($user->userable->training as $key => $value) {
-                $value->name = preg_replace('/./', '■', $value->name);
+                $value->name = '?';
                 $value->date = '0000-00-00';
             }
             foreach ($user->userable->studies as $key => $value) {
-                $value->name = preg_replace('/./', '■', $value->name);
-                $value->institution_name = preg_replace('/./', '■', $value->institution_name);
+                $value->name = '?';
+                $value->institution_name = '?';
             }
             foreach ($user->userable->experiences as $key => $value) {
                 $value->from = '0000-00-00';
                 $value->until = '0000-00-00';
-                $value->company = preg_replace('/./', '■', $value->company);
-                $value->position = preg_replace('/./', '■', $value->position);
+                $value->company = '?';
+                $value->position = '?';
             }
         }
 
@@ -873,7 +873,7 @@ class ProfileController extends Controller
     {
         $data = $this->getCompanyPrivateData($user, $public);
         if ($public) {
-            $user->email = preg_replace('/./', '■', $user->email);
+            $user->email = '?';
         }
         $data['public'] = $public;
 

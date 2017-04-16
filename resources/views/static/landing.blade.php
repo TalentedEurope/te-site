@@ -99,7 +99,7 @@
 
             @if (Auth::user())
             <ul class="nav navbar-nav navbar-right login">
-              <li><a href="{{ URL::to('/register') }}">{!! trans('landing.search_btn') !!}</a></li>
+              <li><a href="{{ URL::to('/profile') }}">{!! trans('landing.go_to_app') !!}</a></li>
               <li><a href="{{ URL::to('/logout') }}">{!! trans('global.logout_btn') !!}</a></li>
             </ul>
             @else
@@ -317,9 +317,13 @@
         <div class="students-box clearfix">
           @if ($recentStudents->count())
             @foreach ($recentStudents as $student)
-              <a href="{{ route('get_profile', [str_slug($student->user->name),$student->user->id]) }}" class="col-xs-6 col-sm-4 col-md-2 text-center">
-              <img width="150" src="{{ asset('uploads/photo/'.$student->user->image) }}"/>
-              <p>{{ $student->user->FullName }}</p>
+              @if (Auth::user())
+                <a href="{{ route('get_profile', [str_slug($student->user->name),$student->user->id]) }}" class="col-xs-6 col-sm-4 col-md-2 text-center">
+              @else
+                <a href="/register?see_more=1" class="col-xs-6 col-sm-4 col-md-2 text-center">
+              @endif
+                  <img width="150" src="{{ asset('uploads/photo/'.$student->user->image) }}"/>
+                  <p>{{ $student->user->FullName }}</p>
               </a>
             @endforeach
         </div>

@@ -63,4 +63,6 @@ return [
     
         'talented_for_employers' => '<strong>For employers</strong> - Talented Europe will link you with talented young students across Europe and help you find the right person who can contribute to your organisation’s success with the special talents and skills that you are looking for.',
     
+        'go_to_app' => 'Go to application',
+    
 ];

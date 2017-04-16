@@ -63,4 +63,6 @@ return [
     
         'talented_for_employers' => '<strong>Für Arbeitgeber</strong> Talented Europe verbindet Sie talentierten jungen Studenten in ganz Europa und hilft Ihnen die passende Person für Sie zu finden, der Ihren Unternehmen mit seinen speziellen Fähigkeit und Begabung zu Erfolg verhilft.',
     
+        'go_to_app' => 'Go to application',
+    
 ];

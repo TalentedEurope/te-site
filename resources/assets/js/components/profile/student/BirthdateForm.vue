@@ -59,7 +59,8 @@ export default {
         display: inline-block;
     }
 
-    select {
+    select.form-control {
+        display: inline-block;
         margin-right: 15px;
 
         &:last-child {
