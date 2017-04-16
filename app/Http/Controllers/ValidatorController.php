@@ -244,6 +244,8 @@ class ValidatorController extends Controller
             $user->password = bcrypt($request->input('password'));
             $user->name = $request->input('name');
             $user->surname = $request->input('surname');
+            $user->is_filled = 1;
+            $user->visible = 1;
             $user->verified = 1;
             $user->save();
             $validator = \App\Models\Validator::create(array(
