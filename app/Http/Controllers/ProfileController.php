@@ -156,9 +156,9 @@ class ProfileController extends Controller
         }
         if ($user->isA('validator')) {
             $data = $this->getValidatorPrivateData($user);
-            $data['validator'] = App\Models\Validator::where('id', $data['validator']->id)->with(['validationRequest' => function($q) {
-                $q->whereHas('student', function($q) {
-                    $q->where('valid','validated');
+            $data['validator'] = App\Models\Validator::where('id', $data['validator']->id)->with(['validationRequest' => function ($q) {
+                $q->whereHas('student', function ($q) {
+                    $q->where('valid', 'validated');
                 });
             }])->first();
             $data['token'] = LoginController::userToken();
@@ -202,8 +202,11 @@ class ProfileController extends Controller
     protected function processCommon(Request $request, User $user)
     {
         $errors = new MessageBag();
-
-        $v = Validator::make($request->all(), User::rules(false, false, $user));
+        $values = $request->all();
+        if (isset($values['twitter']) && starts_with($values['twitter'], '@')) {
+            $values['twitter'] = str_replace('@', "http://twitter.com/", $values['twitter']);
+        }
+        $v = Validator::make($values, User::rules(false, false, $user));
         $v->setAttributeNames(User::niceNames());
 
         $errors = $errors->merge($v);
