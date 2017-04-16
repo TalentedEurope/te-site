@@ -64,6 +64,7 @@ class ValidationController extends Controller
         }
 
         $v = Validator::make($request->all(), ValidationRequest::$rules);
+        $v->setAttributeNames(ValidationRequest::niceNames());
         if ($v->passes()) {
             if ($v->valid()['status'] == 'valid') {
                 $student->valid = ValidationRequest::$status[1];
