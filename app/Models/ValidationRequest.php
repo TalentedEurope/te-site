@@ -32,6 +32,19 @@ class ValidationRequest extends Model
         });
     }
 
+    public static function niceNames()
+    {
+        $niceNames = array(
+            'valid' => trans('validation.valid'),
+            'invalid' => trans('validation.invalid'),
+            'comment' => trans('validation.comment'),
+            'reason' => trans('validation.reason'),
+            'status' => trans('validation.status')
+
+        );
+        return $niceNames;
+    }
+
     public static function invalidReasons()
     {
         return array(
