@@ -37,9 +37,12 @@
         display: inline-block;
         margin-top: 20px;
         margin-bottom: 10px;
-        border: 6px solid $light-gray;
         max-height: 200px;
     }
+    img.img-cicle {
+        border: 6px solid $light-gray;
+    }
+
     .ratings {
         margin-top: 10px;
         font-size: 16px;

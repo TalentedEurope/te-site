@@ -24,7 +24,7 @@
             </div>
             <div class="col-xs-12 col-sm-4 col-md-3 text-center">
                 <figure>
-                    <img :src="company.photo" alt="" class="img-circle img-responsive">
+                    <img :src="company.photo" alt="" class="img-responsive">
                 </figure>
 
                 <ul class="social">

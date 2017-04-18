@@ -198,8 +198,9 @@
     .contact-info {
         img.img-responsive {
             display: inline-block;
-            margin-top: 20px;
             margin-bottom: 10px;
+        }
+        img.img-circle {
             border: 6px solid $light-gray;
         }
 
