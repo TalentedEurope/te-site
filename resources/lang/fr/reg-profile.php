@@ -5,9 +5,7 @@ return [
     
         'studies_level_5' => 'l´enseignement supérieur de type court',
     
-        'studies_level_6' => 'le Baccalauréat ou équivalent
-(NB: Bachelor = Licence 3)
-Licence 3 ou équivalent
+        'studies_level_6' => 'Licence 3 ou équivalent
 ',
     
         'studies_level_7' => 'la Maîtrise ou équivalent',
@@ -44,7 +42,7 @@ Licence 3 ou équivalent
     
         'insitution_his' => 'l\' école secondaire',
     
-        'legal_representative' => 'le représentant légitime légal',
+        'legal_representative' => 'le représentant légal',
     
         'institution_pic' => 'PIC',
     
@@ -112,7 +110,7 @@ Licence 3 ou équivalent
     
         'student_study_scanned_document' => 'le document numérisé',
     
-        'student_validator' => 'Si vous ne présentez aucun évaluateur, il vous en sera affecté un automatiquement incorporé',
+        'student_validator' => 'Si vous ne présentez aucun évaluateur, il vous en sera affecté un automatiquement ',
     
         'surname' => 'le nom',
     
@@ -284,11 +282,11 @@ Sur',
     
         'update_settings' => 'Mettre à jour les paramètres',
     
-        'change_your_password' => 'Changezr votre mot de passe',
+        'change_your_password' => 'Changer votre mot de passe',
     
         'new_password' => 'Nouveau mot de passe',
     
-        'repeat_new_password' => 'Rétez Répéter le nouveau mot de passe',
+        'repeat_new_password' => 'Répéter le nouveau mot de passe',
     
         'save_new_password' => 'Enregistrer nouveau mot de passe',
     
@@ -406,7 +404,7 @@ Sur',
     
         'profile_readiness' => 'Préparation du profil',
     
-        'profile_readiness_explanation' => 'L\' éÉvaluation de votre profil  donne une opinion de tiers de vous et aide à augmenter les possibilités de contact d\'une entreprise',
+        'profile_readiness_explanation' => 'L\' évaluation de votre profil  donne une opinion de tiers de vous et aide à augmenter les possibilités de contact d\'une entreprise',
     
         'get_a_better_refeer' => 'Obtenez un meilleur outil pour améliorer votre profil et améliorer la possibilité de contact de l\'entreprise',
     
@@ -414,7 +412,7 @@ Sur',
     
         'cant_find_your_institution' => 'Vous ne trouvez pas votre établissement? Demandez à votre évaluateur et à votre institution de rejoindre l\'Europe talentueuse',
     
-        'this_step_sends_an_email_to_your_referee' => 'Cette étape envoie un mail courrier électronique à votre évaluateur avec des instructions sur la façon de rejoindre Talented Europe, l\'enregistre automatiquement comme évaluateur une fois que son institution est validée se joint, et vous ajoute à la file d\'attente évaluateur refeeral',
+        'this_step_sends_an_email_to_your_referee' => 'Cette étape envoie un mail a votre évaluateur avec des instructions sur la façon de rejoindre Talented Europe, l\'enregistre automatiquement comme évaluateur une fois que son institution est validée  et vous ajoute à la file d\'attente évaluateur ',
     
         'send_invitation' => 'Envoyer une invitation',
     
@@ -424,7 +422,7 @@ Sur',
     
         'profile_validated_denied' => 'Votre profil a été refusé',
     
-        'not_enough_data_to_do_a_refeer' => 'Nous n\'avons pas assez de données de vous pour pouvoir faire un évaluateur (?) reefer.',
+        'not_enough_data_to_do_a_refeer' => 'Nous n\'avons pas assez de données de vous pour pouvoir faire un évaluateur (?) ',
     
         'progress_account_setup' => 'Configuration du compte',
     
@@ -438,11 +436,11 @@ Sur',
     
         'leave_institution' => 'Quitter  l\' établissement?',
     
-        'do_you_want_to_leave_institution' => 'Voulez-vous quitter l\'établissement? cela envoie les demandes de validation en attente de retour revenir, et vous ne serez pas en mesure de valider quelqu\'un jusqu\'à ce qu\'une autre institution vous invite à un retour',
+        'do_you_want_to_leave_institution' => 'Voulez-vous quitter l\'établissement? cela envoie les demandes de validation en attente de retour  et vous ne serez pas en mesure de valider quelqu\'un jusqu\'à ce qu\'une autre institution vous invite à un retour',
     
         'leave_institution_button' => 'Oui! Quitter cette institution académique',
     
-        'your_profile_is_empty' => 'Votre profil est incomplet vide!',
+        'your_profile_is_empty' => 'Votre profil est incomplet! ',
     
         'tab_changes_not_saved' => 'Les changements n ont pas été enregistrées, vous risquez de perdre des données',
     
@@ -454,11 +452,11 @@ Sur',
     
         'cannot_send_more_alerts_to_this_company_today' => 'Aujourd\'hui vous ne pouvez pas envoyer plus alertes à cette société ',
     
-        'tell_the_company_that_you_be_interested' => 'Dites à l\'entreprise a société que vous êtes  souhaitez  intéressé à travailler pour eux',
+        'tell_the_company_that_you_be_interested' => 'Dites à l\'entreprise que vous souhaitez travailler pour eux',
     
-        'alert_sent_successfully' => 'Alerte envoyé avec succès à l\'entreprise la société',
+        'alert_sent_successfully' => 'Alerte envoyé avec succès à l\'entreprise ',
     
-        'you_have_already_sent_an_alert_to_this_company' => 'Vous avez déjà envoyé une alerte à cette société entreprise ',
+        'you_have_already_sent_an_alert_to_this_company' => 'Vous avez déjà envoyé une alerte à cette entreprise',
     
         'no_matches' => 'Pas de correspondance
 ',
@@ -473,7 +471,7 @@ Sur',
     
         'institution_type' => 'Type d\'établissement',
     
-        'complete_the_registration' => 'Complétez l\'enregistrement, en indiquant les informations suivantes',
+        'complete_the_registration' => 'Complétez l\'enregistrement,en indiquant les informations suivantes',
     
         'changes_saved_successfully' => 'Modifications enregistrées avec succès',
     
