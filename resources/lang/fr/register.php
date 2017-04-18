@@ -27,7 +27,7 @@ return [
     
         'register_success' => 'Inscription réussie',
     
-        'register' => 'E  Inscrivez- vous',
+        'register' => 'Inscrivez- vous',
     
         'invited_by' => 'Vous avez été invité par',
     

@@ -35,7 +35,7 @@ return [
     
         'invalid' => 'Invalide',
     
-        'student_didnt_meet_criteria' => 'L\'étudiant n\'a pas répondu aux  rempli les critères',
+        'student_didnt_meet_criteria' => 'L\'étudiant n\'a pas rempli les critères',
     
         'make_sure_you_have_reviewed_student' => 'Veuillez vous assurer d\'avoir soigneusement examiné le profil de l\'étudiant avant de le valider',
     
@@ -53,7 +53,7 @@ return [
     
         'validators' => 'Évaluateurs',
     
-        'invites_pending' => 'Invitée en attente',
+        'invites_pending' => 'Invité en attente',
     
         'date_sent' => 'Date d\'envoi',
     
@@ -65,18 +65,17 @@ return [
     
         'invitation_is_not_valid_or_you_accepted_it' => 'Soit votre invitation n\'est plus valide, soit vous l\'avez déjà acceptée',
     
-        'changed_institution_successfully' => 'Changé l\'établissement avec succès
-Le changement d\'institution a bien été pris en compte',
+        'changed_institution_successfully' => 'Le changement d\'institution a bien été pris en compte',
     
         'youll_receive_notifications_from' => 'A partir de maintenant, vous recevrez des notifications de validation',
     
-        'cannot_complete_invitation' => 'Impossible de terminer valider l\'invitation',
+        'cannot_complete_invitation' => 'Impossible devalider l\'invitation',
     
         'no_alerts_found' => 'Aucune alerte trouvé',
     
         'study_level' => 'Niveau d\'études',
     
-        'when_it_was_sent' => 'Quand ça cela a été envoyé?',
+        'when_it_was_sent' => 'Quand cela a été envoyé?',
     
         'no_referees' => 'Aucuns évaluateurs',
     
