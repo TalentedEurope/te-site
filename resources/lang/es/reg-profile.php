@@ -543,4 +543,6 @@ return [
     
         'view_contact_details' => 'Ver datos de contacto',
     
+        'cant_send_alerts_until_you_fill_the_profile' => 'Para poder darle "toques" a empresas, debes completar tu perfil. Por favor, comprueba qué datos te faltan por proporcionar.',
+    
 ];
