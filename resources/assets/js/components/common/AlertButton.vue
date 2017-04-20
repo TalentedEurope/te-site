@@ -19,7 +19,8 @@ export default {
             sending: false,
             show_alert_button: $("meta[id='user_type']").attr('content') == 'student',
             disabled: !this.alertable,
-            tooltip_text: ''
+            tooltip_text: '',
+            profile_is_filled: TE.profile_is_filled
         }
     },
     ready: function () {
@@ -40,6 +41,11 @@ export default {
             }
         },
         sendAlert: function () {
+            if (!this.profile_is_filled) {
+                this.showToastCantSendAlertsUntilProfileIsFilled();
+                return;
+            }
+
             if (this.sending) {
                 return;
             }
@@ -47,34 +53,14 @@ export default {
             alertsResource.post(this.companyId)
                 .then((response) => {
                     this.disabled = true;
-                    $.toast({
-                        text : this.$t('reg-profile.alert_sent_successfully'),
-                        showHideTransition : 'fade',
-                        bgColor : '#31B47D',
-                        textColor : '#FFFFFF',
-                        allowToastClose : false,
-                        hideAfter : 2500,
-                        stack : false,
-                        loader: false,
-                        textAlign : 'center',
-                        position : 'top-center'
-                    });
+                    this.showToastAlertSentSuccessfully();
                     EventBus.$emit('onAlert', '');
                 }, (errorResponse) => {
                     if (errorResponse.status == 429) {
                         this.disabled = true;
-                        $.toast({
-                            text : this.$t('reg-profile.you_have_already_sent_an_alert_to_this_company'),
-                            showHideTransition : 'fade',
-                            bgColor : '#bf433c',
-                            textColor : '#FFFFFF',
-                            allowToastClose : true,
-                            hideAfter : false,
-                            stack : false,
-                            loader: false,
-                            textAlign : 'center',
-                            position : 'top-center'
-                        });
+                        this.showToastAlreadySentAlertToThisCompany()
+                    } else if (errorResponse.status == 403) {
+                        this.showToastCantSendAlertsUntilProfileIsFilled()
                     } else {
                         defaultErrorToast();
                     }
@@ -82,6 +68,48 @@ export default {
                 .finally(() => {
                     this.sending = false;
                 });
+        },
+        showToastCantSendAlertsUntilProfileIsFilled: function () {
+            $.toast({
+                text : this.$t('reg-profile.cant_send_alerts_until_you_fill_the_profile'),
+                showHideTransition : 'fade',
+                bgColor : '#d87135',
+                textColor : '#FFFFFF',
+                allowToastClose : true,
+                hideAfter : false,
+                stack : false,
+                loader: false,
+                textAlign : 'center',
+                position : 'top-center'
+            });
+        },
+        showToastAlertSentSuccessfully: function () {
+            $.toast({
+                text : this.$t('reg-profile.alert_sent_successfully'),
+                showHideTransition : 'fade',
+                bgColor : '#31B47D',
+                textColor : '#FFFFFF',
+                allowToastClose : false,
+                hideAfter : 2500,
+                stack : false,
+                loader: false,
+                textAlign : 'center',
+                position : 'top-center'
+            });
+        },
+        showToastAlreadySentAlertToThisCompany: function () {
+            $.toast({
+                text : this.$t('reg-profile.you_have_already_sent_an_alert_to_this_company'),
+                showHideTransition : 'fade',
+                bgColor : '#bf433c',
+                textColor : '#FFFFFF',
+                allowToastClose : true,
+                hideAfter : false,
+                stack : false,
+                loader: false,
+                textAlign : 'center',
+                position : 'top-center'
+            });
         }
     },
     watch: {

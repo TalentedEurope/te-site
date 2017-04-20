@@ -43,6 +43,7 @@
     TE.logged_in = @if (Auth::user()) true @else false @endif;
     TE.profile = {'modified_fields': false};
     TE.locale = '{!! App::getLocale() !!}';
+    TE.profile_is_filled = @if (Auth::user()->is_filled) true @else false @endif;
     TE.translations = {
       'auth': {!! json_encode(trans('auth'), JSON_HEX_APOS) !!},
       'global': {!! json_encode(trans('global'), JSON_HEX_APOS) !!},
