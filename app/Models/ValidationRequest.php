@@ -78,6 +78,8 @@ class ValidationRequest extends Model
 
     public static function cleanup()
     {
-        return ValidationRequest::where('created_at', '<=', Carbon::now()->subDays(env('CLEANUP_DAYS', 14)))->delete();
+        return ValidationRequest::where('created_at', '<=', Carbon::now()->subDays(env('CLEANUP_DAYS', 14)))->whereHas('student', function ($query) {
+            $query->where('valid', 'pending');
+        })->delete();
     }
 }
