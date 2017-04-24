@@ -35,7 +35,7 @@
         <div class="row">
           @if ($student->valid == "validated" && $student->validationRequest)
             @if ($student->validationRequest)
-              <p class="validated-by col-sm-6"><span class="btn btn-lg"><strong><i class="fa fa-star icon"></i> {!! trans('reg-profile.refereed_by') !!}:
+              <p class="validated-by col-sm-8"><span class="btn btn-lg"><strong><i class="fa fa-star icon"></i> {!! trans('reg-profile.refereed_by') !!}:
                </strong>
                <a href="{{
                   route('get_profile',
@@ -53,7 +53,7 @@
             <p class="validated-by col-sm-6"><span class="btn btn-lg"><strong><em>{!! trans('reg-profile.refereeing_pending') !!}</em></strong></span></p>
           @endif
           @if ($student->curriculum && !$public)
-          <p class="col-sm-6"><a class="btn btn-lg btn-primary pull-right"
+          <p class="col-sm-4"><a class="btn btn-lg btn-primary pull-right"
              href="{{ route('get_curriculum', ['id' => $user->id]) }}"> <i class="fa fa-cloud-download" aria-hidden="true"></i> {!! trans('reg-profile.student_europass') !!}</a></p>
           @endif
         </div>

@@ -7,7 +7,7 @@ return [
     
         'accountActivated_line_2' => 'Merci de votre inscription sur Talented Europe',
     
-        'accountActivated_line_3' => 'Cliquez sur le lien suivant et confirmez votre adresse mail de mél',
+        'accountActivated_line_3' => 'Cliquez sur le lien suivant et confirmez votre adresse mail',
     
         'accountActivated_action_4' => 'Confirmer mon compte',
     
@@ -17,7 +17,7 @@ return [
     
         'changeInstitution_line_2' => '% vous a invité comme évaluateur dans Talented Europe',
     
-        'changeInstitution_line_3' => 'Puisque vous êtes déja évaluateur dans Talented Europe,vous êtes demandé  nous vous demandons de confirmer cette modification',
+        'changeInstitution_line_3' => 'Puisque vous êtes déja évaluateur dans Talented Europe, nous vous demandons de confirmer cette modification',
     
         'changeInstitution_action_4' => 'Confirmer les modifications',
     
@@ -25,7 +25,7 @@ return [
     
         'institutionRemoved.subject_1' => '% vous a exclut de son institution dans Talented Europe',
     
-        'institutionRemoved.line_2' => '% vous a exclut de son institution dans Talented Europe, si vous avez été exclu par erreur,contactez- les, pour que la situaion puisse etre remédiée résolue',
+        'institutionRemoved.line_2' => '% vous a exclut de son institution dans Talented Europe, si vous avez été exclu par erreur,contactez- les, pour que la situaion puisse etre résolue',
     
         'institutionRemoved.line_3' => 'Merci d\' utiliser notre application',
     
@@ -35,7 +35,7 @@ return [
     
         'inviteCreated_line_3' => 'Cliquez sur le lien suivant pour créer votre compte utilisateur',
     
-        'inviteCreated_action_4' => 'Créer mom  mon compte',
+        'inviteCreated_action_4' => 'Créer mon compte',
     
         'inviteCreated_line_5' => 'Merci d´utiliser notre application',
     
@@ -45,7 +45,7 @@ return [
     
         'validatorRequested_line_3' => '% vous a invitée comme évaluateur dans Talented Europe',
     
-        'validatorRequested_line_4' => 'Envoyez ce lien à l´institution où vous êtes employé, pour que celle- ci puisse s´enregistrer à l´aide de lui',
+        'validatorRequested_line_4' => 'Envoyez ce lien à l´institution où vous êtes employé, pour que celle- ci puisse s´enregistrer ',
     
         'validatorRequested_line_5' => 'Si  votre institution s´enregistre en cliquant sur le lien suivant, vous serez automatiqement invité dans leur registre',
     

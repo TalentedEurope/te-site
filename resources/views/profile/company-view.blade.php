@@ -50,7 +50,7 @@
       <div class="well">
         @if ($user->image)
         <figure>
-          <img src="{{ $user->getPhoto() }}" alt="{{ $user->name }}" class="img-circle img-responsive">
+          <img src="{{ $user->getPhoto() }}" alt="{{ $user->name }}" class="img-responsive">
         </figure>
         @endif
         <div class="contact">

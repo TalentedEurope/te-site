@@ -100,6 +100,9 @@ class AlertController extends SiteAlertController
             ],
         ]);
         if ($v->passes()) {
+            if (!$user->is_filled) {
+                return Response::json(trans('reg-profile.cant_send_alerts_until_you_fill_the_profile'), 403);
+            }
             if (!Alert::isAllowed($user->id, $request->input('company'))) {
                 return Response::json(trans('api.'.'too_many_requests'), 429);
             }

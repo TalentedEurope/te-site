@@ -199,9 +199,23 @@ class ProfileController extends Controller
         return $reqErrors;
     }
 
+    protected function initialCapitalize($str)
+    {
+        return ucwords(strtolower($str));
+    }
+
     protected function processCommon(Request $request, User $user)
     {
         $errors = new MessageBag();
+
+        if (Auth::user()->isA('student')) {
+            foreach (['name', 'surname', 'city'] as $field) {
+                if ($request->has($field)) {
+                    $request->offsetSet($field, $this->initialCapitalize($request->input($field)));
+                }
+            }
+        }
+
         $values = $request->all();
         if (isset($values['twitter']) && starts_with($values['twitter'], '@')) {
             $values['twitter'] = str_replace('@', "http://twitter.com/", $values['twitter']);
@@ -543,7 +557,7 @@ class ProfileController extends Controller
                     }
 
                     if (isset($itemVal->valid()['institution_name'])) {
-                        $study->institution_name = $stud['institution_name'];
+                        $study->institution_name = $this->initialCapitalize($stud['institution_name']);
                     }
 
                     if (isset($itemVal->valid()['level'])) {
