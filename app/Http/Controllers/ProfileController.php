@@ -254,15 +254,16 @@ class ProfileController extends Controller
             unlink($fname);
             $fname .= '.jpg';
             $img = Image::make($request->file('image'));
+            $padding = 15;
             if (auth::user()->isA('student')) {
                 $img->fit(User::$photoHeight, User::$photoHeight)->save($fname);
             } else {
                 if ($img->width() > $img->height()) {
-                    $img->resize(User::$photoWidth, null, function ($constraint) {
+                    $img->resize(User::$photoWidth - $padding, null, function ($constraint) {
                         $constraint->aspectRatio();
                     });
                 } else {
-                    $img->resize(null, User::$photoHeight, function ($constraint) {
+                    $img->resize(null, User::$photoHeight - $padding, function ($constraint) {
                         $constraint->aspectRatio();
                     });
                 }
