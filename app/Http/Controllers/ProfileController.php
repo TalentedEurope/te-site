@@ -256,7 +256,7 @@ class ProfileController extends Controller
             $img = Image::make($request->file('image'));
             $padding = 15;
             if (auth::user()->isA('student')) {
-                $img->fit(User::$photoHeight, User::$photoHeight)->save($fname);
+                $img->fit(User::$photoWidth, User::$photoWidth)->save($fname);
             } else {
                 if ($img->width() > $img->height()) {
                     $img->resize(User::$photoWidth - $padding, null, function ($constraint) {
