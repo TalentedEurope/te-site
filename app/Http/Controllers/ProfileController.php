@@ -254,7 +254,7 @@ class ProfileController extends Controller
             unlink($fname);
             $fname .= '.jpg';
             $img = Image::make($request->file('image'));
-            $padding = 8;
+            $padding = 15;
             if (auth::user()->isA('student')) {
                 $img->fit(User::$photoHeight, User::$photoHeight)->save($fname);
             } else {
