@@ -53,4 +53,16 @@ return [
     
         'validatorRequested_line_7' => 'Grazie per utilizzare la nostra applicazione',
     
+        'newAlerts_subject_1' => 'New alerts from students',
+    
+        'newAlerts_line_2' => 'Hello we\'re reminding you that some students alerted you on our platform',
+    
+        'newAlerts_line_3' => 'Please click the following button to log in and see your panel',
+    
+        'validationsPending_subject_1' => 'Referees pending on Talented Europe',
+    
+        'validationsPending_line_2' => 'Hello we\'re reminding you that you have some referee\'s pending on our platform',
+    
+        'validationsPending_line_3' => 'Please click the following button to log in and see your panel',
+    
 ];

@@ -67,9 +67,9 @@ Une vitrine du classement des meilleurs étudiants en Europe.  Une idée simple 
     
         'join_talented_europe_today' => 'Rejoignez l\'Europe talentueuse dès aujourd\'hui!',
     
-        'talented_for_students' => '<Strong> Pour les étudiants </ strong> - Europe talentueuse améliorera votre employabilité avec l\'aval de vos tuteurs et vous mettra en contact avec les employeurs en Europe pour des stages ou des emplois de première carrière.',
+        'talented_for_students' => '<strong> Pour les étudiants </ strong> - Europe talentueuse améliorera votre employabilité avec l\'aval de vos tuteurs et vous mettra en contact avec les employeurs en Europe pour des stages ou des emplois de première carrière.',
     
-        'talented_for_employers' => 'Srong> Pour les étudiants </ strong> - Europe talentueuse améliorera votre employabilité <strong> Pour les employeurs </ strong> - Europe talentueuse vous liera avec de jeunes étudiants talentueux en Europe et vous aidera à trouver la bonne personne qui peut contribuer à l\'organisation de votre entreprise Réussir avec de vrais talents ayant les compétences que vous recherchez.',
+        'talented_for_employers' => '<strong> Pour les étudiants </strong> - Europe talentueuse améliorera votre employabilité <strong> Pour les employeurs </strong> - Europe talentueuse vous liera avec de jeunes étudiants talentueux en Europe et vous aidera à trouver la bonne personne qui peut contribuer à l\'organisation de votre entreprise Réussir avec de vrais talents ayant les compétences que vous recherchez.',
     
         'go_to_app' => 'Go to application',
     

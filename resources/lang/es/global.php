@@ -125,13 +125,13 @@ return [
     
         'AF' => 'Afghanistan',
     
-        'AX' => 'Åland Islands',
+        'AX' => 'Islas Åland',
     
         'AL' => 'Albania',
     
-        'DZ' => 'Algeria',
+        'DZ' => 'Argelia',
     
-        'AS' => 'American Samoa',
+        'AS' => 'Samoa Americana',
     
         'AD' => 'Andorra',
     
@@ -221,7 +221,7 @@ return [
     
         'CD' => 'Rep. Democrática del Congo',
     
-        'CK' => 'Cook Islands',
+        'CK' => 'Islas Cook',
     
         'CR' => 'Costa Rica',
     
@@ -255,9 +255,9 @@ return [
     
         'FJ' => 'Fiji',
     
-        'GF' => 'Guiana Francesa',
+        'GF' => 'Guayana Francesa',
     
-        'PF' => 'Polynesia Francesa',
+        'PF' => 'Polinesia Francesa',
     
         'TF' => 'Territorios Franceses del Sur',
     
@@ -271,7 +271,7 @@ return [
     
         'GI' => 'Gibraltar',
     
-        'GL' => 'Greenland',
+        'GL' => 'Groelandia',
     
         'GD' => 'Grenada',
     
@@ -457,7 +457,7 @@ return [
     
         'PM' => 'Saint Pierre y Miquelon',
     
-        'VC' => 'Saint Vincent y las Grenadines',
+        'VC' => 'San Vincente y las Grenadinas',
     
         'WS' => 'Samoa',
     
@@ -465,7 +465,7 @@ return [
     
         'ST' => 'Sao Tome y Principe',
     
-        'SA' => 'Saudi Arabia',
+        'SA' => 'Arabia Saudí',
     
         'SN' => 'Senegal',
     
@@ -473,17 +473,17 @@ return [
     
         'SC' => 'Seychelles',
     
-        'SL' => 'Sierra Leone',
+        'SL' => 'Sierra Leona',
     
-        'SG' => 'Singapore',
+        'SG' => 'Singapur',
     
         'SX' => 'Sint Maarten (Dutch part)',
     
-        'SB' => 'Solomon Islands',
+        'SB' => 'Islas Salomon',
     
         'SO' => 'Somalia',
     
-        'ZA' => 'South Africa',
+        'ZA' => 'Sudáfrica',
     
         'GS' => 'South Georgia y las islas de South Sandwich',
     
@@ -499,9 +499,9 @@ return [
     
         'SZ' => 'Swaziland',
     
-        'CH' => 'Switzerland',
+        'CH' => 'Suiza',
     
-        'SY' => 'Syrian Arab Republic',
+        'SY' => 'Siria',
     
         'TW' => 'Taiwan, provincia de China',
     

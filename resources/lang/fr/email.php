@@ -13,9 +13,9 @@ return [
     
         'accountActivated_line_5' => 'Merci d´utiliser notre application',
     
-        'changeInstitution_subject_1' => '% vous a invité comme évaluateur dans Talented Europe',
+        'changeInstitution_subject_1' => '%s vous a invité comme évaluateur dans Talented Europe',
     
-        'changeInstitution_line_2' => '% vous a invité comme évaluateur dans Talented Europe',
+        'changeInstitution_line_2' => '%s vous a invité comme évaluateur dans Talented Europe',
     
         'changeInstitution_line_3' => 'Puisque vous êtes déja évaluateur dans Talented Europe, nous vous demandons de confirmer cette modification',
     
@@ -23,15 +23,15 @@ return [
     
         'changeInstitution_line_5' => 'Merci d´utiliser notre application',
     
-        'institutionRemoved.subject_1' => '% vous a exclut de son institution dans Talented Europe',
+        'institutionRemoved.subject_1' => '%s vous a exclut de son institution dans Talented Europe',
     
-        'institutionRemoved.line_2' => '% vous a exclut de son institution dans Talented Europe, si vous avez été exclu par erreur,contactez- les, pour que la situaion puisse etre résolue',
+        'institutionRemoved.line_2' => '%s vous a exclut de son institution dans Talented Europe, si vous avez été exclu par erreur,contactez- les, pour que la situaion puisse etre résolue',
     
         'institutionRemoved.line_3' => 'Merci d\' utiliser notre application',
     
-        'inviteCreated_subject_1' => '% vous a invitée comme évaluateur dans Talented Europe',
+        'inviteCreated_subject_1' => '%s vous a invitée comme évaluateur dans Talented Europe',
     
-        'inviteCreated_line_2' => '% vous a invitée comme évaluateur dans Talented Europe',
+        'inviteCreated_line_2' => '%s vous a invitée comme évaluateur dans Talented Europe',
     
         'inviteCreated_line_3' => 'Cliquez sur le lien suivant pour créer votre compte utilisateur',
     
@@ -39,11 +39,11 @@ return [
     
         'inviteCreated_line_5' => 'Merci d´utiliser notre application',
     
-        'validatorRequested_subject_1' => '% vous a invitée comme évaluateur dans Talented Europe',
+        'validatorRequested_subject_1' => '%s vous a invitée comme évaluateur dans Talented Europe',
     
         'validatorRequested_line_2' => 'Hello %s',
     
-        'validatorRequested_line_3' => '% vous a invitée comme évaluateur dans Talented Europe',
+        'validatorRequested_line_3' => '%s vous a invitée comme évaluateur dans Talented Europe',
     
         'validatorRequested_line_4' => 'Envoyez ce lien à l´institution où vous êtes employé, pour que celle- ci puisse s´enregistrer ',
     
@@ -52,5 +52,17 @@ return [
         'validatorRequested_action_6' => 'Créer un compte pour une institution',
     
         'validatorRequested_line_7' => 'Merci d´utiliser notre application',
+    
+        'newAlerts_subject_1' => 'New alerts from students',
+    
+        'newAlerts_line_2' => 'Hello we\'re reminding you that some students alerted you on our platform',
+    
+        'newAlerts_line_3' => 'Please click the following button to log in and see your panel',
+    
+        'validationsPending_subject_1' => 'Referees pending on Talented Europe',
+    
+        'validationsPending_line_2' => 'Hello we\'re reminding you that you have some referee\'s pending on our platform',
+    
+        'validationsPending_line_3' => 'Please click the following button to log in and see your panel',
     
 ];

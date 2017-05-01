@@ -294,7 +294,7 @@ Sur',
     
         'my_photo' => 'Ma photographie',
     
-        'download_curriculum' => 'Téléchargezr le curriculum',
+        'download_curriculum' => 'Télécharger le curriculum',
     
         'my_talent' => 'on talent',
     
@@ -422,7 +422,7 @@ Sur',
     
         'profile_validated_denied' => 'Votre profil a été refusé',
     
-        'not_enough_data_to_do_a_refeer' => 'Nous n\'avons pas assez de données de vous pour pouvoir faire un évaluateur (?) ',
+        'not_enough_data_to_do_a_refeer' => 'Nous n\'avons pas assez de données de vous pour pouvoir faire un évaluateur',
     
         'progress_account_setup' => 'Configuration du compte',
     
@@ -432,7 +432,7 @@ Sur',
     
         'progress_completed' => 'Terminé',
     
-        'you_must_put_referee_email' => 'Vous devez mettre le courriel de l\'évaluateur, et non celui de l\'établissement',
+        'you_must_put_referee_email' => '<strong>S\'il vous plaît noter</strong>Vous devez mettre le courriel de l\'évaluateur, et non celui de l\'établissement',
     
         'leave_institution' => 'Quitter  l\' établissement?',
     
