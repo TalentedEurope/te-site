@@ -21,7 +21,7 @@ return [
     
         'what_is_cta' => '<strong>¡Descubre más!</strong> ¡Pide el folleto!',
     
-        'what_is_text_1' => '¿Te imaginas la posibilidad de contratar a los mejores estudiantes de cualquier país europeo? ¿Deseas formar parte de los estudiantes europeos de élite? Miles de empresas van a tener acceso directo a información sobre vosotros y cuanto mejor sea la puntuación que obtenéis, más grandes serán vuestras oportunidades de conseguir un trabajo estupendo. ',
+        'what_is_text_1' => '¿Se imagina la posibilidad de contratar a los mejores estudiantes de cualquier país europeo? ¿Deseas formar parte de los estudiantes europeos de élite? Miles de empresas van a tener acceso directo a información sobre vosotros y cuanto mejor sea la puntuación que obtengáis, más grandes serán vuestras oportunidades de conseguir un trabajo estupendo. ',
     
         'what_is_text_2' => 'Es precisamente lo que ofrece Talented Europe. Un escaparate lleno de los mejores estudiantes en Europa. Una idea simple que une a empleadores con estudiantes. El lugar de encuentro de los mejores.',
     
@@ -59,7 +59,7 @@ return [
     
         'join_talented_europe_today' => '¡Unéte hoy a Talented Europe!',
     
-        'talented_for_students' => '<strong>Para estudiantes</strong> - Talented Europe mejorará la posibilidad de conseguir un empleo con el respaldo de sus tutores y les pondrá en contacto con los empresas y autónomos de toda Europa para encontrar prácticas en empresas o conseguir sus primeros empleos.',
+        'talented_for_students' => '<strong>Para estudiantes</strong> - Talented Europe mejorará la posibilidad de conseguir un empleo con el respaldo de sus tutores y les pondrá en contacto con las empresas y autónomos de toda Europa para encontrar prácticas en empresas o conseguir sus primeros empleos.',
     
         'talented_for_employers' => '<strong>Para empresas y autónomos</strong> - Talented Europe los vinculará con jóvenes estudiantes con talento de toda Europa y les ayudará a encontrar a la persona adecuada que puede contribuir al éxito de su organización con el talento y las habilidades especiales que está buscando.',
     

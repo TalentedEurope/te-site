@@ -96,7 +96,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'fr' => 'Journalism, Radio/TV Broadcasting, Public Relations, Publicity, Advertising, Library Science, Documentation, Archiving, Museum Studies, Conservation,E-Publishing, Digital Content',                    
                 
-                    'sk' => 'Žurnalistika, Rádio/TV vysielanie, Vz',                    
+                    'sk' => 'Žurnalistika, Rádio/TV vysielanie, Vzťahy s verejnosťou, Publicita, Reklama, Knižničné vedy,Dokumntácia, Archívnictvo, Muzeálne vedy, Reštaurovanie, E-publishing, Digitálny obsah',                    
                 
                     'key' => 'communication-and-information-sciences',                    
                 

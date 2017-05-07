@@ -405,7 +405,7 @@ return [
     
         'cant_find_your_institution' => '¿No puedes encontrar tu institución? Pide a tu validador y a la institución que se unan a Talented Europe',
     
-        'this_step_sends_an_email_to_your_referee' => 'Este paso envía un correo electrónico a su validador con instrucciones sobre cómo unirse a Talented Europe, lo registra automáticamente como validador una vez que su institución se una también a Talented Europe y te agrega ti a la lista de validaciones pendientes de revisar de ese validador',
+        'this_step_sends_an_email_to_your_referee' => 'Este paso envía un correo electrónico a tu validador con instrucciones sobre cómo unirse a Talented Europe, lo registra automáticamente como validador una vez que tu institución se una también a Talented Europe y te agrega a la lista de validaciones pendientes de revisar de ese validador',
     
         'send_invitation' => 'Enviar invitación',
     
@@ -425,7 +425,7 @@ return [
     
         'progress_completed' => 'Completado',
     
-        'you_must_put_referee_email' => '<strong>Por favor, tenga en cuenta:</strong> Tiene que introducir el correo electrónico del validador no de la institución',
+        'you_must_put_referee_email' => '<strong>Por favor, ten en cuenta:</strong> Tienes que introducir el correo electrónico del validador no de la institución',
     
         'leave_institution' => '¿Abandonas la institución educativa?',
     

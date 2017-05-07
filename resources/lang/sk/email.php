@@ -41,7 +41,7 @@ return [
     
         'validatorRequested_subject_1' => '%s vás pozvalo ako hodnotiteľa v Talented Europe.',
     
-        'validatorRequested_line_2' => 'Ahoj',
+        'validatorRequested_line_2' => 'Ahoj %s',
     
         'validatorRequested_line_3' => '%s vás pozvalo ako hodnotiteľa v Talented Europe.',
     
@@ -53,16 +53,16 @@ return [
     
         'validatorRequested_line_7' => 'Ďakujeme, že používate našu aplikáciu. ',
     
-        'newAlerts_subject_1' => 'New alerts from students',
+        'newAlerts_subject_1' => 'Nové upozornenia od študentov.',
     
-        'newAlerts_line_2' => 'Hello we\'re reminding you that some students alerted you on our platform',
+        'newAlerts_line_2' => 'Pripomíname vám, že vám niekoľkí študenti zaslali upozornenie na našej platforme.',
     
-        'newAlerts_line_3' => 'Please click the following button to log in and see your panel',
+        'newAlerts_line_3' => 'Pre prihlásenie kliknite prosím na nasledujúce okienko prezrite si váš informačný panel.',
     
-        'validationsPending_subject_1' => 'Referees pending on Talented Europe',
+        'validationsPending_subject_1' => 'Hodnotitelia čakajúci v Talented Europe.',
     
-        'validationsPending_line_2' => 'Hello we\'re reminding you that you have some referee\'s pending on our platform',
+        'validationsPending_line_2' => 'Pripomíname vám, že máte na svojej platforme niekoľkých čakajúcich hodnotiteľov. ',
     
-        'validationsPending_line_3' => 'Please click the following button to log in and see your panel',
+        'validationsPending_line_3' => 'Pre prihlásenie kliknite prosím na nasledujúce okienko prezrite si váš informačný panel.',
     
 ];

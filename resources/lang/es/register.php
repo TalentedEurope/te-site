@@ -17,7 +17,7 @@ return [
     
         'there_have_been_some_errors' => 'Hay más de un error',
     
-        'i_am_a' => 'Soy un',
+        'i_am_a' => 'Soy un / una',
     
         'all_fields_are_required' => 'Todos los campos son obligatorios',
     

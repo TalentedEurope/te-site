@@ -17,10 +17,10 @@ return [
     
         'are_you_sure_you_want_to_finish_refereeing' => 'Skutočne chcete ukončiť hodnotenie tohto študenta?',
     
-        'reason' => 'Reason',
+        'reason' => 'Dôvod',
     
-        'criteria' => 'Student does not meet criteria',
+        'criteria' => 'Študent nespĺňa kritériá.',
     
-        'nostudent' => 'Student hasn\'t attended this school/institution',
+        'nostudent' => 'Študent nenavštevoval túto školu/inštitúciu.  ',
     
 ];

@@ -59,7 +59,7 @@ return [
     
         'GB' => 'Spojené kráľovstvo',
     
-        'follow_us' => 'Följ oss',
+        'follow_us' => 'Sleduj/te nás',
     
         'login_btn' => 'Login',
     
@@ -81,13 +81,13 @@ return [
     
         'more_btn' => 'Zobraz viac',
     
-        'home' => 'Hemsida',
+        'home' => 'Domovská stránka',
     
-        'blog' => 'Blogg',
+        'blog' => 'Blog',
     
-        'cookies' => 'Information om cookies',
+        'cookies' => 'Informácie o cookies',
     
-        'privacy_policy' => 'Integritetspolicy',
+        'privacy_policy' => 'Ochrana súkromia',
     
         'footer_partners' => 'Partners',
     
@@ -111,9 +111,9 @@ return [
     
         'error' => 'Chyba',
     
-        'successfully_done' => 'Successfully done',
+        'successfully_done' => 'Úspešne dokončené.',
     
-        'success' => 'Úspešný',
+        'success' => 'Úspech',
     
         'older' => 'Staršie',
     
