@@ -3,18 +3,18 @@
 
 return [
     
-        'studies_level_5' => 'l´enseignement supérieur de type court',
+        'studies_level_5' => 'Enseignement supérieur de type court',
     
         'studies_level_6' => 'Licence 3 ou équivalent
 ',
     
-        'studies_level_7' => 'la Maîtrise ou équivalent',
+        'studies_level_7' => 'Maîtrise ou équivalent',
     
-        'studies_level_8' => 'le Doctorat ou équivalent',
+        'studies_level_8' => 'Doctorat ou équivalent',
     
-        'company_activity' => 'le domaine de l\' activité',
+        'company_activity' => 'Domaine de l\' activité',
     
-        'company_contact_person' => 'la personne a contacter',
+        'company_contact_person' => 'la personne à contacter',
     
         'company_contact_person_name' => 'Contact person name',
     
@@ -24,107 +24,107 @@ return [
     
         'company_what_is_talent' => 'Qu\' est-ce que pour vous le talent?',
     
-        'institution_certificate' => 'le certificat d \'originalité',
+        'institution_certificate' => 'Certificat d \'originalité',
     
-        'city' => 'la ville',
+        'city' => 'Ville',
     
-        'country' => 'le pays',
+        'country' => 'Pays',
     
         'countries' => 'Pays',
     
-        'institution_certificate_template_download' => 'téléchargez le modèle',
+        'institution_certificate_template_download' => 'Téléchargez le modèle',
     
-        'fiscal_id' => 'le numéro national d\'identification',
+        'fiscal_id' => 'Numéro national d\'identification',
     
-        'institution_hei' => 'l\'institution de l\' éducation supérieure',
+        'institution_hei' => 'Institution de l\' éducation supérieure',
     
-        'institution_ufa' => 'l\'université, la faculté',
+        'institution_ufa' => 'Université, Faculté',
     
-        'insitution_his' => 'l\' école secondaire',
+        'insitution_his' => 'L\' école secondaire',
     
-        'legal_representative' => 'le représentant légal',
+        'legal_representative' => 'Le représentant légal',
     
         'institution_pic' => 'PIC',
     
-        'postal_code' => 'le code postal',
+        'postal_code' => 'Code postal',
     
-        'institution_sig_stamp_text' => 'la signature et le cachet',
+        'institution_sig_stamp_text' => 'Signature et cachet',
     
-        'institution_vet' => 'la formation professionnelle et les activités professionnelles',
+        'institution_vet' => 'La formation professionnelle et les activités professionnelles',
     
-        'student_academic_info' => 'les informations académiques',
+        'student_academic_info' => 'Les informations académiques',
     
-        'address' => 'l\' adresse',
+        'address' => 'Adresse',
     
-        'student_certificate' => 'le certificat ',
+        'student_certificate' => 'Certificat ',
     
-        'clear_btn' => 'supprimer',
+        'clear_btn' => 'Supprimer',
     
-        'student_experience_company' => 'la société/ les sociétés',
+        'student_experience_company' => 'La société/ les sociétés',
     
-        'student_completed_studies' => 'le niveau d\' instruction',
+        'student_completed_studies' => 'Le niveau d\' instruction',
     
-        'student_course' => 'le cours',
+        'student_course' => 'Le cours',
     
-        'student_date' => 'la date',
+        'student_date' => 'Date',
     
-        'student_birthdate' => 'le lieu de naissance',
+        'student_birthdate' => 'Lieu de naissance',
     
-        'student_study_level' => 'le niveau',
+        'student_study_level' => 'Niveau',
     
-        'student_describe_talent' => 'Présentez en bref de votre talent.',
+        'student_describe_talent' => 'Présentez en bref votre talent.',
     
-        'email' => 'le mél / le mail',
+        'email' => 'Mail',
     
         'student_europass' => 'Europass',
     
-        'student_study_field' => 'la branche d\' études',
+        'student_study_field' => 'La branche d\' études',
     
         'student_study_from' => 'de',
     
-        'student_study_grade_card' => 'le bulletin scolaire',
+        'student_study_grade_card' => 'Bulletin scolaire',
     
-        'student_languages' => 'les langues',
+        'student_languages' => 'Langues',
     
-        'load_btn' => 'chargement',
+        'load_btn' => 'Chargement',
     
         'input_max_characters' => 'au maximum',
     
-        'name' => 'le nom',
+        'name' => 'Nom',
     
-        'nationality' => 'la nationalité',
+        'nationality' => 'Nationalité',
     
-        'student_personal_information' => 'les coordonnées',
+        'student_personal_information' => 'Coordonnées',
     
-        'student_personal_skills' => 'les capacités personnelles',
+        'student_personal_skills' => 'Capacités personnelles',
     
-        'phone' => 'le tétéphone',
+        'phone' => 'Tétéphone',
     
-        'position' => 'la position',
+        'position' => 'Position',
     
-        'student_professional_skills' => 'les capacités professionnelles',
+        'student_professional_skills' => 'Capacités professionnelles',
     
-        'student_proposed_validator' => 'l\' évaluateur proposé',
+        'student_proposed_validator' => 'Évaluateur proposé',
     
-        'save_btn' => 'sauvegarde /sauvegardez',
+        'save_btn' => 'Sauvegarde /sauvegardez',
     
-        'student_study_scanned_document' => 'le document numérisé',
+        'student_study_scanned_document' => 'Le document numérisé',
     
         'student_validator' => 'Si vous ne présentez aucun évaluateur, il vous en sera affecté un automatiquement ',
     
-        'surname' => 'le nom',
+        'surname' => 'Nom',
     
         'student_study_to' => 'à qui',
     
-        'student_training' => 'l\'expérience',
+        'student_training' => 'Expériences',
     
-        'upload_btn' => 'enregistrez',
+        'upload_btn' => 'Enregistrer',
     
-        'student_work_experience' => 'les expériences de travail',
+        'student_work_experience' => 'Expériences de travail',
     
-        'validator_department' => 'la section / la chaire',
+        'validator_department' => 'Section ',
     
-        'password' => 'le mot de passe',
+        'password' => 'Mot de passe',
     
         'confirm_password' => 'Validez le mot de passe',
     
@@ -134,9 +134,9 @@ return [
     
         'i_agree_with' => 'Je suis d\'accord avec ',
     
-        'the_terms_of_use' => 'les conditions d\'utilisation',
+        'the_terms_of_use' => 'Les conditions d\'utilisation',
     
-        'create_account' => 'créer un nouveau compte',
+        'create_account' => 'Créer un nouveau compte',
     
         'forgot_password' => 'Avez-vous oublié votre mot de passe?',
     
@@ -292,15 +292,15 @@ Sur',
     
         'career_and_skills' => 'Carrière et compétences',
     
-        'my_photo' => 'Ma photographie',
+        'my_photo' => 'Ma photo',
     
         'download_curriculum' => 'Télécharger le curriculum',
     
-        'my_talent' => 'on talent',
+        'my_talent' => 'Mon talent',
     
         'referee_name' => 'Nom de l\'évaluateur',
     
-        'referee_email' => 'email de l\'évaluateur',
+        'referee_email' => 'Le mail de l\'évaluateur',
     
         'get_your_profile_refereed' => 'Permettez - vous d\'évaluer votre profil',
     
@@ -308,7 +308,7 @@ Sur',
     
         'education' => 'Education',
     
-        'lives_in' => 'résidence',
+        'lives_in' => 'Résidence',
     
         'born_on' => 'Né(e) le',
     
@@ -319,7 +319,7 @@ Sur',
     
         'refereed_by' => 'Référé par',
     
-        'refereeing_pending' => 'évaluation est en cours de traitement',
+        'refereeing_pending' => 'Évaluation est en cours de traitement',
     
         'skills' => 'Compétences en
 ',
@@ -434,7 +434,7 @@ Sur',
     
         'you_must_put_referee_email' => '<strong>S\'il vous plaît noter</strong>Vous devez mettre le courriel de l\'évaluateur, et non celui de l\'établissement',
     
-        'leave_institution' => 'Quitter  l\' établissement?',
+        'leave_institution' => 'Quitter l\' établissement?',
     
         'do_you_want_to_leave_institution' => 'Voulez-vous quitter l\'établissement? cela envoie les demandes de validation en attente de retour  et vous ne serez pas en mesure de valider quelqu\'un jusqu\'à ce qu\'une autre institution vous invite à un retour',
     
@@ -503,31 +503,32 @@ Sur',
     
         'study_level' => 'Niveau du diplôme',
     
-        'study_field' => 'Study field',
+        'study_field' => 'Champ d\'étude',
     
-        'study_certificate' => 'Study certificate',
+        'study_certificate' => 'Certificat d\'étude',
     
-        'study_gradecard' => 'Study gradecard',
+        'study_gradecard' => 'Étudier gradecard',
     
-        'training_name' => 'Intitulé du diplôme?',
+        'training_name' => 'Nom de la formation',
     
-        'training_date' => 'Training date',
+        'training_date' => 'Date de formation',
     
-        'training_certificate' => 'Training certificate',
+        'training_certificate' => 'Attestation de formation',
     
-        'language_certificate' => 'Language certificate',
+        'language_certificate' => 'Certificat de langue',
     
-        'professional_skills_name' => 'Professional Skills name',
+        'professional_skills_name' => 'Compétences professionnelles',
     
-        'work_experience_company' => 'Work experience company',
+        'work_experience_company' => 'Entreprise de travail',
     
-        'work_experience_from' => 'Work experience from',
+        'work_experience_from' => 'Expérience de travail de',
     
-        'work_experience_until' => 'Work experience until',
+        'work_experience_until' => 'Expérience professionnelle jusqu\'à
+',
     
-        'work_experience_position' => 'Work experience position',
+        'work_experience_position' => 'Poste d\'expérience de travail',
     
-        'about_me' => 'About me',
+        'about_me' => 'À propos de moi',
     
         'social_networks' => 'Réseaux sociaux',
     
@@ -551,6 +552,6 @@ Sur',
     
         'view_contact_details' => 'Voir détails du contact',
     
-        'cant_send_alerts_until_you_fill_the_profile' => 'To be able to send a "alert" to companies, you have to filled your profile. Please, review which information you should provide.',
+        'cant_send_alerts_until_you_fill_the_profile' => 'Pour pouvoir envoyer une "alerte" aux entreprises, vous devez remplir votre profil. Veuillez évaluer les informations que vous devriez fournir.',
     
 ];

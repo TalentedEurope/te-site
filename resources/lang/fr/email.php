@@ -41,7 +41,7 @@ return [
     
         'validatorRequested_subject_1' => '%s vous a invitée comme évaluateur dans Talented Europe',
     
-        'validatorRequested_line_2' => 'Hello %s',
+        'validatorRequested_line_2' => 'Bonjour% s',
     
         'validatorRequested_line_3' => '%s vous a invitée comme évaluateur dans Talented Europe',
     
@@ -53,16 +53,16 @@ return [
     
         'validatorRequested_line_7' => 'Merci d´utiliser notre application',
     
-        'newAlerts_subject_1' => 'New alerts from students',
+        'newAlerts_subject_1' => 'Nouvelles alertes des étudiants',
     
-        'newAlerts_line_2' => 'Hello we\'re reminding you that some students alerted you on our platform',
+        'newAlerts_line_2' => 'Bonjour, nous vous rappelons que certains étudiants vous ont alerté sur notre plate-forme',
     
-        'newAlerts_line_3' => 'Please click the following button to log in and see your panel',
+        'newAlerts_line_3' => 'Cliquez sur le bouton suivant pour vous connecter et voir votre panneau',
     
-        'validationsPending_subject_1' => 'Referees pending on Talented Europe',
+        'validationsPending_subject_1' => 'Évaluateurs en instance sur Talented Europe',
     
-        'validationsPending_line_2' => 'Hello we\'re reminding you that you have some referee\'s pending on our platform',
+        'validationsPending_line_2' => 'Bonjour, nous vous rappelons que vous avez un évaluateur en attente sur notre plate-forme',
     
-        'validationsPending_line_3' => 'Please click the following button to log in and see your panel',
+        'validationsPending_line_3' => 'Cliquez sur le bouton suivant pour vous connecter et voir votre panneau',
     
 ];

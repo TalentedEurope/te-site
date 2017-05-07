@@ -87,11 +87,11 @@ return [
     
         'removing' => 'Suppression',
     
-        'validation_was_removed' => 'La validation a été retirée parce que vous avez indiqué que %s n\'était pas une étudiant de cette institution',
+        'validation_was_removed' => 'La validation a été retirée parce que vous avez indiqué que %s n\'était pas un étudiant de cette institution',
     
-        'validation_complete' => 'Validation finalisée',
+        'validation_complete' => '%s validation finalisée',
     
-        'cannot_invite' => 'Cannot invite, either this email is registered to another type of user or he already has an invitation pending from this institution',
+        'cannot_invite' => 'Impossible d\'inviter, ce courrier électronique est enregistré sur un autre type d\'utilisateur ou il a déjà une invitation en attente de cette institution',
     
         'send_invitation_to' => 'Envoyer l\'invitation',
     

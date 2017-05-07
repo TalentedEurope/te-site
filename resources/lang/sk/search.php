@@ -11,11 +11,11 @@ return [
     
         'refereed' => 'Hodnotil',
     
-        'there_are_no_matching_the_selected_filters' => 'Nie sú žiadni/žiadne',
+        'there_are_no_matching_the_selected_filters' => 'V súčasnosti nie sú % zhodné s vami zvolenými filtrami.',
     
         'we_found' => 'spĺňa vaše potreby',
     
-        'we_found_matching_your_needs' => 'Našli sme...',
+        'we_found_matching_your_needs' => 'Našli sme % číslo % kolektív % spĺňajúce vaše potreby.',
     
         'filters' => 'Filtre',
     

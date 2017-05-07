@@ -61,17 +61,17 @@ return [
     
         'follow_us' => 'Suivez nous',
     
-        'login_btn' => 'le logiciel',
+        'login_btn' => 'Logiciel',
     
-        'register_btn' => 'connectez-vous',
+        'register_btn' => 'Connexion',
     
-        'search_info' => 'recherche',
+        'search_info' => 'Recherche',
     
-        'company_plural' => 'Les sociétés',
+        'company_plural' => 'Sociétés',
     
-        'institution_plural' => 'Les institutions',
+        'institution_plural' => 'Institutions',
     
-        'student_plural' => 'Les étudiants',
+        'student_plural' => 'Étudiants',
     
         'company' => 'la société|Les sociétés',
     
@@ -93,7 +93,7 @@ return [
     
         'cookie_text' => 'Ce site utilise des cookies pour améliorer votre expérience utilisateur  En utilisant ce site, vous acceptez leur utilisation. Plus d\'informations sur nous et comment nous utilisons ces fichiers, et la façon dont nous traitons ces fichiers, voir notre politique en matière de cookie<a href="/vyhlásení notification cookies </a>',
     
-        'cookie_accept' => 'fermer',
+        'cookie_accept' => 'Fermer',
     
         'logout_btn' => 'Se déconnecter',
     
@@ -111,7 +111,7 @@ return [
     
         'error' => 'Erreur',
     
-        'successfully_done' => 'Successfully done',
+        'successfully_done' => 'Fait avec succès',
     
         'success' => 'Réussi',
     

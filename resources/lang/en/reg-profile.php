@@ -543,6 +543,6 @@ return [
     
         'view_contact_details' => 'View contact details',
     
-        'cant_send_alerts_until_you_fill_the_profile' => 'To be able to send a "alert" to companies, you have to filled your profile. Please, review which information you should provide.',
+        'cant_send_alerts_until_you_fill_the_profile' => 'To be able to send an "alert" to companies, you have to fill your profile. Please, review which information you should provide.',
     
 ];
