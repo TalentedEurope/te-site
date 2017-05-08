@@ -123,159 +123,159 @@ return [
     
         'no' => 'Nie',
     
-        'AF' => 'Afghanistan',
+        'AF' => 'Afganistan',
     
-        'AX' => 'Åland Islands',
+        'AX' => 'Alandské ostrovy',
     
-        'AL' => 'Albania',
+        'AL' => 'Albánsko',
     
-        'DZ' => 'Algeria',
+        'DZ' => 'Alžírsko',
     
-        'AS' => 'American Samoa',
+        'AS' => 'Americká Samoa',
     
-        'AD' => 'Andorra',
+        'AD' => 'Andora',
     
         'AO' => 'Angola',
     
-        'AI' => 'Anguilla',
+        'AI' => 'Angila',
     
-        'AQ' => 'Antarctica',
+        'AQ' => 'Antarktída',
     
         'AG' => 'Antigua and Barbuda',
     
-        'AR' => 'Argentina',
+        'AR' => 'Argentína',
     
-        'AM' => 'Armenia',
+        'AM' => 'Arménsko',
     
         'AW' => 'Aruba',
     
-        'AU' => 'Australia',
+        'AU' => 'Austrália',
     
-        'AZ' => 'Azerbaijan',
+        'AZ' => 'Azerbajdžán',
     
-        'BS' => 'Bahamas',
+        'BS' => 'Bahamy',
     
         'BH' => 'Bahrain',
     
-        'BD' => 'Bangladesh',
+        'BD' => 'Bangladéš',
     
         'BB' => 'Barbados',
     
-        'BY' => 'Belarus',
+        'BY' => 'Bielorusko',
     
-        'BZ' => 'Belize',
+        'BZ' => 'Belizé',
     
         'BJ' => 'Benin',
     
-        'BM' => 'Bermuda',
+        'BM' => 'Bermudy',
     
-        'BT' => 'Bhutan',
+        'BT' => 'Bután',
     
-        'BO' => 'Bolivia (Plurinational State of)',
+        'BO' => 'Bolívia',
     
         'BQ' => 'Bonaire, Sint Eustatius and Saba',
     
-        'BA' => 'Bosnia and Herzegovina',
+        'BA' => 'Bosna a Hercegovina',
     
-        'BW' => 'Botswana',
+        'BW' => 'Botsvana',
     
-        'BV' => 'Bouvet Island',
+        'BV' => 'Ostrov Buvet',
     
-        'BR' => 'Brazil',
+        'BR' => 'Brazília',
     
-        'IO' => 'British Indian Ocean Territory',
+        'IO' => 'Britské tichomorské teritórium',
     
-        'BN' => 'Brunei Darussalam',
+        'BN' => 'Brunei',
     
         'BF' => 'Burkina Faso',
     
         'BI' => 'Burundi',
     
-        'CV' => 'Cabo Verde',
+        'CV' => 'Kapverdy',
     
-        'KH' => 'Cambodia',
+        'KH' => 'Kambodža',
     
-        'CM' => 'Cameroon',
+        'CM' => 'Kamrun',
     
-        'CA' => 'Canada',
+        'CA' => 'Kanada',
     
-        'KY' => 'Cayman Islands',
+        'KY' => 'Kajmanské ostrovy',
     
-        'CF' => 'Central African Republic',
+        'CF' => 'Stredoafrická Republika',
     
-        'TD' => 'Chad',
+        'TD' => 'Čad',
     
-        'CL' => 'Chile',
+        'CL' => 'Čile',
     
-        'CN' => 'China',
+        'CN' => 'Čína',
     
-        'CX' => 'Christmas Island',
+        'CX' => 'Vianočnný ostrov ',
     
-        'CC' => 'Cocos (Keeling) Islands',
+        'CC' => 'Kokosový ostrov',
     
-        'CO' => 'Colombia',
+        'CO' => 'Kolumbia',
     
         'KM' => 'Comoros',
     
-        'CG' => 'Congo',
+        'CG' => 'Kongo',
     
-        'CD' => 'Congo (Democratic Republic of the)',
+        'CD' => 'Demokratická Republika Kongo',
     
-        'CK' => 'Cook Islands',
+        'CK' => 'Cookove Ostrovy',
     
-        'CR' => 'Costa Rica',
+        'CR' => 'Kostarika',
     
-        'CI' => 'Côte d\'Ivoire',
+        'CI' => 'Pobrežie Slonoviny',
     
-        'CU' => 'Cuba',
+        'CU' => 'Kuba',
     
-        'CW' => 'Curaçao',
+        'CW' => 'Curacao',
     
-        'DJ' => 'Djibouti',
+        'DJ' => 'Džibútí',
     
         'DM' => 'Dominica',
     
         'DO' => 'Dominican Republic',
     
-        'EC' => 'Ecuador',
+        'EC' => 'Ekvádor',
     
         'EG' => 'Egypt',
     
-        'SV' => 'El Salvador',
+        'SV' => 'Salvádor',
     
-        'GQ' => 'Equatorial Guinea',
+        'GQ' => 'Rovníková Guinea',
     
         'ER' => 'Eritrea',
     
-        'ET' => 'Ethiopia',
+        'ET' => 'Etiópia',
     
-        'FK' => 'Falkland Islands (Malvinas)',
+        'FK' => 'Falklandské Ostrovy ',
     
-        'FO' => 'Faroe Islands',
+        'FO' => 'Fajerské Ostrovy',
     
-        'FJ' => 'Fiji',
+        'FJ' => 'Fidži',
     
-        'GF' => 'French Guiana',
+        'GF' => 'Francúzska Guajána',
     
-        'PF' => 'French Polynesia',
+        'PF' => 'Fancúzska Polynézia',
     
-        'TF' => 'French Southern Territories',
+        'TF' => 'Francúzske Južné Teritórium',
     
-        'GA' => 'Gabon',
+        'GA' => 'Gabun',
     
         'GM' => 'Gambia',
     
-        'GE' => 'Georgia',
+        'GE' => 'Gruzínsko',
     
         'GH' => 'Ghana',
     
-        'GI' => 'Gibraltar',
+        'GI' => 'Džibraltár',
     
-        'GL' => 'Greenland',
+        'GL' => 'Grónsko',
     
         'GD' => 'Grenada',
     
-        'GP' => 'Guadeloupe',
+        'GP' => 'Guadalupe',
     
         'GU' => 'Guam',
     

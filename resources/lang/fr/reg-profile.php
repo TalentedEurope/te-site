@@ -16,9 +16,9 @@ return [
     
         'company_contact_person' => 'la personne à contacter',
     
-        'company_contact_person_name' => 'Contact person name',
+        'company_contact_person_name' => 'le nom de la personne à  contacter',
     
-        'company_contact_person_email' => 'Contact person email',
+        'company_contact_person_email' => 'Email de la personne à contacer',
     
         'company_representative' => 'le représentant légitime',
     
