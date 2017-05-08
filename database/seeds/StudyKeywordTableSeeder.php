@@ -94,7 +94,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'de' => 'Journalismus, Radio/TV, Vz',                    
                 
-                    'fr' => 'Journalism, Radio/TV Broadcasting, Public Relations, Publicity, Advertising, Library Science, Documentation, Archiving, Museum Studies, Conservation,E-Publishing, Digital Content',                    
+                    'fr' => 'Journalisme, Radio / Télévision, Relations publiques, Publicité, Sciences de la bibliothèque, Documentation, Archivage, Études muséales, Conservation, E-Publishing, Contenu numérique',                    
                 
                     'sk' => 'Žurnalistika, Rádio/TV vysielanie, Vzťahy s verejnosťou, Publicita, Reklama, Knižničné vedy,Dokumntácia, Archívnictvo, Muzeálne vedy, Reštaurovanie, E-publishing, Digitálny obsah',                    
                 
@@ -294,7 +294,7 @@ Directeur administratif, Directeur services administratifs, Agent administratif,
                 
                     'de' => 'Fabrication,Sewing,Draping,Apparel construction,Accessories designer, Tailor, Costume designer, Assistant designer.',                    
                 
-                    'fr' => 'Fabrication,Sewing,Draping,Apparel construction,Accessories designer, Tailor, Costume designer, Assistant designer.',                    
+                    'fr' => 'Fabrication, Couture, Drapage, Construction de vêtements, Concepteur d&apos;accessoires, Tailleur, Designer de costumes, Designer adjoint.',                    
                 
                     'sk' => 'Architekt, Stavebný inžinier, Zememerač, Interiérový dizajnér, Správca stavby, Záhradný architekt, Elektrikár, Kreslič - architektúra , Mestský a regionálny plánovač, Návrhár, Projektový architekt, Job kapitán, CAD koordinátor, Územný plánovač, Špecialista ochrany pred eróziou, Tesár, Ukončovač sadrokartónových obkladov,  Námedzná sila, Glazovač, Elektrikár, Supervízor kontroly premávky, Murár, Mlynár, Maliar, Inštalatér,  Pokrývač, Štrukturálny hutník, Armovací hutník, Zvárač, Manažér pre vybavenie, Projektový manažér, Projektový inžinier, Predák, Field dozorca, Field Office manažér, Odhadca, Pred-výstavbový manažér,  Detailista, Nákupca, Viceprezident pre stavebníctvo',                    
                 
