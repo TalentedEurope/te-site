@@ -15,9 +15,9 @@ return [
     
         'company_contact_person' => 'Persona da contattare',
     
-        'company_contact_person_name' => 'Contact person name',
+        'company_contact_person_name' => 'nome della persona di contatto',
     
-        'company_contact_person_email' => 'Contact person email',
+        'company_contact_person_email' => 'e-mail della persona di contatto',
     
         'company_representative' => 'Rappresentante legale (responsabile)',
     
@@ -29,7 +29,7 @@ return [
     
         'country' => 'Stato',
     
-        'countries' => 'Countries',
+        'countries' => 'Paesi',
     
         'institution_certificate_template_download' => 'Scaricare il modello',
     
@@ -405,7 +405,7 @@ return [
     
         'cant_find_your_institution' => 'Non riesci a trovare la tua istituzione? Chiedi al tuo vidimatore o alla tua istituzione di unirsi al Talented Europe',
     
-        'this_step_sends_an_email_to_your_referee' => 'This step sends an email to your referee with instructions on how to join Talented Europe, automatically registers him as referee once his institution joins, and adds you to the refeeral queue',
+        'this_step_sends_an_email_to_your_referee' => 'In questo passo viene inviata una e-mail al vostro vidimatore, con istruzioni su come unirsi a Talented Europe; il vidimatore viene registrato automaticamente appena la sua istituzione si unisce, e vi aggiunge alla lista di valutazioni in attesa.',
     
         'send_invitation' => 'Inviare invito',
     
@@ -465,84 +465,84 @@ return [
     
         'complete_the_registration' => 'Completa la registrazione aggiungendo la seguente informazione',
     
-        'changes_saved_successfully' => 'Changes saved successfully',
+        'changes_saved_successfully' => 'Modifiche salvate con successo',
     
-        'warning_some_fields_has_errors' => 'Warning: Some fields couldn\'t be saved because there were errors, check each field to see the issues',
+        'warning_some_fields_has_errors' => 'Attenzione: alcuni campi non sono potuti essere salvati perché vi erano degli errori; si prega di controllare ogni campo per trovare i problemi.',
     
-        'successfully_requested_validation_request' => 'Successfully requested refereence request',
+        'successfully_requested_validation_request' => 'Domanda di valutazione richiesta con successo',
     
-        'invitation_sent_successfully' => 'Invitation sent successfully',
+        'invitation_sent_successfully' => 'Invito inviato con successo',
     
-        'referee_is_part_of_institution' => 'Referee is part of %s get in contact with him to ask a institution change if required',
+        'referee_is_part_of_institution' => 'Il vidimatore fa parte di %s. Mettetevi in contatto con lui per chiedere una modifica dell’istituzione, se necessario',
     
-        'referee_isnt_part_of_any_institution' => 'Referee isn\'t part of any institution. Please ask him to get invited by one',
+        'referee_isnt_part_of_any_institution' => 'Il vidimatore non fa parte di nessuna istituzione. Si prega di chiedergli di farsi invitare da un’istituzione.',
     
-        'this_email_user_cannot_be_a_referee' => 'This email address is registered to an user that cannot be a referee',
+        'this_email_user_cannot_be_a_referee' => 'Questo indirizzo e-mail è registrato a un utente che non può essere vidimatore.',
     
-        'field' => 'Field',
+        'field' => 'Campo',
     
-        'your_request_was_created' => 'Your request was created %s',
+        'your_request_was_created' => 'La vostra domanda è stata creata %s',
     
-        'if_request_hasnt_been_completed' => 'If your request hasn\'t been completed in %s days you will be able to create a new request',
+        'if_request_hasnt_been_completed' => 'Se la vostra domanda non sarà completata in %s giorni, potrete crearne una nuova.',
     
-        'you_havent_set_any_personal_skills' => 'You haven\'t set any personal skills yet. If you request referee you cannot modify them.',
+        'you_havent_set_any_personal_skills' => 'Finora non avete inserito nessuna competenza personale. Se chiederete una valutazione, non potrete più modificarla.',
     
-        'to_see_more_details' => 'To see more details you must be registered',
+        'to_see_more_details' => 'Per vedere più dettagli bisogna registrarsi.',
     
-        'study_institution_name' => 'Study Institution name',
+        'study_institution_name' => 'Nome di istituzione educativa',
     
-        'study_name' => 'Study name',
+        'study_name' => 'Nome di corso di studi',
     
-        'study_level' => 'Study level',
+        'study_level' => 'Livello di corso di studi',
     
-        'study_field' => 'Study field',
+        'study_field' => 'Campo di corso di studi',
     
-        'study_certificate' => 'Study certificate',
+        'study_certificate' => 'Certificato di studio',
     
-        'study_gradecard' => 'Study gradecard',
+        'study_gradecard' => 'Scheda di valutazione dello studio',
     
-        'training_name' => 'Training name',
+        'training_name' => 'Nome di tirocinio',
     
-        'training_date' => 'Training date',
+        'training_date' => 'Data di tirocinio',
     
-        'training_certificate' => 'Training certificate',
+        'training_certificate' => 'Attestato di tirocinio',
     
-        'language_certificate' => 'Language certificate',
+        'language_certificate' => 'Certificato di lingua',
     
-        'professional_skills_name' => 'Professional Skills name',
+        'professional_skills_name' => 'Competenze professionali',
     
-        'work_experience_company' => 'Work experience company',
+        'work_experience_company' => 'Azienda di esperienza lavorativa',
     
-        'work_experience_from' => 'Work experience from',
+        'work_experience_from' => 'Esperienza lavorativa dal',
     
-        'work_experience_until' => 'Work experience until',
+        'work_experience_until' => 'Esperienza lavorativa fino al',
     
-        'work_experience_position' => 'Work experience position',
+        'work_experience_position' => 'Posizione durante esperienza lavorativa',
     
-        'about_me' => 'About me',
+        'about_me' => 'Info su di me',
     
-        'social_networks' => 'Social networks',
+        'social_networks' => 'Reti sociali',
     
-        'account_activation_successful' => 'Account activation was successful, you may log in now',
+        'account_activation_successful' => 'L\'attivazione dell\'account è stata compiuta; adesso potete accedere.',
     
-        'account_has_not_been_verified' => 'Account has not been verified. Please verify your email and activate your account',
+        'account_has_not_been_verified' => 'L\'account non è stato verificato. Si prega di attivare l\'account verificando il vostro indirizzo e-mail.',
     
-        'at' => 'at',
+        'at' => 'su',
     
-        'remove_account_button' => 'Delete account',
+        'remove_account_button' => 'Eliminare account',
     
-        'remove_account_confirm' => 'Are you really sure that you wish delete your account? It\'s going to remove all your information',
+        'remove_account_confirm' => 'Siete sicuri di voler eliminare il vostro account? Tutte le vostre informazioni verranno rimosse.',
     
-        'remove_account_button_ok' => 'Ok',
+        'remove_account_button_ok' => 'OK',
     
-        'remove_account_button_cancel' => 'Cancel',
+        'remove_account_button_cancel' => 'Cancellare',
     
-        'refereed_students' => 'Refereed students',
+        'refereed_students' => 'Studenti valutati',
     
-        'no_refereed_students' => 'There are no refereed students',
+        'no_refereed_students' => 'Non ci sono alcuni studenti valutati',
     
-        'view_contact_details' => 'View contact details',
+        'view_contact_details' => 'Vedere dettagli del contatto',
     
-        'cant_send_alerts_until_you_fill_the_profile' => 'To be able to send an "alert" to companies, you have to fill your profile. Please, review which information you should provide.',
+        'cant_send_alerts_until_you_fill_the_profile' => 'Per poter inviare un\'"avvertenza" alle aziende, dovete completare il vostro profilo. Si prega di verificare quali informazioni volete fornire.',
     
 ];

@@ -92,7 +92,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'it' => 'Giornalismo, trasmissione radio/tv, relazioni pubbliche, pubblicità (publicity/advertising), scienza libraria, documentazione, archiviazione, studi museali, conservazione, e-publishing, contenuto digitale',                    
                 
-                    'de' => 'Journalismus, Radio/TV, Vz',                    
+                    'de' => 'Journalismus, Radio/TV - Sendungen, Public Relations, Publicity, Werbung, Bibliothekswissenschaft, Dokumentation, Archivwesen, Museumwissenschaften, Restaurierung, E-publishing, Digitaler Inhalt',                    
                 
                     'fr' => 'Journalisme, Radio / Télévision, Relations publiques, Publicité, Sciences de la bibliothèque, Documentation, Archivage, Études muséales, Conservation, E-Publishing, Contenu numérique',                    
                 
@@ -146,7 +146,7 @@ Politológia, Sociológia, Ekonómia, Psychológia a behaviorálne vedy, Sociál
                 
                     'it' => 'Diritto comparato, diritto e lingue, diritto internazionale, diritto civile, diritto penale, criminologia, costituzione/legge pubblica, amministrazione pubblica, legislazione della comunità europea.',                    
                 
-                    'de' => 'Comparative Law, Law with Languages, International Law, Civil Law, Criminal Law, Criminology, Constitutional /Public Law, Public Administration, European Community/EU Law',                    
+                    'de' => 'Vergleichsrecht, Sprachrecht, Internationales Recht, Bürgerrecht, Strafrecht, Kriminologie, Verfassungsrecht, Öffentliche Verwaltung, Europäisches Recht',                    
                 
                     'fr' => 'Droit comparé, Droits linguistiques, Droit international, Droits civiques, Droit pénal, Criminologie, Droit constitutionnel, Droit publique, Droit de l&apos;Union européenne, UE',                    
                 
@@ -290,9 +290,9 @@ Directeur administratif, Directeur services administratifs, Agent administratif,
                 
                     'es' => 'Fabricación, Costura, Drapeado, Construcción de prendas de vestir, Diseñador de accesorios, Sastre, Diseñador de vestuario, Asistente de diseño.',                    
                 
-                    'it' => 'Fabrication,Sewing,Draping,Apparel construction,Accessories designer, Tailor, Costume designer, Assistant designer.',                    
+                    'it' => 'Costruzione, Cucito, Drappeggio, Costruzione di abbigliamento, Progettista di accessori, Sarto, Progettista di Abbigliamento, Assistente di progettista.',                    
                 
-                    'de' => 'Fabrication,Sewing,Draping,Apparel construction,Accessories designer, Tailor, Costume designer, Assistant designer.',                    
+                    'de' => 'Architekt, Bauingenieur, Geodät, Innendesigner, Bauverwalter, Gartenarchitekt, Elektriker, Zeichner – Architektur, Stadt- und Regionalplaner, Planer, Projektarchitekt, Job-Kapitän, CAD Koordinator, Gebietsplaner, Spezialist für den Erosionschutz, Zimmerer, Fertigsteller von Gipsplattenbau, Lohnkraft, Glasierer, Elektriker, Supervisor Verkehrskontrolle, Maurer, Müller, Installateur, Dachdecker, Mitarbeiter in Hüttenwesen, Armierung - Mitarbeiter, Schweißer, Ausstattungsmanager, Projektmanager, Projektingenieur,  Vorarbeiter, Field-Aufseher, Field Office Manager, Abschätzer, Vorbaumanager, Detaillist, Einkäufer, Vizepräsident für den Bau',                    
                 
                     'fr' => 'Fabrication, Couture, Drapage, Construction de vêtements, Concepteur d&apos;accessoires, Tailleur, Designer de costumes, Designer adjoint.',                    
                 

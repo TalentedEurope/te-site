@@ -111,7 +111,7 @@ return [
     
         'error' => 'Errore',
     
-        'successfully_done' => 'Successfully done',
+        'successfully_done' => 'Concluso con successo',
     
         'success' => 'Successo',
     
@@ -125,13 +125,13 @@ return [
     
         'AF' => 'Afghanistan',
     
-        'AX' => 'Åland Islands',
+        'AX' => 'Isole Aland',
     
         'AL' => 'Albania',
     
         'DZ' => 'Algeria',
     
-        'AS' => 'American Samoa',
+        'AS' => 'Samoa Americana',
     
         'AD' => 'Andorra',
     
@@ -139,9 +139,9 @@ return [
     
         'AI' => 'Anguilla',
     
-        'AQ' => 'Antarctica',
+        'AQ' => 'Antartide',
     
-        'AG' => 'Antigua and Barbuda',
+        'AG' => 'Antigua e Barbuda',
     
         'AR' => 'Argentina',
     
@@ -151,17 +151,17 @@ return [
     
         'AU' => 'Australia',
     
-        'AZ' => 'Azerbaijan',
+        'AZ' => 'Azerbaigian',
     
         'BS' => 'Bahamas',
     
-        'BH' => 'Bahrain',
+        'BH' => 'Bahrein',
     
         'BD' => 'Bangladesh',
     
         'BB' => 'Barbados',
     
-        'BY' => 'Belarus',
+        'BY' => 'Bielorussia',
     
         'BZ' => 'Belize',
     
@@ -171,95 +171,95 @@ return [
     
         'BT' => 'Bhutan',
     
-        'BO' => 'Bolivia (Plurinational State of)',
+        'BO' => 'Bolivia',
     
-        'BQ' => 'Bonaire, Sint Eustatius and Saba',
+        'BQ' => 'Bonaire, Sint Eustatius e Saba',
     
-        'BA' => 'Bosnia and Herzegovina',
+        'BA' => 'Bosnia ed Erzegovina',
     
         'BW' => 'Botswana',
     
-        'BV' => 'Bouvet Island',
+        'BV' => 'Isola Bouvet',
     
-        'BR' => 'Brazil',
+        'BR' => 'Brasile',
     
-        'IO' => 'British Indian Ocean Territory',
+        'IO' => 'Territorio Britannico dell\'Oceano Indiano',
     
-        'BN' => 'Brunei Darussalam',
+        'BN' => 'Brunei',
     
         'BF' => 'Burkina Faso',
     
         'BI' => 'Burundi',
     
-        'CV' => 'Cabo Verde',
+        'CV' => 'Capo Verde',
     
-        'KH' => 'Cambodia',
+        'KH' => 'Cambogia',
     
-        'CM' => 'Cameroon',
+        'CM' => 'Camerun',
     
         'CA' => 'Canada',
     
-        'KY' => 'Cayman Islands',
+        'KY' => 'Isole Cayman',
     
-        'CF' => 'Central African Republic',
+        'CF' => 'Repubblica Centrafricana',
     
-        'TD' => 'Chad',
+        'TD' => 'Ciad',
     
-        'CL' => 'Chile',
+        'CL' => 'Cile',
     
-        'CN' => 'China',
+        'CN' => 'Cina',
     
-        'CX' => 'Christmas Island',
+        'CX' => 'Isola di Natale',
     
-        'CC' => 'Cocos (Keeling) Islands',
+        'CC' => 'Isola del Cocco',
     
         'CO' => 'Colombia',
     
-        'KM' => 'Comoros',
+        'KM' => 'Comore',
     
         'CG' => 'Congo',
     
-        'CD' => 'Congo (Democratic Republic of the)',
+        'CD' => 'Repubblica Democratica del Congo',
     
-        'CK' => 'Cook Islands',
+        'CK' => 'Isole Cook',
     
         'CR' => 'Costa Rica',
     
-        'CI' => 'Côte d\'Ivoire',
+        'CI' => 'Costa d\'Avorio',
     
         'CU' => 'Cuba',
     
         'CW' => 'Curaçao',
     
-        'DJ' => 'Djibouti',
+        'DJ' => 'Gibuti',
     
         'DM' => 'Dominica',
     
-        'DO' => 'Dominican Republic',
+        'DO' => 'Repubblica Dominicana',
     
         'EC' => 'Ecuador',
     
-        'EG' => 'Egypt',
+        'EG' => 'Egitto',
     
         'SV' => 'El Salvador',
     
-        'GQ' => 'Equatorial Guinea',
+        'GQ' => 'Guinea Equatoriale',
     
         'ER' => 'Eritrea',
     
-        'ET' => 'Ethiopia',
+        'ET' => 'Etiopia',
     
-        'FK' => 'Falkland Islands (Malvinas)',
+        'FK' => 'Isole Falkland (Malvine)',
     
-        'FO' => 'Faroe Islands',
+        'FO' => 'Isole Faroe',
     
-        'FJ' => 'Fiji',
+        'FJ' => 'Figi',
     
-        'GF' => 'French Guiana',
+        'GF' => 'Guyana Francese',
     
-        'PF' => 'French Polynesia',
+        'PF' => 'Polinesia Francese',
     
-        'TF' => 'French Southern Territories',
+        'TF' => 'Terre Australi e Antartiche Francesi',
     
         'GA' => 'Gabon',
     
@@ -271,11 +271,11 @@ return [
     
         'GI' => 'Gibraltar',
     
-        'GL' => 'Greenland',
+        'GL' => 'Groenlandia',
     
         'GD' => 'Grenada',
     
-        'GP' => 'Guadeloupe',
+        'GP' => 'Guadalupa',
     
         'GU' => 'Guam',
     
@@ -291,51 +291,51 @@ return [
     
         'HT' => 'Haiti',
     
-        'HM' => 'Heard Island and McDonald Islands',
+        'HM' => 'Isole Heard e McDonald',
     
-        'VA' => 'Holy See',
+        'VA' => 'La Santa Sede',
     
         'HN' => 'Honduras',
     
         'HK' => 'Hong Kong',
     
-        'IS' => 'Iceland',
+        'IS' => 'Islanda',
     
         'IN' => 'India',
     
         'ID' => 'Indonesia',
     
-        'IR' => 'Iran (Islamic Republic of)',
+        'IR' => 'Iran',
     
         'IQ' => 'Iraq',
     
-        'IM' => 'Isle of Man',
+        'IM' => 'Isola di Man',
     
-        'IL' => 'Israel',
+        'IL' => 'Israele',
     
-        'JM' => 'Jamaica',
+        'JM' => 'Giamaica',
     
-        'JP' => 'Japan',
+        'JP' => 'Giappone',
     
         'JE' => 'Jersey',
     
-        'JO' => 'Jordan',
+        'JO' => 'Giordania',
     
-        'KZ' => 'Kazakhstan',
+        'KZ' => 'Kazakistan',
     
         'KE' => 'Kenya',
     
         'KI' => 'Kiribati',
     
-        'KP' => 'Korea (Democratic People\'s Republic of)',
+        'KP' => 'Corea del Nord',
     
-        'KR' => 'Korea (Republic of)',
+        'KR' => 'Corea del Sud',
     
         'KW' => 'Kuwait',
     
-        'KG' => 'Kyrgyzstan',
+        'KG' => 'Kirghizistan',
     
-        'LA' => 'Lao People\'s Democratic Republic',
+        'LA' => 'Repubblica Popolare Democratica del Laos',
     
         'LB' => 'Lebanon',
     
@@ -343,27 +343,27 @@ return [
     
         'LR' => 'Liberia',
     
-        'LY' => 'Libya',
+        'LY' => 'Libia',
     
         'LI' => 'Liechtenstein',
     
         'MO' => 'Macao',
     
-        'MK' => 'Macedonia (the former Yugoslav Republic of)',
+        'MK' => 'Macedonia',
     
         'MG' => 'Madagascar',
     
         'MW' => 'Malawi',
     
-        'MY' => 'Malaysia',
+        'MY' => 'Malesia',
     
-        'MV' => 'Maldives',
+        'MV' => 'Maldive',
     
         'ML' => 'Mali',
     
-        'MH' => 'Marshall Islands',
+        'MH' => 'Isole Marshall',
     
-        'MQ' => 'Martinique',
+        'MQ' => 'Martinica',
     
         'MR' => 'Mauritania',
     
@@ -371,11 +371,11 @@ return [
     
         'YT' => 'Mayotte',
     
-        'MX' => 'Mexico',
+        'MX' => 'Messico',
     
-        'FM' => 'Micronesia (Federated States of)',
+        'FM' => 'Micronesia',
     
-        'MD' => 'Moldova (Republic of)',
+        'MD' => 'Moldavia',
     
         'MC' => 'Monaco',
     
@@ -385,11 +385,11 @@ return [
     
         'MS' => 'Montserrat',
     
-        'MA' => 'Morocco',
+        'MA' => 'Marocco',
     
-        'MZ' => 'Mozambique',
+        'MZ' => 'Mozambico',
     
-        'MM' => 'Myanmar',
+        'MM' => 'Birmania',
     
         'NA' => 'Namibia',
     
@@ -397,9 +397,9 @@ return [
     
         'NP' => 'Nepal',
     
-        'NC' => 'New Caledonia',
+        'NC' => 'Nuova Caledonia',
     
-        'NZ' => 'New Zealand',
+        'NZ' => 'Nuova Zelanda',
     
         'NI' => 'Nicaragua',
     
@@ -409,11 +409,11 @@ return [
     
         'NU' => 'Niue',
     
-        'NF' => 'Norfolk Island',
+        'NF' => 'Isola Norfolk',
     
-        'MP' => 'Northern Mariana Islands',
+        'MP' => 'Isole Marianne Settentrionali',
     
-        'NO' => 'Norway',
+        'NO' => 'Norvegia',
     
         'OM' => 'Oman',
     
@@ -421,51 +421,51 @@ return [
     
         'PW' => 'Palau',
     
-        'PS' => 'Palestine, State of',
+        'PS' => 'Stato di Palestina',
     
         'PA' => 'Panama',
     
-        'PG' => 'Papua New Guinea',
+        'PG' => 'Papua Nuova Guinea',
     
         'PY' => 'Paraguay',
     
-        'PE' => 'Peru',
+        'PE' => 'Perù',
     
-        'PH' => 'Philippines',
+        'PH' => 'Filippine',
     
         'PN' => 'Pitcairn',
     
-        'PR' => 'Puerto Rico',
+        'PR' => 'Porto Rico',
     
-        'QA' => 'Qatar',
+        'QA' => 'Quatar',
     
-        'RE' => 'Réunion',
+        'RE' => 'Riunione',
     
-        'RU' => 'Russian Federation',
+        'RU' => 'Russia',
     
-        'RW' => 'Rwanda',
+        'RW' => 'Ruanda',
     
-        'BL' => 'Saint Barthélemy',
+        'BL' => 'Saint-Barthélemy',
     
-        'SH' => 'Saint Helena, Ascension and Tristan da Cunha',
+        'SH' => 'Sant\'Elena, Ascensione e Tristan da Cunha',
     
-        'KN' => 'Saint Kitts and Nevis',
+        'KN' => 'Saint Kitts e Nevis',
     
-        'LC' => 'Saint Lucia',
+        'LC' => 'Santa Lucia',
     
-        'MF' => 'Saint Martin (French part)',
+        'MF' => 'Saint Martin (parte francese)',
     
-        'PM' => 'Saint Pierre and Miquelon',
+        'PM' => 'Saint-Pierre e Miquelon',
     
-        'VC' => 'Saint Vincent and the Grenadines',
+        'VC' => 'Saint Vincent e Grenadine',
     
         'WS' => 'Samoa',
     
         'SM' => 'San Marino',
     
-        'ST' => 'Sao Tome and Principe',
+        'ST' => 'Sao Tomé e Principe',
     
-        'SA' => 'Saudi Arabia',
+        'SA' => 'Arabia Saudita',
     
         'SN' => 'Senegal',
     
@@ -477,17 +477,17 @@ return [
     
         'SG' => 'Singapore',
     
-        'SX' => 'Sint Maarten (Dutch part)',
+        'SX' => 'Sint Maarten (parte olandese)',
     
-        'SB' => 'Solomon Islands',
+        'SB' => 'Isole Salomone',
     
         'SO' => 'Somalia',
     
-        'ZA' => 'South Africa',
+        'ZA' => 'Repubblica Sudafricana',
     
-        'GS' => 'South Georgia and the South Sandwich Islands',
+        'GS' => 'Giorgia del Sud e Isole Sandwich Australi',
     
-        'SS' => 'South Sudan',
+        'SS' => 'Sudan del Sud',
     
         'LK' => 'Sri Lanka',
     
@@ -495,23 +495,23 @@ return [
     
         'SR' => 'Suriname',
     
-        'SJ' => 'Svalbard and Jan Mayen',
+        'SJ' => 'Svalbard e Jan Mayen',
     
         'SZ' => 'Swaziland',
     
-        'CH' => 'Switzerland',
+        'CH' => 'Svizzera',
     
-        'SY' => 'Syrian Arab Republic',
+        'SY' => 'Siria',
     
-        'TW' => 'Taiwan, Province of China',
+        'TW' => 'Taiwan',
     
-        'TJ' => 'Tajikistan',
+        'TJ' => 'Tagikistan',
     
-        'TZ' => 'Tanzania, United Republic of',
+        'TZ' => 'Tanzania',
     
-        'TH' => 'Thailand',
+        'TH' => 'Thailandia',
     
-        'TL' => 'Timor-Leste',
+        'TL' => 'Timor Est',
     
         'TG' => 'Togo',
     
@@ -519,27 +519,27 @@ return [
     
         'TO' => 'Tonga',
     
-        'TT' => 'Trinidad and Tobago',
+        'TT' => 'Trinidad e Tobago',
     
         'TN' => 'Tunisia',
     
-        'TR' => 'Turkey',
+        'TR' => 'Turchia',
     
         'TM' => 'Turkmenistan',
     
-        'TC' => 'Turks and Caicos Islands',
+        'TC' => 'Turks e Caicos',
     
         'TV' => 'Tuvalu',
     
         'UG' => 'Uganda',
     
-        'UA' => 'Ukraine',
+        'UA' => 'Ucraina',
     
-        'AE' => 'United Arab Emirates',
+        'AE' => 'Emirati Arabi Uniti',
     
-        'US' => 'United States of America',
+        'US' => 'Sati Uniti d\'America',
     
-        'UM' => 'United States Minor Outlying Islands',
+        'UM' => 'Isole minori esterne degli Stati Uniti',
     
         'UY' => 'Uruguay',
     
@@ -547,17 +547,17 @@ return [
     
         'VU' => 'Vanuatu',
     
-        'VE' => 'Venezuela (Bolivarian Republic of)',
+        'VE' => 'Venezuela',
     
-        'VN' => 'Viet Nam',
+        'VN' => 'Vietnam',
     
-        'VG' => 'Virgin Islands (British)',
+        'VG' => 'Isole  Vergini Britanniche',
     
-        'VI' => 'Virgin Islands (U.S.)',
+        'VI' => 'Isole Vergini Americane',
     
-        'WF' => 'Wallis and Futuna',
+        'WF' => 'Wallis e Futuna',
     
-        'EH' => 'Western Sahara',
+        'EH' => 'Sahara Occidentale',
     
         'YE' => 'Yemen',
     

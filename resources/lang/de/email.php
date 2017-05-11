@@ -41,7 +41,7 @@ return [
     
         'validatorRequested_subject_1' => '%s hat Sie als Gutachter in Talented Europe eingeladen.',
     
-        'validatorRequested_line_2' => 'Hello %s',
+        'validatorRequested_line_2' => 'Hallo %s',
     
         'validatorRequested_line_3' => '%s hat Sie als Gutachter in Talented Europe eingeladen.',
     
@@ -53,16 +53,16 @@ return [
     
         'validatorRequested_line_7' => 'Danke, dass Sie unsere App nutzen.',
     
-        'newAlerts_subject_1' => 'New alerts from students',
+        'newAlerts_subject_1' => 'Neue Nachrichten von Studenten.',
     
-        'newAlerts_line_2' => 'Hello we\'re reminding you that some students alerted you on our platform',
+        'newAlerts_line_2' => 'Wir geben Ihnen Bescheid, dass manche Studenten Ihnen auf der Platform eine Nahricht gesendet haben.',
     
-        'newAlerts_line_3' => 'Please click the following button to log in and see your panel',
+        'newAlerts_line_3' => 'Zur Anmeldung klicken Sie das folgende Fenster an und sehen Sie Ihr Informationspanel durch.',
     
-        'validationsPending_subject_1' => 'Referees pending on Talented Europe',
+        'validationsPending_subject_1' => 'Wartende Bewerter bei Talented Europe ',
     
-        'validationsPending_line_2' => 'Hello we\'re reminding you that you have some referee\'s pending on our platform',
+        'validationsPending_line_2' => 'Wir geben Ihnen Bescheid, dass sich auf der Platform mehrere wartende Bewerter befinden.',
     
-        'validationsPending_line_3' => 'Please click the following button to log in and see your panel',
+        'validationsPending_line_3' => 'Zur Anmeldung klicken Sie das folgende Fenster an und sehen Sie Ihr Informationspanel durch',
     
 ];
