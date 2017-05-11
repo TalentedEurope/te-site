@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import { profileResource } from 'resources/profile';
+
 export default {
     methods: {
         openConfirm: function () {
@@ -25,7 +27,10 @@ export default {
                         text: TE.translations['reg-profile']['remove_account_button_ok'],
                         btnClass: 'btn-info',
                         action: function() {
-                            location.href = '/profile/quit';
+                            profileResource.deleteProfile()
+                                .then(function(response) {
+                                    window.location = '/';
+                                });
                         }
                     },
                 }

@@ -3,6 +3,10 @@ import http from './http';
 var ProfileResource = {
     put: (data) => {
         return http.put('profile', data);
+    },
+
+    deleteProfile: () => {
+        return http.delete('profile/quit');
     }
 };
 

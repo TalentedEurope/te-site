@@ -31,6 +31,9 @@ Route::group(['prefix' => 'profile', 'namespace' => 'Api'], function () {
     Route::put('/', 'ProfileController@update');
     Route::post('validation/request', 'ProfileController@requestValidation')->name('request-validation');
     Route::post('invite', 'ProfileController@inviteSchool')->name('invite-school');
+
+    // Quit
+    Route::delete('quit', 'ProfileController@quit')->name('quit');
 });
 
 Route::resource('alerts', 'Api\AlertController');

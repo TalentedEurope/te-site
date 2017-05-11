@@ -165,10 +165,6 @@
       </div>
     </div>
   </div>
-  <a href="https://github.com/TalentedEurope/te-site/issues" class="btn btn-danger issue-btn">
-  <i class="fa fa-github" aria-hidden="true"></i>
-    Report a page error
-  </a>
 
   <!-- JavaScripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

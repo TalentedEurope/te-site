@@ -81,8 +81,7 @@ class ProfileController extends Controller
         $user = Auth::user();
         Auth::logout();
         $user->delete();
-        $request->session()->flash('success_message', trans('reg-profile.leave'));
-        return redirect('login');
+        return;
     }
 
     public function getEdit(Request $request)
