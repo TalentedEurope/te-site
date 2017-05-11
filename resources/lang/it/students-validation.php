@@ -17,10 +17,10 @@ return [
     
         'are_you_sure_you_want_to_finish_refereeing' => 'Sei sicuro di voler concludere la vidimazione di questo studente?',
     
-        'reason' => 'Reason',
+        'reason' => 'Motivo',
     
-        'criteria' => 'Student does not meet criteria',
+        'criteria' => 'Lo studente non soddisfa i requisiti.',
     
-        'nostudent' => 'Student hasn\'t attended this school/institution',
+        'nostudent' => 'Lo studente non ha frequentato  questa scuola/istituzione.',
     
 ];

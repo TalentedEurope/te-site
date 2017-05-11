@@ -21,7 +21,7 @@ return [
     
         'what_is_cta' => '<strong>Erfahre mehr!</strong> Eine Broschühre anfordern!',
     
-        'what_is_text_1' => 'Können Sie sich vorstellen, die besten Studenten aus einem beliebigen europäischen Land einzustellen? Möchten Sie ein Teil der europäischen Top-Studenten sein? Tausende Unternehmen gewinnen einen direkten Zugang zu Informationen über Sie und je besser Ihre Bewertung, desto mehr Möglichkeiten haben Sie, eine bessere Arbeit zu finden.',
+        'what_is_text_1' => 'Können Sie sich vorstellen, die besten Studenten aus einem beliebigen europäischen Land einzustellen? <strong> Möchten Sie ein Teil der europäischen Top-Studenten sein? Tausende Unternehmen gewinnen einen direkten Zugang zu Informationen über Sie <strong>  und je besser Ihre Bewertung, desto mehr Möglichkeiten haben Sie, eine bessere Arbeit zu finden.',
     
         'what_is_text_2' => 'Genau das bietet Talentiertes Europa an. Ein Ausstellfenster voller besten Studenten in Europa. Eine einfache Idee, die Arbeitgeber mit Studenten verbindet. Der Treffpunkt für die Besten.',
     
@@ -35,7 +35,7 @@ return [
     
         'subscribe_follow_text' => 'Bitte folg uns auf:',
     
-        'subscribe_text_question' => 'Neuigkeiten über Talented Europe per E-Mail bekommen',
+        'subscribe_text_question' => 'Neuigkeiten über Talented Europe per E-Mail bekommen.<br/> Geben Sie uns bitte Bescheid, was für Sie Talent ist.',
     
         'meta_description' => 'Erasmus plus Projekt, das die Verbindung von exzellenten Studenten mit der Arbeit und Praktika in Europa verbindet.',
     
@@ -63,6 +63,6 @@ return [
     
         'talented_for_employers' => '<strong>Für Arbeitgeber</strong> Talented Europe verbindet Sie talentierten jungen Studenten in ganz Europa und hilft Ihnen die passende Person für Sie zu finden, der Ihren Unternehmen mit seinen speziellen Fähigkeit und Begabung zu Erfolg verhilft.',
     
-        'go_to_app' => 'Go to application',
+        'go_to_app' => 'Geh zur App',
     
 ];

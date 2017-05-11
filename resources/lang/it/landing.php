@@ -21,7 +21,7 @@ return [
     
         'what_is_cta' => '<strong>Scopri di più!</strong> Scarica la brochure!',
     
-        'what_is_text_1' => 'Potresti immaginare la possibilità di poter assumere i migliori studenti di qualsiasi Paese europeo? Ti piacerebbe far parte di un elite studentesca in Europa? Migliaia di compagnie avranno un accesso diretto ai tuoi contatti e alle tue informazioni, migliori saranno i tuoi voti, maggiori saranno le possibilità di trovare un buon lavoro.',
+        'what_is_text_1' => 'Potete immaginare la possibilità di poter assumere i migliori studenti di qualsiasi paese d\'Europa? Vorreste far parte di un\'élite studentesca in Europa? Migliaia di compagnie avranno un accesso diretto alle vostre informazioni di contatto; migliore sarà la vostra valutazione, maggiori saranno le vostre opportunità di trovare un buon lavoro.',
     
         'what_is_text_2' => 'Questa è l’offerta che Talented Europe ti propone. Una vetrina in cui vengono messi in mostra i migliori studenti di tutta Europa. Un’idea semplice che unisce i datori di lavoro agli studenti. Il punto d’incontro per eccellenza.',
     
@@ -63,6 +63,6 @@ return [
     
         'talented_for_employers' => '<strong>Per imprese e professionisti</strong> - Talented Europe vi metterá in contatto con i giovani studenti di talento di tutta Europa e vi aiuterà a incontrare la persona adeguata che puó contribuire al successo della vostra impresa con il talento e le competenze specifiche che sta cercando.',
     
-        'go_to_app' => 'Go to application',
+        'go_to_app' => 'Passare all\'app',
     
 ];

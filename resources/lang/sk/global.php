@@ -235,7 +235,7 @@ return [
     
         'DM' => 'Dominica',
     
-        'DO' => 'Dominican Republic',
+        'DO' => 'Dominikánska Republika',
     
         'EC' => 'Ekvádor',
     
