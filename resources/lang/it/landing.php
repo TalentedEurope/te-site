@@ -55,7 +55,7 @@ return [
     
         'students_title' => 'Studenti di talento',
     
-        'no_students' => 'Nessun studente disponibile',
+        'no_students' => 'Nessuno studente disponibile',
     
         'join_talented_europe_today' => 'Unisciti al Talented Europe oggi!',
     
