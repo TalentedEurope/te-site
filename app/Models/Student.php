@@ -32,7 +32,7 @@ class Student extends Model
             'birthdate' => 'sometimes',
             'curriculum' => 'mimes:pdf',
             'renewed_at' => 'sometimes|required',
-            'talent' => 'sometimes|required|max:300',
+            'talent' => 'sometimes|min:10|required|max:300',
             'studies' => 'array|min:1',
             'languages' => 'array',
             'curriculum' => 'sometimes|required|file',
