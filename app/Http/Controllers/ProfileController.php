@@ -733,8 +733,7 @@ class ProfileController extends Controller
             }
         }
 
-
-        if (isset($v->valid()['personalSkills']) && !$request->has('validate')) {
+        if (isset($v->valid()['personalSkills']) && !$validationReqDate && !$request->has('validate')) {
             $skills = $v->valid()['personalSkills'];
             if ($skills) {
                 $student->personalSkills()->whereNotIn('id', $skills)->detach();
