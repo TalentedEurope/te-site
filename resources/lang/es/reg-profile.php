@@ -517,7 +517,7 @@ return [
     
         'work_experience_until' => 'Experiencia profesional hasta',
     
-        'work_experience_position' => 'puesto de trabajo',
+        'work_experience_position' => 'Puesto de trabajo',
     
         'about_me' => 'Sobre mí',
     
