@@ -10,7 +10,7 @@ module.exports = {
         ]
     },
     entry: {
-        main: './resources/assets/js/main.js',
+        main: ['babel-polyfill', './resources/assets/js/main.js'],
         landing: './resources/assets/js/landing.js'
     },
     output: {
