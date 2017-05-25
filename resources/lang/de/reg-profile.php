@@ -545,4 +545,8 @@ return [
     
         'cant_send_alerts_until_you_fill_the_profile' => 'Um den Unternehmen eine "Bemerkung" zu schicken, muss das ganze Profil ausgefüllt sein. Bitte sehen Sie nach, ob alle Angaben ausgefüllt sind.',
     
+        'institution_hei_vet' => 'Fachausbildung und Praktikum',
+    
+        'insitution_hei_his' => 'Mittelschule',
+    
 ];

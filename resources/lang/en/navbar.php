@@ -3,7 +3,7 @@
 
 return [
     
-        'looking_for' => 'I\'m looking for',
+        'looking_for' => 'I&apos;m looking for',
     
         'profile' => 'Profile',
     

@@ -322,7 +322,7 @@ class SearchController extends SiteSearchController
         foreach ($availableCountries as $country) {
             $countries[] = array(
                 'id' => $country->country,
-                'name' => User::$countries[$country->country]
+                'name' => trans('global.'.$country->country)
             );
         }
 
@@ -380,9 +380,10 @@ class SearchController extends SiteSearchController
         foreach ($availableCountries as $country) {
             $countries[] = array(
                 'id' => $country->country,
-                'name' => User::$countries[$country->country]
+                'name' => trans('global.'.$country->country)
             );
         }
+
 
         $data[] = array(
             'id' => 'activities',

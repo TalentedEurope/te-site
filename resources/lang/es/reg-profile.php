@@ -545,4 +545,8 @@ return [
     
         'cant_send_alerts_until_you_fill_the_profile' => 'Para poder darle "toques" a empresas, debes completar tu perfil. Por favor, comprueba qué datos te faltan por proporcionar.',
     
+        'institution_hei_vet' => 'Formación profesional y prácticas',
+    
+        'insitution_hei_his' => 'Escuela secundaria',
+    
 ];
