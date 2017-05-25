@@ -74,9 +74,9 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-left regular hidden-xs">
-            <li><a href="{{ url::to('searchStudents') }}">{!! trans_choice('global.student', 2) !!}</a></li>
-            <li><a href="{{ url::to('searchCompanies') }}">{!! trans_choice('global.company_plural', 2) !!}</a></li>
-            <li><a href="{{-- url::to('searchInstitutions') --}}">{!! trans_choice('global.institution_plural', 2) !!}</a></li>
+            <li><a href="{{ url::route('searchStudents') }}">{!! trans_choice('global.student', 2) !!}</a></li>
+            <li><a href="{{ url::route('searchCompanies') }}">{!! trans_choice('global.company_plural', 2) !!}</a></li>
+            <li><a href="{{ url::route('searchInstitutions') }}">{!! trans_choice('global.institution_plural', 2) !!}</a></li>
 
             </ul>
 

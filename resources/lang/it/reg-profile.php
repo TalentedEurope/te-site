@@ -545,4 +545,8 @@ return [
     
         'cant_send_alerts_until_you_fill_the_profile' => 'Per poter inviare un&apos;"avvertenza" alle aziende, dovete completare il vostro profilo. Si prega di verificare quali informazioni volete fornire.',
     
+        'institution_hei_vet' => 'Formazione professionale e tirocini',
+    
+        'insitution_hei_his' => 'Scuola secondaria',
+    
 ];

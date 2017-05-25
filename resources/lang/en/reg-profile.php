@@ -545,4 +545,8 @@ return [
     
         'cant_send_alerts_until_you_fill_the_profile' => 'To be able to send an "alert" to companies, you have to fill your profile. Please, review which information you should provide.',
     
+        'institution_hei_vet' => 'Vocational education and training',
+    
+        'insitution_hei_his' => 'Highschool',
+    
 ];

@@ -546,4 +546,8 @@ Obchodná a poradenská činnosť',
     
         'cant_send_alerts_until_you_fill_the_profile' => 'Aby ste mohli spoločnostiam zaslať "upozornenie", muíste vyplniť celý profil.Prosíme vás, skontrolujte si, či máte vyplnené všetky požadované údaje  ',
     
+        'institution_hei_vet' => 'odborné vzdelanie a prax',
+    
+        'insitution_hei_his' => 'Stredná škola',
+    
 ];

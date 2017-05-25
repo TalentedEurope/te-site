@@ -554,4 +554,8 @@ Sur',
     
         'cant_send_alerts_until_you_fill_the_profile' => 'Pour pouvoir envoyer une "alerte" aux entreprises, vous devez remplir votre profil. Veuillez évaluer les informations que vous devriez fournir.',
     
+        'institution_hei_vet' => 'La formation professionnelle et les activités professionnelles',
+    
+        'insitution_hei_his' => 'L&apos; école secondaire',
+    
 ];

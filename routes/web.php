@@ -91,4 +91,5 @@ Route::group(['prefix' => 'search'], function () {
     Route::get('/', 'SearchController@index')->name('search');
     Route::get('/students', 'SearchController@searchStudents')->name('searchStudents');
     Route::get('/companies', 'SearchController@searchCompanies')->name('searchCompanies');
+    Route::get('/institutions', 'SearchController@searchInstitutions')->name('searchInstitutions');
 });
