@@ -33,25 +33,26 @@
                       <strong><i class="fa fa-map-marker"></i> {{ trans('reg-profile.we_are_in') }}: </strong>
                       {{ $institution->city }}, {{ trans('global.'.$institution->country) }}
                   </p>
-                  @if ($institution->userable->validators->where('enabled', true))
+                  @if ($institution->userable->validators->where('enabled', true)->count())
                   <p>
                       <strong>{{ trans('validators.validators') }} </strong>
                   </p>
                   <ul class="validators list-inline">
                     @foreach ($institution->userable->validators as $validator)
                         @if ($validator->enabled)
-                        <li><a href="{{ route('get_profile', [$validator->user->getSlug(), $validator->user->id ] ) }}" class="btn btn-primary">{{ $validator->user->name }}</a></li>
+                        <li><a href="{{ route('get_profile', [$validator->user->getSlug(), $validator->user->id ] ) }}" class="btn btn-primary">{{ $validator->user->fullName }}</a></li>
                         @endif
                     @endforeach
                   </ul>
                   @endif
               </div>
-
+              @if ($institution->image)
               <div class="col-xs-12 col-sm-4 col-md-3 text-center">
                   <figure>
-                      <img alt="" class="img-responsive" src="https://www.talentedeurope.eu/uploads/photo/11yOaaw7.jpg">
+                      <img alt="{{ $institution->name }}" class="img-responsive" src="{{ asset(\App\Models\User::$photoPath.$institution->image) }}">
                   </figure>
               </div>
+              @endif
         </li>
 
       @endforeach
