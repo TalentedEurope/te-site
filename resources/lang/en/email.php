@@ -17,7 +17,7 @@ return [
     
         'changeInstitution_line_2' => '%s has invited you as referee on Talented Europe.',
     
-        'changeInstitution_line_3' => 'Since you\'re already a Talented Europe referee we need to you to confirm your change to this institution',
+        'changeInstitution_line_3' => 'Since you&apos;re already a Talented Europe referee we need to you to confirm your change to this institution',
     
         'changeInstitution_action_4' => 'Confirm change',
     
@@ -55,13 +55,13 @@ return [
     
         'newAlerts_subject_1' => 'New alerts from students',
     
-        'newAlerts_line_2' => 'Hello we\'re reminding you that some students alerted you on our platform',
+        'newAlerts_line_2' => 'Hello we&apos;re reminding you that some students alerted you on our platform',
     
         'newAlerts_line_3' => 'Please click the following button to log in and see your panel',
     
         'validationsPending_subject_1' => 'Referees pending on Talented Europe',
     
-        'validationsPending_line_2' => 'Hello we\'re reminding you that you have some referee\'s pending on our platform',
+        'validationsPending_line_2' => 'Hello we&apos;re reminding you that you have some referee&apos;s pending on our platform',
     
         'validationsPending_line_3' => 'Please click the following button to log in and see your panel',
     

@@ -11,7 +11,7 @@ return [
     
         'studies_level_8' => 'Dottorato di ricerca o equivalente',
     
-        'company_activity' => 'Settore dell\' attività',
+        'company_activity' => 'Settore dell&apos; attività',
     
         'company_contact_person' => 'Persona da contattare',
     
@@ -129,7 +129,7 @@ return [
     
         'captcha' => 'Captcha',
     
-        'terms_of_use' => 'Accetto le condizioni d\'uso',
+        'terms_of_use' => 'Accetto le condizioni d&apos;uso',
     
         'i_agree_with' => 'Accetto',
     
@@ -185,7 +185,7 @@ return [
     
         'research-amp-development' => 'Ricerca e Sviluppo',
     
-        'retail-amp-wholesale' => 'Commercio al dettaglio e all\'ingrosso',
+        'retail-amp-wholesale' => 'Commercio al dettaglio e all&apos;ingrosso',
     
         'sales' => 'Vendite',
     
@@ -273,7 +273,7 @@ return [
     
         'most_valuable_skills_for_company' => 'Una lista delle competenze piú importanti per l´impresa',
     
-        'setup_alternative_contact' => 'Impostare user di contatto alternativo all\' account principale per ricevere tutte le informazioni',
+        'setup_alternative_contact' => 'Impostare user di contatto alternativo all&apos; account principale per ricevere tutte le informazioni',
     
         'update_settings' => 'Aggiornare le impostazioni',
     
@@ -425,11 +425,11 @@ return [
     
         'progress_completed' => 'Completato',
     
-        'you_must_put_referee_email' => '<strong>Per favore nota che:</strong> Devi mettere la mail del vidimatore, non quella dell´\'Istituzione',
+        'you_must_put_referee_email' => '<strong>Per favore nota che:</strong> Devi mettere la mail del vidimatore, non quella dell´&apos;Istituzione',
     
         'leave_institution' => 'Lasciare l´Istituzione?',
     
-        'do_you_want_to_leave_institution' => 'Vuoi lasciare l\'istituzione? Ció comporterà che le richieste di vidimazione pendenti vengano reinviate indietro, non sarà possibile vidimare nessuno fino a quando un\'altra istituzione ti inviterà di nuovo',
+        'do_you_want_to_leave_institution' => 'Vuoi lasciare l&apos;istituzione? Ció comporterà che le richieste di vidimazione pendenti vengano reinviate indietro, non sarà possibile vidimare nessuno fino a quando un&apos;altra istituzione ti inviterà di nuovo',
     
         'leave_institution_button' => 'Si! esco dall`Istituzione Accademica!',
     
@@ -523,9 +523,9 @@ return [
     
         'social_networks' => 'Reti sociali',
     
-        'account_activation_successful' => 'L\'attivazione dell\'account è stata compiuta; adesso potete accedere.',
+        'account_activation_successful' => 'L&apos;attivazione dell&apos;account è stata compiuta; adesso potete accedere.',
     
-        'account_has_not_been_verified' => 'L\'account non è stato verificato. Si prega di attivare l\'account verificando il vostro indirizzo e-mail.',
+        'account_has_not_been_verified' => 'L&apos;account non è stato verificato. Si prega di attivare l&apos;account verificando il vostro indirizzo e-mail.',
     
         'at' => 'su',
     
@@ -543,6 +543,6 @@ return [
     
         'view_contact_details' => 'Vedere dettagli del contatto',
     
-        'cant_send_alerts_until_you_fill_the_profile' => 'Per poter inviare un\'"avvertenza" alle aziende, dovete completare il vostro profilo. Si prega di verificare quali informazioni volete fornire.',
+        'cant_send_alerts_until_you_fill_the_profile' => 'Per poter inviare un&apos;"avvertenza" alle aziende, dovete completare il vostro profilo. Si prega di verificare quali informazioni volete fornire.',
     
 ];

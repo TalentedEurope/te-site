@@ -5,13 +5,13 @@ return [
     
         'not_allowed' => 'Not allowed',
     
-        'not_allowed_to_do_this_action' => 'You\'re not allowed to do this action.',
+        'not_allowed_to_do_this_action' => 'You&apos;re not allowed to do this action.',
     
         'can_try_searching_for' => 'You can try searching for',
     
         'page_not_found' => 'Page not found',
     
-        'we_didnt_find_the_page' => 'We didn\'t find the page you were looking for.',
+        'we_didnt_find_the_page' => 'We didn&apos;t find the page you were looking for.',
     
         'internal_server_error' => 'Internal server error',
     

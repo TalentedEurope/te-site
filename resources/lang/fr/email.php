@@ -27,7 +27,7 @@ return [
     
         'institutionRemoved.line_2' => '%s vous a exclut de son institution dans Talented Europe, si vous avez été exclu par erreur,contactez- les, pour que la situaion puisse etre résolue',
     
-        'institutionRemoved.line_3' => 'Merci d\' utiliser notre application',
+        'institutionRemoved.line_3' => 'Merci d&apos; utiliser notre application',
     
         'inviteCreated_subject_1' => '%s vous a invitée comme évaluateur dans Talented Europe',
     
