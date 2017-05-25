@@ -53,4 +53,16 @@ return [
     
         'validatorRequested_line_7' => '¡Gracias por usar nuestra aplicación!',
     
+        'newAlerts_subject_1' => 'Nuevas alertas de los estudiantes',
+    
+        'newAlerts_line_2' => '¡Hola! te recordamos que algunos estudiantes te han enviado alertas en nuestra plataforma',
+    
+        'newAlerts_line_3' => 'Haga clic en el siguiente botón para iniciar sesión y ver su panel',
+    
+        'validationsPending_subject_1' => 'Validadores pendientes en Talented Europe',
+    
+        'validationsPending_line_2' => '¡Hola! te recordamos que tienes algunos validadores pendientes en nuestra plataforma',
+    
+        'validationsPending_line_3' => 'Haga clic en el siguiente botón para iniciar sesión y ver su panel',
+    
 ];

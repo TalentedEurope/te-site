@@ -81,8 +81,7 @@ class ProfileController extends Controller
         $user = Auth::user();
         Auth::logout();
         $user->delete();
-        $request->session()->flash('success_message', trans('reg-profile.leave'));
-        return redirect('login');
+        return;
     }
 
     public function getEdit(Request $request)
@@ -256,7 +255,7 @@ class ProfileController extends Controller
             $img = Image::make($request->file('image'));
             $padding = 15;
             if (auth::user()->isA('student')) {
-                $img->fit(User::$photoHeight, User::$photoHeight)->save($fname);
+                $img->fit(User::$photoWidth, User::$photoWidth)->save($fname);
             } else {
                 if ($img->width() > $img->height()) {
                     $img->resize(User::$photoWidth - $padding, null, function ($constraint) {
@@ -734,8 +733,7 @@ class ProfileController extends Controller
             }
         }
 
-
-        if (isset($v->valid()['personalSkills']) && !$request->has('validate')) {
+        if (isset($v->valid()['personalSkills']) && !$validationReqDate && !$request->has('validate')) {
             $skills = $v->valid()['personalSkills'];
             if ($skills) {
                 $student->personalSkills()->whereNotIn('id', $skills)->detach();

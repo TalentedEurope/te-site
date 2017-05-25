@@ -15,9 +15,9 @@ return [
     
         'company_contact_person' => 'Kontaktná osoba',
     
-        'company_contact_person_name' => 'Contact person name',
+        'company_contact_person_name' => 'Meno kontaktnej osoby',
     
-        'company_contact_person_email' => 'Contact person email',
+        'company_contact_person_email' => 'e-mail kontaktnej osoby',
     
         'company_representative' => 'Zákonný zástupca (oprávnená osoba)',
     
@@ -29,7 +29,7 @@ return [
     
         'country' => 'Krajina',
     
-        'countries' => 'Countries',
+        'countries' => 'Krajiny',
     
         'institution_certificate_template_download' => 'Stiahnite si šablónu',
     
@@ -426,7 +426,7 @@ Obchodná a poradenská činnosť',
     
         'progress_completed' => 'Ukončené.',
     
-        'you_must_put_referee_email' => 'Zadajte mail hodnotiteľa, nie inštitúcie.',
+        'you_must_put_referee_email' => '<strong>Upozornenie:</strong>Zadajte mail hodnotiteľa, nie inštitúcie.',
     
         'leave_institution' => 'Opustiť inštitúciu?',
     
@@ -482,68 +482,68 @@ Obchodná a poradenská činnosť',
     
         'field' => 'Pole',
     
-        'your_request_was_created' => 'Your request was created %s',
+        'your_request_was_created' => 'vaša žiadosť bolas vytvorená %',
     
-        'if_request_hasnt_been_completed' => 'If your request hasn\'t been completed in %s days you will be able to create a new request',
+        'if_request_hasnt_been_completed' => 'Ak nebola vaša žiadosť ukončená do %s dní, budete si môcť vytvoriť novú žiadosť.',
     
-        'you_havent_set_any_personal_skills' => 'You haven\'t set any personal skills yet. If you request referee you cannot modify them.',
+        'you_havent_set_any_personal_skills' => 'Nezadali ste žiadne osobnostné zručnosti. Ak pošlete žiadosť hodnotiteľovi, už ich nebudete môcť  upraviť.',
     
-        'to_see_more_details' => 'To see more details you must be registered',
+        'to_see_more_details' => 'Musíte byť registrovaný ak chcete vidieť viac detailov.  ',
     
-        'study_institution_name' => 'Study Institution name',
+        'study_institution_name' => 'Názov vzdelávacej inštitúcie.',
     
-        'study_name' => 'Study name',
+        'study_name' => 'Názov štúdií.',
     
-        'study_level' => 'Study level',
+        'study_level' => 'Stupeň štúdia',
     
-        'study_field' => 'Study field',
+        'study_field' => 'Odbor štúdia',
     
-        'study_certificate' => 'Study certificate',
+        'study_certificate' => 'Certifikát o štúdiu.',
     
-        'study_gradecard' => 'Study gradecard',
+        'study_gradecard' => 'Tabuľka hodnotenia štúdia. ',
     
-        'training_name' => 'Training name',
+        'training_name' => 'Názov praxe',
     
-        'training_date' => 'Training date',
+        'training_date' => 'Dátum praxe',
     
-        'training_certificate' => 'Training certificate',
+        'training_certificate' => 'Certifikát o praxi',
     
-        'language_certificate' => 'Language certificate',
+        'language_certificate' => 'Jazykový certifikát',
     
-        'professional_skills_name' => 'Professional Skills name',
+        'professional_skills_name' => 'Profesionálne zručnosti meno',
     
-        'work_experience_company' => 'Work experience company',
+        'work_experience_company' => 'Pracovná skúsenosť v spoločnosti ',
     
-        'work_experience_from' => 'Work experience from',
+        'work_experience_from' => 'Pracovná skúsenosť od',
     
-        'work_experience_until' => 'Work experience until',
+        'work_experience_until' => 'Pracovná skúsenosť do',
     
-        'work_experience_position' => 'Work experience position',
+        'work_experience_position' => 'Pozícia počas pracovnej skúsenosti ',
     
-        'about_me' => 'About me',
+        'about_me' => 'O mne',
     
-        'social_networks' => 'Social networks',
+        'social_networks' => 'Sociálne siete',
     
-        'account_activation_successful' => 'Account activation was successful, you may log in now',
+        'account_activation_successful' => 'Aktivácia účtu bola úspešná, môžete sa prihlásiť.',
     
-        'account_has_not_been_verified' => 'Account has not been verified. Please verify your email and activate your account',
+        'account_has_not_been_verified' => 'Účet nebol potvrdený. Účet aktivujte potvrdením vášho emailu. ',
     
         'at' => 'at',
     
-        'remove_account_button' => 'Delete account',
+        'remove_account_button' => 'vymazať účet.',
     
-        'remove_account_confirm' => 'Are you really sure that you wish delete your account? It\'s going to remove all your information',
+        'remove_account_confirm' => 'Naozaj chcete odstránit váš účet? Budú odstránené všetky vaše informácie. ',
     
-        'remove_account_button_ok' => 'Ok',
+        'remove_account_button_ok' => 'OK',
     
-        'remove_account_button_cancel' => 'Cancel',
+        'remove_account_button_cancel' => 'zrušiť',
     
-        'refereed_students' => 'Refereed students',
+        'refereed_students' => 'Hodnotení študenti ',
     
-        'no_refereed_students' => 'There are no refereed students',
+        'no_refereed_students' => 'Neexistujú žiadni hodnotení študenti ',
     
-        'view_contact_details' => 'View contact details',
+        'view_contact_details' => 'Pozri si kontaktné údaje',
     
-        'cant_send_alerts_until_you_fill_the_profile' => 'To be able to send a "alert" to companies, you have to filled your profile. Please, review which information you should provide.',
+        'cant_send_alerts_until_you_fill_the_profile' => 'Aby ste mohli spoločnostiam zaslať "upozornenie", muíste vyplniť celý profil.Prosíme vás, skontrolujte si, či máte vyplnené všetky požadované údaje  ',
     
 ];

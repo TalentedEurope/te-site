@@ -15,9 +15,9 @@ return [
     
         'company_contact_person' => 'Kontaktperson',
     
-        'company_contact_person_name' => 'Contact person name',
+        'company_contact_person_name' => 'Name der Kontaktperson',
     
-        'company_contact_person_email' => 'Contact person email',
+        'company_contact_person_email' => 'E-Mail der Kontaktperson',
     
         'company_representative' => 'Erziehungsberechtigte',
     
@@ -29,7 +29,7 @@ return [
     
         'country' => 'Land',
     
-        'countries' => 'Countries',
+        'countries' => 'Länder',
     
         'institution_certificate_template_download' => 'Muster herunterladen',
     
@@ -425,7 +425,7 @@ return [
     
         'progress_completed' => 'Beendet',
     
-        'you_must_put_referee_email' => 'Geben Sie die E-Mail des Begutachters.',
+        'you_must_put_referee_email' => '<strong>Achtung:</strong>.Geben Sie die E-Mail des Begutachters.',
     
         'leave_institution' => 'Die Insitution verlassen?',
     
@@ -473,7 +473,7 @@ return [
     
         'invitation_sent_successfully' => 'Einladung erfolgreich gesendet.',
     
-        'referee_is_part_of_institution' => 'Der Gutachter ist ein Mitglied, treten Sie mit Ihn in Kontakt wegen einer möglichen Änderung der Institution.',
+        'referee_is_part_of_institution' => 'Der Gutachter ist ein Mitglied %s, treten Sie mit Ihn in Kontakt wegen einer möglichen Änderung der Institution.',
     
         'referee_isnt_part_of_any_institution' => 'Der Gutachter ist kein Mitglied einer Institution. Bitte forden Sie an, dass er sich von einer Institution einladen lässt. ',
     
@@ -481,68 +481,68 @@ return [
     
         'field' => 'Feld',
     
-        'your_request_was_created' => 'Your request was created %s',
+        'your_request_was_created' => 'Ihre Anfrage wurde erstellt %',
     
-        'if_request_hasnt_been_completed' => 'If your request hasn\'t been completed in %s days you will be able to create a new request',
+        'if_request_hasnt_been_completed' => 'Fall dei Anfragen nicht bis %s Tage beendet wurde, können Sie eine neue Anfrage erstellen.',
     
-        'you_havent_set_any_personal_skills' => 'You haven\'t set any personal skills yet. If you request referee you cannot modify them.',
+        'you_havent_set_any_personal_skills' => 'Sie haben keine persönlichen Fähigkeiten angegeben. Wenn Sie die Anforderung senden, können Sie diese nicht bearbeiten.',
     
-        'to_see_more_details' => 'To see more details you must be registered',
+        'to_see_more_details' => 'Um mehr Details zu sehen, müssen Sie registriert sein.',
     
-        'study_institution_name' => 'Study Institution name',
+        'study_institution_name' => 'Name der Bildungsinstitution',
     
-        'study_name' => 'Study name',
+        'study_name' => 'Studienname',
     
-        'study_level' => 'Study level',
+        'study_level' => 'Studienstufe',
     
-        'study_field' => 'Study field',
+        'study_field' => 'Studienfach',
     
-        'study_certificate' => 'Study certificate',
+        'study_certificate' => 'Stdueinzertifikat',
     
-        'study_gradecard' => 'Study gradecard',
+        'study_gradecard' => 'Tabelle der Studienbewertung',
     
-        'training_name' => 'Training name',
+        'training_name' => 'Name des Praktikums',
     
-        'training_date' => 'Training date',
+        'training_date' => 'Datum des Praktikums',
     
-        'training_certificate' => 'Training certificate',
+        'training_certificate' => 'Zertifikat über das Praktikum',
     
-        'language_certificate' => 'Language certificate',
+        'language_certificate' => 'Sprachzertifikat',
     
-        'professional_skills_name' => 'Professional Skills name',
+        'professional_skills_name' => 'Profesionelle Fähigkeiten Name',
     
-        'work_experience_company' => 'Work experience company',
+        'work_experience_company' => 'Arbeitserfahrung im Unternehmen',
     
-        'work_experience_from' => 'Work experience from',
+        'work_experience_from' => 'Arbeitserfahrung von',
     
-        'work_experience_until' => 'Work experience until',
+        'work_experience_until' => 'Arbeitserfahrung bis',
     
-        'work_experience_position' => 'Work experience position',
+        'work_experience_position' => 'Position der Arbeitserfahrung',
     
-        'about_me' => 'About me',
+        'about_me' => 'Über mich',
     
-        'social_networks' => 'Social networks',
+        'social_networks' => 'Soziale Netzwerke',
     
-        'account_activation_successful' => 'Account activation was successful, you may log in now',
+        'account_activation_successful' => 'Die Konto-Aktivierung war erfolgreich, nun können Sie sich anmelden.',
     
-        'account_has_not_been_verified' => 'Account has not been verified. Please verify your email and activate your account',
+        'account_has_not_been_verified' => 'Das Konto wurde nicht bestätigt. Das Konto aktivieren Sie mit der Bestätigung Ihrer E-Mail.',
     
-        'at' => 'at',
+        'at' => 'und',
     
-        'remove_account_button' => 'Delete account',
+        'remove_account_button' => 'Das Konto löschen.',
     
-        'remove_account_confirm' => 'Are you really sure that you wish delete your account? It\'s going to remove all your information',
+        'remove_account_confirm' => 'Wollen Sie Ihr Konto wirklich entfernen?Alle Ihre Informationen werden gelöscht.',
     
-        'remove_account_button_ok' => 'Ok',
+        'remove_account_button_ok' => 'Ja',
     
-        'remove_account_button_cancel' => 'Cancel',
+        'remove_account_button_cancel' => 'Abbrechen',
     
-        'refereed_students' => 'Refereed students',
+        'refereed_students' => 'BewerteteStudenten',
     
-        'no_refereed_students' => 'There are no refereed students',
+        'no_refereed_students' => 'Es existieren keine bewerteten Studenten',
     
-        'view_contact_details' => 'View contact details',
+        'view_contact_details' => 'Sehe die Kontaktangaben durch',
     
-        'cant_send_alerts_until_you_fill_the_profile' => 'To be able to send a "alert" to companies, you have to filled your profile. Please, review which information you should provide.',
+        'cant_send_alerts_until_you_fill_the_profile' => 'Um den Unternehmen eine "Bemerkung" zu schicken, muss das ganze Profil ausgefüllt sein. Bitte sehen Sie nach, ob alle Angaben ausgefüllt sind.',
     
 ];

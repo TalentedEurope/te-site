@@ -21,8 +21,8 @@ return [
     
         'be_right_back' => 'Torniamo subito',
     
-        'not_found' => 'Not found',
+        'not_found' => 'Non trovato',
     
-        'unauthorized_action' => 'Unauthorized action',
+        'unauthorized_action' => 'Azione non autorizzata',
     
 ];

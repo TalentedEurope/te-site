@@ -17,10 +17,10 @@ return [
     
         'are_you_sure_you_want_to_finish_refereeing' => 'Möchten SIe die Bewertung des Studenten beenden?',
     
-        'reason' => 'Reason',
+        'reason' => 'Grund',
     
-        'criteria' => 'Student does not meet criteria',
+        'criteria' => 'Der Student erfüllt die Kriterien nicht',
     
-        'nostudent' => 'Student hasn\'t attended this school/institution',
+        'nostudent' => 'Der Student besuchte diese Schule/Institution nicht',
     
 ];

@@ -43,10 +43,10 @@ class NewAlerts extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage())
-                    ->subject('New alerts from students')
-                    ->line("Hello we're reminding you that some students alerted you on our platform")
-                    ->line("Please click the following button to log in and see your panel")
-                    ->action('Log in', route('login'));
+                    ->subject(trans('email.newAlerts_subject_1'))
+                    ->line(trans('email.newAlerts_line_2'))
+                    ->line(trans('email.newAlerts_line_3'))
+                    ->action(trans('global.login_btn'), route('login'));
     }
 
     /**

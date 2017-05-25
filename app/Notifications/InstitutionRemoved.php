@@ -47,8 +47,8 @@ class InstitutionRemoved extends Notification
     {
         return (new MailMessage())
                     ->subject(sprintf(trans('email.institutionRemoved.subject_1'), $this->institution->user->name))
-                    ->line(sprintf(trans('email.institutionRemoved.institutionRemoved.line_2'))
-                    ->line(trans('email.institutionRemoved.institutionRemoved.line_3'));
+                    ->line(sprintf(trans('email.institutionRemoved.line_2'))
+                    ->line(trans('email.institutionRemoved.line_3'));
     }
 
     /**

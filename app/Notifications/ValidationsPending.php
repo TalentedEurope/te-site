@@ -43,11 +43,10 @@ class ValidationsPending extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage())
-                    ->subject('Referees pending on Talented Europe')
-                    ->line("Hello we're reminding you that you have some referee's pending on our platform")
-                    ->line("Please click the following button to log in and see your panel")
-
-                    ->action('Log in', route('login'));
+                    ->subject(trans('email.validationsPending_subject_1'))
+                    ->line(trans('email.validationsPending_line_2'))
+                    ->line(trans('email.validationsPending_line_3'))
+                    ->action(trans('global.login_btn'), route('login'));
     }
 
     /**

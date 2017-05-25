@@ -3,7 +3,7 @@
 
 return [
     
-        'meta_title' => 'Talented Europe | qui relie des jeunes talents et des employeurs dans toute l´Europe',
+        'meta_title' => 'Talented Europe qui relie des jeunes talents et des employeurs dans toute l´Europe',
     
         'tagline' => 'qui relie<br/> <strong>des jeunes talents</strong> et <strong>des employeurs</strong><br/> dans toute <strong>l´Europe</strong>',
     
@@ -35,7 +35,7 @@ Une vitrine du classement des meilleurs étudiants en Europe.  Une idée simple 
     
         'subscribe_title' => 'Abonnez vous et suivez nos actualités',
     
-        'subscribe_text' => 'être averti de tous les événements et nouveautés sur l´Europe des talents',
+        'subscribe_text' => 'Etre averti de tous les événements et nouveautés sur l´Europe des talents',
     
         'subscribe_form_placeholder' => 'Entrer une addresse électronique',
     
@@ -45,7 +45,7 @@ Une vitrine du classement des meilleurs étudiants en Europe.  Une idée simple 
     
         'subscribe_text_question' => 'Recevez des nouvelles sur Talented Europe par mail',
     
-        'meta_description' => 'Un projet co-financé par le programme Erasmus Plus qui permet de faciliter l\' accès des excellents étudiants  à l\'emploi et aux stages en Europe',
+        'meta_description' => 'Projet co-financé par le programme Erasmus Plus qui permet de faciliter l\' accès des excellents étudiants  à l\'emploi et aux stages en Europe',
     
         'coming_soon' => 'le contenu sera bientot ajouté',
     
@@ -53,9 +53,9 @@ Une vitrine du classement des meilleurs étudiants en Europe.  Une idée simple 
     
         'search_where' => 'où',
     
-        'search_btn' => 'recherche',
+        'search_btn' => 'Recherche',
     
-        'statistics_title' => 'les statistiques',
+        'statistics_title' => 'Statistiques',
     
         'contacts' => 'Contacts entre les étudiants et les entreprises',
     
@@ -67,10 +67,10 @@ Une vitrine du classement des meilleurs étudiants en Europe.  Une idée simple 
     
         'join_talented_europe_today' => 'Rejoignez l\'Europe talentueuse dès aujourd\'hui!',
     
-        'talented_for_students' => '<Strong> Pour les étudiants </ strong> - Europe talentueuse améliorera votre employabilité avec l\'aval de vos tuteurs et vous mettra en contact avec les employeurs en Europe pour des stages ou des emplois de première carrière.',
+        'talented_for_students' => '<strong> Pour les étudiants </ strong> - Europe talentueuse améliorera votre employabilité avec l\'aval de vos tuteurs et vous mettra en contact avec les employeurs en Europe pour des stages ou des emplois de première carrière.',
     
-        'talented_for_employers' => 'Srong> Pour les étudiants </ strong> - Europe talentueuse améliorera votre employabilité <strong> Pour les employeurs </ strong> - Europe talentueuse vous liera avec de jeunes étudiants talentueux en Europe et vous aidera à trouver la bonne personne qui peut contribuer à l\'organisation de votre entreprise Réussir avec de vrais talents ayant les compétences que vous recherchez.',
+        'talented_for_employers' => '<strong> Pour les étudiants </strong> - Europe talentueuse améliorera votre employabilité <strong> Pour les employeurs </strong> - Europe talentueuse vous liera avec de jeunes étudiants talentueux en Europe et vous aidera à trouver la bonne personne qui peut contribuer à l\'organisation de votre entreprise Réussir avec de vrais talents ayant les compétences que vous recherchez.',
     
-        'go_to_app' => 'Go to application',
+        'go_to_app' => 'Aller à l\'application',
     
 ];

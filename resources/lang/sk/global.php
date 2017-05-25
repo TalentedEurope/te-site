@@ -59,7 +59,7 @@ return [
     
         'GB' => 'Spojené kráľovstvo',
     
-        'follow_us' => 'Följ oss',
+        'follow_us' => 'Sleduj/te nás',
     
         'login_btn' => 'Login',
     
@@ -81,13 +81,13 @@ return [
     
         'more_btn' => 'Zobraz viac',
     
-        'home' => 'Hemsida',
+        'home' => 'Domovská stránka',
     
-        'blog' => 'Blogg',
+        'blog' => 'Blog',
     
-        'cookies' => 'Information om cookies',
+        'cookies' => 'Informácie o cookies',
     
-        'privacy_policy' => 'Integritetspolicy',
+        'privacy_policy' => 'Ochrana súkromia',
     
         'footer_partners' => 'Partners',
     
@@ -111,9 +111,9 @@ return [
     
         'error' => 'Chyba',
     
-        'successfully_done' => 'Successfully done',
+        'successfully_done' => 'Úspešne dokončené.',
     
-        'success' => 'Úspešný',
+        'success' => 'Úspech',
     
         'older' => 'Staršie',
     
@@ -123,159 +123,159 @@ return [
     
         'no' => 'Nie',
     
-        'AF' => 'Afghanistan',
+        'AF' => 'Afganistan',
     
-        'AX' => 'Åland Islands',
+        'AX' => 'Alandské ostrovy',
     
-        'AL' => 'Albania',
+        'AL' => 'Albánsko',
     
-        'DZ' => 'Algeria',
+        'DZ' => 'Alžírsko',
     
-        'AS' => 'American Samoa',
+        'AS' => 'Americká Samoa',
     
-        'AD' => 'Andorra',
+        'AD' => 'Andora',
     
         'AO' => 'Angola',
     
-        'AI' => 'Anguilla',
+        'AI' => 'Angila',
     
-        'AQ' => 'Antarctica',
+        'AQ' => 'Antarktída',
     
-        'AG' => 'Antigua and Barbuda',
+        'AG' => 'Antigua a Barbuda',
     
-        'AR' => 'Argentina',
+        'AR' => 'Argentína',
     
-        'AM' => 'Armenia',
+        'AM' => 'Arménsko',
     
         'AW' => 'Aruba',
     
-        'AU' => 'Australia',
+        'AU' => 'Austrália',
     
-        'AZ' => 'Azerbaijan',
+        'AZ' => 'Azerbajdžán',
     
-        'BS' => 'Bahamas',
+        'BS' => 'Bahamy',
     
         'BH' => 'Bahrain',
     
-        'BD' => 'Bangladesh',
+        'BD' => 'Bangladéš',
     
         'BB' => 'Barbados',
     
-        'BY' => 'Belarus',
+        'BY' => 'Bielorusko',
     
-        'BZ' => 'Belize',
+        'BZ' => 'Belizé',
     
         'BJ' => 'Benin',
     
-        'BM' => 'Bermuda',
+        'BM' => 'Bermudy',
     
-        'BT' => 'Bhutan',
+        'BT' => 'Bután',
     
-        'BO' => 'Bolivia (Plurinational State of)',
+        'BO' => 'Bolívia',
     
-        'BQ' => 'Bonaire, Sint Eustatius and Saba',
+        'BQ' => 'Caribbean Netherlands ',
     
-        'BA' => 'Bosnia and Herzegovina',
+        'BA' => 'Bosna a Hercegovina',
     
-        'BW' => 'Botswana',
+        'BW' => 'Botsvana',
     
-        'BV' => 'Bouvet Island',
+        'BV' => 'Ostrov Buvet',
     
-        'BR' => 'Brazil',
+        'BR' => 'Brazília',
     
-        'IO' => 'British Indian Ocean Territory',
+        'IO' => 'Britské tichomorské teritórium',
     
-        'BN' => 'Brunei Darussalam',
+        'BN' => 'Brunei',
     
         'BF' => 'Burkina Faso',
     
         'BI' => 'Burundi',
     
-        'CV' => 'Cabo Verde',
+        'CV' => 'Kapverdy',
     
-        'KH' => 'Cambodia',
+        'KH' => 'Kambodža',
     
-        'CM' => 'Cameroon',
+        'CM' => 'Kamrun',
     
-        'CA' => 'Canada',
+        'CA' => 'Kanada',
     
-        'KY' => 'Cayman Islands',
+        'KY' => 'Kajmanské ostrovy',
     
-        'CF' => 'Central African Republic',
+        'CF' => 'Stredoafrická Republika',
     
-        'TD' => 'Chad',
+        'TD' => 'Čad',
     
-        'CL' => 'Chile',
+        'CL' => 'Čile',
     
-        'CN' => 'China',
+        'CN' => 'Čína',
     
-        'CX' => 'Christmas Island',
+        'CX' => 'Vianočnný ostrov ',
     
-        'CC' => 'Cocos (Keeling) Islands',
+        'CC' => 'Kokosový ostrov',
     
-        'CO' => 'Colombia',
+        'CO' => 'Kolumbia',
     
-        'KM' => 'Comoros',
+        'KM' => 'Komory',
     
-        'CG' => 'Congo',
+        'CG' => 'Kongo',
     
-        'CD' => 'Congo (Democratic Republic of the)',
+        'CD' => 'Demokratická Republika Kongo',
     
-        'CK' => 'Cook Islands',
+        'CK' => 'Cookove Ostrovy',
     
-        'CR' => 'Costa Rica',
+        'CR' => 'Kostarika',
     
-        'CI' => 'Côte d\'Ivoire',
+        'CI' => 'Pobrežie Slonoviny',
     
-        'CU' => 'Cuba',
+        'CU' => 'Kuba',
     
-        'CW' => 'Curaçao',
+        'CW' => 'Curacao',
     
-        'DJ' => 'Djibouti',
+        'DJ' => 'Džibútí',
     
-        'DM' => 'Dominica',
+        'DM' => 'Dominika',
     
-        'DO' => 'Dominican Republic',
+        'DO' => 'Dominikánska Republika',
     
-        'EC' => 'Ecuador',
+        'EC' => 'Ekvádor',
     
         'EG' => 'Egypt',
     
-        'SV' => 'El Salvador',
+        'SV' => 'Salvádor',
     
-        'GQ' => 'Equatorial Guinea',
+        'GQ' => 'Rovníková Guinea',
     
         'ER' => 'Eritrea',
     
-        'ET' => 'Ethiopia',
+        'ET' => 'Etiópia',
     
-        'FK' => 'Falkland Islands (Malvinas)',
+        'FK' => 'Falklandské Ostrovy ',
     
-        'FO' => 'Faroe Islands',
+        'FO' => 'Fajerské Ostrovy',
     
-        'FJ' => 'Fiji',
+        'FJ' => 'Fidži',
     
-        'GF' => 'French Guiana',
+        'GF' => 'Francúzska Guajána',
     
-        'PF' => 'French Polynesia',
+        'PF' => 'Fancúzska Polynézia',
     
-        'TF' => 'French Southern Territories',
+        'TF' => 'Francúzske Južné Teritórium',
     
-        'GA' => 'Gabon',
+        'GA' => 'Gabun',
     
         'GM' => 'Gambia',
     
-        'GE' => 'Georgia',
+        'GE' => 'Gruzínsko',
     
         'GH' => 'Ghana',
     
-        'GI' => 'Gibraltar',
+        'GI' => 'Džibraltár',
     
-        'GL' => 'Greenland',
+        'GL' => 'Grónsko',
     
         'GD' => 'Grenada',
     
-        'GP' => 'Guadeloupe',
+        'GP' => 'Guadalupe',
     
         'GU' => 'Guam',
     
@@ -285,135 +285,135 @@ return [
     
         'GN' => 'Guinea',
     
-        'GW' => 'Guinea-Bissau',
+        'GW' => 'Guinea-Bisaau',
     
-        'GY' => 'Guyana',
+        'GY' => 'Guyana ',
     
         'HT' => 'Haiti',
     
-        'HM' => 'Heard Island and McDonald Islands',
+        'HM' => 'Heardov ostrov',
     
-        'VA' => 'Holy See',
+        'VA' => 'Svätá stolica',
     
         'HN' => 'Honduras',
     
         'HK' => 'Hong Kong',
     
-        'IS' => 'Iceland',
+        'IS' => 'Island',
     
         'IN' => 'India',
     
-        'ID' => 'Indonesia',
+        'ID' => 'Indonézia',
     
-        'IR' => 'Iran (Islamic Republic of)',
+        'IR' => 'Irán',
     
-        'IQ' => 'Iraq',
+        'IQ' => 'Irak',
     
-        'IM' => 'Isle of Man',
+        'IM' => 'Ostrov Man',
     
-        'IL' => 'Israel',
+        'IL' => 'Izrael',
     
-        'JM' => 'Jamaica',
+        'JM' => 'Jamajka',
     
-        'JP' => 'Japan',
+        'JP' => 'Japonsko',
     
         'JE' => 'Jersey',
     
-        'JO' => 'Jordan',
+        'JO' => 'Jordánsko',
     
-        'KZ' => 'Kazakhstan',
+        'KZ' => 'Kazachstan',
     
-        'KE' => 'Kenya',
+        'KE' => 'Keňa',
     
         'KI' => 'Kiribati',
     
-        'KP' => 'Korea (Democratic People\'s Republic of)',
+        'KP' => 'Kórejská ľudovodemokratická republika',
     
-        'KR' => 'Korea (Republic of)',
+        'KR' => 'Južná Kórea',
     
-        'KW' => 'Kuwait',
+        'KW' => 'Kuvajt',
     
-        'KG' => 'Kyrgyzstan',
+        'KG' => 'Kirgizstan',
     
-        'LA' => 'Lao People\'s Democratic Republic',
+        'LA' => 'Laos',
     
-        'LB' => 'Lebanon',
+        'LB' => 'Libanon',
     
         'LS' => 'Lesotho',
     
-        'LR' => 'Liberia',
+        'LR' => 'Libéria',
     
-        'LY' => 'Libya',
+        'LY' => 'Líbya',
     
-        'LI' => 'Liechtenstein',
+        'LI' => 'Lichtenštajnsko',
     
-        'MO' => 'Macao',
+        'MO' => 'Makao',
     
-        'MK' => 'Macedonia (the former Yugoslav Republic of)',
+        'MK' => 'Macedónsko',
     
-        'MG' => 'Madagascar',
+        'MG' => 'Madagaskar',
     
         'MW' => 'Malawi',
     
-        'MY' => 'Malaysia',
+        'MY' => 'Malajzia',
     
-        'MV' => 'Maldives',
+        'MV' => 'Maldivy',
     
         'ML' => 'Mali',
     
-        'MH' => 'Marshall Islands',
+        'MH' => 'Marshallove ostrovy',
     
-        'MQ' => 'Martinique',
+        'MQ' => 'Martinik',
     
-        'MR' => 'Mauritania',
+        'MR' => 'Mauretánia',
     
-        'MU' => 'Mauritius',
+        'MU' => 'Maurícius',
     
         'YT' => 'Mayotte',
     
-        'MX' => 'Mexico',
+        'MX' => 'Mexiko',
     
-        'FM' => 'Micronesia (Federated States of)',
+        'FM' => 'Mikronézia',
     
-        'MD' => 'Moldova (Republic of)',
+        'MD' => 'Moldavsko',
     
-        'MC' => 'Monaco',
+        'MC' => 'Monako',
     
-        'MN' => 'Mongolia',
+        'MN' => 'Mogolsko',
     
-        'ME' => 'Montenegro',
+        'ME' => 'Čierna Hora',
     
         'MS' => 'Montserrat',
     
-        'MA' => 'Morocco',
+        'MA' => 'Maroko',
     
-        'MZ' => 'Mozambique',
+        'MZ' => 'Mozambik',
     
-        'MM' => 'Myanmar',
+        'MM' => 'Mjanmarsko',
     
-        'NA' => 'Namibia',
+        'NA' => 'Namíbia',
     
         'NR' => 'Nauru',
     
-        'NP' => 'Nepal',
+        'NP' => 'Nepál',
     
-        'NC' => 'New Caledonia',
+        'NC' => 'Nová Kaledónia',
     
-        'NZ' => 'New Zealand',
+        'NZ' => 'Nový Zéland',
     
-        'NI' => 'Nicaragua',
+        'NI' => 'Nikaragua',
     
         'NE' => 'Niger',
     
-        'NG' => 'Nigeria',
+        'NG' => 'Nigéria',
     
         'NU' => 'Niue',
     
-        'NF' => 'Norfolk Island',
+        'NF' => 'Norfolk',
     
-        'MP' => 'Northern Mariana Islands',
+        'MP' => 'Mariány',
     
-        'NO' => 'Norway',
+        'NO' => 'Nórsko',
     
         'OM' => 'Oman',
     
@@ -421,97 +421,97 @@ return [
     
         'PW' => 'Palau',
     
-        'PS' => 'Palestine, State of',
+        'PS' => 'Palestína',
     
         'PA' => 'Panama',
     
-        'PG' => 'Papua New Guinea',
+        'PG' => 'Papua Nová Guinea',
     
-        'PY' => 'Paraguay',
+        'PY' => 'Paraguaj',
     
         'PE' => 'Peru',
     
-        'PH' => 'Philippines',
+        'PH' => 'Filipíny',
     
-        'PN' => 'Pitcairn',
+        'PN' => 'Pitcairnove ostrovy',
     
-        'PR' => 'Puerto Rico',
+        'PR' => 'Portoriko',
     
-        'QA' => 'Qatar',
+        'QA' => 'Katar',
     
-        'RE' => 'Réunion',
+        'RE' => 'Reunion',
     
-        'RU' => 'Russian Federation',
+        'RU' => 'Rusko',
     
         'RW' => 'Rwanda',
     
-        'BL' => 'Saint Barthélemy',
+        'BL' => 'Svätý Bartolomej',
     
-        'SH' => 'Saint Helena, Ascension and Tristan da Cunha',
+        'SH' => 'Svätá Helena',
     
-        'KN' => 'Saint Kitts and Nevis',
+        'KN' => 'Svätý Krištof a Nevis',
     
-        'LC' => 'Saint Lucia',
+        'LC' => 'Santa Lucia',
     
-        'MF' => 'Saint Martin (French part)',
+        'MF' => 'Saint Martin',
     
-        'PM' => 'Saint Pierre and Miquelon',
+        'PM' => 'Saint Pierre a Miquelon',
     
-        'VC' => 'Saint Vincent and the Grenadines',
+        'VC' => 'Svätý Vincent a Grenadíny',
     
         'WS' => 'Samoa',
     
-        'SM' => 'San Marino',
+        'SM' => 'San Maríno',
     
-        'ST' => 'Sao Tome and Principe',
+        'ST' => 'Svätý Tomáš a Princov ostrov',
     
-        'SA' => 'Saudi Arabia',
+        'SA' => 'Saudská Arábia',
     
         'SN' => 'Senegal',
     
-        'RS' => 'Serbia',
+        'RS' => 'Srbsko',
     
-        'SC' => 'Seychelles',
+        'SC' => 'Seychely',
     
         'SL' => 'Sierra Leone',
     
-        'SG' => 'Singapore',
+        'SG' => 'Singapúr',
     
-        'SX' => 'Sint Maarten (Dutch part)',
+        'SX' => 'Sint Maarten',
     
-        'SB' => 'Solomon Islands',
+        'SB' => 'Šalamúnove ostrovy',
     
-        'SO' => 'Somalia',
+        'SO' => 'Somálsko',
     
-        'ZA' => 'South Africa',
+        'ZA' => 'Južná Afrika',
     
-        'GS' => 'South Georgia and the South Sandwich Islands',
+        'GS' => 'Južná Georgia a Južné Sandwichove ostrovy',
     
-        'SS' => 'South Sudan',
+        'SS' => 'Južný Sudán',
     
-        'LK' => 'Sri Lanka',
+        'LK' => 'Srílanka',
     
-        'SD' => 'Sudan',
+        'SD' => 'Sudán',
     
-        'SR' => 'Suriname',
+        'SR' => 'Surinam',
     
-        'SJ' => 'Svalbard and Jan Mayen',
+        'SJ' => 'Špicbergy a Jan Mayen',
     
-        'SZ' => 'Swaziland',
+        'SZ' => 'Svazijsko',
     
-        'CH' => 'Switzerland',
+        'CH' => 'Švajčiarsko',
     
-        'SY' => 'Syrian Arab Republic',
+        'SY' => 'Sýria',
     
-        'TW' => 'Taiwan, Province of China',
+        'TW' => 'Taiwan',
     
-        'TJ' => 'Tajikistan',
+        'TJ' => 'Tadžikistan',
     
-        'TZ' => 'Tanzania, United Republic of',
+        'TZ' => 'Tanzánia',
     
-        'TH' => 'Thailand',
+        'TH' => 'Thajsko',
     
-        'TL' => 'Timor-Leste',
+        'TL' => 'Timor',
     
         'TG' => 'Togo',
     
@@ -519,50 +519,50 @@ return [
     
         'TO' => 'Tonga',
     
-        'TT' => 'Trinidad and Tobago',
+        'TT' => 'Trinidad a Tobago',
     
-        'TN' => 'Tunisia',
+        'TN' => 'Tunis',
     
-        'TR' => 'Turkey',
+        'TR' => 'Turecko',
     
         'TM' => 'Turkmenistan',
     
-        'TC' => 'Turks and Caicos Islands',
+        'TC' => 'Turks a Caicos',
     
         'TV' => 'Tuvalu',
     
         'UG' => 'Uganda',
     
-        'UA' => 'Ukraine',
+        'UA' => 'Ukrajina',
     
-        'AE' => 'United Arab Emirates',
+        'AE' => 'Spojené arabské emiráty',
     
-        'US' => 'United States of America',
+        'US' => 'Spojené štáty americké',
     
-        'UM' => 'United States Minor Outlying Islands',
+        'UM' => 'Menšie odľahlé ostrovy USA',
     
-        'UY' => 'Uruguay',
+        'UY' => 'Uruguaj',
     
         'UZ' => 'Uzbekistan',
     
         'VU' => 'Vanuatu',
     
-        'VE' => 'Venezuela (Bolivarian Republic of)',
+        'VE' => 'Venezuela',
     
-        'VN' => 'Viet Nam',
+        'VN' => 'Vietnam',
     
-        'VG' => 'Virgin Islands (British)',
+        'VG' => 'Panenské Ostrovy (Britské)',
     
-        'VI' => 'Virgin Islands (U.S.)',
+        'VI' => 'Panenské Ostrovy (Americké)',
     
-        'WF' => 'Wallis and Futuna',
+        'WF' => 'Wallis a Futuna',
     
-        'EH' => 'Western Sahara',
+        'EH' => 'Sahraská arabská demokratická republika',
     
-        'YE' => 'Yemen',
+        'YE' => 'Jemen',
     
         'ZM' => 'Zambia',
     
-        'ZW' => 'Zimbabwe',
+        'ZW' => 'Zimbabve',
     
 ];

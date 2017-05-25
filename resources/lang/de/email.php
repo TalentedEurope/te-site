@@ -13,9 +13,9 @@ return [
     
         'accountActivated_line_5' => 'Danke, dass Sie unsere App nutzen.',
     
-        'changeInstitution_subject_1' => '... hat Sie als Gutachter in Talented Europe eingeladen',
+        'changeInstitution_subject_1' => '%s hat Sie als Gutachter in Talented Europe eingeladen',
     
-        'changeInstitution_line_2' => '... hat Sie als Gutachter in Talented Europe eingeladen',
+        'changeInstitution_line_2' => '%s hat Sie als Gutachter in Talented Europe eingeladen',
     
         'changeInstitution_line_3' => 'Da Sie bereits Gutachter bei Talented Europe sind, müssen Sie diese Änderung bestätigen.',
     
@@ -23,15 +23,15 @@ return [
     
         'changeInstitution_line_5' => 'Danke, dass Sie unsere App nutzen.',
     
-        'institutionRemoved.subject_1' => '... hat dich aus Ihrer Institution bei Talented Europe ausgeschieden.',
+        'institutionRemoved.subject_1' => '%s hat dich aus Ihrer Institution bei Talented Europe ausgeschieden.',
     
-        'institutionRemoved.line_2' => '... hat dich aus Ihrer Institution bei Talented Europe ausgeschieden. Wenn es ein Versehen war, tritt mit ihm in Kontakt, um die Situation rückgängig zu machen.',
+        'institutionRemoved.line_2' => '%s hat dich aus Ihrer Institution bei Talented Europe ausgeschieden. Wenn es ein Versehen war, tritt mit ihm in Kontakt, um die Situation rückgängig zu machen.',
     
         'institutionRemoved.line_3' => 'Danke, dass Sie unsere App nutzen.',
     
-        'inviteCreated_subject_1' => '... hat Sie als Gutachter in Talented Europe eingeladen',
+        'inviteCreated_subject_1' => '%s hat Sie als Gutachter in Talented Europe eingeladen',
     
-        'inviteCreated_line_2' => '... hat Sie als Gutachter in Talented Europe eingeladen',
+        'inviteCreated_line_2' => '%s hat Sie als Gutachter in Talented Europe eingeladen',
     
         'inviteCreated_line_3' => 'Um Ihr Konto zu erstellen, klicken Sie den folgenden Link an.',
     
@@ -39,11 +39,11 @@ return [
     
         'inviteCreated_line_5' => 'Danke, dass Sie unsere App nutzen.',
     
-        'validatorRequested_subject_1' => '... hat Sie als Gutachter in Talented Europe eingeladen.',
+        'validatorRequested_subject_1' => '%s hat Sie als Gutachter in Talented Europe eingeladen.',
     
-        'validatorRequested_line_2' => 'Hello %s',
+        'validatorRequested_line_2' => 'Hallo %s',
     
-        'validatorRequested_line_3' => '... hat Sie als Gutachter in Talented Europe eingeladen.',
+        'validatorRequested_line_3' => '%s hat Sie als Gutachter in Talented Europe eingeladen.',
     
         'validatorRequested_line_4' => 'Leiten Sie diesen Link an die Instittion weiter, in der Sie eingestellt sind, damit sich die Institution registrieren kann.',
     
@@ -52,5 +52,17 @@ return [
         'validatorRequested_action_6' => 'Das Konto für die Institution erstellen.',
     
         'validatorRequested_line_7' => 'Danke, dass Sie unsere App nutzen.',
+    
+        'newAlerts_subject_1' => 'Neue Nachrichten von Studenten.',
+    
+        'newAlerts_line_2' => 'Wir geben Ihnen Bescheid, dass manche Studenten Ihnen auf der Platform eine Nahricht gesendet haben.',
+    
+        'newAlerts_line_3' => 'Zur Anmeldung klicken Sie das folgende Fenster an und sehen Sie Ihr Informationspanel durch.',
+    
+        'validationsPending_subject_1' => 'Wartende Bewerter bei Talented Europe ',
+    
+        'validationsPending_line_2' => 'Wir geben Ihnen Bescheid, dass sich auf der Platform mehrere wartende Bewerter befinden.',
+    
+        'validationsPending_line_3' => 'Zur Anmeldung klicken Sie das folgende Fenster an und sehen Sie Ihr Informationspanel durch',
     
 ];

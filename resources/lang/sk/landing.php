@@ -21,7 +21,7 @@ return [
     
         'what_is_cta' => '<strong>Zisti/te viac!</strong> Vyžiadaj/te si brožúru!',
     
-        'what_is_text_1' => 'Viete si predstaviť možnosť prijať do zamestnania najlepších študentov z ktorejkoľvek európskej krajiny? Chcete byť súčasťou sektoru elitných európskych študentov? Tisícky spoločností budú mať priamy pístup k informáciám o vás, a čím lepšie hodnotenie získate, tým väčšie možnosti máte získať skvelú prácu.',
+        'what_is_text_1' => 'Viete si predstaviť možnosť prijať do zamestnania najlepších študentov z ktorejkoľvek európskej krajiny?<strong> Chcete byť súčasťou sektoru elitných európskych študentov? Tisícky spoločností budú mať priamy pístup k informáciám</strong> o vás, a čím lepšie hodnotenie získate, tým väčšie možnosti máte získať skvelú prácu.',
     
         'what_is_text_2' => 'Presne to ponúka Talented Europe. Výklad plný najlepších študentov v Európe. Jednoduchú myšlienku, ktorá spája zamestnávateľov a študentov. Miesto stretnutia tých najlepších .',
     
@@ -35,7 +35,7 @@ return [
     
         'subscribe_follow_text' => 'alebo nás sleduj na:',
     
-        'subscribe_text_question' => 'Dostávajte novinky o Talented Europe do svojej e-mailovej schránky',
+        'subscribe_text_question' => 'Dostávajte novinky o Talented Europe do svojej e-mailovej schránky.<br/> Poskytnite nám vašu odpoveď na otázku: Čo pre vás znamená talent?',
     
         'meta_description' => 'Erasmus Plus projekt, ktorý uľahčuje prepájanie vynikajúcich študentov s prácou a stážami v Európe',
     
@@ -49,9 +49,9 @@ return [
     
         'statistics_title' => 'Štatistiky',
     
-        'contacts' => 'Kontakterna mellan studenter och företag',
+        'contacts' => 'Kontakty medzi študentmi a spoločnosťami',
     
-        'companies_institutions' => 'Företag och institutioner',
+        'companies_institutions' => 'Spoločnosti a inštitúcie',
     
         'students_title' => 'Talentovaní študenti',
     
@@ -63,6 +63,6 @@ return [
     
         'talented_for_employers' => '<strong>Pre zamestnávateľov</strong> Talented Europe vás spojí s talentovanými mladými študentmi v celej Európe a pomôže vám nájsť správneho človeka, ktorý napomôže úspechu vašej organizácie svojimi špeciálnymi zručnosťami a nadaním, ktoré hľadáte.',
     
-        'go_to_app' => 'Go to application',
+        'go_to_app' => 'Prejdi na aplikáciu',
     
 ];

@@ -53,4 +53,16 @@ return [
     
         'validatorRequested_line_7' => 'Grazie per utilizzare la nostra applicazione',
     
+        'newAlerts_subject_1' => 'Nuove avvertenze dagli studenti',
+    
+        'newAlerts_line_2' => 'Vi ricordiamo che alcuni studenti vi hanno mandato delle avvertenze sul nostro piattaforma.',
+    
+        'newAlerts_line_3' => 'Cliccare sul seguente pulsante per accedere e vedere il vostro pannello.',
+    
+        'validationsPending_subject_1' => 'Vidimatori in attesa su Talented Europe',
+    
+        'validationsPending_line_2' => 'Vi ricordiamo che avete dei vidimatori in attesa sul nostro piattaforma.',
+    
+        'validationsPending_line_3' => 'Cliccare sul seguente pulsante per accedere e vedere il vostro pannello',
+    
 ];

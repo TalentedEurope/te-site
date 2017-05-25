@@ -81,26 +81,26 @@ return [
     
         'remove_referee' => 'Begutachter entfernen',
     
-        'do_you_want_to_remove_referee' => 'Möchten SIe aus Ihrer Institution entfernen?',
+        'do_you_want_to_remove_referee' => 'Möchten Sie % aus Ihrer Institution entfernen?',
     
         'remove' => 'Löschen',
     
         'removing' => 'Wird gelöscht',
     
-        'validation_was_removed' => 'The validation was removed because you indicated that %s wasn\'t a student from this institution',
+        'validation_was_removed' => 'Validierung wurde entfernt, weil Sie bestätigt haben, dass % keine Studenten aus dieser Institution waren.',
     
-        'validation_complete' => '%s validation complete',
+        'validation_complete' => '%s Validierung beendet',
     
-        'cannot_invite' => 'Cannot invite, either this email is registered to another type of user or he already has an invitation pending from this institution',
+        'cannot_invite' => 'Kann nicht eingeladen werden, die E-Mail ist entweder unter einen anderen User-Typ registriert, oder er hat eine wartende Einladung von dieser Institution.',
     
-        'send_invitation_to' => 'Sent invitation to %s',
+        'send_invitation_to' => 'Einladung gesendet %',
     
-        'cannot_find_user' => 'Cannot find user',
+        'cannot_find_user' => 'Der User kann nicht gefunden werden.',
     
-        'deleted_invitation_successfully' => 'Deleted invitation successfully',
+        'deleted_invitation_successfully' => 'Einladung erfolgreich gelöscht.',
     
-        'cannot_find_invitation_to_delete' => 'Cannot find invitation to delete, please try again later',
+        'cannot_find_invitation_to_delete' => 'Einladung, die zum Löschen bestimmt ist, kann nicht gefunden werden, versuchen Sie es später noch einmal.',
     
-        'comment' => 'Comment',
+        'comment' => 'Kommentar',
     
 ];

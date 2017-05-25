@@ -81,26 +81,26 @@ return [
     
         'remove_referee' => 'Odstrániť hodnotiteľa',
     
-        'do_you_want_to_remove_referee' => 'Prajete si odstrániť % od Vašej inštitúcie?',
+        'do_you_want_to_remove_referee' => 'Prajete si odstrániť % z vašej inštitúcie?',
     
         'remove' => 'Odstrániť',
     
         'removing' => 'Odstraňuje sa',
     
-        'validation_was_removed' => 'The validation was removed because you indicated that %s wasn\'t a student from this institution',
+        'validation_was_removed' => 'Validácia bola odstránená, lebo ste potvrdili, že % neboli študenti z tejto inštitúcie. ',
     
-        'validation_complete' => '%s validation complete',
+        'validation_complete' => '% validácia ukončená ',
     
-        'cannot_invite' => 'Cannot invite, either this email is registered to another type of user or he already has an invitation pending from this institution',
+        'cannot_invite' => 'Nemožno pozvať, e-mail je buď registrovaný s iným typom užívateľa, alebo už má čakajúce pozvanie od tejto inštitúcie. ',
     
-        'send_invitation_to' => 'Sent invitation to %s',
+        'send_invitation_to' => 'Pozvanie zaslané %',
     
-        'cannot_find_user' => 'Cannot find user',
+        'cannot_find_user' => 'Užívateľ sa nedá nájsť',
     
-        'deleted_invitation_successfully' => 'Deleted invitation successfully',
+        'deleted_invitation_successfully' => 'Pozvanie úspešne vymazané',
     
-        'cannot_find_invitation_to_delete' => 'Cannot find invitation to delete, please try again later',
+        'cannot_find_invitation_to_delete' => 'Pozvanie určené na vymazanie nevieme nájsť, skúste znova neskôr.',
     
-        'comment' => 'Comment',
+        'comment' => 'Komentár',
     
 ];
