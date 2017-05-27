@@ -93,7 +93,9 @@ class SearchController extends SiteSearchController
             $stsy = StudentStudy::with('student', 'student.user')->search($v->valid()['search_text'], ['name'])->get();
             if (sizeof($stsy)) {
                 foreach ($stsy as $study) {
-                    $userIds[] = $study->student->user->id;
+                    if ($study->student->user) {
+                        $userIds[] = $study->student->user->id;
+                    }
                 }
             }
 
