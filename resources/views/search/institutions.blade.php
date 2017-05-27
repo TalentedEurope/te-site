@@ -86,6 +86,13 @@
         $grid.isotope();
       }  );
 
+      var $quicksearch = $('.quicksearch').keypress(function(e) {
+        if(e.which == 13) {
+          qsRegex = new RegExp( $( '.quicksearch' ).val(), 'gi' );
+          $grid.isotope();
+        }
+      });
+
       // debounce so filtering doesn't happen every millisecond
       function debounce( fn, threshold ) {
         var timeout;

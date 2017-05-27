@@ -3,9 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Sofa\Eloquence\Eloquence;
 
 class StudentStudy extends Model
 {
+    use Eloquence;
     public static $rules = array(
             'name' => 'required',
             'level' => 'required',

@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Sofa\Eloquence\Eloquence;
 
 class StudentTraining extends Model
 {
+    use Eloquence;
+
     public static $rules = array(
             'name' => 'required',
             'certificate' => 'required',
