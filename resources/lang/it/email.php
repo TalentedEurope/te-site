@@ -7,7 +7,7 @@ return [
     
         'accountActivated_line_2' => 'Grazie per la tua registrazione su Talented Europe',
     
-        'accountActivated_line_3' => 'Verificare l&apos;indirizzo email cliccando sul link qui sotto',
+        'accountActivated_line_3' => 'Verificare l\'indirizzo email cliccando sul link qui sotto',
     
         'accountActivated_action_4' => 'Confermare il mio account',
     
@@ -23,7 +23,7 @@ return [
     
         'changeInstitution_line_5' => 'Grazie per utilizzare la nostra applicazione',
     
-        'institutionRemoved.subject_1' => '%s L&apos;ha rimosso dalla sua istituzione su Talented Europe.',
+        'institutionRemoved.subject_1' => '%s L\'ha rimosso dalla sua istituzione su Talented Europe.',
     
         'institutionRemoved.line_2' => '%s Ti ha rimosso dalla sua istituzione su Talented Europe. Se sei stato rimosso per errore, contattali per risolvere la situazione.',
     
@@ -45,11 +45,11 @@ return [
     
         'validatorRequested_line_3' => '%s Ti ha invitato come vidimatore su Talented Europe.',
     
-        'validatorRequested_line_4' => 'Inviate questo link all&apos;istituzione nella quale lavorate affinché possano registrarsi.',
+        'validatorRequested_line_4' => 'Inviate questo link all\'istituzione nella quale lavorate affinché possano registrarsi.',
     
-        'validatorRequested_line_5' => 'Se la vostra istituzione si registra utilizzando il seguente link, sarete invitati automaticamente a iscrivervi nel registro dell&apos;istituzione.',
+        'validatorRequested_line_5' => 'Se la vostra istituzione si registra utilizzando il seguente link, sarete invitati automaticamente a iscrivervi nel registro dell\'istituzione.',
     
-        'validatorRequested_action_6' => 'Creare l&apos;account dell&apos;istituzione',
+        'validatorRequested_action_6' => 'Creare l\'account dell\'istituzione',
     
         'validatorRequested_line_7' => 'Grazie per utilizzare la nostra applicazione',
     
