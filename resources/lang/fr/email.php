@@ -41,7 +41,7 @@ return [
     
         'validatorRequested_subject_1' => '%s vous a invitée comme évaluateur dans Talented Europe',
     
-        'validatorRequested_line_2' => 'Bonjour% s',
+        'validatorRequested_line_2' => 'Bonjour %s',
     
         'validatorRequested_line_3' => '%s vous a invitée comme évaluateur dans Talented Europe',
     

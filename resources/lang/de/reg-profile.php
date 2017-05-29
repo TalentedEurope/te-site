@@ -481,7 +481,7 @@ return [
     
         'field' => 'Feld',
     
-        'your_request_was_created' => 'Ihre Anfrage wurde erstellt %',
+        'your_request_was_created' => 'Ihre Anfrage wurde erstellt %s',
     
         'if_request_hasnt_been_completed' => 'Fall dei Anfragen nicht bis %s Tage beendet wurde, können Sie eine neue Anfrage erstellen.',
     

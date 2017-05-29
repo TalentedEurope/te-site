@@ -13,9 +13,9 @@ return [
     
         'accountActivated_line_5' => 'Grazie per utilizzare la nostra applicazione',
     
-        'changeInstitution_subject_1' => '%s Ti ha invitato come vidimatore su Talented Europe.',
+        'changeInstitution_subject_1' => '%s ti ha invitato come vidimatore su Talented Europe.',
     
-        'changeInstitution_line_2' => '%s Ti ha invitato come vidimatore su Talented Europe.',
+        'changeInstitution_line_2' => '%s ti ha invitato come vidimatore su Talented Europe.',
     
         'changeInstitution_line_3' => 'Dato che sei già un vidimatore su Talented Europe, abbiamo bisogno che confermi questa modifica.',
     
@@ -23,15 +23,15 @@ return [
     
         'changeInstitution_line_5' => 'Grazie per utilizzare la nostra applicazione',
     
-        'institutionRemoved.subject_1' => '%s L\'ha rimosso dalla sua istituzione su Talented Europe.',
+        'institutionRemoved.subject_1' => '%s l\'ha rimosso dalla sua istituzione su Talented Europe.',
     
-        'institutionRemoved.line_2' => '%s Ti ha rimosso dalla sua istituzione su Talented Europe. Se sei stato rimosso per errore, contattali per risolvere la situazione.',
+        'institutionRemoved.line_2' => '%s ti ha rimosso dalla sua istituzione su Talented Europe. Se sei stato rimosso per errore, contattali per risolvere la situazione.',
     
         'institutionRemoved.line_3' => 'Grazie per utilizzare la nostra applicazione',
     
-        'inviteCreated_subject_1' => '%s Ti ha invitato come vidimatore su Talented Europe.',
+        'inviteCreated_subject_1' => '%s ti ha invitato come vidimatore su Talented Europe.',
     
-        'inviteCreated_line_2' => '%s Ti ha invitato come vidimatore su Talented Europe.',
+        'inviteCreated_line_2' => '%s ti ha invitato come vidimatore su Talented Europe.',
     
         'inviteCreated_line_3' => 'Crea il tuo account cliccando sul seguente link.',
     

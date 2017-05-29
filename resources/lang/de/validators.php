@@ -81,19 +81,19 @@ return [
     
         'remove_referee' => 'Begutachter entfernen',
     
-        'do_you_want_to_remove_referee' => 'Möchten Sie % aus Ihrer Institution entfernen?',
+        'do_you_want_to_remove_referee' => 'Möchten Sie %s aus Ihrer Institution entfernen?',
     
         'remove' => 'Löschen',
     
         'removing' => 'Wird gelöscht',
     
-        'validation_was_removed' => 'Validierung wurde entfernt, weil Sie bestätigt haben, dass % keine Studenten aus dieser Institution waren.',
+        'validation_was_removed' => 'Validierung wurde entfernt, weil Sie bestätigt haben, dass %s keine Studenten aus dieser Institution waren.',
     
-        'validation_complete' => '%s Validierung beendet',
+        'validation_complete' => '%s validierung beendet',
     
         'cannot_invite' => 'Kann nicht eingeladen werden, die E-Mail ist entweder unter einen anderen User-Typ registriert, oder er hat eine wartende Einladung von dieser Institution.',
     
-        'send_invitation_to' => 'Einladung gesendet %',
+        'send_invitation_to' => 'Einladung gesendet %s',
     
         'cannot_find_user' => 'Der User kann nicht gefunden werden.',
     

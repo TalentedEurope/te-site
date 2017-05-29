@@ -81,19 +81,19 @@ return [
     
         'remove_referee' => 'Odstrániť hodnotiteľa',
     
-        'do_you_want_to_remove_referee' => 'Prajete si odstrániť % z vašej inštitúcie?',
+        'do_you_want_to_remove_referee' => 'Prajete si odstrániť %s z vašej inštitúcie?',
     
         'remove' => 'Odstrániť',
     
         'removing' => 'Odstraňuje sa',
     
-        'validation_was_removed' => 'Validácia bola odstránená, lebo ste potvrdili, že % neboli študenti z tejto inštitúcie. ',
+        'validation_was_removed' => 'Validácia bola odstránená, lebo ste potvrdili, že %s neboli študenti z tejto inštitúcie. ',
     
-        'validation_complete' => '% validácia ukončená ',
+        'validation_complete' => '%s validácia ukončená ',
     
         'cannot_invite' => 'Nemožno pozvať, e-mail je buď registrovaný s iným typom užívateľa, alebo už má čakajúce pozvanie od tejto inštitúcie. ',
     
-        'send_invitation_to' => 'Pozvanie zaslané %',
+        'send_invitation_to' => 'Pozvanie zaslané %s',
     
         'cannot_find_user' => 'Užívateľ sa nedá nájsť',
     
