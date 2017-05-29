@@ -81,7 +81,7 @@ return [
     
         'remove_referee' => 'Supprimer l\'évaluateur',
     
-        'do_you_want_to_remove_referee' => 'Voulez-vous supprimer% s de votre établissement?',
+        'do_you_want_to_remove_referee' => 'Voulez-vous supprimer %s de votre établissement?',
     
         'remove' => 'Supprimer',
     

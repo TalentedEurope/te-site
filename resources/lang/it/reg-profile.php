@@ -15,9 +15,9 @@ return [
     
         'company_contact_person' => 'Persona da contattare',
     
-        'company_contact_person_name' => 'nome della persona di contatto',
+        'company_contact_person_name' => 'Nome della persona di contatto',
     
-        'company_contact_person_email' => 'e-mail della persona di contatto',
+        'company_contact_person_email' => 'E-mail della persona di contatto',
     
         'company_representative' => 'Rappresentante legale (responsabile)',
     

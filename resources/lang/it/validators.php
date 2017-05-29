@@ -89,7 +89,7 @@ return [
     
         'validation_was_removed' => 'La valutazione è stata rimossa perché avevate indicato che %s non era uno studente di questa istituzione.',
     
-        'validation_complete' => 'Valutazione completata',
+        'validation_complete' => '%s valutazione completata',
     
         'cannot_invite' => 'Impossibile invitare: o questa e-mail è registrata a un altro tipo di utente, o egli ha già un invito in sospeso dall’istituzione.',
     
