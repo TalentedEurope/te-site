@@ -12,8 +12,10 @@ use App\Models\Student;
 use App\Models\StudentStudy;
 use App\Models\StudentLanguage;
 use App\Models\CompanyKeyword;
+use App\Models\StudentTraining;
 use App\Models\StudyKeyword;
 use App\Models\Alert;
+use App\Models\ProfessionalSkill;
 use App\Http\Requests;
 use JWTAuth;
 use config;
@@ -36,20 +38,11 @@ class SearchController extends SiteSearchController
         $v = Validator::make($request->all(), $rules);
 
         $searchKeyword = array();
-        if (isset($v->valid()['search_text'])) {
-            $foundKeywords = StudyKeyword::search($v->valid()['search_text'], Config::get('app.locale'))->select('key')->get();
-            foreach ($foundKeywords as $item) {
-                $searchKeyword[] = $item["attributes"]["key"];
-            }
-        }
 
-        $results = Student::whereHas('user', function ($q) use ($v, $searchKeyword) {
+        $results = Student::whereHas('user', function ($q) use ($v) {
                         $q->where('visible', true);
                         $q->where('is_filled', true);
                         $q->where('banned', false);
-            if (isset($v->valid()['search_text']) && sizeof($searchKeyword) == 0) {
-                $q->search($v->valid()['search_text'], ['name','email']);
-            }
             if (isset($v->valid()['countries'])) {
                 $q->whereIn('country', $v->valid()['countries']);
             }
@@ -58,20 +51,15 @@ class SearchController extends SiteSearchController
         if (isset($v->valid()['level_of_studies']) ||
                 isset($v->valid()['field_of_studies'])
                 ) {
-            $results->whereHas('studies', function ($q) use ($v, $searchKeyword) {
+                $results->whereHas('studies', function ($q) use ($v) {
 
-                if (isset($v->valid()['level_of_studies'])) {
-                    $q->whereIn('level', $v->valid()['level_of_studies']);
-                }
-
-                if (sizeof($searchKeyword)) {
-                    $q->whereIn('field', $searchKeyword);
-                }
-
-                if (isset($v->valid()['field_of_studies'])) {
-                    $q->whereIn('field', $v->valid()['field_of_studies']);
-                }
-            });
+                    if (isset($v->valid()['level_of_studies'])) {
+                        $q->whereIn('level', $v->valid()['level_of_studies']);
+                    }
+                    if (isset($v->valid()['field_of_studies'])) {
+                        $q->whereIn('field', $v->valid()['field_of_studies']);
+                    }
+                });
         }
 
         if (isset($v->valid()['languages'])) {
@@ -84,9 +72,54 @@ class SearchController extends SiteSearchController
             $results->whereIn('activity', $v->valid()['activities']);
         }
 
-        if (isset($v->valid()['search_text']) && sizeof($searchKeyword) == 0) {
-             $results->search($v->valid()['search_text'], ['talent', 'user.name', 'user.surname', 'user.email']);
+
+        // Lets take a look at the text query
+        $userIds = array();
+        if (isset($v->valid()['search_text'])) {
+            // Users that match the search query on name surname or email
+            $ids = User::search($v->valid()['search_text'], ['name', 'surname', 'email'])->where('userable_type', Student::class)->select('id')->get()->pluck('id')->toArray();
+            $userIds = array_merge($userIds, $ids);
+
+            $sk = ProfessionalSkill::with('students', 'students.user')->search($v->valid()['search_text'], ['name'])->get();
+            if (sizeof($sk)) {
+                foreach ($sk as $skill) {
+                    foreach ($skill->students as $st) {
+                        $userIds[] = $st->user->id;
+                    }
+                }
+            }
+
+            // Let's check out student studies
+            $stsy = StudentStudy::with('student', 'student.user')->search($v->valid()['search_text'], ['name'])->get();
+            if (sizeof($stsy)) {
+                foreach ($stsy as $study) {
+                    if ($study->student->user) {
+                        $userIds[] = $study->student->user->id;
+                    }
+                }
+            }
+
+            // Let's check out student studies
+            $stsg = StudentTraining::with('student', 'student.user')->search($v->valid()['search_text'], ['name'])->get();
+            if (sizeof($stsg)) {
+                foreach ($stsg as $training) {
+                    $userIds[] = $training->student->user->id;
+                }
+            }
+
+            // Lets look at the student studies related keywords
+            // It breaks with more than 4 columns so we split it in two
+            $ids = StudyKeyword::search($v->valid()['search_text'], ['en','es','it'])->join('student_studies', 'student_studies.field', 'key')->join('users', 'users.userable_id', 'student_studies.student_id')->where('userable_type', Student::class)->select('users.id')->get()->pluck('id')->toArray();
+            $userIds = array_merge($userIds, $ids);
+
+            $ids = StudyKeyword::search($v->valid()['search_text'], ['de','fr','sk'])->join('student_studies', 'student_studies.field', 'key')->join('users', 'users.userable_id', 'student_studies.student_id')->where('userable_type', Student::class)->select('users.id')->get()->pluck('id')->toArray();
+            $userIds = array_merge($userIds, $ids);
+
+            $filterStudents = User::where('userable_type', Student::class)->whereIn('id', $userIds)->select('userable_id')->get()->pluck('userable_id')->toArray();
+
+            $results->whereIn('id', $filterStudents);
         }
+
 
         $results = $results->paginate(env('PAGINATE_ENTRIES', 10));
 
@@ -173,28 +206,42 @@ class SearchController extends SiteSearchController
         );
         $v = Validator::make($request->all(), $rules);
 
-        $searchKeyword = array();
-        if (isset($v->valid()['search_text'])) {
-            $foundKeywords = CompanyKeyword::search($v->valid()['search_text'], Config::get('app.locale'))->select('key')->get();
-            foreach ($foundKeywords as $item) {
-                $searchKeyword[] = $item["attributes"]["key"];
-            }
-        }
-
         $results = Company::whereNotNull("activity")
-                ->whereHas('user', function ($q) use ($v, $searchKeyword) {
+                ->whereHas('user', function ($q) use ($v) {
                     $q->where('visible', true);
                     $q->where('is_filled', true);
                     $q->where('banned', false);
-                    if (isset($v->valid()['search_text']) && !sizeof($searchKeyword)) {
-                        $q->search($v->valid()['search_text'], ['name','email']);
-                    }
                     if (isset($v->valid()['countries'])) {
                         $q->whereIn('country', $v->valid()['countries']);
                     }
                 });
         if (isset($v->valid()['activities'])) {
             $results->whereIn('activity', $v->valid()['activities']);
+        }
+
+
+        // Lets take a look at the text query
+        $userIds = array();
+        if (isset($v->valid()['search_text'])) {
+            // Users that match the search query on name surname or email
+            $ids = User::search($v->valid()['search_text'], ['name', 'surname', 'email'])->where('userable_type', Company::class)->select('id')->get()->pluck('id')->toArray();
+            $userIds = array_merge($userIds, $ids);
+
+            // Lets look at the student studies related keywords
+            // It breaks with more than 4 columns so we split it in two
+            $ids = CompanyKeyword::search($v->valid()['search_text'], ['en','es','it'])->join('companies', 'companies.activity', 'key')->join('users', 'users.userable_id', 'companies.id')->where('userable_type', Company::class)->select('users.id')->get()->pluck('id')->toArray();
+
+            $userIds = array_merge($userIds, $ids);
+
+            // Lets look at the student studies related keywords
+            // It breaks with more than 4 columns so we split it in two
+            $ids = CompanyKeyword::search($v->valid()['search_text'], ['de','fr','sk'])->join('companies', 'companies.activity', 'key')->join('users', 'users.userable_id', 'companies.id')->where('userable_type', Company::class)->select('users.id')->get()->pluck('id')->toArray();
+
+            $userIds = array_merge($userIds, $ids);
+
+            $filterCompanies = User::where('userable_type', Company::class)->whereIn('id', $userIds)->select('userable_id')->get()->pluck('userable_id')->toArray();
+
+            $results->whereIn('id', $filterCompanies);
         }
 
         $results = $results->paginate(env('PAGINATE_ENTRIES', 10));
@@ -322,7 +369,7 @@ class SearchController extends SiteSearchController
         foreach ($availableCountries as $country) {
             $countries[] = array(
                 'id' => $country->country,
-                'name' => User::$countries[$country->country]
+                'name' => trans('global.'.$country->country)
             );
         }
 
@@ -380,9 +427,10 @@ class SearchController extends SiteSearchController
         foreach ($availableCountries as $country) {
             $countries[] = array(
                 'id' => $country->country,
-                'name' => User::$countries[$country->country]
+                'name' => trans('global.'.$country->country)
             );
         }
+
 
         $data[] = array(
             'id' => 'activities',

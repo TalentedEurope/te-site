@@ -3,9 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Sofa\Eloquence\Eloquence;
+use Auth;
 
 class ProfessionalSkill extends Model
 {
+    use Eloquence;
+
     public $timestamps = false;
 
     protected $fillable = ['name','language_code'];

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use JWTAuth;
+use App\Models\User;
+use App\Models\Institution;
 use Auth;
 
 class SearchController extends Controller
@@ -30,6 +32,14 @@ class SearchController extends Controller
     public function searchCompanies(Request $request)
     {
         return $this->showSearch($request, 'companies');
+    }
+
+    public function searchInstitutions(Request $request)
+    {
+        $data = array(
+            'institutions' => User::where('is_filled', true)->where('userable_type', Institution::class)->orderBy('name')->get()
+        );
+        return view('search.institutions', $data);
     }
 
     public function showSearch(Request $request, $type)

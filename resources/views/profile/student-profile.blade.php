@@ -35,6 +35,14 @@
         <div class="row">
           @if ($student->valid == "validated" && $student->validationRequest)
             @if ($student->validationRequest)
+
+              @if ($student->validation_comment)
+              <div class="col-sm-12">
+              <p class="col-sm-12 alert alert-info">
+                  {{ $student->validation_comment }}
+              </p>
+              </div>
+              @endif
               <p class="validated-by col-sm-8"><span class="btn btn-lg"><strong><i class="fa fa-star icon"></i> {!! trans('reg-profile.refereed_by') !!}:
                </strong>
                <a href="{{
