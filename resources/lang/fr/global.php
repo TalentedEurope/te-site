@@ -91,7 +91,7 @@ return [
     
         'footer_partners' => 'Partenaires',
     
-        'cookie_text' => 'Ce site utilise des cookies pour améliorer votre expérience utilisateur  En utilisant ce site, vous acceptez leur utilisation. Plus d\'informations sur nous et comment nous utilisons ces fichiers, et la façon dont nous traitons ces fichiers, voir notre politique en matière de cookie<a href="/vyhlásení notification cookies </a>',
+        'cookie_text' => 'Ce site utilise des cookies pour améliorer votre expérience utilisateur  En utilisant ce site, vous acceptez leur utilisation. Plus d\'informations sur nous et comment nous utilisons ces fichiers, et la façon dont nous traitons ces fichiers, voir notre politique en matière de cookie <a href="/privacy-policy">notification cookies</a>',
     
         'cookie_accept' => 'Fermer',
     

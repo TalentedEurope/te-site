@@ -5,6 +5,6 @@ return [
     
         'reset_password' => 'Das Password erneuern ',
     
-        'send_password_reset' => 'Sende Link zum erneuern des Paswords',
+        'send_password_reset' => 'Sende Link zum Erneuern des Paswords',
     
 ];

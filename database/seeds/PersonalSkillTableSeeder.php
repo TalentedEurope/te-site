@@ -131,7 +131,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'it' => 'commerciale',                    
                 
-                    'de' => 'kommerziell',                    
+                    'de' => 'geschäftsorientiert',                    
                 
                     'fr' => 'qui a l´esprit d´entreprise',                    
                 
@@ -179,7 +179,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'it' => 'meticoloso',                    
                 
-                    'de' => 'pedant',                    
+                    'de' => 'sorgfältig',                    
                 
                     'fr' => 'systématique',                    
                 
@@ -259,7 +259,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'it' => 'dedito a ',                    
                 
-                    'de' => 'begeistert',                    
+                    'de' => 'engagiert',                    
                 
                     'fr' => 'dévoué',                    
                 
@@ -307,7 +307,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'it' => 'energico',                    
                 
-                    'de' => 'energisch',                    
+                    'de' => 'dynamisch',                    
                 
                     'fr' => 'énergique',                    
                 
@@ -371,7 +371,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'it' => 'indipendente',                    
                 
-                    'de' => 'unabhängig',                    
+                    'de' => 'selbstständig',                    
                 
                     'fr' => 'indépendant',                    
                 
@@ -483,7 +483,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'it' => 'perseverante',                    
                 
-                    'de' => 'zäh',                    
+                    'de' => 'ausdauernd',                    
                 
                     'fr' => 'persévérant',                    
                 
@@ -644,7 +644,7 @@ class PersonalSkillTableSeeder extends Seeder
                 
                     'it' => 'desideroso di imparare',                    
                 
-                    'de' => 'gewillt zu lernen',                    
+                    'de' => 'lernwillig',                    
                 
                     'fr' => 'prêt à apprendre',                    
                 
