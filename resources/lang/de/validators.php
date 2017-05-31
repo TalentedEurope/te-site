@@ -3,7 +3,7 @@
 
 return [
     
-        'my_students' => 'Meine Studenten',
+        'my_students' => 'Meine Studenten/Azubis',
     
         'enable' => 'erlaube',
     
