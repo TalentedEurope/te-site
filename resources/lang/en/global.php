@@ -565,4 +565,6 @@ return [
     
         'ZW' => 'Zimbabwe',
     
+        'contact_us' => 'Contact us',
+    
 ];
