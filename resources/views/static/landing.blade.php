@@ -63,8 +63,17 @@
     <header class="hero">
       <nav class="navbar navbar-inverse navbar-landing navbar-static-top">
         <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapse-nav">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+
+
           <div id="navbar">
-            <ul class="nav navbar-nav navbar-right languages-nav">
+            <ul class="nav navbar-nav navbar-collapse collapse-nav collapse  navbar-right languages-nav">
               <li><a href="?lang=en">EN</a></li>
               <li><a href="?lang=es">ES</a></li>
               <li><a href="?lang=it">IT</a></li>
@@ -73,14 +82,14 @@
               <li><a href="?lang=sk">SK</a></li>
             </ul>
 
-            <ul class="nav navbar-nav navbar-left regular hidden-xs">
+            <ul class="nav navbar-nav navbar-collapse collapse-nav collapse navbar-left regular">
             <li><a href="{{ url::route('searchStudents') }}">{!! trans_choice('global.student', 2) !!}</a></li>
             <li><a href="{{ url::route('searchCompanies') }}">{!! trans_choice('global.company_plural', 2) !!}</a></li>
             <li><a href="{{ url::route('searchInstitutions') }}">{!! trans_choice('global.institution_plural', 2) !!}</a></li>
 
             </ul>
 
-            <ul class="nav navbar-nav navbar-right social-nav">
+            <ul class="nav navbar-nav navbar-collapse collapse-nav collapse navbar-right social-nav">
               <li>
                 <a href="https://www.facebook.com/Talented-Europe-839419182764068/">
                   <i class="fi flaticon-facebook"></i>
@@ -104,12 +113,12 @@
             </ul>
 
             @if (Auth::user())
-            <ul class="nav navbar-nav navbar-right login">
+            <ul class="nav navbar-nav navbar-collapse collapse-nav collapse navbar-right login">
               <li><a href="{{ URL::to('/profile') }}">{!! trans('landing.go_to_app') !!}</a></li>
               <li><a href="{{ URL::to('/logout') }}">{!! trans('global.logout_btn') !!}</a></li>
             </ul>
             @else
-            <ul class="nav navbar-nav navbar-right login">
+            <ul class="nav navbar-nav navbar-collapse collapse-nav collapse navbar-right login">
               <li><a href="{{ URL::to('/login') }}">{!! trans('global.login_btn') !!}</a></li>
               <li><a href="{{ URL::to('/register') }}">{!! trans('global.register_btn') !!}</a></li>
             </ul>
