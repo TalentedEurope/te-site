@@ -20,6 +20,7 @@ use App\Http\Requests;
 use JWTAuth;
 use config;
 use Validator;
+use DB;
 use Auth;
 use Carbon\Carbon;
 
@@ -120,7 +121,8 @@ class SearchController extends SiteSearchController
             $results->whereIn('id', $filterStudents);
         }
 
-
+        $results->orderBy(DB::raw("FIELD(valid, 'validated','pending','denied')"));
+        $results->orderBy('created_at', 'desc');
         $results = $results->paginate(env('PAGINATE_ENTRIES', 10));
 
         $students = array();
@@ -161,7 +163,7 @@ class SearchController extends SiteSearchController
 
             $studentCountry = "";
             if (isset(User::$countries[$student->user->country])) {
-                $studentCountry = User::$countries[$student->user->country];
+                $studentCountry = trans('global.'.$student->user->country);
             }
 
             $students[] = array(
@@ -271,9 +273,9 @@ class SearchController extends SiteSearchController
                 'slug' => $company->user->slug,
                 'name' => $company->user->name,
                 'info' => trans('reg-profile.'.$company->activity),
-                'country' => User::$countries[$company->user->country],
+                'country' => trans('global.'.$company->user->country),
                 'city' => $company->user->city,
-                'we_are_in' => $company->user->city . ', ' . User::$countries[$company->user->country],
+                'we_are_in' => $company->user->city . ', ' . trans('global.'.$company->user->country),
                 'talent_is' => $company->talent,
                 'skills' => $skills,
                 'photo' => asset(User::$photoPath.$company->user->image),
