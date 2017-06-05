@@ -28,7 +28,7 @@
         <h3 class="section-title"> <i class="fa fa-info" aria-hidden="true"></i> {!! trans('reg-profile.about') !!}</h3>
         <ul class="student-specs">
         <li><strong><i class="icon fa fa-map-marker"></i> {!! trans('reg-profile.we_are_in') !!}: </strong> {{ $user->city }}
-        @if ($user->country) , <em>{{ $countries[$user->country] }}</em></li> @endif
+        @if ($user->country) , <em>{{ trans('global.'.$user->country) }}</em></li> @endif
         @if ($company->personalSkills->count())
         <li><strong><i class="icon fa fa-cogs"></i> {!! trans('reg-profile.we_are_looking_for_people_skilled_in') !!}: </strong>
               <ul class="skills">

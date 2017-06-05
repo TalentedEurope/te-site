@@ -22,7 +22,7 @@
         {{ $mainStudy['level'] }} {{ trans('reg-profile.at') }} {{ $mainStudy['name'] }}</li>
         @endif
         @if ($user->country && $student->nationality)
-          <li><strong><i class="icon fa fa-map-marker"></i>  {!! trans('reg-profile.lives_in') !!}: </strong> {{ $user->city }}, <em>{{ $countries[$user->country] }} </em> | <strong> {!! trans('reg-profile.nationality') !!}: </strong> {{ $nationalities[$student->nationality]  }} </li>
+          <li><strong><i class="icon fa fa-map-marker"></i>  {!! trans('reg-profile.lives_in') !!}: </strong> {{ $user->city }}, <em>{{ trans('global.'.$user->country) }} </em> | <strong> {!! trans('reg-profile.nationality') !!}: </strong> {{ $nationalities[$student->nationality]  }} </li>
         @endif
         @if ($student->birthdate != '0000-00-00')
         <li><strong><i class="icon fa fa-calendar"></i>  {!! trans('reg-profile.born_on') !!}: </strong> {{ Carbon\Carbon::parse($student->birthdate)->format('d/m/Y') }}</li>
