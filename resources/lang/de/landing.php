@@ -17,31 +17,31 @@ return [
     
         'more' => 'Erfahre mehr',
     
-        'what_is_title' => 'Was ist talentiertes Europa?',
+        'what_is_title' => 'Was ist Talentiertes Europa?',
     
         'what_is_cta' => '<strong>Erfahre mehr!</strong> Eine Broschühre anfordern!',
     
-        'what_is_text_1' => 'Können Sie sich vorstellen, die besten Studenten aus einem beliebigen europäischen Land einzustellen? <strong> Möchten Sie ein Teil der europäischen Top-Studenten sein? Tausende Unternehmen gewinnen einen direkten Zugang zu Informationen über Sie <strong>  und je besser Ihre Bewertung, desto mehr Möglichkeiten haben Sie, eine bessere Arbeit zu finden.',
+        'what_is_text_1' => 'Können Sie sich vorstellen, die besten Studenten aus einem beliebigen europäischen Land einzustellen? <strong> Möchten Sie zu den besten europäischen Studenten und Azubis gehören? Tausende Unternehmen haben einen direkten Zugang zu den hinterlegten Kontaktinformationen <strong>  und je besser die erhaltene Bewertung, desto mehr Möglichkeiten haben Sie, eine tolle Arbeit zu finden.',
     
-        'what_is_text_2' => 'Genau das bietet Talentiertes Europa an. Ein Ausstellfenster voller besten Studenten in Europa. Eine einfache Idee, die Arbeitgeber mit Studenten verbindet. Der Treffpunkt für die Besten.',
+        'what_is_text_2' => 'Genau das bietet Talentiertes Europa. Eine Übersicht übe die besten Studenten und Azubis in Europa. Eine einfache Idee, die Arbeitgeber mit Studenten und Azubis verbindet. Der Treffpunkt für die Besten.',
     
         'subscribe_title' => 'Registriere dich und verfolge unsere Neuigkeiten.',
     
-        'subscribe_text' => 'Alle Benachrichtigungen über die Ereignisse und Neuigkeiten auf Talented Europe. ',
+        'subscribe_text' => 'Erhalte Benachrichtigungen über alle Ereignisse und Neuigkeiten auf Talented Europe. ',
     
-        'subscribe_form_placeholder' => 'Bitte E-mailadresse angeben.',
+        'subscribe_form_placeholder' => 'Bitte E-mail-Adresse eingeben.',
     
-        'subscribe_btn_text' => 'Registrieren',
+        'subscribe_btn_text' => 'registrieren',
     
-        'subscribe_follow_text' => 'Bitte folg uns auf:',
+        'subscribe_follow_text' => 'oder folg uns auf:',
     
-        'subscribe_text_question' => 'Neuigkeiten über Talented Europe per E-Mail bekommen.<br/> Geben Sie uns bitte Bescheid, was für Sie Talent ist.',
+        'subscribe_text_question' => 'Neuigkeiten über Talented Europe per E-Mail bekommen.<br/> Bitte schreiben Sie uns: Was ist für Sie Talent?',
     
-        'meta_description' => 'Erasmus plus Projekt, das die Verbindung von exzellenten Studenten mit der Arbeit und Praktika in Europa verbindet.',
+        'meta_description' => 'Ein Erasmus Plus Projekt, das die Vermittlung von exzellenten Studenten und Azubis in Arbeit und Praktika europaweit erleichtert',
     
         'coming_soon' => 'Inhalt in Bearbeitung',
     
-        'search_placeholder' => 'Was suchst du?',
+        'search_placeholder' => 'Was suchen Sie?',
     
         'search_where' => 'Wo',
     
@@ -49,11 +49,11 @@ return [
     
         'statistics_title' => 'Statistik',
     
-        'contacts' => 'Kontakte zwischen Studenten und Unternehmen',
+        'contacts' => 'Kontakte zwischen Studenten/Azubis und Unternehmen',
     
         'companies_institutions' => 'Unternehmen und Institutionen',
     
-        'students_title' => 'talentierte Studenten',
+        'students_title' => 'talentierte Studenten/Azubis',
     
         'no_students' => 'Keine Studenten zur Verfügung',
     

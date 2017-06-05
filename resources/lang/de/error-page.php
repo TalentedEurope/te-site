@@ -5,21 +5,21 @@ return [
     
         'not_allowed' => 'Nich erlaubt',
     
-        'not_allowed_to_do_this_action' => 'Dieser vorgang ist erlaubt',
+        'not_allowed_to_do_this_action' => 'Dieser Vorgang ist nicht erlaubt',
     
-        'can_try_searching_for' => 'Suchen Sie...',
+        'can_try_searching_for' => 'Sie können versuchen, zu suchen',
     
         'page_not_found' => 'Seite nicht gefunden',
     
-        'we_didnt_find_the_page' => 'Haben Sie die Seite, die Sie suchen, nicht gefunden.',
+        'we_didnt_find_the_page' => 'Wir haben die Seite, die Sie suchen, nicht gefunden.',
     
         'internal_server_error' => 'Fehler - interner Server',
     
-        'an_error_happened' => 'Es ist ein Fehler aufgetreten, die Administratoren wurde benachrichtigt. Der Fehler wird im kürzem behoben, versuchen Sie es später.',
+        'an_error_happened' => 'Es ist ein Fehler aufgetreten, die Administratoren wurde benachrichtigt. Der Fehler wird in Kürze behoben, versuchen Sie es später erneut.',
     
-        'meanwhile_can_searching_for' => 'Sie können das Suchen probieren...',
+        'meanwhile_can_searching_for' => 'Währenddessen können Sie alternativ suchen ',
     
-        'be_right_back' => 'Wir melden uns gleich.',
+        'be_right_back' => 'Wir sind gleich zurück.',
     
         'not_found' => 'Nicht gefunden.',
     

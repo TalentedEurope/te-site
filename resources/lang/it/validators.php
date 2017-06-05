@@ -47,7 +47,7 @@ return [
     
         'note_if_validation_is_passed_as_no_student' => 'Nota: se la vidimazione ha come esito "Nessun studente" lo studente avrá la possibilitá di far vidimare il suo profilo di nuovo',
     
-        'user_hasnt_complete_filling_its_profile' => 'L&apos;usuario non ha completato la compilazione del profilo. Fino a quando questo processo non é completo non é possibile vidimare gli studenti.',
+        'user_hasnt_complete_filling_its_profile' => 'L\'usuario non ha completato la compilazione del profilo. Fino a quando questo processo non é completo non é possibile vidimare gli studenti.',
     
         'manage_validators' => 'Gestire attestatori',
     
@@ -57,7 +57,7 @@ return [
     
         'date_sent' => 'Data di invio',
     
-        'note_invites_are_only_valid_14_days' => 'Nota: gli inviti sono validi solamente 14 giorni dopo l&apos; invio e spariranno da questa lista dopo tale periodo',
+        'note_invites_are_only_valid_14_days' => 'Nota: gli inviti sono validi solamente 14 giorni dopo l\' invio e spariranno da questa lista dopo tale periodo',
     
         'cancel' => 'Cancellare',
     
@@ -69,7 +69,7 @@ return [
     
         'youll_receive_notifications_from' => 'Da adesso riceverai notiche di approvazione da',
     
-        'cannot_complete_invitation' => 'Non si puó completare l&apos;invito',
+        'cannot_complete_invitation' => 'Non si puó completare l\'invito',
     
         'no_alerts_found' => 'Nessun avviso trovato',
     
@@ -89,7 +89,7 @@ return [
     
         'validation_was_removed' => 'La valutazione è stata rimossa perché avevate indicato che %s non era uno studente di questa istituzione.',
     
-        'validation_complete' => 'Valutazione completata',
+        'validation_complete' => '%s valutazione completata',
     
         'cannot_invite' => 'Impossibile invitare: o questa e-mail è registrata a un altro tipo di utente, o egli ha già un invito in sospeso dall’istituzione.',
     

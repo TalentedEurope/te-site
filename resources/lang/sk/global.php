@@ -91,7 +91,7 @@ return [
     
         'footer_partners' => 'Partners',
     
-        'cookie_text' => 'Táto webová stránka používa súbory cookies na zlepšenie vašej používateľskej skúsenosti pri návšteve stránky. Používaním tejto webovej stránky vyjadrujete súhlas s ich používaním. Viac informácií o nás a o tom, ako tieto súbory používame a ako s nimi nakladáme, nájdete v našom <a href="/vyhlásení o ochrane osobných údajov">oznámenie súborov cookies</a>',
+        'cookie_text' => 'Táto webová stránka používa súbory cookies na zlepšenie vašej používateľskej skúsenosti pri návšteve stránky. Používaním tejto webovej stránky vyjadrujete súhlas s ich používaním. Viac informácií o nás a o tom, ako tieto súbory používame a ako s nimi nakladáme, nájdete v našom <a href="/privacy-policy">oznámenie súborov cookies</a>',
     
         'cookie_accept' => 'Zatvoriť',
     

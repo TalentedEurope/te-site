@@ -71,15 +71,15 @@ return [
     
         'institution_plural' => 'Institutionen',
     
-        'student_plural' => 'Studenten',
+        'student_plural' => 'Studenten/Azubis',
     
         'company' => 'Unternehmen|Unternehmen',
     
         'institution' => 'Institution|Institutionen',
     
-        'student' => 'Student|Studenten',
+        'student' => 'Student|Studenten|Azubis',
     
-        'more_btn' => 'mehr erfahren',
+        'more_btn' => 'Mehr erfahren',
     
         'home' => 'Startseite',
     
@@ -89,9 +89,9 @@ return [
     
         'privacy_policy' => 'Datenschutz-Bestimmungen',
     
-        'footer_partners' => 'Partners',
+        'footer_partners' => 'Partner',
     
-        'cookie_text' => 'Diese Webseite nützt cookies um Ihre User-Erfahrungen auf dieser Webseite zu verbessern.Mit dem Benutzen dieser Webseite sind Sie mit der cookies- Aktivität einverstanden. Mehr Informaationen über uns und über das Nützen von cookies finden Sie in <a href="/ unserer Erklärung über den Schutz von personenbezogenen Daten ">Benachrichtigung über cookies</a>',
+        'cookie_text' => 'Diese Webseite nutzt Cookies um Ihre User-Erfahrungen auf dieser Webseite zu verbessern. Mit dem Benutzen dieser Webseite sind Sie mit der Cookies-Aktivität einverstanden. Mehr Informaationen über uns und über das Nutzen von Cookies finden Sie in <a href="/privacy-policy">Benachrichtigung über cookies</a>',
     
         'cookie_accept' => 'Schliessen',
     

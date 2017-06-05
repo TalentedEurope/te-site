@@ -21,6 +21,6 @@ return [
     
         'criteria' => 'Student does not meet criteria',
     
-        'nostudent' => 'Student hasn&apos;t attended this school/institution',
+        'nostudent' => 'Student hasn\'t attended this school/institution',
     
 ];

@@ -5,13 +5,13 @@ return [
     
         'studies_level_5' => 'kurzfristige tertiäre Ausbildung',
     
-        'studies_level_6' => 'Bachelor oder Equivalent',
+        'studies_level_6' => 'Bachelor oder Äquivalent',
     
-        'studies_level_7' => 'Magister oder Equivalent',
+        'studies_level_7' => 'Magister oder Äquivalent',
     
-        'studies_level_8' => 'Doktor oder Equivalent',
+        'studies_level_8' => 'Doktor oder Äquivalent',
     
-        'company_activity' => 'Feld',
+        'company_activity' => 'Wirtschaftssektor',
     
         'company_contact_person' => 'Kontaktperson',
     
@@ -41,7 +41,7 @@ return [
     
         'insitution_his' => 'Mittelschule',
     
-        'legal_representative' => 'Erziehungsberechtigte',
+        'legal_representative' => 'Rechtliche Vertretung (Verantwortliche Person)',
     
         'institution_pic' => 'PIC',
     
@@ -51,7 +51,7 @@ return [
     
         'institution_vet' => 'Fachausbildung und Praktikum',
     
-        'student_academic_info' => 'akademische Informationen',
+        'student_academic_info' => 'Informationen über Ausbildung',
     
         'address' => 'Anschrift',
     
@@ -121,7 +121,7 @@ return [
     
         'student_work_experience' => 'Arbeitserfahrungen',
     
-        'validator_department' => 'Abteilung/ Lehrstuhl',
+        'validator_department' => 'Abteilung',
     
         'password' => 'Passwort',
     
@@ -129,11 +129,11 @@ return [
     
         'captcha' => 'Captcha',
     
-        'terms_of_use' => 'Ich bin mit den Bedingungen einverstanden',
+        'terms_of_use' => 'Ich bin mit den Nutzungsbedingungen einverstanden',
     
-        'i_agree_with' => 'Bin eiverstanden',
+        'i_agree_with' => 'Ich bin einverstanden',
     
-        'the_terms_of_use' => 'Nützungsbedingungen',
+        'the_terms_of_use' => 'Nutzungsbedingungen',
     
         'create_account' => 'Ein Konto erstellen',
     
@@ -157,7 +157,7 @@ return [
     
         'design' => 'Design',
     
-        'education-amp-training' => 'Ausbildung',
+        'education-amp-training' => 'Bildung und Unterrichten',
     
         'engineering' => 'Ingenieurwesen',
     
@@ -195,7 +195,7 @@ return [
     
         'technology-amp-telecommunications' => 'Technologie und Telekommunikation',
     
-        'business-studies-and-or-management-science' => 'Handelswesen oder Management',
+        'business-studies-and-or-management-science' => 'Betriebswirtschaft oder Management',
     
         'engineering-and-or-technology' => 'Ingenieurwesen und Technologien',
     
@@ -225,9 +225,9 @@ return [
     
         'agriculture-sciences' => 'Landwirtschaftswissenschaften',
     
-        'Lang_level_A1' => 'A1: Nullanfänger',
+        'Lang_level_A1' => 'A1: Anfänger',
     
-        'Lang_level_A2' => 'A2: Anfänger',
+        'Lang_level_A2' => 'A2: Grundkenntnisse',
     
         'Lang_level_B1' => 'B1: Leicht Fortgeschritten',
     
@@ -249,17 +249,17 @@ return [
     
         'profile_visibility_hidden' => 'Versteckt. Kann nicht ausgesucht und gesehen werden.',
     
-        'notifications' => 'Benahrichtigungen',
+        'notifications' => 'Benachrichtigungen',
     
-        'notifications_enabled' => 'Erlaubt. Sie bekommen jeden Tag eine E-Mail, falls ein Student mit Ihnen in Kontakt tretten will.',
+        'notifications_enabled' => 'Aktiviert. Sie bekommen einmal pro Tag eine E-Mail, falls ein Student mit Ihnen in Kontakt tretten will.',
     
-        'notifications_disabled' => 'Nicht erlaubt. Sie werden keine E-Mails bekommen. Außer  der Benachrichtigungen über die Service-Dienste.',
+        'notifications_disabled' => 'Deaktiviert. Sie bekommen keine E-Mails außer Service-Benachrichtigungen.',
     
         'about' => 'Inhalt',
     
         'company_logo' => 'Unternehmenslogo',
     
-        'social_and_web' => 'Sozialle Netzwerke und die Webseite',
+        'social_and_web' => 'Soziale Netzwerke und die Webseite',
     
         'facebook_page_url' => 'Facebook url',
     
@@ -279,9 +279,9 @@ return [
     
         'change_your_password' => 'Password ändern',
     
-        'new_password' => 'Neuese Password',
+        'new_password' => 'Neues Password',
     
-        'repeat_new_password' => 'Geben Sie das neue Password erneut an',
+        'repeat_new_password' => 'Wiederholen Sie das neue Password',
     
         'save_new_password' => 'Das neue Password speichern',
     
@@ -289,7 +289,7 @@ return [
     
         'my_photo' => 'Mein Foto',
     
-        'download_curriculum' => 'Konzept herunterladen',
+        'download_curriculum' => 'Lebenslauf herunterladen',
     
         'my_talent' => 'Mein Talent',
     
@@ -325,29 +325,29 @@ return [
     
         'set_by_both_parties' => 'Von beiden Seiten angeführt',
     
-        'set_by_referee_or_student' => 'Von Begutachter oder Studenten angeführt',
+        'set_by_referee_or_student' => 'Von Begutachter oder Studenten/Azubi ausgewählt',
     
-        'study' => 'Studium',
+        'study' => 'Studium|Aussbildung',
     
         'date_not_specified' => 'Datum nicht angegeben',
     
-        'get_in_contact' => 'Kontak aufnehmen',
+        'get_in_contact' => 'Kontakt aufnehmen',
     
         'want_to_show_this_company_how_talented_you_are' => 'Möchten Sie diesem Unternehmen zeigen, wie talentiert Sie sind?',
     
         'we_are_in' => 'Wir sind in',
     
-        'we_are_looking_for_people_skilled_in' => 'Wir suchen Menschen mit Fähigkeiten in ...',
+        'we_are_looking_for_people_skilled_in' => 'Wir suchen Menschen mit Fähigkeiten in',
     
-        'we_think_that_talent_is' => 'Ich denke, dass Talent ist...',
+        'we_think_that_talent_is' => 'Ich denke, Talent ist',
     
         'not_enough_information' => 'Ungenügende Informationen.',
     
-        'fix_the_following_errors' => 'Es ist nötig den folgenden Fehler zu korrigieren.',
+        'fix_the_following_errors' => 'Es ist nötig, den/die folgenden Fehler zu korrigieren.',
     
-        'click_on_button_to_fill_required_fields' => 'Bitte den Button anklicken, wenn Sie die Felder füllen möchten.',
+        'click_on_button_to_fill_required_fields' => 'Bitte den Button anklicken, um die benötigten Felder auszufüllen.',
     
-        'institution_fix_the_following_errors' => 'Es ist nötig die folgenden Fehler zu korrigieren, sonst können Ihre Begutachter Ihr Profil nicht validieren.',
+        'institution_fix_the_following_errors' => 'Es ist nötig den/die folgenden Fehler zu korrigieren, sonst können Ihre Begutachter Ihr Profil nicht validieren.',
     
         'my_institution' => 'Meine Institution',
     
@@ -357,7 +357,7 @@ return [
     
         'student_study_institution_name' => 'Name der Institution',
     
-        'student_study_course_studies_name' => 'Name des Kurses/ Studiums',
+        'student_study_course_studies_name' => 'Name der Ausbildung/des Studiums',
     
         'student_download_certificate' => 'Zertifikat herunterladen',
     
@@ -367,9 +367,9 @@ return [
     
         'student_training_course_name' => 'Name des Kurses',
     
-        'student_training_add' => 'Praxis / Weiterbildung hinzufügen',
+        'student_training_add' => 'Praktikum, Aus-/Weiterbildung hinzufügen',
     
-        'student_training_add_more' => 'weitere Praxis / Weiterbildung hinzufügen',
+        'student_training_add_more' => 'weiteres Praktikum, Aus-/Weiterbildung hinzufügen',
     
         'student_language' => 'Sprache',
     
@@ -481,7 +481,7 @@ return [
     
         'field' => 'Feld',
     
-        'your_request_was_created' => 'Ihre Anfrage wurde erstellt %',
+        'your_request_was_created' => 'Ihre Anfrage wurde erstellt %s',
     
         'if_request_hasnt_been_completed' => 'Fall dei Anfragen nicht bis %s Tage beendet wurde, können Sie eine neue Anfrage erstellen.',
     

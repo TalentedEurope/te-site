@@ -11,11 +11,11 @@ return [
     
         'refereed' => 'hat begutachtet',
     
-        'there_are_no_matching_the_selected_filters' => 'Im Moment gibt es keine  % mit den ausgewählten Filtern.',
+        'there_are_no_matching_the_selected_filters' => 'Im Moment gibt es keine %s mit den ausgewählten Filtern.',
     
         'we_found' => 'Erfüllt die Bedürfnisse',
     
-        'we_found_matching_your_needs' => 'Wir haben gefunden % Nummer % Kolektiv %, die IHren Bedürfnissen entsprechen.',
+        'we_found_matching_your_needs' => 'Wir haben gefunden %number% %collective%, die IHren Bedürfnissen entsprechen.',
     
         'filters' => 'Filter',
     

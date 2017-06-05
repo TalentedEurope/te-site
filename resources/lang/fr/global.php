@@ -75,9 +75,9 @@ return [
     
         'company' => 'la société|Les sociétés',
     
-        'institution' => 'L&apos;institution|Les institutions',
+        'institution' => 'L\'institution|Les institutions',
     
-        'student' => 'L&apos;étudiant|Les étudiants',
+        'student' => 'L\'étudiant|Les étudiants',
     
         'more_btn' => 'voir plus',
     
@@ -91,7 +91,7 @@ return [
     
         'footer_partners' => 'Partenaires',
     
-        'cookie_text' => 'Ce site utilise des cookies pour améliorer votre expérience utilisateur  En utilisant ce site, vous acceptez leur utilisation. Plus d&apos;informations sur nous et comment nous utilisons ces fichiers, et la façon dont nous traitons ces fichiers, voir notre politique en matière de cookie<a href="/vyhlásení notification cookies </a>',
+        'cookie_text' => 'Ce site utilise des cookies pour améliorer votre expérience utilisateur  En utilisant ce site, vous acceptez leur utilisation. Plus d\'informations sur nous et comment nous utilisons ces fichiers, et la façon dont nous traitons ces fichiers, voir notre politique en matière de cookie <a href="/privacy-policy">notification cookies</a>',
     
         'cookie_accept' => 'Fermer',
     
@@ -184,7 +184,7 @@ return [
     
         'BR' => 'Brésil',
     
-        'IO' => 'Territoire britannique de l&apos;océan Indien',
+        'IO' => 'Territoire britannique de l\'océan Indien',
     
         'BN' => 'Brunei Darussalam',
     
@@ -210,7 +210,7 @@ return [
     
         'CN' => 'Chine',
     
-        'CX' => 'L&apos;île de noël',
+        'CX' => 'L\'île de noël',
     
         'CC' => 'Îles Cocos (Keeling)',
     
@@ -226,7 +226,7 @@ return [
     
         'CR' => 'Costa Rica',
     
-        'CI' => 'Côte d&apos;Ivoire',
+        'CI' => 'Côte d\'Ivoire',
     
         'CU' => 'Cuba',
     
@@ -306,7 +306,7 @@ return [
     
         'ID' => 'Indonésie',
     
-        'IR' => 'Iran (République islamique d &apos;)',
+        'IR' => 'Iran (République islamique d \')',
     
         'IQ' => 'Irak',
     
@@ -538,7 +538,7 @@ return [
     
         'AE' => 'Emirats Arabes Unis',
     
-        'US' => 'les États-Unis d&apos;Amérique',
+        'US' => 'les États-Unis d\'Amérique',
     
         'UM' => 'Îles mineures éloignées des États-Unis',
     

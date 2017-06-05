@@ -17,7 +17,7 @@ return [
     
         'company_contact_person_name' => 'Meno kontaktnej osoby',
     
-        'company_contact_person_email' => 'e-mail kontaktnej osoby',
+        'company_contact_person_email' => 'E-mail kontaktnej osoby',
     
         'company_representative' => 'Zákonný zástupca (oprávnená osoba)',
     
@@ -426,7 +426,7 @@ Obchodná a poradenská činnosť',
     
         'progress_completed' => 'Ukončené.',
     
-        'you_must_put_referee_email' => '<strong>Upozornenie:</strong>Zadajte mail hodnotiteľa, nie inštitúcie.',
+        'you_must_put_referee_email' => '<strong>Upozornenie:</strong> Zadajte mail hodnotiteľa, nie inštitúcie',
     
         'leave_institution' => 'Opustiť inštitúciu?',
     
@@ -482,7 +482,7 @@ Obchodná a poradenská činnosť',
     
         'field' => 'Pole',
     
-        'your_request_was_created' => 'vaša žiadosť bolas vytvorená %',
+        'your_request_was_created' => 'vaša žiadosť bolas vytvorená %s',
     
         'if_request_hasnt_been_completed' => 'Ak nebola vaša žiadosť ukončená do %s dní, budete si môcť vytvoriť novú žiadosť.',
     
@@ -528,7 +528,7 @@ Obchodná a poradenská činnosť',
     
         'account_has_not_been_verified' => 'Účet nebol potvrdený. Účet aktivujte potvrdením vášho emailu. ',
     
-        'at' => '',
+        'at' => 'at',
     
         'remove_account_button' => 'vymazať účet.',
     
