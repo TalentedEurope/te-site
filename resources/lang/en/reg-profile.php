@@ -547,6 +547,6 @@ return [
     
         'institution_hei_vet' => 'Vocational education and training',
     
-        'insitution_hei_his' => 'Highschool',
+        'institution_hei_his' => 'Highschool',
     
 ];

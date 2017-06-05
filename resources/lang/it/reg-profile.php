@@ -547,6 +547,6 @@ return [
     
         'institution_hei_vet' => 'Formazione professionale e tirocini',
     
-        'insitution_hei_his' => 'Scuola secondaria',
+        'institution_hei_his' => 'Scuola secondaria',
     
 ];

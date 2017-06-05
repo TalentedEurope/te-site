@@ -556,6 +556,6 @@ Sur',
     
         'institution_hei_vet' => 'La formation professionnelle et les activités professionnelles',
     
-        'insitution_hei_his' => 'L&apos; école secondaire',
+        'institution_hei_his' => 'L&apos; école secondaire',
     
 ];

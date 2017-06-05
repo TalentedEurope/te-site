@@ -547,6 +547,6 @@ return [
     
         'institution_hei_vet' => 'Fachausbildung und Praktikum',
     
-        'insitution_hei_his' => 'Mittelschule',
+        'institution_hei_his' => 'Mittelschule',
     
 ];

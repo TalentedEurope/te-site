@@ -548,6 +548,6 @@ Obchodná a poradenská činnosť',
     
         'institution_hei_vet' => 'odborné vzdelanie a prax',
     
-        'insitution_hei_his' => 'Stredná škola',
+        'institution_hei_his' => 'Stredná škola',
     
 ];
