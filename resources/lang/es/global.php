@@ -83,7 +83,7 @@ return [
     
         'home' => 'Inicio',
     
-        'blog' => 'Blog',
+        'blog' => 'Proyecto',
     
         'cookies' => 'Información acerca de las cookies',
     

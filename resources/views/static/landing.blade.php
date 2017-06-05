@@ -402,7 +402,7 @@
           </a>
           <ul class="navigation" role="nav">
             <li><a href="{{ url('/') }}">{!! trans('global.home') !!}</a></li>
-            <li><a href="http://blog.talentedeurope.eu" target="_blank">{!! trans('global.blog') !!}</a></li>
+            <li><a href="http://project.talentedeurope.eu" target="_blank">{!! trans('global.blog') !!}</a></li>
             <li><a href="{{ url('/cookies') }}">{!! trans('global.cookies') !!}</a></li>
             <li><a href="{{ url('/privacy-policy') }}">{!! trans('global.privacy_policy') !!}</a></li>
           </ul>

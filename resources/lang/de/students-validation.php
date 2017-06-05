@@ -3,7 +3,7 @@
 
 return [
     
-        'date_of_request' => 'ersucht am',
+        'date_of_request' => 'Datum der Anfrage',
     
         'pending' => 'wartend',
     
@@ -11,7 +11,7 @@ return [
     
         'not_validated' => 'nicht begutachtet',
     
-        'no_students' => 'Keine Studente',
+        'no_students' => 'Keine Studenten',
     
         'confirm_validation' => 'Gutachtung bestätigen',
     

@@ -13,9 +13,9 @@ return [
     
         'there_are_no_matching_the_selected_filters' => 'There are no %s matching the selected filters at the moment',
     
-        'we_found' => 'We\'ve found',
+        'we_found' => 'We&apos;ve found',
     
-        'we_found_matching_your_needs' => 'We\'ve found %number% %collective% matching your needs',
+        'we_found_matching_your_needs' => 'We&apos;ve found %number% %collective% matching your needs',
     
         'filters' => 'Filters',
     

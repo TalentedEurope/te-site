@@ -528,7 +528,7 @@ Obchodná a poradenská činnosť',
     
         'account_has_not_been_verified' => 'Účet nebol potvrdený. Účet aktivujte potvrdením vášho emailu. ',
     
-        'at' => 'at',
+        'at' => '',
     
         'remove_account_button' => 'vymazať účet.',
     
