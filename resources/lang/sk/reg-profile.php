@@ -550,4 +550,6 @@ Obchodná a poradenská činnosť',
     
         'institution_hei_his' => 'Stredná škola',
     
+        'required_cert_warning' => '',
+    
 ];

@@ -549,4 +549,6 @@ return [
     
         'institution_hei_his' => 'Highschool',
     
+        'required_cert_warning' => 'Please note: if you don&apos;t upload the certificate of authenticity the institution won&apos;t appear on the list of refereeing institutions',
+    
 ];

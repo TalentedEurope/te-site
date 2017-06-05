@@ -549,4 +549,6 @@ return [
     
         'institution_hei_his' => 'Escuela secundaria',
     
+        'required_cert_warning' => 'Importante: si no ha subido el certificado de autenticidad, no saldrá en el listado de posibles instituciones "validadoras" de estudiantes.',
+    
 ];
