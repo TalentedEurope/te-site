@@ -5,17 +5,17 @@ return [
     
         'not_allowed' => 'Interdit',
     
-        'not_allowed_to_do_this_action' => 'Vous n\'êtes pas autorisé à faire cette action.',
+        'not_allowed_to_do_this_action' => 'Vous n&apos;êtes pas autorisé à faire cette action.',
     
         'can_try_searching_for' => 'Vous pouvez essayer de rechercher',
     
         'page_not_found' => 'Page non trouvée',
     
-        'we_didnt_find_the_page' => 'Nous n\'avons pas trouvé la page que vous recherchiez.',
+        'we_didnt_find_the_page' => 'Nous n&apos;avons pas trouvé la page que vous recherchiez.',
     
         'internal_server_error' => 'Erreur du Serveur Interne ',
     
-        'an_error_happened' => 'Une erreur s\'est produite, les administrateurs ont été informés et ce problème sera résolu rapidement, veuillez essayer plus tard.',
+        'an_error_happened' => 'Une erreur s&apos;est produite, les administrateurs ont été informés et ce problème sera résolu rapidement, veuillez essayer plus tard.',
     
         'meanwhile_can_searching_for' => 'Pendant ce temps, vous pouvez essayer de chercher',
     

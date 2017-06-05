@@ -83,7 +83,7 @@ return [
     
         'home' => 'Home',
     
-        'blog' => 'Blog',
+        'blog' => 'Project',
     
         'cookies' => 'Information about cookies',
     
@@ -101,7 +101,7 @@ return [
     
         'status' => 'Status',
     
-        'not_enough_data_to_show_profile' => 'We don\'t have enough data from you to be able to show your profile.',
+        'not_enough_data_to_show_profile' => 'We don&apos;t have enough data from you to be able to show your profile.',
     
         'click_on_link_to_fill_required_fields' => 'Please click on the following link to fill the required fields.',
     
@@ -225,7 +225,7 @@ return [
     
         'CR' => 'Costa Rica',
     
-        'CI' => 'Côte d\'Ivoire',
+        'CI' => 'Côte d&apos;Ivoire',
     
         'CU' => 'Cuba',
     
@@ -327,7 +327,7 @@ return [
     
         'KI' => 'Kiribati',
     
-        'KP' => 'Korea (Democratic People\'s Republic of)',
+        'KP' => 'Korea (Democratic People&apos;s Republic of)',
     
         'KR' => 'Korea (Republic of)',
     
@@ -335,7 +335,7 @@ return [
     
         'KG' => 'Kyrgyzstan',
     
-        'LA' => 'Lao People\'s Democratic Republic',
+        'LA' => 'Lao People&apos;s Democratic Republic',
     
         'LB' => 'Lebanon',
     
@@ -564,5 +564,7 @@ return [
         'ZM' => 'Zambia',
     
         'ZW' => 'Zimbabwe',
+    
+        'contact_us' => 'Contact us',
     
 ];

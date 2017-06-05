@@ -61,7 +61,7 @@ return [
     
         'talented_for_students' => '<strong>Für Studenten</strong> Talented Europe erhöht Ihre Chance eine Arbeit zu finden durch die Bewertung Ihrer Lehrer und ermöglicht einen Kontakt mit den Arbeitgebern in ganz Europa für ein Praktikum oder die erste Arbeitserfahrung.',
     
-        'talented_for_employers' => '<strong>Für Arbeitgeber</strong> Talented Europe verbindet Sie talentierten jungen Studenten in ganz Europa und hilft Ihnen die passende Person für Sie zu finden, der Ihren Unternehmen mit seinen speziellen Fähigkeit und Begabung zu Erfolg verhilft.',
+        'talented_for_employers' => '<strong>Für Arbeitgeber</strong> Talented Europe verbindet Sie mit talentierten jungen Studenten in ganz Europa und hilft Ihnen, die passende Person für Sie zu finden, die Ihrem Unternehmen mit seinen speziellen Fähigkeit und Begabung zum Erfolg verhilft.',
     
         'go_to_app' => 'Geh zur App',
     

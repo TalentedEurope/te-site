@@ -21,7 +21,7 @@ return [
     
         'all_fields_are_required' => 'Alle Felder müssen ausgefüllt sein',
     
-        'confirmation_email_may_take_few_minutes' => 'Sie bekommen die Bestätigungs-Mail in paar Minuten. Kontrollieren Sie Ihren Spam-ordner.',
+        'confirmation_email_may_take_few_minutes' => 'Sie bekommen die Bestätigungs-Mail in wenigen Minuten. Kontrollieren Sie ggf. auch Ihren Spam-Ordner.',
     
         'registration_complete_successfully' => 'Registrierung erfolgreich beendet.',
     

@@ -528,7 +528,7 @@ Obchodná a poradenská činnosť',
     
         'account_has_not_been_verified' => 'Účet nebol potvrdený. Účet aktivujte potvrdením vášho emailu. ',
     
-        'at' => 'at',
+        'at' => '',
     
         'remove_account_button' => 'vymazať účet.',
     
@@ -548,6 +548,8 @@ Obchodná a poradenská činnosť',
     
         'institution_hei_vet' => 'odborné vzdelanie a prax',
     
-        'insitution_hei_his' => 'Stredná škola',
+        'institution_hei_his' => 'Stredná škola',
+    
+        'required_cert_warning' => '',
     
 ];

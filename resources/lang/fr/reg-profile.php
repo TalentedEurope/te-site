@@ -12,7 +12,7 @@ return [
     
         'studies_level_8' => 'Doctorat ou équivalent',
     
-        'company_activity' => 'Domaine de l\' activité',
+        'company_activity' => 'Domaine de l&apos; activité',
     
         'company_contact_person' => 'la personne à contacter',
     
@@ -22,9 +22,9 @@ return [
     
         'company_representative' => 'le représentant légitime',
     
-        'company_what_is_talent' => 'Qu\' est-ce que pour vous le talent?',
+        'company_what_is_talent' => 'Qu&apos; est-ce que pour vous le talent?',
     
-        'institution_certificate' => 'Certificat d \'originalité',
+        'institution_certificate' => 'Certificat d &apos;originalité',
     
         'city' => 'Ville',
     
@@ -34,13 +34,13 @@ return [
     
         'institution_certificate_template_download' => 'Téléchargez le modèle',
     
-        'fiscal_id' => 'Numéro national d\'identification',
+        'fiscal_id' => 'Numéro national d&apos;identification',
     
-        'institution_hei' => 'Institution de l\' éducation supérieure',
+        'institution_hei' => 'Institution de l&apos; éducation supérieure',
     
         'institution_ufa' => 'Université, Faculté',
     
-        'insitution_his' => 'L\' école secondaire',
+        'insitution_his' => 'L&apos; école secondaire',
     
         'legal_representative' => 'Le représentant légal',
     
@@ -62,7 +62,7 @@ return [
     
         'student_experience_company' => 'La société/ les sociétés',
     
-        'student_completed_studies' => 'Le niveau d\' instruction',
+        'student_completed_studies' => 'Le niveau d&apos; instruction',
     
         'student_course' => 'Le cours',
     
@@ -78,7 +78,7 @@ return [
     
         'student_europass' => 'Europass',
     
-        'student_study_field' => 'La branche d\' études',
+        'student_study_field' => 'La branche d&apos; études',
     
         'student_study_from' => 'de',
     
@@ -130,11 +130,11 @@ return [
     
         'captcha' => 'Captcha',
     
-        'terms_of_use' => 'Je suis d\'accord avec les conditionsd\'utilisation',
+        'terms_of_use' => 'Je suis d&apos;accord avec les conditionsd&apos;utilisation',
     
-        'i_agree_with' => 'Je suis d\'accord avec ',
+        'i_agree_with' => 'Je suis d&apos;accord avec ',
     
-        'the_terms_of_use' => 'Les conditions d\'utilisation',
+        'the_terms_of_use' => 'Les conditions d&apos;utilisation',
     
         'create_account' => 'Créer un nouveau compte',
     
@@ -204,7 +204,7 @@ return [
     
         'languages-and-philological-sciences' => 'Langues et Sciences philologiques',
     
-        'communication-and-information-sciences' => 'Communication et sciences d l\'information',
+        'communication-and-information-sciences' => 'Communication et sciences d l&apos;information',
     
         'humanities' => 'Sciences humaines',
     
@@ -262,7 +262,7 @@ Désactivé. Vous ne recevrez aucun e-mail, sauf pour les annonces sur le servic
 
 Sur',
     
-        'company_logo' => 'Logo d\'entreprise',
+        'company_logo' => 'Logo d&apos;entreprise',
     
         'social_and_web' => 'Les réseaux sociaux et site Internet',
     
@@ -298,11 +298,11 @@ Sur',
     
         'my_talent' => 'Mon talent',
     
-        'referee_name' => 'Nom de l\'évaluateur',
+        'referee_name' => 'Nom de l&apos;évaluateur',
     
-        'referee_email' => 'Le mail de l\'évaluateur',
+        'referee_email' => 'Le mail de l&apos;évaluateur',
     
-        'get_your_profile_refereed' => 'Permettez - vous d\'évaluer votre profil',
+        'get_your_profile_refereed' => 'Permettez - vous d&apos;évaluer votre profil',
     
         'want_to_view_all_details_of_student' => 'Voulez-vous voir tous les détails de cet étudiant?',
     
@@ -332,7 +332,7 @@ Sur',
     
         'set_by_both_parties' => 'Fixé par les deux parties',
     
-        'set_by_referee_or_student' => 'Établi par l\' évaluateur ou l\'étudiant',
+        'set_by_referee_or_student' => 'Établi par l&apos; évaluateur ou l&apos;étudiant',
     
         'study' => 'Études',
     
@@ -348,7 +348,7 @@ Sur',
     
         'we_think_that_talent_is' => 'Nous pensons que le talent est',
     
-        'not_enough_information' => 'Pas suffisamment d\'informations',
+        'not_enough_information' => 'Pas suffisamment d&apos;informations',
     
         'fix_the_following_errors' => 'Vous devrez corriger les erreurs suivantes',
     
@@ -362,7 +362,7 @@ Sur',
     
         'remove_btn' => 'Supprimer',
     
-        'student_study_institution_name' => 'Nom de l\'établissement',
+        'student_study_institution_name' => 'Nom de l&apos;établissement',
     
         'student_study_course_studies_name' => 'Nom du cours / études',
     
@@ -370,7 +370,7 @@ Sur',
     
         'student_download_grade_card' => 'Télécharger le tableau d évaluation',
     
-        'student_study_add_more' => 'Ajouter d\'autres études',
+        'student_study_add_more' => 'Ajouter d&apos;autres études',
     
         'student_training_course_name' => 'Nom du cours / études',
     
@@ -386,7 +386,7 @@ Sur',
     
         'student_language_add' => 'Ajouter une langue',
     
-        'student_language_add_more' => 'Ajouter d\'autres langues',
+        'student_language_add_more' => 'Ajouter d&apos;autres langues',
     
         'student_work_experience_to' => 'Travail à',
     
@@ -394,7 +394,7 @@ Sur',
     
         'student_work_experience_add' => 'Ajouter une expérience de travail',
     
-        'student_work_experience_add_more' => 'Ajouter plus d\'expériences de travail',
+        'student_work_experience_add_more' => 'Ajouter plus d&apos;expériences de travail',
     
         'add_btn' => 'Ajouter',
     
@@ -404,25 +404,25 @@ Sur',
     
         'profile_readiness' => 'Préparation du profil',
     
-        'profile_readiness_explanation' => 'L\' évaluation de votre profil  donne une opinion de tiers de vous et aide à augmenter les possibilités de contact d\'une entreprise',
+        'profile_readiness_explanation' => 'L&apos; évaluation de votre profil  donne une opinion de tiers de vous et aide à augmenter les possibilités de contact d&apos;une entreprise',
     
-        'get_a_better_refeer' => 'Obtenez un meilleur outil pour améliorer votre profil et améliorer la possibilité de contact de l\'entreprise',
+        'get_a_better_refeer' => 'Obtenez un meilleur outil pour améliorer votre profil et améliorer la possibilité de contact de l&apos;entreprise',
     
         'request_is_managed_by' => 'Votre demande est gérée par',
     
-        'cant_find_your_institution' => 'Vous ne trouvez pas votre établissement? Demandez à votre évaluateur et à votre institution de rejoindre l\'Europe talentueuse',
+        'cant_find_your_institution' => 'Vous ne trouvez pas votre établissement? Demandez à votre évaluateur et à votre institution de rejoindre l&apos;Europe talentueuse',
     
-        'this_step_sends_an_email_to_your_referee' => 'Cette étape envoie un mail a votre évaluateur avec des instructions sur la façon de rejoindre Talented Europe, l\'enregistre automatiquement comme évaluateur une fois que son institution est validée  et vous ajoute à la file d\'attente évaluateur ',
+        'this_step_sends_an_email_to_your_referee' => 'Cette étape envoie un mail a votre évaluateur avec des instructions sur la façon de rejoindre Talented Europe, l&apos;enregistre automatiquement comme évaluateur une fois que son institution est validée  et vous ajoute à la file d&apos;attente évaluateur ',
     
         'send_invitation' => 'Envoyer une invitation',
     
         'profile_validated_successfully' => 'Votre profil a été validé avec succès',
     
-        'referee_said_about_you' => 'C\'est ce que votre évaluateur a dit de vous',
+        'referee_said_about_you' => 'C&apos;est ce que votre évaluateur a dit de vous',
     
         'profile_validated_denied' => 'Votre profil a été refusé',
     
-        'not_enough_data_to_do_a_refeer' => 'Nous n\'avons pas assez de données de vous pour pouvoir faire un évaluateur',
+        'not_enough_data_to_do_a_refeer' => 'Nous n&apos;avons pas assez de données de vous pour pouvoir faire un évaluateur',
     
         'progress_account_setup' => 'Configuration du compte',
     
@@ -432,11 +432,11 @@ Sur',
     
         'progress_completed' => 'Terminé',
     
-        'you_must_put_referee_email' => '<strong>S\'il vous plaît noter</strong>Vous devez mettre le courriel de l\'évaluateur, et non celui de l\'établissement',
+        'you_must_put_referee_email' => '<strong>S&apos;il vous plaît noter</strong>Vous devez mettre le courriel de l&apos;évaluateur, et non celui de l&apos;établissement',
     
-        'leave_institution' => 'Quitter l\' établissement?',
+        'leave_institution' => 'Quitter l&apos; établissement?',
     
-        'do_you_want_to_leave_institution' => 'Voulez-vous quitter l\'établissement? cela envoie les demandes de validation en attente de retour  et vous ne serez pas en mesure de valider quelqu\'un jusqu\'à ce qu\'une autre institution vous invite à un retour',
+        'do_you_want_to_leave_institution' => 'Voulez-vous quitter l&apos;établissement? cela envoie les demandes de validation en attente de retour  et vous ne serez pas en mesure de valider quelqu&apos;un jusqu&apos;à ce qu&apos;une autre institution vous invite à un retour',
     
         'leave_institution_button' => 'Oui! Quitter cette institution académique',
     
@@ -450,18 +450,18 @@ Sur',
     
         'im_here' => 'Je suis là!',
     
-        'cannot_send_more_alerts_to_this_company_today' => 'Aujourd\'hui vous ne pouvez pas envoyer plus alertes à cette société ',
+        'cannot_send_more_alerts_to_this_company_today' => 'Aujourd&apos;hui vous ne pouvez pas envoyer plus alertes à cette société ',
     
-        'tell_the_company_that_you_be_interested' => 'Dites à l\'entreprise que vous souhaitez travailler pour eux',
+        'tell_the_company_that_you_be_interested' => 'Dites à l&apos;entreprise que vous souhaitez travailler pour eux',
     
-        'alert_sent_successfully' => 'Alerte envoyé avec succès à l\'entreprise ',
+        'alert_sent_successfully' => 'Alerte envoyé avec succès à l&apos;entreprise ',
     
         'you_have_already_sent_an_alert_to_this_company' => 'Vous avez déjà envoyé une alerte à cette entreprise',
     
         'no_matches' => 'Pas de correspondance
 ',
     
-        'find_your_academic_institution' => 'Trouvez votre établissement d\'enseignement',
+        'find_your_academic_institution' => 'Trouvez votre établissement d&apos;enseignement',
     
         'choose_referee' => 'Choisir un évaluateur',
     
@@ -469,43 +469,43 @@ Sur',
     
         'any_referee' => 'Tout évaluateur',
     
-        'institution_type' => 'Type d\'établissement',
+        'institution_type' => 'Type d&apos;établissement',
     
-        'complete_the_registration' => 'Complétez l\'enregistrement,en indiquant les informations suivantes',
+        'complete_the_registration' => 'Complétez l&apos;enregistrement,en indiquant les informations suivantes',
     
         'changes_saved_successfully' => 'Modifications enregistrées avec succès',
     
-        'warning_some_fields_has_errors' => 'Attention: Certains champs ne pouvaient pas être sauvés parce qu\'il y avait des erreurs. Vérifiez chaque champ pour voir les questions.',
+        'warning_some_fields_has_errors' => 'Attention: Certains champs ne pouvaient pas être sauvés parce qu&apos;il y avait des erreurs. Vérifiez chaque champ pour voir les questions.',
     
-        'successfully_requested_validation_request' => 'Une demande d\'évaluation envoyé avec succès',
+        'successfully_requested_validation_request' => 'Une demande d&apos;évaluation envoyé avec succès',
     
         'invitation_sent_successfully' => 'Invitation envoyée avec succès',
     
-        'referee_is_part_of_institution' => 'L\'évaluateur fait partie de% s mettez- vous en contact avec lui pour demander un changement d\'institution si nécessaire',
+        'referee_is_part_of_institution' => 'L&apos;évaluateur fait partie de% s mettez- vous en contact avec lui pour demander un changement d&apos;institution si nécessaire',
     
-        'referee_isnt_part_of_any_institution' => 'L\'évaluateur ne fait partie d\'aucune institution. Demandez-lui de vous inviter par un',
+        'referee_isnt_part_of_any_institution' => 'L&apos;évaluateur ne fait partie d&apos;aucune institution. Demandez-lui de vous inviter par un',
     
-        'this_email_user_cannot_be_a_referee' => 'Cette adresse électronique est enregistrée auprès d\'un utilisateur qui ne peut être évaluateur',
+        'this_email_user_cannot_be_a_referee' => 'Cette adresse électronique est enregistrée auprès d&apos;un utilisateur qui ne peut être évaluateur',
     
         'field' => 'Champ',
     
         'your_request_was_created' => 'Votre demande a été pris en compte',
     
-        'if_request_hasnt_been_completed' => 'Si votre demande n\'a pas été remplie sou %s jours, vous pourrez en créer une nouvelle',
+        'if_request_hasnt_been_completed' => 'Si votre demande n&apos;a pas été remplie sou %s jours, vous pourrez en créer une nouvelle',
     
-        'you_havent_set_any_personal_skills' => 'Vous n\'avez pas encore renseigné de compétences personnelles. Si vous sollicitez un évaluateur, vous ne pourrez plus les renseigner.',
+        'you_havent_set_any_personal_skills' => 'Vous n&apos;avez pas encore renseigné de compétences personnelles. Si vous sollicitez un évaluateur, vous ne pourrez plus les renseigner.',
     
         'to_see_more_details' => 'Pour voir plus de détails, vous devez vous créer un compte',
     
-        'study_institution_name' => 'Nom de l\'institution',
+        'study_institution_name' => 'Nom de l&apos;institution',
     
         'study_name' => 'Intitulé du diplôme?',
     
         'study_level' => 'Niveau du diplôme',
     
-        'study_field' => 'Champ d\'étude',
+        'study_field' => 'Champ d&apos;étude',
     
-        'study_certificate' => 'Certificat d\'étude',
+        'study_certificate' => 'Certificat d&apos;étude',
     
         'study_gradecard' => 'Étudier gradecard',
     
@@ -523,18 +523,18 @@ Sur',
     
         'work_experience_from' => 'Expérience de travail de',
     
-        'work_experience_until' => 'Expérience professionnelle jusqu\'à
+        'work_experience_until' => 'Expérience professionnelle jusqu&apos;à
 ',
     
-        'work_experience_position' => 'Poste d\'expérience de travail',
+        'work_experience_position' => 'Poste d&apos;expérience de travail',
     
         'about_me' => 'À propos de moi',
     
         'social_networks' => 'Réseaux sociaux',
     
-        'account_activation_successful' => 'Votre compte vient d\'être activé',
+        'account_activation_successful' => 'Votre compte vient d&apos;être activé',
     
-        'account_has_not_been_verified' => 'Votre compte n\'a pas été validé. S\'il vous plaît, vérifiez dans votre boite mail si un e-mail avous a été envoyé pour activer votre compte',
+        'account_has_not_been_verified' => 'Votre compte n&apos;a pas été validé. S&apos;il vous plaît, vérifiez dans votre boite mail si un e-mail avous a été envoyé pour activer votre compte',
     
         'at' => 'à',
     
@@ -548,7 +548,7 @@ Sur',
     
         'refereed_students' => 'Etudiants référencés',
     
-        'no_refereed_students' => 'Il n\'y a pas d\'étudiants référencés',
+        'no_refereed_students' => 'Il n&apos;y a pas d&apos;étudiants référencés',
     
         'view_contact_details' => 'Voir détails du contact',
     
@@ -556,6 +556,8 @@ Sur',
     
         'institution_hei_vet' => 'La formation professionnelle et les activités professionnelles',
     
-        'insitution_hei_his' => 'L\' école secondaire',
+        'institution_hei_his' => 'L&apos; école secondaire',
+    
+        'required_cert_warning' => '',
     
 ];

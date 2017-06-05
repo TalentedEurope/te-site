@@ -13,14 +13,14 @@ return [
     
         'no_students' => 'Aucuns étudiants',
     
-        'confirm_validation' => 'Confirmer l\'évaluation',
+        'confirm_validation' => 'Confirmer l&apos;évaluation',
     
-        'are_you_sure_you_want_to_finish_refereeing' => 'Voulez-vous vraiment terminer l\'dévaluation de cet étudiant?',
+        'are_you_sure_you_want_to_finish_refereeing' => 'Voulez-vous vraiment terminer l&apos;dévaluation de cet étudiant?',
     
         'reason' => 'Motif',
     
-        'criteria' => 'L\'étudiant ne remplit pas les critères',
+        'criteria' => 'L&apos;étudiant ne remplit pas les critères',
     
-        'nostudent' => 'L\'étudiant n\'a pas étudié dans cette institution',
+        'nostudent' => 'L&apos;étudiant n&apos;a pas étudié dans cette institution',
     
 ];
