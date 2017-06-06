@@ -83,7 +83,7 @@ return [
     
         'home' => 'Home page',
     
-        'blog' => 'Blog',
+        'blog' => 'Progetto',
     
         'cookies' => 'Informazioni sui cookies',
     
@@ -565,6 +565,6 @@ return [
     
         'ZW' => 'Zimbabwe',
     
-        'contact_us' => '',
+        'contact_us' => 'Contattaci',
     
 ];

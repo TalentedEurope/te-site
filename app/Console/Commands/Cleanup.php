@@ -52,7 +52,7 @@ class Cleanup extends Command
             $f->where('valid', '!=', 'validated');
         })->get();
 
-        $alerts = Alert::get();
+        $alerts = Alert::groupBy('target_id')->get();
         foreach ($validators as $val) {
             $val->user->notify(new ValidationsPending($val->user));
         }

@@ -19,6 +19,7 @@ class ValidationsPending extends Notification
     public function __construct(User $user)
     {
         $this->user = $user;
+        \App\Http\Middleware\Language::setMailLang($user);
     }
 
     /**

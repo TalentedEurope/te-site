@@ -550,6 +550,6 @@ Obchodná a poradenská činnosť',
     
         'institution_hei_his' => 'Stredná škola',
     
-        'required_cert_warning' => '',
+        'required_cert_warning' => 'Poznámka: ak nechcete nahrať certifikát pravosti bude orgán na zozname soudcování inštitúcií neobjaví',
     
 ];
