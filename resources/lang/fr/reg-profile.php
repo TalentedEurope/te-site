@@ -558,6 +558,6 @@ Sur',
     
         'institution_hei_his' => 'L&apos; école secondaire',
     
-        'required_cert_warning' => '',
+        'required_cert_warning' => 'S&apos;il vous plaît noter: si vous ne téléchargez pas le certificat d&apos;authenticité de l&apos;institution ne sera pas apparaître sur la liste des institutions d&apos;arbitrage',
     
 ];

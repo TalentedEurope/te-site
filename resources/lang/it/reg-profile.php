@@ -549,6 +549,6 @@ return [
     
         'institution_hei_his' => 'Scuola secondaria',
     
-        'required_cert_warning' => '',
+        'required_cert_warning' => 'Si prega di notare: se non si carica il certificato di autenticità dell&apos;istituto non appare nella lista delle istituzioni arbitrali',
     
 ];

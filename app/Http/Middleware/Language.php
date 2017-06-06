@@ -9,6 +9,7 @@ use App;
 use Illuminate\Routing\Redirector;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Application;
+use Auth;
 
 class Language
 {
@@ -17,6 +18,15 @@ class Language
         $this->app = $app;
         $this->redirector = $redirector;
         $this->request = $request;
+    }
+
+    public static function setMailLang($user)
+    {
+        $locale = env('DEFAULT_LOCALE', 'en');
+        if ($user->app_lang != "") {
+            $locale = $user->app_lang;
+        }
+        App::setLocale($locale);
     }
 
     /**
@@ -50,6 +60,14 @@ class Language
         }
 
         App::setLocale($locale);
+
+        if (Auth::User()) {
+            $user = Auth::user();
+            if ($user->app_lang != $locale) {
+                $user->app_lang = $locale;
+                $user->save();
+            }
+        }
 
         if ($request->hasCookie('locale') && $cookieLang == $locale) {
             return $next($request);

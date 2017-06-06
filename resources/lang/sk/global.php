@@ -83,7 +83,7 @@ return [
     
         'home' => 'Domovská stránka',
     
-        'blog' => 'Blog',
+        'blog' => 'projekt',
     
         'cookies' => 'Informácie o cookies',
     
@@ -565,6 +565,6 @@ return [
     
         'ZW' => 'Zimbabve',
     
-        'contact_us' => '',
+        'contact_us' => 'kontaktieren Sie uns',
     
 ];

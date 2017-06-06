@@ -65,4 +65,12 @@ return [
     
         'validationsPending_line_3' => 'Please click the following button to log in and see your panel',
     
+        'disclaimer' => '<strong>DISCLAIMER</strong>: This message is intended exclusively for its address and may contain information that is <strong>CONFIDENTIAL</strong>, and protected by professional privilege. If you are not the intended recipient you are hereby notified that any dissemination, copy or disclosure of this communication is strictly prohibited by law. If this message has been received in error, please immediately notify us via e-mail at ( %s ) and delete it.',
+    
+        'hello' => 'Hello!',
+    
+        'regards' => 'Regards',
+    
+        'disclaimer_plain' => 'DISCLAIMER: This message is intended exclusively for its address and may contain information that is CONFIDENTIAL, and protected by professional privilege. If you are not the intended recipient you are hereby notified that any dissemination, copy or disclosure of this communication is strictly prohibited by law. If this message has been received in error, please immediately notify us via e-mail to %s and delete it.&apos;',
+    
 ];

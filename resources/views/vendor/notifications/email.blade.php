@@ -90,7 +90,7 @@ $style = [
                                                 @if ($level == 'error')
                                                     Whoops!
                                                 @else
-                                                    Hello!
+                                                    {{ trans('email.hello') }}
                                                 @endif
                                             @endif
                                         </h1>
@@ -98,7 +98,7 @@ $style = [
                                         <!-- Intro -->
                                         @foreach ($introLines as $line)
                                             <p style="{{ $style['paragraph'] }}">
-                                                {{ $line }}
+                                                {!! $line !!}
                                             </p>
                                         @endforeach
 
@@ -140,7 +140,7 @@ $style = [
 
                                         <!-- Salutation -->
                                         <p style="{{ $style['paragraph'] }}">
-                                            Regards,<br>{{ config('app.name') }}
+                                            {{ trans('email.regards') }},<br>{{ config('app.name') }}
                                         </p>
 
                                         <!-- Sub Copy -->
@@ -175,7 +175,7 @@ $style = [
                                 <tr>
                                     <td style="{{ $fontFamily }} {{ $style['email-footer_cell'] }}">
                                         <p style="{{ $style['paragraph-sub'] }}">
-                                            <strong>DISCLAIMER</strong>: This message is intended exclusively for its address and may contain information that is <strong>CONFIDENTIAL</strong>, and protected by professional privilege. If you are not the intended recipient you are hereby notified that any dissemination, copy or disclosure of this communication is strictly prohibited by law. If this message has been received in error, please immediately notify us via e-mail at {{ env('PUBLIC_MAIL_ADDRESS') }}  and delete it.
+                                            {!! sprintf(trans('email.disclaimer'), env('PUBLIC_MAIL_ADDRESS')) !!}
                                         </p>
                                     </td>
                                 </tr>

@@ -549,6 +549,6 @@ return [
     
         'institution_hei_his' => 'Mittelschule',
     
-        'required_cert_warning' => '',
+        'required_cert_warning' => 'Bitte beachten Sie: Wenn Sie das Zertifikat nicht laden die Institution nicht auf der Liste der Schiedsrichter Institutionen erscheinen',
     
 ];
