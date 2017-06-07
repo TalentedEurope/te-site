@@ -112,6 +112,7 @@
           <li><a href="http://project.talentedeurope.eu" target="_blank">{!! trans('global.blog') !!}</a></li>
           <li><a href="{{ url('/cookies') }}">{!! trans('global.cookies') !!}</a></li>
           <li><a href="{{ url('/privacy-policy') }}">{!! trans('global.privacy_policy') !!}</a></li>
+          <li><a href="{{ url('/faq') }}">{!! trans('global.faq_menu') !!}</a></li>
           <li><a href="mailto:{{ env('PUBLIC_MAIL_ADDRESS','info@talentedeurope.org') }}">{!! trans('global.contact_us') !!}</a></li>
         </ul>
         <ul class="navigation">

@@ -477,15 +477,15 @@ return [
     
         'referee_isnt_part_of_any_institution' => 'Der Gutachter ist kein Mitglied einer Institution. Bitten Sie ihn, dass er sich von einer Institution einladen lässt. ',
     
-        'this_email_user_cannot_be_a_referee' => 'Unter dieser E-Mail Adresse ist eine Nutzer registriert, der kein Gutachter seine kann.',
+        'this_email_user_cannot_be_a_referee' => 'Unter dieser E-Mail Adresse ist ein Nutzer registriert, der kein Gutachter sein kann.',
     
         'field' => 'Feld',
     
         'your_request_was_created' => 'Ihre Anfrage wurde erstellt %s',
     
-        'if_request_hasnt_been_completed' => 'Fall dei Anfragen nicht bis %s Tage beendet wurde, können Sie eine neue Anfrage erstellen.',
+        'if_request_hasnt_been_completed' => 'Falls die Anfrage nicht innerhalb von %s Tagen vervollständigt wurde, können Sie eine neue Anfrage erstellen.',
     
-        'you_havent_set_any_personal_skills' => 'Sie haben keine persönlichen Fähigkeiten angegeben. Wenn Sie die Anforderung senden, können Sie diese nicht bearbeiten.',
+        'you_havent_set_any_personal_skills' => 'Sie haben keine persönlichen Fähigkeiten angegeben. Wenn Sie die Validierung anfordern, können Sie diese nicht bearbeiten.',
     
         'to_see_more_details' => 'Um mehr Details zu sehen, müssen Sie registriert sein.',
     
@@ -497,7 +497,7 @@ return [
     
         'study_field' => 'Studienfach',
     
-        'study_certificate' => 'Stdueinzertifikat',
+        'study_certificate' => 'Studienzertifikat',
     
         'study_gradecard' => 'Tabelle der Studienbewertung',
     
