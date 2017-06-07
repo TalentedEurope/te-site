@@ -203,7 +203,7 @@ return [
     
         'CF' => 'Zentralafrikanische Republik',
     
-        'TD' => 'Chad',
+        'TD' => 'Tschad',
     
         'CL' => 'Chile',
     
@@ -319,7 +319,7 @@ return [
     
         'JE' => 'Jersey',
     
-        'JO' => 'Jordan',
+        'JO' => 'Jordanien',
     
         'KZ' => 'Kazachstan',
     
@@ -405,7 +405,7 @@ return [
     
         'NE' => 'Niger',
     
-        'NG' => 'Nigerien',
+        'NG' => 'Nigeria',
     
         'NU' => 'Niue',
     
@@ -421,7 +421,7 @@ return [
     
         'PW' => 'Palau',
     
-        'PS' => 'Staat Palästina',
+        'PS' => 'Palästina',
     
         'PA' => 'Panama',
     
@@ -481,7 +481,7 @@ return [
     
         'SB' => 'Salomonen',
     
-        'SO' => 'Somalien',
+        'SO' => 'Somalia',
     
         'ZA' => 'Südafrika',
     
@@ -566,5 +566,9 @@ return [
         'ZW' => 'Zimbabwe',
     
         'contact_us' => 'kontaktieren Sie uns',
+    
+        'faq' => 'Häufig gestellte Fragen',
+    
+        'faq_menu' => 'FAQ',
     
 ];

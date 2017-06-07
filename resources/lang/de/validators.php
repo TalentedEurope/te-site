@@ -87,13 +87,13 @@ return [
     
         'removing' => 'Wird gelöscht',
     
-        'validation_was_removed' => 'Validierung wurde entfernt, weil Sie bestätigt haben, dass %s keine Studenten aus dieser Institution waren.',
+        'validation_was_removed' => 'Validierung wurde entfernt, weil Sie bestätigt haben, dass %s kein Student aus dieser Institution war.',
     
-        'validation_complete' => '%s validierung beendet',
+        'validation_complete' => '%s Validierung beendet',
     
-        'cannot_invite' => 'Kann nicht eingeladen werden, die E-Mail ist entweder unter einen anderen User-Typ registriert, oder er hat eine wartende Einladung von dieser Institution.',
+        'cannot_invite' => 'Kann nicht eingeladen werden, die E-Mail ist entweder unter einen anderen User-Typ registriert, oder er hat bereits eine Einladung von dieser Institution erhalten.',
     
-        'send_invitation_to' => 'Einladung gesendet %s',
+        'send_invitation_to' => 'Einladung an %s gesendet ',
     
         'cannot_find_user' => 'Der User kann nicht gefunden werden.',
     

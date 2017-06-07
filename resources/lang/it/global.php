@@ -567,4 +567,8 @@ return [
     
         'contact_us' => 'Contattaci',
     
+        'faq' => 'Domande frequenti',
+    
+        'faq_menu' => 'FAQ',
+    
 ];

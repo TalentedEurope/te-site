@@ -568,4 +568,8 @@ return [
     
         'contact_us' => 'contattaci',
     
+        'faq' => 'Questions fréquemment posées',
+    
+        'faq_menu' => 'FAQ',
+    
 ];
