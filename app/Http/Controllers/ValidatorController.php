@@ -255,6 +255,7 @@ class ValidatorController extends Controller
             $validator->user()->save($user);
             Bouncer::assign('validator')->to($user);
             $validator->institution_id = $inv->institution_id;
+            $validator->enabled = 1;
             $validator->save();
             $inv->delete();
 

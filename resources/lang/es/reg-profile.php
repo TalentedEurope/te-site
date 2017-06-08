@@ -547,6 +547,8 @@ return [
     
         'institution_hei_vet' => 'Formación profesional y prácticas',
     
-        'insitution_hei_his' => 'Escuela secundaria',
+        'institution_hei_his' => 'Escuela secundaria',
+    
+        'required_cert_warning' => 'Tenga en cuenta: si no cargar el certificado de autenticidad de la institución no aparecerá en la lista de instituciones arbitrales',
     
 ];

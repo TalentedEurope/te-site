@@ -83,7 +83,7 @@ return [
     
         'home' => 'Home page',
     
-        'blog' => 'Blog',
+        'blog' => 'Progetto',
     
         'cookies' => 'Informazioni sui cookies',
     
@@ -91,7 +91,7 @@ return [
     
         'footer_partners' => 'Partners',
     
-        'cookie_text' => 'Questo sito web utilizza i cookie per garantire il corretto funzionamento delle procedure e migliorare l\'esperienza di uso delle applicazioni online. Continuando la navigazione sul sito, si acconsente all\'utilizzo dei cookie. Per sapere di più sull‘uso dei cookie e sulla loro gestione, leggi <a href="/privacy-policy">cookie notice</a>',
+        'cookie_text' => 'Questo sito web utilizza i cookie per garantire il corretto funzionamento delle procedure e migliorare l&apos;esperienza di uso delle applicazioni online. Continuando la navigazione sul sito, si acconsente all&apos;utilizzo dei cookie. Per sapere di più sull‘uso dei cookie e sulla loro gestione, leggi <a href="/privacy-policy">cookie notice</a>',
     
         'cookie_accept' => 'chiudere',
     
@@ -183,7 +183,7 @@ return [
     
         'BR' => 'Brasile',
     
-        'IO' => 'Territorio Britannico dell\'Oceano Indiano',
+        'IO' => 'Territorio Britannico dell&apos;Oceano Indiano',
     
         'BN' => 'Brunei',
     
@@ -225,7 +225,7 @@ return [
     
         'CR' => 'Costa Rica',
     
-        'CI' => 'Costa d\'Avorio',
+        'CI' => 'Costa d&apos;Avorio',
     
         'CU' => 'Cuba',
     
@@ -447,7 +447,7 @@ return [
     
         'BL' => 'Saint-Barthélemy',
     
-        'SH' => 'Sant\'Elena, Ascensione e Tristan da Cunha',
+        'SH' => 'Sant&apos;Elena, Ascensione e Tristan da Cunha',
     
         'KN' => 'Saint Kitts e Nevis',
     
@@ -537,7 +537,7 @@ return [
     
         'AE' => 'Emirati Arabi Uniti',
     
-        'US' => 'Sati Uniti d\'America',
+        'US' => 'Sati Uniti d&apos;America',
     
         'UM' => 'Isole minori esterne degli Stati Uniti',
     
@@ -564,5 +564,11 @@ return [
         'ZM' => 'Zambia',
     
         'ZW' => 'Zimbabwe',
+    
+        'contact_us' => 'Contattaci',
+    
+        'faq' => 'Domande frequenti',
+    
+        'faq_menu' => 'FAQ',
     
 ];

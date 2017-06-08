@@ -77,6 +77,12 @@
                 <input type="file" id="image" name="image" accept="image/*">
               </div>
 
+              @if (!$institution->certificate)
+              <div class="alert alert-info">
+                {{ trans('reg-profile.required_cert_warning') }}
+              </div>
+              @endif
+
               <file-form code="certificate" label="{!! trans('reg-profile.institution_certificate') !!}" download-text="{!! trans('reg-profile.student_download_certificate') !!}" has-file="{{ $institution->certificate }}"
                   file-url="{{ URL::to('/profile/certificate/' . $user->id . '/institution') }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></file-form>
 

@@ -379,7 +379,7 @@ return [
     
         'student_language_add' => 'Sprache hinzufügen',
     
-        'student_language_add_more' => 'andere Sprachen hinzufügen',
+        'student_language_add_more' => 'weitere Sprachen hinzufügen',
     
         'student_work_experience_to' => 'Arbeit von',
     
@@ -387,7 +387,7 @@ return [
     
         'student_work_experience_add' => 'Arbeitserfahrung hinzufügen',
     
-        'student_work_experience_add_more' => 'andere Arbeitserfahrungen hinzufügen',
+        'student_work_experience_add_more' => 'weitere Arbeitserfahrungen hinzufügen',
     
         'add_btn' => 'hinzufügen',
     
@@ -395,17 +395,17 @@ return [
     
         'student_professional_skills_add' => 'Professionelle Fähigkeit hinzufügen',
     
-        'profile_readiness' => 'Bereitschaft des Profils',
+        'profile_readiness' => 'Vorbereitung des Profils',
     
-        'profile_readiness_explanation' => 'Die Bewertung des Profil erlaubt es der dritten Person sich über Sie eine Meinung zu bilden und Sie erhöht die Möglichkeit, dass ein Unternehmen mit Ihnen uin Kontakt kommt.',
+        'profile_readiness_explanation' => 'Die Bewertung des Profil erlaubt es Anderen sich über Sie eine Meinung zu bilden und erhöht die Möglichkeit, dass ein Unternehmen Sie kontaktiert.',
     
-        'get_a_better_refeer' => 'Bekommen Sie eine bessere Bewertung Ihres Profils, das man an Ihrer Bereitschaft sieht und der besseren Kontaktnahme seitens des Unternehmen sieht.',
+        'get_a_better_refeer' => 'Bekommen Sie eine bessere Bewertung Ihres Profils. Das verbessert Ihr Profil und erhöht die Möglichkeit, dass ein Unternehmen Sie kontaktiert.',
     
-        'request_is_managed_by' => 'Ihre Anforderung wird bearbeitet.',
+        'request_is_managed_by' => 'Ihre Anfrage wird bearbeitet.',
     
-        'cant_find_your_institution' => 'Können Sie Ihre Institution nicht finden? Fragen Sie Ihren Gutachter und Institution um bei Talented Europe mitzumachen.',
+        'cant_find_your_institution' => 'Können Sie Ihre Institution nicht finden? Bitten Sie Ihren Gutachter und Ihre Institution, bei Talented Europe mitzumachen.',
     
-        'this_step_sends_an_email_to_your_referee' => 'In diesem Schritt bekommt Ihr Gutachter eine E-Mail mit der Anleitung bei Talented Europe mitzumachen.Der Gutachter wird automatisch registriert, gleich nach dem seine Institution bei uns mitmacht uns Sie landen auf der Warteliste für die Bewertung. ',
+        'this_step_sends_an_email_to_your_referee' => 'In diesem Schritt bekommt Ihr Gutachter eine E-Mail mit der Anleitung bei Talented Europe mitzumachen.Der Gutachter wird automatisch registriert nachdem seine Institution bei uns mitmacht. Ihre Bewertungsanfrage wird automatisch hinzugefügt.',
     
         'send_invitation' => 'Einladung senden.',
     
@@ -425,7 +425,7 @@ return [
     
         'progress_completed' => 'Beendet',
     
-        'you_must_put_referee_email' => '<strong>Achtung:</strong>.Geben Sie die E-Mail des Begutachters.',
+        'you_must_put_referee_email' => '<strong>Achtung:</strong>.Geben Sie die E-Mail des Begutachters an, nicht die der Institution.',
     
         'leave_institution' => 'Die Insitution verlassen?',
     
@@ -441,21 +441,21 @@ return [
     
         'continue_without_saving' => 'Weitermachen ohne Speichern.',
     
-        'im_here' => 'Bin hier!',
+        'im_here' => 'Ich bin hier!',
     
-        'cannot_send_more_alerts_to_this_company_today' => 'Heute können Sie keine Benachrichtigungen an dieses Unternehmen senden.',
+        'cannot_send_more_alerts_to_this_company_today' => 'Sie können keine weiteren Benachrichtigungen an dieses Unternehmen senden.',
     
-        'tell_the_company_that_you_be_interested' => 'Sagen Sie dem Unternehmen, dass Sie Interesse haben, bei Ihnen zu arbeiten.',
+        'tell_the_company_that_you_be_interested' => 'Sagen Sie dem Unternehmen, dass Sie Interesse haben, bei ihm zu arbeiten.',
     
         'alert_sent_successfully' => 'Die Benachrichtigung wurde erfolgreich an das Unternehmen gesendet.',
     
-        'you_have_already_sent_an_alert_to_this_company' => 'Diesem Unternehmenhaben Sie bereits eine Benachrichtigung gesendet.',
+        'you_have_already_sent_an_alert_to_this_company' => 'Diesem Unternehmen haben Sie bereits eine Benachrichtigung gesendet.',
     
         'no_matches' => 'Kein Übereinstimmung',
     
         'find_your_academic_institution' => 'Finden Sie Ihre akademische Institution',
     
-        'choose_referee' => 'Wählen SIe den Gutachter',
+        'choose_referee' => 'Wählen Sie den Gutachter',
     
         'refer_request' => 'Antrag zur Begutachtung',
     
@@ -463,11 +463,11 @@ return [
     
         'institution_type' => 'Typ der Institution',
     
-        'complete_the_registration' => 'Beenden Sie die Registrierung in dem Sie folgende Informationen anführen.',
+        'complete_the_registration' => 'Beenden Sie die Registrierung, indem Sie folgende Informationen anführen.',
     
-        'changes_saved_successfully' => 'Die Änderungenwurden erfolgreich gespeichert.',
+        'changes_saved_successfully' => 'Die Änderungen wurden erfolgreich gespeichert.',
     
-        'warning_some_fields_has_errors' => 'Vorsicht: Manche Angaben wurden wegen Fehler nicht beendet. Kontrollieren Sie gründlich jede Angabe.',
+        'warning_some_fields_has_errors' => 'Vorsicht: Manche Angaben wurden wegen Fehlern nicht beendet. Kontrollieren Sie gründlich jede Angabe.',
     
         'successfully_requested_validation_request' => 'Erfolgreich versendeter Antrag zur Bewertung.',
     
@@ -475,17 +475,17 @@ return [
     
         'referee_is_part_of_institution' => 'Der Gutachter ist ein Mitglied %s, treten Sie mit Ihn in Kontakt wegen einer möglichen Änderung der Institution.',
     
-        'referee_isnt_part_of_any_institution' => 'Der Gutachter ist kein Mitglied einer Institution. Bitte forden Sie an, dass er sich von einer Institution einladen lässt. ',
+        'referee_isnt_part_of_any_institution' => 'Der Gutachter ist kein Mitglied einer Institution. Bitten Sie ihn, dass er sich von einer Institution einladen lässt. ',
     
-        'this_email_user_cannot_be_a_referee' => 'Unter dieser E-Mail Adresse ist eine Nutzer registriert, der kein Gutachter seine kann.',
+        'this_email_user_cannot_be_a_referee' => 'Unter dieser E-Mail Adresse ist ein Nutzer registriert, der kein Gutachter sein kann.',
     
         'field' => 'Feld',
     
         'your_request_was_created' => 'Ihre Anfrage wurde erstellt %s',
     
-        'if_request_hasnt_been_completed' => 'Fall dei Anfragen nicht bis %s Tage beendet wurde, können Sie eine neue Anfrage erstellen.',
+        'if_request_hasnt_been_completed' => 'Falls die Anfrage nicht innerhalb von %s Tagen vervollständigt wurde, können Sie eine neue Anfrage erstellen.',
     
-        'you_havent_set_any_personal_skills' => 'Sie haben keine persönlichen Fähigkeiten angegeben. Wenn Sie die Anforderung senden, können Sie diese nicht bearbeiten.',
+        'you_havent_set_any_personal_skills' => 'Sie haben keine persönlichen Fähigkeiten angegeben. Wenn Sie die Validierung anfordern, können Sie diese nicht bearbeiten.',
     
         'to_see_more_details' => 'Um mehr Details zu sehen, müssen Sie registriert sein.',
     
@@ -497,7 +497,7 @@ return [
     
         'study_field' => 'Studienfach',
     
-        'study_certificate' => 'Stdueinzertifikat',
+        'study_certificate' => 'Studienzertifikat',
     
         'study_gradecard' => 'Tabelle der Studienbewertung',
     
@@ -547,6 +547,8 @@ return [
     
         'institution_hei_vet' => 'Fachausbildung und Praktikum',
     
-        'insitution_hei_his' => 'Mittelschule',
+        'institution_hei_his' => 'Mittelschule',
+    
+        'required_cert_warning' => 'Bitte beachten Sie: Wenn Sie das Zertifikat nicht laden die Institution nicht auf der Liste der Schiedsrichter Institutionen erscheinen',
     
 ];

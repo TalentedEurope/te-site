@@ -109,7 +109,7 @@ return [
     
         'student_study_scanned_document' => 'Scanned document',
     
-        'student_validator' => 'If you don\'t specify a referee it will be automatically asigned',
+        'student_validator' => 'If you don&apos;t specify a referee it will be automatically asigned',
     
         'surname' => 'Surname',
     
@@ -251,9 +251,9 @@ return [
     
         'notifications' => 'Notifications',
     
-        'notifications_enabled' => 'Enabled. You\'ll receive emails once a day if a student wants to get in contact with you',
+        'notifications_enabled' => 'Enabled. You&apos;ll receive emails once a day if a student wants to get in contact with you',
     
-        'notifications_disabled' => 'Disabled. You won\'t receive any emails, except for announcements about the service',
+        'notifications_disabled' => 'Disabled. You won&apos;t receive any emails, except for announcements about the service',
     
         'about' => 'About',
     
@@ -337,17 +337,17 @@ return [
     
         'we_are_in' => 'We are in',
     
-        'we_are_looking_for_people_skilled_in' => 'We\'re looking for people skilled in',
+        'we_are_looking_for_people_skilled_in' => 'We&apos;re looking for people skilled in',
     
         'we_think_that_talent_is' => 'We think that talent is',
     
         'not_enough_information' => 'Not enough information',
     
-        'fix_the_following_errors' => 'You\'ll need to fix the following errors',
+        'fix_the_following_errors' => 'You&apos;ll need to fix the following errors',
     
         'click_on_button_to_fill_required_fields' => 'Please click the following button to fill the required fields.',
     
-        'institution_fix_the_following_errors' => 'You\'ll need to fix the following errors or your referees won\'t be able to validate profiles',
+        'institution_fix_the_following_errors' => 'You&apos;ll need to fix the following errors or your referees won&apos;t be able to validate profiles',
     
         'my_institution' => 'My Institution',
     
@@ -403,7 +403,7 @@ return [
     
         'request_is_managed_by' => 'Your request is being managed by',
     
-        'cant_find_your_institution' => 'Can\'t find your institution? ask your referee and institution to join Talented Europe',
+        'cant_find_your_institution' => 'Can&apos;t find your institution? ask your referee and institution to join Talented Europe',
     
         'this_step_sends_an_email_to_your_referee' => 'This step sends an email to your referee with instructions on how to join Talented Europe, automatically registers him as referee once his institution joins, and adds you to the refeeral queue',
     
@@ -415,7 +415,7 @@ return [
     
         'profile_validated_denied' => 'Your profile was denied',
     
-        'not_enough_data_to_do_a_refeer' => 'We don\'t have enough data from you to be able to do a refeer.',
+        'not_enough_data_to_do_a_refeer' => 'We don&apos;t have enough data from you to be able to do a refeer.',
     
         'progress_account_setup' => 'Account setup',
     
@@ -429,19 +429,19 @@ return [
     
         'leave_institution' => 'Leave institution?',
     
-        'do_you_want_to_leave_institution' => 'Do you want to leave the institution? this will send the pending validation requests back to it, and you won\'t be able to validate anyone until another institution invites you back',
+        'do_you_want_to_leave_institution' => 'Do you want to leave the institution? this will send the pending validation requests back to it, and you won&apos;t be able to validate anyone until another institution invites you back',
     
         'leave_institution_button' => 'Yes! Leave this academic institution',
     
         'your_profile_is_empty' => 'Your profile is empty!',
     
-        'tab_changes_not_saved' => 'Tab changes haven\'t been saved, you may lose some data',
+        'tab_changes_not_saved' => 'Tab changes haven&apos;t been saved, you may lose some data',
     
         'save_changes' => 'Save changes',
     
         'continue_without_saving' => 'Continue without saving',
     
-        'im_here' => 'I\'m here!',
+        'im_here' => 'I&apos;m here!',
     
         'cannot_send_more_alerts_to_this_company_today' => 'You cannot send more alerts to this company today',
     
@@ -467,7 +467,7 @@ return [
     
         'changes_saved_successfully' => 'Changes saved successfully',
     
-        'warning_some_fields_has_errors' => 'Warning: Some fields couldn\'t be saved because there were errors, check each field to see the issues',
+        'warning_some_fields_has_errors' => 'Warning: Some fields couldn&apos;t be saved because there were errors, check each field to see the issues',
     
         'successfully_requested_validation_request' => 'Successfully requested refereence request',
     
@@ -475,7 +475,7 @@ return [
     
         'referee_is_part_of_institution' => 'Referee is part of %s get in contact with him to ask a institution change if required',
     
-        'referee_isnt_part_of_any_institution' => 'Referee isn\'t part of any institution. Please ask him to get invited by one',
+        'referee_isnt_part_of_any_institution' => 'Referee isn&apos;t part of any institution. Please ask him to get invited by one',
     
         'this_email_user_cannot_be_a_referee' => 'This email address is registered to an user that cannot be a referee',
     
@@ -483,9 +483,9 @@ return [
     
         'your_request_was_created' => 'Your request was created %s',
     
-        'if_request_hasnt_been_completed' => 'If your request hasn\'t been completed in %s days you will be able to create a new request',
+        'if_request_hasnt_been_completed' => 'If your request hasn&apos;t been completed in %s days you will be able to create a new request',
     
-        'you_havent_set_any_personal_skills' => 'You haven\'t set any personal skills yet. If you request referee you cannot modify them.',
+        'you_havent_set_any_personal_skills' => 'You haven&apos;t set any personal skills yet. If you request referee you cannot modify them.',
     
         'to_see_more_details' => 'To see more details you must be registered',
     
@@ -531,7 +531,7 @@ return [
     
         'remove_account_button' => 'Delete account',
     
-        'remove_account_confirm' => 'Are you really sure that you wish delete your account? It\'s going to remove all your information',
+        'remove_account_confirm' => 'Are you really sure that you wish delete your account? It&apos;s going to remove all your information',
     
         'remove_account_button_ok' => 'Ok',
     
@@ -547,6 +547,8 @@ return [
     
         'institution_hei_vet' => 'Vocational education and training',
     
-        'insitution_hei_his' => 'Highschool',
+        'institution_hei_his' => 'Highschool',
+    
+        'required_cert_warning' => 'Please note: if you don&apos;t upload the certificate of authenticity the institution won&apos;t appear on the list of refereeing institutions',
     
 ];

@@ -83,7 +83,7 @@ return [
     
         'home' => 'Startseite',
     
-        'blog' => 'Blog',
+        'blog' => 'Projekt',
     
         'cookies' => 'Informationen über Cookies',
     
@@ -101,11 +101,11 @@ return [
     
         'status' => 'Status',
     
-        'not_enough_data_to_show_profile' => 'Für das Anzeigen Ihres Profils haben wor nicht genügend Angaben.',
+        'not_enough_data_to_show_profile' => 'Wir haben nicht genügend Angaben, um Ihr Profil anzeigen zu können.',
     
-        'click_on_link_to_fill_required_fields' => 'Klicken Sie dne folgenden Link an und füllen Sie Angaben aus.',
+        'click_on_link_to_fill_required_fields' => 'Klicken Sie den folgenden Link an und füllen Sie Angaben aus.',
     
-        'set_up_my_profile' => 'Das Profil anlegen',
+        'set_up_my_profile' => 'Profil anlegen',
     
         'or' => 'oder',
     
@@ -203,7 +203,7 @@ return [
     
         'CF' => 'Zentralafrikanische Republik',
     
-        'TD' => 'Chad',
+        'TD' => 'Tschad',
     
         'CL' => 'Chile',
     
@@ -319,7 +319,7 @@ return [
     
         'JE' => 'Jersey',
     
-        'JO' => 'Jordan',
+        'JO' => 'Jordanien',
     
         'KZ' => 'Kazachstan',
     
@@ -405,7 +405,7 @@ return [
     
         'NE' => 'Niger',
     
-        'NG' => 'Nigerien',
+        'NG' => 'Nigeria',
     
         'NU' => 'Niue',
     
@@ -421,7 +421,7 @@ return [
     
         'PW' => 'Palau',
     
-        'PS' => 'Staat Palästina',
+        'PS' => 'Palästina',
     
         'PA' => 'Panama',
     
@@ -481,7 +481,7 @@ return [
     
         'SB' => 'Salomonen',
     
-        'SO' => 'Somalien',
+        'SO' => 'Somalia',
     
         'ZA' => 'Südafrika',
     
@@ -564,5 +564,11 @@ return [
         'ZM' => 'Zambia',
     
         'ZW' => 'Zimbabwe',
+    
+        'contact_us' => 'kontaktieren Sie uns',
+    
+        'faq' => 'Häufig gestellte Fragen',
+    
+        'faq_menu' => 'FAQ',
     
 ];

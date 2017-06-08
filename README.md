@@ -21,7 +21,7 @@ Documentation for the entire project (including the mobile applications) can be 
 
 ## Requirements.
 
-The site is based on Laravel 5.2 so on the php side it's recommended:
+The site is based on Laravel 5.3 so on the php side it's recommended:
 
 - PHP >= 5.5.9
 - OpenSSL PHP Extension

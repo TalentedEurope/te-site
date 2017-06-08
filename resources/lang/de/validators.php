@@ -5,9 +5,9 @@ return [
     
         'my_students' => 'Meine Studenten/Azubis',
     
-        'enable' => 'erlaube',
+        'enable' => 'aktivieren',
     
-        'disable' => 'verweigere/lösche',
+        'disable' => 'deaktivieren',
     
         'add_new' => 'Neuen Gutacher hinzufügen',
     
@@ -17,7 +17,7 @@ return [
     
         'student_already_validated' => 'Dieser Student wurde bereits validiert',
     
-        'jump_to_results' => 'Zum Ergebnissen',
+        'jump_to_results' => 'Zu den Ergebnissen',
     
         'you_are_validating_following_student' => 'Sie bewerten den nächsten Studenten',
     
@@ -25,7 +25,7 @@ return [
     
         'student_validation' => 'Bewertung des Studenten',
     
-        'valid' => 'berwertet',
+        'valid' => 'bewertet',
     
         'student_passed_validation_successfully' => 'Student wurde erfolgreich bewertet',
     
@@ -39,15 +39,15 @@ return [
     
         'make_sure_you_have_reviewed_student' => 'Vergewissern Sie sich, dass Sie das Profil vor dem Senden gründlich ausgefüllt haben.',
     
-        'this_student_is' => 'Dieser Student ist...',
+        'this_student_is' => 'Dieser Student ist',
     
         'finish_validation' => 'Die Bewertung beenden.',
     
-        'give_us_explanation_of_student_is_not_valid' => 'Bitte erläutern SIe, warum das Profil des Studenten ungültig ist.',
+        'give_us_explanation_of_student_is_not_valid' => 'Bitte erläutern Sie, warum das Profil des Studenten ungültig ist.',
     
         'note_if_validation_is_passed_as_no_student' => 'Wenn die Bewertung als "kein Student" endet, kann das Profil des Studenten nochmals bewertet werden.',
     
-        'user_hasnt_complete_filling_its_profile' => 'Das Profil nicht beendet. Wenn das Profil nicht komplet ist, kann man keinen Studenten bewerten.',
+        'user_hasnt_complete_filling_its_profile' => 'Das Profil ist nicht vollständig. Wenn das Profil nicht komplett ist, können Sie keine Studenten bewerten.',
     
         'manage_validators' => 'Bericht des Begutachters.',
     
@@ -67,7 +67,7 @@ return [
     
         'changed_institution_successfully' => 'Institution erfolgreich geändert.',
     
-        'youll_receive_notifications_from' => 'Seit jetzt bekommen Sie Benachritigungen von...',
+        'youll_receive_notifications_from' => 'Seit jetzt bekommen Sie Benachrichtigungen von...',
     
         'cannot_complete_invitation' => 'Die Einladung kann nicht beendet werden',
     
@@ -75,7 +75,7 @@ return [
     
         'study_level' => 'Niveau des Studiums',
     
-        'when_it_was_sent' => 'Wann wurde esgesendet?',
+        'when_it_was_sent' => 'Wann wurde es gesendet?',
     
         'no_referees' => 'Keine Begutacher',
     
@@ -87,13 +87,13 @@ return [
     
         'removing' => 'Wird gelöscht',
     
-        'validation_was_removed' => 'Validierung wurde entfernt, weil Sie bestätigt haben, dass %s keine Studenten aus dieser Institution waren.',
+        'validation_was_removed' => 'Validierung wurde entfernt, weil Sie bestätigt haben, dass %s kein Student aus dieser Institution war.',
     
-        'validation_complete' => '%s validierung beendet',
+        'validation_complete' => '%s Validierung beendet',
     
-        'cannot_invite' => 'Kann nicht eingeladen werden, die E-Mail ist entweder unter einen anderen User-Typ registriert, oder er hat eine wartende Einladung von dieser Institution.',
+        'cannot_invite' => 'Kann nicht eingeladen werden, die E-Mail ist entweder unter einen anderen User-Typ registriert, oder er hat bereits eine Einladung von dieser Institution erhalten.',
     
-        'send_invitation_to' => 'Einladung gesendet %s',
+        'send_invitation_to' => 'Einladung an %s gesendet ',
     
         'cannot_find_user' => 'Der User kann nicht gefunden werden.',
     

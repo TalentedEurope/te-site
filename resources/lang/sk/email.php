@@ -65,4 +65,12 @@ return [
     
         'validationsPending_line_3' => 'Pre prihlásenie kliknite prosím na nasledujúce okienko prezrite si váš informačný panel.',
     
+        'disclaimer' => '<Strong> Zrieknutie </ strong>: Táto správa je určená výhradne pre svoju adresu a môže obsahovať informácie, ktoré sú <strong> Dôverné </ strong>, a sú chránené profesijným tajomstvom. Ak nie ste zamýšľaným príjemcom, ktorý týmto upozornení, že akékoľvek šírenie, kopírovanie alebo zverejnenie tohto oznámenia je prísne zakázané zákonom. Ak bola túto správu dostali omylom, bezodkladne nás na e-mailovej adrese (% so) a odstráňte ju.',
+    
+        'hello' => 'Ahoj!',
+    
+        'regards' => 'S pozdravom',
+    
+        'disclaimer_plain' => 'VYHLÁSENIE: Táto správa je určená výhradne pre svoju adresu a môže obsahovať údaje, ktoré sú dôverné a sú chránené profesijným tajomstvom. Ak nie ste zamýšľaným príjemcom, ktorý týmto upozornení, že akékoľvek šírenie, kopírovanie alebo zverejnenie tohto oznámenia je prísne zakázané zákonom. Ak bola túto správu dostali omylom, bezodkladne nás prostredníctvom e-mailu na% s a odstráňte ju. &apos;',
+    
 ];

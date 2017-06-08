@@ -1,18 +1,28 @@
+.navbar .container {
+    width: 100%;
+}
+
 .navbar-landing {
     background: none;
     border-color: transparent;
     width: 100%;
+    text-align: center;
     margin-top: 20px;
 
-    .navbar-right {
-        float: right;
+    .navbar-toggle {
+        border: none;
+    }
+
+    .navbar-collapse {
+        border: none;
+        box-shadow: none;
+        width: 100%;
     }
 
     .navbar-nav {
         margin: 0;
 
         &.languages-nav {
-            margin-left: 20px;
             padding-left: 20px;
             & > li {
                 font-size: 14px;
@@ -21,7 +31,7 @@
 
         & > li {
             font-size: 16px;
-            float: left;
+            display: inline-block;
 
             &  > a {
                 color: white;
@@ -63,6 +73,26 @@
 
 @media (min-width: 500px) {
     .navbar-landing {
+
+        .navbar-right {
+            float: right;
+        }
+
+        .navbar-nav {
+            &.languages-nav {
+                margin-left: 20px;
+                border: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-landing {
+        .navbar-collapse {
+            width: auto;
+        }
+
         .navbar-nav {
             &.languages-nav {
                 border-left: 1px solid rgba(255, 255, 255, 0.39);
@@ -70,3 +100,4 @@
         }
     }
 }
+

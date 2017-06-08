@@ -65,4 +65,12 @@ return [
     
         'validationsPending_line_3' => 'Zur Anmeldung klicken Sie das folgende Fenster an und sehen Sie Ihr Informationspanel durch',
     
+        'disclaimer' => '<Strong> HAFTUNGSAUSSCHLUSS </ strong>: Diese Nachricht wird ausschließlich für die Adresse bestimmt ist und Informationen enthalten, die ist <strong> VERTRAULICH </ strong>, und durch das Berufsgeheimnis geschützt. Wenn Sie nicht der beabsichtigte Empfänger sind, benachrichtigt Sie hiermit, dass jede Verbreitung, Kopie oder Veröffentlichung dieser Mitteilung ist gesetzlich streng verboten. Wenn diese Meldung irrtümlich erhalten wurde, benachrichtigen Sie uns bitte umgehend per E-Mail an (% s) und löschen.',
+    
+        'hello' => 'Hallo!',
+    
+        'regards' => 'Grüße',
+    
+        'disclaimer_plain' => 'HAFTUNGSAUSSCHLUSS: Diese Nachricht wird ausschließlich für die Adresse bestimmt und enthalten Informationen, die vertraulich sind, und durch das Berufsgeheimnis geschützt. Wenn Sie nicht der beabsichtigte Empfänger sind, benachrichtigt Sie hiermit, dass jede Verbreitung, Kopie oder Veröffentlichung dieser Mitteilung ist gesetzlich streng verboten. Wenn diese Meldung irrtümlich erhalten wurde, benachrichtigen Sie uns bitte umgehend per E-Mail an% s und löschen.‘',
+    
 ];

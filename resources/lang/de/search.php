@@ -9,13 +9,13 @@ return [
     
         'current_search' => 'Aktuelle Suche',
     
-        'refereed' => 'hat begutachtet',
+        'refereed' => 'Begutachtet',
     
         'there_are_no_matching_the_selected_filters' => 'Im Moment gibt es keine %s mit den ausgewählten Filtern.',
     
         'we_found' => 'Erfüllt die Bedürfnisse',
     
-        'we_found_matching_your_needs' => 'Wir haben gefunden %number% %collective%, die IHren Bedürfnissen entsprechen.',
+        'we_found_matching_your_needs' => 'Wir haben gefunden %number% %collective%, die Ihren Angaben entsprechen.',
     
         'filters' => 'Filter',
     

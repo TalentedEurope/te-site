@@ -69,4 +69,10 @@ class StaticController extends Controller
     {
         return view('static.terms');
     }
+
+
+    public function getFaq()
+    {
+        return view('static.faq');
+    }
 }
