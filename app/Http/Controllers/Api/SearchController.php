@@ -85,7 +85,9 @@ class SearchController extends SiteSearchController
             if (sizeof($sk)) {
                 foreach ($sk as $skill) {
                     foreach ($skill->students as $st) {
-                        $userIds[] = $st->user->id;
+                        if ($st->user) {
+                            $userIds[] = $st->user->id;
+                        }
                     }
                 }
             }
@@ -95,7 +97,9 @@ class SearchController extends SiteSearchController
             if (sizeof($stsy)) {
                 foreach ($stsy as $study) {
                     if ($study->student->user) {
-                        $userIds[] = $study->student->user->id;
+                        if ($study->student) {
+                            $userIds[] = $study->student->user->id;
+                        }
                     }
                 }
             }
@@ -104,7 +108,9 @@ class SearchController extends SiteSearchController
             $stsg = StudentTraining::with('student', 'student.user')->search($v->valid()['search_text'], ['name'])->get();
             if (sizeof($stsg)) {
                 foreach ($stsg as $training) {
-                    $userIds[] = $training->student->user->id;
+                    if ($training->student) {
+                        $userIds[] = $training->student->user->id;
+                    }
                 }
             }
 
