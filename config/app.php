@@ -172,6 +172,7 @@ return [
         'Tymon\JWTAuth\Providers\JWTAuthServiceProvider',
         'Sofa\Eloquence\ServiceProvider',
         Moharrum\LaravelGeoIPWorldCities\LaravelGeoIPWorldCitiesServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -233,6 +234,7 @@ return [
         'UserVerification' => Jrean\UserVerification\Facades\UserVerification::class,
         'Notification' => Illuminate\Support\Facades\Notification::class,
         'Cities' => Moharrum\LaravelGeoIPWorldCities\Facade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 

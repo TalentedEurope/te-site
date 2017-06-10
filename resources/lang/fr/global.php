@@ -572,4 +572,12 @@ return [
     
         'faq_menu' => 'FAQ',
     
+        'register_fb' => 'Inscrivez-vous avec Facebook',
+    
+        'register_tw' => 'Inscrivez-vous avec Twitter',
+    
+        'login_fb' => 'Connexion avec Facebook',
+    
+        'login_tw' => 'Connectez-vous en utilisant Twitter',
+    
 ];

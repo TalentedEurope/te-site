@@ -22,10 +22,12 @@
       @if (isset($request))
       action="{{ url('/register?req_id='.$request->id) }}">
       @else
-      action="{{ url('/register') }}">
+      action="{{ url('/setup') }}">
       @endif
         {!! csrf_field() !!}
-        <h2 class="page-title">{!! trans('register.register') !!}</h2>
+        <h2 class="page-title">{!! trans('register.complete_register') !!}</h2>
+
+
         @if ($errors->count())
           <div class="alert alert-danger" role="alert">
             {!! trans('register.there_have_been_some_errors') !!}
@@ -56,27 +58,6 @@
               <label for="Company"><i data-toggle="tooltip" data-placement="bottom" title="{!! trans_choice('global.company', 1) !!}" class="fa fa-building" aria-hidden="true"></i></label>
             </div>
           </div>
-          @if ($errors->has('name'))
-          <span class="help-block">
-            <strong>{{ $errors->first('name') }}</strong>
-          </span>
-          @endif
-          <input @if (old('type') && old('type') != "institution") style="display: none" @endif style="display: none" id="name" name="name" class="{{ $errors->has('name') ? ' has-error' : '' }}" type="text" placeholder="{!! trans('reg-profile.name') !!}" value="{{ old('name') }}">
-
-          @if ($errors->has('email'))
-          <span class="help-block">
-            <strong>{{ $errors->first('email') }}</strong>
-          </span>
-          @endif
-          <input required id="email"  name="email" class="{{ $errors->has('email') ? ' has-error' : '' }}" type="text" placeholder="{!! trans('reg-profile.email') !!}" value="{{ old('email') }}">
-
-          @if ($errors->has('password'))
-          <span class="help-block">
-            <strong>{{ $errors->first('password') }}</strong>
-          </span>
-          @endif
-          <input required id="password"  name="password" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="{!! trans('reg-profile.password') !!}">
-          <input required id="password" name="password_confirmation" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="{!! trans('reg-profile.confirm_password') !!}">
 
 
           @if ($errors->has('terms'))
@@ -84,33 +65,17 @@
             <strong>{{ $errors->first('terms') }}</strong>
           </span>
           @endif
-          <div class="checkbox @if ($errors->has('terms')) alert alert-danger @endif">
+          <div class="text-center @if ($errors->has('terms')) alert alert-danger @endif">
             <label>
               <input required type="checkbox"  name="terms"></input> {!! trans('reg-profile.i_agree_with') !!} <a target="_blank" href="{{ url('/terms') }}">{!! trans('reg-profile.the_terms_of_use') !!}</a>
             </label>
           </div>
-          <p class="text-center"><em>{!! trans('register.all_fields_are_required') !!}</em></p>
 
           <button type="submit" class="btn btn-primary">
-            {!! trans('global.register_btn') !!}
+            {!! trans('register.complete_register') !!}
           </button>
-
-          <div class="form-group">
-              <h2> {{ trans('global.or') }}</h2>
-              <div class="col-sm-12">
-                  <p><a href="{{ url('/auth/facebook') }}" class="btn btn-default"><i class="fa fa-facebook"></i> {{ trans('global.register_fb') }} </a></p>
-
-                  <p><a href="{{ url('/auth/twitter') }}" class="btn btn-default"><i class="fa fa-twitter"></i> {{ trans('global.register_tw') }}</a></p>
-              </div>
-          </div>
         </div>
       </form>
-      <div>
-        <br>
-        <p>
-          <a class="btn btn-link" href="{{ url('/password/reset') }}">{!! trans('reg-profile.forgot_password') !!}</a> | <a class="btn btn-link" href="{{ url('/login') }}">{!! trans('global.login_btn') !!}</a>
-        </p>
-      </div>
     </div>
   </div>
 </div>

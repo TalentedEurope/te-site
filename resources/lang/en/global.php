@@ -571,4 +571,12 @@ return [
     
         'faq_menu' => 'FAQ',
     
+        'register_fb' => 'Register using Facebook',
+    
+        'register_tw' => 'Register using Twitter',
+    
+        'login_fb' => 'Login using Facebook',
+    
+        'login_tw' => 'Login using Twitter',
+    
 ];
