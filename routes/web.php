@@ -93,3 +93,6 @@ Route::group(['prefix' => 'search'], function () {
     Route::get('/companies', 'SearchController@searchCompanies')->name('searchCompanies');
     Route::get('/institutions', 'SearchController@searchInstitutions')->name('searchInstitutions');
 });
+
+Route::get('auth/{provider}', 'Auth\RegisterController@redirectToProvider');
+Route::get('auth/{provider}/callback', 'Auth\RegisterController@handleProviderCallback');

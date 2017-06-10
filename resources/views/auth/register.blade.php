@@ -96,6 +96,15 @@
           <button type="submit" class="btn btn-primary">
             {!! trans('global.register_btn') !!}
           </button>
+
+          <div class="form-group">
+              <h2> {{ trans('global.or') }}</h2>
+              <div class="col-sm-12">
+                  <p><a href="{{ url('/auth/facebook') }}" class="btn btn-default"><i class="fa fa-facebook"></i> {{ trans('global.register_fb') }} </a></p>
+
+                  <p><a href="{{ url('/auth/twitter') }}" class="btn btn-default"><i class="fa fa-twitter"></i> {{ trans('global.register_tw') }}</a></p>
+              </div>
+          </div>
         </div>
       </form>
       <div>

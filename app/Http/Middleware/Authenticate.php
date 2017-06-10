@@ -23,6 +23,10 @@ class Authenticate
             } else {
                 return redirect()->guest('login');
             }
+        } else {
+            if (Auth::user()->userable_type == '') {
+                return redirect('/setup');
+            }
         }
 
         return $next($request);
