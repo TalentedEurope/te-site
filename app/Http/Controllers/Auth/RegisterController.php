@@ -173,12 +173,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $user = User::create([
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
-        UserVerification::generate($user);
-        $user->notify(new AccountActivated($user));
+        $user = null;
+        if (!Auth::user()) {
+            $user = User::create([
+                'email' => $data['email'],
+                'password' => bcrypt($data['password']),
+            ]);
+            UserVerification::generate($user);
+            $user->notify(new AccountActivated($user));
+        } else {
+            $user = Auth::user();
+        }
 
         switch ($data['type']) {
             case 'student':
@@ -209,5 +214,25 @@ class RegisterController extends Controller
         }
 
         return $user;
+    }
+
+    public function getSetup(Request $request)
+    {
+        return view('auth.setup');
+    }
+
+    public function postSetup(Request $request)
+    {
+        $val = Validator::make($request->all(), [
+            'type' => 'required',
+            'terms' => 'required'
+        ]);
+
+        $val->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+        $data = $request->all();
+
+        return view('auth.register-success', $data);
     }
 }

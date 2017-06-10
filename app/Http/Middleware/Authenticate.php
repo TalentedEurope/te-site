@@ -24,8 +24,10 @@ class Authenticate
                 return redirect()->guest('login');
             }
         } else {
-            if (Auth::user()->userable_type == '') {
-                return redirect('/setup');
+            if (\Request::route()->getName() != 'getSetup') {
+                if (Auth::user()->userable_type == '') {
+                    return redirect('/setup');
+                }
             }
         }
 

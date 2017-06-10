@@ -31,7 +31,10 @@ class RedirectIfAuthenticated
                 return redirect('/validate');
             }
             if (Auth::user()->userable_type == '') {
-                return redirect('/setup');
+                if (\Request::route()->getName() == 'login') {
+                    return redirect('/setup');
+                }
+                return $next($request);
             }
             return redirect('/');
         }

@@ -96,3 +96,5 @@ Route::group(['prefix' => 'search'], function () {
 
 Route::get('auth/{provider}', 'Auth\RegisterController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\RegisterController@handleProviderCallback');
+Route::get('setup', 'Auth\RegisterController@getSetup')->name('getSetup');
+Route::post('setup', 'Auth\RegisterController@postSetup');
