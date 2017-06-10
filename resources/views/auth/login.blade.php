@@ -34,8 +34,16 @@
             <div>
                 <br/>
                 <p>
-                    <a class="btn btn-link" href="{{ url('/password/reset') }}">{!! trans('reg-profile.forgot_password') !!}</a> | <a class="btn btn-link" href="{{ url('/register') }}">{!! trans('global.register_btn') !!}</a>
+                  <a class="btn btn-link" href="{{ url('/password/reset') }}">{!! trans('reg-profile.forgot_password') !!}</a> | <a class="btn btn-link" href="{{ url('/register') }}">{!! trans('global.register_btn') !!}</a>
                 </p>
+            </div>
+            <div class="form-group">
+                <h2> {{ trans('global.or') }}</h2>
+                <div class="col-sm-12">
+                    <p><a href="{{ url('/auth/facebook') }}" class="btn btn-default"><i class="fa fa-facebook"></i> {{ trans('global.login_fb') }} </a></p>
+
+                    <p><a href="{{ url('/auth/twitter') }}" class="btn btn-default"><i class="fa fa-twitter"></i> {{ trans('global.login_tw') }}</a></p>
+                </div>
             </div>
         </div>
     </div>

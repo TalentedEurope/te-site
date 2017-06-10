@@ -571,4 +571,12 @@ return [
     
         'faq_menu' => 'FAQ',
     
+        'register_fb' => 'L&apos;iscrizione avviene tramite Facebook',
+    
+        'register_tw' => 'L&apos;iscrizione avviene tramite Twitter',
+    
+        'login_fb' => 'Accedi utilizzando Facebook',
+    
+        'login_tw' => 'Accedi usando Twitter',
+    
 ];
