@@ -29,6 +29,15 @@ class ProfileController extends SiteProfileController
         return User::where('is_filled', 1)->where('userable_type', Institution::class)->select('name')->get();
     }
 
+    public function getUserProfile(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+        $public = Auth::user() == null;
+        if (!$user->is_filled || !$user->visible || $user->banned) {
+            return response()->json(['error' => 'not_found'], 404);
+        }
+        return $user;
+    }
 
     public function update(Request $request)
     {
