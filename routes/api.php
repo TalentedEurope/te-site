@@ -12,6 +12,8 @@
 */
 
 Route::post('login', 'Api\LoginController@getToken');
+Route::post('register', 'Api\RegisterController@registerUser');
+
 
 Route::group(['prefix' => 'search', 'namespace' => 'Api'], function () {
     Route::group(['prefix' => 'students'], function () {
@@ -27,10 +29,10 @@ Route::group(['prefix' => 'search', 'namespace' => 'Api'], function () {
 
 Route::group(['prefix' => 'profile', 'namespace' => 'Api'], function () {
     Route::get('/institutions', 'ProfileController@getInstitutions');
-
     Route::put('/', 'ProfileController@update');
     Route::post('validation/request', 'ProfileController@requestValidation')->name('request-validation');
     Route::post('invite', 'ProfileController@inviteSchool')->name('invite-school');
+    Route::get('/{id}', 'ProfileController@getUserProfile');
 
     // Quit
     Route::delete('quit', 'ProfileController@quit')->name('quit');

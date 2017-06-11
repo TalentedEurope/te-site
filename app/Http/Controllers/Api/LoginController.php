@@ -18,14 +18,17 @@ class LoginController extends Controller
             // verify the credentials and create a token for the user
             if (!$token = JWTAuth::attempt($credentials)) {
                 return response()->json(['error' => 'invalid_credentials'], 401);
+            } else if (!Auth::user()->verified) {
+                return response()->json(['error' => 'email_not_verified'], 401);
             }
         } catch (JWTException $e) {
             // something went wrong
             return response()->json(['error' => 'could_not_create_token'], 500);
         }
-
         // if no errors are encountered we can return a JWT
-        return response()->json(compact('token'));
+        $data = compact('token');
+        $data['user'] = Auth::user();
+        return response()->json($data);
     }
 
     public static function userToken()
