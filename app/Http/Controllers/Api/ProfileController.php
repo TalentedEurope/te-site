@@ -21,7 +21,7 @@ class ProfileController extends SiteProfileController
 {
     public function __construct()
     {
-        $this->middleware('jwt.auth', ['except' => array('index')]);
+     //   $this->middleware('jwt.auth', ['except' => array('index')]);
     }
 
     public function getInstitutions()
@@ -50,6 +50,18 @@ class ProfileController extends SiteProfileController
         if ($user->isA('company')) {
             $user->userable->load('personalSkills');
         }
+
+        if ($user->isA('validator')) {
+            $user->userable->load('institution.user');
+            $students = array();
+            foreach ($user->userable->validationRequest as $request) {
+                if ($request->student->valid == "validated") {
+                    $students[] = array('name' => $request->student->user->fullName, 'id' => $request->student->user->id);
+                }
+            }
+            $user->students = $students;
+        }
+
 
         return $user;
     }
