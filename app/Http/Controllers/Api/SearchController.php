@@ -339,7 +339,7 @@ class SearchController extends SiteSearchController
                 'id' => $institution->user->id,
                 'slug' => $institution->user->slug,
                 'name' => $institution->user->name,
-                'type' => trans('reg-profile.'.$institution->type),
+                'type' => trans('reg-profile.institution_'.strtolower($institution->type)),
                 'country' => trans('global.'.$institution->user->country),
                 'city' => $institution->user->city,
                 'we_are_in' => $institution->user->city . ', ' . trans('global.'.$institution->user->country),
