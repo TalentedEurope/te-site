@@ -14,6 +14,7 @@ use App\Models\StudentLanguage;
 use App\Models\CompanyKeyword;
 use App\Models\StudentTraining;
 use App\Models\StudyKeyword;
+use App\Models\Institution;
 use App\Models\Alert;
 use App\Models\ProfessionalSkill;
 use App\Http\Requests;
@@ -295,6 +296,58 @@ class SearchController extends SiteSearchController
         return array(
             'data' => $companies,
             'remaining_alerts' => $maxAlerts,
+            'per_page' => $results->perPage(),
+            'total' => $results->total(),
+            'current_page' => $results->currentPage(),
+            'prev_page_url' => $results->previousPageUrl(),
+            'next_page_url' => $results->nextPageUrl(),
+        );
+    }
+
+    public function getInstitutions(Request $request)
+    {
+        $user = Auth::user();
+        $rules = array(
+                        'search_text' => 'string|nullable',
+        );
+        $v = Validator::make($request->all(), $rules);
+
+        $results = Institution::whereHas('user', function ($q) use ($v) {
+                    $q->where('visible', true);
+                    $q->where('is_filled', true);
+                    $q->where('banned', false);
+        });
+
+        // Lets take a look at the text query
+        $userIds = array();
+        if (isset($v->valid()['search_text'])) {
+            // Users that match the search query on name surname or email
+            $userIds = User::search($v->valid()['search_text'], ['name', 'surname', 'email'])->where('userable_type', Institution::class)->select('id')->get()->pluck('id')->toArray();
+            $filterInstitutions = User::where('userable_type', Institution::class)->whereIn('id', $userIds)->select('userable_id')->get()->pluck('userable_id')->toArray();
+
+            $results->whereIn('id', $filterInstitutions);
+        }
+
+        $results = $results->paginate(env('PAGINATE_ENTRIES', 10));
+
+        $alerts = array();
+        $maxAlerts = 0;
+
+        $institutions = array();
+        foreach ($results as $institution) {
+            $institutions[] = array(
+                'id' => $institution->user->id,
+                'slug' => $institution->user->slug,
+                'name' => $institution->user->name,
+                'type' => trans('reg-profile.'.$institution->type),
+                'country' => trans('global.'.$institution->user->country),
+                'city' => $institution->user->city,
+                'we_are_in' => $institution->user->city . ', ' . trans('global.'.$institution->user->country),
+                'photo' => asset(User::$photoPath.$institution->user->image),
+            );
+        }
+        return array(
+            'data' => $institutions,
             'per_page' => $results->perPage(),
             'total' => $results->total(),
             'current_page' => $results->currentPage(),
