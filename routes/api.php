@@ -25,6 +25,10 @@ Route::group(['prefix' => 'search', 'namespace' => 'Api'], function () {
         Route::get('/', 'SearchController@getCompanies');
         Route::get('filters', 'SearchController@getCompanyFilters');
     });
+
+    Route::group(['prefix' => 'institutions'], function () {
+        Route::get('/', 'SearchController@getInstitutions');
+    });
 });
 
 Route::group(['prefix' => 'profile', 'namespace' => 'Api'], function () {
