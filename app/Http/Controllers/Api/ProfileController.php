@@ -36,6 +36,21 @@ class ProfileController extends SiteProfileController
         if (!$user->is_filled || !$user->visible || $user->banned) {
             return response()->json(['error' => 'not_found'], 404);
         }
+        if ($user->isA('student')) {
+            if ($user->userable->valid == 'validated') {
+                if ($user->userable->validationRequest && $user->userable->validationRequest->validator) {
+                    $user->validator = $user->userable->validationRequest->validator->load('user');
+                }
+            }
+            foreach ($user->userable->languages as $lang) {
+                $lang->name = StudentLanguage::$languages[$lang->name]['name'];
+            }
+        }
+
+        if ($user->isA('company')) {
+            $user->userable->load('personalSkills');
+        }
+
         return $user;
     }
 
