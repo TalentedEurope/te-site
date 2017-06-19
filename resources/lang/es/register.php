@@ -31,4 +31,6 @@ return [
     
         'invited_by' => 'Has sido invitado por',
     
+        'complete_register' => 'Finalizar el registro',
+    
 ];

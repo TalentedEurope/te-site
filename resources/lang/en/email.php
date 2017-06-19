@@ -73,4 +73,8 @@ return [
     
         'disclaimer_plain' => 'DISCLAIMER: This message is intended exclusively for its address and may contain information that is CONFIDENTIAL, and protected by professional privilege. If you are not the intended recipient you are hereby notified that any dissemination, copy or disclosure of this communication is strictly prohibited by law. If this message has been received in error, please immediately notify us via e-mail to %s and delete it.&apos;',
     
+        'profile_not_filled_subject' => 'Your profile is not complete',
+    
+        'profile_not_filled_line_1' => 'We&apos;ve seen that you profile is not complete, so we wanted to remind you that unless you fill all the required information you won&apos;t be able to access all the features of our application.',
+    
 ];

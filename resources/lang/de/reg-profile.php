@@ -501,43 +501,43 @@ return [
     
         'study_gradecard' => 'Tabelle der Studienbewertung',
     
-        'training_name' => 'Name des Praktikums',
+        'training_name' => 'Name der Ausbildung',
     
-        'training_date' => 'Datum des Praktikums',
+        'training_date' => 'Datum der Ausbildung',
     
-        'training_certificate' => 'Zertifikat über das Praktikum',
+        'training_certificate' => 'Zeugnis',
     
         'language_certificate' => 'Sprachzertifikat',
     
-        'professional_skills_name' => 'Profesionelle Fähigkeiten Name',
+        'professional_skills_name' => 'Profesionelle Fähigkeiten ',
     
-        'work_experience_company' => 'Arbeitserfahrung im Unternehmen',
+        'work_experience_company' => 'Arbeitserfahrung in Unternehmen',
     
         'work_experience_from' => 'Arbeitserfahrung von',
     
         'work_experience_until' => 'Arbeitserfahrung bis',
     
-        'work_experience_position' => 'Position der Arbeitserfahrung',
+        'work_experience_position' => 'Tätigkeit/Position im Unternehmen',
     
         'about_me' => 'Über mich',
     
         'social_networks' => 'Soziale Netzwerke',
     
-        'account_activation_successful' => 'Die Konto-Aktivierung war erfolgreich, nun können Sie sich anmelden.',
+        'account_activation_successful' => 'Die Konto-Aktivierung war erfolgreich, Sie können sich jetzt anmelden.',
     
-        'account_has_not_been_verified' => 'Das Konto wurde nicht bestätigt. Das Konto aktivieren Sie mit der Bestätigung Ihrer E-Mail.',
+        'account_has_not_been_verified' => 'Das Konto wurde nicht bestätigt. Bitte prüfen Sie, ob Sie eine E-Mail von uns erhalten haben und aktivieren Sie das Konto.',
     
         'at' => 'und',
     
         'remove_account_button' => 'Das Konto löschen.',
     
-        'remove_account_confirm' => 'Wollen Sie Ihr Konto wirklich entfernen?Alle Ihre Informationen werden gelöscht.',
+        'remove_account_confirm' => 'Wollen Sie Ihr Konto wirklich entfernen? Alle Ihre Informationen werden gelöscht.',
     
         'remove_account_button_ok' => 'Ja',
     
         'remove_account_button_cancel' => 'Abbrechen',
     
-        'refereed_students' => 'BewerteteStudenten',
+        'refereed_students' => 'Bewertete Studenten',
     
         'no_refereed_students' => 'Es existieren keine bewerteten Studenten',
     
@@ -545,10 +545,12 @@ return [
     
         'cant_send_alerts_until_you_fill_the_profile' => 'Um den Unternehmen eine "Bemerkung" zu schicken, muss das ganze Profil ausgefüllt sein. Bitte sehen Sie nach, ob alle Angaben ausgefüllt sind.',
     
-        'institution_hei_vet' => 'Fachausbildung und Praktikum',
+        'institution_hei_vet' => 'Ausbildung und Praktikum',
     
         'institution_hei_his' => 'Mittelschule',
     
-        'required_cert_warning' => 'Bitte beachten Sie: Wenn Sie das Zertifikat nicht laden die Institution nicht auf der Liste der Schiedsrichter Institutionen erscheinen',
+        'required_cert_warning' => 'Bitte beachten Sie, dass die Institution nicht auf der Liste der Gutachterinsitutionen erscheint, wenn Sie das Zertifikat zur Authentifizierung nicht hochladen.',
+    
+        'invalid_credentials' => 'Diese Zugangsdaten wurden nicht in unserer Datenbank gefunden',
     
 ];

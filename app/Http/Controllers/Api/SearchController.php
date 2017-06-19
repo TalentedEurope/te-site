@@ -289,6 +289,7 @@ class SearchController extends SiteSearchController
                 'facebook' => $company->user->facebook,
                 'twitter' => $company->user->twitter,
                 'linkedin' => $company->user->linkedin,
+                'description' => $company->description,
                 'website' => $company->website,
                 'alertable' => !in_array($company->user->id, $alerts) && $maxAlerts,
             );

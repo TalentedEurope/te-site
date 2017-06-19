@@ -73,4 +73,8 @@ return [
     
         'disclaimer_plain' => 'NOTA BENE: Questo messaggio è previsto esclusivamente per il suo indirizzo e può contenere informazioni riservate e protette dal segreto professionale. Se non siete il destinatario che si sta presente che qualsiasi divulgazione, copia o la divulgazione di questa comunicazione è severamente proibito dalla legge. Se questo messaggio è stato ricevuto per errore, si prega di informare immediatamente via e-mail a% s ed eliminarlo.&apos;',
     
+        'profile_not_filled_subject' => 'Il tuo profilo non è completo',
+    
+        'profile_not_filled_line_1' => 'Abbiamo visto che il profilo non è completa, così abbiamo voluto ricordare che a meno che non si riempiono tutte le informazioni richieste non sarà in grado di accedere a tutte le funzionalità della nostra applicazione.',
+    
 ];
