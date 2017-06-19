@@ -31,4 +31,6 @@ return [
     
         'invited_by' => 'Pozval vás...',
     
+        'complete_register' => 'registrácia Finish',
+    
 ];

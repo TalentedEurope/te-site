@@ -551,4 +551,6 @@ return [
     
         'required_cert_warning' => 'Tenga en cuenta: si no cargar el certificado de autenticidad de la institución no aparecerá en la lista de instituciones arbitrales',
     
+        'invalid_credentials' => 'Estas credenciales no coinciden con nuestros registros',
+    
 ];

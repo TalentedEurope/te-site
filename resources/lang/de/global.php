@@ -565,17 +565,17 @@ return [
     
         'ZW' => 'Zimbabwe',
     
-        'contact_us' => 'kontaktieren Sie uns',
+        'contact_us' => 'Kontaktieren Sie uns',
     
         'faq' => 'Häufig gestellte Fragen',
     
         'faq_menu' => 'FAQ',
     
-        'register_fb' => 'Registrieren Sie über Facebook',
+        'register_fb' => 'Registrieren per Facebook',
     
-        'register_tw' => 'Registrieren Twitter mit',
+        'register_tw' => 'Registrieren per Twitter',
     
-        'login_fb' => 'Einloggen über Facebook',
+        'login_fb' => 'Einloggen mit Facebook',
     
         'login_tw' => 'Einloggen mit Twitter',
     

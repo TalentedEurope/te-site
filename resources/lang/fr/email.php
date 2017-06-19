@@ -73,4 +73,8 @@ return [
     
         'disclaimer_plain' => 'AVERTISSEMENT: Ce message est destiné exclusivement à son adresse et peut contenir des informations confidentielles et protégées par le secret professionnel. Si vous n&apos;êtes pas le destinataire nous vous informons que toute diffusion, copie ou la divulgation de cette communication est strictement interdite par la loi. Si ce message a été reçu par erreur, s&apos;il vous plaît nous en informer immédiatement par e-mail à% s et le supprimer.',
     
+        'profile_not_filled_subject' => 'Votre profil est pas complet',
+    
+        'profile_not_filled_line_1' => 'Nous avons vu que vous le profil est pas complet, donc nous voulions vous rappeler que si vous remplissez toutes les informations requises, vous ne serez pas en mesure d&apos;accéder à toutes les fonctionnalités de notre application.',
+    
 ];

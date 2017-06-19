@@ -61,7 +61,7 @@
   </script>
 </head>
 
-<body id="app-layout" class="@yield('page-class') ">
+<body id="app-layout" class="@yield('page-class') @if ($fromApp) from-app @endif ">
   @include("layouts.navbar")
 
   @if(Session::has('success_message'))

@@ -27,7 +27,12 @@ class LoginController extends Controller
         }
         // if no errors are encountered we can return a JWT
         $data = compact('token');
-        $data['user'] = Auth::user();
+        $user = Auth::user();
+        $data['user'] = $user;
+        if ($user && $request->has('pushID')) {
+            $user->push_id = $request->input('pushID');
+            $user->save();
+        }
         return response()->json($data);
     }
 

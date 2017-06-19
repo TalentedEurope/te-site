@@ -31,4 +31,6 @@ return [
     
         'invited_by' => 'Eingeladen von...',
     
+        'complete_register' => 'Abschließen der Registrierung',
+    
 ];

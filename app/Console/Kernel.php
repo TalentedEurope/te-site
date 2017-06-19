@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
          Commands\Cleanup::class,
+         Commands\WeeklyTasks::class,
     ];
 
     /**
@@ -25,5 +26,6 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('cleanup:all')->daily();
+        $schedule->command('tasks:weekly')->weekly();
     }
 }

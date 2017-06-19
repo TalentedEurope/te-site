@@ -55,22 +55,26 @@ return [
     
         'newAlerts_subject_1' => 'Neue Nachrichten von Studenten.',
     
-        'newAlerts_line_2' => 'Wir geben Ihnen Bescheid, dass manche Studenten Ihnen auf der Platform eine Nahricht gesendet haben.',
+        'newAlerts_line_2' => 'Hallo! Dies ist eine Erinnerung, dass einige Studenten Ihnen auf der Platform eine Nachricht gesendet haben.',
     
         'newAlerts_line_3' => 'Zur Anmeldung klicken Sie das folgende Fenster an und sehen Sie Ihr Informationspanel durch.',
     
         'validationsPending_subject_1' => 'Wartende Bewerter bei Talented Europe ',
     
-        'validationsPending_line_2' => 'Wir geben Ihnen Bescheid, dass sich auf der Platform mehrere wartende Bewerter befinden.',
+        'validationsPending_line_2' => 'Wir erinnern Sie, dass sich auf der Platform mehrere wartende Bewerter befinden.',
     
         'validationsPending_line_3' => 'Zur Anmeldung klicken Sie das folgende Fenster an und sehen Sie Ihr Informationspanel durch',
     
-        'disclaimer' => '<Strong> HAFTUNGSAUSSCHLUSS </ strong>: Diese Nachricht wird ausschließlich für die Adresse bestimmt ist und Informationen enthalten, die ist <strong> VERTRAULICH </ strong>, und durch das Berufsgeheimnis geschützt. Wenn Sie nicht der beabsichtigte Empfänger sind, benachrichtigt Sie hiermit, dass jede Verbreitung, Kopie oder Veröffentlichung dieser Mitteilung ist gesetzlich streng verboten. Wenn diese Meldung irrtümlich erhalten wurde, benachrichtigen Sie uns bitte umgehend per E-Mail an (% s) und löschen.',
+        'disclaimer' => '<strong> HAFTUNGSAUSSCHLUSS </strong>: Diese Nachricht ist ausschließlich für den Adressaten bestimmt und kann Informationen enthalten, die <strong>VERTRAULICH</strong> sind und dem Berufsgeheimnis unterliegen. Sollten Sie nicht der Adressat sein, weisen wir Sie hiermit darauf hin, dass jegliche Verbreitung, Kopie oder Veröffentlichung der Kommunikation gestzlich untersagt ist. Sollten Sie diese Nachricht irrtümlich erhalten haben, bitte benachrichtigen Sie uns umgehend per E-Mail an ( %s ) und löschen Sie die Nachricht.',
     
         'hello' => 'Hallo!',
     
         'regards' => 'Grüße',
     
-        'disclaimer_plain' => 'HAFTUNGSAUSSCHLUSS: Diese Nachricht wird ausschließlich für die Adresse bestimmt und enthalten Informationen, die vertraulich sind, und durch das Berufsgeheimnis geschützt. Wenn Sie nicht der beabsichtigte Empfänger sind, benachrichtigt Sie hiermit, dass jede Verbreitung, Kopie oder Veröffentlichung dieser Mitteilung ist gesetzlich streng verboten. Wenn diese Meldung irrtümlich erhalten wurde, benachrichtigen Sie uns bitte umgehend per E-Mail an% s und löschen.‘',
+        'disclaimer_plain' => 'HAFTUNGSAUSSCHLUSS: Diese Nachricht ist ausschließlich für den Adressaten bestimmt und kann Informationen enthalten, die VERTRAULICH sind und dem Berufsgeheimnis unterliegen. Sollten Sie nicht der Adressat sein, weisen wir Sie hiermit darauf hin, dass jegliche Verbreitung, Kopie oder Veröffentlichung der Kommunikation gestzlich untersagt ist. Sollten Sie diese Nachricht irrtümlich erhalten haben, bitte benachrichtigen Sie uns umgehend per E-Mail an %s und löschen Sie die Nachricht.',
+    
+        'profile_not_filled_subject' => 'Ihr Profil ist nicht vollständig',
+    
+        'profile_not_filled_line_1' => 'Wir haben festgestellt, dass Ihr Profil nicht vollständig ist. Wir möchten Sie daran erinnern, dass Sie nur dann alle Funktionen unserer App nutzen können, wenn Sie alle erforderten Informationen in Ihr Profil eingetragen haben.',
     
 ];

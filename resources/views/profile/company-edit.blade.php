@@ -134,6 +134,12 @@
 
               <hr class="separator">
 
+              <text-area-form code="description" label="{!! trans('reg-profile.description') !!} ({!! trans('reg-profile.input_max_characters') !!} 300 characters)"
+                  placeholder="{!! trans('reg-profile.description') !!} ({!! trans('reg-profile.input_max_characters') !!} 300)."
+                  value="{{ old('description', $company->description) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-area-form>
+
+              <hr class="separator">
+
               <text-area-form code="talent" label="{!! trans('reg-profile.company_what_is_talent') !!} ({!! trans('reg-profile.input_max_characters') !!} 300 characters)"
                   placeholder="{!! trans('reg-profile.what_is_talent_for_you_in_a_few_words') !!} ({!! trans('reg-profile.input_max_characters') !!} 300)." required
                   value="{{ old('talent', $company->talent) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-area-form>

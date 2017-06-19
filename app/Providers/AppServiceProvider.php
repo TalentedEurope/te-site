@@ -20,6 +20,10 @@ class AppServiceProvider extends ServiceProvider
                 $view->with('alertCount', Alert::getUnreadAlertCount(Auth::user()));
             }
         });
+
+        view()->composer('*', function ($view) {
+            $view->with('fromApp', \Session::get('app'));
+        });
     }
 
     /**

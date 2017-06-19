@@ -565,7 +565,7 @@ return [
     
         'ZW' => 'Zimbabve',
     
-        'contact_us' => 'kontaktieren Sie uns',
+        'contact_us' => 'Kontaktieren Sie uns',
     
         'faq' => 'Často kladené otázky',
     

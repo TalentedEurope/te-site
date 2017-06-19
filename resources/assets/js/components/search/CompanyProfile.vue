@@ -5,6 +5,9 @@
                 <h2 class="title"><a :href="seeMoreUrl">{{company.name}}</a></h2>
                 <p><em class="h4">{{company.info}}</em></p>
                 <hr>
+                <p v-if="company.description != ''">
+                    <em>{{company.description}}</em>
+                </p>
                 <p class="h4">
                     <strong><i class="fa fa-map-marker"></i> {{ $t('reg-profile.we_are_in') }}: </strong>
                     {{company.we_are_in}}
