@@ -10,6 +10,7 @@ use App\Models\Company;
 use App\Models\User;
 use App\Models\Alert;
 use App\Models\StudentStudy;
+use App\Notifications\CompanyAlerted;
 use Carbon\Carbon;
 use Auth;
 use Illuminate\Support\MessageBag;
@@ -69,8 +70,6 @@ class AlertController extends SiteAlertController
             'prev_page_url' => $results->previousPageUrl(),
             'next_page_url' => $results->nextPageUrl(),
         );
-
-
     }
 
     public function destroy(Request $request, $id)
@@ -106,12 +105,18 @@ class AlertController extends SiteAlertController
             if (!Alert::isAllowed($user->id, $request->input('company'))) {
                 return Response::json(trans('api.'.'too_many_requests'), 429);
             }
+            $company = User::find($request->input('company'));
+            $company->notify(new CompanyAlerted($company, $user));
+
             // Todo Should i make it more Laravelish
             // and lose performance?
             $alert = new Alert();
             $alert->origin_id = $user->id;
             $alert->target_id = $request->input('company');
             $alert->save();
+
+
+
             return Response::json($alert, 200);
         }
         return Response::json($v->errors(), 404);
