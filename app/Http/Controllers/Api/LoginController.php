@@ -10,6 +10,15 @@ use Auth;
 
 class LoginController extends Controller
 {
+    public function removeToken(Request $request)
+    {
+        $user = JWTAuth::parseToken()->authenticate();
+        $user->push_id = "";
+        $user->save();
+        JWTAuth::invalidate(JWTAuth::getToken());
+        return true;
+    }
+
     public function getToken(Request $request)
     {
         $credentials = $request->only('email', 'password');
