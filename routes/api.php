@@ -12,6 +12,7 @@
 */
 
 Route::post('login', 'Api\LoginController@getToken');
+Route::get('logout', 'Api\LoginController@removeToken');
 Route::post('register', 'Api\RegisterController@registerUser');
 
 

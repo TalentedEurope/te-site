@@ -175,4 +175,9 @@ class User extends Authenticatable
     {
         return $this->morphTo();
     }
+
+    public function routeNotificationForOneSignal()
+    {
+        return $this->push_id;
+    }
 }

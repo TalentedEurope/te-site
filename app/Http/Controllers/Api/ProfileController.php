@@ -21,7 +21,7 @@ class ProfileController extends SiteProfileController
 {
     public function __construct()
     {
-     //   $this->middleware('jwt.auth', ['except' => array('index')]);
+        $this->middleware('jwt.auth', ['except' => array('index')]);
     }
 
     public function getInstitutions()
@@ -49,6 +49,7 @@ class ProfileController extends SiteProfileController
 
         if ($user->isA('company')) {
             $user->userable->load('personalSkills');
+            $user->alertable = $user->userable->isAlertableBy(Auth::user());
         }
 
         if ($user->isA('validator')) {
