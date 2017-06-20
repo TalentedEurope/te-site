@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Validation\Rule;
 use Sofa\Eloquence\Eloquence;
+use Carbon\Carbon;
 
 class Company extends Model
 {
@@ -91,5 +92,18 @@ class Company extends Model
     public function personalSkills()
     {
         return $this->belongsToMany('\App\Models\PersonalSkill');
+    }
+
+
+    public function isAlertableBy($user)
+    {
+        $alerts = array();
+        $maxAlerts = 0;
+        if ($user && $user->isA('student')) {
+            $alerts = array_flatten(Alert::where('origin_id', $user->id)->whereDate('created_at', '>', Carbon::now()->subDays(env("MIN_ALERT_DAYS", 1)))->select('target_id')->get()->toArray());
+            $maxAlerts = env('MAX_ALERTS', 3) - Alert::where("origin_id", $user->id)->whereDate('created_at', Carbon::today())->count();
+            return !in_array($this->user->id, $alerts) && $maxAlerts;
+        }
+        return false;
     }
 }
