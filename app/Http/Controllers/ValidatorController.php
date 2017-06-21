@@ -18,10 +18,15 @@ use Response;
 
 class ValidatorController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth')->only(['index']) ;
+    }
+
     // change this to a middleware?
     private function institutionOnly()
     {
-        $this->middleware('auth');
         if (!Auth::user() || !Auth::user()->isA('institution')) {
             App::abort(403, 'Unauthorized action.');
         }
