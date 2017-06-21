@@ -16,13 +16,16 @@ use Carbon\Carbon;
 
 class ValidationController extends Controller
 {
+
     public function __construct()
     {
-        $this->middleware('auth');
-        if (!Auth::user() || !Auth::user()->isA('validator')) {
-            App::abort(403, 'Unauthorized action.');
-        }
+        $this->middleware(['auth',function ($request, $next) {
+            if (!Auth::user() || !Auth::user()->isA('validator')) {
+                App::abort(403, 'Unauthorized action.');
+            }
+        }]);
     }
+
 
     public function index(Request $request)
     {
