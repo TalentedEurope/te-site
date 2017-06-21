@@ -88,8 +88,10 @@
                 <span class="help-block">
                     <strong>{{ $errors->first('image') }}</strong>
                 </span> @endif
-                <label for="image">{!! trans('reg-profile.company_logo') !!}</label>
-                <input type="file" id="image" name="image" accept="image/*">
+                <div class="hide-from-app">
+                  <label for="image">{!! trans('reg-profile.company_logo') !!}</label>
+                  <input type="file" id="image" name="image" accept="image/*">
+                </div>
               </div>
 
               <hr class="separator">

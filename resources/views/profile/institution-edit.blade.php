@@ -73,8 +73,10 @@
                 <span class="help-block">
                     <strong>{{ $errors->first('image') }}</strong>
                 </span> @endif
-                <label for="image">{{ trans('reg-profile.logo') }}</label>
-                <input type="file" id="image" name="image" accept="image/*">
+                <div class="hide-from-app">
+                  <label for="image">{{ trans('reg-profile.logo') }}</label>
+                  <input type="file" id="image" name="image" accept="image/*">
+                </div>
               </div>
 
               @if (!$institution->certificate)
@@ -83,9 +85,10 @@
               </div>
               @endif
 
+              <div class="hide-from-app">
               <file-form code="certificate" label="{!! trans('reg-profile.institution_certificate') !!}" download-text="{!! trans('reg-profile.student_download_certificate') !!}" has-file="{{ $institution->certificate }}"
                   file-url="{{ URL::to('/profile/certificate/' . $user->id . '/institution') }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></file-form>
-
+              </div>
               <p class="help-block"><a target="_blank" href="{{ URL::asset('docs/'.App::getLocale().'/ProofOfAuthenticityForEducationInstitute.docx') }}">{!! trans('reg-profile.institution_certificate_template_download') !!}</a></p>
 
               <hr>
