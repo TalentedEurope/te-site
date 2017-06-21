@@ -23,6 +23,7 @@ class ValidationController extends Controller
             if (!Auth::user() || !Auth::user()->isA('validator')) {
                 App::abort(403, 'Unauthorized action.');
             }
+            return $next($request);
         }]);
     }
 
