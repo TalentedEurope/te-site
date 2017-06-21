@@ -562,4 +562,6 @@ Sur',
     
         'invalid_credentials' => 'Ces identifiants ne correspondent pas à nos enregistrements',
     
+        'alert_already_sent' => 'Alert already sent',
+    
 ];

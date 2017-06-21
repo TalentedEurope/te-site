@@ -553,4 +553,6 @@ return [
     
         'invalid_credentials' => 'These credentials do not match our records',
     
+        'alert_already_sent' => 'Alert already sent',
+    
 ];

@@ -553,4 +553,6 @@ return [
     
         'invalid_credentials' => 'Diese Zugangsdaten wurden nicht in unserer Datenbank gefunden',
     
+        'alert_already_sent' => 'Alert already sent',
+    
 ];
