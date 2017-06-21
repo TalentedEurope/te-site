@@ -554,4 +554,6 @@ Obchodná a poradenská činnosť',
     
         'invalid_credentials' => 'Prihlasovacie údaje nie sú správne',
     
+        'alert_already_sent' => 'Alert already sent',
+    
 ];

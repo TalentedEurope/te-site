@@ -553,4 +553,6 @@ return [
     
         'invalid_credentials' => 'Estas credenciales no coinciden con nuestros registros',
     
+        'alert_already_sent' => 'Toque dado',
+    
 ];

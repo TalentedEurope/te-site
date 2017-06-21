@@ -11,4 +11,6 @@ return [
     
         'login_btn' => 'Accedere',
     
+        'sign_in_features' => 'Sign in to access all features',
+    
 ];

@@ -21,6 +21,7 @@ class ValidatorController extends Controller
     // change this to a middleware?
     private function institutionOnly()
     {
+        $this->middleware('auth');
         if (!Auth::user() || !Auth::user()->isA('institution')) {
             App::abort(403, 'Unauthorized action.');
         }

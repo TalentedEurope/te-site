@@ -11,4 +11,6 @@ return [
     
         'login_btn' => 'Acceder',
     
+        'sign_in_features' => 'Inicia sesión para acceder ',
+    
 ];

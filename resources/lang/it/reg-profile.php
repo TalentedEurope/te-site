@@ -553,4 +553,6 @@ return [
     
         'invalid_credentials' => 'Credenziali non corrispondenti ai dati registrati',
     
+        'alert_already_sent' => 'Alert already sent',
+    
 ];
