@@ -29,12 +29,19 @@ class ProfileController extends SiteProfileController
         return User::where('is_filled', 1)->where('userable_type', Institution::class)->select('name')->get();
     }
 
+    public function getOwnProfile(Request $request)
+    {
+        $this->getUserProfile($request, Auth::user()->id);
+    }
+
     public function getUserProfile(Request $request, $id)
     {
         $user = User::findOrFail($id);
         $public = Auth::user() == null;
-        if (!$user->is_filled || !$user->visible || $user->banned) {
-            return response()->json(['error' => 'not_found'], 404);
+        if (!Auth::user() || Auth::user()->id != $id) {
+            if (!$user->is_filled || !$user->visible || $user->banned) {
+                return response()->json(['error' => 'not_found'], 404);
+            }
         }
         if ($user->isA('student')) {
             if ($user->userable->valid == 'validated') {
@@ -45,6 +52,7 @@ class ProfileController extends SiteProfileController
             foreach ($user->userable->languages as $lang) {
                 $lang->name = StudentLanguage::$languages[$lang->name]['name'];
             }
+            $user->userable->load('languages', 'experiences', 'training', 'studies');
         }
 
         if ($user->isA('company')) {
