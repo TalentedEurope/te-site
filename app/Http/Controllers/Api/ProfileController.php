@@ -50,9 +50,6 @@ class ProfileController extends SiteProfileController
                     $user->validator = $user->userable->validationRequest->validator->load('user');
                 }
             }
-            foreach ($user->userable->languages as $lang) {
-                $lang->name = StudentLanguage::$languages[$lang->name]['name'];
-            }
 
             $studyLevels = array();
             $studyFields = array();
