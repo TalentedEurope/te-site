@@ -44,6 +44,7 @@ class ProfileController extends SiteProfileController
             }
         }
         if ($user->isA('student')) {
+            $user->userable->load('languages', 'experiences', 'training', 'studies');
             if ($user->userable->valid == 'validated') {
                 if ($user->userable->validationRequest && $user->userable->validationRequest->validator) {
                     $user->validator = $user->userable->validationRequest->validator->load('user');
@@ -52,7 +53,35 @@ class ProfileController extends SiteProfileController
             foreach ($user->userable->languages as $lang) {
                 $lang->name = StudentLanguage::$languages[$lang->name]['name'];
             }
-            $user->userable->load('languages', 'experiences', 'training', 'studies');
+
+            $studyLevels = array();
+            $studyFields = array();
+            $languageLevels = array();
+            $languages = array();
+
+            foreach (StudentStudy::$fields as $item) {
+                $studyFields[$item] = trans('reg-profile.'.$item);
+            }
+            foreach (StudentStudy::$levels as $item) {
+                $studyLevels[$item] = trans('reg-profile.'.$item);
+            }
+            foreach (StudentLanguage::$levels as $item) {
+                $languageLevels[$item] = trans('reg-profile.'.$item);
+            }
+
+            foreach (StudentLanguage::$languages as $key => $item) {
+                $languages[$key] = $item['name'];
+            }
+
+            foreach ($user->userable->studies as $study) {
+                $study->field =  $studyFields[$study->field];
+                $study->level =  $studyLevels[$study->level];
+            }
+
+            foreach ($user->userable->languages as $language) {
+                $language->name =  $languages[$language->name];
+                $language->level =  $languageLevels[$language->level];
+            }
         }
 
         if ($user->isA('company')) {
