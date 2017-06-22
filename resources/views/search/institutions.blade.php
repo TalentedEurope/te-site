@@ -39,7 +39,7 @@
                   </p>
                   <ul class="validators list-inline">
                     @foreach ($institution->userable->validators as $validator)
-                        @if ($validator->enabled)
+                        @if ($validator->enabled && $validator->user && $validator->user->is_filled)
                         <li><a href="{{ route('get_profile', [$validator->user->getSlug(), $validator->user->id ] ) }}" class="btn btn-primary">{{ $validator->user->fullName }}</a></li>
                         @endif
                     @endforeach
@@ -51,6 +51,15 @@
                   <figure>
                       <img alt="{{ $institution->name }}" class="img-responsive" src="{{ asset(\App\Models\User::$photoPath.$institution->image) }}">
                   </figure>
+                    @if ($institution->userable->certificate != "")
+                      <p>
+                      <a href="{{ route('get_institution_certificate', [$institution->id]) }}" class="label label-success"><i class="fa fa-star"></i>
+                        {{ trans('students-validation.validated') }}
+                      </a>
+                      </p>
+                    @endif
+
+
               </div>
               @endif
         </li>
