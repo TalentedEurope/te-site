@@ -120,10 +120,10 @@
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
-                <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualStudents.docx') }}" target="_blank">{!! trans_choice('global.student', 2) !!}</a></li>
-                <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualCompanies.docx') }}" target="_blank">{!! trans_choice('global.company', 2) !!}</a></li>
-                <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualInstitutions.docx') }}" target="_blank">{!! trans_choice('global.institution', 2) !!}</a></li>
-                <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualReferees.docx') }}" target="_blank">{!! trans_choice('validators.validators', 2) !!}</a></li>
+                <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualStudents.pdf') }}" target="_blank">{!! trans_choice('global.student', 2) !!}</a></li>
+                <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualCompanies.pdf') }}" target="_blank">{!! trans_choice('global.company', 2) !!}</a></li>
+                <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualInstitutions.pdf') }}" target="_blank">{!! trans_choice('global.institution', 2) !!}</a></li>
+                <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualReferees.pdf') }}" target="_blank">{!! trans_choice('validators.validators', 2) !!}</a></li>
               </ul>
             </div>
           </li>
