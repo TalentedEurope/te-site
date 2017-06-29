@@ -11,7 +11,7 @@ return [
     
         'add_new' => 'Ajouter un nouvel évaluateur',
     
-        'send_invitation' => 'Envoyer l&apos;invitation à l&apos;évaluateur',
+        'send_invitation' => 'Envoyer l\'invitation à l\'évaluateur',
     
         'validating' => 'Validation',
     
@@ -19,7 +19,7 @@ return [
     
         'jump_to_results' => 'Aller aux résultats',
     
-        'you_are_validating_following_student' => 'Vous validez l&apos;étudiant suivant',
+        'you_are_validating_following_student' => 'Vous validez l\'étudiant suivant',
     
         'jump_to_validation' => 'Aller à la validation',
     
@@ -27,7 +27,7 @@ return [
     
         'valid' => 'Validé',
     
-        'student_passed_validation_successfully' => 'L&apos;étudiant a passé votre validation avec succès',
+        'student_passed_validation_successfully' => 'L\'étudiant a passé votre validation avec succès',
     
         'your_comments' => 'Vos commentaires',
     
@@ -35,19 +35,19 @@ return [
     
         'invalid' => 'Invalide',
     
-        'student_didnt_meet_criteria' => 'L&apos;étudiant n&apos;a pas rempli les critères',
+        'student_didnt_meet_criteria' => 'L\'étudiant n\'a pas rempli les critères',
     
-        'make_sure_you_have_reviewed_student' => 'Veuillez vous assurer d&apos;avoir soigneusement examiné le profil de l&apos;étudiant avant de le valider',
+        'make_sure_you_have_reviewed_student' => 'Veuillez vous assurer d\'avoir soigneusement examiné le profil de l\'étudiant avant de le valider',
     
         'this_student_is' => 'Cet étudiant est...',
     
         'finish_validation' => 'Terminer la validation',
     
-        'give_us_explanation_of_student_is_not_valid' => 'Veuillez nous donnez une explication de la raison pour laquelle l&apos;élève n&apos;est pas valide.',
+        'give_us_explanation_of_student_is_not_valid' => 'Veuillez nous donnez une explication de la raison pour laquelle l\'élève n\'est pas valide.',
     
-        'note_if_validation_is_passed_as_no_student' => 'Note: Si la validation est passée comme "Aucun étudiant", l&apos;étudiant sera en mesure de valider son profil à nouveau.',
+        'note_if_validation_is_passed_as_no_student' => 'Note: Si la validation est passée comme "Aucun étudiant", l\'étudiant sera en mesure de valider son profil à nouveau.',
     
-        'user_hasnt_complete_filling_its_profile' => 'Profil inachevé. Jusqu&apos;à ce que ce processus soit terminé, vous ne pouvez pas valider un étudiant',
+        'user_hasnt_complete_filling_its_profile' => 'Profil inachevé. Jusqu\'à ce que ce processus soit terminé, vous ne pouvez pas valider un étudiant',
     
         'manage_validators' => ' Rapport d évaluateurs ',
     
@@ -55,31 +55,31 @@ return [
     
         'invites_pending' => 'Invité en attente',
     
-        'date_sent' => 'Date d&apos;envoi',
+        'date_sent' => 'Date d\'envoi',
     
         'note_invites_are_only_valid_14_days' => 'Remarque: les invitations ne sont valables que 14 jours après leur envoi et elles disparaîtront ensuite de cette liste',
     
         'cancel' => 'Annuler ',
     
-        'cannot_change_institution' => 'Impossible de changer d&apos;établissement',
+        'cannot_change_institution' => 'Impossible de changer d\'établissement',
     
-        'invitation_is_not_valid_or_you_accepted_it' => 'Soit votre invitation n&apos;est plus valide, soit vous l&apos;avez déjà acceptée',
+        'invitation_is_not_valid_or_you_accepted_it' => 'Soit votre invitation n\'est plus valide, soit vous l\'avez déjà acceptée',
     
-        'changed_institution_successfully' => 'Le changement d&apos;institution a bien été pris en compte',
+        'changed_institution_successfully' => 'Le changement d\'institution a bien été pris en compte',
     
         'youll_receive_notifications_from' => 'A partir de maintenant, vous recevrez des notifications de validation',
     
-        'cannot_complete_invitation' => 'Impossible devalider l&apos;invitation',
+        'cannot_complete_invitation' => 'Impossible devalider l\'invitation',
     
         'no_alerts_found' => 'Aucune alerte trouvé',
     
-        'study_level' => 'Niveau d&apos;études',
+        'study_level' => 'Niveau d\'études',
     
         'when_it_was_sent' => 'Quand cela a été envoyé?',
     
         'no_referees' => 'Aucuns évaluateurs',
     
-        'remove_referee' => 'Supprimer l&apos;évaluateur',
+        'remove_referee' => 'Supprimer l\'évaluateur',
     
         'do_you_want_to_remove_referee' => 'Voulez-vous supprimer %s de votre établissement?',
     
@@ -87,19 +87,19 @@ return [
     
         'removing' => 'Suppression',
     
-        'validation_was_removed' => 'La validation a été retirée parce que vous avez indiqué que %s n&apos;était pas un étudiant de cette institution',
+        'validation_was_removed' => 'La validation a été retirée parce que vous avez indiqué que %s n\'était pas un étudiant de cette institution',
     
         'validation_complete' => '%s validation finalisée',
     
-        'cannot_invite' => 'Impossible d&apos;inviter, ce courrier électronique est enregistré sur un autre type d&apos;utilisateur ou il a déjà une invitation en attente de cette institution',
+        'cannot_invite' => 'Impossible d\'inviter, ce courrier électronique est enregistré sur un autre type d\'utilisateur ou il a déjà une invitation en attente de cette institution',
     
-        'send_invitation_to' => 'Envoyer l&apos;invitation',
+        'send_invitation_to' => 'Envoyer l\'invitation',
     
-        'cannot_find_user' => 'L&apos;utilisateur ne peut être trouvé',
+        'cannot_find_user' => 'L\'utilisateur ne peut être trouvé',
     
-        'deleted_invitation_successfully' => 'La supression de l&apos;invitation a bien été prise en compte',
+        'deleted_invitation_successfully' => 'La supression de l\'invitation a bien été prise en compte',
     
-        'cannot_find_invitation_to_delete' => 'L&apos;invitation à supprimer n&apos;a pas été trouvé, pouvez vous réeessayer?',
+        'cannot_find_invitation_to_delete' => 'L\'invitation à supprimer n\'a pas été trouvé, pouvez vous réeessayer?',
     
         'comment' => 'Commentaires',
     

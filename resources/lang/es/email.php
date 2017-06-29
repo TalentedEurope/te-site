@@ -71,7 +71,7 @@ return [
     
         'regards' => 'Saludos',
     
-        'disclaimer_plain' => 'Exención de responsabilidad: Este mensaje se dirige exclusivamente a su dirección y puede contener información confidencial y protegida por el secreto profesional. Si usted no es el destinatario indicado, queda notificado de que cualquier divulgación, copia o divulgación de esta comunicación está estrictamente prohibida por la ley. Si este mensaje se ha recibido por error, por favor notifique inmediatamente por correo electrónico a% s y eliminarlo.&apos;',
+        'disclaimer_plain' => 'Exención de responsabilidad: Este mensaje se dirige exclusivamente a su dirección y puede contener información confidencial y protegida por el secreto profesional. Si usted no es el destinatario indicado, queda notificado de que cualquier divulgación, copia o divulgación de esta comunicación está estrictamente prohibida por la ley. Si este mensaje se ha recibido por error, por favor notifique inmediatamente por correo electrónico a% s y eliminarlo.\'',
     
         'profile_not_filled_subject' => 'Su perfil no está completo',
     

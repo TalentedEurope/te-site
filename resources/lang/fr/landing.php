@@ -21,15 +21,15 @@ return [
     
         'what_is_cta' => '<strong>Découvrir plus.</strong> Recevoir la brochure.',
     
-        'what_is_text_1' => 'Et si vous aviez l&apos;opportunité d&apos;embaucher les meilleurs étudiants d&apos;Europe?
+        'what_is_text_1' => 'Et si vous aviez l\'opportunité d\'embaucher les meilleurs étudiants d\'Europe?
 
-Etudiants, et si vous aviez la possibilité de faire partie de l&apos;élite en Europe? 
+Etudiants, et si vous aviez la possibilité de faire partie de l\'élite en Europe? 
 
 Des milliers d´entreprises auront accès direct à vos coordonnées. 
 
-Obtenez les meilleurs notes pour accéder à un plus grand choix d&apos;offres d&apos;emploi',
+Obtenez les meilleurs notes pour accéder à un plus grand choix d\'offres d\'emploi',
     
-        'what_is_text_2' => 'C&apos;est ce que l&apos;Europe des talents vous offre.
+        'what_is_text_2' => 'C\'est ce que l\'Europe des talents vous offre.
 
 Une vitrine du classement des meilleurs étudiants en Europe.  Une idée simple qui relie des employeurs et des étudiants. Le point de rencontre de l´excellence.',
     
@@ -45,7 +45,7 @@ Une vitrine du classement des meilleurs étudiants en Europe.  Une idée simple 
     
         'subscribe_text_question' => 'Recevez des nouvelles sur Talented Europe par mail',
     
-        'meta_description' => 'Projet co-financé par le programme Erasmus Plus qui permet de faciliter l&apos; accès des excellents étudiants  à l&apos;emploi et aux stages en Europe',
+        'meta_description' => 'Projet co-financé par le programme Erasmus Plus qui permet de faciliter l\' accès des excellents étudiants  à l\'emploi et aux stages en Europe',
     
         'coming_soon' => 'le contenu sera bientot ajouté',
     
@@ -65,23 +65,23 @@ Une vitrine du classement des meilleurs étudiants en Europe.  Une idée simple 
     
         'no_students' => 'Aucun étudiant disponible',
     
-        'join_talented_europe_today' => 'Rejoignez l&apos;Europe talentueuse dès aujourd&apos;hui!',
+        'join_talented_europe_today' => 'Rejoignez l\'Europe talentueuse dès aujourd\'hui!',
     
-        'talented_for_students' => '<strong> Pour les étudiants </ strong> - Europe talentueuse améliorera votre employabilité avec l&apos;aval de vos tuteurs et vous mettra en contact avec les employeurs en Europe pour des stages ou des emplois de première carrière.',
+        'talented_for_students' => '<strong> Pour les étudiants </ strong> - Europe talentueuse améliorera votre employabilité avec l\'aval de vos tuteurs et vous mettra en contact avec les employeurs en Europe pour des stages ou des emplois de première carrière.',
     
-        'talented_for_employers' => '<strong> Pour les étudiants </strong> - Europe talentueuse améliorera votre employabilité <strong> Pour les employeurs </strong> - Europe talentueuse vous liera avec de jeunes étudiants talentueux en Europe et vous aidera à trouver la bonne personne qui peut contribuer à l&apos;organisation de votre entreprise Réussir avec de vrais talents ayant les compétences que vous recherchez.',
+        'talented_for_employers' => '<strong> Pour les étudiants </strong> - Europe talentueuse améliorera votre employabilité <strong> Pour les employeurs </strong> - Europe talentueuse vous liera avec de jeunes étudiants talentueux en Europe et vous aidera à trouver la bonne personne qui peut contribuer à l\'organisation de votre entreprise Réussir avec de vrais talents ayant les compétences que vous recherchez.',
     
-        'go_to_app' => 'Aller à l&apos;application',
+        'go_to_app' => 'Aller à l\'application',
     
-        'what_is_text_1_txt' => 'Et si vous aviez l&apos;opportunité d&apos;embaucher les meilleurs étudiants d&apos;Europe?
+        'what_is_text_1_txt' => 'Et si vous aviez l\'opportunité d\'embaucher les meilleurs étudiants d\'Europe?
 
-Etudiants, et si vous aviez la possibilité de faire partie de l&apos;élite en Europe? 
+Etudiants, et si vous aviez la possibilité de faire partie de l\'élite en Europe? 
 
 Des milliers d´entreprises auront accès direct à vos coordonnées. 
 
-Obtenez les meilleurs notes pour accéder à un plus grand choix d&apos;offres d&apos;emploi',
+Obtenez les meilleurs notes pour accéder à un plus grand choix d\'offres d\'emploi',
     
-        'what_is_text_2_txt' => 'C&apos;est ce que l&apos;Europe des talents vous offre.
+        'what_is_text_2_txt' => 'C\'est ce que l\'Europe des talents vous offre.
 
 Une vitrine du classement des meilleurs étudiants en Europe.  Une idée simple qui relie des employeurs et des étudiants. Le point de rencontre de l´excellence.',
     
