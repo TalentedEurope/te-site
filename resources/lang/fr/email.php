@@ -27,7 +27,7 @@ return [
     
         'institutionRemoved.line_2' => '%s vous a exclut de son institution dans Talented Europe, si vous avez été exclu par erreur,contactez- les, pour que la situaion puisse etre résolue',
     
-        'institutionRemoved.line_3' => 'Merci d&apos; utiliser notre application',
+        'institutionRemoved.line_3' => 'Merci d\' utiliser notre application',
     
         'inviteCreated_subject_1' => '%s vous a invitée comme évaluateur dans Talented Europe',
     
@@ -65,16 +65,16 @@ return [
     
         'validationsPending_line_3' => 'Cliquez sur le bouton suivant pour vous connecter et voir votre panneau',
     
-        'disclaimer' => '<Strong> AVERTISSEMENT </ strong>: Ce message est destiné exclusivement à son adresse et peut contenir des informations <strong> CONFIDENTIEL </ strong>, et protégés par le secret professionnel. Si vous n&apos;êtes pas le destinataire nous vous informons que toute diffusion, copie ou la divulgation de cette communication est strictement interdite par la loi. Si ce message a été reçu par erreur, s&apos;il vous plaît nous en informer immédiatement par e-mail à (% s) et le supprimer.',
+        'disclaimer' => '<Strong> AVERTISSEMENT </ strong>: Ce message est destiné exclusivement à son adresse et peut contenir des informations <strong> CONFIDENTIEL </ strong>, et protégés par le secret professionnel. Si vous n\'êtes pas le destinataire nous vous informons que toute diffusion, copie ou la divulgation de cette communication est strictement interdite par la loi. Si ce message a été reçu par erreur, s\'il vous plaît nous en informer immédiatement par e-mail à (% s) et le supprimer.',
     
         'hello' => 'salut!',
     
         'regards' => 'Cordialement',
     
-        'disclaimer_plain' => 'AVERTISSEMENT: Ce message est destiné exclusivement à son adresse et peut contenir des informations confidentielles et protégées par le secret professionnel. Si vous n&apos;êtes pas le destinataire nous vous informons que toute diffusion, copie ou la divulgation de cette communication est strictement interdite par la loi. Si ce message a été reçu par erreur, s&apos;il vous plaît nous en informer immédiatement par e-mail à% s et le supprimer.',
+        'disclaimer_plain' => 'AVERTISSEMENT: Ce message est destiné exclusivement à son adresse et peut contenir des informations confidentielles et protégées par le secret professionnel. Si vous n\'êtes pas le destinataire nous vous informons que toute diffusion, copie ou la divulgation de cette communication est strictement interdite par la loi. Si ce message a été reçu par erreur, s\'il vous plaît nous en informer immédiatement par e-mail à% s et le supprimer.',
     
         'profile_not_filled_subject' => 'Votre profil est pas complet',
     
-        'profile_not_filled_line_1' => 'Nous avons vu que vous le profil est pas complet, donc nous voulions vous rappeler que si vous remplissez toutes les informations requises, vous ne serez pas en mesure d&apos;accéder à toutes les fonctionnalités de notre application.',
+        'profile_not_filled_line_1' => 'Nous avons vu que vous le profil est pas complet, donc nous voulions vous rappeler que si vous remplissez toutes les informations requises, vous ne serez pas en mesure d\'accéder à toutes les fonctionnalités de notre application.',
     
 ];

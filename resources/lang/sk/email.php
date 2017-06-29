@@ -71,7 +71,7 @@ return [
     
         'regards' => 'S pozdravom',
     
-        'disclaimer_plain' => 'VYHLÁSENIE: Táto správa je určená výhradne pre svoju adresu a môže obsahovať informácie, ktoré sú dôverné a sú chránené profesijným tajomstvom. Ak nie ste zamýšľaným príjemcom, ktorý týmto upozornení, že akékoľvek šírenie, kopírovanie alebo zverejnenie tohto oznámenia je prísne zakázané zákonom. Ak bola túto správu dostali omylom, bezodkladne nás prostredníctvom e-mailu na% s a odstráňte ju. &apos;',
+        'disclaimer_plain' => 'VYHLÁSENIE: Táto správa je určená výhradne pre svoju adresu a môže obsahovať informácie, ktoré sú dôverné a sú chránené profesijným tajomstvom. Ak nie ste zamýšľaným príjemcom, ktorý týmto upozornení, že akékoľvek šírenie, kopírovanie alebo zverejnenie tohto oznámenia je prísne zakázané zákonom. Ak bola túto správu dostali omylom, bezodkladne nás prostredníctvom e-mailu na% s a odstráňte ju. \'',
     
         'profile_not_filled_subject' => 'Váš profil nie je úplná',
     

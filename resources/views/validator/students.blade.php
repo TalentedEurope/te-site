@@ -9,7 +9,7 @@
     <h1 class="page-title">{!! trans('validators.my_students') !!}</h1>
 
     <p>
-      <a href="{{ URL::asset('docs/'.App::getLocale().'/ManualReferees.docx') }}" target="_blank">{!! trans('global.download_manual') !!}</a>
+      <a href="{{ URL::asset('docs/'.App::getLocale().'/ManualReferees.pdf') }}" target="_blank">{!! trans('global.download_manual') !!}</a>
     </p>
 
     @if (!Auth::user()->userable->canValidate() && Auth::user()->userable->institution)
