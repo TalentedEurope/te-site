@@ -113,6 +113,20 @@
           <li><a href="{{ url('/cookies') }}">{!! trans('global.cookies') !!}</a></li>
           <li><a href="{{ url('/privacy-policy') }}">{!! trans('global.privacy_policy') !!}</a></li>
           <li><a href="{{ url('/faq') }}">{!! trans('global.faq_menu') !!}</a></li>
+          <li>
+            <div class="dropdown btn-group">
+              <a href="" data-toggle="dropdown">
+                {!! trans('global.manuals') !!}
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualStudents.docx') }}" target="_blank">{!! trans_choice('global.student', 2) !!}</a></li>
+                <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualCompanies.docx') }}" target="_blank">{!! trans_choice('global.company', 2) !!}</a></li>
+                <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualInstitutions.docx') }}" target="_blank">{!! trans_choice('global.institution', 2) !!}</a></li>
+                <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualReferees.docx') }}" target="_blank">{!! trans_choice('validators.validators', 2) !!}</a></li>
+              </ul>
+            </div>
+          </li>
           <li><a href="mailto:{{ env('PUBLIC_MAIL_ADDRESS','info@talentedeurope.org') }}">{!! trans('global.contact_us') !!}</a></li>
         </ul>
         <ul class="navigation">

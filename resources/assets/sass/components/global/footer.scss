@@ -18,18 +18,34 @@
             font-size: 14px;
         }
 
+        li a {
+            text-decoration: none;
+        }
+
         li a:hover {
             text-decoration: none;
             color: darken($dark-blue,10%);
         }
 
-        li a:after {
+        & > li:after {
             content: " | ";
             color: $brand-primary;
         }
 
-        li:last-child a:after {
+        & > li:last-child:after {
             content: "";
+        }
+
+        .dropdown {
+            .caret {
+                margin-top: -1px;
+            }
+        }
+
+        .dropdown-menu {
+            li {
+                width: 100%;
+            }
         }
 
     }

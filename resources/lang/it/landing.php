@@ -65,4 +65,8 @@ return [
     
         'go_to_app' => 'Passare all&apos;app',
     
+        'what_is_text_1_txt' => 'Potete immaginare la possibilità di poter assumere i migliori studenti di qualsiasi paese d&apos;Europa? Vorreste far parte di un&apos;élite studentesca in Europa? Migliaia di compagnie avranno un accesso diretto alle vostre informazioni di contatto; migliore sarà la vostra valutazione, maggiori saranno le vostre opportunità di trovare un buon lavoro.',
+    
+        'what_is_text_2_txt' => 'Questa è l’offerta che Talented Europe ti propone. Una vetrina in cui vengono messi in mostra i migliori studenti di tutta Europa. Un’idea semplice che unisce i datori di lavoro agli studenti. Il punto d’incontro per eccellenza.',
+    
 ];

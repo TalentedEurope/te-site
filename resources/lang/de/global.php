@@ -71,13 +71,31 @@ return [
     
         'institution_plural' => 'Institutionen',
     
-        'student_plural' => 'Studenten/Azubis',
+        'student_plural' => 'Studenten',
     
         'company' => 'Unternehmen|Unternehmen',
     
         'institution' => 'Institution|Institutionen',
     
-        'student' => 'Student|Studenten|Azubis',
+        'student' => 'Student|Studenten',
+    
+        'company_singular' => 'Unternehmen',
+    
+        'companies_singular' => 'Unternehmen',
+    
+        'companies' => 'Unternehmen',
+    
+        'institution_singular' => 'Institution',
+    
+        'institutions_singular' => 'Institution',
+    
+        'institutions' => 'Institutionen',
+    
+        'student_singular' => 'Student',
+    
+        'students_singular' => 'Student',
+    
+        'students' => 'Studenten',
     
         'more_btn' => 'Mehr erfahren',
     
@@ -578,5 +596,13 @@ return [
         'login_fb' => 'Einloggen mit Facebook',
     
         'login_tw' => 'Einloggen mit Twitter',
+    
+        'about_us' => 'About us',
+    
+        'slide_to' => 'Slide to advance',
+    
+        'manuals' => '',
+    
+        'download_manual' => '',
     
 ];
