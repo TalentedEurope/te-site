@@ -79,6 +79,24 @@ return [
     
         'student' => 'Študent|študenti',
     
+        'company_singular' => 'Spoločnosť',
+    
+        'companies_singular' => 'Spoločnosť',
+    
+        'companies' => 'Spoločnosti',
+    
+        'institution_singular' => 'Inštitúcia',
+    
+        'institutions_singular' => 'Inštitúcia',
+    
+        'institutions' => 'Inštitúcie',
+    
+        'student_singular' => 'Študent',
+    
+        'students_singular' => 'Študent',
+    
+        'students' => 'Študenti',
+    
         'more_btn' => 'Zobraz viac',
     
         'home' => 'Domovská stránka',
@@ -565,7 +583,7 @@ return [
     
         'ZW' => 'Zimbabve',
     
-        'contact_us' => 'kontaktieren Sie uns',
+        'contact_us' => 'Kontaktieren Sie uns',
     
         'faq' => 'Často kladené otázky',
     
@@ -578,5 +596,13 @@ return [
         'login_fb' => 'Prihlásenie cez Facebook',
     
         'login_tw' => 'Prihlásiť pomocou Twitter',
+    
+        'about_us' => 'About us',
+    
+        'slide_to' => 'Slide to advance',
+    
+        'manuals' => '',
+    
+        'download_manual' => '',
     
 ];

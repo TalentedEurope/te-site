@@ -115,7 +115,7 @@ return [
     
         'student_study_to' => 'A',
     
-        'student_training' => 'Prácticas',
+        'student_training' => 'Cursos',
     
         'upload_btn' => 'Subir',
     
@@ -550,5 +550,9 @@ return [
         'institution_hei_his' => 'Escuela secundaria',
     
         'required_cert_warning' => 'Tenga en cuenta: si no cargar el certificado de autenticidad de la institución no aparecerá en la lista de instituciones arbitrales',
+    
+        'invalid_credentials' => 'Estas credenciales no coinciden con nuestros registros',
+    
+        'alert_already_sent' => 'Toque dado',
     
 ];

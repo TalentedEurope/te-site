@@ -65,4 +65,8 @@ return [
     
         'go_to_app' => 'Prejdi na aplikáciu',
     
+        'what_is_text_1_txt' => 'Viete si predstaviť možnosť prijať do zamestnania najlepších študentov z ktorejkoľvek európskej krajiny? Chcete byť súčasťou sektoru elitných európskych študentov? Tisícky spoločností budú mať priamy pístup k informáciám o vás, a čím lepšie hodnotenie získate, tým väčšie možnosti máte získať skvelú prácu.',
+    
+        'what_is_text_2_txt' => 'Presne to ponúka Talented Europe. Výklad plný najlepších študentov v Európe. Jednoduchú myšlienku, ktorá spája zamestnávateľov a študentov. Miesto stretnutia tých najlepších .',
+    
 ];

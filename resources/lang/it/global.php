@@ -79,6 +79,24 @@ return [
     
         'student' => 'Studente|Studenti',
     
+        'company_singular' => 'Impresa',
+    
+        'companies_singular' => 'Impresa',
+    
+        'companies' => 'Imprese ',
+    
+        'institution_singular' => 'Istituzione',
+    
+        'institutions_singular' => 'Istituzione',
+    
+        'institutions' => 'Istituzioni',
+    
+        'student_singular' => 'Studente',
+    
+        'students_singular' => 'Studente',
+    
+        'students' => 'Studenti',
+    
         'more_btn' => 'Scopri di più',
     
         'home' => 'Home page',
@@ -578,5 +596,13 @@ return [
         'login_fb' => 'Accedi utilizzando Facebook',
     
         'login_tw' => 'Accedi usando Twitter',
+    
+        'about_us' => 'About us',
+    
+        'slide_to' => 'Slide to advance',
+    
+        'manuals' => '',
+    
+        'download_manual' => '',
     
 ];

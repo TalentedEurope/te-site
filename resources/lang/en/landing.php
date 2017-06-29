@@ -41,7 +41,7 @@ return [
     
         'coming_soon' => 'Coming Soon',
     
-        'search_placeholder' => 'What are you looking for',
+        'search_placeholder' => 'What are you looking for?',
     
         'search_where' => 'Where',
     
@@ -64,5 +64,9 @@ return [
         'talented_for_employers' => '<strong>For employers</strong> - Talented Europe will link you with talented young students across Europe and help you find the right person who can contribute to your organisation’s success with the special talents and skills that you are looking for.',
     
         'go_to_app' => 'Go to application',
+    
+        'what_is_text_1_txt' => 'Can you imagine being able to hire the best students in whichever European country? Would you like to be part of the elite student sector in Europe? Thousands of companies will have direct access to your contact information, and the better marks you get the greater choices you will have to get a nice job.',
+    
+        'what_is_text_2_txt' => 'That is what Talented Europe offers. A showcase with a ranking of the best students in Europe. A simple idea which joins employers and students. The meeting point of excellence.',
     
 ];

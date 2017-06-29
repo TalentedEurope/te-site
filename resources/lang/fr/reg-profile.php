@@ -560,4 +560,8 @@ Sur',
     
         'required_cert_warning' => 'S&apos;il vous plaît noter: si vous ne téléchargez pas le certificat d&apos;authenticité de l&apos;institution ne sera pas apparaître sur la liste des institutions d&apos;arbitrage',
     
+        'invalid_credentials' => 'Ces identifiants ne correspondent pas à nos enregistrements',
+    
+        'alert_already_sent' => 'Alert already sent',
+    
 ];

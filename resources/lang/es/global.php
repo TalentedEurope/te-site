@@ -79,6 +79,24 @@ return [
     
         'student' => 'Estudiante|Estudiantes',
     
+        'company_singular' => 'Empresa',
+    
+        'companies_singular' => 'Empresa',
+    
+        'companies' => 'Empresas',
+    
+        'institution_singular' => 'Institución',
+    
+        'institutions_singular' => 'Institución',
+    
+        'institutions' => 'Instituciones',
+    
+        'student_singular' => 'Estudiante',
+    
+        'students_singular' => 'Estudiante',
+    
+        'students' => 'Estudiantes',
+    
         'more_btn' => 'Ver más',
     
         'home' => 'Inicio',
@@ -578,5 +596,13 @@ return [
         'login_fb' => 'Acceder con Facebook',
     
         'login_tw' => 'Acceder con twitter',
+    
+        'about_us' => 'Acerca de',
+    
+        'slide_to' => 'Desliza para avanzar',
+    
+        'manuals' => 'Manuales',
+    
+        'download_manual' => 'Descargar manual',
     
 ];

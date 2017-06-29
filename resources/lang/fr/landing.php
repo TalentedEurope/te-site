@@ -73,4 +73,16 @@ Une vitrine du classement des meilleurs étudiants en Europe.  Une idée simple 
     
         'go_to_app' => 'Aller à l&apos;application',
     
+        'what_is_text_1_txt' => 'Et si vous aviez l&apos;opportunité d&apos;embaucher les meilleurs étudiants d&apos;Europe?
+
+Etudiants, et si vous aviez la possibilité de faire partie de l&apos;élite en Europe? 
+
+Des milliers d´entreprises auront accès direct à vos coordonnées. 
+
+Obtenez les meilleurs notes pour accéder à un plus grand choix d&apos;offres d&apos;emploi',
+    
+        'what_is_text_2_txt' => 'C&apos;est ce que l&apos;Europe des talents vous offre.
+
+Une vitrine du classement des meilleurs étudiants en Europe.  Une idée simple qui relie des employeurs et des étudiants. Le point de rencontre de l´excellence.',
+    
 ];

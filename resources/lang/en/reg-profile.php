@@ -551,4 +551,8 @@ return [
     
         'required_cert_warning' => 'Please note: if you don&apos;t upload the certificate of authenticity the institution won&apos;t appear on the list of refereeing institutions',
     
+        'invalid_credentials' => 'These credentials do not match our records',
+    
+        'alert_already_sent' => 'Alert already sent',
+    
 ];

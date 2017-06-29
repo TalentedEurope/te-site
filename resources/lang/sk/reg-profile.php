@@ -552,4 +552,8 @@ Obchodná a poradenská činnosť',
     
         'required_cert_warning' => 'Poznámka: ak nechcete nahrať certifikát pravosti bude orgán na zozname soudcování inštitúcií neobjaví',
     
+        'invalid_credentials' => 'Prihlasovacie údaje nie sú správne',
+    
+        'alert_already_sent' => 'Alert already sent',
+    
 ];

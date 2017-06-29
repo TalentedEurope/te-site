@@ -551,4 +551,8 @@ return [
     
         'required_cert_warning' => 'Si prega di notare: se non si carica il certificato di autenticità dell&apos;istituto non appare nella lista delle istituzioni arbitrali',
     
+        'invalid_credentials' => 'Credenziali non corrispondenti ai dati registrati',
+    
+        'alert_already_sent' => 'Alert already sent',
+    
 ];
