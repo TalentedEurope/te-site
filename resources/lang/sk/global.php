@@ -69,7 +69,7 @@ return [
     
         'company_plural' => 'Spoločnosti',
     
-        'institution_plural' => 'Inštitúcie',
+        'institution_plural' => 'akademické inštitúcie',
     
         'student_plural' => 'Študenti',
     
@@ -85,11 +85,11 @@ return [
     
         'companies' => 'Spoločnosti',
     
-        'institution_singular' => 'Inštitúcia',
+        'institution_singular' => 'akademické inštitúcie',
     
-        'institutions_singular' => 'Inštitúcia',
+        'institutions_singular' => 'akademické inštitúcie',
     
-        'institutions' => 'Inštitúcie',
+        'institutions' => 'akademické inštitúcie',
     
         'student_singular' => 'Študent',
     
