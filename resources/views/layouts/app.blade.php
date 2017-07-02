@@ -122,7 +122,7 @@
               <ul class="dropdown-menu">
                 <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualStudents.pdf') }}" target="_blank">{!! trans_choice('global.student', 2) !!}</a></li>
                 <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualCompanies.pdf') }}" target="_blank">{!! trans_choice('global.company', 2) !!}</a></li>
-                <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualInstitutions.pdf') }}" target="_blank">{!! trans_choice('global.institution', 2) !!}</a></li>
+                <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualInstitutions.pdf') }}" target="_blank">{!! trans('global.institution_plural') !!}</a></li>
                 <li><a href="{{ URL::asset('docs/'.App::getLocale().'/ManualReferees.pdf') }}" target="_blank">{!! trans_choice('validators.validators', 2) !!}</a></li>
               </ul>
             </div>

@@ -48,7 +48,7 @@
 
             <div class="radio-check">
               <input id="Institution" type="radio" name="type" value="institution" @if (old('type') == "institution" || isset($request) ) checked @endif>
-              <label for="Institution" data-toggle="tooltip" data-placement="bottom" title="{!! trans_choice('global.institution', 1) !!}"><i class="fa fa-university" aria-hidden="true"></i></label>
+              <label for="Institution" data-toggle="tooltip" data-placement="bottom" title="{!! trans('global.institution_singular') !!}"><i class="fa fa-university" aria-hidden="true"></i></label>
             </div>
 
             <div class="radio-check" @if (isset($request)) style="display:none" @endif>
