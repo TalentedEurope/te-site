@@ -10,7 +10,7 @@
         <div>
           <input type="hidden" value="{{ $invite->id }}" name="invite">
 
-          <input id="institution" readonly="true" required name="institution" class="{{ $errors->has('email') ? ' has-error' : '' }}" type="text" placeholder="{!! trans_choice('global.institution', 1) !!}" value="{{ $invite->institution->user->name }}">
+          <input id="institution" readonly="true" required name="institution" class="{{ $errors->has('email') ? ' has-error' : '' }}" type="text" placeholder="{!! trans('global.institution_singular') !!}" value="{{ $invite->institution->user->name }}">
           @if ($errors->has('name'))
           <span class="help-block">
             <strong>{{ $errors->first('name') }}</strong>
