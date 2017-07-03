@@ -19,10 +19,14 @@ class ValidationController extends Controller
 
     public function __construct()
     {
-        if (!Auth::user() || !Auth::user()->isA('validator')) {
-            App::abort(403, 'Unauthorized action.');
-        }
+        $this->middleware(['auth',function ($request, $next) {
+            if (!Auth::user() || !Auth::user()->isA('validator')) {
+                App::abort(403, 'Unauthorized action.');
+            }
+            return $next($request);
+        }]);
     }
+
 
     public function index(Request $request)
     {

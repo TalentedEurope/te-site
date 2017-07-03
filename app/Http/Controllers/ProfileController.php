@@ -15,6 +15,10 @@ use App\Models\StudentExperience;
 use App\Models\PersonalSkill;
 use App\Models\ProfessionalSkill;
 use App\Notifications\ValidatorRequested;
+use App\Notifications\StudentVisited;
+use App\Models\Alert;
+use Carbon\Carbon;
+
 use App\Http\Controllers\Api\LoginController;
 use App;
 use Auth;
@@ -73,6 +77,20 @@ class ProfileController extends Controller
         if (!$user->is_filled || !$user->visible || $user->banned) {
             App::abort(404, trans('error-page.not_found'));
         }
+        if ($user->isA('student') && Auth::user() && Auth::user()->isA('company') && $user->push_id != "") {
+            $alerts = array_flatten(Alert::withTrashed()->where('origin_id', Auth::User()->id)->where('target_id', $user->id)->whereDate('created_at', '>', Carbon::now()->subDays(env("MIN_ALERT_DAYS", 1)))->select('target_id')->get()->toArray());
+            if (sizeof($alerts) == 0) {
+                $alert = new Alert();
+                $alert->origin_id = Auth::User()->id;
+                $alert->target_id = $user->id;
+                $alert->save();
+                // Students don't have access to Alerts, but we keep track of them. So we soft delete it, to avoid issues with the notification systems.
+                $alert->delete();
+                $user->notify(new StudentVisited($user, Auth::user()));
+            }
+        }
+
+
         return $this->showProfile($user, $public);
     }
 

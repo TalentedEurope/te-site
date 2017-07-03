@@ -103,8 +103,12 @@
                 </li>
               @endif
             </ul>
-          </div>
 
+          </div>
+        @if (Auth::user() && $company->isAlertableBy(Auth::user()))
+          <hr>
+          <!-- TODO add the alert button here -->
+        @endif
         </div>
       </div>
     </div>

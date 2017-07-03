@@ -16,10 +16,10 @@ class Institution extends Model
             'type' => 'sometimes|required|in:'.implode(',', Institution::$types),
             'pic' => 'numeric',
             'fiscal_id' => 'sometimes|required|alpha_dash',
-            'certificate' => 'sometimes|required|mimes:pdf,jpg,png'
+            'certificate' => 'sometimes|mimes:pdf,jpg,png'
         );
         if ($dbCheck) {
-            $filter['certificate'] = 'sometimes|required';
+            $filter['certificate'] = '';
         }
 
         if ($keyOnly) {

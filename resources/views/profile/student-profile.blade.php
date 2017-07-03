@@ -54,7 +54,8 @@
                       'id' => $student->validationRequest->validator->user->id
                     ]) }}">
                   {{ $student->validationRequest->validator->user->name }} {{ $student->validationRequest->validator->user->surname }}
-                </a> on {{ Carbon\Carbon::parse($student->validationRequest->updated_at)->format('d/m/Y') }} </span></p>
+                </a> | <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+ {{ Carbon\Carbon::parse($student->validationRequest->updated_at)->format('d/m/Y') }} </span></p>
             @endif
 
           @else

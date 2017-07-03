@@ -8,6 +8,7 @@ class Validator extends Model
 {
     public $timestamps = false;
     protected $fillable = ['department', 'position'];
+    protected $hidden = ['validationRequest'];
 
 
     public static function rules($institution = null, $keyOnly = false)

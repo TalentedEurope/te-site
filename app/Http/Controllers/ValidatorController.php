@@ -18,6 +18,12 @@ use Response;
 
 class ValidatorController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth')->only(['index']) ;
+    }
+
     // change this to a middleware?
     private function institutionOnly()
     {

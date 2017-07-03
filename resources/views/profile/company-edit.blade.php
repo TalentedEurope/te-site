@@ -88,8 +88,10 @@
                 <span class="help-block">
                     <strong>{{ $errors->first('image') }}</strong>
                 </span> @endif
-                <label for="image">{!! trans('reg-profile.company_logo') !!}</label>
-                <input type="file" id="image" name="image" accept="image/*">
+                <div class="hide-from-app">
+                  <label for="image">{!! trans('reg-profile.company_logo') !!}</label>
+                  <input type="file" id="image" name="image" accept="image/*">
+                </div>
               </div>
 
               <hr class="separator">
@@ -131,6 +133,12 @@
               <select-form code="country" label="{!! trans('reg-profile.country') !!}" placeholder=" - {!! trans('reg-profile.country') !!} - " required
                   values='{!! json_encode($countries, JSON_HEX_APOS) !!}' value="{{ old('country', $user->country) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></select-form>
+
+              <hr class="separator">
+
+              <text-area-form code="description" label="{!! trans('reg-profile.description') !!} ({!! trans('reg-profile.input_max_characters') !!} 300 characters)"
+                  placeholder="{!! trans('reg-profile.description') !!} ({!! trans('reg-profile.input_max_characters') !!} 300)."
+                  value="{{ old('description', $company->description) }}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-area-form>
 
               <hr class="separator">
 

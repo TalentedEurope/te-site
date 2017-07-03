@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use JWTAuth;
 
 class Authenticate
 {
@@ -17,6 +18,14 @@ class Authenticate
      */
     public function handle($request, Closure $next, $guard = null)
     {
+        if ($request->has('token')) {
+            $user = JWTAuth::parseToken()->authenticate();
+            if ($user) {
+                $request->session()->put('app', true);
+                Auth::login($user);
+            }
+        }
+
         if (Auth::guard($guard)->guest()) {
             if ($request->ajax() || $request->wantsJson()) {
                 return response('Unauthorized.', 401);

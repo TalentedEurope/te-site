@@ -18,7 +18,8 @@
         "jrean/laravel-user-verification": "^3.0",
         "sofa/eloquence": "^5.3",
         "moharrum/laravel-geoip-world-cities": "^2.3",
-        "laravel/socialite": "2.*"
+        "laravel/socialite": "2.*",
+        "laravel-notification-channels/onesignal": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

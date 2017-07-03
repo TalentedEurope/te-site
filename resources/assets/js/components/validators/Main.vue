@@ -8,9 +8,9 @@
                 <thead>
                     <tr>
                         <th><a href="#" v-on:click.prevent="sortBy('full_name')">{{ $t('reg-profile.name') }}</a></th>
-                        <th><a href="#" v-on:click.prevent="sortBy('email')">{{ $t('reg-profile.email') }}</th>
-                        <th><a href="#" v-on:click.prevent="sortBy('validator_deparment')">{{ $t('reg-profile.validator_department') }}</a></th>
-                        <th><a href="#" v-on:click.prevent="sortBy('position')">{{ $t('reg-profile.position') }}</a></th>
+                        <th class="hide-from-app"><a href="#" v-on:click.prevent="sortBy('email')">{{ $t('reg-profile.email') }}</th>
+                        <th class="hide-from-app"><a href="#" v-on:click.prevent="sortBy('validator_deparment')">{{ $t('reg-profile.validator_department') }}</a></th>
+                        <th class="hide-from-app"><a href="#" v-on:click.prevent="sortBy('position')">{{ $t('reg-profile.position') }}</a></th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -18,9 +18,9 @@
                 <tbody>
                     <tr v-for="validator in validators | orderBy sort_key reverse">
                         <td>{{validator.full_name}}</td>
-                        <td>{{validator.email}}</td>
-                        <td>{{validator.department}}</td>
-                        <td>{{validator.position}}</td>
+                        <td class="hide-from-app">{{validator.email}}</td>
+                        <td class="hide-from-app">{{validator.department}}</td>
+                        <td class="hide-from-app">{{validator.position}}</td>
                         <td>
                             <button v-if="validator.active" class="btn btn-primary" v-on:click="toggleValidatorStatus(validator)">
                                 <i class="fa fa-toggle-on" aria-hidden="true"></i> {{ $t('validators.enable') }}

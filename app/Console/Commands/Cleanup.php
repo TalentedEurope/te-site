@@ -6,9 +6,11 @@ use Illuminate\Console\Command;
 use App\Models\ValidationRequest;
 use App\Models\ValidatorInvite;
 use App\Models\Company;
+use App\Models\User;
 use App\Models\Validator;
 use App\Models\Alert;
 use App\Notifications\NewAlerts;
+use App\Notifications\ProfileNotFilled;
 use App\Notifications\ValidationsPending;
 
 class Cleanup extends Command
@@ -46,18 +48,21 @@ class Cleanup extends Command
     {
         ValidationRequest::cleanup();
         ValidatorInvite::cleanup();
+        $alerts = Alert::groupBy('target_id')->get();
         $validators = Validator::whereHas('user', function ($query) {
             $query->where('notify_me', true);
         })->whereHas('validationRequest.student.user', function ($f) {
             $f->where('valid', '!=', 'validated');
         })->get();
 
-        $alerts = Alert::groupBy('target_id')->get();
         foreach ($validators as $val) {
             $val->user->notify(new ValidationsPending($val->user));
         }
+
         foreach ($alerts as $al) {
-            $al->target->notify(new NewAlerts($al->target));
+            if ($al->target->notify_me) {
+                $al->target->notify(new NewAlerts($al->target));
+            }
         }
     }
 }

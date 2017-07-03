@@ -1,5 +1,5 @@
 <template>
-    <div class="form-group" v-bind:class="{ 'alert alert-danger': has_error }">
+    <div class="file-form form-group" v-bind:class="{ 'alert alert-danger': has_error }">
         <label :for="generateFieldId()">{{ parsedLabel }}</label>
         <input type="file" :id="generateFieldId()" :name="generateFieldName()" :filename="code"
             @change="changeFile()" :required="isRequired()" v-if="!readonly"/>
