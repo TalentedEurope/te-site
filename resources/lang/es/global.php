@@ -69,7 +69,7 @@ return [
     
         'company_plural' => 'Empresas',
     
-        'institution_plural' => 'Instituciones',
+        'institution_plural' => 'Instituciones académicas',
     
         'student_plural' => 'Estudiantes',
     
@@ -78,6 +78,24 @@ return [
         'institution' => 'Institución|Instituciones',
     
         'student' => 'Estudiante|Estudiantes',
+    
+        'company_singular' => 'Empresa',
+    
+        'companies_singular' => 'Empresa',
+    
+        'companies' => 'Empresas',
+    
+        'institution_singular' => 'Institución Académica',
+    
+        'institutions_singular' => 'Institución Académica',
+    
+        'institutions' => 'Instituciones académicas',
+    
+        'student_singular' => 'Estudiante',
+    
+        'students_singular' => 'Estudiante',
+    
+        'students' => 'Estudiantes',
     
         'more_btn' => 'Ver más',
     
@@ -578,5 +596,13 @@ return [
         'login_fb' => 'Acceder con Facebook',
     
         'login_tw' => 'Acceder con twitter',
+    
+        'about_us' => 'Acerca de',
+    
+        'slide_to' => 'Desliza para avanzar',
+    
+        'manuals' => 'Manuales',
+    
+        'download_manual' => 'Descargar manual',
     
 ];

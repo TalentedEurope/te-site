@@ -17,7 +17,7 @@ return [
     
         'changeInstitution_line_2' => '%s has invited you as referee on Talented Europe.',
     
-        'changeInstitution_line_3' => 'Since you&apos;re already a Talented Europe referee we need to you to confirm your change to this institution',
+        'changeInstitution_line_3' => 'Since you\'re already a Talented Europe referee we need to you to confirm your change to this institution',
     
         'changeInstitution_action_4' => 'Confirm change',
     
@@ -55,13 +55,13 @@ return [
     
         'newAlerts_subject_1' => 'New alerts from students',
     
-        'newAlerts_line_2' => 'Hello we&apos;re reminding you that some students alerted you on our platform',
+        'newAlerts_line_2' => 'Hello we\'re reminding you that some students alerted you on our platform',
     
         'newAlerts_line_3' => 'Please click the following button to log in and see your panel',
     
         'validationsPending_subject_1' => 'Referees pending on Talented Europe',
     
-        'validationsPending_line_2' => 'Hello we&apos;re reminding you that you have some referee&apos;s pending on our platform',
+        'validationsPending_line_2' => 'Hello we\'re reminding you that you have some referee\'s pending on our platform',
     
         'validationsPending_line_3' => 'Please click the following button to log in and see your panel',
     
@@ -71,10 +71,10 @@ return [
     
         'regards' => 'Regards',
     
-        'disclaimer_plain' => 'DISCLAIMER: This message is intended exclusively for its address and may contain information that is CONFIDENTIAL, and protected by professional privilege. If you are not the intended recipient you are hereby notified that any dissemination, copy or disclosure of this communication is strictly prohibited by law. If this message has been received in error, please immediately notify us via e-mail to %s and delete it.&apos;',
+        'disclaimer_plain' => 'DISCLAIMER: This message is intended exclusively for its address and may contain information that is CONFIDENTIAL, and protected by professional privilege. If you are not the intended recipient you are hereby notified that any dissemination, copy or disclosure of this communication is strictly prohibited by law. If this message has been received in error, please immediately notify us via e-mail to %s and delete it.\'',
     
         'profile_not_filled_subject' => 'Your profile is not complete',
     
-        'profile_not_filled_line_1' => 'We&apos;ve seen that you profile is not complete, so we wanted to remind you that unless you fill all the required information you won&apos;t be able to access all the features of our application.',
+        'profile_not_filled_line_1' => 'We\'ve seen that you profile is not complete, so we wanted to remind you that unless you fill all the required information you won\'t be able to access all the features of our application.',
     
 ];

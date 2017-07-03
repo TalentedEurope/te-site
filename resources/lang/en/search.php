@@ -15,8 +15,10 @@ return [
     
         'we_found' => 'We have found',
     
-        'we_found_matching_your_needs' => 'We&apos;ve found %number% %collective% matching your needs',
+        'we_found_matching_your_needs' => 'We\'ve found %number% %collective% matching your needs',
     
         'filters' => 'Filters',
+    
+        'apply' => 'Apply filters',
     
 ];

@@ -65,4 +65,8 @@ return [
     
         'go_to_app' => 'Ir a la aplicación',
     
+        'what_is_text_1_txt' => '¿Se imagina la posibilidad de contratar a los mejores estudiantes de cualquier país europeo? ¿Deseas formar parte de los estudiantes europeos de élite? Miles de empresas van a tener acceso directo a información sobre vosotros y cuanto mejor sea la puntuación que obtengáis, más grandes serán vuestras oportunidades de conseguir un trabajo estupendo.',
+    
+        'what_is_text_2_txt' => 'Es precisamente lo que ofrece Talented Europe. Un escaparate lleno de los mejores estudiantes en Europa. Una idea simple que une a empleadores con estudiantes. El lugar de encuentro de los mejores.',
+    
 ];

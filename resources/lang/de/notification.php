@@ -5,7 +5,7 @@ return [
     
         'company_visited_student_subject' => 'A %s company visited your profile!',
     
-        'company_visited_student_body' => 'Hopefully they&apos;ll get in contact with you ;)',
+        'company_visited_student_body' => 'Hopefully they\'ll get in contact with you ;)',
     
         'student_alerted_company_subject' => 'New Alerts from Talented Europe',
     

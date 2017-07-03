@@ -69,7 +69,7 @@ return [
     
         'company_plural' => 'Spoločnosti',
     
-        'institution_plural' => 'Inštitúcie',
+        'institution_plural' => 'akademické inštitúcie',
     
         'student_plural' => 'Študenti',
     
@@ -78,6 +78,24 @@ return [
         'institution' => 'Inštitúcia|Inštitúcie',
     
         'student' => 'Študent|študenti',
+    
+        'company_singular' => 'Spoločnosť',
+    
+        'companies_singular' => 'Spoločnosť',
+    
+        'companies' => 'Spoločnosti',
+    
+        'institution_singular' => 'akademické inštitúcie',
+    
+        'institutions_singular' => 'akademické inštitúcie',
+    
+        'institutions' => 'akademické inštitúcie',
+    
+        'student_singular' => 'Študent',
+    
+        'students_singular' => 'Študent',
+    
+        'students' => 'Študenti',
     
         'more_btn' => 'Zobraz viac',
     
@@ -578,5 +596,13 @@ return [
         'login_fb' => 'Prihlásenie cez Facebook',
     
         'login_tw' => 'Prihlásiť pomocou Twitter',
+    
+        'about_us' => 'About us',
+    
+        'slide_to' => 'Slide to advance',
+    
+        'manuals' => 'Manuals',
+    
+        'download_manual' => 'Download manual',
     
 ];

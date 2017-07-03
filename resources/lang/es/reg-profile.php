@@ -115,7 +115,7 @@ return [
     
         'student_study_to' => 'A',
     
-        'student_training' => 'Prácticas',
+        'student_training' => 'Cursos',
     
         'upload_btn' => 'Subir',
     

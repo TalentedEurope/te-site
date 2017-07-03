@@ -69,7 +69,7 @@ return [
     
         'company_plural' => 'Imprese ',
     
-        'institution_plural' => 'Istituzioni',
+        'institution_plural' => 'Le istituzioni accademiche',
     
         'student_plural' => 'Studenti',
     
@@ -78,6 +78,24 @@ return [
         'institution' => 'Istituzione|Istituzioni',
     
         'student' => 'Studente|Studenti',
+    
+        'company_singular' => 'Impresa',
+    
+        'companies_singular' => 'Impresa',
+    
+        'companies' => 'Imprese ',
+    
+        'institution_singular' => 'Istituzione accademica',
+    
+        'institutions_singular' => 'Istituzione accademica',
+    
+        'institutions' => 'Le istituzioni accademiche',
+    
+        'student_singular' => 'Studente',
+    
+        'students_singular' => 'Studente',
+    
+        'students' => 'Studenti',
     
         'more_btn' => 'Scopri di più',
     
@@ -91,7 +109,7 @@ return [
     
         'footer_partners' => 'Partners',
     
-        'cookie_text' => 'Questo sito web utilizza i cookie per garantire il corretto funzionamento delle procedure e migliorare l&apos;esperienza di uso delle applicazioni online. Continuando la navigazione sul sito, si acconsente all&apos;utilizzo dei cookie. Per sapere di più sull‘uso dei cookie e sulla loro gestione, leggi <a href="/privacy-policy">cookie notice</a>',
+        'cookie_text' => 'Questo sito web utilizza i cookie per garantire il corretto funzionamento delle procedure e migliorare l\'esperienza di uso delle applicazioni online. Continuando la navigazione sul sito, si acconsente all\'utilizzo dei cookie. Per sapere di più sull‘uso dei cookie e sulla loro gestione, leggi <a href="/privacy-policy">cookie notice</a>',
     
         'cookie_accept' => 'chiudere',
     
@@ -183,7 +201,7 @@ return [
     
         'BR' => 'Brasile',
     
-        'IO' => 'Territorio Britannico dell&apos;Oceano Indiano',
+        'IO' => 'Territorio Britannico dell\'Oceano Indiano',
     
         'BN' => 'Brunei',
     
@@ -225,7 +243,7 @@ return [
     
         'CR' => 'Costa Rica',
     
-        'CI' => 'Costa d&apos;Avorio',
+        'CI' => 'Costa d\'Avorio',
     
         'CU' => 'Cuba',
     
@@ -447,7 +465,7 @@ return [
     
         'BL' => 'Saint-Barthélemy',
     
-        'SH' => 'Sant&apos;Elena, Ascensione e Tristan da Cunha',
+        'SH' => 'Sant\'Elena, Ascensione e Tristan da Cunha',
     
         'KN' => 'Saint Kitts e Nevis',
     
@@ -537,7 +555,7 @@ return [
     
         'AE' => 'Emirati Arabi Uniti',
     
-        'US' => 'Sati Uniti d&apos;America',
+        'US' => 'Sati Uniti d\'America',
     
         'UM' => 'Isole minori esterne degli Stati Uniti',
     
@@ -571,12 +589,20 @@ return [
     
         'faq_menu' => 'FAQ',
     
-        'register_fb' => 'L&apos;iscrizione avviene tramite Facebook',
+        'register_fb' => 'L\'iscrizione avviene tramite Facebook',
     
-        'register_tw' => 'L&apos;iscrizione avviene tramite Twitter',
+        'register_tw' => 'L\'iscrizione avviene tramite Twitter',
     
         'login_fb' => 'Accedi utilizzando Facebook',
     
         'login_tw' => 'Accedi usando Twitter',
+    
+        'about_us' => 'About us',
+    
+        'slide_to' => 'Slide to advance',
+    
+        'manuals' => 'Manuals',
+    
+        'download_manual' => 'Download manual',
     
 ];

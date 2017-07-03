@@ -69,7 +69,7 @@ return [
     
         'company_plural' => 'Companies',
     
-        'institution_plural' => 'Institutions',
+        'institution_plural' => 'Academic institutions',
     
         'student_plural' => 'Students',
     
@@ -78,6 +78,24 @@ return [
         'institution' => 'Institution|Institutions',
     
         'student' => 'Student|Students',
+    
+        'company_singular' => 'Company',
+    
+        'companies_singular' => 'Company',
+    
+        'companies' => 'Companies',
+    
+        'institution_singular' => 'Academic institution',
+    
+        'institutions_singular' => 'Academic institution',
+    
+        'institutions' => 'Academic institutions',
+    
+        'student_singular' => 'Student',
+    
+        'students_singular' => 'Student',
+    
+        'students' => 'Students',
     
         'more_btn' => 'View more',
     
@@ -101,7 +119,7 @@ return [
     
         'status' => 'Status',
     
-        'not_enough_data_to_show_profile' => 'We don&apos;t have enough data from you to be able to show your profile.',
+        'not_enough_data_to_show_profile' => 'We don\'t have enough data from you to be able to show your profile.',
     
         'click_on_link_to_fill_required_fields' => 'Please click on the following link to fill the required fields.',
     
@@ -225,7 +243,7 @@ return [
     
         'CR' => 'Costa Rica',
     
-        'CI' => 'Côte d&apos;Ivoire',
+        'CI' => 'Côte d\'Ivoire',
     
         'CU' => 'Cuba',
     
@@ -327,7 +345,7 @@ return [
     
         'KI' => 'Kiribati',
     
-        'KP' => 'Korea (Democratic People&apos;s Republic of)',
+        'KP' => 'Korea (Democratic People\'s Republic of)',
     
         'KR' => 'Korea (Republic of)',
     
@@ -335,7 +353,7 @@ return [
     
         'KG' => 'Kyrgyzstan',
     
-        'LA' => 'Lao People&apos;s Democratic Republic',
+        'LA' => 'Lao People\'s Democratic Republic',
     
         'LB' => 'Lebanon',
     
@@ -578,5 +596,13 @@ return [
         'login_fb' => 'Login using Facebook',
     
         'login_tw' => 'Login using Twitter',
+    
+        'about_us' => 'About us',
+    
+        'slide_to' => 'Slide to advance',
+    
+        'manuals' => 'Manuals',
+    
+        'download_manual' => 'Download manual',
     
 ];

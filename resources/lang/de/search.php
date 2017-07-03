@@ -19,4 +19,6 @@ return [
     
         'filters' => 'Filter',
     
+        'apply' => 'Apply filters',
+    
 ];
