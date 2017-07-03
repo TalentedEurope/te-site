@@ -204,7 +204,7 @@
                 {{ Carbon\Carbon::parse($experience->until)->format('Y') }}
               @endif
               </p>
-              <h4><strong>{{ $experience->position }}</strong> at {{ $experience->company }}</h4>
+              <h4><strong>{{ $experience->position }}</strong> {{ trans('reg-profile.at') }} {{ $experience->company }}</h4>
             </li>
             @endforeach
           </ul>
