@@ -549,7 +549,7 @@ return [
     
         'institution_hei_his' => 'Escuela secundaria',
     
-        'required_cert_warning' => 'Tenga en cuenta: si no cargar el certificado de autenticidad de la institución no aparecerá en la lista de instituciones arbitrales',
+        'required_cert_warning' => 'A tener en cuenta: Si no puede sube a la plataforma, el certificado de autenticidad, la institución no aparecerá en la lista de instituciones validadas.',
     
         'invalid_credentials' => 'Estas credenciales no coinciden con nuestros registros',
     
