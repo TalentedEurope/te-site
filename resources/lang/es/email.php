@@ -59,9 +59,9 @@ return [
     
         'newAlerts_line_3' => 'Haga clic en el siguiente botón para iniciar sesión y ver su panel',
     
-        'validationsPending_subject_1' => 'Validadores pendientes en Talented Europe',
+        'validationsPending_subject_1' => 'Validaciones pendientes en Talented Europe',
     
-        'validationsPending_line_2' => '¡Hola! te recordamos que tienes algunos validadores pendientes en nuestra plataforma',
+        'validationsPending_line_2' => '¡Hola! te recordamos que tienes algunas validaciones de estudiantes o recien titulados pendientes en nuestra plataforma',
     
         'validationsPending_line_3' => 'Haga clic en el siguiente botón para iniciar sesión y ver su panel',
     
