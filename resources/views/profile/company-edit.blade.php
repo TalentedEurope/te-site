@@ -94,6 +94,12 @@
                 </div>
               </div>
 
+              @if ($user->image != "default.png") 
+                <div class="checkbox">
+                  <label><input type="checkbox" name="deletePhoto" value="deletePhoto">{!! trans('reg-profile.delete_photo') !!}</label>
+                </div>
+              @endif
+
               <hr class="separator">
 
               <h4>{!! trans('reg-profile.social_and_web') !!}</h4>

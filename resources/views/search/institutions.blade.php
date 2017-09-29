@@ -48,9 +48,11 @@
               </div>
               @if ($institution->image)
               <div class="col-xs-12 col-sm-4 col-md-3 text-center">
+                  @if ( $institution->image != 'default.png')
                   <figure>
                       <img alt="{{ $institution->name }}" class="img-responsive" src="{{ asset(\App\Models\User::$photoPath.$institution->image) }}">
                   </figure>
+                  @endif
                     @if ($institution->userable->certificate != "")
                       <p>
                       <a href="{{ route('get_institution_certificate', [$institution->id]) }}" class="label label-success"><i class="fa fa-star"></i>
@@ -58,12 +60,9 @@
                       </a>
                       </p>
                     @endif
-
-
               </div>
               @endif
         </li>
-
       @endforeach
     </ul>
   </div>

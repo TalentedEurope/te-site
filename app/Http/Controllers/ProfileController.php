@@ -106,6 +106,9 @@ class ProfileController extends Controller
     {
         $user = Auth::user();
         if ($user->isA('student')) {
+            // Temporal? Recalculate locked status
+            $user->userable->calculateLockedStatus();
+
             $data = $this->getStudentPrivateData($user);
             $data['token'] = LoginController::userToken();
 
@@ -261,7 +264,6 @@ class ProfileController extends Controller
             $errors = $errors->merge($v);
         }
 
-
         // Images don't appear on valid() but since it has a different parse logic
         // we do it aside.
         $v = Validator::make($request->all(), array_filter(User::rules('image')));
@@ -287,8 +289,9 @@ class ProfileController extends Controller
                 $img->resizeCanvas(User::$photoWidth, User::$photoHeight, "center", false, "ffffff")->save($fname);
             }
             $user->image = basename($fname);
-        }
-        if ($request->has('remove-image')) {
+        }        
+
+        if (!$request->has('validate') && $request->has('deletePhoto')) {
             $file = public_path() . User::$photoPath . $user->image;
             $user->image = "";
             if (File::exists($file)) {

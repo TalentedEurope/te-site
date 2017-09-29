@@ -205,7 +205,7 @@
       <div class="content text-center">
         @if ($talentQuote->user->image)
         <a href="{{ url('/search/companies') }}">
-          <img width="150" class="round" src="{{ asset('uploads/photo/'.$talentQuote->user->image) }}"/>
+          <img alt="{{ $talentQuote->user->name }}" width="150" class="round" src="{{ asset('uploads/photo/'.$talentQuote->user->image) }}"/>
         </a>
         @endif
         <p class="quote-text">{{ $talentQuote->talent }}</p>
@@ -232,7 +232,7 @@
         <div class="companies-and-institutions-logos">
           @foreach ($logos as $logo)
             <a href="{{ url('/search/companies') }}">
-              <img width="150" src="{{ asset('uploads/photo/'.$logo->user->image) }}"/>
+              <img  alt="{{ $logo->user->name }}"  width="150" src="{{ asset('uploads/photo/'.$logo->user->image) }}"/>
             </a>
           @endforeach
         </div>
@@ -337,7 +337,7 @@
               @else
                 <a href="/register?see_more=1" class="col-xs-6 col-sm-4 col-md-2 text-center">
               @endif
-                  <img width="150" src="{{ asset('uploads/photo/'.$student->user->image) }}"/>
+                  <img alt="{{ $student->user->name }}" width="150" src="{{ asset('uploads/photo/'.$student->user->image) }}"/>
                   <p>{{ $student->user->FullName }}</p>
               </a>
             @endforeach

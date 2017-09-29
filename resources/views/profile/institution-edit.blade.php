@@ -79,6 +79,12 @@
                 </div>
               </div>
 
+              @if ($user->image != "default.png") 
+                <div class="checkbox">
+                  <label><input type="checkbox" name="deletePhoto" value="deletePhoto">{!! trans('reg-profile.delete_photo') !!}</label>
+                </div>
+              @endif
+
               @if (!$institution->certificate)
               <div class="alert alert-info">
                 {{ trans('reg-profile.required_cert_warning') }}
