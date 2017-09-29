@@ -87,6 +87,12 @@
 
               <file-form code="image" label="{!! trans('reg-profile.my_photo') !!}" errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></file-form>
 
+              @if ($user->image != "default.png") 
+                <div class="checkbox">
+                  <label><input type="checkbox" name="deletePhoto" value="deletePhoto">{!! trans('reg-profile.delete_photo') !!}</label>
+                </div>
+              @endif
+
               <hr class="separator">
 
               <h4>{!! trans('reg-profile.social_networks') !!}</h4>

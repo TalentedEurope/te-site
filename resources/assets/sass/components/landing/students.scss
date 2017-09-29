@@ -2,9 +2,16 @@
     .students-box {
         padding: 20px 0;
 
+
+        & > a {
+            height: 190px;
+            overflow: hidden;
+        }
+
         img {
             width: 130px;
             border-radius: 60%;
+            max-width: 100%;
         }
 
         p {

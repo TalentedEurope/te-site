@@ -265,13 +265,13 @@ class Student extends Model
     }
 
     public function calculateLockedStatus()
-    {
+    {        
         $validationReqDate = null;
         if ($this->validationRequest) {
             $validationReqDate = $this->validationRequest->created_at;
         }
         foreach ($this->studies as $item) {
-            if ($validationReqDate && $item->created_at < $validationReqDate) {
+            if ($validationReqDate && $item->created_at < $validationReqDate && $this->valid == 'validated') {
                 $item->locked = true;
                 $item->save();
             } else {
@@ -280,7 +280,7 @@ class Student extends Model
             }
         }
         foreach ($this->training as $item) {
-            if ($validationReqDate && $item->created_at < $validationReqDate) {
+            if ($validationReqDate && $item->created_at < $validationReqDate && $this->valid == 'validated') {
                 $item->locked = true;
                 $item->save();
             } else {
@@ -289,7 +289,7 @@ class Student extends Model
             }
         }
         foreach ($this->languages as $item) {
-            if ($validationReqDate && $item->created_at < $validationReqDate) {
+            if ($validationReqDate && $item->created_at < $validationReqDate && $this->valid == 'validated') {
                 $item->locked = true;
                 $item->save();
             } else {
@@ -298,7 +298,7 @@ class Student extends Model
             }
         }
         foreach ($this->experiences as $item) {
-            if ($validationReqDate && $item->created_at < $validationReqDate) {
+            if ($validationReqDate && $item->created_at < $validationReqDate && $this->valid == 'validated') {
                 $item->locked = true;
                 $item->save();
             } else {
