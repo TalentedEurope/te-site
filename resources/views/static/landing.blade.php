@@ -91,22 +91,27 @@
 
             <ul class="nav navbar-nav navbar-collapse collapse-nav collapse navbar-right social-nav">
               <li>
-                <a href="https://www.facebook.com/Talented-Europe-839419182764068/">
+                <a title="Project" href="https://project.talentedeurope.eu">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a title="Facebook" href="https://www.facebook.com/Talented-Europe-839419182764068/">
                   <i class="fi flaticon-facebook"></i>
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/talentedeurope">
+                <a title="Twitter" href="https://twitter.com/talentedeurope">
                   <i class="fi flaticon-twitter"></i>
                 </a>
               </li>
               <li>
-                <a href="https://www.youtube.com/channel/UCkj5UUptbZnQ5kvxVpDfkBw">
+                <a title="Youtube" href="https://www.youtube.com/channel/UCkj5UUptbZnQ5kvxVpDfkBw">
                   <i class="fi flaticon-youtube"></i>
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/talentedeurope">
+                <a title="Linkedin" href="https://www.linkedin.com/in/talentedeurope">
                   <i class="fa fa-linkedin"></i>
                 </a>
               </li>
@@ -171,7 +176,18 @@
     <section id="about" class="about-section clearfix content-section">
       <div class="content">
         <div class="vertical-centered">
-          <h1 class="text-center">{!! trans('landing.what_is_title') !!}</h1>
+
+          <div class="row">
+            <div class="logo col-md-6 text-center">
+              <a href="https://ec.europa.eu/programmes/erasmus-plus/" target="_blank"><img src="{{ asset('/img/logo-footer-erasmus.png') }}" width="174" alt="Erasmus+"></a>
+            </div>
+            <div class="logo col-md-6 text-center">
+              <a href="https://ec.europa.eu/programmes/erasmus-plus/" target="_blank"><img src="{{ asset('/img/logo-footer-cofunded-ue.png') }}" width="160" alt="Co-funded by the Erasmus+ Programme of the European Union"></a>
+            </div>
+          </div>
+
+
+          <h1 class="what-is text-center">{!! trans('landing.what_is_title') !!}</h1>
           <p class="col-md-6 text-justify">{!! trans('landing.what_is_text_1') !!}</p>
           <p class="col-md-6 text-justify">{!! trans('landing.what_is_text_2') !!}</p>
 
@@ -402,7 +418,7 @@
           </a>
           <ul class="navigation" role="nav">
             <li><a href="{{ url('/') }}">{!! trans('global.home') !!}</a></li>
-            <li><a href="http://project.talentedeurope.eu" target="_blank">{!! trans('global.blog') !!}</a></li>
+            <li><a href="https://project.talentedeurope.eu" target="_blank">{!! trans('global.blog') !!}</a></li>
             <li><a href="{{ url('/cookies') }}">{!! trans('global.cookies') !!}</a></li>
             <li><a href="{{ url('/privacy-policy') }}">{!! trans('global.privacy_policy') !!}</a></li>
             <li><a href="{{ url('/faq') }}">{!! trans('global.faq_menu') !!}</a></li>
@@ -461,20 +477,6 @@
         </div>
       </div>
     </div>
-    <div class="footer col-md-12">
-      <div class="ue-logos row xs12">
-        <div class="logo">
-          <a href="https://ec.europa.eu/programmes/erasmus-plus/" target="_blank"><img src="{{ asset('/img/logo-footer-erasmus.png') }}" width="174" alt="Erasmus+"></a>
-        </div>
-        <div class="logo">
-          <a href="https://ec.europa.eu/programmes/erasmus-plus/" target="_blank"><img src="{{ asset('/img/logo-footer-cofunded-ue.png') }}" width="160" alt="Co-funded by the Erasmus+ Programme of the European Union"></a>
-        </div>
-        <div class="logo">
-          <a href="http://sepie.es/" target="_blank"><img src="{{ asset('/img/logo-footer-gob-espana-y-sepie.svg') }}" width="240" alt="Gobierno de españa and Sepie"></a>
-        </div>
-      </div>
-    </div>
-
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="{{ URL::asset('js/conditionizr/conditionizr.js') }}"></script>
