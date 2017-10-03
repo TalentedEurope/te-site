@@ -109,7 +109,7 @@
         </a>
         <ul class="navigation" role="nav">
           <li><a href="{{ url('/') }}">{!! trans('global.home') !!}</a></li>
-          <li><a href="http://project.talentedeurope.eu" target="_blank">{!! trans('global.blog') !!}</a></li>
+          <li><a href="https://project.talentedeurope.eu" target="_blank">{!! trans('global.blog') !!}</a></li>
           <li><a href="{{ url('/cookies') }}">{!! trans('global.cookies') !!}</a></li>
           <li><a href="{{ url('/privacy-policy') }}">{!! trans('global.privacy_policy') !!}</a></li>
           <li><a href="{{ url('/faq') }}">{!! trans('global.faq_menu') !!}</a></li>
@@ -175,9 +175,6 @@
       </div>
       <div class="logo">
         <a href="https://ec.europa.eu/programmes/erasmus-plus/" target="_blank"><img src="{{ asset('/img/logo-footer-cofunded-ue.png') }}" width="160" alt="Co-funded by the Erasmus+ Programme of the European Union"></a>
-      </div>
-      <div class="logo">
-        <a href="http://sepie.es/" target="_blank"><img src="{{ asset('/img/logo-footer-gob-espana-y-sepie.svg') }}" width="240" alt="Gobierno de españa and Sepie"></a>
       </div>
     </div>
   </div>
