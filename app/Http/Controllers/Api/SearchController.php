@@ -145,13 +145,25 @@ class SearchController extends SiteSearchController
                 $firstStudyLevel = trans('reg-profile.' . $firstStudy->level);
                 $firstStudyInstitution = $firstStudy->institution_name;
             }
-
+            $skillIds = array();
+            $important = array();
             foreach ($student->personalSkills as $item) {
+                if (in_array($item->id, $skillIds)) {
+                    $important[] = $item->id;
+                    continue;
+                }
+                $skillIds[] = $item->id;
+
                 $skills[] = array(
                     'id' => $item->id,
                     'name' => $item->name,
                     'important' => false
                 );
+            }
+            for ($i = 0; $i < sizeOf($skills); $i++) {
+                if (in_array($skills[$i]['id'], $important)) {
+                    $skills[$i]['important'] = true;
+                }
             }
 
             foreach ($student->professionalSkills as $item) {
