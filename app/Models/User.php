@@ -76,7 +76,7 @@ class User extends Authenticatable
     public static function niceNames()
     {
         $niceNames = array();
-        if (Auth::user()->isA('student')) {
+        if (Auth::user() && Auth::user()->isA('student')) {
             $niceNames = array(
                 'visible' => trans('reg-profile.profile_visibility'),
                 'notify_me' => trans('reg-profile.notifications'),
@@ -107,7 +107,10 @@ class User extends Authenticatable
                 'country' => trans('reg-profile.country'),
                 'talent' => '"' . trans('reg-profile.company_what_is_talent') . '" ' . trans('reg-profile.field'),
                 'contact_name' => trans('reg-profile.company_contact_person_name'),
-                'contact_email' => trans('reg-profile.company_contact_person_email')
+                'contact_email' => trans('reg-profile.company_contact_person_email'),
+                'password_confirm' => trans('reg-profile.password_confirm'),
+                'terms' => "'" . trans('reg-profile.terms_of_use') . "'",
+                'type' => trans('reg-profile.user_type'),
             );
         }
         return $niceNames;

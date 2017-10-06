@@ -238,6 +238,8 @@ return [
     
         'Lang_level_C2' => 'C2: compétent',
     
+        'description' => 'Description',
+    
         'logo' => 'Logo',
     
         'my_profile' => 'Mon profil',
@@ -563,5 +565,17 @@ Sur',
         'invalid_credentials' => 'Ces identifiants ne correspondent pas à nos enregistrements',
     
         'alert_already_sent' => 'Alert already sent',
+    
+        'delete_photo' => 'Supprimer la photo',
+    
+        'profile_not_available' => 'Ce profil n\'est pas disponible maintenant, s\'il vous plaît essayer plus tard',
+    
+        'passwords_dont_match' => 'Les mots de passe ne correspondent pas',
+    
+        'terms_required' => 'Vous devez accepter les conditions d\'utilisation',
+    
+        'user_type' => 'Type d\'utilisateur',
+    
+        'password_confirm' => 'Confirmation mot de passe',
     
 ];

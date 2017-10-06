@@ -237,6 +237,8 @@ return [
     
         'Lang_level_C2' => 'C2: Maestría o superior',
     
+        'description' => 'Descripción',
+    
         'logo' => 'Logo',
     
         'my_profile' => 'Mi perfil',
@@ -554,5 +556,17 @@ return [
         'invalid_credentials' => 'Estas credenciales no coinciden con nuestros registros',
     
         'alert_already_sent' => 'Toque dado',
+    
+        'delete_photo' => 'Borrar foto',
+    
+        'profile_not_available' => 'Este perfil no está disponible por favor intentelo más tarde',
+    
+        'passwords_dont_match' => 'Las contraseñas no coinciden',
+    
+        'terms_required' => 'Debes aceptar los términos de uso',
+    
+        'user_type' => 'Tipo de usuario',
+    
+        'password_confirm' => 'Confirmación de clave',
     
 ];

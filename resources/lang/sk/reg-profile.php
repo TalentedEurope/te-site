@@ -238,6 +238,8 @@ Obchodná a poradenská činnosť',
     
         'Lang_level_C2' => 'C2: expert',
     
+        'description' => 'Description',
+    
         'logo' => 'Logo',
     
         'my_profile' => 'Môj profil',
@@ -555,5 +557,17 @@ Obchodná a poradenská činnosť',
         'invalid_credentials' => 'Prihlasovacie údaje nie sú správne',
     
         'alert_already_sent' => 'Alert already sent',
+    
+        'delete_photo' => 'zmazať fotografie',
+    
+        'profile_not_available' => 'Tento profil nie je k dispozícii, skúste to prosím neskôr',
+    
+        'passwords_dont_match' => 'Heslá sa nezhodujú',
+    
+        'terms_required' => 'Musíte akceptovať podmienky používania',
+    
+        'user_type' => 'typ užívateľa',
+    
+        'password_confirm' => 'potvrdenie hesla',
     
 ];

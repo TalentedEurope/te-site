@@ -237,6 +237,8 @@ return [
     
         'Lang_level_C2' => 'C2: Experte',
     
+        'description' => 'Description',
+    
         'logo' => 'Logo',
     
         'my_profile' => 'Mein Profil',
@@ -554,5 +556,17 @@ return [
         'invalid_credentials' => 'Diese Zugangsdaten wurden nicht in unserer Datenbank gefunden',
     
         'alert_already_sent' => 'Alert already sent',
+    
+        'delete_photo' => 'Foto löschen',
+    
+        'profile_not_available' => 'Dieses Profil ist momentan nicht verfügbar, bitte versuchen Sie es später',
+    
+        'passwords_dont_match' => 'Passwörter stimmen nicht überein',
+    
+        'terms_required' => 'Sie müssen die Nutzungsbedingungen akzeptieren',
+    
+        'user_type' => 'Benutzertyp',
+    
+        'password_confirm' => 'Passwort Bestätigung',
     
 ];
