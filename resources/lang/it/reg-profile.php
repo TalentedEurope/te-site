@@ -237,6 +237,8 @@ return [
     
         'Lang_level_C2' => 'C2: Livello esperto',
     
+        'description' => 'Description',
+    
         'logo' => 'Logo',
     
         'my_profile' => 'Il mio profilo',
@@ -554,5 +556,17 @@ return [
         'invalid_credentials' => 'Credenziali non corrispondenti ai dati registrati',
     
         'alert_already_sent' => 'Alert already sent',
+    
+        'delete_photo' => 'Eliminare Foto',
+    
+        'profile_not_available' => 'Questo profilo non è disponibile ora, si prega di riprovare più tardi',
+    
+        'passwords_dont_match' => 'Le password non corrispondono',
+    
+        'terms_required' => 'È necessario accettare le condizioni di utilizzo',
+    
+        'user_type' => 'Tipologia di utente',
+    
+        'password_confirm' => 'conferma password',
     
 ];
