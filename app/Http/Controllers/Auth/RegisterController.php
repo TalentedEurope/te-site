@@ -190,16 +190,19 @@ class RegisterController extends Controller
 
         switch ($data['type']) {
             case 'student':
+            case 'students':
                 $student = Student::create();
                 $student->user()->save($user);
                 Bouncer::assign('student')->to($user);
                 break;
             case 'company':
+            case 'companies':            
                 $company = Company::create();
                 $company->user()->save($user);
                 Bouncer::assign('company')->to($user);
                 break;
             case 'institution':
+            case 'institutions':
                 $user->name = $data['name'];
                 $user->save();
                 $institution = Institution::create();
