@@ -91,11 +91,6 @@
 
             <ul class="nav navbar-nav navbar-collapse collapse-nav collapse navbar-right social-nav">
               <li>
-                <a title="Project" href="https://project.talentedeurope.eu">
-                    <i class="fa fa-globe" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li>
                 <a title="Facebook" href="https://www.facebook.com/Talented-Europe-839419182764068/">
                   <i class="fi flaticon-facebook"></i>
                 </a>
@@ -119,11 +114,13 @@
 
             @if (Auth::user())
             <ul class="nav navbar-nav navbar-collapse collapse-nav collapse navbar-right login">
+              <li><a href="https://project.talentedeurope.eu" target="_blank">{!! trans('global.blog') !!}</a></li>
               <li><a href="{{ URL::to('/profile') }}">{!! trans('landing.go_to_app') !!}</a></li>
               <li><a href="{{ URL::to('/logout') }}">{!! trans('global.logout_btn') !!}</a></li>
             </ul>
             @else
             <ul class="nav navbar-nav navbar-collapse collapse-nav collapse navbar-right login">
+              <li><a href="https://project.talentedeurope.eu" target="_blank">{!! trans('global.blog') !!}</a></li>
               <li><a href="{{ URL::to('/login') }}">{!! trans('global.login_btn') !!}</a></li>
               <li><a href="{{ URL::to('/register') }}">{!! trans('global.register_btn') !!}</a></li>
             </ul>
