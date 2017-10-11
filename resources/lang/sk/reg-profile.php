@@ -570,4 +570,6 @@ Obchodná a poradenská činnosť',
     
         'password_confirm' => 'potvrdenie hesla',
     
+        'user_type_required' => 'Je potrebné vybrať typ užívateľa',
+    
 ];

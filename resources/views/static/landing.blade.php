@@ -207,6 +207,11 @@
                 {!! trans_choice('global.student', 1) !!}
             </a>
           </div>
+          <h3 class="text-center col-md-12">{!! trans('landing.download_app') !!}</h3>
+          <div class="text-center col-md-12">
+            <a href='https://play.google.com/store/apps/details?id=eu.talentedeurope.app&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img class="app-badge" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+            <a href='https://itunes.apple.com/es/app/talented-europe/id1294042608'><img class="app-badge" alt='Get it on the App Store' src='{{ URL::asset("img/app_store_badge.png") }}'/></a>
+          </div>
         </div>
       </div>
     </section>

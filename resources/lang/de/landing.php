@@ -69,4 +69,6 @@ return [
     
         'what_is_text_2_txt' => 'Genau das bietet Talentiertes Europa. Eine Übersicht übe die besten Studenten und Azubis in Europa. Eine einfache Idee, die Arbeitgeber mit Studenten und Azubis verbindet. Der Treffpunkt für die Besten.',
     
+        'download_app' => 'Laden Sie die App',
+    
 ];

@@ -569,4 +569,6 @@ return [
     
         'password_confirm' => 'Password confirmation',
     
+        'user_type_required' => 'You must select a user type',
+    
 ];
