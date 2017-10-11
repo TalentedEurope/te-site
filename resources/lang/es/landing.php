@@ -69,4 +69,6 @@ return [
     
         'what_is_text_2_txt' => 'Es precisamente lo que ofrece Talented Europe. Un escaparate lleno de los mejores estudiantes en Europa. Una idea simple que une a empleadores con estudiantes. El lugar de encuentro de los mejores.',
     
+        'download_app' => 'Descarga la app',
+    
 ];

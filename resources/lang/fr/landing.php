@@ -85,4 +85,6 @@ Obtenez les meilleurs notes pour accéder à un plus grand choix d\'offres d\'em
 
 Une vitrine du classement des meilleurs étudiants en Europe.  Une idée simple qui relie des employeurs et des étudiants. Le point de rencontre de l´excellence.',
     
+        'download_app' => 'Télécharger l\'application',
+    
 ];

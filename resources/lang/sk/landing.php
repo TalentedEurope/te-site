@@ -69,4 +69,6 @@ return [
     
         'what_is_text_2_txt' => 'Presne to ponúka Talented Europe. Výklad plný najlepších študentov v Európe. Jednoduchú myšlienku, ktorá spája zamestnávateľov a študentov. Miesto stretnutia tých najlepších .',
     
+        'download_app' => 'Stiahnite si aplikáciu',
+    
 ];

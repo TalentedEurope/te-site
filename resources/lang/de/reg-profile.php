@@ -563,10 +563,12 @@ return [
     
         'passwords_dont_match' => 'Passwörter stimmen nicht überein',
     
-        'terms_required' => 'Sie müssen die Nutzungsbedingungen akzeptieren',
+        'terms_required' => 'Sie müssen Sie die Nutzungsbedingungen akzeptieren',
     
         'user_type' => 'Benutzertyp',
     
         'password_confirm' => 'Passwort Bestätigung',
+    
+        'user_type_required' => 'Sie müssen einen Benutzertyp auswählen',
     
 ];

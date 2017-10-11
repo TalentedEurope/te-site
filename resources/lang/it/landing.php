@@ -69,4 +69,6 @@ return [
     
         'what_is_text_2_txt' => 'Questa è l’offerta che Talented Europe ti propone. Una vetrina in cui vengono messi in mostra i migliori studenti di tutta Europa. Un’idea semplice che unisce i datori di lavoro agli studenti. Il punto d’incontro per eccellenza.',
     
+        'download_app' => 'Scarica l\'applicazione',
+    
 ];

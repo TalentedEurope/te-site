@@ -578,4 +578,6 @@ Sur',
     
         'password_confirm' => 'Confirmation mot de passe',
     
+        'user_type_required' => 'Vous devez sélectionner un type d\'utilisateur',
+    
 ];

@@ -69,4 +69,6 @@ return [
     
         'what_is_text_2_txt' => 'That is what Talented Europe offers. A showcase with a ranking of the best students in Europe. A simple idea which joins employers and students. The meeting point of excellence.',
     
+        'download_app' => 'Download the app',
+    
 ];
