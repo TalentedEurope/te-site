@@ -141,7 +141,7 @@ export default {
     },
     watch: {
         items: function (value) {
-            if (value.length == 0) {
+            if (value.length == 0 && this.onlyMatches) {
                 this.setSelected(null);
                 EventBus.$emit(`onAutocompleteChange-${this.code}`, this.selected);
             }
