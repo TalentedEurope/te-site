@@ -42,7 +42,12 @@ class Language
      */
     public function handle($request, Closure $next)
     {
-        $urlLang = $request->input('lang');
+        // Convert (examples):
+        // en => en
+        // en_GB => en
+        // en-GB => en
+        $urlLang = preg_split('/[-_]/', $request->input('lang'))[0];
+
         $cookieLang = $request->cookie('locale');
         $browserLang = substr($request->server('HTTP_ACCEPT_LANGUAGE'), 0, 2);
         $locale = Config::get('app.locale');
