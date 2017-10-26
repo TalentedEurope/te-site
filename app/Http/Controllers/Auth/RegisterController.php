@@ -11,11 +11,13 @@ use App\Models\Company;
 use App\Models\ValidationRequest;
 use App\Models\ValidatorInvite;
 use App\Notifications\AccountActivated;
+use App\Notifications\NewAccount;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ValidatorController;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Password;
 use Jrean\UserVerification\Traits\VerifiesUsers;
 use Jrean\UserVerification\Facades\UserVerification;
 use Validator;
@@ -85,12 +87,14 @@ class RegisterController extends Controller
             'name' => 'required_if:type,institution',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
-            'type' => 'required',
-            'terms' => 'required'
+            'type' => 'required|in:company,validator,institution,student',
+            'terms' => 'required',
+            'institution' => 'required_if:type,Institution',
+            'institution_name' => 'required_if:invite_institution,invite',
+            'institution_email' => 'required_if:invite_institution,invite|unique:users,email'
         ]);
         $val->setAttributeNames(User::niceNames());
         return $val;
-
     }
 
     /**
@@ -177,6 +181,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $user = null;
+
         if (!Auth::user()) {
             $user = User::create([
                 'email' => $data['email'],
@@ -196,7 +201,7 @@ class RegisterController extends Controller
                 Bouncer::assign('student')->to($user);
                 break;
             case 'company':
-            case 'companies':            
+            case 'companies':
                 $company = Company::create();
                 $company->user()->save($user);
                 Bouncer::assign('company')->to($user);
@@ -217,6 +222,35 @@ class RegisterController extends Controller
                     }
                 }
                 break;
+            case 'validator':
+            case 'validators':
+                $user->name = $data['name'];
+                $user->surname = $data['surname'];
+                $user->save();
+                $validator = \App\Models\Validator::create();
+                $silent = false;
+                if (!isset($data['institution_email']) || $data['institution_email'] == "") {
+                    $u = User::where('userable_type', Institution::class)->where('name', 'like', '%' . $data['institution'] . '%')->first();
+                    if ($u) $i = $u->userable;
+                } else {
+                    $insUser = User::create([
+                        'email' => $data['institution_email'],
+                        'password' => bcrypt(substr(str_shuffle(MD5(microtime())), 0, 10)),
+                    ]);
+                    $insUser->verified = 1;
+                    $insUser->name = $data['institution_name'];
+                    $token = Password::getRepository()->create($insUser);
+                    $insUser->notify(new NewAccount($token, $insUser->email));
+                    $insUser->save();
+                    $i = Institution::create();
+                    $i->user()->save($insUser);
+                    Bouncer::assign('institution')->to($insUser);
+                    $silent = true;
+                }
+
+                $validator->user()->save($user);
+                Bouncer::assign('validator')->to($user);
+                $vi = app('App\Http\Controllers\ValidatorController')->addValidator($user->email, $i->id, true, $silent);
         }
 
         return $user;

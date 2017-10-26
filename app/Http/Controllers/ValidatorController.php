@@ -12,6 +12,7 @@ use App\Models\ValidatorInvite;
 use App\Models\ValidationRequest;
 use App\Notifications\InstitutionRemoved;
 use App\Notifications\InviteCreated;
+use App\Notifications\ReverseInviteCreated;
 use App\Notifications\ChangeInstitution;
 use Validator;
 use Response;
@@ -156,11 +157,12 @@ class ValidatorController extends Controller
         }
     }
 
-    public function addValidator($email, $institution_id)
+    public function addValidator($email, $institution_id, $reverse = false, $silent = false)
     {
         $existingUser = User::where('email', $email)->first();
         $vi = new ValidatorInvite();
         $vi->email = $email;
+        $vi->reverse_invitation = $reverse;
         // Should be unique but let's check up collisions just in case.
         while (!$vi->uid) {
             $vi->uid = $this->makeUid();
@@ -170,10 +172,18 @@ class ValidatorController extends Controller
         }
         $vi->institution_id = $institution_id;
         $vi->save();
-        if ($existingUser) {
-            $existingUser->notify(new ChangeInstitution($vi, $existingUser));
+        if (!$reverse) {
+            if ($existingUser) {
+                $existingUser->notify(new ChangeInstitution($vi, $existingUser));
+            } else {
+                $vi->notify(new InviteCreated($vi));
+            }
         } else {
-            $vi->notify(new InviteCreated($vi));
+            // Reverse always has an existingUser because
+            // its an existing user who created it
+            if (!$silent) {
+                Institution::find($institution_id)->user->notify(new ReverseInviteCreated($existingUser));
+            }
         }
         return $vi;
     }
@@ -202,6 +212,21 @@ class ValidatorController extends Controller
         }
         return back();
     }
+
+    public function confirmInvite(Request $request, $id)
+    {
+        $this->institutionOnly();
+        $res = ValidatorInvite::where('id', $id)->where("institution_id", Auth::user()->userable->id)->first();
+        $val = User::where('email',$res->email)->first();
+        if ($val) {
+            $val->userable->institution_id = Auth::user()->userable->id;
+            $val->userable->save();
+            $res->delete();
+        }
+        $request->session()->flash('success_message', trans('validators.confirmed_invitation_successfully'));
+        return back();
+    }
+
 
     public function toggleStatus(Request $request, $id)
     {

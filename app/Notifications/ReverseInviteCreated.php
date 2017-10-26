@@ -2,26 +2,24 @@
 
 namespace App\Notifications;
 
+use App\Models\ValidatorInvite;
 use App\Models\User;
-use App\Models\Institution;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class InstitutionRemoved extends Notification
+class ReverseInviteCreated extends Notification
 {
     use Queueable;
 
     protected $user;
-    protected $institution;
 
     /**
      * Create a new notification instance.
      */
-    public function __construct(User $user, Institution $institution)
+    public function __construct(User $user)
     {
         $this->user = $user;
-        $this->institution = $institution;
     }
 
     /**
@@ -45,10 +43,15 @@ class InstitutionRemoved extends Notification
      */
     public function toMail($notifiable)
     {
+        $validator = $this->user->name != "" ? $this->user->fullName : $this->user->email;
+
         return (new MailMessage())
-                    ->subject(sprintf(trans('email.institutionRemoved.subject_1'), $this->institution->user->name))
-                    ->line(sprintf(trans('email.institutionRemoved.line_2')))
-                    ->line(trans('email.institutionRemoved.line_3'));
+                    ->subject(sprintf(trans('email.reverseInviteCreated_subject_1'), $validator))
+                    ->line(sprintf(trans('email.reverseInviteCreated_line_2'), $validator))
+                    ->line(trans('email.reverseInviteCreated_line_3'))
+
+                    ->action(trans('email.reverseInviteCreated_action_4'), route('view_profile'));
+
     }
 
     /**

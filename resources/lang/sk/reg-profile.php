@@ -572,4 +572,6 @@ Obchodná a poradenská činnosť',
     
         'user_type_required' => 'Je potrebné vybrať typ užívateľa',
     
+        'cant_find_institution_set_mail' => 'Nemožno nájsť inštitúciu, poslať im pozvánku',
+    
 ];

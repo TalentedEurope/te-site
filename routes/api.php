@@ -15,6 +15,7 @@ Route::post('login', 'Api\LoginController@getToken');
 Route::get('logout', 'Api\LoginController@removeToken');
 Route::post('register', 'Api\RegisterController@registerUser');
 
+Route::get('register/institutions', 'Api\RegisterController@getInstitutions');
 
 Route::group(['prefix' => 'search', 'namespace' => 'Api'], function () {
     Route::group(['prefix' => 'students'], function () {

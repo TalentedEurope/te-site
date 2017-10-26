@@ -602,8 +602,8 @@ return [
     
         'slide_to' => 'Slide to advance',
     
-        'manuals' => 'Manuals',
+        'manuals' => 'Manuels',
     
-        'download_manual' => 'Download manual',
+        'download_manual' => 'Télécharger le manuel',
     
 ];

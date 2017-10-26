@@ -77,4 +77,20 @@ return [
     
         'profile_not_filled_line_1' => 'Abbiamo visto che il profilo non è completa, così abbiamo voluto ricordare che a meno che non si riempiono tutte le informazioni richieste non sarà in grado di accedere a tutte le funzionalità della nostra applicazione.',
     
+        'reverseInviteCreated_subject_1' => '%s vuole unirsi vostro istituto',
+    
+        'reverseInviteCreated_line_2' => 'Recentemente abbiamo ricevuto una richiesta da %s per unire il vostro istituto',
+    
+        'reverseInviteCreated_line_3' => 'Se si desidera confermare questo utente, visita il tuo profilo e accettarlo sul visualizzare gli inviti in sospeso',
+    
+        'reverseInviteCreated_action_4' => 'Vedi il tuo profilo',
+    
+        'institution_account_created_subject_1' => 'Talento Europa preregistrazione',
+    
+        'institution_account_created_line_2' => 'Un arbitro dal proprio istituto, è preregistrati sull\'Europa talento, in modo che possano Arbitro uno studente dal vostro istituto',
+    
+        'institution_account_created_line_3' => 'Se si desidera terminare la registrazione, fare clic sul seguente pulsante, altrimenti ignora questa email',
+    
+        'institution_account_created_action_4' => 'Fine registrazione',
+    
 ];

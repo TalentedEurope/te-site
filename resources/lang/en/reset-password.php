@@ -7,4 +7,6 @@ return [
     
         'send_password_reset' => 'Send password reset link',
     
+        'set_password' => 'Set password',
+    
 ];

@@ -103,4 +103,8 @@ return [
     
         'comment' => 'Commento',
     
+        'confirm' => 'Conferma',
+    
+        'confirmed_invitation_successfully' => 'Invito confermato con successo',
+    
 ];

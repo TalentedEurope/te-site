@@ -62,7 +62,11 @@
                   <tr>
                     <td>{{ $req->email }}</td>
                     <td>{{ $req->created_at->format('d/m/Y') }}</td>
+                    @if (!$req->reverse_invitation)
                     <td><a href="{{ route('delete_invite', [$req->id]) }}" class="btn btn-danger"><i class="fa fa-times" aria-hidden="true"></i> {!! trans('validators.cancel') !!}</a></td>
+                    @else
+                    <td><a href="{{ route('confirm_validator', [$req->id]) }}" class="btn btn-info"><i class="fa fa-check" aria-hidden="true"></i> {!! trans('validators.confirm') !!}</a></td>
+                    @endif
                   </tr>
                 @endforeach
               </tbody>

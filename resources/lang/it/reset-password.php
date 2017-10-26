@@ -7,4 +7,6 @@ return [
     
         'send_password_reset' => 'invio link di richiesta reimpostazione password',
     
+        'set_password' => 'Impostare la password',
+    
 ];

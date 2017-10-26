@@ -571,4 +571,6 @@ return [
     
         'user_type_required' => 'È necessario selezionare un tipo di utente',
     
+        'cant_find_institution_set_mail' => 'Non riesci a trovare il vostro istituto, inviare loro un invito',
+    
 ];

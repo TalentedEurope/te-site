@@ -77,4 +77,20 @@ return [
     
         'profile_not_filled_line_1' => 'Hemos visto que su perfil no está completo, por lo que queríamos recordarle que a menos de que llene toda la información requerida no será capaz de acceder a todas las características de nuestra aplicación.',
     
+        'reverseInviteCreated_subject_1' => '%s quiere unirse a tu institución',
+    
+        'reverseInviteCreated_line_2' => 'Hemos recibido una petición de %s para unirse a su institución',
+    
+        'reverseInviteCreated_line_3' => 'Si quiere confirmar este usuario, visita tu perfil, y aceptalo',
+    
+        'reverseInviteCreated_action_4' => 'Ir a tu perfil',
+    
+        'institution_account_created_subject_1' => 'Preregistro en Talented Europe',
+    
+        'institution_account_created_line_2' => 'Un validador de tu institución te ha preregistrado en Talented Europe, para poder validar a un estudiante de tu institución',
+    
+        'institution_account_created_line_3' => 'Si quieres terminar el registro haz click en el botón de registro a continuación,  en caso contrario ignora este email',
+    
+        'institution_account_created_action_4' => 'Finalizar el registro',
+    
 ];

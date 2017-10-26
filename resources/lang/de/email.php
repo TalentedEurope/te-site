@@ -77,4 +77,20 @@ return [
     
         'profile_not_filled_line_1' => 'Wir haben festgestellt, dass Ihr Profil nicht vollständig ist. Wir möchten Sie daran erinnern, dass Sie nur dann alle Funktionen unserer App nutzen können, wenn Sie alle erforderten Informationen in Ihr Profil eingetragen haben.',
     
+        'reverseInviteCreated_subject_1' => '%s will Ihre Institution beitreten',
+    
+        'reverseInviteCreated_line_2' => 'Wir haben kürzlich eine Anfrage von %s Ihrer Institution beizutreten',
+    
+        'reverseInviteCreated_line_3' => 'Wenn Sie diesen Benutzer bestätigen möchten, rufen Sie Ihr Profil und akzeptieren es auf die ausstehenden Einladungen sehen',
+    
+        'reverseInviteCreated_action_4' => 'Sehen Sie Ihr Profil',
+    
+        'institution_account_created_subject_1' => 'Talentierte Europa Vorregistrierung',
+    
+        'institution_account_created_line_2' => 'Ein Schiedsrichter aus Ihrer Institution, die Sie auf Talentierte Europa vorregistriert, so können sie einen Studenten aus Ihrer Institution refeer',
+    
+        'institution_account_created_line_3' => 'Wenn Sie die Registrierung beenden möchten, klicken Sie bitte auf den folgenden Button, ignorieren sonst diese E-Mail',
+    
+        'institution_account_created_action_4' => 'Abschließen der Registrierung',
+    
 ];
