@@ -87,7 +87,7 @@
               @endif
               <input id="institution"  name="institution" class="{{ $errors->has('institution') ? ' has-error' : '' }}" type="text" placeholder="{!! trans('global.institution_singular') !!}" value="{{ old('institution') }}">
 
-              <input id="invite_institution" type="hidden" value="{{ old('invite_institution') }} "/>
+              <input name="invite_institution" id="invite_institution" type="hidden" value="{{ old('invite_institution') }} "/>
               <div id="no-institution">
                 <p><strong>{{ trans('reg-profile.cant_find_institution_set_mail') }}</strong></p>
 
@@ -132,7 +132,6 @@
 @endsection
 
 @section('js')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.3/jquery.autocomplete.min.js"></script>
 <script>
 jQuery(document).ready(function() {
   if (jQuery("input#Institution").is(':checked')) {
@@ -142,6 +141,7 @@ jQuery(document).ready(function() {
   if (jQuery("input#Validator").is(':checked')) {
       jQuery("#institution-info").show();
       jQuery("#institution_name").val(jQuery("#institution").val());
+      jQuery("#institution").attr('required',true);
       jQuery("input#name").show().attr('required',true);
       jQuery("input#surname").show().attr('required',true);
   }
@@ -153,14 +153,16 @@ jQuery(document).ready(function() {
     if (type == "Institution") {
       jQuery("input#name").show().attr('required',true);
       jQuery("input#surname").hide().removeAttr('required');
+      jQuery("#institution").removeAttr('required');
     } else if (type == "Validator") {
       jQuery("#institution-info").show();
+      jQuery("#institution").attr('required',true);
       jQuery("input#name").show().attr('required',true);
       jQuery("input#surname").show().attr('required',true);
-
     } else {
       jQuery("input#name").hide().removeAttr('required');
       jQuery("input#surname").hide().removeAttr('required');
+      jQuery("#institution").removeAttr('required');
     }
   });
 

@@ -89,9 +89,9 @@ class RegisterController extends Controller
             'password' => 'required|min:6|confirmed',
             'type' => 'required|in:company,validator,institution,student',
             'terms' => 'required',
-            'institution' => 'required_if:type,Institution',
+            'institution' => 'required_if:type,institution',
             'institution_name' => 'required_if:invite_institution,invite',
-            'institution_email' => 'required_if:invite_institution,invite|unique:users,email'
+            'institution_email' => 'email|required_if:invite_institution,invite|unique:users,email'
         ]);
         $val->setAttributeNames(User::niceNames());
         return $val;
