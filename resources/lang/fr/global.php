@@ -97,6 +97,8 @@ return [
     
         'students' => 'Étudiants',
     
+        'referee_singular' => 'Évaluateur',
+    
         'more_btn' => 'voir plus',
     
         'home' => 'Accueil',

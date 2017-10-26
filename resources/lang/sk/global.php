@@ -97,6 +97,8 @@ return [
     
         'students' => 'Študenti',
     
+        'referee_singular' => 'Hodnotiteľa',
+    
         'more_btn' => 'Zobraz viac',
     
         'home' => 'Domovská stránka',

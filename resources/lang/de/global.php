@@ -97,6 +97,8 @@ return [
     
         'students' => 'Studenten',
     
+        'referee_singular' => 'Begutachter',
+    
         'more_btn' => 'Mehr erfahren',
     
         'home' => 'Startseite',

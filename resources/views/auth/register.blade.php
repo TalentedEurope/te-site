@@ -53,7 +53,7 @@
 
             <div class="radio-check">
               <input id="Validator" type="radio" name="type" value="validator" @if (old('type') == "validator" || isset($request) ) checked @endif>
-              <label for="Validator" data-toggle="tooltip" data-placement="bottom" title="{!! trans('validators.validators') !!}"><i class="fa fa-certificate" aria-hidden="true"></i></label>
+              <label for="Validator" data-toggle="tooltip" data-placement="bottom" title="{!! trans('global.referee_singular') !!}"><i class="fa fa-certificate" aria-hidden="true"></i></label>
             </div>
 
             <div class="radio-check" @if (isset($request)) style="display:none" @endif>
