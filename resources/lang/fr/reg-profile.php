@@ -580,4 +580,6 @@ Sur',
     
         'user_type_required' => 'Vous devez sélectionner un type d\'utilisateur',
     
+        'cant_find_institution_set_mail' => 'Vous ne trouvez pas votre institution, leur envoyer une invitation',
+    
 ];

@@ -7,4 +7,6 @@ return [
     
         'send_password_reset' => 'Pošli link na obnovenie hesla',
     
+        'set_password' => 'Nastaviť heslo',
+    
 ];

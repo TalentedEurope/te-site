@@ -571,4 +571,6 @@ return [
     
         'user_type_required' => 'Debes seleccionar un tipo de usuario',
     
+        'cant_find_institution_set_mail' => '¿No puedes encontrar tu institución? Invítala a Talented Europe',
+    
 ];

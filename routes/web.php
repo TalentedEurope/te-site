@@ -64,6 +64,9 @@ Route::group(['prefix' => 'validators'], function () {
     Route::post('/add', 'ValidatorController@add')->name('add_validator');
     Route::get('cancel/{id}', 'ValidatorController@deleteInvite')
         ->name('delete_invite');
+    Route::get('confirm/{id}', 'ValidatorController@confirmInvite')
+        ->name('confirm_validator');
+
 
     // Unasign validator from school. (Keeps the account)
     Route::get('delete/{id}', 'ValidatorController@delete')

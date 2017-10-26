@@ -571,4 +571,6 @@ return [
     
         'user_type_required' => 'You must select a user type',
     
+        'cant_find_institution_set_mail' => 'Can\'t find your institution, send them an invitation',
+    
 ];

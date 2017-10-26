@@ -77,4 +77,20 @@ return [
     
         'profile_not_filled_line_1' => 'Videli sme, že štruktúra nie je dokončená, a tak sme chceli pripomenúť, že ak vyplníte všetky požadované informácie, nebude mať prístup ku všetkým funkciám našej aplikácie.',
     
+        'reverseInviteCreated_subject_1' => '%s sa chce spojiť vašu inštitúciu',
+    
+        'reverseInviteCreated_line_2' => 'Nedávno sme dostali žiadosť od %s sa pripojil k vašej inštitúcii',
+    
+        'reverseInviteCreated_line_3' => 'Ak chcete potvrdiť tohoto používateľa, prejdite do svojho profilu a prijímam ho na neuhradené pozvánky zobraziť',
+    
+        'reverseInviteCreated_action_4' => 'Pozrite sa na svoj profil',
+    
+        'institution_account_created_subject_1' => 'Talentovaný Europe predregistrácia',
+    
+        'institution_account_created_line_2' => 'Rozhodca z vašej inštitúcii, vám vopred zaregistrované na Talentovaný Európe, takže môžu refeer študenta z vašej inštitúcii',
+    
+        'institution_account_created_line_3' => 'Ak chcete dokončiť registráciu, kliknite na nasledujúce tlačidlo, tento e-mail ignorovať inak',
+    
+        'institution_account_created_action_4' => 'registrácia Finish',
+    
 ];

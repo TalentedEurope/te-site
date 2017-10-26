@@ -77,4 +77,20 @@ return [
     
         'profile_not_filled_line_1' => 'Nous avons vu que vous le profil est pas complet, donc nous voulions vous rappeler que si vous remplissez toutes les informations requises, vous ne serez pas en mesure d\'accéder à toutes les fonctionnalités de notre application.',
     
+        'reverseInviteCreated_subject_1' => '%s veut rejoindre votre institution',
+    
+        'reverseInviteCreated_line_2' => 'Nous avons récemment reçu une demande de %s à se joindre à votre institution',
+    
+        'reverseInviteCreated_line_3' => 'Si vous souhaitez confirmer cet utilisateur, veuillez consulter votre profil et accepter les voir les invitations en attente',
+    
+        'reverseInviteCreated_action_4' => 'Voir votre profil',
+    
+        'institution_account_created_subject_1' => 'Talentueux l\'Europe préinscription',
+    
+        'institution_account_created_line_2' => 'Un arbitre de votre institution, vous préenregistré sur l\'Europe Talentueux, afin qu\'ils puissent refeer un étudiant de votre établissement',
+    
+        'institution_account_created_line_3' => 'Si vous voulez terminer l\'enregistrement, s\'il vous plaît cliquer sur le bouton ci-dessous, sinon ignorer cet e-mail',
+    
+        'institution_account_created_action_4' => 'Terminer l\'inscription',
+    
 ];

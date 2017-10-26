@@ -30,11 +30,11 @@
     "smoothscroll": "^0.2.2",
     "style-loader": "^0.13.1",
     "te-translation-builder": "*",
-    "vue": "^1.0.28",
-    "vue-html-loader": "^1.2.3",
-    "vue-i18n": "^4.10.0",
+    "vue": "1.0.28",
+    "vue-html-loader": "1.2.3",
+    "vue-i18n": "4.10.0",
     "vue-loader": "8.5.4",
-    "vue-resource": "^1.0.3"
+    "vue-resource": "1.0.3"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",

@@ -7,4 +7,6 @@ return [
     
         'send_password_reset' => 'Enviar un enlace para reiniciar la contraseña',
     
+        'set_password' => 'Define la contraseña',
+    
 ];
