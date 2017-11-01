@@ -162,7 +162,6 @@
 @endsection
 
 @section('js')
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.3/jquery.autocomplete.min.js"></script>
 <script>
 jQuery(document).ready(function() {
