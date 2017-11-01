@@ -203,6 +203,11 @@ jQuery(document).ready(function() {
     jQuery("#no-institution input").attr('required',false);
   }
 
+  jQuery("form input").blur(function() { 
+    if (jQuery("input#Validator").is(':checked') && jQuery("#institution_name").val() != "")
+      jQuery("#institution").val(jQuery("#institution_name").val())
+  });
+
   jQuery("#institution").autocomplete({
       autoSelectFirst: true,
       minChars: 3,
