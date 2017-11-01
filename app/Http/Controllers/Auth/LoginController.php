@@ -65,7 +65,17 @@ class LoginController extends Controller
         });
     }
 
+    public function authenticated() {
+        $user = Auth::user();
+        if (!$user->has_logged_in) {
+            $user->has_logged_in = true;
+            $user->save();
+        }
+        redirect($this->$redirectTo);
+    }
+
     /**
+     * 
      * Validate the user login request.
      *
      * @param \Illuminate\Http\Request $request

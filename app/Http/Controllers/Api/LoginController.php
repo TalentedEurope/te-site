@@ -38,6 +38,11 @@ class LoginController extends Controller
         $data = compact('token');
         $user = Auth::user();
         $data['user'] = $user;
+        if (!$user->has_logged_in) {
+            $user->has_logged_in = true;
+            $user->save();
+        }
+
         if ($user && $request->has('pushID')) {
             $user->push_id = $request->input('pushID');
             $user->save();

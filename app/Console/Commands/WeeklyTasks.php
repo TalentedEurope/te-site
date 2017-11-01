@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Notifications\ProfileNotFilled;
 use App\Models\User;
+use Carbon\Carbon;
 
 class WeeklyTasks extends Command
 {
@@ -44,5 +45,6 @@ class WeeklyTasks extends Command
         foreach ($fillAlerts as $fal) {
             $fal->notify(new ProfileNotFilled($fal));
         }
+        User::where('has_logged_in',false)->where('created_at', '<', Carbon::now()->subDays(env("MIN_DELETE_DAYS", 7)))->delete();
     }
 }
