@@ -103,7 +103,7 @@ return [
     
         'comment' => 'Komentár',
     
-        'confirm' => 'potvrdiť',
+        'confirm' => 'Potvrdiť',
     
         'confirmed_invitation_successfully' => 'Pozvánka úspešne potvrdená',
     

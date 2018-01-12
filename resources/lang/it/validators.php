@@ -103,7 +103,7 @@ return [
     
         'comment' => 'Commento',
     
-        'confirm' => 'Conferma',
+        'confirm' => 'Confermare',
     
         'confirmed_invitation_successfully' => 'Invito confermato con successo',
     

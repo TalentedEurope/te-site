@@ -573,4 +573,18 @@ return [
     
         'cant_find_institution_set_mail' => 'Kann nicht Ihre Institution finden, ihnen eine Einladung schicken',
     
+        'institution_name' => 'Name der Institution',
+    
+        'institution_email' => 'Institution E-Mail',
+    
+        'search_institutions' => 'Suchen Institutionen',
+    
+        'select_institution' => 'Wählen Institution',
+    
+        'save_institution' => 'Speichern Institution',
+    
+        'institution_data_required' => 'Sie müssen die Namen und die E-Mail von der Institution füllen',
+    
+        'select_institution_required' => 'Sie müssen die Institution auswählen, denen Sie angehören',
+    
 ];

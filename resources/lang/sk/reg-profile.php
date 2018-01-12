@@ -574,4 +574,18 @@ Obchodná a poradenská činnosť',
     
         'cant_find_institution_set_mail' => 'Nemožno nájsť inštitúciu, poslať im pozvánku',
     
+        'institution_name' => 'Názov inštitúcie',
+    
+        'institution_email' => 'inštitúcie email',
+    
+        'search_institutions' => 'vyhľadávací Inštitúcie',
+    
+        'select_institution' => 'select inštitúcie',
+    
+        'save_institution' => 'Save inštitúcie',
+    
+        'institution_data_required' => 'Musíte vyplniť meno a email svojho orgánu',
+    
+        'select_institution_required' => 'Musíte vybrať orgánu, ku ktorému patríte',
+    
 ];
