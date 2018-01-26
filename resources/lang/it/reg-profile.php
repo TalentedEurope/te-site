@@ -573,4 +573,18 @@ return [
     
         'cant_find_institution_set_mail' => 'Non riesci a trovare il vostro istituto, inviare loro un invito',
     
+        'institution_name' => 'Nome Istituzione',
+    
+        'institution_email' => 'mail istituzione',
+    
+        'search_institutions' => 'ricerca istituzioni',
+    
+        'select_institution' => 'Selezionare Istituzione',
+    
+        'save_institution' => 'Salva Istituzione',
+    
+        'institution_data_required' => 'È necessario compilare il nome e l\'e-mail dell\'Istituzione',
+    
+        'select_institution_required' => 'È necessario selezionare l\'Istituzione a cui si appartiene',
+    
 ];

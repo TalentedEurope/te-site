@@ -603,8 +603,10 @@ return [
     
         'slide_to' => 'Slide to advance',
     
-        'manuals' => 'Handbücher',
+        'manuals' => 'Anleitungen',
     
-        'download_manual' => 'Bedienungsanleitung herunterladen',
+        'download_manual' => 'Download Handbuch',
+    
+        'collaborators' => 'Mitarbeiter',
     
 ];

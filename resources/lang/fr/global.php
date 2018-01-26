@@ -69,7 +69,7 @@ return [
     
         'company_plural' => 'Sociétés',
     
-        'institution_plural' => 'Les établissements d\'enseignement',
+        'institution_plural' => 'Institutions académique',
     
         'student_plural' => 'Étudiants',
     
@@ -89,7 +89,7 @@ return [
     
         'institutions_singular' => 'Institution académique',
     
-        'institutions' => 'Les établissements d\'enseignement',
+        'institutions' => 'Institutions académique',
     
         'student_singular' => 'L\'étudiant',
     
@@ -604,8 +604,10 @@ return [
     
         'slide_to' => 'Slide to advance',
     
-        'manuals' => 'Manuels',
+        'manuals' => 'manuels',
     
         'download_manual' => 'Télécharger le manuel',
+    
+        'collaborators' => 'Collaborateurs',
     
 ];

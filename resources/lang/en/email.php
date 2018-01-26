@@ -79,15 +79,15 @@ return [
     
         'reverseInviteCreated_subject_1' => '%s wants to join your institution',
     
-        'reverseInviteCreated_line_2' => 'We recently received a request from %s to join your institution',
+        'reverseInviteCreated_line_2' => 'We have recently received a request from %s to join your institution',
     
-        'reverseInviteCreated_line_3' => 'If you want to confirm this user, visit your profile and accept it on the pending invitations view',
+        'reverseInviteCreated_line_3' => 'If you want to confirm this user, visit your profile and accept it on the pending requests list.',
     
         'reverseInviteCreated_action_4' => 'View your profile',
     
         'institution_account_created_subject_1' => 'Talented Europe preregistration',
     
-        'institution_account_created_line_2' => 'A referee from your institution, preregistered you on Talented Europe, so they can refeer a student from your institution',
+        'institution_account_created_line_2' => 'A validator from your institution preregistered you on Talented Europe, so you can validate a student from your institution',
     
         'institution_account_created_line_3' => 'If you want to finish registration, please click the following button, otherwise ignore this email',
     

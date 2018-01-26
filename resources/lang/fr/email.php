@@ -81,13 +81,13 @@ return [
     
         'reverseInviteCreated_line_2' => 'Nous avons récemment reçu une demande de %s à se joindre à votre institution',
     
-        'reverseInviteCreated_line_3' => 'Si vous souhaitez confirmer cet utilisateur, veuillez consulter votre profil et accepter les voir les invitations en attente',
+        'reverseInviteCreated_line_3' => 'Si vous souhaitez confirmer cet utilisateur, veuillez consulter votre profil et accepter sur la liste des demandes en attente.',
     
         'reverseInviteCreated_action_4' => 'Voir votre profil',
     
         'institution_account_created_subject_1' => 'Talentueux l\'Europe préinscription',
     
-        'institution_account_created_line_2' => 'Un arbitre de votre institution, vous préenregistré sur l\'Europe Talentueux, afin qu\'ils puissent refeer un étudiant de votre établissement',
+        'institution_account_created_line_2' => 'Un validateur de votre établissement vous préenregistré sur l\'Europe Talentueux, afin que vous puissiez valider un étudiant de votre établissement',
     
         'institution_account_created_line_3' => 'Si vous voulez terminer l\'enregistrement, s\'il vous plaît cliquer sur le bouton ci-dessous, sinon ignorer cet e-mail',
     

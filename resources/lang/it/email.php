@@ -81,13 +81,13 @@ return [
     
         'reverseInviteCreated_line_2' => 'Recentemente abbiamo ricevuto una richiesta da %s per unire il vostro istituto',
     
-        'reverseInviteCreated_line_3' => 'Se si desidera confermare questo utente, visita il tuo profilo e accettarlo sul visualizzare gli inviti in sospeso',
+        'reverseInviteCreated_line_3' => 'Se si desidera confermare questo utente, visitare il tuo profilo e lo accetto nella lista richieste in sospeso.',
     
         'reverseInviteCreated_action_4' => 'Vedi il tuo profilo',
     
         'institution_account_created_subject_1' => 'Talento Europa preregistrazione',
     
-        'institution_account_created_line_2' => 'Un arbitro dal proprio istituto, è preregistrati sull\'Europa talento, in modo che possano Arbitro uno studente dal vostro istituto',
+        'institution_account_created_line_2' => 'Un validatore dal proprio istituto si preregistrati sull\'Europa talento, in modo da poter validare uno studente dal vostro istituto',
     
         'institution_account_created_line_3' => 'Se si desidera terminare la registrazione, fare clic sul seguente pulsante, altrimenti ignora questa email',
     

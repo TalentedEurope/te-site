@@ -81,13 +81,13 @@ return [
     
         'reverseInviteCreated_line_2' => 'Wir haben kürzlich eine Anfrage von %s Ihrer Institution beizutreten',
     
-        'reverseInviteCreated_line_3' => 'Wenn Sie diesen Benutzer bestätigen möchten, rufen Sie Ihr Profil und akzeptieren es auf die ausstehenden Einladungen sehen',
+        'reverseInviteCreated_line_3' => 'Wenn Sie diesen Benutzer bestätigen möchten, rufen Sie Ihr Profil und akzeptieren es auf der anstehenden Anforderungen Liste.',
     
         'reverseInviteCreated_action_4' => 'Sehen Sie Ihr Profil',
     
         'institution_account_created_subject_1' => 'Talentierte Europa Vorregistrierung',
     
-        'institution_account_created_line_2' => 'Ein Schiedsrichter aus Ihrer Institution, die Sie auf Talentierte Europa vorregistriert, so können sie einen Studenten aus Ihrer Institution refeer',
+        'institution_account_created_line_2' => 'Eine Prüfung von Ihrer Institution vorregistriert Sie auf Talentierte Europa, so dass Sie einen Student aus Ihrer Einrichtung validieren',
     
         'institution_account_created_line_3' => 'Wenn Sie die Registrierung beenden möchten, klicken Sie bitte auf den folgenden Button, ignorieren sonst diese E-Mail',
     

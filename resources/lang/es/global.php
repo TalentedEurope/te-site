@@ -607,4 +607,6 @@ return [
     
         'download_manual' => 'Descargar manual',
     
+        'collaborators' => 'Colaboradores',
+    
 ];

@@ -357,7 +357,7 @@ return [
     
         'remove_btn' => 'Eliminar',
     
-        'student_study_institution_name' => 'Nombre de la institución',
+        'student_study_institution_name' => 'Nombre de la Institución',
     
         'student_study_course_studies_name' => 'Nombre del Curso / Estudios',
     
@@ -572,5 +572,19 @@ return [
         'user_type_required' => 'Debes seleccionar un tipo de usuario',
     
         'cant_find_institution_set_mail' => '¿No puedes encontrar tu institución? Invítala a Talented Europe',
+    
+        'institution_name' => 'Nombre de la Institución',
+    
+        'institution_email' => 'Email de la Institución',
+    
+        'search_institutions' => 'Buscar Instituciones',
+    
+        'select_institution' => 'Seleccionar Institución',
+    
+        'save_institution' => 'Guardar Institución',
+    
+        'institution_data_required' => 'Debes rellenar el nombre y el email de la Institución',
+    
+        'select_institution_required' => 'Debes seleccionar la Institución a la que perteneces',
     
 ];

@@ -582,4 +582,18 @@ Sur',
     
         'cant_find_institution_set_mail' => 'Vous ne trouvez pas votre institution, leur envoyer une invitation',
     
+        'institution_name' => 'Nom de l\'établissement',
+    
+        'institution_email' => 'institution email',
+    
+        'search_institutions' => 'Institutions de recherche',
+    
+        'select_institution' => 'Institution Select',
+    
+        'save_institution' => 'Enregistrer établissement',
+    
+        'institution_data_required' => 'Vous devez remplir le nom et e-mail de l\'institution',
+    
+        'select_institution_required' => 'Vous devez sélectionner l\'institution à laquelle vous appartenez',
+    
 ];

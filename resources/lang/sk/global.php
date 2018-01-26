@@ -607,4 +607,6 @@ return [
     
         'download_manual' => 'Download manuálne',
     
+        'collaborators' => 'Spolupracovníci',
+    
 ];

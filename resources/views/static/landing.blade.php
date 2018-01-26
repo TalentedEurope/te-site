@@ -411,6 +411,13 @@
       </div>
     </section>
 
+    <div class="collaborators-section content-section text-center col-md-12">
+      <h1>{!! trans('global.collaborators') !!}</h1>
+      <ul class="collaborators-list">
+        <li><a target="_blank" href="http://www.eu-gen.org/eup/"><img src="/img/collaborators/eu-gen.png" alt="EuGen"></a></li>
+        <li><a target="_blank" href="http://www.erasmobility.com/en/"><img src="/img/collaborators/erasmobility.png" alt="Erasmobility"></a></li>
+      </ul>
+    </div>
 
     <div class="pre-footer col-md-12">
       <div class="container">

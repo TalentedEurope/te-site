@@ -1,0 +1,32 @@
+.collaborators-section {
+    background: rgb(237, 237, 241);
+
+    .collaborators-list {
+        list-style: none;
+        padding: 0;
+
+        a {
+            background: $white;
+            color: $white;
+            display: inline-block;
+            margin-left: 4px;
+            margin-right: 4px;
+
+            img {
+                max-height: 80px;
+                max-width: 100%;
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        li {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+
+    }
+}

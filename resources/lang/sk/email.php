@@ -77,20 +77,20 @@ return [
     
         'profile_not_filled_line_1' => 'Videli sme, že štruktúra nie je dokončená, a tak sme chceli pripomenúť, že ak vyplníte všetky požadované informácie, nebude mať prístup ku všetkým funkciám našej aplikácie.',
     
-        'reverseInviteCreated_subject_1' => '%s sa chce spojiť vašu inštitúciu',
+        'reverseInviteCreated_subject_1' => '% sa chce spojiť s vašou inštitúciou',
     
-        'reverseInviteCreated_line_2' => 'Nedávno sme dostali žiadosť od %s sa pripojil k vašej inštitúcii',
+        'reverseInviteCreated_line_2' => 'Nedávno sme dostali žiadosť od %s, aby sa pripojil k vašej inštitúcii',
     
-        'reverseInviteCreated_line_3' => 'Ak chcete potvrdiť tohoto používateľa, prejdite do svojho profilu a prijímam ho na neuhradené pozvánky zobraziť',
+        'reverseInviteCreated_line_3' => 'Ak si prajete potvrdiť tohto užívateľa, navštívte svoj profil a prijmite ho v zozname nevybavených žiadostí.',
     
-        'reverseInviteCreated_action_4' => 'Pozrite sa na svoj profil',
+        'reverseInviteCreated_action_4' => 'Zobraziť môj profil',
     
-        'institution_account_created_subject_1' => 'Talentovaný Europe predregistrácia',
+        'institution_account_created_subject_1' => 'Predregistrácia na Talented Europe',
     
-        'institution_account_created_line_2' => 'Rozhodca z vašej inštitúcii, vám vopred zaregistrované na Talentovaný Európe, takže môžu refeer študenta z vašej inštitúcii',
+        'institution_account_created_line_2' => 'Hodnotiteľ z vašej inštitúcie vás predregistroval na Talented Europe, aby ste mohli ohodnotiť študenta vašej inštitúcie.',
     
-        'institution_account_created_line_3' => 'Ak chcete dokončiť registráciu, kliknite na nasledujúce tlačidlo, tento e-mail ignorovať inak',
+        'institution_account_created_line_3' => 'Ak si prajete dokončiť proces registrácie, kliknite na nasledujúce tlačidlo. V opačnom prípade ignorujte tento e-mail.',
     
-        'institution_account_created_action_4' => 'registrácia Finish',
+        'institution_account_created_action_4' => 'Ukončiť registráciu',
     
 ];
