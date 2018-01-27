@@ -53,7 +53,7 @@ class ValidatorRequested extends Notification
                     ->line(sprintf(trans('email.validatorRequested_line_3'), $validatorName))
                     ->line(trans('email.validatorRequested_line_4'))
                     ->line(trans('email.validatorRequested_line_5'))
-                    ->action(trans('email.validatorRequested_action_6'), route('invite-school').'?req_id='.urlencode($requestID))
+                    ->action(trans('email.validatorRequested_action_6'), route('register').'?req_id='.urlencode($requestID))
                     ->line(trans('email.validatorRequested_line_7'));
     }
 
