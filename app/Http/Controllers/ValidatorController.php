@@ -105,28 +105,6 @@ class ValidatorController extends Controller
         );
     }
 
-    // Should be in a helper or something
-    function makeUid($yourTimestamp = null)
-    {
-        static $inc = 0;
-        $id = '';
-
-        if ($yourTimestamp === null) {
-            $yourTimestamp = time();
-        }
-        $ts = pack('N', $yourTimestamp);
-        $m = substr(md5(gethostname()), 0, 3);
-        $pid = pack('n', posix_getpid());
-        $trail = substr(pack('N', $inc++), 1, 3);
-        $bin = sprintf("%s%s%s%s", $ts, $m, $pid, $trail);
-
-        for ($i = 0; $i < 12; $i++) {
-            $id .= sprintf("%02X", ord($bin[$i]));
-        }
-
-        return $id;
-    }
-
     public function add(Request $request)
     {
         $this->institutionOnly();
@@ -165,7 +143,7 @@ class ValidatorController extends Controller
         $vi->reverse_invitation = $reverse;
         // Should be unique but let's check up collisions just in case.
         while (!$vi->uid) {
-            $vi->uid = $this->makeUid();
+            $vi->uid = md5(uniqid());
             if (ValidatorInvite::where('uid', $vi->uid)->first()) {
                 $vi->uid = null;
             }
