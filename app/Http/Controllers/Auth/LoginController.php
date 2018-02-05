@@ -72,7 +72,7 @@ class LoginController extends Controller
             $user->has_logged_in = true;
             $user->save();
         }
-        redirect($this->$redirectTo);
+        redirect($this->redirectTo);
     }
 
     /**
