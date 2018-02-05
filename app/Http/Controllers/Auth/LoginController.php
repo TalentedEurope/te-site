@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Jrean\UserVerification\Traits\VerifiesUsers;
 use Jrean\UserVerification\Facades\UserVerification;
+use Auth;
 
 class LoginController extends Controller
 {
