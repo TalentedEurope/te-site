@@ -188,7 +188,10 @@
           <p class="col-md-6 text-justify">{!! trans('landing.what_is_text_1') !!}</p>
           <p class="col-md-6 text-justify">{!! trans('landing.what_is_text_2') !!}</p>
 
-          <h3 class="text-center col-md-12">{!! trans('landing.join_talented_europe_today') !!} <a class="btn btn-register" href="{{ URL::to('/register') }}">{!! trans('global.register_btn') !!}</a></h3>
+          <h3 class="text-center col-md-12">{!! trans('landing.join_talented_europe_today') !!}</h3>
+          <div class="text-center col-md-12">
+            <a class="btn btn-register" href="{{ URL::to('/register') }}">{!! trans('global.register_btn') !!}</a>
+          </div>
           <p class="col-md-6 text-justify">{!! trans('landing.talented_for_students') !!}</p>
           <p class="col-md-6 text-justify">{!! trans('landing.talented_for_employers') !!}</p>
 
