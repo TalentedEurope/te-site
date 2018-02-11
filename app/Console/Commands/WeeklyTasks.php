@@ -45,6 +45,6 @@ class WeeklyTasks extends Command
         foreach ($fillAlerts as $fal) {
             $fal->notify(new ProfileNotFilled($fal));
         }
-        User::where('has_logged_in',false)->where('created_at', '<', Carbon::now()->subDays(env("MIN_DELETE_DAYS", 7)))->delete();
+        //User::where('has_logged_in',false)->where('created_at', '<', Carbon::now()->subDays(env("MIN_DELETE_DAYS", 7)))->delete();
     }
 }
