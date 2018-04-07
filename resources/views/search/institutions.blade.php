@@ -21,6 +21,11 @@
     </div>
 
     <br style="clear:both" />
+
+    <div class="well result-info">
+        <span class="h4">{{ trans("search.we_found") }} <span class="total-institutions">{{ sizeof($institutions) }}</span> {{ trans('global.institution_plural') }} </span>
+    </div>
+
     <ul class="results list-unstyled">
 
     @foreach ($institutions as $institution)
@@ -92,12 +97,18 @@
       var $quicksearch = $('.quicksearch-btn').click(function() {
         qsRegex = new RegExp( $( '.quicksearch' ).val(), 'gi' );
         $grid.isotope();
+        setTimeout(() => {
+            jQuery(".total-institutions").text(jQuery(".institution-item:visible").length);          
+          }, 500);
       }  );
 
       var $quicksearch = $('.quicksearch').keypress(function(e) {
         if(e.which == 13) {
           qsRegex = new RegExp( $( '.quicksearch' ).val(), 'gi' );
           $grid.isotope();
+          setTimeout(() => {
+            jQuery(".total-institutions").text(jQuery(".institution-item:visible").length);          
+          }, 500);
         }
       });
 

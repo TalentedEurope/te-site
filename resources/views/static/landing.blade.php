@@ -285,9 +285,9 @@
               <div class="c100 p0 small center">
               @endif
                 @if ($studentsCount)
-                <span>{{ round($studentsCount/$totalUserCount*100,2) }}%</span>
+                <span>{{ $studentsCount }}</span>
                 @else
-                <span>0%</span>
+                <span>0</span>
                 @endif
                 <div class="slice">
                   <div class="bar"></div>
@@ -306,9 +306,9 @@
               <div class="c100 p0 yellow small center">
             @endif
                 @if ($companiesCount)
-                <span>{{ round($companiesCount/$totalUserCount*100,2) }}%</span>
+                <span>{{ $companiesCount }}</span>
                 @else
-                <span>0%</span>
+                <span>0</span>
                 @endif
                 <div class="slice">
                   <div class="bar"></div>
@@ -325,9 +325,9 @@
               <div class="c100 p0 small center">
               @endif
                 @if ($institutionsCount)
-                <span>{{ round($institutionsCount/$totalUserCount*100,2) }}%</span>
+                <span>{{ $institutionsCount }}</span>
                 @else
-                <span>0%</span>
+                <span>0</span>
                 @endif
                 <div class="slice">
                   <div class="bar"></div>
