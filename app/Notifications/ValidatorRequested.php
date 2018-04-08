@@ -50,7 +50,7 @@ class ValidatorRequested extends Notification
         return (new MailMessage())
                     ->subject(sprintf(trans('email.validatorRequested_subject_1'), $studentName))
                     ->line(sprintf(trans('email.validatorRequested_line_2'), $validatorName))
-                    ->line(sprintf(trans('email.validatorRequested_line_3'), $validatorName))
+                    ->line(sprintf(trans('email.validatorRequested_line_3'), $studentName))
                     ->line(trans('email.validatorRequested_line_4'))
                     ->line(trans('email.validatorRequested_line_5'))
                     ->action(trans('email.validatorRequested_action_6'), route('register').'?req_id='.urlencode($requestID))
