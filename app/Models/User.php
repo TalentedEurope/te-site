@@ -135,7 +135,7 @@ class User extends Authenticatable
 
     public static function getCount($type)
     {
-        return \App\Models\User::where('userable_type', $type)->where('is_filled', true) ->count();
+        return \App\Models\User::where('userable_type', $type)->where('is_filled', true)->where('visible', true) ->count();
     }
 
     public function getPhoto()
