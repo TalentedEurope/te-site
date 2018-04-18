@@ -40,7 +40,7 @@
           <p><strong>{!! trans('register.i_am_a') !!}:</strong></p>
           <div class="user-type @if ($errors->has('type')) alert alert-danger @endif">
             <div class="radio-check" @if (isset($request)) style="display:none" @endif>
-              <input id="Student" type="radio" name="type" value="student"             @if (old('type') == "student") checked @endif>
+              <input id="Student" type="radio" name="type" value="student" @if (old('type') == "student") checked @endif>
               <label for="Student">
                 <i class="fa fa-user" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="{!! trans_choice('global.student', 1) !!}"></i>
               </label>

@@ -55,8 +55,14 @@ class Cleanup extends Command
             $f->where('valid', '!=', 'validated');
         })->get();
 
+
+        $validators = App\Models\ValidationRequest::with('validator.user')->whereHas('student', function ($query) { $query->where('valid', 'pending'); })->get()->map(function($item) {
+            return $item->validator;
+        });
+
         foreach ($validators as $val) {
-            $val->user->notify(new ValidationsPending($val->user));
+            if ($val->user && $val->user->notify == 1 && $val->user->enabled == 1)
+                $val->user->notify(new ValidationsPending($val->user));
         }
 
         foreach ($alerts as $al) {
