@@ -85,7 +85,7 @@ class Institution extends Model
         $institutions = \App\Models\User::where('userable_type', \App\Models\Validator::class)->join('validators', 'validators.id', '=', 'users.userable_id')->where("enabled",1)->whereNotNull("institution_id")->where("is_filled",1)->groupBy('institution_id')->where("visible",1)->get()->map(function ($item) {
             return $item->userable->institution_id;
         });
-        $countries = \App\Models\User::where('userable_type', \App\Models\Institution::class)->whereIn("userable_id",$institutions)->select('country')->groupBy('country')->whereNotNull('country')->get()->map(function ($item) {
+        $countries = \App\Models\User::where('userable_type', \App\Models\Institution::class)->whereIn("userable_id",$institutions)->where('visible', true)->select('country')->groupBy('country')->whereNotNull('country')->get()->map(function ($item) {
             return $item->country;
         });
         $newList = array();

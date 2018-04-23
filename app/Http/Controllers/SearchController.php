@@ -37,7 +37,7 @@ class SearchController extends Controller
     public function searchInstitutions(Request $request)
     {
         $data = array(
-            'institutions' => User::where('is_filled', true)->where('userable_type', Institution::class)->orderBy('name')->get()
+            'institutions' => User::where('is_filled', true)->where('visible', true)->where('userable_type', Institution::class)->orderBy('name')->get()
         );
         return view('search.institutions', $data);
     }
