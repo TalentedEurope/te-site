@@ -69,7 +69,7 @@ return [
     
         'company_plural' => 'Imprese ',
     
-        'institution_plural' => 'Le istituzioni accademiche',
+        'institution_plural' => 'Istituzioni educative',
     
         'student_plural' => 'Studenti',
     
@@ -85,11 +85,11 @@ return [
     
         'companies' => 'Imprese ',
     
-        'institution_singular' => 'Istituzione accademica',
+        'institution_singular' => 'Istituto d\'Istruzione',
     
-        'institutions_singular' => 'Istituzione accademica',
+        'institutions_singular' => 'Istituto d\'Istruzione',
     
-        'institutions' => 'Le istituzioni accademiche',
+        'institutions' => 'Istituzioni educative',
     
         'student_singular' => 'Studente',
     

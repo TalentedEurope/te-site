@@ -433,7 +433,7 @@ return [
     
         'do_you_want_to_leave_institution' => 'Do you want to leave the institution? this will send the pending validation requests back to it, and you won\'t be able to validate anyone until another institution invites you back',
     
-        'leave_institution_button' => 'Yes! Leave this academic institution',
+        'leave_institution_button' => 'Yes! Leave this Educational institution',
     
         'your_profile_is_empty' => 'Your profile is empty!',
     
@@ -455,7 +455,7 @@ return [
     
         'no_matches' => 'No matches',
     
-        'find_your_academic_institution' => 'Find your Academic Institution',
+        'find_your_academic_institution' => 'Find your Educational Institution',
     
         'choose_referee' => 'Choose referee',
     

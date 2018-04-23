@@ -21,9 +21,9 @@ return [
     
         'what_is_cta' => '<strong>Discover more!</strong> Get the brochure',
     
-        'what_is_text_1' => 'Can you imagine being able to hire the best students in whichever European country? Would you like to be part of the elite student sector in Europe? <strong>Thousands of companies will have direct access to your contact information</strong>, and the better marks you get the greater choices you will have to get a nice job.',
+        'what_is_text_1' => '<strong>Would you like to get in touch with best students and companies in Europe?</strong> Talented Europe is a multi platform application specifically designed to put <strong>undergraduates</strong> and <strong>graduates</strong> from various fields of education in touch with <strong>employers or institutions</strong> across Europe to find their dream jobs. ',
     
-        'what_is_text_2' => 'That is what Talented Europe offers. A showcase with a ranking of the best students in Europe. A simple idea which joins employers and students. <strong>The meeting point of excellence.</strong>',
+        'what_is_text_2' => 'Through Talented Europe, <strong>companies will have direct access to students’ contact information and ranking</strong>, making it an easy to use job platform, and a meeting point of excellence. ',
     
         'subscribe_title' => 'Subscribe to follow our updates',
     
@@ -59,9 +59,9 @@ return [
     
         'join_talented_europe_today' => 'Join Talented Europe today!',
     
-        'talented_for_students' => '<strong>For students</strong> - Talented Europe will enhance your employability with the endorsement of your tutors and put you in touch with employers across Europe for internships or first career jobs.',
+        'talented_for_students' => '<strong>For students and graduates</strong> - encouraging mobility of students and post graduates with any type of academic background to find internships or jobs, promoting quality and relevance of higher education, enhancing employability with the endorsement of tutors from relevant universities. ',
     
-        'talented_for_employers' => '<strong>For employers</strong> - Talented Europe will link you with talented young students across Europe and help you find the right person who can contribute to your organisation’s success with the special talents and skills that you are looking for.',
+        'talented_for_employers' => '<strong>For employers</strong> – According to personal criteria, ability to find youth across Europe that can contribute to your team with their talent and previously demonstrated high ranked academic scores. Possible new staff members can be contacted directly through the platform, as well as the ability to look at their personal information such as grades, CV, endorsement, etc.',
     
         'go_to_app' => 'Go to application',
     
