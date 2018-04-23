@@ -252,9 +252,13 @@
 
         <div class="companies-and-institutions-logos">
           @foreach ($logos as $logo)
-            <a href="{{ url('/search/companies') }}">
-              <img  alt="{{ $logo->user->name }}"  width="150" src="{{ asset('uploads/photo/'.$logo->user->image) }}"/>
-            </a>
+            @if (strpos($logo->user->userable_type, "Company") !== false)
+              <a href="{{ url('/search/companies') }}">
+            @else
+              <a href="{{ url('/search/institutions') }}">
+            @endif
+                <img  alt="{{ $logo->user->name }}"  width="150" src="{{ asset('uploads/photo/'.$logo->user->image) }}"/>
+              </a>
           @endforeach
         </div>
       </div>
