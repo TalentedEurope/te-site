@@ -575,7 +575,7 @@ return [
     
         'institution_name' => 'Name der Institution',
     
-        'institution_email' => 'Institution E-Mail',
+        'institution_email' => 'Bildungseinrichtung E-Mail',
     
         'search_institutions' => 'Suchen Institutionen',
     

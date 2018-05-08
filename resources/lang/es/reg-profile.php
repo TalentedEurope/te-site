@@ -573,9 +573,9 @@ return [
     
         'cant_find_institution_set_mail' => '¿No puedes encontrar tu institución? Invítala a Talented Europe',
     
-        'institution_name' => 'Nombre de la Institución',
+        'institution_name' => 'Nombre de la Institución Académica',
     
-        'institution_email' => 'Email de la Institución',
+        'institution_email' => 'Email de la Institución Académica',
     
         'search_institutions' => 'Buscar Instituciones',
     

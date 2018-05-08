@@ -576,7 +576,7 @@ Obchodná a poradenská činnosť',
     
         'institution_name' => 'Názov inštitúcie',
     
-        'institution_email' => 'inštitúcie email',
+        'institution_email' => 'Vzdelávacie inštitúcie email',
     
         'search_institutions' => 'vyhľadávací Inštitúcie',
     

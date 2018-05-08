@@ -573,9 +573,9 @@ return [
     
         'cant_find_institution_set_mail' => 'Can\'t find your institution, send them an invitation',
     
-        'institution_name' => 'Institution name',
+        'institution_name' => 'Educational Institution name',
     
-        'institution_email' => 'Institution email',
+        'institution_email' => 'Educational Institution email',
     
         'search_institutions' => 'Search Institutions',
     

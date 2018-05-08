@@ -584,7 +584,7 @@ Sur',
     
         'institution_name' => 'Nom de l\'établissement',
     
-        'institution_email' => 'institution email',
+        'institution_email' => 'email Établissement éducatif',
     
         'search_institutions' => 'Institutions de recherche',
     

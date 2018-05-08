@@ -61,6 +61,7 @@
               <label for="Company"><i data-toggle="tooltip" data-placement="bottom" title="{!! trans_choice('global.company', 1) !!}" class="fa fa-building" aria-hidden="true"></i></label>
             </div>
           </div>
+
           @if ($errors->has('name'))
           <span class="help-block">
             <strong>{{ $errors->first('name') }}</strong>
@@ -89,7 +90,7 @@
           </span>
           @endif
           <input required id="password"  name="password" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="{!! trans('reg-profile.password') !!}">
-          <input required id="password" name="password_confirmation" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="{!! trans('reg-profile.confirm_password') !!}">
+          <input required id="password_confirmation" name="password_confirmation" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="{!! trans('reg-profile.confirm_password') !!}">
 
           @if ($errors->has('terms'))
           <span class="help-block">
@@ -115,14 +116,14 @@
                   <strong>{{ $errors->first('institution_name') }}</strong>
                 </span>
                 @endif
-                <input id="institution_name"  name="institution_name" class="{{ $errors->has('institution_name') ? ' has-error' : '' }}" type="text" placeholder="{!! trans('reg-profile.name') !!}" value="{{ old('institution_name') }}">
+                <input id="institution_name"  name="institution_name" class="{{ $errors->has('institution_name') ? ' has-error' : '' }}" type="text" placeholder="{!! trans('reg-profile.institution_name') !!}" value="{{ old('institution_name') }}">
 
                 @if ($errors->has('institution_email'))
                 <span class="help-block">
                   <strong>{{ $errors->first('institution_email') }}</strong>
                 </span>
                 @endif
-                <input id="institution_email"  name="institution_email" class="{{ $errors->has('institution_email') ? ' has-error' : '' }}" type="text" placeholder="{!! trans('reg-profile.email') !!}" value="{{ old('institution_email') }}">
+                <input id="institution_email"  name="institution_email" class="{{ $errors->has('institution_email') ? ' has-error' : '' }}" type="text" placeholder="{!! trans('reg-profile.institution_email') !!}" value="{{ old('institution_email') }}">
               </div>
 
           </div>
@@ -166,7 +167,8 @@
 <script>
 jQuery(document).ready(function() {
   if (jQuery("input#Institution").is(':checked')) {
-      jQuery("input#name").show().attr('required',true);
+      jQuery("input#name").attr('placeholder', "{!! trans('reg-profile.institution_name') !!}").show().attr('required',true);
+      jQuery("input#email").attr('placeholder', "{!! trans('reg-profile.institution_email') !!}")
   }
 
   if (jQuery("input#Validator").is(':checked')) {
@@ -180,9 +182,12 @@ jQuery(document).ready(function() {
   jQuery(".user-type input").change(function() {
     var type = jQuery(this).attr("id");
     jQuery("#institution-info").hide();
-    jQuery("input#name").hide().removeAttr('required');
+    jQuery("input#name").hide().attr('placeholder', "{!! trans('reg-profile.name') !!}").removeAttr('required');
+    jQuery("input#email").attr('placeholder', "{!! trans('reg-profile.email') !!}")
+    jQuery("#no-institution input").attr('required', false);
     if (type == "Institution") {
-      jQuery("input#name").show().attr('required',true);
+      jQuery("input#name").attr('placeholder', "{!! trans('reg-profile.institution_name') !!}").show().attr('required',true);
+      jQuery("input#email").attr('placeholder', "{!! trans('reg-profile.institution_email') !!}")
       jQuery("input#surname").hide().removeAttr('required');
       jQuery("#institution").removeAttr('required');
     } else if (type == "Validator") {
@@ -202,7 +207,7 @@ jQuery(document).ready(function() {
     jQuery("#no-institution input").attr('required',false);
   }
 
-  jQuery("form input").blur(function() { 
+  jQuery("form input").blur(function() {
     if (jQuery("input#Validator").is(':checked') && jQuery("#institution_name").val() != "")
       jQuery("#institution").val(jQuery("#institution_name").val())
   });
