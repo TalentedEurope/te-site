@@ -18,6 +18,11 @@ Route::get('/privacy-policy', 'StaticController@getPrivacyPolicy');
 Route::get('/terms', 'StaticController@getTerms');
 Route::get('/faq', 'StaticController@getFaq');
 
+// GDPR
+Route::get('gdpr', 'StaticController@getGdpr')->name('get_gdpr')->middleware("auth");
+Route::post('gdpr',  'StaticController@postGdpr')->name('post_gdpr');
+
+
 // Auth related
 Auth::routes();
 Route::get('email-verification/error', 'Auth\RegisterController@getVerificationError')

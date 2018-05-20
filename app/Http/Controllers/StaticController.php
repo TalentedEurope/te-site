@@ -8,6 +8,7 @@ use \App\Models\Student;
 use \App\Models\Institution;
 use \App\Models\Company;
 use \App\Models\Alert;
+use Illuminate\Http\Request;
 
 class StaticController extends Controller
 {
@@ -75,4 +76,35 @@ class StaticController extends Controller
     {
         return view('static.faq');
     }
+
+    public function getGdpr() 
+    {
+        return view("gdpr", array('user' => Auth::User()));
+    }
+    
+    public function postGdpr(Request $request) {
+        if ($request->input('download')) {
+            $json = Auth::user()->toJson();
+            return response($json, 200)
+                ->header('Content-disposition', 'attachment; filename=data.txt')
+                ->header('Content-type','application/json');
+        }
+
+
+        $validator = \Validator::make($request->all(), [
+            'notify_me' => 'required',
+        ]);
+    
+        if ($validator->fails()) {
+            return redirect()->back()
+            ->withErrors($validator)
+            ->withInput();
+        }
+    
+        $user = Auth::user();
+        $user->notify_me = $request->input('notify_me');
+        $user->save();
+        return view("gdpr", array('thanks' => true ));
+    }
+
 }

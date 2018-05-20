@@ -55,7 +55,17 @@
               <div class="radio">
                 <label><input @if ($user->visible != true) checked @endif type="radio" name="visible" value="0">{!! trans('reg-profile.profile_visibility_hidden') !!}</label>
               </div>
+
+              <h4>{!! trans('reg-profile.notifications') !!}</h4>
+              <div class="radio">
+                <label><input type="radio" @if ($user->notify_me == true) checked @endif name="notify_me" value="1">{!! trans('reg-profile.notifications_enabled') !!}</label>
+              </div>
+              <div class="radio">
+                <label><input @if ($user->notify_me != true) checked @endif type="radio" name="notify_me" value="0">{!! trans('reg-profile.notifications_disabled') !!}</label>
+              </div>
               <hr class="separator">
+
+
               <h4>{!! trans('reg-profile.about_me') !!}</h4>
 
               <text-box-form code="name" label="{!! trans('reg-profile.name') !!}" placeholder="{!! trans('reg-profile.name') !!}" value="{{ old('name', $user->name) }}"
