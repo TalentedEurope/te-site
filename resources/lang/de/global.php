@@ -609,4 +609,6 @@ return [
     
         'collaborators' => 'Mitarbeiter',
     
+        'gdpr_updates' => 'Aktualisierung der Datenschutz-Grundverordnung in Rahmen Talented Europe',
+    
 ];

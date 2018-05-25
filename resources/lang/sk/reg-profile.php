@@ -254,7 +254,7 @@ Obchodná a poradenská činnosť',
     
         'notifications' => 'Notifikácie',
     
-        'notifications_enabled' => 'Povolené. Dostanete e-mail každý deň, ak sa s vami chce študent skontaktovať.',
+        'notifications_enabled' => 'Povolené',
     
         'notifications_disabled' => 'Nepovolené. Nebudete dostávať žiadne e-maily okrem oznámení o servisných úkonoch.',
     
@@ -587,5 +587,13 @@ Obchodná a poradenská činnosť',
         'institution_data_required' => 'Musíte vyplniť meno a email svojho orgánu',
     
         'select_institution_required' => 'Musíte vybrať orgánu, ku ktorému patríte',
+    
+        'gdpr_text' => 'Pre Talented Europe je dôležitá bezpečnosť informácií, s ktorými je možné narábať. Preto sme aktualizovali Pravidlá ochrany osobných údajov v súlade s GDPR (Všeobecné nariadenie o ochrane údajov).',
+    
+        'gdpr_data_text' => 'Vaše osobné údaje uložené v našej databáze si môžete stiahnuť z nasledujúceho odkazu:',
+    
+        'gdpr_data_download' => 'Stiahnuť osobné údaje',
+    
+        'thanks_gdpr' => 'Nastavenie oznámenia boli aktualizované. <br/> Vďaka!',
     
 ];

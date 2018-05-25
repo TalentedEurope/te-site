@@ -253,7 +253,7 @@ return [
     
         'notifications' => 'Benachrichtigungen',
     
-        'notifications_enabled' => 'Aktiviert. Sie bekommen einmal pro Tag eine E-Mail, falls ein Student mit Ihnen in Kontakt tretten will.',
+        'notifications_enabled' => 'Aktiviert. ',
     
         'notifications_disabled' => 'Deaktiviert. Sie bekommen keine E-Mails außer Service-Benachrichtigungen.',
     
@@ -586,5 +586,13 @@ return [
         'institution_data_required' => 'Sie müssen die Namen und die E-Mail von der Institution füllen',
     
         'select_institution_required' => 'Sie müssen die Institution auswählen, denen Sie angehören',
+    
+        'gdpr_text' => 'Für Talented Europe ist der Datenschutz von Informationen, die wir verarbeiten, sehr wichtig. Aus diesem Grund haben wir die Datenschutz-Grundverordnung in Übereinstimmung mit der GDPR (die Datenschutz-Grundverordnung) aktualisiert.',
+    
+        'gdpr_data_text' => 'Ihre Personalangaben, die in unserer Database gespeichert sind, können Sie unter dem folgenden Link herunterladen.',
+    
+        'gdpr_data_download' => 'Personalangaben herunterladen',
+    
+        'thanks_gdpr' => 'Ihre Benachrichtigungseinstellungen aktualisiert wurden. <br/> Dank!',
     
 ];

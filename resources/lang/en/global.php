@@ -609,4 +609,6 @@ return [
     
         'collaborators' => 'Collaborators',
     
+        'gdpr_updates' => 'Updates on the Privacy Policy of Talented Europe',
+    
 ];

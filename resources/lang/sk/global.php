@@ -609,4 +609,6 @@ return [
     
         'collaborators' => 'Spolupracovníci',
     
+        'gdpr_updates' => 'Aktualizácie politiky ochrany osobných údajov v rámci Talented Europe',
+    
 ];
