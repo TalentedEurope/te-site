@@ -97,6 +97,10 @@ return [
     
         'students' => 'Students',
     
+        'student_graduate' => 'Student/Graduate',
+    
+        'students_graduates' => 'Students/Graduates',
+    
         'referee_singular' => 'Referee',
     
         'more_btn' => 'View more',

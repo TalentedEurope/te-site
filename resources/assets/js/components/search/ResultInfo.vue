@@ -9,7 +9,10 @@ export default {
     props: ['collective', 'numberOfResults', 'isFiltering'],
     methods: {
         getCollective: function () {
-            return this.collective == 'companies' ? this.$tc('global.company', this.numberOfResults) : this.$tc('global.student', this.numberOfResults);
+            if (this.collective == 'companies') {
+                return this.$tc('global.company', this.numberOfResults)
+            }
+            return this.$t(this.numberOfResults == 1 ? 'global.student_graduate': 'global.students_graduates');
         }
     },
     computed: {

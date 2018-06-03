@@ -83,9 +83,9 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-collapse collapse-nav collapse navbar-left regular">
-            <li><a href="{{ url::route('searchStudents') }}">{!! trans_choice('global.student', 2) !!}</a></li>
-            <li><a href="{{ url::route('searchCompanies') }}">{!! trans_choice('global.company_plural', 2) !!}</a></li>
-            <li><a href="{{ url::route('searchInstitutions') }}">{!! trans_choice('global.institution_plural', 2) !!}</a></li>
+            <li><a href="{{ url::route('searchStudents') }}">{!! trans('global.students_graduates') !!}</a></li>
+            <li><a href="{{ url::route('searchCompanies') }}">{!! trans('global.company_plural') !!}</a></li>
+            <li><a href="{{ url::route('searchInstitutions') }}">{!! trans('global.institution_plural') !!}</a></li>
 
             </ul>
 
@@ -151,7 +151,7 @@
               <div class="select-holder">
                 <select class="form-control" id="search-type">
                   <option value="" selected="">{!! trans('global.search_info') !!}:</option>
-                  <option value="students">{!! trans_choice('global.student', 2) !!}</option>
+                  <option value="students">{!! trans('global.students_graduates') !!}</option>
                   <option value="companies">{!! trans_choice('global.company', 2) !!}</option>
                 </select>
               </div>

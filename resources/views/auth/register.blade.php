@@ -42,7 +42,7 @@
             <div class="radio-check" @if (isset($request)) style="display:none" @endif>
               <input id="Student" type="radio" name="type" value="student" @if (old('type') == "student") checked @endif>
               <label for="Student">
-                <i class="fa fa-user" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="{!! trans_choice('global.student', 1) !!}"></i>
+                <i class="fa fa-user" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="{!! trans('global.student_graduate') !!}"></i>
               </label>
             </div>
 

@@ -97,6 +97,10 @@ return [
     
         'students' => 'Studenten',
     
+        'student_graduate' => 'Student/Absolvent',
+    
+        'students_graduates' => 'Studenten/Absolventen',
+    
         'referee_singular' => 'Begutachter',
     
         'more_btn' => 'Mehr erfahren',

@@ -97,6 +97,10 @@ return [
     
         'students' => 'Estudiantes',
     
+        'student_graduate' => 'Estudiante/Graduado',
+    
+        'students_graduates' => 'Estudiantes/Graduados',
+    
         'referee_singular' => 'Validador',
     
         'more_btn' => 'Ver más',

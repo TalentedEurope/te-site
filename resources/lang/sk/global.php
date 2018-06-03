@@ -97,6 +97,10 @@ return [
     
         'students' => 'Študenti',
     
+        'student_graduate' => 'Študent/Absolvent',
+    
+        'students_graduates' => 'Študenti/Absolventi',
+    
         'referee_singular' => 'Hodnotiteľa',
     
         'more_btn' => 'Zobraz viac',

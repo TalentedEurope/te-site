@@ -16,7 +16,7 @@
       <div class="collapse navbar-collapse" id="app-navbar-collapse">
         <!-- Left Side Of Navbar -->
         <ul class="main-navbar nav navbar-nav">
-          <li @yield('menu-student')><a href="{{ url('/search/students') }}">{!! trans_choice('global.student', 2) !!}</a></li>
+          <li @yield('menu-student')><a href="{{ url('/search/students') }}">{!! trans('global.students_graduates') !!}</a></li>
           <li @yield('menu-company')><a href="{{ url('/search/companies') }}">{!! trans_choice('global.company', 2) !!}</a></li>
           <li @yield('menu-institution')><a href="{{ url('/search/institutions') }}">{!! trans_choice('global.institution', 2) !!}</a></li>
         </ul>
