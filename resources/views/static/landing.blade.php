@@ -134,7 +134,7 @@
         <div class="hero-video-overlay"></div>
         <div class="video-bg cover">
           <div class="video-fg">
-              <video autoplay loop="true" width="1280" height="720">
+              <video autoplay muted loop="true" width="1280" height="720">
                 <source src="video/home-video.mp4" type='video/mp4' />
                 <source src="video/home-video.webm" type='video/webm' />
               </video>
