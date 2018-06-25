@@ -15,6 +15,7 @@
 Route::get('/', 'StaticController@getLanding');
 Route::get('/cookies', 'StaticController@getCookies');
 Route::get('/privacy-policy', 'StaticController@getPrivacyPolicy');
+Route::get('/legal-warning', 'StaticController@getLegalWarning');
 Route::get('/terms', 'StaticController@getTerms');
 Route::get('/faq', 'StaticController@getFaq');
 

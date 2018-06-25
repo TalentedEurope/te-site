@@ -66,6 +66,16 @@ class StaticController extends Controller
         return view('static.privacy_policy');
     }
 
+    /**
+     * Show the legal warning.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getLegalWarning()
+    {
+        return view('static.legal_warning');
+    }
+
     public function getTerms()
     {
         return view('static.terms');
@@ -77,11 +87,11 @@ class StaticController extends Controller
         return view('static.faq');
     }
 
-    public function getGdpr() 
+    public function getGdpr()
     {
         return view("gdpr", array('user' => Auth::User()));
     }
-    
+
     public function postGdpr(Request $request) {
         if ($request->input('download')) {
             $json = Auth::user()->toJson();
@@ -94,13 +104,13 @@ class StaticController extends Controller
         $validator = \Validator::make($request->all(), [
             'notify_me' => 'required',
         ]);
-    
+
         if ($validator->fails()) {
             return redirect()->back()
             ->withErrors($validator)
             ->withInput();
         }
-    
+
         $user = Auth::user();
         $user->notify_me = $request->input('notify_me');
         $user->save();
