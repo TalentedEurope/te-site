@@ -7,417 +7,360 @@
   <div class="row">
     <div class="col-md-12 col-xs-12">
 
-      @if (App::getLocale() == 'en')
-        <h2 class="page-title">Privacy Policy Disclaimer – Talented Europe</h2>
+      @if (App::getLocale() == 'es')
+        <h2 class="page-title">Política de privacidad - Talented Europe</h2>
         <div class="well">
-          <p>This privacy policy sets out how Talented Europe uses and protects any information that you give Talented Europe when you use this website.</p>
-          <p>Talented Europe is committed to ensuring that your privacy is protected. Should we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement.</p>
-          <p>Talented Europe may change this policy from time to time by updating this page. You should check this page from time to time to ensure that you are happy with any changes.<strong> This policy is effective from January 1st 2017.</strong></p>
+          <h3 class="mt-0">Información básica de protección de datos</h3>
+          <table class="table table-bordered">
+            <tr>
+              <td>
+                <strong>Responsable</strong>
+              </td>
+              <td>CIFP CESAR MANRIQUE</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Finalidad</strong>
+              </td>
+              <td>Atender las solicitudes realizadas a través de la web, gestionar el envío de información, registrarse como usuario, remitir el newsletter al que está suscrito.</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Legitimación</strong>
+              </td>
+              <td>Consentimiento del interesado y ejecución de un precontrato/contrato.</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Destinatarios</strong>
+              </td>
+              <td>No se cederán datos a terceros salvo obligación legal o en el supuesto que sea necesario para atender su solicitud.</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Derechos</strong>
+              </td>
+              <td>Podrá ejercer los derechos de acceso, rectificación, supresión y oposición, limitación del tratamiento, portabilidad de datos y a no ser objeto de decisiones individualizadas automatizadas.</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Información adicional</strong>
+              </td>
+              <td>Puede consultar la información adicional sobre protección de Datos en nuestra web.</td>
+            </tr>
+          </table>
 
-          <h3>What we collect</h3>
+          <p>CIFP CESAR MANRIQUE, en adelante, se compromete a cumplir la legislación vigente en cada momento en materia de tratamiento de datos de carácter personal. Mediante la siguiente política de privacidad CIFP CESAR MANRIQUE, de conformidad con los requisitos previstos en el RGPD informa a los usuarios de:</p>
 
-          We may collect the following information:
+
+          <h3>1. ¿Quién es el responsable del tratamiento de sus datos?</h3>
+          <p>El responsable del tratamiento de sus datos es CIFP CESAR MANRIQUE:</p>
+          <table class="table table-bordered">
+            <tr>
+              <td>
+                <strong>Identidad</strong>
+              </td>
+              <td>CIFP CESAR MANRIQUE - S3511001D</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Dirección</strong>
+              </td>
+              <td>Avenida Príncipes De España, 5, 38010 - Santa Cruz De Tenerife</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Teléfono</strong>
+              </td>
+              <td>922477200</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Web</strong>
+              </td>
+              <td>www.talentedeurope.eu</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Correo-e</strong>
+              </td>
+              <td>info@talentedeurope.org</td>
+            </tr>
+          </table>
+
+          <p>CIFP CESAR MANRIQUE informa al usuario que los datos que nos facilite a través de la navegación por nuestra web, el formulario de contacto, en los formularios de registro, en la suscripción al newsletter o en el envío de correos electrónicos, van a ser tratados por CIFP CESAR MANRIQUE y que dicho tratamiento se encuentra recogido en el Registro de Actividades de tratamiento gestionado por CIFP CESAR MANRIQUE conforme a lo establecido en el RGPD.</p>
+
+          <h3>2. ¿Para qué se utilizan sus datos personales?</h3>
+          <p>En www.talentedeurope.eu cuando el usuario acepta nuestra política de privacidad nos autoriza a utilizar y tratar los datos personales suministrados para:</p>
           <ul>
-            <li>For registered stakeholders: you can be part of Talented Europe community being a Student, an Educational Institution (University / Faculty /High School) or a Company.
+            <li>Remitirle la información y prestarle el servicio que soliciten mediante los diversos formularios disponibles en nuestra web.</li>
+            <li>Facilitarle información sobre las ofertas, productos y servicios solicitados.</li>
+            <li>Ocasionalmente, CIFP CESAR MANRIQUE podrá utilizar sus datos de carácter personal para enviarle notificaciones por medio de correo electrónico. Dichas notificaciones se harán para informar sobre las modificaciones en nuestros servicios o productos o en nuestras políticas condiciones legales.</li>
+            <li>Enviarle el newsletter cuando se encuentre suscrito, con las ofertas, actividades y promociones de CIFP CESAR MANRIQUE y del sector de que pudieran ser de su interés.</li>
+            <li>Remitirle comunicaciones comerciales sobre ofertas, actividades y promociones de CIFP CESAR MANRIQUE y del sector de que pudieran ser de su interés por medios convencionales o electrónicos cuando haya marcado la casilla de que desea recibir información.</li>
+          </ul>
+          <p>www.talentedeurope.eu también recoge información de los usuarios de la web no facilitada directamente por ellos mediante cookies. Los datos recogidos a través de las cookies y otros dispositivos serán utilizados para estudios estadísticos y análisis de perfiles con la finalidad de prestar un mejor servicio a través de nuestra web, para lo que se utilizará la aplicación GOOGLE ANALYTICS, que es una herramienta de Google para ayudar a analizar a los propietarios de los sitios web el modo en que sus visitantes interactúan con sus propiedades. Puede obtener más información de su política de privacidad en <a href="https://www.google.es/intl/es_ALL/analytics/learn/privacy.html">https://www.google.es/intl/es_ALL/analytics/learn/privacy.html</a>.</p>
+          <p>La herramienta que utilizamos para la publicidad y prospección comercial que realizamos es GOOGLE ADWORDS. Podrá obtener más información sobre la política de privacidad en <a href="https://policies.google.com/privacy?hl=es">https://policies.google.com/privacy?hl=es</a>.</p>
+          <p>Google, incluidas todas sus herramientas, cumplen con el marco EU-US Privacy Shield Framework, de conformidad con lo establecido por el Departamento de Comercio de los Estados Unidos en lo que respecta a la recogida, utilización y conservación de la información personal de países miembros de la Unión Europea.</p>
+          <p>www.talentedeurope.eu procurará en todo momento establecer mecanismos adecuados para obtener el consentimiento del Usuario para la instalación de cookies que lo requieran. Cuando un usuario accede a nuestra web aparece un pop-up en el que se informa de la existencia de cookies y de que si continúa navegando por nuestra página presta su consentimiento para la instalación de cookies. La aceptación de la instalación de las cookies conlleva la aceptación de la conservación de la dirección IP en los registros de www.talentedeurope.eu, junto con la fecha de aceptación, por el plazo de un año, con la finalidad de demostrar el consentimiento prestado.  Puede obtener más información en nuestra "Política de Cookies".</p>
+
+          <h3>3. ¿Cuál es la legitimación para el tratamiento de sus datos?</h3>
+          <p>La legitimación para el tratamiento de sus datos por parte de CIFP CESAR MANRIQUE se basa en:</p>
+          <ul>
+            <li>En la ejecución de un precontrato/contrato para remitirle la información y prestarle el servicio solicitado y para darle de alta como usuario registrado, no siendo posible su realización en caso contrario.</li>
+            <li>En el consentimiento del usuario para el envío del newsletter y de comunicaciones comerciales de las ofertas, actividades y promociones de CIFP CESAR MANRIQUE y del sector de que pudieran ser de su interés. El usuario puede revocar en cualquier momento el consentimiento prestado.</li>
+          </ul>
+
+          <h3>4. ¿Por cuánto tiempo consevamos sus datos?</h3>
+          <p>Los datos para remitirle la información o prestarle el servicio que soliciten mediante los diversos formularios disponibles en nuestra web, y su registro como usuario serán conservados durante el tiempo que la relación contractual se encuentre vigente, y una vez finalizada durante el plazo de prescripción legales.</p>
+          <p>Los datos tratados para el envío de la newsletter, para remitir comunicaciones comerciales sobre ofertas, actividades y promociones de CIFP CESAR MANRIQUE y del sector de que pudieran ser de su interés, serán conservados en tanto en cuanto el usuario no revoque el  consentimiento prestado.</p>
+          <p>La dirección IP obtenida a través de las cookies tendrá un plazo de conservación de un año, con la finalidad de demostrar el consentimiento del usuario.</p>
+          <p>En cuanto al plazo de conservación de las cookies, puede obtener más información en nuestra web en el apartado "Política de cookies"</p>
+
+          <h3>5. ¿Qué tipo de datos tratamos de nuestros usuarios?</h3>
+          <p>CIFP CESAR MANRIQUE trata las siguientes categorías de datos:</p>
+          <ol type="a">
+            <li>
+              <strong>Datos de los usuarios que rellenan cualquiera de los formularios disponibles:</strong>
+              <br/>
+              Los datos personales que CIFP CESAR MANRIQUE solicita incluyen:
               <ul>
-                <li>Students and graduates: personal information, academic information, training and work experience, languages, skills.</li>
-                <li>Educational Institutions / Companies: Institutional information, Contacts, Addressing.</li>
+                <li><strong>Datos identificativos:</strong> nombre y apellidos, teléfono, dirección postal y electrónica</li>
+                <li><strong>Datos relativos a la solicitud</strong></li>
               </ul>
             </li>
-            <li>For the newsletters subscription: email address for contact information.</li>
-          </ul>
-
-          <h3>What we do with the information we gather</h3>
-          We require this information to understand your needs and provide you with a better service, and in particular for the following reasons:
-          <ul>
             <li>
-              Internal record keeping.
+              <strong>Datos de los usuarios que se suscriben al newsletter/ quieren recibir información comunicaciones comerciales e información:</strong>
+              <ul>
+                <li><strong>Datos identificativos:</strong> Nombre y apellidos, dirección electrónica.</li>
+              </ul>
             </li>
             <li>
-              We may use the information to improve our searches and contacts betweenstakeholders.
+              <strong>Datos de los usuarios que se registran en nuestra plataforma:</strong>
+              <ul>
+                <li><strong>Datos identificativos:</strong> Nombre y apellidos, dirección postal y electrónica, teléfono</li>
+              </ul>
             </li>
-            <li>
-              We may periodically send promotional emails about new issues which we think you may find interesting using the email address which you have provided.
-            </li>
-            <li>
-              From time to time, we may also use your information to contact you for market research purposes. We may contact you by email, phone or mail. We may use the information to customize the Talented Europe Applications according to your needs.
-            </li>
-          </ul>
-          <h3>Security</h3>
-          <p>We are committed to ensuring that your information is secure. In order to prevent unauthorised access or disclosure, we have put in place suitable physical, electronic and managerial procedures to safeguard and secure the information we collect online.</p>
+            <li><strong>Datos de los usuarios que navegan por nuestra web: Datos proporcionados por las cookies y por Google Analytics.</strong></li>
+          </ol>
 
-          <h3>How we use cookies</h3>
-          <p>A cookie is a small file which asks permission to be placed on your computer's hard drive. Once you agree, the file is added and the cookie helps analyse web traffic or lets you know when you visit a particular site. Cookies allow web applications to respond to you as an individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences.</p>
+          <p><strong>Sólo los mayores de 16 años</strong> pueden facilitar datos a través de nuestra web. Si eres menor de esta edad deberás contar con el consentimiento de tus padres o tutores legales.</p>
+          <p>El Usuario garantiza la autenticidad y actualidad de todos aquellos datos que comunique a CIFP CESAR MANRIQUE y declara que es mayor de 16 años, y será el único responsable de las manifestaciones falsas o inexactas que realice.</p>
+          <p>Los datos de carácter personal tratados por CIFP CESAR MANRIQUE pueden ser obligatorios o voluntarios.</p>
+          <p>La información voluntaria es aquella que el usuario no está obligado a facilitar para contactar con nosotros.</p>
+          <p>Los campos marcados con un asterisco (*) o con la palabra (requerido) en nuestros formularios son de cumplimentación obligatoria, la negativa a suministrarlos supondrá la imposibilidad de prestarle el servicio o atender su solicitud.</p>
+          <p>En el caso que nos facilites datos de terceros, manifiestas contar con el consentimiento de los mismos y te comprometes a trasladarle la información que te facilitamos en esta cláusula, eximiendo a CIFP CESAR MANRIQUE de cualquier tipo de obligación. No obstante CIFP CESAR MANRIQUE podrá llevar a cabo verificaciones para constatar que el tercero ha sido informado adoptando las medidas de diligencia establecidas en la normativa de protección de datos.</p>
 
-          <p>We use traffic log cookies to identify which pages are being used. This helps us analyse data about web page traffic and improve our website in order to tailor it to customer needs. We only use this information for statistical analysis purposes and then the data is removed from the system.</p>
+          <h3>6. ¿A qué destinatarios se comunicarán sus datos?</h3>
+          <p>No se cederán datos a terceros salvo obligación legal o en el supuesto que sea necesario para atender su solicitud.</p>
+          <p>En el caso de usuarios registrados, sus datos serán accesibles a través de la plataforma, dando lugar al acceso a los mismos a terceros, incluyendo empresas y autónomos para un posible contacto.</p>
 
-          <p>Overall, cookies help us provide you with a better website, by enabling us to monitor which pages you find useful and which you do not. A cookie in no way gives us access to your computer or any information about you, other than the data you choose to share with us.</p>
+          <h3>7. ¿Qué derechos le asisten y cómo puede ejercitarlos?</h3>
+          <p>El usuario puede ejercer los siguiente derechos ante CIFP CESAR MANRIQUE:</p>
+          <ol type="a">
+            <li>Acceder a sus datos personales</li>
+            <li>Rectificarlos cuando son inexactos o incompletos</li>
+            <li>Solicitar la supresión o cancelación de los datos cuando, entre otros motivos hayan dejado de ser necesarios para los fines para los que fueron recogidos</li>
+            <li>Oponerse a su tratamiento </li>
+            <li>Pedir la limitación del tratamiento de sus datos cuando se den alguna de las condiciones previstas en la normativa</li>
+            <li>Solicitar la portabilidad de sus datos en los casos previstos en la normativa </li>
+            <li>Impedir ser objeto de decisiones automatizadas</li>
+            <li>Revocar los consentimientos otorgados</li>
+          </ol>
+          <p>El usuario para ejercer sus derechos, deberá enviar un escrito en el que indique el derecho que desea ejercitar y acompañar documento acreditativo de su identidad y dirección postal o electrónica a efectos de notificación. Esta solicitud puede realizarla, bien mediante correo postal a: CIFP CESAR MANRIQUE Avenida Príncipes De España, 5, 38010 - Santa Cruz De Tenerife, o bien en la siguiente dirección de correo-e: info@talentedeurope.org</p>
+          <p>CIFP CESAR MANRIQUE deberá contestar la solicitud del ejercicio de derechos en el plazo de un mes a partir de la recepción de la solicitud. Dicho plazo podrá prorrogarse otros dos meses en caso necesario, teniendo en cuenta la complejidad y el número de solicitudes.  Le informaremos de cualquier prórroga en el plazo de un mes a partir de la recepción de la solicitud indicando los motivos de la dilación.</p>
+          <p>Asimismo, los interesados tienen derecho a reclamar ante la Autoridad de Control competente (Agencia Española de Protección de Datos) cuando consideren que CIFP CESAR MANRIQUE ha vulnerado los derechos que la normativa de protección de datos les reconoce en <a href="https://www.aepd.es/">www.aepd.es</a>.</p>
 
-          <p>You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.</p>
+          <h3>8. ¿Están seguros mis datos?</h3>
+          <p>CIFP CESAR MANRIQUE tiene vigente un contrato con la empresa de Hosting OVH SAS (www.ovh.com) para el alojamiento de su página web. Es una empresa europea y dispone de los últimos sistemas en medidas de seguridad.</p>
+          <p>CIFP CESAR MANRIQUE garantiza la adopción de las medidas oportunas para asegurar el tratamiento confidencial de sus datos habida cuenta del carácter reservado de los mismos.</p>
+          <p>CIFP CESAR MANRIQUE se compromete a que dichos datos permanezcan secretos, tratándolos con la máxima reserva, y declara tener implantadas en su sistema de información, las políticas de seguridad correspondientes al tipo de datos manejados conforme a lo dispuesto en el  REGLAMENTO (UE) 2016/679 DEL PARLAMENTO EUROPEO Y DEL CONSEJO de 27 de abril de 2016 relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos (RGPD).</p>
+          <p>Todos los datos facilitados a través de nuestra plataforma se realiza mediante un protocolo seguro. Nuestra web posee un certificado SSL que permite que cuando algún usuario visita nuestra web e intercambia información con nosotros se establece una conexión cifrada.</p>
 
-          <h3>Links to other websites</h3>
-          <p>Our website may contain links to other websites of interest. However, once you have used these links to leave our site, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting such sites and such sites which are not governed by this privacy statement. You should exercise caution and look at the privacy statement applicable to the website in question.</p>
+          <h3>9. ¿Necesita una cuenta y/o contraseña?</h3>
+          <p>El usuario puede registrarse en nuestra web, para ello resulta indispensable la creación de una cuenta. Es responsabilidad del usuario mantener la confidencialidad de la información de la cuenta, incluyendo la contraseña, así como todas y cada una de las actividades que en ella sucedan.</p>
+          <p>El usuario tiene la obligación de informar a CIFP CESAR MANRIQUE de forma inmediata en caso de que se haga un uso ilegítimo de su cuenta o contraseña, o si ocurriera cualquier problema relativo a la seguridad, mediante el envío de un correo electrónico a info@talentedeurope.org.</p>
 
-          <h3>Controlling your personal information</h3>
-          <p>You may choose to restrict the collection or use of your personal information in the following ways:</p>
-          <ul>
-            <li>
-              Whenever you are asked to fill in a form on the website you should know that the information won’t be used by anybody for direct marketing purposes. Only the registered stakeholders, as part of the community, are allowed to access to your information for possible contacts.
-            </li>
-            <li>
-              If you have registered Talented Europe and you want your information to be removed from the platform, you may change your mind at any time by emailing us at {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}.
-            </li>
-            <li>
-              The same way, if you have subscribed Talented Europe’s newsletter and you want to stop receiving emails, you may change your mind at any time by emailing us at {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}.
-            </li>
-          </ul>
-          <p>
-            We will not distribute or lease your personal information to third parties unless we are required by law to do so. We may use your personal information to send you promotional information about new issues and news from Talented Europe.
-            If you believe that any information we are holding on you is incorrect or incomplete, please write to or email us as soon as possible, at {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}. We will promptly correct any information found to be incorrect.
-          </p>
+          <h3>10. Enlaces a otros sitios web</h3>
+          <p>Si opta por abandonar nuestro sitio Web a través de enlaces a otros sitios Web no pertenecientes a nuestra entidad, CIFP CESAR MANRIQUE no se hará responsable de las políticas de privacidad de dichos sitios Web ni de las cookies que estos puedan almacenar en el ordenador del usuario.</p>
         </div>
 
-      @elseif (App::getLocale() == 'es')
-        <h2 class="page-title">RENUNCIA DE PRIVACIDAD - TALENTED EUROPE</h2>
+      @else
+        <h2 class="page-title">Privacy policy - Talented Europe</h2>
         <div class="well">
-          <p>Esta política de privacidad establece cómo Talented Europe utiliza y protege cualquier información que usted proporciona cuando usa éste sitio web.</p>
-          <p>Talented Europe se compromete a garantizar que su privacidad está protegida. Si le pedimos que proporcione cierta información mediante la cual puede ser identificado al utilizar este sitio, puede estar seguro de que sólo se utilizará de acuerdo con esta declaración de privacidad.</p>
-          <p>Talented Europe puede cambiar esta política de vez en cuando, actualizando esta página. Debe revisar esta página de vez en cuando para asegurarse de que está satisfecho con cualquier cambio. <strong>Esta política se hace efectiva a partir del 1 de enero de 2017.</strong></p>
+          <h3 class="mt-0">Basic data protection information</h3>
+          <table class="table table-bordered">
+            <tr>
+              <td>
+                <strong>Responsable</strong>
+              </td>
+              <td>CIFP CESAR MANRIQUE</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Purpose</strong>
+              </td>
+              <td>Address the requests made through the web, manage the sending of information, register as a user, send the newsletter to which you are subscribed.</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Legitimation</strong>
+              </td>
+              <td>Consent of the interested party and execution of a pre-contract/contract.</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Recipients</strong>
+              </td>
+              <td>No data will be transferred to third parties except legal obligation or in the case that is necessary to meet your request.</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Rights</strong>
+              </td>
+              <td>You may exercise the rights of access, rectification, deletion and opposition, limitation of processing, portability of data and not to be subject to automated individualized decisions.</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Aditional Information</strong>
+              </td>
+              <td>You can consult the additional information on data protection on our website.</td>
+            </tr>
+          </table>
 
-          <h3>Lo que recogemos</h3>
+          <p>CIFP CESAR MANRIQUE, hereinafter, undertakes to comply with current legislation at all times regarding the processing of personal data. Through the following privacy policy CIFP CESAR MANRIQUE, in accordance with the requirements set forth in the RGPD informs users of:</p>
 
-          Podemos recopilar la siguiente información:
+
+          <h3>1. Who is responsible for the processing of your data?</h3>
+          <p>The responsible for the processing of your data is CIFP CESAR MANRIQUE:</p>
+          <table class="table table-bordered">
+            <tr>
+              <td>
+                <strong>Identity</strong>
+              </td>
+              <td>CIFP CESAR MANRIQUE - S3511001D</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Address</strong>
+              </td>
+              <td>Avenida Príncipes De España, 5, 38010 - Santa Cruz De Tenerife</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Telephone number</strong>
+              </td>
+              <td>+34 922 477 200</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Web</strong>
+              </td>
+              <td>www.talentedeurope.eu</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Email</strong>
+              </td>
+              <td>info@talentedeurope.org</td>
+            </tr>
+          </table>
+
+          <p>CIFP CESAR MANRIQUE informs the user that the information you provide through browsing our website, the contact form, the registration forms, the subscription to the newsletter or the sending of emails, will be treated by CIFP CESAR MANRIQUE and that said treatment is included in the Register of Treatment Activities managed by CIFP CESAR MANRIQUE in accordance with the provisions of the RGPD.</p>
+
+          <h3>2. What are your personal data used for?</h3>
+          <p>In www.talentedeurope.eu when the user accepts our privacy policy authorizes us to use and process the personal data provided to:</p>
           <ul>
-            <li>Para los interesados ​​registrados: Usted puede ser parte de la comunidad de Talented Europe siendo un estudiante, una institución educativa (universidad / facultad / escuela secundaria) o una compañía.
+            <li>Send you the information and provide the service you request through the various forms available on our website.</li>
+            <li>Provide information about the offers, products and services requested.</li>
+            <li>Occasionally, CIFP CESAR MANRIQUE may use your personal data to send notifications by email. These notifications will be made to inform about the changes in our services or products or in our legal conditions policies.</li>
+            <li>Send you the newsletter when you are subscribed, with the offers, activities and promotions of CIFP CESAR MANRIQUE and the sector that may be of your interest.</li>
+            <li>Send you commercial communications about offers, activities and promotions of CIFP CESAR MANRIQUE and the sector that may be of your interest by conventional or electronic means when you have checked the box you want to receive information.</li>
+          </ul>
+          <p>www.talentedeurope.eu also collects information from users of the website not provided directly by them through cookies. The data collected through cookies and other devices will be used for statistical studies and profile analysis in order to provide a better service through our website, for which the GOOGLE ANALYTICS application, which is a Google tool, will be used. to help analyze the owners of websites the way their visitors interact with their properties. You can get more information about their privacy policy at <a href="https://www.google.es/intl/es_ALL/analytics/learn/privacy.html">https://www.google.es/intl/es_ALL/analytics/learn/privacy.html</a>.</p>
+          <p>The tool we use for advertising and commercial prospection we do is GOOGLE ADWORDS. You can get more information about the privacy policy at <a href="https://policies.google.com/privacy?hl=en">https://policies.google.com/privacy?hl=en</a>.</p>
+          <p>Google, including all its tools, comply with the EU-US Privacy Shield Framework, in accordance with the provisions of the United States Department of Commerce regarding the collection, use and conservation of personal information of member countries of the European Union.</p>
+          <p>www.talentedeurope.eu will try at all times to establish adequate mechanisms to obtain the consent of the User for the installation of cookies that require it. When a user accesses our website, a pop-up appears informing them of the existence of cookies and that if you continue browsing our website, you consent to the installation of cookies. The acceptance of the installation of cookies implies the acceptance of the preservation of the IP address in the registers of www.talentedeurope.eu, together with the date of acceptance, for a period of one year, in order to demonstrate the consent given . You can get more information in our "Cookies Policy".</p>
+
+          <h3>3. What is the legitimation for the treatment of your data?</h3>
+          <p>The legitimacy for the treatment of your data by CIFP CESAR MANRIQUE is based on:</p>
+          <ul>
+            <li>In the execution of a pre-contract / contract to send the information and provide the service requested and to register as a registered user, not being possible otherwise.</li>
+            <li>In the user's consent to send the newsletter and commercial communications of the offers, activities and promotions of CIFP CESAR MANRIQUE and the sector that may be of interest to them. The user can revoke the consent given at any time.</li>
+          </ul>
+
+          <h3>4. How long do we keep your data?</h3>
+          <p>The data to send the information or provide the service you request through the various forms available on our website, and your registration as a user will be retained during the time that the contractual relationship is in force, and once completed during the legal limitation period.</p>
+          <p>The data processed to send the newsletter, to send commercial communications about offers, activities and promotions of CIFP CESAR MANRIQUE and the sector that may be of interest, will be retained as long as the user does not revoke the consent given.</p>
+          <p>The IP address obtained through the cookies will have a shelf life of one year, in order to demonstrate the user's consent.</p>
+          <p>Regarding the term of conservation of cookies, you can obtain more information on our website in the section "Cookies policy".</p>
+
+          <h3>5. What kind of data do we treat from our users?</h3>
+          <p>CIFP CESAR MANRIQUE deals with the following categories of data:</p>
+          <ol type="a">
+            <li>
+              <strong>Data of the users who fill in any of the available forms:</strong>
+              <br/>
+              The personal data that CIFP CESAR MANRIQUE requests includes:
               <ul>
-                <li>Estudiantes y graduados: Información personal, información académica, formación y experiencia laboral, idiomas, habilidades.</li>
-                <li>Instituciones / empresas: Información institucional, contactos, direcciones.</li>
+                <li><strong>Identification data:</strong> name and surnames, telephone, postal and electronic address</li>
+                <li><strong>Data relating to the application</strong></li>
               </ul>
             </li>
-            <li>Para la suscripción a boletines: Dirección de correo electrónico para información de contacto.</li>
-          </ul>
-
-          <h3>Qué hacemos con la información que recopilamos</h3>
-          Requerimos esta información para entender sus necesidades y brindarle un mejor servicio, y en particular por las siguientes razones:
-          <ul>
             <li>
-              Mantenimiento de registros internos.
-            </li>
-            <li>
-              Podemos usar la información para mejorar nuestras búsquedas y contactos entre las partes interesadas.
-            </li>
-            <li>
-              Podremos enviar periódicamente correos electrónicos promocionales sobre nuevos temas que creemos que pueden resultar interesantes utilizando la dirección de correo electrónico que nos ha proporcionado.
-            </li>
-            <li>
-              De vez en cuando, también podemos usar su información para comunicarnos con usted para fines de investigación de mercado. Podemos comunicarnos con usted por correo electrónico, teléfono o correo postal. Podemos utilizar la información para personalizar las aplicaciones de Talented Europe según sus necesidades.
-            </li>
-          </ul>
-          <h3>Seguridad</h3>
-          <p>Estamos comprometidos a garantizar que su información sea segura. Con el fin de evitar el acceso o divulgación no autorizados, hemos establecido procedimientos físicos, electrónicos y de gestión adecuados para salvaguardar y asegurar la información que recopilamos en línea.</p>
-
-          <h3>Cómo utilizamos las cookies</h3>
-          <p>Una cookie es un pequeño archivo que pide permiso para ser colocado en el disco duro de su computadora. Una vez que acepte, el archivo se agrega y la cookie ayuda a analizar el tráfico web o le permite saber cuándo visita un sitio en particular. Las cookies permiten que las aplicaciones web le respondan como un individuo. La aplicación web puede adaptar sus operaciones a sus necesidades, gustos recopilando y recordando información sobre sus preferencias.</p>
-
-          <p>Utilizamos cookies de registro de tráfico para identificar qué páginas se están utilizando. Esto nos ayuda a analizar datos sobre tráfico de páginas web y mejorar nuestro sitio para adaptarlo a las necesidades del cliente. Sólo utilizamos esta información para propósitos de análisis estadístico y luego los datos se eliminan del sistema.</p>
-
-          <p>En general, las cookies nos ayudan a ofrecerle un sitio web mejor, al permitirnos supervisar qué páginas le resultan útiles y cuáles no. Una cookie de ninguna manera nos da acceso a su computadora o cualquier información sobre usted, aparte de los datos que usted elija para compartir con nosotros.</p>
-
-          <p>Puede elegir aceptar o rechazar las cookies. La mayoría de los navegadores aceptan automáticamente las cookies, pero normalmente puede modificar la configuración de su navegador para rechazar las cookies si lo prefiere. Esto puede impedirle aprovechar al máximo el sitio web.</p>
-
-          <h3>Enlaces a otros sitios web</h3>
-          <p>Nuestro sitio web puede contener enlaces a otros sitios de interés. Sin embargo, una vez que haya utilizado estos enlaces para salir de nuestro sitio web, debe tener en cuenta que no tenemos ningún control sobre ese otro sitio. Por lo tanto, no podemos ser responsables de la protección y privacidad de cualquier información que usted proporcione al visitar dichos sitios, y dichos sitios, no se rigen por esta declaración de privacidad. Usted debe tener cuidado y ver la declaración de privacidad aplicable al sitio web en cuestión.</p>
-
-          <h3>Control de su información personal</h3>
-          <p>Usted puede optar por restringir la recopilación o el uso de su información personal de las siguientes maneras:</p>
-          <ul>
-            <li>
-              Siempre que se le solicite que rellene un formulario en el sitio web, debe saber que la información no será utilizada por nadie para fines de marketing directo. Solamente las partes interesadas registradas, como parte de la comunidad, podrían tener acceso a su información para posibles contactos.
-            </li>
-            <li>
-              Si se ha registrado Talented Europe y quiere que su información sea eliminada de la plataforma, puede cambiar de opinión en cualquier momento escribiendo o enviándonos un correo electrónico a {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}
-            </li>
-          </ul>
-          <p>
-            No distribuiremos ni alquilaremos su información personal a terceros a menos que la ley así lo exija. Podemos utilizar su información personal para enviarle información promocional sobre nuevos temas y noticias de Talented Europe. Si crees que cualquier información que tengamos sobre ti es incorrecta o incompleta, escríbenos o envíanos un correo electrónico lo antes posible, a {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}. Corregiremos inmediatamente cualquier información que se considere incorrecta.
-          </p>
-        </div>
-
-      @elseif (App::getLocale() == 'it')
-        <h2 class="page-title">Privacy Policy Disclaimer – Talented Europe</h2>
-        <div class="well">
-          <p>La presente informativa sulla privacy stabilisce le modalità in cui Talented Europe utilizza e protegge tutte le informazioni che fornite a Talented Europe quando visitate questo sito.</p>
-          <p>Talented Europe si impegna a garantire che la vostra privacy sia protetta. Potremo chiedervi alcune  informazioni attraverso cui potrete essere identificati quando utilizzate questo sito, e vogliamo darvi la certezza che queste saranno utilizzate solo in conformità con la presente informativa sulla privacy.</p>
-          <p>Talented Europe potrà modificare in qualsiasi momento la presente informativa, aggiornando il contenuto della presente pagina. Di volta in volta, dovreste controllare la presente pagina, per essere certi che siete contenti delle eventuali modifiche. <strong>La presente informativa è effettiva dal 1 gennaio 2017.</strong></p>
-
-          <h3>Che cosa raccogliamo</h3>
-
-          Potremo raccogliere le seguenti informazioni:
-          <ul>
-            <li>Per le registrate parti interessate: Può far parte della comunità Talented Europe uno studente, un’istituzione educativa (università, facoltà, scuola secondaria) o un’azienda.
+              <strong>Data of the users who subscribe to the newsletter / want to receive commercial communications information and information:</strong>
               <ul>
-                <li>Studenti e laureati: informazioni personali, informazioni accademiche, informazioni su tirocinio e lavoro, lingue, competenze.</li>
-                <li>Istituzioni educative / Aziende: informazioni istituzionali, contatti, indirizzi.</li>
+                <li><strong>Identification data:</strong> Name and surnames, electronic address.</li>
               </ul>
             </li>
-            <li>Per iscriversi alla newsletter: indirizzo email come informazione di contatto.</li>
-          </ul>
-
-          <h3>Come utilizziamo le informazioni raccolte</h3>
-          Richiediamo queste informazioni per capire i vostri bisogni e per garantirvi un miglior servizio, e in particolare per i seguenti motivi:
-          <ul>
             <li>
-              Conservazione interna dei dati.
-            </li>
-            <li>
-              Potremo utilizzare le informazioni per migliorare le nostre ricerche e la comunicazione tra le parti interessate.
-            </li>
-            <li>
-              Potremo mandare periodicamente delle email promozionali riguardo i nuovi argomenti che crediamo possano interessarvi, utilizzando l’indirizzo email che ci avete fornito.
-            </li>
-            <li>
-              Di volta in volta, potremo utilizzare le vostre informazioni per contattarvi per obiettivi di ricerche di mercato. Vi contatteremo via email, telefono, o per posta. Potremo far uso delle vostre informazioni per personalizzare le applicazioni di Talented Europe in linea con i vostri bisogni.
-            </li>
-          </ul>
-          <h3>Sicurezza</h3>
-          <p>Ci impegniamo a garantire la sicurezza delle vostre informazioni. Con l’obiettivo di prevenire accessi o comunicazioni non autorizzate, abbiamo messo in campo procedure fisiche, elettroniche e gestionali, atte a salvaguardare e mantenere in sicurezza le informazioni che raccogliamo on-line.</p>
-
-          <h3>Come utilizziamo i cookie</h3>
-          <p>Un cookie è un piccolo file di testo che richiede un permesso per essere inserito nel disco fisso del vostro computer. Una volta che avete accettato, il file viene aggiunto e il cookie aiuta ad analizzare il traffico web, o vi avvisa quando visitate un particolare sito. I cookie autorizzano le applicazioni web a rispondervi individualmente. Successivamente, l‘applicazione web può adattare i suoi interventi ai vostri bisogni, piaceri e dispiaceri, ricorrendo ai dati sulle vostre preferenze raccolti e immagazzinati.</p>
-
-          <p>Utilizziamo i traffic log cookie per identificare quali pagine sono usate. Questo ci aiuta ad analizzare i dati riguardo il traffico sulle pagine web e a migliorare così il nostro sito, personalizzandolo in linea con i bisogni del cliente. Utilizziamo queste informazioni unicamente per obiettivi di analisi statistica, dopo di che i dati vengono rimossi dal sistema.</p>
-
-          <p>In generale, i cookie ci aiutano a garantirvi un sito migliore, autorizzandoci a monitorare quali pagine trovate utili e quali no. I cookie non ci garantiscono in alcun modo l‘accesso al vostro computer o ad alcune informazioni riguardo a voi, a parte i dati che decidete di condividere con noi.</p>
-
-          <p>Voi potete decidere di accetare o rifiutare i cookie. La maggior parte dei browser accettano automaticamente i cookie ma, di solito, potete tranquillamente modificare le impostazioni del vostro browser per rifiutare i cookie. Questo però può impedirvi di sfruttare appieno i vantaggi del sito.</p>
-
-          <h3>Collegamenti ad altri siti web</h3>
-          <p>Il nostro sito può contenere collegamenti ad altri siti d‘interesse. Tuttavia, una volta che avete usato questi link per abbandonare il nostro sito, dovreste fare attenzione perché noi non garantiamo controllo su questo altro sito. Non siamo responsabili per la protezione e la privacy delle informazioni che impegnate mentre visitate tali siti, a cui non si applica la presente informativa sulla privacy. Consigliamo di visionare con cautela le dichiarazioni di privacy applicabili ai siti web in questione.</p>
-
-          <h3>Controllo dei vostri dati personali</h3>
-          <p>Potete decidere di restringere la raccolta e l’utilizzo dei vostri dati personali, nei seguenti modi:</p>
-          <ul>
-            <li>
-              Ogni qual volta vi si chiede di compilare un form sul sito, dovreste sapere che le informazioni non verranno utilizzate da alcuno per obiettivi di direct marketing. Soltanto le registrate parti interessate, facendo parte della comunità, avranno accesso alle vostre informazioni e ai vostri contatti.
-            </li>
-            <li>
-              Se vi siete registrati su Talented Europe e vorrete cambiare idea e far rimuovere le vostre informazioni dal piattaforma, potrete avvisarci in qualsiasi momento, scrivendoci o mandando un’email a {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}.
-            </li>
-            <li>
-              In via analoga, se vi siete iscritti alla newsletter di Talented Europe e vorrete smettere di ricevere le email, potrete avvisarci in qualsiasi momento, scrivendoci o mandando un’email a {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}.
-            </li>
-          </ul>
-          <p>
-            Non distribuiremo o lasceremo vostre informazioni personali a terze parti, se non previsto dalla legge. Potremo utilizzare i vostri dati personali per mandarvi informazioni promozionali riguardo novità su Talented Europe. Se credete che alcune informazioni a vostro riguardo siano errate o incomplete, vi invitiamo a scriverci o a mandarci un‘email a {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}. In tal caso, interverremo prontamente per correggere le informazioni non corrette.
-          </p>
-        </div>
-
-      @elseif (App::getLocale() == 'de')
-        <h2 class="page-title">Des Schutzes der Privatsphäre – Talented Europe</h2>
-        <div class="well">
-          <p>Diese Prinzipen des Schutzes der Privatsphäre definieren, wie Talented Europe sämtliche Informationen, die Sie von Ihnen innerhalb der Webseite bekommt, nutzt und schützt. Talented Europe verpflichtet sich zum Schutz der Sicherheit Ihrer Privatsphäre.</p>
-          <p>Im Fall der Informationen, dank deren Sie als User dieser Website identifiziert werden, können Sie sicher sein, dass Sie nur im Sinne dieser Erklärung, über den Schutz der personenbezogenen Daten, genutzt werden.</p>
-          <p>Talented Europe kann die Regeln gelegentlich ändern, dies auf Grund der Webseitenaktualisierung. Ihre empfehlte Kontrolle unserer Webseite garantiert, dass Sie mit den Änderungen zufrieden sein werden. <strong>Die Regeln gelten ab den 1. Januar 2017.</strong></p>
-
-          <h3>Welche Informationen benötigen wir</h3>
-
-          Wir können folgende Informationen und Angaben anfordern:
-          <ul>
-            <li>für registrierte Teilnehmer: Teil von Talented Europe kann ein Student, eine Bildungseinrichtung (Universität, Fakultät, Fachschule) oder ein Unternehmen sein.
+              <strong>Data of the users registered in our platform:</strong>
               <ul>
-                <li>Studenten und Absolventen: Persönliche Angaben, akademische Angaben, Schulungen und Arbeitserfahrungen, Fremdsprachen, Fähigkeiten.</li>
-                <li>Bildungseinrichtungen /Firmen: Informationen über die Institution, Kontaktangaben, Adresse.</li>
+                <li><strong>Identification data:</strong> Name and surname, postal and electronic address, telephone</li>
               </ul>
             </li>
-            <li>Für das Zusenden on Neuigkeiten: E-Mail-Adresse als Kontaktangabe.</li>
-          </ul>
+            <li><strong>Data of users who browse our website: Data provided by cookies and by Google Analytics.</strong></li>
+          </ol>
 
-          <h3>Was machen wir mit den Informationen, die wir sammeln?</h3>
-          Diese Informationen helfen uns, Ihre Bedürfnisse zu verstehen und damit Ihnen bessere Dienstleistungen anzubieten, vor allem aus den folgenden Gründen:
-          <ul>
-            <li>
-              interne Verarbeitung von Aufzeichnungen
-            </li>
-            <li>
-              die Informationen nutzen wir, um das unser Suchen und die Kontaktnahme zwischen den Usern zu verbessern.
-            </li>
-            <li>
-              Regelmäßiges Zusenden von Werbe-E-Mails mit den neuen Themen, die Sie interessieren könnten, aufgrund der von Ihnen angegebenen E-Mail-Adresse.
-            </li>
-            <li>
-              Von Zeit zurzeit können wir mit Ihnen  zwecks einer Markterforschung  in Kontakt kommen. Die Kontaktaufnahme verläuft per E-Mail, telefonisch oder per Post. Ihre Informationen dienen dazu, die einzelnen Apps innerhalb von Talented Europe anzupassen und gemäß Ihren Bedürfnissen anzupassen.
-            </li>
-          </ul>
-          <h3>Sicherheit</h3>
-          <p>Wir verpflichten uns, die von Ihnen anvertraute Informationen, in Sicherheit zu bewahren. Um einen unbefugten Zutritt oder eine Veröffentlichung zu verhindern, haben wir passende physische, elektronische und  Leitverfahren zum Schutz und Gewährleistung der Informationen eingeführt, die wir online sammeln.</p>
+          <p><strong>Only those over 16 years old</strong> can provide data through our website. If you are under this age, you must have the consent of your parents or legal guardians.</p>
+          <p>The User guarantees the authenticity and timeliness of all data communicated to CIFP CESAR MANRIQUE and declares that he is over 16 years of age, and will be solely responsible for any false or inaccurate statements made.</p>
+          <p>The personal data processed by CIFP CESAR MANRIQUE can be mandatory or voluntary.</p>
+          <p>The voluntary information is that which the user is not obliged to provide to contact us.</p>
+          <p>The fields marked with an asterisk (*) or with the word (required) in our forms are mandatory, the refusal to supply them will make it impossible to provide the service or meet your request.</p>
+          <p>In the event that you provide us with data from third parties, you manifest that you have the consent of the same and you agree to transfer the information provided in this clause, exempting CIFP CESAR MANRIQUE from any type of obligation. However CIFP CESAR MANRIQUE may carry out verifications to verify that the third party has been informed adopting the measures of diligence established in the data protection regulations.</p>
 
-          <h3>Wie nutzen wir Cookies?</h3>
-          <p>Cookies ist eine kleine Datei, die verlangt, an Ihrer Harddisk platziert zu sein. Nach einer Einwilligung, ist die Cookie-Datei platziert und hilft dabei die Arbeit mit Web zu analysieren oder sie meldet sich beim Besuchen einer entsprechenden  Web-Seite. Cookies erlauben den Web-Apps auf Sie als User entsprechend  zu reagieren. Die Web-App passt sich dann Ihren Bedürfnissen, Interessen an. Das alles kommt aufgrund von Sammeln und Merken von Informationen über Ihre Präferenzen zu Stande.</p>
+          <h3>6. What destinators will their data be communicated?</h3>
+          <p>No data will be transferred to third parties except legal obligation or in the case that is necessary to meet your request.</p>
+          <p>In the case of registered users, their data will be accessible through the platform, giving access to them to third parties, including companies and freelancers for a possible contact.</p>
 
-          <p>Wir benutzen sog. traffic log cookies zur Identifizierung der gerade genutzten Webseiten. Das hilft uns, die Daten über das Nutzen der Webseiten zu analysieren und so unsere Webseite zu verbessern damit wir Sie den Bedürfnissen unserer Kunden anpassen können. Informationen dieser Art werden ausschließlich zu Zwecken der statistischen Analyse genutzt und gleich danach wieder vom System gelöscht.</p>
+          <h3>7. What rights assist you and how can your exercise them?</h3>
+          <p>The user can exercise the following rights before CIFP CESAR MANRIQUE:</p>
+          <ol type="a">
+            <li>Access your personal data</li>
+            <li>Rectify them when they are inaccurate or incomplete</li>
+            <li>Request the deletion or cancellation of data when, among other reasons, they are no longer necessary for the purposes for which they were collected</li>
+            <li>Oppose their treatment</li>
+            <li>Request the limitation of the processing of your data when any of the conditions provided in the regulations are met</li>
+            <li>Request the portability of your data in the cases provided for in the regulations</li>
+            <li>Prevent being subject to automated decisions</li>
+            <li>Revoke the consents granted</li>
+          </ol>
+          <p>The user to exercise their rights, must send a letter indicating the right you want to exercise and accompany a document proving your identity and postal or electronic address for notification purposes. This application can be made by mail to: CIFP CESAR MANRIQUE Avenida Príncipes de España  nº5, 38010 - Santa Cruz De Tenerife, Spain, or at the following email address: info@talentedeurope.org</p>
+          <p>CIFP CESAR MANRIQUE must answer the request for the exercise of rights within one month of receiving the request. This period may be extended for another two months if necessary, taking into account the complexity and the number of applications. We will inform you of any extension within one month of receiving the request stating the reasons for the delay.</p>
+          <p>Likewise, the interested parties have the right to complain before the competent Control Authority (Spanish Data Protection Agency) when they consider that CIFP CESAR MANRIQUE has violated the rights that the data protection regulations recognize in <a href="https://www.aepd.es/">www.aepd.es</a>.</p>
 
-          <p>Cookies helfen uns bessere Webseiten anzubieten, in dem uns cookies zeigen, welche Webseiten für Sie hilfreich sind und welche nicht. Cookies erlauben uns in keinem Fall den Zutritt zu Ihrem Computer oder geben uns keinerlei Informationen über Sie persönlich. Wir arbeiten nur mit den persönlichen Angeben, die Sie mit uns freiwillig teilen.</p>
+          <h3>8. Are my data secure?</h3>
+          <p>CIFP CESAR MANRIQUE has a contract with the hosting company OVH SAS (www.ovh.com) for the hosting of its website. It is a European company and has the latest systems in security measures.</p>
+          <p>CIFP CESAR MANRIQUE guarantees the adoption of the appropriate measures to ensure the confidential treatment of your data, taking into account the reserved nature thereof.</p>
+          <p>CIFP CESAR MANRIQUE undertakes to keep these data secret, treating them with the utmost reserve, and declares to have implemented in their information system, the security policies corresponding to the type of data handled in accordance with the provisions of the REGULATION (EU) 2016 / 679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and the free movement of such data (RGPD).</p>
+          <p>All the data provided through our platform is done through a secure protocol. Our website has an SSL certificate that allows an encrypted connection to be established when a user visits our website and exchanges information with us.</p>
 
-          <p>Cookies können Sie zulassen oder blockieren. Große Anzahl der Web-Browser lässt cookies automatisch zu, man kann aber die Einstellungen des Computers so einstellen, dass er cookies automatisch blockiert, wen es Ihr Wunsch ist. Das kann aber die volle Nutzung der Webseiten stören.</p>
+          <h3>9. Do you need an account and/or password?</h3>
+          <p>The user can register on our website, for which the creation of an account is essential. It is the responsibility of the user to maintain the confidentiality of the account information, including the password, as well as each and every one of the activities that take place therein.</p>
+          <p>The user is obliged to inform CIFP CESAR MANRIQUE immediately in case of an illegitimate use of his account or password, or if any security-related problem occurs, by sending an email to info@talentedeurope.org</p>
 
-          <h3>Links, die auf andere Webseiten verweisen</h3>
-          <p>Unsere Webseiten können auch Links, die auf andere interessante Webseiten verweisen, beinhalten. Im Falle der Nutzung so eines Links, müssen Sie im Klaren sein, dass wir keinerlei Kontrolle über den Inhalt solcher Webseiten haben. Aus diesem Grund tragen wir keine Verantwortung über den Schutz und Privatsphäre der Informationen, die Sie bei der Nutzung solcher Webseite preisgeben. Diese Webseiten halten sich nicht an unsere Erklärung über den Schutz der personenbezogenen Daten. Sie sollten vorsichtig sein, und sich über die Erklärung über den Schutz der personenbezogenen Daten der konkreten Webseite informieren.</p>
-
-          <h3>Kontrolle Ihrer personenbezogener Daten</h3>
-          <p>Das Sammeln und Nutzen ihrer personenbezogenen Daten können Sie folgendermaßen wählen oder beschränken:</p>
-          <ul>
-            <li>
-              Wenn Sie das Formular an unserer Webseite ausfüllen, ist es nötig zu wissen, dass die Informationen nicht zum Zweck des Direktmarketings genutzt werden. Nur registrierte Parteien, die Teil von Talented Europe sind, haben einen Zutritt zu Ihren Informationen und Kontaktangaben.
-            </li>
-            <li>
-              Wenn Sie bei Talented Europe registriert sind und möchten, dass sämtliche Informationen aus unserer Plattform gelöscht werden sollen, können Sie darüber nachdenken und uns damit schriftlich oder per E-Mail unter {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }} in Kenntnis zu setzen.
-            </li>
-            <li>
-              Auch im Falle, dass Sie die Abnahme der Neuigkeiten von Talented Europe gewilligt haben und Sie es  jetzt nicht wünschen, können Sie darüber nachdenken und uns damit schriftlich oder per E-Mail unter {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }} in Kenntnis zu setzen.
-            </li>
-          </ul>
-          <p>
-            Ihre persönlichen Informationen leiten wir nicht weiter an dritte Personen, wenn wir es aus gesetzlichen Gründen nicht machen müssen. Ihre persönlichen Informationen können wir für das Zusenden von Neuigkeiten über Talented Europe nützen. Falls Sie denken, dass Informationen über Sie, die wir haben, falsch oder unvollständig sind, so schreiben Sie uns an.
-          </p>
-        </div>
-
-
-      @elseif (App::getLocale() == 'fr')
-        <h2 class="page-title">Politique de la vie privée – Talented Europe</h2>
-        <div class="well">
-          <p>Cette politique de confidentialité définit comment l'Europe des utilisations Talentueux et protège les informations que vous donnez l'Europe Talentueux lorsque vous utilisez ce site.</p>
-          <p>L'Europe est Talentueux engagée à assurer que votre vie privée soit protégée. Si nous vous demandons de fournir certaines informations que vous pouvez être identifié lors de l'utilisation de ce site, vous pouvez être assuré qu'il ne sera utilisé conformément à la présente déclaration de confidentialité.</p>
-          <p>Talentueux l'Europe peut changer cette politique de temps en temps en mettant à jour cette page. Vous devriez consulter cette page de temps en temps pour vous assurer que vous êtes satisfait des changements. <strong>Cette politique est effective à partir du 1er Janvier 2017.</strong></p>
-
-          <h3>Ce que nous recueillons</h3>
-
-          Nous pouvons recueillir les informations suivantes:
-          <ul>
-            <li>Pour les intervenants inscrits: yyou peut faire partie de l'Europe communautaire Talentueux être un étudiant, un établissement d'enseignement (Université / Faculté / Lycée) ou d'une société.
-              <ul>
-                <li>Les étudiants et les diplômés: l'information Ppersonal, information scolaire, la formation et l'expérience de travail, langues, compétences.</li>
-                <li>Les établissements d'enseignement / entreprises: informations Iinstitutional, Ccontacts, Aaddressing.</li>
-              </ul>
-            </li>
-            <li>Pour les bulletins de souscription Adresse e-mail pour les informations de contact. </li>
-          </ul>
-
-          <h3>What we do with the information we gather</h3>
-          Nous avons besoin de cette information pour comprendre vos besoins et vous fournir un meilleur service, et notamment pour les raisons suivantes:
-          <ul>
-            <li>
-              Tenue de dossiers internes.
-            </li>
-            <li>
-              Nous pouvons utiliser les informations pour améliorer nos recherches et les contacts entre les parties prenantes.
-            </li>
-            <li>
-              Nous pouvons envoyer périodiquement des courriels promotionnels sur les nouveaux problèmes que nous pensons susceptibles de vous intéresser en utilisant l'adresse e-mail que vous avez fourni.
-            </li>
-            <li>
-              De temps en temps, nous pouvons également utiliser vos informations pour vous contacter à des fins de recherche de marché. Nous pouvons vous contacter par e-mail, téléphone ou courrier. Nous pouvons utiliser ces informations pour personnaliser les applications Talentueux Europe selon vos besoins.
-            </li>
-          </ul>
-          <h3>Sécurité</h3>
-          <p>Nous nous engageons à faire en sorte que vos informations sont en sécurité. Afin d'empêcher l'accès non autorisé ou la divulgation, nous avons mis en place des procédures physiques, électroniques et de gestion appropriées pour sauvegarder et sécuriser les informations que nous recueillons en ligne.</p>
-
-          <h3>Comment nous utilisons cookiesSecurity</h3>
-          <p>Un cookie est un petit fichier qui demande la permission d'être placé sur le disque dur de votre ordinateur. Une fois que vous êtes d'accord, le fichier est ajouté et le cookie permet d'analyser le trafic web ou vous permet de savoir quand vous visitez un site particulier. Les cookies permettent aux applications Web de vous répondre en tant qu'individu. L'application Web peut adapter son fonctionnement à vos besoins, goûts et dégoûts en recueillant et en mémorisant des informations sur vos préférences.</p>
-
-          <p>Nous utilisons des cookies de trafic pour identifier quelles pages sont utilisées. Cela nous aide à analyser des données sur le trafic de page Web et d'améliorer notre site afin de l'adapter aux besoins des clients. Nous utilisons ces informations à des fins d'analyse statistique et les données sont supprimées du système.</p>
-
-          <p>Dans l'ensemble, les cookies nous aident à vous fournir un meilleur site web, en nous permettant de surveiller les pages que vous trouvez utiles et que vous ne faites pas. Un cookie ne nous donne accès à votre ordinateur ou toute information vous concernant, autres que les données que vous choisissez de partager avec nous.</p>
-
-          <p>Vous pouvez choisir d'accepter ou de refuser les cookies. La plupart des navigateurs Web acceptent automatiquement les cookies, mais vous pouvez généralement modifier les paramètres de votre navigateur pour refuser les cookies si vous préférez. Toutefois, cela peut vous empêcher de profiter pleinement du site.</p>
-
-          <h3>Liens vers d'autres sites</h3>
-          <p>Notre site peut contenir des liens vers d'autres sites d'intérêt. Cependant, une fois que vous avez utilisé ces liens pour quitter notre site, il faut noter que nous n'avons aucun contrôle sur cet autre site. Par conséquent, nous ne pouvons pas être responsables de la protection et la confidentialité des informations que vous fournissez en visitant des sites secs et ces sites / qui ne sont pas régis par la présente déclaration de confidentialité. Vous devez faire preuve de prudence et de regarder la déclaration de confidentialité applicable au site en question. </p>
-
-          <h3>Contrôle de vos informations personnelles</h3>
-          <p>Vous pouvez choisir de restreindre la collecte ou l'utilisation de vos renseignements personnels de la manière suivante:</p>
-          <ul>
-            <li>
-              Chaque fois que l'on vous demande de remplir un formulaire sur le site, vous devez savoir que les informations ne seront pas utilisées par quiconque à des fins de marketing direct. Seuls les intervenants inscrits, dans le cadre de la communauté, pourrait peut / sont autorisés à accéder à vos informations pour les contacts possibles.
-            </li>
-            <li>
-              Si vous avez enregistré Talentueux Europe et vous voulez que vos informations soient retiré de la plate-forme, vous pouvez changer d'avis à tout moment en écrivant ou en nous envoyant un courriel à {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}.
-            </li>
-            <li>
-              De la même façon, si vous avez souscrit la lettre d'information de l'Europe Talentueux et que vous voulez arrêter de recevoir des e-mails, vous pouvez changer d'avis à tout moment en nous écrivant ou en envoyant un courriel à {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}.
-            </li>
-          </ul>
-          <p>
-            Nous ne distribuer ou louer vos renseignements personnels à des tiers à moins que nous sommes tenus par la loi de le faire. Nous pouvons utiliser vos informations personnelles pour vous envoyer des informations promotionnelles sur de nouvelles questions et des nouvelles de l'Europe Talentueux. Si vous pensez que les informations que nous détenons sur vous sont incorrectes ou incomplètes, s'il vous plaît écrire ou nous envoyer un courriel dès que possible, à {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}. Nous corrigerons rapidement toute information jugée incorrecte.
-          </p>
-        </div>
-
-      @elseif (App::getLocale() == 'sk')
-        <h2 class="page-title">Zásady ochrany súkromia – Talented Europe</h2>
-        <div class="well">
-          <p>Tieto zásady ochrany súkromia definujú, ako Talentovaná Európa používa a chráni všetky informácie, ktoré jej poskytujete pri použití jej webovej stránky. Talentovaná Európa sa zaväzuje k ochrane bezpečnosti vášho súkromia.</p>
-          <p>Ak vás požiadame o poskytnutie určitých informácií, na základ ktorých môžete byť identifikovaní pri použití tejto webovej stránky,  môžete si byť istí, že budú použité iba v súlade s týmto prehlásením o ochrane osobných údajov.</p>
-          <p>Talentovaná Európa môže pravidlá z času na čas zmeniť, na základe aktualizácie svojej stránky. Vaša odporúčaná sporadická kontrola našej stránky zabezpečí, že budete s prípadnými zmenami spokojní. <strong>Pravidlá sú účinné od 1. januára 2017.</strong></p>
-
-          <h3>Aké údaje zhromažďujeme</h3>
-
-          Zhromažďovať môžeme nasledujúce informácie:
-          <ul>
-            <li>Pre registrovaných účastníkov: Súčasťou komunity Talentovaná Európa môže byť študent, vzdelávacia inštitúcia (univerzita / fakulta / odborná škola) alebo spoločnosť.
-              <ul>
-                <li>Študenti a absolventi: osobné informácie, akademické informácie, školenia a pracovné skúsenosti, jazyky, schopnosti.</li>
-                <li>Vzdelávacie inštitúcie/firmy: inštitucionálne informácie, kontakty, adresovanie.</li>
-              </ul>
-            </li>
-            <li>Pre zasielanie noviniek: e-mailová adresa ako kontaktná informácia.</li>
-          </ul>
-
-          <h3>Čo robíme s informáciami, ktoré zhromažďujeme</h3>
-          Tieto informácie nám pomáhajú porozumieť vašim potrebám a poskytnúť vám lepšie služby, najmä z nasledujúcich dôvodov:
-          <ul>
-            <li>
-              Vnútorné vedenie záznamov.
-            </li>
-            <li>
-              Informácie môžeme použiť na zlepšenie našich vyhľadávaní a kontaktovanie sa medzi zúčastnenými stranami.
-            </li>
-            <li>
-              Pravidelné zasielanie reklamných e-mailov s novými témami, ktoré veríme, že by vás mohli zaujímať na základe e-mail adresy, ktorú ste nám poskytli.
-            </li>
-            <li>
-              Z času na čas vás na základe vami poskytnutých informácií môžeme kontaktovať za účelom prieskumu trhu. Kontaktovať vás budeme e-mailom, telefonicky alebo poštou. Vaše informácie môžeme použiť na prispôsobenie aplikácií v rámci Talentovanej Európy podľa vašich potrieb.
-            </li>
-          </ul>
-          <h3>Bezpečnosť</h3>
-          <p>Zaväzujeme sa k udržaniu vami poskytnutých informácií v bezpečí. Aby sme zabránili neoprávnenému prístupu alebo zverejneniu, zaviedli sme vhodné fyzické, elektronické a riadiace postupy na ochranu a zabezpečenie informácií, ktoré zhromažďujeme online.</p>
-
-          <h3>Ako používame cookies</h3>
-          <p>Cookie je malý súbor, ktorý požaduje, aby mohol byť umiestnený na pevnom disku vášho počítača. Po jeho schválení je cookie súbor pridaný a  pomáha analyzovať web prevádzku, alebo vám dá vedieť pri návšteve určitej stránky. Cookies umožňujú webovým aplikáciám reagovať na vás ako na  jednotlivca. Webová aplikácia potom prispôsobí svoje fungovanie vašim potrebám, záujmom aj nezáujmom, na základe zbierania a zapamätania si informácií o vašich preferenciách.</p>
-
-          <p>Používame traffic log cookies na  identifikáciu práve používaných stránok. To nám pomáha analyzovať dáta o prevádzke web stránky a zlepšovať naše webové stránky tak, aby sme ich  prispôsobili potrebám nášho zákazníka. Tieto informácie používame výhradne na účely štatistickej analýzy a po ich použití sú zo systému odstránené.</p>
-
-          <p>Celkovo nám cookies pomáhajú  poskytovať lepšie webové stránky, keďže nám umožňujú sledovať, ktoré stránky sú pre vás užitočné, a ktoré nie. Cookie nám v žiadnom prípade neposkytuje prístup k vášmu počítaču alebo akékoľvek informácie o vás, okrem údajov, ktoré s nami dobrovoľne zdieľate.</p>
-
-          <p>Môžete sa rozhodnúť prijať alebo odmietnuť cookies. Veľké množstvo webových prehliadačov cookies automaticky akceptuje, väčšinou je však možné zmeniť nastavenia prehliadača tak, aby cookies odmietal, ak si to prajete. To však môže zabrániť plnému využitiu webových stránok.</p>
-
-          <h3>Odkazy na iné webové stránky</h3>
-          <p>Naše webové stránky môžu obsahovať odkazy na iné zaujímavé stránky.  Ak však použijete takýto odkaz a opustíte našu stránku, mali by ste si uvedomiť, že nemáme žiadnu kontrolu nad obsahom týchto stránok. Preto nemôžeme byť zodpovední za ochranu a súkromie akýchkoľvek informácií, ktoré poskytnete pri návšteve týchto stránok a tieto stránky sa neriadia našim prehlásením o ochrane súkromia. Mali by ste byť opatrní a oboznámiť sa s vyhlásením o ochrane súkromia vzťahujúcim sa ku konkrétnej webovej stránke.</p>
-
-          <h3>Kontrola vašich osobných údajov</h3>
-          <p>Môžete si zvoliť, ako obmedzíte zhromažďovanie alebo používanie vašich osobných údajov nasledujúcimi spôsobmi:</p>
-          <ul>
-            <li>
-              Ak budete vyzvaní na vyplnenie formulára na našej web stránke, je potrebné vedieť, že informácie nebudú nikým iným použité na účely priameho marketingu. Iba registrované zúčastnené strany, ako súčasť komunity, majú prístup k vašim informáciám a kontaktným údajom.
-            </li>
-            <li>
-              Ak ste sa zaregistrovali v Talentovanej Európe a chcete, aby boli vaše údaje z našej platformy odstránené, môže si to rozmyslieť a oznámiť nám to písomne ​​alebo e-mailom na {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}.
-            </li>
-            <li>
-              Rovnako, v prípade, že ste sa prihlásili k odberu noviniek Talentovanej Európy a chcete zrušiť  prijímanie e-mailov, môžete si to rozmyslieť a oznámiť nám to písomne ​​alebo e-mailom na {{ env('PUBLIC_MAIL_ADDRESS', 'stakeholders@talentedeurope.org') }}.
-            </li>
-          </ul>
-          <p>
-            Vaše osobné informácie nebudeme šíriť a posúvať tretím stranám, ak nebudeme zo zákona povinní tak urobiť. Vaše osobné údaje môžeme použiť na zaslanie propagačných informácií o novinkách v Talentovanej Európe. Ak si myslíte, že akékoľvek informácie o vás, ktorými disponujeme, sú  nesprávne alebo neúplné, napíšte nám alebo zašlite e-mail.
-          </p>
+          <h3>10. Links to other websites</h3>
+          <p>If you choose to leave our website through links to other websites not belonging to our entity, CIFP CESAR MANRIQUE will not be responsible for the privacy policies of these websites or the cookies they may store on the user's computer.</p>
         </div>
 
       @endif
