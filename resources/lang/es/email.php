@@ -65,7 +65,7 @@ return [
     
         'validationsPending_line_3' => 'Haga clic en el siguiente botón para iniciar sesión y ver su panel',
     
-        'disclaimer' => '<strong> RENUNCIA </ strong>: Este mensaje se dirige exclusivamente a su destinatario y puede contener información que es <strong> CONFIDENCIAL </ strong>, y protegida por el secreto profesional. Si usted no es el destinatario indicado, queda notificado de que cualquier divulgación, copia o divulgación de esta comunicación está estrictamente prohibida por la ley. Si este mensaje se ha recibido por error, por favor notifique inmediatamente por correo electrónico a (% s) y eliminarlo.',
+        'disclaimer' => '<strong> RENUNCIA </strong>: Este mensaje se dirige exclusivamente a su destinatario y puede contener información que es <strong> CONFIDENCIAL </strong>, y protegida por el secreto profesional. Si usted no es el destinatario indicado, queda notificado de que cualquier divulgación, copia o divulgación de esta comunicación está estrictamente prohibida por la ley. Si este mensaje se ha recibido por error, por favor notifique inmediatamente por correo electrónico a (% s) y eliminarlo.',
     
         'hello' => '¡Hola!',
     

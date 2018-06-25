@@ -113,6 +113,8 @@ return [
     
         'privacy_policy' => 'Datenschutz-Bestimmungen',
     
+        'legal_warning' => 'Legal warning',
+    
         'footer_partners' => 'Partner',
     
         'cookie_text' => 'Diese Webseite nutzt Cookies um Ihre User-Erfahrungen auf dieser Webseite zu verbessern. Mit dem Benutzen dieser Webseite sind Sie mit der Cookies-Aktivität einverstanden. Mehr Informaationen über uns und über das Nutzen von Cookies finden Sie in <a href="/privacy-policy">Benachrichtigung über cookies</a>',

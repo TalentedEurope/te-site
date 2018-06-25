@@ -65,7 +65,7 @@ return [
     
         'validationsPending_line_3' => 'Cliccare sul seguente pulsante per accedere e vedere il vostro pannello',
     
-        'disclaimer' => '<Strong> NEGAZIONE </ strong>: Questo messaggio è previsto esclusivamente per il suo indirizzo e può contenere informazioni che sono <strong> riservato </ strong>, e protetto dal segreto professionale. Se non siete il destinatario che si sta presente che qualsiasi divulgazione, copia o la divulgazione di questa comunicazione è severamente proibito dalla legge. Se questo messaggio è stato ricevuto per errore, si prega di informare immediatamente via e-mail all\'indirizzo (% s) ed eliminarlo.',
+        'disclaimer' => '<strong> NEGAZIONE </strong>: Questo messaggio è previsto esclusivamente per il suo indirizzo e può contenere informazioni che sono <strong> riservato </strong>, e protetto dal segreto professionale. Se non siete il destinatario che si sta presente che qualsiasi divulgazione, copia o la divulgazione di questa comunicazione è severamente proibito dalla legge. Se questo messaggio è stato ricevuto per errore, si prega di informare immediatamente via e-mail all\'indirizzo (% s) ed eliminarlo.',
     
         'hello' => 'Ciao!',
     

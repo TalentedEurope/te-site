@@ -113,6 +113,8 @@ return [
     
         'privacy_policy' => 'Privacy policy',
     
+        'legal_warning' => 'Legal warning',
+    
         'footer_partners' => 'Partners',
     
         'cookie_text' => 'This website uses cookies to help us give you the best experience when you visit. By using this website you consent to our use of these cookies. Find out more about how we use cookies and how to manage them by reading our <a href="/privacy-policy">cookie notice</a>',

@@ -65,7 +65,7 @@ return [
     
         'validationsPending_line_3' => 'Cliquez sur le bouton suivant pour vous connecter et voir votre panneau',
     
-        'disclaimer' => '<Strong> AVERTISSEMENT </ strong>: Ce message est destiné exclusivement à son adresse et peut contenir des informations <strong> CONFIDENTIEL </ strong>, et protégés par le secret professionnel. Si vous n\'êtes pas le destinataire nous vous informons que toute diffusion, copie ou la divulgation de cette communication est strictement interdite par la loi. Si ce message a été reçu par erreur, s\'il vous plaît nous en informer immédiatement par e-mail à (% s) et le supprimer.',
+        'disclaimer' => '<strong> AVERTISSEMENT </strong>: Ce message est destiné exclusivement à son adresse et peut contenir des informations <strong> CONFIDENTIEL </strong>, et protégés par le secret professionnel. Si vous n\'êtes pas le destinataire nous vous informons que toute diffusion, copie ou la divulgation de cette communication est strictement interdite par la loi. Si ce message a été reçu par erreur, s\'il vous plaît nous en informer immédiatement par e-mail à (% s) et le supprimer.',
     
         'hello' => 'salut!',
     

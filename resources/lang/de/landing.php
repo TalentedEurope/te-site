@@ -21,7 +21,7 @@ return [
     
         'what_is_cta' => '<strong>Erfahre mehr!</strong> Eine Broschühre anfordern!',
     
-        'what_is_text_1' => 'Können Sie sich vorstellen, die besten Studenten aus einem beliebigen europäischen Land einzustellen? <strong> Möchten Sie zu den besten europäischen Studenten und Azubis gehören? Tausende Unternehmen haben einen direkten Zugang zu den hinterlegten Kontaktinformationen <strong>  und je besser die erhaltene Bewertung, desto mehr Möglichkeiten haben Sie, eine tolle Arbeit zu finden.',
+        'what_is_text_1' => 'Können Sie sich vorstellen, die besten Studenten aus einem beliebigen europäischen Land einzustellen? <strong> Möchten Sie zu den besten europäischen Studenten und Azubis gehören? Tausende Unternehmen haben einen direkten Zugang zu den hinterlegten Kontaktinformationen </strong>  und je besser die erhaltene Bewertung, desto mehr Möglichkeiten haben Sie, eine tolle Arbeit zu finden.',
     
         'what_is_text_2' => 'Genau das bietet Talentiertes Europa. Eine Übersicht übe die besten Studenten und Azubis in Europa. Eine einfache Idee, die Arbeitgeber mit Studenten und Azubis verbindet. Der Treffpunkt für die Besten.',
     
