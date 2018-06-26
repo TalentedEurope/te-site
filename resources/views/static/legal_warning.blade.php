@@ -17,10 +17,24 @@
 
           <h3>2. Titularidad de la web e identificación del Prestador de Servicios de la Sociedad de la Información</h3>
           <p>Con la finalidad de dar cumplimiento al principio de Información general exigido por el Artículo 10 de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico  informamos a nuestros usuarios que el presente sitio web pertenece a  CIFP CESAR MANRIQUE con cif S3511001D.</p>
-          <p>Dirección: Avenida Príncipes De España, 5, 38010 - Santa Cruz De Tenerife</p>
-          <p>Correo-e: info@talentedeurope.org</p>
-          <p>Teléfono: 922477200</p>
-          <p>Web alojada por:</p>
+          <table class="table table-bordered">
+            <tr>
+              <td><strong>Dirección</strong></td>
+              <td>Avenida Príncipes De España, 5, 38010 - Santa Cruz De Tenerife</td>
+            </tr>
+            <tr>
+              <td><strong>Correo-e</strong></td>
+              <td>info@talentedeurope.org</td>
+            </tr>
+            <tr>
+              <td><strong>Teléfono</strong></td>
+              <td>922 477 200</td>
+            </tr>
+            <tr>
+              <td><strong>Web alojada por</strong></td>
+              <td>VULTR (<a href="https://www.vultr.com/" target="_blank">https://www.vultr.com/</a>)</td>
+            </tr>
+          </table>
 
           <h3>3. Condiciones generales de acceso y utilización</h3>
           <p>El sitio Web y sus servicios son de acceso libre y gratuito, si bien la utilización de determinadas áreas o servicios está condicionada a cumplimentar formularios de recogida de datos. Sólo los mayores de 18 años podrán facilitar datos a través de nuestra web, y los menores de 16 años no pueden facilitarlos sin el consentimiento de los padres o tutores.</p>
@@ -90,9 +104,20 @@
 
         <h3>2. Ownership of the web and identification of the Service Provider of the Information Society</h3>
         <p>In order to comply with the principle of General Information required by Article 10 of Law 34/2002, of July 11, services of the information society and electronic commerce we inform our users that this website belongs a CIFP CESAR MANRIQUE with cif S3511001D.</p>
-        <p>Address: Avenida Príncipes De España, Nº5, 38010 - Santa Cruz De Tenerife. Spain</p>
-        <p>Email: info@talentedeurope.org</p>
-        <p>Web hosted by:</p>
+        <table class="table table-bordered">
+          <tr>
+            <td><strong>Address</strong></td>
+            <td>Avenida Príncipes De España, Nº5, 38010 - Santa Cruz De Tenerife. Spain</td>
+          </tr>
+          <tr>
+            <td><strong>Email</strong></td>
+            <td>info@talentedeurope.org</td>
+          </tr>
+          <tr>
+            <td><strong>Web hosted by</strong></td>
+            <td>VULTR (<a href="https://www.vultr.com/" target="_blank">https://www.vultr.com/</a>)</td>
+          </tr>
+        </table>
 
         <h3>3. General conditions of access and use</h3>
         <p>The website and its services are accessible and free, although the use of certain areas or services is conditional on printed forms of data collection. Only those over 18 years can provide data through our website, and children under 16 can not provide them with the consent of parents or guardians.</p>
