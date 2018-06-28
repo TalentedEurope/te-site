@@ -3,12 +3,12 @@
 @section('page-title') Privacy policy @endsection
 
 @section('content')
-<div class="container edit-profile">
+<div class="container static-page">
   <div class="row">
     <div class="col-md-12 col-xs-12">
 
       @if (App::getLocale() == 'es')
-        <h2 class="page-title">Política de privacidad - Talented Europe</h2>
+        <h2 class="page-title">Política de privacidad</h2>
         <div class="well">
           <h3 class="mt-0">Información básica de protección de datos</h3>
           <table class="table table-bordered">
@@ -186,7 +186,7 @@
         </div>
 
       @else
-        <h2 class="page-title">Privacy policy - Talented Europe</h2>
+        <h2 class="page-title">Privacy policy</h2>
         <div class="well">
           <h3 class="mt-0">Basic data protection information</h3>
           <table class="table table-bordered">

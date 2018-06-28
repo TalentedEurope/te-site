@@ -1,0 +1,28 @@
+.static-page {
+    .mt-0 {
+        margin-top: 0;
+    }
+
+    a {
+        word-wrap: break-word;
+    }
+
+    table.cookies-table {
+        thead {
+            tr {
+                th {
+                    vertical-align: middle;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    min-width: 6em;
+                    max-width: 50em;
+                    white-space: normal;
+                }
+            }
+        }
+    }
+}

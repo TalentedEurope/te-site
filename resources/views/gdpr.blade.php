@@ -3,7 +3,7 @@
 @section('page-title') {{ trans('global.gdpr_updates') }} @endsection
 
 @section('content')
-<div class="container edit-profile">
+<div class="container static-page">
   <div class="row">
     <div class="col-md-12 col-xs-12">
       <h2 class="page-title">{{ trans('global.gdpr_updates') }}</h2>

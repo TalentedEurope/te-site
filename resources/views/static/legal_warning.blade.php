@@ -3,11 +3,11 @@
 @section('page-title') Legal warning @endsection
 
 @section('content')
-<div class="container edit-profile">
+<div class="container static-page">
   <div class="row">
     <div class="col-md-12 col-xs-12">
       @if (App::getLocale() == 'es')
-        <h2 class="page-title">Aviso legal – Talented Europe</h2>
+        <h2 class="page-title">Aviso legal</h2>
         <div class="well">
           <h3 class="mt-0">1. Objeto y aceptación</h3>
           <p>El presente aviso legal regula el uso del sitio Web: <a href="https://www.talentedeurope.eu/">www.talentedeurope.eu</a></p>
@@ -94,7 +94,7 @@
           <p>Si se trata de un consumidor final nada en la presente cláusula afectará a los derechos que como tal le reconoce la legislación vigente, pudiendo elegir presentar una reclamación para hacer valer sus derechos en relación con las presentes Condiciones ante el Juez o Tribunales que correspondan a su domicilio.</p>
         </div>
       @else
-      <h2 class="page-title">Legal warning – Talented Europe</h2>
+      <h2 class="page-title">Legal warning</h2>
       <div class="well">
         <h3 class="mt-0">1. Purpose and acceptance</h3>
         <p>This legal notice regulates the use of the website: <a href="https://www.talentedeurope.eu/">www.talentedeurope.eu</a></p>

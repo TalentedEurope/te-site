@@ -3,417 +3,294 @@
 @section('page-title') Cookie policy @endsection
 
 @section('content')
-<div class="container edit-profile">
+<div class="container static-page">
   <div class="row">
     <div class="col-md-12 col-xs-12">
 
-      @if (App::getLocale() == 'en')
-        <h2 class="page-title">Information about cookies</h2>
+      @if (App::getLocale() == 'es')
+        <h2 class="page-title">Política de Cookies</h2>
         <div class="well">
-          <p>
-            According to Law 34/2002 about Services of the Information Society, we hereby inform you that this website uses cookies.
-          </p>
+          <h3 class="mt-0">1. ¿Qué son las Cookies?</h3>
+          <p>Una cookie es un archivo de texto que un servidor web puede guardar en el disco duro de tu equipo para almacenar algún tipo de información sobre ti como usuario. Las cookies se utilizan con diversas finalidades tales como almacenar datos para próximas visitas, para reconocer al usuario y evitar pedir de nuevo la autentificación, para saber que paginas visitas, o para guardar tus preferencias en áreas personalizables...). Normalmente los sitios web utilizan las cookies para obtener información estadística sobre sus páginas web, y analizar el comportamiento de sus clientes/usuarios.</p>
 
-          <p>
-            Cookies are small text files used by the website you are visiting and they are stored on your computer. They are widely used in order to make the website work right and efficiently, since it provides information to the owners of the site. The use of cookies is standardized on most of the websites. If you refuse to send cookies to our systems, you can “disable” and manage them from your browser, removing them from your browsing history (cache) when the visit ends.
-          </p>
-
-          <h3>Types of cookies</h3>
+          <h3>2. Tipos de cookies</h3>
+          <p>Las cookies pueden clasificarse según los siguientes criterios:</p>
+          <p>Según <strong>quien instala</strong> la cookie éstas pueden ser:</p>
           <ul>
-            <li>"Session" cookies: they stay in your browser during your visit (for instance, till you close the browser and the visit ends).</li>
-            <li>"Persistent" cookies: they stay in your browser after the session (in case you do not remove them).</li>
-            <li>"Performance" cookies: they collect information about the use of the website; they do not collect personal information and collected data is stored in an anonymous way. The "Performance" cookies are used to improve the behaviour of the website.</li>
-            <li>"Functionality" cookies: they  enable the website to store any change you have done  on the page (for instance, changes in font- size, customization of pages) or enable services such as posts in blogs.</li>
+            <li><strong>Cookies propias:</strong> Son aquéllas que se envían al equipo terminal del usuario desde un equipo o dominio gestionado por el propio editor y desde el que se presta el servicio solicitado por el usuario.</li>
+            <li><strong>Cookies de terceros:</strong> Son aquéllas que se envían al equipo terminal del usuario bien desde un desde un equipo o dominio gestionado por nosotros o por un tercero, pero la información que se recoja las cookies es gestionada por un tercero distinto del titular de la web.</li>
+          </ul>
+          <p>Según su <strong>plazo</strong> de conservación las cookies pueden ser:</p>
+          <ul>
+            <li><strong>Cookies de sesión:</strong> Son aquellas que duran el tiempo que el usuario está navegando por la página Web y se borran cuando finaliza la navegación.</li>
+            <li><strong>Cookies persistentes:</strong> Quedan almacenadas en el terminal del usuario, por un tiempo más largo, facilitando así el control de las preferencias elegidas sin tener que repetir ciertos parámetros cada vez que se visite el sitio Web.</li>
+          </ul>
+          <p>Según su <strong>finalidad</strong> las cookies pueden ser:</p>
+          <ul>
+            <li><strong>Cookies técnicas:</strong> Las cookies técnicas son aquellas imprescindibles y estrictamente necesarias para el correcto funcionamiento de un sitio Web y el uso de las diversas opciones y servicios que ofrece. Por ejemplo, las de mantenimiento de sesión, las que permiten utilizar elementos de seguridad, compartir contenido con redes sociales, etc.</li>
+            <li><strong>Cookies de personalización:</strong> Permiten al usuario escoger o personalizar características de la página Web como el idioma, configuración regional o tipo de navegador.</li>
+            <li><strong>Cookies analíticas:</strong> Son las utilizadas por los portales Web, para elaborar perfiles de navegación y poder conocer las preferencias de los usuarios con el fin de mejorar la oferta de productos y servicios. Permiten controlar áreas geográficas de mayor interés de un usuario, la información de la web de más aceptación, etc.</li>
+            <li><strong>Cookies publicitarias/de publicidad:</strong> Permiten la gestión de los espacios publicitarios en base a criterios concretos. Por ejemplo, la frecuencia de acceso, el contenido editado, etc. Las cookies de publicidad permiten a través de la gestión de la publicidad almacenar información del comportamiento a través de la observación de hábitos, estudiando los accesos y formando un perfil de preferencias del usuario, para ofrecerle publicidad relacionada con los intereses de su perfil.</li>
           </ul>
 
-          <h3>Purpose</h3>
-          <ul>
-            <li>Analytic cookies: they are used to collect statistics about the activity of the user. Among others, items such as followings are analysed: number of users who visit the website, number of visited pages as well as the activity of the users  on the website and frequency of using. Collected information is always anonymous, therefore there will be no way to establish a link between the information and the person whom it refers.</li>
-            <li>Cookies used by social networks: they enable the users to share the contents of interest with their contacts in a social network by clicking the corresponding button (plug-in), which is inserted on the website. Plug-ins store and access the cookies within the final user  and enable the social network to identify the users when these ones interact with the plug-ins.</li>
-          </ul>
+          <h3>3. Cookies utilizadas en nuestra web</h3>
+          <p>www.talentedeurope.eu utiliza los siguientes tipos de cookies en la web:</p>
+          <strong>Cookies técnicas</strong>
+          <p>Permiten al usuario navegar por la Web y usar funcionalidades como el carrito de la compra.</p>
+          <strong>Cookies de personalización</strong>
+          <p>Permiten saber las preferencias del usuario: idioma, productos visitados...</p>
+          <strong>Cookies de análisis</strong>
+          <p>Utilizamos cookies de Google Analytics y Smartlook para cuantificar el número de usuarios que visitan la Web. Estas cookies permiten medir y analizar la forma en que los usuarios navegan por la Web. Esta información permite a CIFP CESAR MANRIQUE mejorar continuamente sus servicios y la experiencia de los usuarios de la Web. Para obtener más información, puedes consultar la página de privacidad de Google Analytics:</p>
+          <p><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage" target="_blank">https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage</a></p>
+          <strong>Cookies publicitarias y publicitarias comportamentales</strong>
+          <p>Estas cookies son utilizadas para mostrar anuncios relevantes para los usuarios en función del uso que realicen de nuestra web. Además, limitan el número de veces que cada usuario visualiza un anuncio y ayudan a CIFP CESAR MANRIQUE a medir la efectividad de sus campañas publicitarias. Al navegar por la Web, el usuario acepta instalemos este tipo de cookies en su dispositivo y realicemos consultas cuando el usuario visite la Web de CIFP CESAR MANRIQUE en el futuro.</p>
+          <strong>Cookies instaladas en nuestro dominio web:</strong>
+          <div class="table-responsive">
+            <table class="cookies-table table table-bordered">
+              <thead>
+                <tr>
+                  <th>Nombre de la cookie</th>
+                  <th>Finalidad</th>
+                  <th>Propia/de terceros</th>
+                  <th>Duración</th>
+                  <th>¿Cuando se instala?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cookie de sesión</td>
+                  <td>Técnica</td>
+                  <td>Propia</td>
+                  <td>De sesión</td>
+                  <td>Cuando se accede al sitio Web</td>
+                </tr>
+                <tr>
+                  <td>
+                    optimizelySegments<br/>
+                    optimizelyEndUserId<br/>
+                    optimizelyBuckets
+                  </td>
+                  <td>Cookies de rendimiento y de identificación de usuario</td>
+                  <td>Terceros</td>
+                  <td>10 años</td>
+                  <td>Cuando se navega por la web</td>
+                </tr>
+                <tr>
+                  <td>
+                    _biz_uid<br/>
+                    _biz_pendingA<br/>
+                    _biz_nA<br/>
+                    _biz_flagsA<br/>
+                    __cfduid
+                  </td>
+                  <td>Cookies para almacenar información personalización de contenidos</td>
+                  <td>Terceros</td>
+                  <td>1 año</td>
+                  <td>Cuando se navega por la web</td>
+                </tr>
+                <tr>
+                  <td>
+                    1P_JAR<br/>
+                    APISID<br/>
+                    NID<br/>
+                    HSID<br/>
+                    SAPISID<br/>
+                    SID<br/>
+                    SIDCC<br/>
+                    SSID
+                  </td>
+                  <td>Cookies almacenadas en el ordenador del usuario con el fin de permanecer conectado a su cuenta de Google al visitar sus servicios de nuevo. Mientras permanezca con esta sesión activa y use complementos en otros sitios Web como el nuestro, Google hará uso de estas cookies para mejorar su experiencia de uso. Las finalidades de las cookies son variadas: gestión de preferencias,  análisis del comportamiento de los usuarios, seguridad, identificación de los usuarios...</td>
+                  <td>Terceros</td>
+                  <td>La duración depende del tipo de cookie instalada: De los 10 minutos a los 20 años</td>
+                  <td>Cuando se navega por la web</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-          <h3>Use of cookies Talented Europe</h3>
-          <p>
-            Based on the directives of the National Spanish Agency of Data Protection, the detailed the use of the cookies in this website is stated below. With the use of this website, you are aware and agree that we store these cookies in your computer / device / browser for the declared aims.
-          </p>
-          <p>
-            Third-party cookies are those that are sent to the final machine of the user, from a host or domain that is not managed by the editor, but by another entity which treats the obtained data through the cookies. The following table explains the way we use the cookies:
-          </p>
+          <p>Esta web, como la mayoría de sitios web, incluye funcionalidades proporcionadas por terceros.</p>
+          <p>Nuestra web es una web viva y se pueden incluir nuevos diseños o servicios de terceros. Esto puede modificar ocasionalmente la configuración de cookies y que aparezcan cookies no detalladas de forma pormenorizada en la presente política.</p>
+          <p>Nuestro sitio no controla las cookies utilizadas por estos terceros. Para más información sobre las cookies de las redes sociales u otras Webs ajenas, aconsejamos revisar sus propias políticas de cookies.</p>
 
-         <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Name of the provider</th>
-                <th>Aim of the cookie</th>
-                <th>Description</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Google Analytics</td>
-                <td>To analyse websites</td>
-                <td>It lets the owners of websites know how the users interact with their websites. Additionally, it enables cookies in the domain of the site where you are and uses a cookie named “_ga” to collect information in an anonymous way and produce trend-reports of websites without identifying individual users.</td>
-                <td><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">View more information</a></td>
-              </tr>
-              <tr>
-                <td>Youtube</td>
-                <td>To display videos</td>
-                <td>It lets  the owners of websites know how the users interact with their websites. Additionally, it enables cookies in the domain of the site where you are and it uses them to collect information in an anonymous way and produce trend- reports of websites without identifying individual users.</td>
-                <td><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">View more information</a></td>
-              </tr>
-              <tr>
-                <td>Addthis</td>
-                <td>To share content in social networks</td>
-                <td>"psc", "uvc", "atuvc" and "uid". These cookies are used by Addthis.com  enabling the users to share pages and contents easily. These cookies enable storing preferences, such as in which net the user prefer to share the content (for instance Facebook or Twitter).</td>
-                <td><a href="http://www.addthis.com/privacy">View more information</a></td>
-              </tr>
-            </tbody>
-          </table>
+          <h3>4. Información y obtención del consentimiento para la instalación</h3>
+          <p>www.talentedeurope.eu procurará en todo momento establecer mecanismos adecuados para obtener el consentimiento del Usuario para la instalación de cookies que lo requieran. Cuando un usuario accede a nuestra web aparece un pop-up en el que se informa de la existencia de cookies y de que si continúa navegando por nuestra página presta su consentimiento para la instalación de cookies.</p>
 
-          <h3>Additional notes</h3>
-          <p>Web browsers are the tools in charge of storing the cookies, and from this place you can exercise your rights in order to remove or disable them. Neither this web nor their legal representatives can guarantee the correct or incorrect handling of the cookies by the mentioned browsers.</p>
-          <p>In some cases it is necessary to install cookies into the browser not to forget its decision of non-acceptance of the cookies.</p>
+          <h3>5. ¿Cómo puedo impedir la instalación de cookies?</h3>
+          <p>El usuario puede configurar su navegador para aceptar, o no, las cookies que recibe o para que el navegador le avise cuando un servidor quiera guardar una cookie. Si se deshabilitan algunas cookies técnicas no se garantiza el correcto funcionamiento de algunas de las utilidades de la web.</p>
+          <p>El usuario podrá excluir que se almacenen en su terminal las cookies "analíticas y publicitarias” de Google Analytics mediante los <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">sistemas de exclusión facilitados por Google Analytics</a>.</p>
+          <p>A continuación, también le facilitamos algunos ejemplos de cómo deshabilitar las cookies:</p>
+          <ol type="a">
+            <li>
+              <strong>Mediante la configuración del propio navegador:</strong>
+              <ul>
+                <li>Internet Explorer: <a href="http://windows.microsoft.com/es-es/windows-vista/block-or-allow-cookies" target="_blank">http://windows.microsoft.com/es-es/windows-vista/block-or-allow-cookies</a></li>
+                <li>Firefox: <a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-web" target="_blank">https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-web</a></li>
+                <li>Safari: <a href="http://support.apple.com/kb/HT1677?viewlocale=es_ES" target="_blank">http://support.apple.com/kb/HT1677?viewlocale=es_ES</a></li>
+                <li>Chrome: <a href="https://support.google.com/accounts/answer/61416?hl=es" target="_blank">https://support.google.com/accounts/answer/61416?hl=es</a></li>
+                <li>Opera: <a href="http://help.opera.com/Windows/11.50/es-ES/cookies.html" target="_blank">http://help.opera.com/Windows/11.50/es-ES/cookies.html</a></li>
+              </ul>
+              Para ampliar esta información acuda a la página de la Agencia Española de Protección de Datos que ayuda a configurar la privacidad en redes sociales, navegadores y sistemas operativos móviles. <a href="http://www.agpd.es/portalwebAGPD/CanalDelCiudadano/protegetuprivacidad/index-ides-idphp.php" target="_blank">Más información</a>.
+            </li>
+            <li>
+              <strong>Mediante herramientas de terceros:</strong><br/>
+              Existen herramientas de terceros, disponibles on line, que permiten a los usuarios detectar las cookies en cada sitio web que visita y gestionar su desactivación, por ejemplo:<br/>
+              <a href="http://www.ghostery.com" target="_blank">http://www.ghostery.com</a><br/>
+              <a href="http://www.youronlinechoices.com/es/" target="_blank">http://www.youronlinechoices.com/es/</a>
+            </li>
+          </ol>
+
+          <h3>6. Enlaces a otros sitios web</h3>
+          <p>Si opta por abandonar nuestro sitio Web a través de enlaces a otros sitios Web no pertenecientes a nuestra entidad, no nos haremos responsables de las políticas de privacidad de dichos sitios Web ni de las cookies que estos puedan almacenar en el ordenador del usuario.</p>
+
+          <h3>7. ¿Cómo recopilamos y usamos las direcciones IP?</h3>
+          <p>Los servidores de la Web podrán detectar de manera automática la dirección IP y el nombre de dominio utilizados por los usuarios.</p>
+          <p>Una dirección IP es un número asignado automáticamente a un ordenador cuando éste se conecta a Internet. Esta información permite el posterior procesamiento de los datos con el fin de saber si ha prestado su consentimiento para la instalación de cookies, realizar mediciones únicamente estadísticas que permitan conocer el número de visitas realizadas a la Web, el orden de visitas, el punto de acceso, etc.</p>
+
+          <h3>8. Actualización de nuestra política de cookies</h3>
+          <p>Esta política se revisa periódicamente para asegurar su vigencia, por lo que puede ser modificada. Le recomendamos que visite la página con regularidad donde le informaremos de cualquier actualización al respecto.</p>
         </div>
 
-      @elseif (App::getLocale() == 'es')
-        <h2 class="page-title">INFORMACIÓN SOBRE COOKIES</h2>
+      @else
+        <h2 class="page-title">Cookies Policy</h2>
         <div class="well">
-          <p>
-            De acuerdo con la Ley 34/2002 de Servicios de la Sociedad de la Información, le informamos que este sitio web utiliza cookies.
-          </p>
+          <h3 class="mt-0">1. What Cookies are?</h3>
+          <p>A cookie is a text file that a web server can save on your computer's hard drive to store some type of information about you as a user. Cookies are used for purposes such as storing data for future visits, to recognize the user and avoid asking for new authentication, to know which pages you visit, or to save your preferences in customizable areas ...). Normally, websites use cookies to obtain statistical information about their web pages, and analyze the behavior of their customers.</p>
 
-          <p>
-            Las cookies son pequeños archivos de texto utilizados por el sitio web que está visitando y se almacenan en su ordenador. Son ampliamente utilizados con el fin de hacer que el sitio web funcione correctamente y de manera eficiente, ya que proporciona información a los propietarios del sitio. El uso de cookies está estandarizado en la mayoría de los sitios web. Si se niega a enviar cookies a nuestros sistemas, puede "deshabilitar" y administrar desde su navegador, eliminándolos del historial de navegación (caché) cuando termine la visita.
-          </p>
-
-          <h3>Tipos de cookies</h3>
+          <h3>2. Types of cookies</h3>
+          <p>Cookies can be classified according to the following criteria:</p>
+          <p>According to who installs the cookie, it can be:</p>
           <ul>
-            <li>Cookies "temporales": permanecen en su navegador durante su visita (por ejemplo, hasta que cierre el navegador y la visita termine).</li>
-            <li>Cookies "persistentes": permanecen en su navegador después de la sesión (en caso de que no las retire).</li>
-            <li>Cookies de "rendimiento": recopilan información sobre el uso del sitio web; No recopilan información personal y los datos recolectados se almacenan de manera anónima. Las "cookies" de rendimiento se utilizan para mejorar el comportamiento del sitio web.</li>
-            <li>Cookies de "funcionalidad": permiten al sitio web almacenar la opción que haya hecho en la página (por ejemplo, cambios en el tamaño de la fuente, personalización de páginas) o dejar que los servicios incluyan publicaciones en blogs.</li>
+            <li><strong>Own cookies:</strong> Are those that are sent to the user's terminal equipment from a computer or domain managed by the editor itself and from which the service requested by the user is provided.</li>
+            <li><strong>Third party cookies:</strong> Those that are sent to the user's terminal equipment from a computer or domain managed by us or by a third party, but the information collected by the cookies is managed by a third party other than the owner of the website.</li>
+          </ul>
+          <p>Depending on their shelf life, cookies can be:</p>
+          <ul>
+            <li><strong>Session cookies:</strong> These are the ones that last as long as the user is browsing the Web page and they are deleted when the navigation ends.</li>
+            <li><strong>Persistent cookies:</strong> They are stored in the user's terminal, for a longer time, thus facilitating the control of the preferences chosen without having to repeat the parameters each time you visit the website.</li>
+          </ul>
+          <p>Depending on their purpose, the cookies can be:</p>
+          <ul>
+            <li><strong>Technical cookies:</strong> Technical cookies are essential and strictly necessary for the proper functioning of a website and the use of the various options and services offered. For example, session maintenance tasks, those that use security elements, share content with social networks, etc.</li>
+            <li><strong>Personalization cookies:</strong> Allow the user to choose or customize the characteristics of the Web page such as language, regional or browser type.</li>
+            <li><strong>Analytical cookies:</strong> User Web, navigation profiles and to know the preferences of the users in order to improve the offer of products and services. They allow to control geographic areas of greater interest of the user, the information of the web of more acceptance, etc.</li>
+            <li><strong>Advertising/advertising cookies:</strong> They allow the management of advertising spaces based on specific criteria. For example, the frequency of access, the edited content, etc. Advertising cookies allow the communication of habits, studying the accesses and forming a profile of user preferences, to offer advertising related to the interests of their profile.</li>
           </ul>
 
-          <h3>Propósito</h3>
-          <ul>
-            <li>Cookies analíticas: se utilizan para recopilar estadísticas sobre la actividad del usuario. Entre otros, se analizan temas como los siguientes: número de usuarios que visitan el sitio web, número de páginas visitadas, así como la actividad de los usuarios en el sitio web y la frecuencia de uso. La información recogida es siempre anónima, por lo tanto no habrá manera de establecer un vínculo entre la información y la persona a la que se refiere.</li>
-            <li>Cookies utilizados por las redes sociales: permiten al usuario tener la posibilidad de compartir con sus contactos en una red social, los contenidos de interés haciendo clic en el botón correspondiente (plug-in), que se inserta en el sitio web. Los (plug-in) almacenan y acceden a las cookies dentro del usuario final y permiten que la red social identifique a los usuarios cuando éstos interactúan con los (plug-in).</li>
-          </ul>
-          <h3>Uso de cookies Talented Europe</h3>
-          <p>
-            Basado en las directivas de la Agencia Nacional de Protección de Datos de España, a continuación se detalla el uso de las cookies en este sitio web. Con el uso de este sitio web, usted es consciente y está de acuerdo en que almacenamos estas cookies en su computadora / dispositivo / navegador para los objetivos declarados.
-          </p>
-          <p>
-            Las cookies de terceros son aquellas que se envían al aparato final del usuario, desde un host o dominio que no es administrado por el editor, sino por otra entidad que trata los datos obtenidos a través de las cookies. La siguiente tabla explica la forma en que usamos las cookies:
-          </p>
+          <h3>3. Cookies used on our website</h3>
+          <p>www.talentedeurope.eu uses the following types of cookies on the web:</p>
+          <strong>Technical cookies</strong>
+          <p>They allow the user to browse the web and use features such as the shopping cart.</p>
+          <strong>Personalization cookies</strong>
+          <p>They allow to know the preferences of the user: language, products visited.</p>
+          <strong>Analysis cookies</strong>
+          <p>Cookies of Google Analytics and Smartlook to quantify the number of users who visit the Web. These cookies allow you to measure and analyze the way in which users browse the Web. This information allows CIFP CESAR MANRIQUE to continuously improve its services and the experience of the users of the Web. For more information, you can consult the Google Analytics privacy page:</p>
+          <p><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage" target="_blank">https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage</a></p>
+          <strong>Advertising and behavioral advertising cookies</strong>
+          <p>These cookies are used to display relevant ads for users based on their use of our website. In addition, they limit the number of times each user views an ad and help CIFP CESAR MANRIQUE to measure the effectiveness of their advertising campaigns. When browsing the Web, the user agrees to install this type of cookies on their device and register them when the user visits the CIFP CESAR MANRIQUE website in the future.</p>
+          <strong>Cookies installed in our web domain:</strong>
+          <div class="table-responsive">
+            <table class="cookies-table table table-bordered">
+              <thead>
+                <tr>
+                  <th>Cookie name</th>
+                  <th>Purpose</th>
+                  <th>Own/third-party</th>
+                  <th>Duration</th>
+                  <th>When is it installed?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Session Cookie</td>
+                  <td>Technique</td>
+                  <td>Own</td>
+                  <td>Session</td>
+                  <td>When the website is accessed</td>
+                </tr>
+                <tr>
+                  <td>
+                    optimizelySegments<br/>
+                    optimizelyEndUserId<br/>
+                    optimizelyBuckets
+                  </td>
+                  <td>Performance and user identification cookies</td>
+                  <td>Third parties</td>
+                  <td>10 years</td>
+                  <td>When browsing the web</td>
+                </tr>
+                <tr>
+                  <td>
+                    _biz_uid<br/>
+                    _biz_pendingA<br/>
+                    _biz_nA<br/>
+                    _biz_flagsA<br/>
+                    __cfduid
+                  </td>
+                  <td>Cookies to store information content personalization</td>
+                  <td>Third parties</td>
+                  <td>1 year</td>
+                  <td>When browsing the web</td>
+                </tr>
+                <tr>
+                  <td>
+                    1P_JAR<br/>
+                    APISID<br/>
+                    NID<br/>
+                    HSID<br/>
+                    SAPISID<br/>
+                    SID<br/>
+                    SIDCC<br/>
+                    SSID
+                  </td>
+                  <td>Cookies stored on the user's computer in order to remain connected to your Google account when visiting your services again. While you remain with this active session and use add-ons on other websites like ours, Google will use these cookies to improve your user experience. The purposes of cookies are varied: management of preferences, analysis of user behavior, security, identification of users...</td>
+                  <td>Third parties</td>
+                  <td>The duration depends on the type of cookie installed: From 10 minutes to 20 years</td>
+                  <td>When browsing the web</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-         <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Proveedor</th>
-                <th>Objetivo</th>
-                <th>Descripción</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Google Analytics </td>
-                <td>Para analizar sitios web</td>
-                <td>Permite que los propietarios de sitios web conozcan cómo interactúan los usuarios con sus sitios web. Además, habilita las cookies en el dominio del sitio en el que se encuentra y utiliza una cookie denominada "_ga" para recopilar información de manera anónima y producir informes de tendencias de sitios web sin identificar usuarios individuales.</td>
-                <td><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">Ver más información</a></td>
-              </tr>
-              <tr>
-                <td>Youtube</td>
-                <td>Para mostrar videos</td>
-                <td>Permite que los propietarios de sitios web conozcan cómo interactúan los usuarios con sus sitios web. Además, habilita las cookies en el dominio del sitio donde se encuentra y las utiliza para recolectar información de forma anónima y producir informes de tendencias de sitios web sin identificar usuarios individuales.</td>
-                <td><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">Ver más información</a></td>
-              </tr>
-              <tr>
-                <td>Addthis</td>
-                <td>Para compartir contenido en redes sociales</td>
-                <td>"psc", "uvc", "actuvc" y "uid". Estas cookies son utilizadas por Addthis.com dejando a los usuarios compartir páginas y contenidos fácilmente. Estas cookies permiten recordar las preferencias, como en qué red el usuario prefiere compartir el contenido (por ejemplo, Facebook o Twitter).</td>
-                <td><a href="http://www.addthis.com/privacy">Ver más información</a></td>
-              </tr>
-            </tbody>
-          </table>
+          <p>This website, like most websites, includes features provided by third parties.</p>
+          <p>Our website is a live web and new designs or third-party services can be included. This may occasionally modify the configuration of cookies and the appearance of cookies not detailed in detail in this policy.</p>
+          <p>Our site does not control the cookies used by these third parties. For more information about cookies from social networks or other third-party websites, we advise you to review your own cookie policies.</p>
 
-          <h3>Notas adicionales</h3>
-          <p>Los navegadores web son las herramientas encargadas de almacenar las cookies, y desde este lugar puede ejercitar sus derechos con el fin de eliminarlos o deshabilitarlos. Ni esta web ni sus representantes legales pueden garantizar el correcto o incorrecto manejo de las cookies por los mencionados navegadores.</p>
-          <p>En algunos casos es necesario instalar cookies para que el navegador no olvide su decisión de no aceptar las cookies.</p>
-        </div>
+          <h3>4. Information and obtaining consent for installation</h3>
+          <p>www.talentedeurope.eu will try at all times to establish adequate mechanisms to obtain the consent of the User for the installation of cookies that require it. When a user accesses our website, a pop-up appears informing them of the existence of cookies and that if you continue browsing our website, you consent to the installation of cookies.</p>
 
-      @elseif (App::getLocale() == 'it')
-        <h2 class="page-title">Informazioni su cookie</h2>
-        <div class="well">
-          <p>
-            Ai sensi della legge nr. 34/2002 sui servizi della società informatica, vi informiamo che questo sito utiilizza i cookie.
-          </p>
+          <h3>5. How can I prevent the installation of cookies?</h3>
+          <p>The user can configure his browser to accept, or not, the cookies he receives or for the browser to notify him when a server wants to save a cookie. If some technical cookies are disabled, the correct functioning of some of the web's utilities is not guaranteed.</p>
+          <p>The user may exclude that Google Analytics "analytical and advertising" cookies are stored on their terminal using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">exclusion systems provided by Google Analytics</a>.</p>
+          <p>Here are some examples of how to disable cookies:</p>
+          <ol type="a">
+            <li>
+              <strong>By configuring the browser itself:</strong>
+              <ul>
+                <li>Internet Explorer: <a href="http://windows.microsoft.com/es-es/windows-vista/block-or-allow-cookies" target="_blank">http://windows.microsoft.com/es-es/windows-vista/block-or-allow-cookies</a></li>
+                <li>Firefox: <a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-web" target="_blank">https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-web</a></li>
+                <li>Safari: <a href="http://support.apple.com/kb/HT1677?viewlocale=en_US" target="_blank">http://support.apple.com/kb/HT1677?viewlocale=en_US</a></li>
+                <li>Chrome: <a href="https://support.google.com/accounts/answer/61416?hl=en" target="_blank">https://support.google.com/accounts/answer/61416?hl=en</a></li>
+                <li>Opera: <a href="http://help.opera.com/Windows/11.50/es-ES/cookies.html" target="_blank">http://help.opera.com/Windows/11.50/es-ES/cookies.html</a></li>
+              </ul>
+              To expand this information go to the website of the Spanish Agency for Data Protection that helps to configure privacy in social networks, browsers and mobile operating systems. <a href="http://www.agpd.es/portalwebAGPD/CanalDelCiudadano/protegetuprivacidad/index-ides-idphp.php" target="_blank">More information</a>.
+            </li>
+            <li>
+              <strong>Using third-party tools:</strong><br/>
+              There are third-party tools, available online, that allow users to detect cookies on each website they visit and manage their deactivation, for example:<br/>
+              <a href="http://www.ghostery.com" target="_blank">http://www.ghostery.com</a><br/>
+              <a href="http://www.youronlinechoices.com/es/" target="_blank">http://www.youronlinechoices.com/es/</a>
+            </li>
+          </ol>
 
-          <p>
-            Un cookie è un piccolo file di testo, memorizzato nel vostro computer da siti web durante la navigazione. I cookie vengono ampiamente utilizzati per migliorare le preferenze dei siti web perché forniscono informazioni ai proprietari dei siti web. La maggior parte dei siti web fa uso dei cookie. Se decidede di rifiutare la diffusione dei cookie al nostro sistema, potrete “disattivarli“ e gestirli dal vostro browser, rimuovendoli dalla vostra cronologia di navigazione (cache) a fine visita.
-          </p>
+          <h3>6. Links to other websites</h3>
+          <p>If you choose to leave our website through links to other websites not belonging to our entity, we will not be responsible for the privacy policies of such websites or the cookies they may store on the user's computer.</p>
 
-          <h3>Tipologie di cookie</h3>
-          <ul>
-            <li>Cookie di sessione: rimangono memorizzati nel vostro browser solo durante la visita del sito (cioè finché non chiudiate il browser e non finiate la visita del sito).</li>
-            <li>Cookie persistenti: rimangono nel vostro browser anche dopo la visita (a meno che non li rimuoviate da soli).</li>
-            <li>Cookie tecnici: raccolgono informazioni sull‘utilizzo del sito; non raccolgono informazioni personali e i dati raccolti vengono memorizzati in modo anonimo. I cookie tecnici servono a facilitare la fruizione del sito da parte dell’utente.</li>
-            <li>Cookie funzionali: permettono al sito di ricordare tutte le preferenze che avete scelto sul sito (ad es. modifica della dimensione dei caratteri, personalizzazione del sito), oppure di permettere il funzionamento dei servizi, ad es. aggiungere reazioni ai blog.</li>
-          </ul>
+          <h3>7. How do we collect and use IP addresses?</h3>
+          <p>Web servers can automatically detect the IP address and domain name used by users.</p>
+          <p>An IP address is a number automatically assigned to a computer when it connects to the Internet. This information allows the subsequent processing of the data in order to know if you have given your consent for the installation of cookies, make only statistical measurements that allow knowing the number of visits made to the Web, the order of visits, the access point, etc.</p>
 
-          <h3>Scopo dei cookie</h3>
-          <ul>
-            <li>Cookie analitici: servono a raccogliere statistiche sull’attività dell’utente. Tra l’altro, vengono analizzati i seguenti argomenti: numero degli utenti che visitano il sito, numero dei siti visualizzati, attività degli utenti sul sito e frequenza del suo utilizzo. Le informazioni raccolte sono sempre anonime, perciò non è mai possibile connettere le informazioni con la persona a cui si riferiscono.</li>
-            <li>Cookie utilizzati dai social network: permettono all’utente di condividere un contenuto, secondo i suoi interessi, con i suoi contatti nei social network, cliccando sull’appostio pulsante (plug-in) che si trova sul sito. I plug-in conservano l’accesso ai cookie dell’utente finale e permettono ai social network di identificare gli utenti quando interagiscono con i plug-in.</li>
-          </ul>
-          <h3>Utilizzo dei cookie su Talented Europe</h3>
-          <p>
-            Ai sensi delle direttive della Agenzia spagnola per la protezione dei dati, segue una descrizione dettagliata dell‘utilizzo dei cookie su questo sito. Utilizzando questo sito, confermate di aver compreso e accettato il fatto che noi memorizziamo questi cookie sul vostro computer / dispositivo / browser, per obiettivi sopra indicati.
-          </p>
-          <p>
-            I cookie di terze parti sono dei file mandati al dispostivo finale dell’utente da ospiti o domini non gestiti dall‘editore, bensì da un’altra entità, che elabora i dati ottenuti tramite i cookie. La seguente tabella descrive come utilizziamo i cookie:
-          </p>
-
-         <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Fornitore</th>
-                <th>Scopo</th>
-                <th>Descrizione</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Google Analytics</td>
-                <td>Analizzare siti web</td>
-                <td>Permette ai proprietari dei siti web di sapere come gli utenti interagiscono con i loro siti. Inoltre, autorizza l’utilizzo dei cookie nel dominio della pagina in cui vi trovate e utilizza un cookie intitolato “_ga“ per raccogliere informazioni in modo anonimo e per produrre i trend report dei siti web senza identificare i singoli utenti.</td>
-                <td><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">Per saperne di più</a></td>
-              </tr>
-              <tr>
-                <td>Youtube</td>
-                <td>Visualizzare video</td>
-                <td>Permette ai proprietari dei siti web di sapere come gli utenti interagiscono con i loro siti. Inoltre, autorizza l’utilizzo dei cookie nel dominio della pagina in cui vi trovate e utilizza i cookie per raccogliere informazioni in modo anonimo e per produrre i trend report dei siti web senza identificare i singoli utenti.</td>
-                <td><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">Per saperne di più</a></td>
-              </tr>
-              <tr>
-                <td>Addthis</td>
-                <td>Condividere contenuti sui social network</td>
-                <td>“psc“, “uvc“, “atuvc“ e “uid“. Questi cookie vengono utilizzati dal sito Addthis.com,  permettendo agli utenti di condividere facilmente pagine e contenuti. Questi cookie servono a memorizzare preferenze, ad es. su quale social network l’utente preferisce condividere il contenuto (ad es. Facebook o Twitter).</td>
-                <td><a href="http://www.addthis.com/privacy">Per saperne di più</a></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h3>Note aggiuntive</h3>
-          <p>I web browser sono degli strumenti per memorizzare i cookie. A questo punto potete applicare il vostro diritto di rimuoverli o disattivarli. Né questo sito, né i suoi legali rappresentanti possono garantire un utilizzo corretto o scorretto dei cookie da parte dei browser sopra indicati.</p>
-          <p>In alcuni casi è necessario installare i cookie nel browser, perché esso non si dimentichi della sua decisione di disattivare i cookie.</p>
-        </div>
-
-      @elseif (App::getLocale() == 'de')
-        <h2 class="page-title">Informationen über Cookies</h2>
-        <div class="well">
-          <p>
-            Im Einklang mit dem Gesetz 34/2002 über die Dienstleistung der Informationsgesellschaft informieren wir Sie hiermit, dass diese Webseite cookies benutz.
-          </p>
-
-          <p>
-            Cookies ist eine kleine Textdatei, die die Webseite in Eurem Computer speichert. Oft werden Sie genutzt, damit die Webseite richtig und effektiv funktioniert, weil Sie Informationen an die Betreiber der Webseite liefern. Die Nutzung von cookies ist ein übliches Verfahren der Mehrheit der Webseiten. Wenn Sie die Bereitstellung von cookies an unser System verweigern, können Sie sie „abstellen“ und sie von Ihrem Computer aus verwalten. Damit werden sie aus Ihrer Chronik nach dem Verlassen der Webseite gelöscht.
-          </p>
-
-          <h3>Arten der cookies Dateien:</h3>
-          <ul>
-            <li>Session Cookies: sind temporäre Dateien, die nur so lange auf dem Rechner des Nutzers verbleiben bis dieser die Webseite verlässt. Sie werden nicht dauerhaft auf dem Rechner gespeichert.</li>
-            <li>Dauerhafte Cookies: diese Cookies werden auf dem Rechner des Nutzers im Ordner Cookies gespeichert und verbleiben dort auch nach Schließung der Internetsitzung, falls Sie nicht von Ihnen gelöscht werden.</li>
-            <li>Leistungs- (Performance-) Cookies Diese Cookies helfen, die Leistung der Website zu verbessern und bieten eine bessere Benutzererfahrung.</li>
-            <li>Funktionalitäts-Cookies Diese Cookies verbessern die Funktionalität einer Website durch das Speichern Ihrer Einstellungen.</li>
-          </ul>
-
-          <h3>Zweck</h3>
-          <ul>
-            <li>Analytische -Cookies: es handelt sich hierbei um Cookies, die Zugriffsstatistiken ermöglichen, indem sie Daten zu Anzahl und Verhalten der Besucher in anonymer Form erfassen. Diese Cookies können und werden nicht zur Identifizierung der Website-Besucher verwendet. Alle erfassten Daten bleiben anonym.</li>
-            <li>Cookies für soziale Netzwerke: sie ermöglichen den Nutzer  den Inhalt, nach seinem Interesse, mit seinen Kontakten in den sozialen Netzwerken zu teilen, in dem er den entsprechenden Button anklickt, der auf der Webseite installiert ist. Ladbare Dateien speichern und behalten den Zutritt zu den cookies Dateien des Endabnehmers. Sie erlauben dem sozialen Netzwerken die Nutzer zu identifizieren, wenn sie die ladbare Dateien nutzen.</li>
-          </ul>
-          <h3>Die Nutzung der cookies Dateien auf den Webseiten von Talented Europe</h3>
-          <p>
-            Auf Grund der Richtlinien des Spanischen Amtes für den Informationsschutz führen wir die detaillierte Nutzung der cookies auf dieser Webseite. Wenn Sie diese Webseite nutzen, sind Sie sich Bewusst, dass wir diese Dateien in Ihrem Computer/Anlage/Suchmaschine auf Grund der deklarierten Ziele speichern, und Sie sind damit einverstanden.
-          </p>
-          <p>
-            Drittanbieter-cookies sind Dateien, die von einer anderen Website angelegt und verwalten werden als von der, die Sie gerade besuchen. Die folgende Tabelle erklärt, auf welche Weise wir die cookies-Dateien nutzen.
-          </p>
-
-         <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Anbieter</th>
-                <th>Ziel</th>
-                <th>Beschreibung</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Google Analytics</td>
-                <td>Webseiten analysieren</td>
-                <td>Sie ermöglichen den Inhaber der Webseiten Informationen über Nutzung der Webseite seitens der Nutzer.  Außerdem werden die cookies Dateien erlaubt, auf der Webseite wo Sie sich befinden und diese nutzt die cookies Dateien „_ga“ für das anonyme Sammeln von Informationen und die Erstellung Webseitentendenzen ohne die einzelnen Nutzer zu identifizieren.</td>
-                <td><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">Mehr Informationen</a></td>
-              </tr>
-              <tr>
-                <td>Youtube</td>
-                <td>Anzeigen von Videos</td>
-                <td>Ermöglicht den Webseiteninhaber die Informationen über die Nutzung der Webseiten. Außerdem werden die cookies Dateien erlaubt, auf der Webseite wo Sie sich befinden und diese nutzt die cookies Dateien für das anonyme Sammeln von Informationen und die Erstellung Webseitentendenzen ohne die einzelnen Nutzer zu identifizieren.</td>
-                <td><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">Mehr Informationen</a></td>
-              </tr>
-              <tr>
-                <td>Addthis</td>
-                <td>Den Inhalt in sozialen Netzwerken teilen</td>
-                <td>"psc", "uvc", "atuvc" und "uid". Diese cooikies  Dateien werden von der Webseite  Addthis.com genutzt, was es erlaubt den Nutzer mühelos Webseiten und Inhalte zu teilen. Diese Dateien ermöglichen das Speicher von Präferenzen, wie z.B. in welchem sozialen Netzwerk der Nutzer den Inhalt teilte (z.B. Facebook oder Twitter).</td>
-                <td><a href="http://www.addthis.com/privacy">Mehr Informationen</a></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h3>Ergänzende Bemerkungen</h3>
-          <p>Webseitensuchmaschinen sind Instrumente zu Speichern von cookies Dateien,  und hier können Sie sich Ihres Rechts bedienen diese zu löschen oder abzustellen. Auch dieser Web, ach nicht seine Rechtsvertreter, können das richtige oder falsche Nutzen von cookies Dateien gewährleisten, die in der Suchmaschine angeführt sind.</p>
-          <p>In manchen Fällen ist es notwendig die cookies Dateien in der Suchmaschine zu installieren, damit sie sich auf das Sperren der cookies Dateien erinnert.</p>
-        </div>
-
-      @elseif (App::getLocale() == 'fr')
-        <h2 class="page-title">Informations sur les cookies</h2>
-        <div class="well">
-          <p>
-            Selon la loi 34/2002 sur les services de la société de l'information, nous vous informons que ce site utilise des cookies.
-          </p>
-
-          <p>
-            Les cookies sont de petits fichiers texte utilisés par le site que vous visitez et ils sont stockés sur votre ordinateur. Ils sont largement utilisés pour faire fonctionner le bon site et efficace, car il fournit des informations aux propriétaires du site. L'utilisation de cookies est normalisé dans le sur la plupart des sites. Si vous refusez d'envoyer des cookies à nos systèmes, vous pouvez « désactiver » et gérer quelque chose qui manque, par exemple « Eux » de votre navigateur, les supprimer de votre historique de navigation (cache) lorsque la visite se termine.
-          </p>
-
-          <h3>Types de cookies</h3>
-          <ul>
-            <li>Session » cookies: ils restent dans votre navigateur lors de votre visite (par exemple, jusqu'à ce que vous fermez le navigateur et la visite se termine).</li>
-            <li>De façon anonyme. Les cookies « Performance » sont utilisés pour améliorer le comportement des « cookies website.Persistent: ils restent dans votre navigateur après la session (dans le cas où vous ne les retirez pas).</li>
-            <li>Les cookies « de performance »: ils recueillent des informations sur l'utilisation du site; ils ne recueillent pas de renseignements personnels et les informations recueillies sont stockées dans un.</li>
-            <li>Fonctionnalité » cookies: ils laissent activer / permettre au site de stocker selon l'option que tout changement que vous avez fait dans la page (par exemple, les changements dans la taille de la police, la personnalisation des pages) ou laissez les services et activer les services comprennent sec messages dans les blogs.</li>
-          </ul>
-
-          <h3>But</h3>
-          <ul>
-            <li>Les cookies analytiques: ils sont utilisés pour recueillir des statistiques sur l'activité de l'utilisateur. Entre autres, on analyse les éléments suivants como: nombre d'utilisateurs qui visitent le site, le nombre de pages visitées, ainsi que l'activité des utilisateurs sur le site et la fréquence d'utilisation. Les informations collectées sont toujours anonymes. Par conséquent, il n'y aura aucun moyen de FONDÉE un lien entre l'information et la personne qui elle se réfère.</li>
-            <li>Les cookies utilisés par les réseaux sociaux: Lles années permettent à l'utilisateur d'avoir la chance de partager avec ses contacts dans un réseau social, le contenu d'intérêt en cliquant sur le bouton correspondant (plug-in), qui est inséré sur le site Web ordre des mots. Notre version: Ils permettent aux utilisateurs de partager le contenu d'intérêt avec leurs contacts dans un réseau social en cliquant sur le bouton correspondant (plug-in), qui est inséré sur le site. Magasin et accès Plug-ins aux cookies dans l'utilisateur final et permettent d'activer le réseau social d'identifier les utilisateurs lorsque ceux-ci interagissent avec les plug-ins.</li>
-          </ul>
-          <h3>Utilisation des cookies manquants dans les préposition? Talented Europe</h3>
-          <p>
-            Sur la base des directives de l'Agence nationale espagnole de la protection des données, la prochaine est l'utilisation détaillée des cookies dans ce site suit / est indiqué ci-dessous. Avec l'utilisation de ce site, vous êtes conscient et acceptez que nous stockons ces cookies dans votre ordinateur / périphérique / navigateur pour les objectifs déclarés.
-          </p>
-          <p>
-            Les cookies tiers sont ceux qui sont envoyés à l'utilisateur final de la machine, à partir d'un hôte ou d'un domaine non géré par l'éditeur, mais par une autre entité qui traite les données obtenues par les cookies. La prochaine table ci-dessous explique la façon dont nous utilisons les témoins:
-          </p>
-
-         <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Fournisseur</th>
-                <th>Objectif</th>
-                <th>La description</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Google Analytics </td>
-                <td>Pour analyser</td>
-                <td>Il permet aux propriétaires de sites Web de savoir comment les utilisateurs interagissent avec leurs sites Web. En outre, il permet des cookies dans le domaine du site où vous êtes et utilise Manière anonyme et produire des rapports de tendances de sites Web sans identifier les utilisateurs individuels. un cookie appelé «_ga» pour collecter des informations dans un.</td>
-                <td><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">View more information</a></td>
-              </tr>
-              <tr>
-                <td>Youtube</td>
-                <td>Pour afficher des vidéos</td>
-                <td>Il permet aux propriétaires de sites Web de savoir comment les utilisateurs interagissent avec leurs sites Web. De plus, il permet aux cookies de se trouver dans le domaine du site où vous vous trouvez, et il les utilise pour collecter des informations de manière anonyme et produire des rapports sur les tendances des sites Web sans identifier les utilisateurs individuels.</td>
-                <td><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">View more information</a></td>
-              </tr>
-              <tr>
-                <td>Addthis</td>
-                <td>Pour partager le contenu</td>
-                <td>"psc", "uvc", "atuvc" et "uid". Ces cookies sont utilisés par Addthis.com permettant aux utilisateurs, permettant aux utilisateurs de partager facilement des pages et sur les réseaux sociaux des contenus. Ces cookies permettent de rappeler d'activer les préférences de conservation / stockage, par exemple dans le cas où l'utilisateur préfère partager le contenu (par exemple, Facebook ou Twitter).</td>
-                <td><a href="http://www.addthis.com/privacy">View more information</a></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h3>Notes complémentaires</h3>
-          <p>Les navigateurs web sont les outils chargés de stocker les cookies et de cet endroit que vous pouvez exercer vos droits afin de supprimer ou de les désactiver. Ni Ni ce site ni leurs représentants légaux peuvent garantir la manipulation correcte ou incorrecte des cookies par les navigateurs mentionnés.</p>
-          <p>Dans certains cas, il est nécessaire d'installer des cookies pour en? le navigateur pour ne pas oublier sa décision de non-acceptation des cookies.</p>
-        </div>
-
-      @elseif (App::getLocale() == 'sk')
-        <h2 class="page-title">Informácie o cookies</h2>
-        <div class="well">
-          <p>
-            V súlade so zákonom 34/2002 o službách informačnej spoločnosti vás týmto informujeme, že táto webová stránka používa súbory cookies.
-          </p>
-
-          <p>
-            Súbor cookie je malý textový súbor, ktorý webová lokalita ukladá vo vašom počítači pri jej prehliadaní. Často sa používajú na to, aby webová stránka správne a efektívne fungovala, pretože poskytujú informácie majiteľom stránky. Používanie súborov cookies je bežná prax väčšiny webových lokalít. Ak odmietate poskytnúť súbory cookies nášmu systému, môžete ich „odstraviť“ a spravovať z vášho prehliadača, čím sa odstránia z vašej histórie prehliadania (cache) po skončení návštevy stránky.
-          </p>
-
-          <h3>Druhy súborov cookies</h3>
-          <ul>
-            <li>Dočasné súbory cookies: zostávajú vo vašom prehliadači počas vašej návštevy stránky (napr. kým nezatvoríte prehliadač a neukončíte návštevu stránky).</li>
-            <li>Trvalé súbory cookies: zostávajú vo vašom prehliadači po vašej návšteve stránky (v prípade, že ich sami neodstránite).</li>
-            <li>Výkonnostné súbory cookies: zbierajú informácie o používaní webovej stránky; nezbierajú osobné informácie a uložené údaje sú anonymné. Tieto výkonnostné cookies sa používajú na zlepšenie používateľského komfortu/funkcionality webstránky.</li>
-            <li>Funkčné súbory cookies: umožňujú webovej stránke uložiť akékoľvek preferencie, ktoré ste na stránke zvolili (napr. zmeny písma – veľkosť, prispôsobenie strany) alebo povoliť služby ako pridávanie reakcií na blogy.</li>
-          </ul>
-
-          <h3>Účel</h3>
-          <ul>
-            <li>Analytické súbory cookies: používajú sa na zber štatistík o aktivite užívateľa. Okrem iného sa analyzujú tieto položky: počet používateľov, ktorí navštívia webovú stránku, počet zobrazených stránok, ako aj aktivita používateľov na webovej stránke a frekvencia jej používania. Zozbierané informácie sú vždy anonymné, a teda nie je možné zistiť prepojenie medzi informáciami a osobou, ku ktorej sa viažu.</li>
-            <li>Súbory cookies používané sociálnymi sieťami: umožňujú používateľovi zdieľať obsah podľa jeho záujmu  so svojimi kontaktmi v sociálnej sieti tým, že klikne na zodpovedajúce tlačidlo (zásuvný modul) inštalovaný na webovej stránke. Zásuvné moduly uchovávajú a majú prístup k súborom cookies koncového používateľa. Umožňujú tiež sociálnej sieti identifikovať používateľov, keď využívajú zásuvné moduly.</li>
-          </ul>
-          <h3>Používanie súborov cookies na stránkach projektu Talented Europe</h3>
-          <p>
-            Na základe smerníc Španielskeho úradu na ochranu údajov ďalej uvádzame detailné používanie súborov cookies na tejto webovej stránke. Ak používate túto webovú stránku, ste si vedomí, že uchovávame tieto súbory cookies vo vašom počítači/zariaden/prehliadači na deklarované ciele a súhlasíte s tým.
-          </p>
-          <p>
-            Súbory cookies tretích strán sú súbory zasielané koncovému prístroju používateľa z domovského počítača alebo domény, ktoré nespravuje editor, ale iný subjekt, a ten spracováva získané údaje pomocou súborov cookies. Nasledujúca tabuľka vysvetľuje, akým spôsobom používame súbory cookies.
-          </p>
-
-         <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>Poskytovateľ</th>
-                <th>Cieľ</th>
-                <th>Popis</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Google Analytics</td>
-                <td>Analyzovať webové stránky</td>
-                <td>Umožňuje majiteľom webovej stránky dozvedieť sa, ako používatelia narábajú s ich webovými stránkami. Okrem toho povoľuje súbory cookies v doméne na stránke, na ktorej ste, a používa cookie s názvom „-ga“ na anonymný zber informácií a výrobu správ o  tendencii  webových stránok bez identifikácie jednotlivých užívateľov.</td>
-                <td><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">Zobraziť viac informácií</a></td>
-              </tr>
-              <tr>
-                <td>Youtube</td>
-                <td>Zobrazovať videá</td>
-                <td>Umožňuje majiteľom webovej stránky dozvedieť sa, ako používatelia narábajú s ich webovými stránkami. Okrem toho povoľuje súbory cookies v doméne na stránke, na ktorej ste, a používa súbor cookies na anonymný zber informácií a výrobu správ o  tendencii webových stránok bez identifikácie jednotlivých užívateľov.</td>
-                <td><a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage">Zobraziť viac informácií</a></td>
-              </tr>
-              <tr>
-                <td>Addthis</td>
-                <td>Zdieľať obsah na sociálnych sieťach</td>
-                <td>"psc", "uvc", "atuvc" a "uid". Tieto súbory cookies používa stránka Addthis.com, čím umožňuje používateľom bez námahy zdieľať stránky a obsah. Tieto súbory umožňujú uchovanie preferencií ako napr. v ktorej sociálnej sieti chce používateľ zdieľať obsah (napr. Facebook alebo Twitter).</td>
-                <td><a href="http://www.addthis.com/privacy">Zobraziť viac informácií</a></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h3>Doplňujúce poznámky</h3>
-          <p>Webové prehliadače sú nástrojmi na ukladanie súborov cookies a odtiaľto môžete využiť svoje právo na ich odstránenie alebo odstavenie. Ani tento web, ani jeho právni zástupcovia nemôžu zaručiť správne alebo nesprávne narábanie so súbormi cookies uvedenými prehliadačmi.</p>
-          <p>V niektorých prípadoch je nevyhnutné nainštalovať súbory cookies do prehliadača, aby nezabudol na svoje rozhodnutie o neprijatí súborov cookies.</p>
+          <h3>8. Updating our cookies policy</h3>
+          <p>This policy is reviewed periodically to ensure its validity, so it can be modified. We recommend that you visit the page regularly where we will inform you of any update about it.</p>
         </div>
       @endif
 
