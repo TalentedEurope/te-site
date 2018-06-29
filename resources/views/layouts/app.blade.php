@@ -59,6 +59,8 @@
       'error-page': {!! json_encode(trans('error-page'), JSON_HEX_APOS) !!},
     };
   </script>
+
+  @include("layouts.cookies")
 </head>
 
 <body id="app-layout" class="@yield('page-class') @if ($fromApp) from-app @endif ">

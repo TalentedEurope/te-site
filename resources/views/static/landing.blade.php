@@ -57,6 +57,7 @@
         }
       };
     </script>
+    @include("layouts.cookies")
   </head>
 
   <body>
