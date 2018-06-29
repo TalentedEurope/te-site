@@ -135,6 +135,12 @@ return [
     
         'the_terms_of_use' => 'podmienky používania',
     
+        'the_cookies' => 'cookies',
+    
+        'the_privacy_policy' => 'ochrana súkromia',
+    
+        'the_legal_warning' => 'the legal warning',
+    
         'create_account' => 'Vytvoriť nový účet',
     
         'forgot_password' => 'Zabudli ste heslo?',

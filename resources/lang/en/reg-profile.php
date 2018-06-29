@@ -135,6 +135,12 @@ return [
     
         'the_terms_of_use' => 'the terms of use',
     
+        'the_cookies' => 'the cookies policy',
+    
+        'the_privacy_policy' => 'the privacy policy',
+    
+        'the_legal_warning' => 'the legal warning',
+    
         'create_account' => 'Create a new account',
     
         'forgot_password' => 'Forgot your password?',

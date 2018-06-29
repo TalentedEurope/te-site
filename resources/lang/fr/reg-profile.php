@@ -134,7 +134,13 @@ return [
     
         'i_agree_with' => 'Je suis d\'accord avec ',
     
-        'the_terms_of_use' => 'Les conditions d\'utilisation',
+        'the_terms_of_use' => 'les conditions d\'utilisation',
+    
+        'the_cookies' => 'la politique de cookies',
+    
+        'the_privacy_policy' => 'la politique de confidentialité',
+    
+        'the_legal_warning' => 'la notice légale',
     
         'create_account' => 'Créer un nouveau compte',
     

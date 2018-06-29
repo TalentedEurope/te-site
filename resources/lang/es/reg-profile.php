@@ -135,6 +135,12 @@ return [
     
         'the_terms_of_use' => 'los términos de uso',
     
+        'the_cookies' => 'la política de cookies',
+    
+        'the_privacy_policy' => 'la política de privacidad',
+    
+        'the_legal_warning' => 'el aviso legal',
+    
         'create_account' => 'Crear una cuenta nueva',
     
         'forgot_password' => '¿Olvidaste tu contraseña?',

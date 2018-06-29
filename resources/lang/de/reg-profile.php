@@ -133,7 +133,13 @@ return [
     
         'i_agree_with' => 'Ich bin einverstanden',
     
-        'the_terms_of_use' => 'Nutzungsbedingungen',
+        'the_terms_of_use' => 'nutzungsbedingungen',
+    
+        'the_cookies' => 'cookies',
+    
+        'the_privacy_policy' => 'Datenschutz-Bestimmungen',
+    
+        'the_legal_warning' => 'the legal warning',
     
         'create_account' => 'Ein Konto erstellen',
     

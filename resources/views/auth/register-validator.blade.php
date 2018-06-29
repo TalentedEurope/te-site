@@ -49,11 +49,28 @@
           @endif
           <input id="password" required name="password" class="{{ $errors->has('password') ? ' has-error' : '' }}" type="password" placeholder="{!! trans('reg-profile.password') !!}">
           <input id="password" name="password_confirm" class="{{ $errors->has('password_confirm') ? ' has-error' : '' }}" type="password" placeholder="{!! trans('reg-profile.confirm_password') !!}">
-          <div class="checkbox">
+
+          <div class="checkbox checkbox-agree @if ($errors->has('terms')) alert alert-danger @endif">
             <label>
-              <input type="checkbox" required name="remember"></input> {!! trans('reg-profile.i_agree_with') !!} <a target="_blank" href="{{ url('/terms') }}">{!! trans('reg-profile.the_terms_of_use') !!}</a>
+              <input required type="checkbox" name="terms"/> {!! trans('reg-profile.i_agree_with') !!} <a target="_blank" href="{{ url('/terms') }}">{!! trans('reg-profile.the_terms_of_use') !!}</a>
             </label>
           </div>
+          <div class="checkbox checkbox-agree @if ($errors->has('privacy_policy')) alert alert-danger @endif">
+            <label>
+              <input required type="checkbox" name="privacy_policy"/> {!! trans('reg-profile.i_agree_with') !!} <a target="_blank" href="{{ url('/privacy-policy') }}">{!! trans('reg-profile.the_privacy_policy') !!}</a>
+            </label>
+          </div>
+          <div class="checkbox checkbox-agree @if ($errors->has('legal_warning')) alert alert-danger @endif">
+            <label>
+              <input required type="checkbox" name="legal_warning"/> {!! trans('reg-profile.i_agree_with') !!} <a target="_blank" href="{{ url('/legal-warning') }}">{!! trans('reg-profile.the_legal_warning') !!}</a>
+            </label>
+          </div>
+          <div class="checkbox checkbox-agree @if ($errors->has('cookies')) alert alert-danger @endif">
+            <label>
+              <input required type="checkbox" name="cookies"/> {!! trans('reg-profile.i_agree_with') !!} <a target="_blank" href="{{ url('/cookies') }}">{!! trans('reg-profile.the_cookies') !!}</a>
+            </label>
+          </div>
+
           <div class="captcha">
             {!! app('captcha')->display(); !!}
           </div>
