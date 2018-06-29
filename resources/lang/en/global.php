@@ -117,9 +117,11 @@ return [
     
         'footer_partners' => 'Partners',
     
-        'cookie_text' => 'This website uses cookies to help us give you the best experience when you visit. By using this website you consent to our use of these cookies. Find out more about how we use cookies and how to manage them by reading our <a href="/privacy-policy">cookie notice</a>',
+        'cookie_text' => 'This website uses both own and third-party cookies, to collect statistical information from your Internet browsing and to show you advertising related to your tastes, as well as to improve your user experience. By browsing this website, you access the use of these cookies. You can change the configuration of your browser to not accept its installation or obtain more information in our',
     
         'cookie_accept' => 'close',
+    
+        'cookie_link' => 'cookie policy',
     
         'logout_btn' => 'Logout',
     

@@ -117,9 +117,11 @@ return [
     
         'footer_partners' => 'Partners',
     
-        'cookie_text' => 'Este sitio web utiliza cookies para ayudarnos a darle la mejor experiencia al visitar nuestro sitio web. Al continuar utilizando este sitio web, usted nos da su consentimiento para el uso de estas cookies . Para saber más sobre cómo utilizamos las cookies y cómo manejarlas  lea <a href="/privacy-policy">cookie notice</a>',
+        'cookie_text' => 'Esta página web emplea tanto cookies propias como de terceros técnicas, para recopilar información estadística de su navegación por Internet y para mostrarle publicidad relacionada con sus gustos, así como para mejorar su experiencia de usuario. Al navegar por este sitio web, usted accede al empleo de estas cookies. Puede cambiar la configuración de su navegador para no aceptar su instalación u obtener más información en nuestra',
     
         'cookie_accept' => 'cerrar',
+    
+        'cookie_link' => ' política de cookies. ',
     
         'logout_btn' => 'Cerrar Sesión',
     
