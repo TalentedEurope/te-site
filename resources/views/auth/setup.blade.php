@@ -42,27 +42,31 @@
           <p><strong>{!! trans('register.i_am_a') !!}:</strong></p>
           <div class="user-type @if ($errors->has('type')) alert alert-danger @endif">
             <div class="radio-check" @if (isset($request)) style="display:none" @endif>
-              <input id="Student" type="radio" name="type" value="student"             @if (old('type') == "student") checked @endif>
-              <label for="Student">
-                <i class="fa fa-user" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="{!! trans('global.student_graduate') !!}"></i>
-              </label>
+              <input id="Student" type="radio" name="type" value="student" @if (old('type') == "student") checked @endif>
+              <label for="Student"><i class="fa fa-user" aria-hidden="true"></i></label>
             </div>
 
             <div class="radio-check">
               <input id="Institution" type="radio" name="type" value="institution" @if (old('type') == "institution" || isset($request) ) checked @endif>
-              <label for="Institution" data-toggle="tooltip" data-placement="bottom" title="{!! trans('global.institution_singular') !!}"><i class="fa fa-university" aria-hidden="true"></i></label>
+              <label for="Institution"><i class="fa fa-university" aria-hidden="true"></i></label>
             </div>
 
             <div class="radio-check">
               <input id="Validator" type="radio" name="type" value="validator" @if (old('type') == "validator" || isset($request) ) checked @endif>
-              <label for="Validator" data-toggle="tooltip" data-placement="bottom" title="{!! trans('validators.validators') !!}"><i class="fa fa-certificate" aria-hidden="true"></i></label>
+              <label for="Validator"><i class="fa fa-certificate" aria-hidden="true"></i></label>
             </div>
 
             <div class="radio-check" @if (isset($request)) style="display:none" @endif>
               <input id="Company" type="radio" name="type" value="company" @if (old('type') == "company") checked @endif>
-              <label for="Company"><i data-toggle="tooltip" data-placement="bottom" title="{!! trans_choice('global.company', 1) !!}" class="fa fa-building" aria-hidden="true"></i></label>
+              <label for="Company"><i class="fa fa-building" aria-hidden="true"></i></label>
             </div>
           </div>
+
+          <div class="user-type-text" id="user_type_text_student" @if (isset($request) || old('type') != "student") style="display:none" @endif>{!! trans('global.student_graduate') !!}</div>
+          <div class="user-type-text" id="user_type_text_institution" @if (old('type') != "institution") style="display:none" @endif>{!! trans('global.institution_singular') !!}</div>
+          <div class="user-type-text" id="user_type_text_validator" @if (isset($request) || old('type') != "validator") style="display:none" @endif>{!! trans('global.referee_singular') !!}</div>
+          <div class="user-type-text" id="user_type_text_company" @if (isset($request) || old('type') != "company") style="display:none" @endif>{!! trans_choice('global.company', 1) !!}</div>
+
 
           @if ($errors->has('name'))
           <span class="help-block">
@@ -152,15 +156,15 @@
 <script>
 jQuery(document).ready(function() {
   if (jQuery("input#Institution").is(':checked')) {
-      jQuery("input#name").show().attr('required',true);
+    jQuery("input#name").show().attr('required',true);
   }
 
   if (jQuery("input#Validator").is(':checked')) {
-      jQuery("#institution-info").show();
-      jQuery("#institution_name").val(jQuery("#institution").val());
-      jQuery("#institution").attr('required',true);
-      jQuery("input#name").show().attr('required',true);
-      jQuery("input#surname").show().attr('required',true);
+    jQuery("#institution-info").show();
+    jQuery("#institution_name").val(jQuery("#institution").val());
+    jQuery("#institution").attr('required',true);
+    jQuery("input#name").show().attr('required',true);
+    jQuery("input#surname").show().attr('required',true);
   }
 
   jQuery(".user-type input").change(function() {
@@ -181,7 +185,18 @@ jQuery(document).ready(function() {
       jQuery("input#surname").hide().removeAttr('required');
       jQuery("#institution").removeAttr('required');
     }
+    showUserTypeText();
   });
+
+  function showUserTypeText() {
+    $(".user-type-text").hide();
+    if ($(".user-type input:checked").length > 0) {
+      var type = $(".user-type input:checked").attr("id").toLowerCase();
+      $("#user_type_text_" + type).show();
+    }
+  }
+
+  showUserTypeText();
 
   if (jQuery("#institution").val() == "") {
     jQuery("#no-institution").hide();
