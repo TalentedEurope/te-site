@@ -72,6 +72,7 @@ export default {
             }
         });
 
+        $('.initial-loader').hide();
     },
     ready () {
         this.search_text = getUrlParameter('search');
@@ -156,6 +157,7 @@ export default {
 
     .init-loading-box {
         position: absolute;
+        top: 0;
         width: 100%;
         text-align: center;
         padding: 70px;

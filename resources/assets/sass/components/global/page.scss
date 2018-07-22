@@ -82,6 +82,21 @@ hr.separator {
 
 }
 
+
+body.search {
+    .v-container {
+        min-height: 160px;
+    }
+    .initial-loader {
+        position: absolute;
+        margin-top: 57px;
+        left: 50%;
+        font-size: 32px;
+        margin-left: -16px;
+        color: $blue;
+    }
+}
+
 @media (min-width: $screen-sm) {
     .navbar-alt {
         text-align: left;
