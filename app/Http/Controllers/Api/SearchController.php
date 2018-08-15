@@ -109,7 +109,7 @@ class SearchController extends SiteSearchController
             $stsg = StudentTraining::with('student', 'student.user')->search($v->valid()['search_text'], ['name'])->get();
             if (sizeof($stsg)) {
                 foreach ($stsg as $training) {
-                    if ($training->student) {
+                    if ($training->student && $training->student->user) {
                         $userIds[] = $training->student->user->id;
                     }
                 }
