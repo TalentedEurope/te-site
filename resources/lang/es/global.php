@@ -121,7 +121,7 @@ return [
     
         'cookie_accept' => 'cerrar',
     
-        'cookie_link' => ' política de cookies. ',
+        'cookie_link' => 'política de cookies',
     
         'logout_btn' => 'Cerrar Sesión',
     
