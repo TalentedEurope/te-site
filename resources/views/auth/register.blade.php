@@ -17,7 +17,7 @@
       </div>
     @endif
 
-    <div class="well auth-box col-sm-6 col-sm-offset-3  col-md-4 col-md-offset-4">
+    <div class="well auth-box col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
       <form class="form-horizontal" role="form" method="POST"
       @if (isset($request))
       action="{{ url('/register?req_id='.$request->id) }}">
