@@ -17,21 +17,13 @@ return [
     
         'more' => 'en savoir plus',
     
-        'what_is_title' => 'Qu´est-ce que l´Europe des talents?',
+        'what_is_title' => 'Qu´est-ce que le Talented Europe?',
     
         'what_is_cta' => '<strong>Découvrir plus.</strong> Recevoir la brochure.',
     
-        'what_is_text_1' => 'Et si vous aviez l\'opportunité d\'embaucher les meilleurs étudiants d\'Europe?
-
-Etudiants, et si vous aviez la possibilité de faire partie de l\'élite en Europe? 
-
-Des milliers d´entreprises auront accès direct à vos coordonnées. 
-
-Obtenez les meilleurs notes pour accéder à un plus grand choix d\'offres d\'emploi',
+        'what_is_text_1' => 'Souhaitez-vous entrer en contact avec les meilleurs étudiants et entreprises en Europe? Talented Europe est une application multiplateforme spécialement conçue pour mettre en contact des étudiants et des diplômés de différents domaines de l’éducation avec des employeurs ou des institutions à travers l’Europe pour qu’ils puissent trouver l’emploi de leurs rêves.',
     
-        'what_is_text_2' => 'C\'est ce que l\'Europe des talents vous offre.
-
-Une vitrine du classement des meilleurs étudiants en Europe.  Une idée simple qui relie des employeurs et des étudiants. Le point de rencontre de l´excellence.',
+        'what_is_text_2' => 'Grâce a Talented Europe, les entreprises auront un accès direct aux informations de contact et au classement et à l’évaluation des étudiants, ce qui en fait une plate-forme de travail facile à utiliser et un point de rencontre d’excellence.',
     
         'subscribe_title' => 'Abonnez vous et suivez nos actualités',
     
@@ -65,11 +57,17 @@ Une vitrine du classement des meilleurs étudiants en Europe.  Une idée simple 
     
         'no_students' => 'Aucun étudiant disponible',
     
-        'join_talented_europe_today' => 'Rejoignez l\'Europe talentueuse dès aujourd\'hui!',
+        'join_talented_europe_today' => 'Joignez Talented Europe aujourd\'hui!',
     
-        'talented_for_students' => '<strong> Pour les étudiants </strong> - Europe talentueuse améliorera votre employabilité avec l\'aval de vos tuteurs et vous mettra en contact avec les employeurs en Europe pour des stages ou des emplois de première carrière.',
+        'talented_for_students' => '<strong>Pour les étudiants et les diplômés</strong> - encourager la mobilité des étudiants et des diplômés avec tout type de formation pour trouver des stages ou des emplois, promouvoir la qualité et la pertinence de l’enseignement supérieur, améliorer l’employabilité avec l’appui des tuteurs des universités pertinentes.',
     
-        'talented_for_employers' => '<strong> Pour les étudiants </strong> - Europe talentueuse améliorera votre employabilité <strong> Pour les employeurs </strong> - Europe talentueuse vous liera avec de jeunes étudiants talentueux en Europe et vous aidera à trouver la bonne personne qui peut contribuer à l\'organisation de votre entreprise Réussir avec de vrais talents ayant les compétences que vous recherchez.',
+        'talented_for_employers' => '<strong>Pour les employeurs</strong> - en fonction de critères personnels, la capacité à trouver des jeunes à travers l’Europe qui peuvent contribuer à votre équipe avec leur talent et des scores académiques déjà élevés. Les nouveaux membres du personnel peuvent être contactés directement via la plate-forme où les employeurs peuvent consulter leurs informations personnelles telles que les notes, le CV, le classement et l’évaluation, etc.',
+    
+        'talented_for_institutions' => '<strong>Pour les établissements d’enseignement</strong> - privés ou publics, les universités, les centres de formation professionnelle, etc. sont habilités à rejoindre et à renforcer la confiance des étudiants, les aidant ainsi à découvrir leurs talents et à les promouvoir auprès des employeurs. Prenant seulement quelques minutes, les enseignants et les professeurs sont éligibles pour écrire une recommendation courte pour le classement et l’évaluation des étudiants sur la plate-forme.',
+    
+        'what_is_talent_title' => 'Qu\'es-ce qu\'un talent?',
+    
+        'what_is_talent_text' => 'Saviez-vous que nous avons tous des talents bruts? La plupart d’entre nous n’ont pas encore appris à leur sujet, mais en cours de route, nous pouvons les rencontrer. Dans sa définition la plus simple, une compétence peut être apprise grâce à des conseils, et en y consacrant des heures de travail et d’efforts, vous serez en mesure d’aiguiser vos compétences et d’atteindre le plein potentiel pour finalement les transformer en talent. Grâce a Talented Europe, les gens intelligents auront une chance d’impressionner leurs employeurs potentiels, tandis que les employeurs développeront des compétences chez les étudiants talentueux de leur choix.',
     
         'go_to_app' => 'Aller à l\'application',
     

@@ -21,9 +21,9 @@ return [
     
         'what_is_cta' => '<strong>¡Descubre más!</strong> ¡Pide el folleto!',
     
-        'what_is_text_1' => '¿Se imagina la posibilidad de contratar a los mejores estudiantes de cualquier país europeo? ¿Deseas formar parte de los estudiantes europeos de élite? Miles de empresas van a tener acceso directo a información sobre vosotros y cuanto mejor sea la puntuación que obtengáis, más grandes serán vuestras oportunidades de conseguir un trabajo estupendo. ',
+        'what_is_text_1' => '<strong>¿Desean ponerse en contacto con los mejores estudiantes y empresas en Europa?</strong> Talented Europe es una aplicación multiplataforma diseñada especialmente para poner en contacto a <strong>estudiantes universitarios y titulados</strong> de diversos campos de la formación con las <strong>empresas</strong> o <strong>instituciones</strong> de toda Europa para encontrar los trabajos de sus sueños.',
     
-        'what_is_text_2' => 'Es precisamente lo que ofrece Talented Europe. Un escaparate lleno de los mejores estudiantes en Europa. Una idea simple que une a empleadores con estudiantes. El lugar de encuentro de los mejores.',
+        'what_is_text_2' => 'A través de Talented Europe, <strong>las empresas tendrán acceso directo a la información de contacto y evaluación de los estudiantes</strong>, convirtiéndose en una plataforma fácil de usar y en un punto de encuentro por excelencia.',
     
         'subscribe_title' => 'Suscríbete y sigue nuestras actualizaciones.',
     
@@ -57,11 +57,17 @@ return [
     
         'no_students' => 'No hay estudiantes',
     
-        'join_talented_europe_today' => '¡Unéte hoy a Talented Europe!',
+        'join_talented_europe_today' => '¡Unéte a Talented Europe hoy!',
     
-        'talented_for_students' => '<strong>Para estudiantes y graduados</strong> - Talented Europe mejorará la posibilidad de conseguir un empleo con el respaldo de sus tutores y les pondrá en contacto con las empresas y autónomos de toda Europa para encontrar prácticas en empresas o conseguir sus primeros empleos.',
+        'talented_for_students' => '<strong>Para estudiantes y titulados</strong> - El fomento de la movilidad de los estudiantes y titulados con cualquier tipo de formación académica para encontrar prácticas o empleo, el fomento de la calidad y la relevancia de la educación superior, el aumento de la empleabilidad con el respaldo de los tutores de universidades relevantes.',
     
-        'talented_for_employers' => '<strong>Para empresas y autónomos</strong> - Talented Europe los vinculará con jóvenes estudiantes con talento de toda Europa y les ayudará a encontrar a la persona adecuada que puede contribuir al éxito de su organización con el talento y las habilidades especiales que está buscando.',
+        'talented_for_employers' => '<strong>Para empresas</strong> - La posibilidad de encontrar, de acuerdo con sus criterios particulares, a jóvenes de toda Europa que puedan contribuir a su equipo con su talento y alta calificación académica. Posibles nuevos empleados pueden ser contactados directamente a través de la plataforma y las empresas también pueden ver su información personal, como las calificaciones, CV, la evaluación,etc.',
+    
+        'talented_for_institutions' => '<strong>Para instituciones académicas</strong> - Privadas o públicas, las universidades, los centros de formación profesional, etc. pueden unirse y generar confianza en los estudiantes, ayudándoles  a descubrir sus talentos y promocionándolos a las empresas. Los profesores y los profesores titulares, tardando solo un par de minutos, pueden redactar una breve recomendación para una evaluación más alta de los estudiantes en la plataforma.',
+    
+        'what_is_talent_title' => '¿Qué es talento?',
+    
+        'what_is_talent_text' => '<strong>¿Sabíais que todos teníamos talentos originales?</strong> La mayoría de nosotros todavía no ha tenido la oportunidad de descubrirlos, pero a lo largo de nuestro camino los podemos encontrar.En su definición más sencilla, una habilidad se puede aprender y al invertir horas de trabajo y esfuerzo en ella, podemos perfeccionar nuestras habilidades y alcanzar todo el potencial, incluso convertirlas en talento.A través de Talented Europe <strong>las personas listas tendrán la posibilidad de impresionar a sus posibles empleadores, mientras éstos desarrollarán las habilidades de los estudiantes que elijan</strong>.',
     
         'go_to_app' => 'Ir a la aplicación',
     

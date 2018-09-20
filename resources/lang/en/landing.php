@@ -61,7 +61,19 @@ return [
     
         'talented_for_students' => '<strong>For students and graduates</strong> - encouraging mobility of students and post graduates with any type of academic background to find internships or jobs, promoting quality and relevance of higher education, enhancing employability with the endorsement of tutors from relevant universities. ',
     
-        'talented_for_employers' => '<strong>For employers</strong> – According to personal criteria, ability to find youth across Europe that can contribute to your team with their talent and previously demonstrated high ranked academic scores. Possible new staff members can be contacted directly through the platform, as well as the ability to look at their personal information such as grades, CV, endorsement, etc.',
+        'talented_for_employers' => '<strong>For employers</strong> - According to personal criteria, ability to find youth across Europe that can contribute to your team with their talent and previously demonstrated high ranked academic scores. Possible new staff members can be contacted directly through the platform, as well as the ability to look at their personal information such as grades, CV, endorsement, etc.',
+    
+        'talented_for_institutions' => '<strong>For educational Institutions</strong> - Private or public, Universities, Vocational Ed. Training Centres, etc. are eligible to join and build confidence in students, thus helping them discover their talents, and promoting them to employers. Taking only a couple of minutes time, teachers and professors are eligible to write a short endorsement for students’ higher ranking on the platform.',
+    
+        'what_is_talent_title' => 'What is a talent?',
+    
+        'what_is_talent_text' => '<strong>Did you know that we all have raw talents?</strong> Most of us did not have a chance to discover
+them yet, but along the way we might stumble upon them. In its simplest definition, a skill
+can be learned through guidance, and by putting hours of work and effort in it, you will be
+able to sharpen your skills and reach the full potential, eventually turning them into a talent.
+Through Talented Europe, <strong>Talented people will have a chance to display their talents and
+impress their potential employers, whilst employers will build skills in students they
+choose</strong>.',
     
         'go_to_app' => 'Go to application',
     

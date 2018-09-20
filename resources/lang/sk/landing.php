@@ -17,13 +17,13 @@ return [
     
         'more' => 'zisti viac',
     
-        'what_is_title' => 'Čo je to Talented Europe?',
+        'what_is_title' => 'Čo je Talented Europe?',
     
         'what_is_cta' => '<strong>Zisti/te viac!</strong> Vyžiadaj/te si brožúru!',
     
-        'what_is_text_1' => 'Viete si predstaviť možnosť prijať do zamestnania najlepších študentov z ktorejkoľvek európskej krajiny?<strong> Chcete byť súčasťou sektoru elitných európskych študentov? Tisícky spoločností budú mať priamy pístup k informáciám</strong> o vás, a čím lepšie hodnotenie získate, tým väčšie možnosti máte získať skvelú prácu.',
+        'what_is_text_1' => 'Chceli by ste sa dostať do kontaktu s najlepšími študentmi a spoločnosťami v Európe? Talentovaná Európa je multiplatformová aplikácia špeciálne navrhnutá pre skontaktovanie  vysokoškolákov a absolventov rôznych oblastí vzdelávania so zamestnávateľmi alebo inštitúciami v celej Európe, aby  tak našli svoje vysnívané pracovné miesta.',
     
-        'what_is_text_2' => 'Presne to ponúka Talented Europe. Výklad plný najlepších študentov v Európe. Jednoduchú myšlienku, ktorá spája zamestnávateľov a študentov. Miesto stretnutia tých najlepších .',
+        'what_is_text_2' => 'Prostredníctvom TalentedEurope budú mať spoločnosti priamy prístup ku kontaktným informáciám a hodnoteniu študentov, čím sa stanú ľahko použiteľnou pracovnou platformou a miestom na stretnutie s dokonalosťou.',
     
         'subscribe_title' => 'Zaregistruj sa a sleduj naše  novinky.',
     
@@ -57,11 +57,17 @@ return [
     
         'no_students' => 'Inga studenter tillgängliga',
     
-        'join_talented_europe_today' => 'Pridajte sa k Talented Europe už dnes!',
+        'join_talented_europe_today' => 'Pridaj sa k Talented Europe ešte dnes!',
     
-        'talented_for_students' => '<strong>Pre študentov</strong> Talented Europe zvýši vašu zamestnateľnosť pomocou schválenia od vašich vyučujúcich a umožní vám kontakt so zamestnávateľmi v celej Európe pre možnosti stáže alebo prvej pracovnej príležitosti.',
+        'talented_for_students' => '<strong>Pre študentov a absolventov</strong> - podpora mobility študentov a postgraduálnych študentov z akéhokoľvek akademickéhoprostrediapre hľadanie stáží alebo pracovných miest, podpora kvality a relevantnosti vysokoškolského vzdelávania, zvýšenie zamestnateľnosti s odobrenímpedagógov z príslušných univerzít.',
     
-        'talented_for_employers' => '<strong>Pre zamestnávateľov</strong> Talented Europe vás spojí s talentovanými mladými študentmi v celej Európe a pomôže vám nájsť správneho človeka, ktorý napomôže úspechu vašej organizácie svojimi špeciálnymi zručnosťami a nadaním, ktoré hľadáte.',
+        'talented_for_employers' => '<strong>Pre zamestnávateľov</strong> - možnosť nájsť na základe osobných kritérií mladých ľudí v celej Európe, ktorí svojím talentom môžu byť prínosom pre váš tím a preukázali vysoko hodnotené akademické výsledky. Perspektívnych nových zamestnancov možno kontaktovať priamo prostredníctvom platformy, a tiež pozrieť si ich osobné údaje, ako sú známky, životopis, hodnotenie atď.',
+    
+        'talented_for_institutions' => '<strong>Pre vzdelávacie inštitúcie</strong> - súkromné alebo verejné, univerzity, odborné školy,a pod. sú oprávnené zapojiť sa a budovať u študentov sebavedomie, čím im pomáhajú objaviť ich talenty a propagovať ich pre zamestnávateľov. Učitelia a profesori sú oprávnenínapísať krátke odporúčanie pre vyššie hodnotenie študentov na platforme a zaberie to len pár minút času.',
+    
+        'what_is_talent_title' => 'Čo je talent?',
+    
+        'what_is_talent_text' => '<strong>Vedeli ste, že všetci máme nejaké prvotné talenty?</strong> Väčšina z nás nemala šancu ich objaviť, ale na našej ceste na nich môžeme naraziť. Podľa najjednoduchšej definície sa zručnosť môže dať naučiť pomocou usmernenia, a vďaka usilovnejprácihodiny a hodiny potomdokážete zdokonaliť svoje zručnosti, dosiahnuť plný potenciál, a nakoniec ich zmeniť na talent. Prostredníctvom TalentedEurope <strong>budú mať talentovaní ľudia šancu ukázať svoj potenciál a zapôsobiť na svojich možných zamestnávateľov, zatiaľ čo zamestnávatelia budú budovať zručnosti v študentoch, ktorých si vyberú</strong>.',
     
         'go_to_app' => 'Prejdi na aplikáciu',
     

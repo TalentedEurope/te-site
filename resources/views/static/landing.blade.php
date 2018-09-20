@@ -193,8 +193,12 @@
           <div class="text-center col-md-12">
             <a class="btn btn-register" href="{{ URL::to('/register') }}">{!! trans('global.register_btn') !!}</a>
           </div>
-          <p class="col-md-6 text-justify">{!! trans('landing.talented_for_students') !!}</p>
-          <p class="col-md-6 text-justify">{!! trans('landing.talented_for_employers') !!}</p>
+          <p class="col-md-4 text-justify">{!! trans('landing.talented_for_students') !!}</p>
+          <p class="col-md-4 text-justify">{!! trans('landing.talented_for_employers') !!}</p>
+          <p class="col-md-4 text-justify">{!! trans('landing.talented_for_institutions') !!}</p>
+
+          <h3 class="text-center col-md-12">{!! trans('landing.what_is_talent_title') !!}</h3>
+          <p class="col-md-12 text-justify">{!! trans('landing.what_is_talent_text') !!}</p>
 
           <h3 class="text-center col-md-12">{!! trans('landing.what_is_cta') !!}</h3>
           <div class="text-center col-md-12">
