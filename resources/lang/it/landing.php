@@ -78,4 +78,6 @@ return [
     
         'download_app' => 'Scarica l\'applicazione',
     
+        'presentation_of_project' => 'Presentazione del progetto',
+    
 ];

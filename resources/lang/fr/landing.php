@@ -85,4 +85,6 @@ Une vitrine du classement des meilleurs étudiants en Europe.  Une idée simple 
     
         'download_app' => 'Télécharger l\'application',
     
+        'presentation_of_project' => 'Présentation du projet',
+    
 ];

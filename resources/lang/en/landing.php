@@ -83,4 +83,6 @@ choose</strong>.',
     
         'download_app' => 'Download the app',
     
+        'presentation_of_project' => 'Presentation of project',
+    
 ];

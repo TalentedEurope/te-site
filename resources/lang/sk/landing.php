@@ -77,4 +77,6 @@ return [
     
         'download_app' => 'Stiahnite si aplikáciu',
     
+        'presentation_of_project' => 'Predstavenie projektu',
+    
 ];

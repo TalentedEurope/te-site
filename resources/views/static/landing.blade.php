@@ -202,19 +202,26 @@
 
           <h3 class="text-center col-md-12">{!! trans('landing.what_is_cta') !!}</h3>
           <div class="text-center col-md-12">
-            <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureC.pdf') }}" target="_blank" class="btn" onclick="ga('send', 'event', 'Brochure Company', 'Download', '{{ App::getLocale() }}');">
+            <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureC.pdf') }}" target="_blank" class="btn btn-download" onclick="ga('send', 'event', 'Brochure Company', 'Download', '{{ App::getLocale() }}');">
               <i class="fi flaticon-cloud-download"></i>
                 {!! trans_choice('global.company', 1) !!}
             </a>
-            <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureI.pdf') }}" target="_blank" class="btn" onclick="ga('send', 'event', 'Brochure Institution', 'Download', '{{ App::getLocale() }}');">
+            <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureI.pdf') }}" target="_blank" class="btn btn-download" onclick="ga('send', 'event', 'Brochure Institution', 'Download', '{{ App::getLocale() }}');">
               <i class="fi flaticon-cloud-download"></i>
                 {!! trans('global.institution_singular') !!}
             </a>
-            <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureS.pdf') }}" target="_blank" class="btn" onclick="ga('send', 'event', 'Brochure Student', 'Download', '{{ App::getLocale() }}');">
+            <a href="{{ URL::asset('docs/'.App::getLocale().'/TalentedEuropeBrochureS.pdf') }}" target="_blank" class="btn btn-download" onclick="ga('send', 'event', 'Brochure Student', 'Download', '{{ App::getLocale() }}');">
               <i class="fi flaticon-cloud-download"></i>
                 {!! trans_choice('global.student', 1) !!}
             </a>
           </div>
+          <div class="text-center col-md-12">
+            <a href="https://prezi.com/p/z_stab-qk2nh/" target="_blank" class="btn btn-download" onclick="ga('send', 'event', 'Presentation of Project', 'Download', '{{ App::getLocale() }}');">
+              <i class="fi flaticon-cloud-download"></i>
+                {!! trans('landing.presentation_of_project') !!}
+            </a>
+          </div>
+
           <h3 class="text-center col-md-12">{!! trans('landing.download_app') !!}</h3>
           <div class="text-center col-md-12">
             <a href='https://play.google.com/store/apps/details?id=eu.talentedeurope.app&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img class="app-badge" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>

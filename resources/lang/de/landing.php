@@ -77,4 +77,6 @@ return [
     
         'download_app' => 'Laden Sie die App',
     
+        'presentation_of_project' => 'Präsentation des Projekts',
+    
 ];
