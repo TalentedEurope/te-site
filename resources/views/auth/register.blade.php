@@ -26,6 +26,22 @@
       @endif
         {!! csrf_field() !!}
         <h2 class="page-title">{!! trans('register.register') !!}</h2>
+
+        <div class="social-auth-box">
+          <p>
+            <a href="{{ url('/auth/facebook') }}" class="btn btn-default">
+              <i class="fa fa-facebook"></i> {{ trans('global.register_fb') }}
+            </a>
+          </p>
+          <p>
+            <a href="{{ url('/auth/twitter') }}" class="btn btn-default">
+              <i class="fa fa-twitter"></i> {{ trans('global.register_tw') }}
+            </a>
+          </p>
+
+          <h2> {{ trans('global.or') }}</h2>
+        </div>
+
         @if ($errors->count())
           <div class="alert alert-danger" role="alert">
             {!! trans('register.there_have_been_some_errors') !!}
@@ -158,15 +174,6 @@
           <button type="submit" class="btn btn-primary">
             {!! trans('global.register_btn') !!}
           </button>
-
-          <div class="form-group">
-              <h2> {{ trans('global.or') }}</h2>
-              <div class="col-sm-12">
-                  <p><a href="{{ url('/auth/facebook') }}" class="btn btn-default"><i class="fa fa-facebook"></i> {{ trans('global.register_fb') }} </a></p>
-
-                  <p><a href="{{ url('/auth/twitter') }}" class="btn btn-default"><i class="fa fa-twitter"></i> {{ trans('global.register_tw') }}</a></p>
-              </div>
-          </div>
         </div>
       </form>
       <div>
