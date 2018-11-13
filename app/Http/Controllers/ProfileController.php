@@ -863,7 +863,7 @@ class ProfileController extends Controller
         $studyFields = array();
         $languageLevels = array();
         $languages = array();
-        $nationalities = array();
+        $nationalities = array();        
         foreach (StudentLanguage::$languages as $key => $item) {
             $languages[$key] = $item['name'];
         }
@@ -883,7 +883,7 @@ class ProfileController extends Controller
 
         $data = array(
             'user' => $user,
-            'countries' => User::$countries,
+            'countries' => $this->getTranslatedCountries(),
             'nationalities' => $nationalities,
             'studyLevels' => $studyLevels,
             'studyFields' => $studyFields,
@@ -927,7 +927,7 @@ class ProfileController extends Controller
         $data = array(
             'user' => $user,
             'activities' => $activities,
-            'countries' => User::$countries,
+            'countries' => $this->getTranslatedCountries(),
             'personalSkills' => PersonalSkill::getFormattedArray()
         );
         if ($user->userable) {
@@ -944,7 +944,7 @@ class ProfileController extends Controller
     {
         $countries = array();
         foreach (Student::$nationalities as $value) {
-            $countries[$value] = User::$countries[$value];
+            $countries[$value] = $this->getTranslatedCountries()[$value];
         }
 
         $data = array(
@@ -1030,6 +1030,15 @@ class ProfileController extends Controller
             return response()->download(public_path().Student::$studyCertificatePath.$user->userable->languages()->find($studyId)->certificate);
         }
         App::abort(403, trans('error-page.unauthorized_action'));
+    }
+
+    private function getTranslatedCountries() {
+        // Todo: cache this
+        $countries = User::$countries;
+        foreach ($countries as $code => $country) {
+            $countries[$code] = trans('global.' . $code);
+        }
+        return $countries;
     }
 
     private function formatRelatedErrors($errors, $mainKey, $subKey)

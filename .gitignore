@@ -12,6 +12,7 @@ clamp.json
 /public/css
 /public/js
 /public/*/slick-carousel/*
+/node/
 .DS_Store
 translation-settings.json
 
