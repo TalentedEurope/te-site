@@ -65,9 +65,12 @@ class SearchController extends SiteSearchController
         }
 
         if (isset($v->valid()['languages'])) {
-            $results->whereHas('languages', function ($q) use ($v) {
-                $q->whereIn('name', $v->valid()['languages']);
-            });
+            foreach ($v->valid()['languages'] as $lang) {
+                $results->whereHas('languages', function ($q) use ($v, $lang) {
+                    $q->where('name', $lang);
+                });
+            }
+
         }
 
         if (isset($v->valid()['activities'])) {
