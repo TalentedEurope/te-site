@@ -183,4 +183,14 @@ class User extends Authenticatable
     {
         return $this->push_id;
     }
+
+    public function delete()
+    {
+       $res=parent::delete();
+       if($res==true)
+       {
+                $userable = $this->userable; 
+                $userable->delete();
+        }
+    }
 }
