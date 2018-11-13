@@ -41,8 +41,8 @@ class Student extends Model
         );
 
         $filterRelated = array(
-            'studies.*.institution_name' => 'sometimes|required|regex:/^[\pL\s\-\,\.]+$/u',
-            'studies.*.name' => 'sometimes|required|regex:/^[\pL\s\-\,\.]+$/u',
+            'studies.*.institution_name' => 'sometimes|required',
+            'studies.*.name' => 'sometimes|required',
             'studies.*.level' => 'sometimes|required|in:'.implode(',', StudentStudy::$levels),
             'studies.*.field' => 'sometimes|required|in:'.implode(',', StudentStudy::$fields),
             'studies.*.certificate' => 'mimes:pdf',
@@ -143,8 +143,8 @@ class Student extends Model
     {
         $relatedRules = array(
             'studies' => array(
-                'institution_name' => 'required|regex:/^[\pL\s\-\,\.]+$/u',
-                'name' => 'required|regex:/^[\pL\s\-\,\.]+$/u',
+                'institution_name' => 'required',
+                'name' => 'required',
                 'level' => 'required|in:'.implode(',', StudentStudy::$levels),
                 'field' => 'required|in:'.implode(',', StudentStudy::$fields),
                 'certificate' => 'mimes:pdf',
@@ -152,7 +152,7 @@ class Student extends Model
             ),
 
             'trainings' => array (
-                'name' => 'required|regex:/^[\pL\s\-\,\.]+$/u',
+                'name' => 'required',
                 'date' => 'required|date',
                 'certificate' => 'mimes:pdf',
             ),
@@ -168,7 +168,7 @@ class Student extends Model
             ),
 
             'experiences' => array (
-                'company' =>  'required|regex:/^[\pL\s\-\,\.]+$/u',
+                'company' =>  'required',
                 'from' =>  'required|date',
                 'until' =>  'date',
                 'position' =>  'required|regex:/^[\pL\s\-\,\.]+$/u',
