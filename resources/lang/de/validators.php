@@ -45,7 +45,7 @@ return [
     
         'give_us_explanation_of_student_is_not_valid' => 'Bitte erläutern Sie, warum das Profil des Studenten ungültig ist.',
     
-        'note_if_validation_is_passed_as_no_student' => 'Wenn die Bewertung als "kein Student" endet, kann das Profil des Studenten nochmals bewertet werden.',
+        'note_if_validation_is_passed_as_no_student' => 'Wenn die Bewertung als "Der Student besuchte diese Schule/Institution nicht" endet, kann das Profil des Studenten nochmals bewertet werden.',
     
         'user_hasnt_complete_filling_its_profile' => 'Das Profil ist nicht vollständig. Wenn das Profil nicht komplett ist, können Sie keine Studenten bewerten.',
     

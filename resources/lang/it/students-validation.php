@@ -21,6 +21,6 @@ return [
     
         'criteria' => 'Lo studente non soddisfa i requisiti.',
     
-        'nostudent' => 'Lo studente non ha frequentato  questa scuola/istituzione.',
+        'nostudent' => 'Lo studente non ha frequentato questa scuola/istituzione',
     
 ];

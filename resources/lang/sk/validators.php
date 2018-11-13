@@ -45,7 +45,7 @@ return [
     
         'give_us_explanation_of_student_is_not_valid' => 'Prosím vysvetlite, prečo je študentov profil neplatný.',
     
-        'note_if_validation_is_passed_as_no_student' => 'Ak je hodnotenie ukončené ako "žiaden študent", študentov profil bude môcť byť hodnotený znovu .',
+        'note_if_validation_is_passed_as_no_student' => 'Ak je hodnotenie ukončené ako "Študent nenavštevoval túto školu/inštitúciu", študentov profil bude môcť byť hodnotený znovu .',
     
         'user_hasnt_complete_filling_its_profile' => 'Neukončený profil. Ak je profil nekompletný, nemožno hodnotiť žiadneho študenta.',
     

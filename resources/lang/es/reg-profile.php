@@ -345,7 +345,7 @@ return [
     
         'we_are_in' => 'Estamos en',
     
-        'we_are_looking_for_people_skilled_in' => 'Estamos buscando personas con habilidades en',
+        'we_are_looking_for_people_skilled_in' => 'Las habilidades personales más valoradas por la empresa son',
     
         'we_think_that_talent_is' => 'Creemos que el talento es',
     

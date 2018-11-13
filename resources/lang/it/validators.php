@@ -45,7 +45,7 @@ return [
     
         'give_us_explanation_of_student_is_not_valid' => 'Per favore, fornisci una spiegazione del motivo per cui lo/la studente/ssa non é valido/a',
     
-        'note_if_validation_is_passed_as_no_student' => 'Nota: se la vidimazione ha come esito "Nessun studente" lo studente avrá la possibilitá di far vidimare il suo profilo di nuovo',
+        'note_if_validation_is_passed_as_no_student' => 'Nota: se la vidimazione ha come esito "Lo studente non ha frequentato questa scuola/istituzione" lo studente avrá la possibilitá di far vidimare il suo profilo di nuovo',
     
         'user_hasnt_complete_filling_its_profile' => 'L\'usuario non ha completato la compilazione del profilo. Fino a quando questo processo non é completo non é possibile vidimare gli studenti.',
     

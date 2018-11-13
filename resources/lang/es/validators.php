@@ -45,7 +45,7 @@ return [
     
         'give_us_explanation_of_student_is_not_valid' => 'Por favor, proporciona un motivo por el que el/la estudiante no es válido',
     
-        'note_if_validation_is_passed_as_no_student' => 'Nota: Si la validación se concluye como "Ningún estudiante" el estudiante podrá validar su perfil otra vez.',
+        'note_if_validation_is_passed_as_no_student' => 'Nota: Si la validación se concluye como "Estudiante que no ha asistido a esta institución académica" el estudiante podrá validar su perfil otra vez.',
     
         'user_hasnt_complete_filling_its_profile' => 'Perfil no acabado. Si el perfil no está completo, no se puede validar a ningún estudiante. ',
     

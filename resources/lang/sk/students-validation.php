@@ -21,6 +21,6 @@ return [
     
         'criteria' => 'Študent nespĺňa kritériá.',
     
-        'nostudent' => 'Študent nenavštevoval túto školu/inštitúciu.  ',
+        'nostudent' => 'Študent nenavštevoval túto školu/inštitúciu',
     
 ];

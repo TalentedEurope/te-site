@@ -345,7 +345,7 @@ return [
     
         'we_are_in' => 'We are in',
     
-        'we_are_looking_for_people_skilled_in' => 'We\'re looking for people skilled in',
+        'we_are_looking_for_people_skilled_in' => 'Our most valued personal skills are',
     
         'we_think_that_talent_is' => 'We think that talent is',
     

@@ -45,7 +45,7 @@ return [
     
         'give_us_explanation_of_student_is_not_valid' => 'Veuillez nous donnez une explication de la raison pour laquelle l\'élève n\'est pas valide.',
     
-        'note_if_validation_is_passed_as_no_student' => 'Note: Si la validation est passée comme "Aucun étudiant", l\'étudiant sera en mesure de valider son profil à nouveau.',
+        'note_if_validation_is_passed_as_no_student' => 'Note: Si la validation est passée comme "L\'étudiant n\'a pas étudié dans cette institution", l\'étudiant sera en mesure de valider son profil à nouveau.',
     
         'user_hasnt_complete_filling_its_profile' => 'Profil inachevé. Jusqu\'à ce que ce processus soit terminé, vous ne pouvez pas valider un étudiant',
     
