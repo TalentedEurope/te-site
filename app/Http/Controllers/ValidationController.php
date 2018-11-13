@@ -124,6 +124,7 @@ class ValidationController extends Controller
             }
             $res[] = $val;
         }
+        $res = array_reverse($res);
         return $res;
     }
 }
