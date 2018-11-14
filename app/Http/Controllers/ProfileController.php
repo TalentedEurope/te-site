@@ -18,7 +18,6 @@ use App\Notifications\ValidatorRequested;
 use App\Notifications\StudentVisited;
 use App\Models\Alert;
 use Carbon\Carbon;
-
 use App\Http\Controllers\Api\LoginController;
 use App;
 use Auth;
@@ -60,6 +59,7 @@ class ProfileController extends Controller
             }
 
             $data['profileErrors'] = array();
+
             foreach ($errors->errors()->messages() as $error) {
                 if (!in_array($error, $data['profileErrors'])) {
                     $data['profileErrors'][] = $error;
@@ -120,8 +120,10 @@ class ProfileController extends Controller
             $data['validationReqDate'] = $validationReqDate;
 
             $errors = Validator::make($user->toArray(), User::Rules(false, true));
+            $errors->setAttributeNames(User::niceNames());
             if ($user->isA('student')) {
                 $filledVal = Validator::make($user->userable->toArray(), Student::Rules(true));
+                $filledVal->setAttributeNames(Student::niceNames());
                 $errors->errors()->merge($filledVal);
             }
             $data['fillRate'] = $user->userable->fillRate();
