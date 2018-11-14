@@ -8,12 +8,8 @@
     <div class="well auth-box col-sm-6 col-sm-offset-3  col-md-4 col-md-offset-4">
       <h2>{!! trans('register.thank_you_for_signing_up') !!}</h2>
 
-      @if ($type == "validator")
-      <p>{!! trans('register.registration_complete_successfully') !!}</p>
-      @else
       <p>{!! trans('register.you_will_receive_an_email') !!}</p>
       <p>{!! trans('register.confirmation_email_may_take_few_minutes') !!}</p>
-      @endif
 
       <p>
         <a href="{{ url('/') }}" class="btn btn-primary">
