@@ -29,6 +29,11 @@
 
         <div class="social-auth-box">
           <p>
+                <a href="{{ url('/auth/google') }}" class="btn btn-default">
+                <i class="fa fa-google-plus"></i> {{ trans('global.register_google') }}
+                </a>
+          </p>
+          <p>
             <a href="{{ url('/auth/facebook') }}" class="btn btn-default">
               <i class="fa fa-facebook"></i> {{ trans('global.register_fb') }}
             </a>

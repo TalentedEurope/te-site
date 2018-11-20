@@ -605,6 +605,10 @@ return [
     
         'login_fb' => 'Einloggen mit Facebook',
     
+        'register_google' => 'Registrieren per Twitter',
+    
+        'login_google' => 'Einloggen mit Facebook',
+    
         'login_tw' => 'Einloggen mit Twitter',
     
         'about_us' => 'About us',

@@ -605,6 +605,10 @@ return [
     
         'login_fb' => 'Prihlásenie cez Facebook',
     
+        'register_google' => 'Zaregistrujte sa pomocou Google',
+    
+        'login_google' => 'Prihlásiť sa pomocou Google',
+    
         'login_tw' => 'Prihlásiť pomocou Twitter',
     
         'about_us' => 'About us',

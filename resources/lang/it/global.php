@@ -605,6 +605,10 @@ return [
     
         'login_fb' => 'Accedi utilizzando Facebook',
     
+        'register_google' => 'L\'iscrizione avviene tramite Google',
+    
+        'login_google' => 'Accedi utilizzando Google',
+    
         'login_tw' => 'Accedi usando Twitter',
     
         'about_us' => 'About us',

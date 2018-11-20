@@ -606,6 +606,10 @@ return [
     
         'login_fb' => 'Connexion avec Facebook',
     
+        'register_google' => 'Inscrivez-vous avec Google',
+    
+        'login_google' => 'Connectez-vous avec Google',
+    
         'login_tw' => 'Connectez-vous en utilisant Twitter',
     
         'about_us' => 'About us',
