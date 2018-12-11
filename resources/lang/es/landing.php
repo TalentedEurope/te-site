@@ -21,9 +21,9 @@ return [
     
         'what_is_cta' => '<strong>¡Descubre más!</strong> ¡Pide el folleto!',
     
-        'what_is_text_1' => '<strong>¿Desean ponerse en contacto con los mejores estudiantes y empresas en Europa?</strong> Talented Europe es una aplicación multiplataforma diseñada especialmente para poner en contacto a <strong>estudiantes universitarios y titulados</strong> de diversos campos de la formación con las <strong>empresas</strong> o <strong>instituciones</strong> de toda Europa para encontrar los trabajos de sus sueños.',
+        'what_is_text_1' => '¿Estas buscando un nuevo talento? ¿Eres estudiante o acabaste tu ciclo educativo hace poco?  Talented Europe es una plataforma diseñada especialmente para poner en contacto a estudiantes titulados con empresas de toda Europa.',
     
-        'what_is_text_2' => 'A través de Talented Europe, <strong>las empresas tendrán acceso directo a la información de contacto y evaluación de los estudiantes</strong>, convirtiéndose en una plataforma fácil de usar y en un punto de encuentro por excelencia.',
+        'what_is_text_2' => 'A través de Talented Europe, las empresas tendrán acceso directo a la información de contacto y evaluación de talento de los estudiantes, convirtiéndose en una plataforma fácil de usar y en un punto de encuentro por excelencia.',
     
         'subscribe_title' => 'Suscríbete y sigue nuestras actualizaciones.',
     

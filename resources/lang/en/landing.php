@@ -21,7 +21,7 @@ return [
     
         'what_is_cta' => '<strong>Discover more!</strong> Get the brochure',
     
-        'what_is_text_1' => '<strong>Would you like to get in touch with best students and companies in Europe?</strong> Talented Europe is a multi platform application specifically designed to put <strong>undergraduates</strong> and <strong>graduates</strong> from various fields of education in touch with <strong>employers or institutions</strong> across Europe to find their dream jobs. ',
+        'what_is_text_1' => 'Are you looking for new talent for your company? Are you a student or ended your studies a while ago? Talented Europe is a platform specially designed to connect students with companies from all Europe.',
     
         'what_is_text_2' => 'Through Talented Europe, <strong>companies will have direct access to students’ contact information and ranking</strong>, making it an easy to use job platform, and a meeting point of excellence. ',
     
