@@ -602,4 +602,8 @@ Obchodná a poradenská činnosť',
     
         'thanks_gdpr' => 'Nastavenie oznámenia boli aktualizované. <br/> Vďaka!',
     
+        'we_are_ngo' => 'Sme mimovládne organizácie',
+    
+        'ngo' => 'Mimovládna organizácia',
+    
 ];

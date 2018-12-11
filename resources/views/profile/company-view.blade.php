@@ -27,6 +27,7 @@
       <div class="well">
         <h3 class="section-title"> <i class="fa fa-info" aria-hidden="true"></i> {!! trans('reg-profile.about') !!}</h3>
         <ul class="student-specs">
+        @if ($company->is_ngo) <li><strong>{{ trans('reg_profile.we_are_ngo') }}</strong></li> @endif
         <li><strong><i class="icon fa fa-map-marker"></i> {!! trans('reg-profile.we_are_in') !!}: </strong> {{ $user->city }}
         @if ($user->country) , <em>{{ trans('global.'.$user->country) }}</em></li> @endif
         @if ($company->personalSkills->count())

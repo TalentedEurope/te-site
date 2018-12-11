@@ -71,7 +71,7 @@ return [
     
         'regards' => 'Cordialement',
     
-        'disclaimer_plain' => 'AVERTISSEMENT: Ce message est destiné exclusivement à son adresse et peut contenir des informations confidentielles et protégées par le secret professionnel. Si vous n\'êtes pas le destinataire nous vous informons que toute diffusion, copie ou la divulgation de cette communication est strictement interdite par la loi. Si ce message a été reçu par erreur, s\'il vous plaît nous en informer immédiatement par e-mail à% s et le supprimer.',
+        'disclaimer_plain' => 'AVERTISSEMENT: Ce message est destiné exclusivement à son adresse et peut contenir des informations confidentielles et protégées par le secret professionnel. Si vous n\'êtes pas le destinataire nous vous informons que toute diffusion, copie ou la divulgation de cette communication est strictement interdite par la loi. Si ce message a été reçu par erreur, s\'il vous plaît nous en aviser immédiatement par e-mail à% s et supprimer.',
     
         'profile_not_filled_subject' => 'Votre profil est pas complet',
     

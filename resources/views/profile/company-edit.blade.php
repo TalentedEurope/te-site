@@ -83,6 +83,13 @@
                   value="{{ old('activity', $company->activity) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></select-form>
 
+
+              <div class="form-group">
+                <div class="checkbox">                
+                  <label><input type="checkbox" name="is_ngo" @if (old('is_ngo', $company->is_ngo)) checked @endif  >{!! trans('reg-profile.ngo') !!}</label>
+                </div>
+              </div>
+
               <div class="form-group @if ($errors->has('image')) alert alert-danger   @endif  ">
                 @if ($errors->has('image'))
                 <span class="help-block">

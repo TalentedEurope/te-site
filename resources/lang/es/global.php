@@ -605,7 +605,7 @@ return [
     
         'login_fb' => 'Acceder con Facebook',
     
-        'register_google' => 'Registrarse usando Twitter',
+        'register_google' => 'Registrarse usando Google',
     
         'login_google' => 'Acceder con Google',
     

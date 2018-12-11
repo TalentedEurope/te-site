@@ -348,6 +348,11 @@ class ProfileController extends Controller
             $company->personalSkills()->detach();
         }
 
+        if ($request->input('is_ngo') == "on") {
+            $company->is_ngo = true;
+        } else {
+            $company->is_ngo = false;
+        }
 
         $user->is_filled = false;
         $uFilledVal = Validator::make($user->toArray(), User::Rules(false, true));

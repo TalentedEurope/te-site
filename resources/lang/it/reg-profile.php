@@ -605,4 +605,8 @@ dati).',
     
         'thanks_gdpr' => 'Le impostazioni di notifica sono state aggiornate. <br/> Grazie!',
     
+        'we_are_ngo' => 'Siamo un\'organizzazione non governativa',
+    
+        'ngo' => 'Organizzazione non governativa',
+    
 ];

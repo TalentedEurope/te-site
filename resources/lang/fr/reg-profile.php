@@ -610,4 +610,8 @@ Sur',
     
         'thanks_gdpr' => 'Vos paramètres de notification ont été mis à jour. <br/> Merci!',
     
+        'we_are_ngo' => 'Nous sommes une organisation non gouvernementale',
+    
+        'ngo' => 'Organisation non gouvernementale',
+    
 ];

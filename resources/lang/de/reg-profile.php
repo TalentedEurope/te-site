@@ -601,4 +601,8 @@ return [
     
         'thanks_gdpr' => 'Ihre Benachrichtigungseinstellungen aktualisiert wurden. <br/> Dank!',
     
+        'we_are_ngo' => 'Wir sind eine Nichtregierungsorganisation',
+    
+        'ngo' => 'Nicht-staatliche Organisation',
+    
 ];
