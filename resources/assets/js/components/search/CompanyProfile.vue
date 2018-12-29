@@ -22,6 +22,10 @@
                     {{company.talent_is}}
                 </p>
 
+                <p class="jobOffers" v-if="company.job_offers">
+                    <strong><i class="fa fa-file-text-o"></i> {{company.job_offers}} {{ $t('reg-profile.job_offers') }}</strong>
+                </p>
+
                 <alert-button :company-id="company.id" :alertable="company.alertable" placement="right"></alert-button>
 
             </div>
@@ -82,6 +86,13 @@ export default {
 }
 .view-more {
     margin-top: 15px;
+}
+
+p.jobOffers {
+    display: inline-block;
+    background: #2f70b1;
+    color: #fff;
+    padding: 5px 20px;    
 }
 
 @media (min-width: 768px) {

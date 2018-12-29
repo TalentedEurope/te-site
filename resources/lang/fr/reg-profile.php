@@ -614,4 +614,16 @@ Sur',
     
         'ngo' => 'Organisation non gouvernementale',
     
+        'job_offers' => 'Offres d\'emplois',
+    
+        'has_job_offers' => 'A offres d\'emploi',
+    
+        'offer' => 'Offre d\'emploi',
+    
+        'offer_title' => 'Titre',
+    
+        'offer_describe_description' => 'Écrivez la description de l\'offre d\'emploi',
+    
+        'offer_description' => 'La description',
+    
 ];

@@ -44,6 +44,7 @@ import DateForm from './components/profile/common/DateForm.vue';
 import BirthdateForm from './components/profile/student/BirthdateForm.vue';
 import ProfessionalSkills from './components/profile/student/ProfessionalSkills.vue';
 import Studies from './components/profile/student/Studies.vue';
+import Offers from './components/profile/company/Offers.vue';
 import Trainings from './components/profile/student/Trainings.vue';
 import Languages from './components/profile/student/Languages.vue';
 import Experiences from './components/profile/student/Experiences.vue';
@@ -62,7 +63,7 @@ if (document.querySelector('.v-container')) {
         components: {
             Search, Alerts, Validators, StudentsValidation,
             SelectForm, TextAreaForm, TextBoxForm, PersonalSkillsForm, FileForm, DateForm, BirthdateForm,
-            ProfessionalSkills, Studies, Trainings, Languages, Experiences, RequestValidation,
+            ProfessionalSkills, Studies, Offers, Trainings, Languages, Experiences, RequestValidation,
             RemoveAccount, AlertButton },
     })
 }

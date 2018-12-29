@@ -24,6 +24,7 @@
           <li class="active"><a data-target="#_profile" data-toggle="tab">{!! trans('reg-profile.profile') !!}</a></li>
           <li><a data-target="#_contact" data-toggle="tab">{!! trans('reg-profile.company_contact_person') !!}</a></li>
           <li><a data-target="#_change-password" data-toggle="tab">{!! trans('reg-profile.change_your_password') !!}</a></li>
+          <li><a data-target="#_job-offers" data-toggle="tab">{!! trans('reg-profile.job_offers') !!}</a></li>
         </ul>
         <div id="profileTab" class="tab-content well">
           <div class="tab-pane active in" id="_profile">
@@ -207,6 +208,17 @@
               <button type="submit" class="btn btn-primary">{!! trans('reg-profile.save_new_password') !!}</button>
             </form>
           </div>
+          <div class="tab-pane fade" id="_job-offers">            
+            <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#job-offers' }}">
+              {{ csrf_field() }}              
+              <offers offers='{!! json_encode($company->jobOffers, JSON_HEX_APOS) !!}'
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'
+                  user-id="{{ Auth::user()->id }}"></offers>
+              <hr>
+              <button type="submit" class="btn btn-primary">{!! trans('reg-profile.update_settings') !!}</button>
+            </form>
+          </div>
+
           <!-- End of content -->
         </div>
       </div>

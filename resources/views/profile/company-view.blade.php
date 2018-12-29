@@ -27,7 +27,7 @@
       <div class="well">
         <h3 class="section-title"> <i class="fa fa-info" aria-hidden="true"></i> {!! trans('reg-profile.about') !!}</h3>
         <ul class="student-specs">
-        @if ($company->is_ngo) <li><strong>{{ trans('reg_profile.we_are_ngo') }}</strong></li> @endif
+        @if ($company->is_ngo) <li><strong>{{ trans('reg-profile.we_are_ngo') }}</strong></li> @endif
         <li><strong><i class="icon fa fa-map-marker"></i> {!! trans('reg-profile.we_are_in') !!}: </strong> {{ $user->city }}
         @if ($user->country) , <em>{{ trans('global.'.$user->country) }}</em></li> @endif
         @if ($company->personalSkills->count())
@@ -44,7 +44,24 @@
         @endif
         </ul>
       </div>
-
+      @if ($company->jobOffers)
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="well">
+                <h2>{{ trans('reg-profile.job_offers') }}</h2>
+              </div>
+            </div>
+            <br/>
+            @foreach ($company->jobOffers as $offer)
+              <div class="col-xs-12 col-md-6">
+                <div class="well">
+                  <h3>{{ $offer->title }}</h3>
+                  <p>{{ $offer->description }}</p>
+                </div>
+              </div>
+            @endforeach
+          </div>        
+        @endif
     </div>
 
     <div class="col-xs-12 col-sm-4 col-md-3 sm-no-padding-right text-center contact-info">
@@ -106,6 +123,7 @@
             </ul>
 
           </div>
+
         @if (Auth::user() && $company->isAlertableBy(Auth::user()))
           <hr>
           <!-- TODO add the alert button here -->

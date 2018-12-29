@@ -606,4 +606,16 @@ Obchodná a poradenská činnosť',
     
         'ngo' => 'Mimovládna organizácia',
     
+        'job_offers' => 'Ponuky práce',
+    
+        'has_job_offers' => 'Má pracovné ponuky',
+    
+        'offer' => 'Ponuka práce',
+    
+        'offer_title' => 'nadpis',
+    
+        'offer_describe_description' => 'popis pracovných pozícií písať',
+    
+        'offer_description' => 'popis',
+    
 ];

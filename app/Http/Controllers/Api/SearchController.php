@@ -243,6 +243,9 @@ class SearchController extends SiteSearchController
             $results->whereIn('activity', $v->valid()['activities']);
         }
 
+        if ($request->has("job_offers")) {
+            $results->whereHas('joboffers');
+        }
 
         // Lets take a look at the text query
         $userIds = array();
@@ -306,6 +309,7 @@ class SearchController extends SiteSearchController
                 'linkedin' => $company->user->linkedin,
                 'description' => $company->description,
                 'website' => $company->website,
+                'job_offers' => sizeof($company->jobOffers),
                 'alertable' => !in_array($company->user->id, $alerts) && $maxAlerts,
             );
         }
@@ -512,13 +516,19 @@ class SearchController extends SiteSearchController
         $data[] = array(
             'id' => 'activities',
             'title' => trans('reg-profile.company_activity'),
-            'items' => $companySectors
+            'items' => $companySectors            
         );
 
         $data[] = array(
             'id' => 'countries',
             'title' => trans('reg-profile.countries'),
             'items' => $countries
+        );
+
+        $data[] = array(
+            'id' => 'job_offers',
+            'title' => trans('reg-profile.job_offers'),
+            'items' => array(array( "id" => "has-offers", "name" => trans('reg-profile.has_job_offers')))            
         );
 
         return $data;

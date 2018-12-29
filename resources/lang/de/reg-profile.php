@@ -605,4 +605,16 @@ return [
     
         'ngo' => 'Nicht-staatliche Organisation',
     
+        'job_offers' => 'Jobangebote',
+    
+        'has_job_offers' => 'Hat Jobangebote',
+    
+        'offer' => 'Jobangebot',
+    
+        'offer_title' => 'Titel',
+    
+        'offer_describe_description' => 'Schreiben Sie die Jobangebot Beschreibung',
+    
+        'offer_description' => 'Beschreibung',
+    
 ];

@@ -609,4 +609,16 @@ dati).',
     
         'ngo' => 'Organizzazione non governativa',
     
+        'job_offers' => 'Offerte di lavoro',
+    
+        'has_job_offers' => 'Ha offerte di lavoro',
+    
+        'offer' => 'Offerta di lavoro',
+    
+        'offer_title' => 'Titolo',
+    
+        'offer_describe_description' => 'Scrivere la descrizione offerta di lavoro',
+    
+        'offer_description' => 'Descrizione',
+    
 ];

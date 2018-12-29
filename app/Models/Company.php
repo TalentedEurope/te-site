@@ -39,8 +39,29 @@ class Company extends Model
             'personalSkills' => array(
                 'personalSkills' => 'array|max:6'
             ),
+            'offers' => array(
+                'id' => 'exists:job_offers,id',
+                'title' => 'required|max:150',
+                'description' => 'required',
+            ),
         );
         $filter = $relatedRules[$related];
+        if ($keyOnly) {
+            return array($keyOnly => $filter[$keyOnly]);
+        } else {
+            return $filter;
+        }
+    }
+
+    public static function relatedNiceNames($related, $keyOnly = false)
+    {
+        $relatedNames = array(
+            'offers' => array(
+                'title' => trans('reg-profile.offer_title'),
+                'description' => trans('reg-profile.offer_description'),
+            ),
+        );
+        $filter = $relatedNames[$related];
         if ($keyOnly) {
             return array($keyOnly => $filter[$keyOnly]);
         } else {
@@ -65,7 +86,8 @@ class Company extends Model
             'country' => trans('reg-profile.country'),
             'talent' => '"' . trans('reg-profile.company_what_is_talent') . '" ' . trans('reg-profile.field'),
             'contact_name' => trans('reg-profile.company_contact_person_name'),
-            'contact_email' => trans('reg-profile.company_contact_person_email')
+            'contact_email' => trans('reg-profile.company_contact_person_email'),
+            'job_offers_url' => trans('reg-profile.company_contact_person_email')
         );
         return $niceNames;
     }
@@ -94,6 +116,10 @@ class Company extends Model
         return $this->belongsToMany('\App\Models\PersonalSkill');
     }
 
+    public function jobOffers()
+    {
+        return $this->hasMany('\App\Models\JobOffer');
+    }
 
     public function isAlertableBy($user)
     {

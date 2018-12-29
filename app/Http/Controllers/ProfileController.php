@@ -12,6 +12,7 @@ use App\Models\StudentStudy;
 use App\Models\StudentLanguage;
 use App\Models\StudentTraining;
 use App\Models\StudentExperience;
+use App\Models\JobOffer;
 use App\Models\PersonalSkill;
 use App\Models\ProfessionalSkill;
 use App\Notifications\ValidatorRequested;
@@ -199,6 +200,9 @@ class ProfileController extends Controller
         // Process specific profiles
         if (Auth::user()->isA('company')) {
             $errors = $errors->merge($this->processCompany($request, $user));
+            if ($request->has('offers')) {
+                $errors = $errors->merge($this->processOffers($request, $user));
+            }
         } elseif (Auth::user()->isA('student')) {
             $errors = $errors->merge($this->processStudent($request, $user));
         } elseif (Auth::user()->isA('institution')) {
@@ -354,6 +358,7 @@ class ProfileController extends Controller
             $company->is_ngo = false;
         }
 
+
         $user->is_filled = false;
         $uFilledVal = Validator::make($user->toArray(), User::Rules(false, true));
         $filledVal = Validator::make($company->toArray(), Company::Rules($company));
@@ -368,6 +373,28 @@ class ProfileController extends Controller
         return $errors;
     }
 
+    protected function processOffers(Request $request, User $user) {
+        $errors = new MessageBag();
+        $company = $user->userable()->first();
+        $offers = $request->input('offers');
+        foreach ($offers as $offer) {
+            $v = Validator::make($offer, Company::rulesRelated('offers'));
+            $v->setAttributeNames(Company::relatedNiceNames('offers'));
+            if ($v->valid()) {
+                $o = new JobOffer();                
+                if (isset($offer["id"])) {
+                    $o = JobOffer::find($offer["id"]);    
+                    if ($o->company_id != $company->id) continue;
+                }
+                $o->title = $offer["title"];
+                $o->description = $offer["description"];
+                $o->company_id = $company->id;
+                $o->save();
+            } 
+            $errors->merge($v);            
+        }
+        return $errors;
+    }
 
     protected function processInstitution(Request $request, User $user)
     {
