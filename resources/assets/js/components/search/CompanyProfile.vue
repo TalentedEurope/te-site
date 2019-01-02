@@ -90,7 +90,7 @@ export default {
 
 p.jobOffers {
     display: inline-block;
-    background: #2f70b1;
+    background: #212E44;
     color: #fff;
     padding: 5px 20px;    
 }

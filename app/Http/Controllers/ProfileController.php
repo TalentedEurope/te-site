@@ -200,7 +200,7 @@ class ProfileController extends Controller
         // Process specific profiles
         if (Auth::user()->isA('company')) {
             $errors = $errors->merge($this->processCompany($request, $user));
-            if ($request->has('offers')) {
+            if ($request->has('offers') || $request->has('remove_offers')) {
                 $errors = $errors->merge($this->processOffers($request, $user));
             }
         } elseif (Auth::user()->isA('student')) {
@@ -377,22 +377,33 @@ class ProfileController extends Controller
         $errors = new MessageBag();
         $company = $user->userable()->first();
         $offers = $request->input('offers');
-        foreach ($offers as $offer) {
-            $v = Validator::make($offer, Company::rulesRelated('offers'));
-            $v->setAttributeNames(Company::relatedNiceNames('offers'));
-            if ($v->valid()) {
-                $o = new JobOffer();                
-                if (isset($offer["id"])) {
-                    $o = JobOffer::find($offer["id"]);    
-                    if ($o->company_id != $company->id) continue;
-                }
-                $o->title = $offer["title"];
-                $o->description = $offer["description"];
-                $o->company_id = $company->id;
-                $o->save();
-            } 
-            $errors->merge($v);            
+        $remove = $request->input('remove_offers');
+        if ($offers) {
+            foreach ($offers as $offer) {
+                $v = Validator::make($offer, Company::rulesRelated('offers'));
+                $v->setAttributeNames(Company::relatedNiceNames('offers'));
+                if ($v->valid()) {
+                    $o = new JobOffer();                
+                    if (isset($offer["id"])) {
+                        $o = JobOffer::find($offer["id"]);                        
+                        if (!$o || $o->company_id != $company->id) continue;
+                    }
+                    $o->title = filter_var($offer["title"], FILTER_SANITIZE_STRING);
+                    $o->description = filter_var($offer["description"], FILTER_SANITIZE_STRING);
+                    $o->company_id = $company->id;
+                    $o->save();
+                } 
+                $errors->merge($v);            
+            }
         }
+        if ($remove) {
+            foreach ($remove as $offer) {
+                $o = JobOffer::find($offer);                                
+                if (!$o || $o->company_id != $company->id) continue;
+                $o->delete();
+            }    
+        }        
+        
         return $errors;
     }
 

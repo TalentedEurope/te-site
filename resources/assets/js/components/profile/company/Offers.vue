@@ -5,10 +5,7 @@
         <div class="offer" v-for="(index, offer) in parsed_offers">
             <header class="clearfix">
                 <h4 class="pull-left">{{ $tc('reg-profile.offer', 1) }} #{{ index + 1 }}</h4>
-                <remove-item-button v-if="!showClearButton" :items="parsed_offers" :item="offer" group-name="Offer"></remove-item-button>
-                <button class="pull-right remove btn-warning btn btn-sm" v-if="showClearButton" @click.prevent="clearForm()" >
-                    <i class="fa fa-close" aria-hidden="true"></i> {{ $t('reg-profile.clear_btn') }}
-                </button>
+                <remove-item-button :items="parsed_offers" :item="offer" group-name="Offer"></remove-item-button>
             </header>
 
             <text-box-form type="hidden" code="id" group-code="offers" :group-id="offer.id" :value="offer.id"></text-box-form>

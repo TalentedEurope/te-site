@@ -60,7 +60,7 @@
               <div class="col-xs-12 col-md-6">
                 <div class="well">
                   <h3>{{ $offer->title }}</h3>
-                  <p>{{ $offer->description }}</p>
+                  <p>{!! str_replace("\n", "<br/>", $offer->description)  !!}</p>
                 </div>
               </div>
             @endforeach
