@@ -613,6 +613,8 @@ dati).',
     
         'has_job_offers' => 'Ha offerte di lavoro',
     
+        'offer_add_more' => 'Aggiungere un\'offerta di lavoro',
+    
         'offer' => 'Offerta di lavoro',
     
         'offer_title' => 'Titolo',
@@ -620,5 +622,7 @@ dati).',
         'offer_describe_description' => 'Scrivere la descrizione offerta di lavoro',
     
         'offer_description' => 'Descrizione',
+    
+        'no_job_offers' => 'Non ci sono offerte di lavoro disponibili',
     
 ];

@@ -609,6 +609,8 @@ return [
     
         'has_job_offers' => 'Tiene ofertas de trabajo',
     
+        'offer_add_more' => 'Añadir una oferta de trabajo',
+    
         'offer' => 'Oferta de trabajo',
     
         'offer_title' => 'Título',
@@ -616,5 +618,7 @@ return [
         'offer_describe_description' => 'Escribir la descripción de la oferta de empleo',
     
         'offer_description' => 'Descripción',
+    
+        'no_job_offers' => 'No hay ofertas de trabajo disponibles',
     
 ];

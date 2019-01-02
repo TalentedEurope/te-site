@@ -610,6 +610,8 @@ Obchodná a poradenská činnosť',
     
         'has_job_offers' => 'Má pracovné ponuky',
     
+        'offer_add_more' => 'Pridať pracovnú ponuku',
+    
         'offer' => 'Ponuka práce',
     
         'offer_title' => 'nadpis',
@@ -617,5 +619,7 @@ Obchodná a poradenská činnosť',
         'offer_describe_description' => 'popis pracovných pozícií písať',
     
         'offer_description' => 'popis',
+    
+        'no_job_offers' => 'Nie sú k dispozícii žiadne ponuky práce',
     
 ];

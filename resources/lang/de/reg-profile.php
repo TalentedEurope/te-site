@@ -609,6 +609,8 @@ return [
     
         'has_job_offers' => 'Hat Jobangebote',
     
+        'offer_add_more' => 'Fügen Sie ein Jobangebot',
+    
         'offer' => 'Jobangebot',
     
         'offer_title' => 'Titel',
@@ -616,5 +618,7 @@ return [
         'offer_describe_description' => 'Schreiben Sie die Jobangebot Beschreibung',
     
         'offer_description' => 'Beschreibung',
+    
+        'no_job_offers' => 'Es sind keine Jobangebote',
     
 ];

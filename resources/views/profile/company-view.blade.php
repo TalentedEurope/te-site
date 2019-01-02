@@ -48,7 +48,11 @@
           <div class="row">
             <div class="col-xs-12">
               <div class="well">
-                <h2>{{ trans('reg-profile.job_offers') }}</h2>
+                @if (sizeof($company->jobOffers) != 0)
+                  <h2>{{ trans('reg-profile.job_offers') }}</h2>
+                @else
+                <h2>{{ trans('reg-profile.no_job_offers') }}</h2>
+                @endif
               </div>
             </div>
             <br/>

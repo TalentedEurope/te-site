@@ -618,6 +618,8 @@ Sur',
     
         'has_job_offers' => 'A offres d\'emploi',
     
+        'offer_add_more' => 'Ajouter une offre d\'emploi',
+    
         'offer' => 'Offre d\'emploi',
     
         'offer_title' => 'Titre',
@@ -625,5 +627,7 @@ Sur',
         'offer_describe_description' => 'Écrivez la description de l\'offre d\'emploi',
     
         'offer_description' => 'La description',
+    
+        'no_job_offers' => 'Il n\'y a pas d\'offres d\'emploi disponibles',
     
 ];
