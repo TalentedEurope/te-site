@@ -97,6 +97,23 @@
               </div>
               <p class="help-block"><a target="_blank" href="{{ URL::asset('docs/'.App::getLocale().'/ProofOfAuthenticityForEducationInstitute.docx') }}">{!! trans('reg-profile.institution_certificate_template_download') !!}</a></p>
 
+              <hr class="separator">
+
+              <h4>{!! trans('reg-profile.social_and_web') !!}</h4>
+              <text-box-form code="facebook" label="{!! trans('reg-profile.facebook_page_url') !!}" placeholder="{!! trans('reg-profile.facebook_page_url') !!}"
+                  value="{{ old('facebook', $user->facebook) }}"
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+              <text-box-form code="twitter" label="{!! trans('reg-profile.twitter_page_url') !!}" placeholder="{!! trans('reg-profile.twitter_page_url') !!}"
+                  value="{{ old('twitter', $user->twitter) }}"
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+              <text-box-form code="linkedin" label="{!! trans('reg-profile.linkedin_page_url') !!}" placeholder="{!! trans('reg-profile.linkedin_page_url') !!}"
+                  value="{{ old('linkedin', $user->linkedin) }}"
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+              <text-box-form code="website" label="{!! trans('reg-profile.web_url') !!}" placeholder="{!! trans('reg-profile.web_url') !!}"
+                  value="{{ old('website', $institution->website) }}"
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+
+
               <hr>
               <h4>{!! trans('reg-profile.address') !!}</h4>
               <text-box-form code="address" label="{!! trans('reg-profile.address') !!}" placeholder="{!! trans('reg-profile.address') !!}"
@@ -137,6 +154,10 @@
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
               <text-box-form type="email" code="notification_email" label="{!! trans('reg-profile.email') !!}" placeholder="{!! trans('reg-profile.email') !!}"
                   value="{{ old('notification_email', $institution->notification_email) }}"
+                  errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+
+              <text-box-form type="email" code="contact_email" label="{!! trans('reg-profile.public_email') !!}" placeholder="{!! trans('reg-profile.public_email') !!}"
+                  value="{{ old('contact_email', $institution->contact_email) }}"
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
 
               <hr>

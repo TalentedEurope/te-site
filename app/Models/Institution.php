@@ -37,7 +37,6 @@ class Institution extends Model
             'pic' => trans('reg-profile.institution_pic'),
             'fiscal_id' => trans('reg-profile.fiscal_id'),
             'certificate' => trans('reg-profile.institution_certificate')
-
         );
         return $niceNames;
     }
