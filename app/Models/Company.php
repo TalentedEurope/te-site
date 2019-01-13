@@ -23,7 +23,8 @@ class Company extends Model
                         'website' => 'active_url' ,
                         'talent' => 'sometimes|required|max:300',
                         'notification_name' => 'regex:/^[\pL\s\-\,\.]+$/u',
-                        'notification_email' => 'email'
+                        'notification_email' => 'email',
+                        'job_offers_url' => 'active_url'
         );
 
         if ($keyOnly) {
@@ -100,7 +101,7 @@ class Company extends Model
 
     public static function getRandom()
     {
-        $items = \App\Models\User::where('userable_type', \App\Models\Company::class)->where('visible', 1)->inRandomOrder()->where('image', '!=', '')->limit(18)->select('userable_id')->get()->map(function ($item, $key) {
+        $items = \App\Models\User::where('userable_type', \App\Models\Company::class)->where('visible', 1)->where('is_filled', 1)->inRandomOrder()->where('image', '!=', '')->limit(18)->select('userable_id')->get()->map(function ($item, $key) {
             return $item->userable_id;
         })->toArray();
         return \App\Models\Company::whereIn('id', $items)->get();

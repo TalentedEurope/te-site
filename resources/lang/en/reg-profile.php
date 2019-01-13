@@ -621,4 +621,16 @@ return [
     
         'no_job_offers' => 'There are no available job offers',
     
+        'offer_url' => 'Website with company job offers',
+    
+        'job_offers_in_te' => 'Job offers in Talented Europe',
+    
+        'external_job_offers' => 'Check our external job portal',
+    
+        'has_job_portal' => 'Has a job portal',
+    
+        'we_have_portal' => 'But we have a job portal. ',
+    
+        'portal_check_it_out' => 'Check it out',
+    
 ];

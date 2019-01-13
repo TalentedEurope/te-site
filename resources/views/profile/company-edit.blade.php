@@ -211,6 +211,11 @@
           <div class="tab-pane fade" id="_job-offers">            
             <form class="form-vertical" role="form" method="POST" action="{{ route('update_profile'). '#job-offers' }}">
               {{ csrf_field() }}              
+
+              <text-box-form code="job_offers_url" label="{!! trans('reg-profile.offer_url') !!}" placeholder="{!! trans('reg-profile.offer_url') !!}" value="{{ old('job_offers_url', $company->job_offers_url) }}"
+                  required errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'></text-box-form>
+
+              
               <offers offers='{!! json_encode($company->jobOffers, JSON_HEX_APOS) !!}'
                   errors='{!! json_encode($errors->toArray(), JSON_HEX_APOS) !!}'
                   user-id="{{ Auth::user()->id }}"></offers>

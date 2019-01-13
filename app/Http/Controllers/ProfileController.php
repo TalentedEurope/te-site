@@ -378,6 +378,12 @@ class ProfileController extends Controller
         $company = $user->userable()->first();
         $offers = $request->input('offers');
         $remove = $request->input('remove_offers');
+        $v = Validator::make($request->input(), Company::Rules($user->userable, "job_offers_url"));
+        $errors->merge($v);            
+        if ($v->valid()) {
+            $company->job_offers_url = $request->input("job_offers_url");
+            $company->save();
+        }
         if ($offers) {
             foreach ($offers as $offer) {
                 $v = Validator::make($offer, Company::rulesRelated('offers'));

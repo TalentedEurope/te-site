@@ -22,9 +22,17 @@
                     {{company.talent_is}}
                 </p>
 
-                <p class="jobOffers" v-if="company.job_offers">
-                    <strong><i class="fa fa-file-text-o"></i> {{company.job_offers}} {{ $t('reg-profile.job_offers') }}</strong>
+                <p>
+                <a :href="seeMoreUrl" class="btn btn-primary" v-if="company.job_offers">
+                    <strong><i class="fa fa-file-text-o"></i> {{company.job_offers}} {{ $t('reg-profile.job_offers_in_te') }}</strong>
+                </a>
+                
+                <p>
+                <a :href="company.job_offers_url" target="_blank" class="btn btn-primary" v-if="company.job_offers_url">
+                    <strong><i class="fa fa-chain"></i> {{ $t('reg-profile.external_job_offers') }}</strong>
+                </a>
                 </p>
+
 
                 <alert-button :company-id="company.id" :alertable="company.alertable" placement="right"></alert-button>
 
@@ -86,13 +94,6 @@ export default {
 }
 .view-more {
     margin-top: 15px;
-}
-
-p.jobOffers {
-    display: inline-block;
-    background: #212E44;
-    color: #fff;
-    padding: 5px 20px;    
 }
 
 @media (min-width: 768px) {

@@ -21,10 +21,7 @@
         <div class="offer" v-for="(index, offer) in new_offers">            
             <header class="clearfix">
                 <h4 class="pull-left">{{ $tc('reg-profile.offer', 1) }} #{{ (parsed_offers.length + index + 1) }}</h4>
-                <remove-item-button v-if="!showClearButton" :items="new_offers" :item="offer" ></remove-item-button>
-                <button class="pull-right remove btn-warning btn btn-sm" v-if="showClearButton" @click.prevent="clearForm()" >
-                    <i class="fa fa-close" aria-hidden="true"></i> {{ $t('reg-profile.clear_btn') }}
-                </button>
+                <remove-item-button :items="new_offers" :item="offer" ></remove-item-button>
             </header>
 
             <text-box-form code="title" group-code="offers" :group-id="offer.id"
@@ -66,9 +63,11 @@ export default {
         }
     },
     ready() {
+        /*
         if (this.parsed_offers.length == 0) {
             this.addNewOffer();
         }
+        */
         EventBus.$on('onRemoveOffer', (offer) => {
             this.remove_offers.push(offer.id);
         });
@@ -85,7 +84,7 @@ export default {
             }
             this.parsed_offers = [];
             this.new_offers = [];
-            this.addNewOffer();
+            //this.addNewOffer();
         },
         addNewOffer: function () {
             var count = this.new_offers.length;

@@ -630,4 +630,16 @@ Sur',
     
         'no_job_offers' => 'Il n\'y a pas d\'offres d\'emploi disponibles',
     
+        'offer_url' => 'Site Web avec des offres d\'emploi de l\'entreprise',
+    
+        'job_offers_in_te' => 'Offres d\'emploi en Talented Europe',
+    
+        'external_job_offers' => 'Consultez notre portail emplois externe',
+    
+        'has_job_portal' => 'A un portail emplois',
+    
+        'we_have_portal' => 'Mais nous avons un portail emplois.',
+    
+        'portal_check_it_out' => 'Vérifiez-le',
+    
 ];

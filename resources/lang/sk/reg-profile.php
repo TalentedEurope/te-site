@@ -622,4 +622,16 @@ Obchodná a poradenská činnosť',
     
         'no_job_offers' => 'Nie sú k dispozícii žiadne ponuky práce',
     
+        'offer_url' => 'Webové stránky s ponukou pracovných miest firmy',
+    
+        'job_offers_in_te' => 'Ponuka práce v Talented Europe',
+    
+        'external_job_offers' => 'Pozrite sa na naše externé pracovný portál',
+    
+        'has_job_portal' => 'Má pracovný portál',
+    
+        'we_have_portal' => 'Ale máme pracovný portál.',
+    
+        'portal_check_it_out' => 'Skontrolovať to',
+    
 ];

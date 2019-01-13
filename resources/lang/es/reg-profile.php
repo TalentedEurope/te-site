@@ -621,4 +621,16 @@ return [
     
         'no_job_offers' => 'No hay ofertas de trabajo disponibles',
     
+        'offer_url' => 'Sitio web con ofertas de trabajo de la empresa',
+    
+        'job_offers_in_te' => 'Ofertas de trabajo en Talented Europe',
+    
+        'external_job_offers' => 'Consulta nuestro portal de empleo externo',
+    
+        'has_job_portal' => 'Tiene un portal de empleo',
+    
+        'we_have_portal' => 'Pero tenemos un portal de empleo.',
+    
+        'portal_check_it_out' => 'Echale un vistazo',
+    
 ];

@@ -244,7 +244,14 @@ class SearchController extends SiteSearchController
         }
 
         if ($request->has("job_offers")) {
-            $results->whereHas('joboffers');
+            $offerOptions = $request->input("job_offers");
+            if (in_array("has-offers", $offerOptions)) {
+                $results->whereHas('joboffers');
+            }
+            if (in_array("has-job-portal", $offerOptions)) {
+                $results->where('job_offers_url', "!=", "");
+            }
+
         }
 
         // Lets take a look at the text query
@@ -310,6 +317,7 @@ class SearchController extends SiteSearchController
                 'description' => $company->description,
                 'website' => $company->website,
                 'job_offers' => sizeof($company->jobOffers),
+                'job_offers_url' => $company->job_offers_url,
                 'alertable' => !in_array($company->user->id, $alerts) && $maxAlerts,
             );
         }
@@ -528,7 +536,8 @@ class SearchController extends SiteSearchController
         $data[] = array(
             'id' => 'job_offers',
             'title' => trans('reg-profile.job_offers'),
-            'items' => array(array( "id" => "has-offers", "name" => trans('reg-profile.has_job_offers')))            
+            'items' => array(array( "id" => "has-offers", "name" => trans('reg-profile.has_job_offers')),
+                        array( "id" => "has-job-portal", "name" => trans('reg-profile.has_job_portal')))            
         );
 
         return $data;

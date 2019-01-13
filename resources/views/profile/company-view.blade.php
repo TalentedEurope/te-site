@@ -42,7 +42,16 @@
         @if ($company->talent)
         <li><strong><i class="icon fa fa-lightbulb-o"></i>{!! trans('reg-profile.we_think_that_talent_is') !!}:</strong> {{ $company->talent }}</li>
         @endif
-        </ul>
+        @if ($company->job_offers_url)
+        <li>
+            <a href="{{ $company->job_offers_url }}" target="_blank" class="btn btn-primary">
+                <strong><i class="fa fa-chain"></i> {{ trans('reg-profile.external_job_offers') }}</strong>
+            </a>
+        </li>
+        @endif
+
+
+      </ul>
       </div>
       @if ($company->jobOffers)
           <div class="row">
@@ -50,6 +59,9 @@
               <div class="well">
                 @if (sizeof($company->jobOffers) != 0)
                   <h2>{{ trans('reg-profile.job_offers') }}</h2>
+                @elseif ($company->job_offers_url)
+                <h2>{{ trans('reg-profile.no_job_offers') }}</h2>
+                <h3>{{ trans('reg-profile.we_have_portal') }} <a href="{{ $company->job_offers_url }}">{{ trans('reg-profile.portal_check_it_out') }} </a></h3>
                 @else
                 <h2>{{ trans('reg-profile.no_job_offers') }}</h2>
                 @endif

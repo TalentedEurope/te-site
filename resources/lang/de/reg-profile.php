@@ -621,4 +621,16 @@ return [
     
         'no_job_offers' => 'Es sind keine Jobangebote',
     
+        'offer_url' => 'Website mit Unternehmen Jobangebote',
+    
+        'job_offers_in_te' => 'Stellenangebote in Talented Europe',
+    
+        'external_job_offers' => 'Schauen Sie sich unser externes Jobportal',
+    
+        'has_job_portal' => 'Hat ein Jobportal',
+    
+        'we_have_portal' => 'Aber wir haben ein Job-Portal.',
+    
+        'portal_check_it_out' => 'Hör zu',
+    
 ];

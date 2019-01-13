@@ -625,4 +625,16 @@ dati).',
     
         'no_job_offers' => 'Non ci sono offerte di lavoro disponibili',
     
+        'offer_url' => 'Sito web con dell\'azienda Offerte di lavoro',
+    
+        'job_offers_in_te' => 'Offerte di lavoro in Talented Europe',
+    
+        'external_job_offers' => 'Controlla il nostro portale del lavoro esterno',
+    
+        'has_job_portal' => 'Ha un portale di lavoro',
+    
+        'we_have_portal' => 'Ma abbiamo un portale di lavoro.',
+    
+        'portal_check_it_out' => 'Controlla',
+    
 ];
