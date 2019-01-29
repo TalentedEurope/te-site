@@ -186,8 +186,6 @@ class RegisterController extends Controller
                 'email' => $data['email'],
                 'password' => bcrypt($data['password']),
             ]);
-            UserVerification::generate($user);
-            $user->notify(new AccountActivated($user));
         } else {
             $user = Auth::user();
         }
@@ -251,7 +249,11 @@ class RegisterController extends Controller
                 Bouncer::assign('validator')->to($user);
                 $vi = app('App\Http\Controllers\ValidatorController')->addValidator($user->email, $i->id, true, $silent);
         }
-
+        if ($user->verified != true) {
+            UserVerification::generate($user);
+            $user->notify(new AccountActivated($user));                    
+        }
+        
         return $user;
     }
 
