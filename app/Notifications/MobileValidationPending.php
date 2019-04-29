@@ -31,10 +31,10 @@ class MobileValidationPending extends Notification
         $subject = "Funciona???"; // trans('notification.student_alerted_company_subject');
         $body = "Dime por slack si te ha llegado xfa"; //sprintf(trans('notification.student_alerted_company_body'), $this->student->fullName);
         App::setLocale($this->oldLocale);
-        /*
+
         return OneSignalMessage::create()
             ->subject($subject)
             ->body($body);
-        */
+
     }
 }
