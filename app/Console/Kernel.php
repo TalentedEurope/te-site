@@ -13,8 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-         Commands\Cleanup::class,
-         Commands\WeeklyTasks::class,
+        Commands\Cleanup::class,
+        Commands\WeeklyTasks::class,
     ];
 
     /**
@@ -27,5 +27,17 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('cleanup:all')->daily();
         $schedule->command('tasks:weekly')->weekly();
+    }
+
+    /**
+     * Register the commands for the application.
+     *
+     * @return void
+     */
+    protected function commands()
+    {
+        $this->load(__DIR__.'/Commands');
+
+        require base_path('routes/console.php');
     }
 }

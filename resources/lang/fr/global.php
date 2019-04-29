@@ -109,6 +109,8 @@ return [
     
         'blog' => 'Projet',
     
+        'web' => 'Site Internet',
+    
         'cookies' => 'Informations sur les cookies',
     
         'privacy_policy' => 'Politique de confidentialité',

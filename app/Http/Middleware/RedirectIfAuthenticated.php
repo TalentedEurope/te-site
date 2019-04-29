@@ -18,25 +18,7 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            if (Auth::user()->isA('student')) {
-                return redirect('/profile');
-            }
-            if (Auth::user()->isA('company')) {
-                return redirect('/profile');
-            }
-            if (Auth::user()->isA('institution')) {
-                return redirect('/validators');
-            }
-            if (Auth::user()->isA('validator')) {
-                return redirect('/validate');
-            }
-            if (Auth::user()->userable_type == '') {
-                if (\Request::route()->getName() == 'login') {
-                    return redirect('/setup');
-                }
-                return $next($request);
-            }
-            return redirect('/');
+            return redirect('/profile');
         }
 
         return $next($request);

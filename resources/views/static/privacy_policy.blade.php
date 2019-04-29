@@ -380,19 +380,19 @@
               <td>
                 <strong>Scopo</strong>
               </td>
-              <td>Amministrare le richieste atraverso il web, gestire l'invio delle informazioni, registrare gli utenti, inviare newsletter a cui si e iscritto.</td>
+              <td>Amministrare le richieste attraverso il web, gestire l'invio delle informazioni, registrare gli utenti, inviare newsletter a chi si è iscritto.</td>
             </tr>
             <tr>
               <td>
                 <strong>Legittimità</strong>
               </td>
-              <td>Consenso dell'interessato ed esecuzione del rapporto precontrattuale / contrattuale.</td>
+              <td>Consenso dell'interessato all’esecuzione del rapporto precontrattuale / contrattuale.</td>
             </tr>
             <tr>
               <td>
                 <strong>Destinatari</strong>
               </td>
-              <td>Nessun dato verrà trasferito a terzi, ad eccezione degli obblighi legali o nel caso in cui sia necessario soddisfare la richiesta.</td>
+              <td>Nessun dato verrà trasferito a terzi, ad eccezione degli obblighi legali o nel caso in cui sia necessario soddisfare la richiesta.</td>
             </tr>
             <tr>
               <td>
@@ -404,7 +404,7 @@
               <td>
                 <strong>Informazioni aggiuntive</strong>
               </td>
-              <td>Informazioni aggiuntive sulla protezione dei dati potete consultare sul nostro sito web.</td>
+              <td>Informazioni aggiuntive sulla protezione dei dati possono essere consultate sul nostro sito web.</td>
             </tr>
           </table>
 
@@ -412,7 +412,7 @@
 
 
           <h3>1. Chi è responsabile del trattamento dei vostri dati?</h3>
-          <p>Responsabile del tratamento dei vostri dati è CIFP CESAR MANRIQUE:</p>
+          <p>Responsabile del trattamento dei vostri dati è CIFP CESAR MANRIQUE:</p>
           <table class="table table-bordered">
             <tr>
               <td>
@@ -446,36 +446,36 @@
             </tr>
           </table>
 
-          <p>CIFP CESAR MANRIQUE informa l'utente che le informazioni fornite dall'utente attraverso la navigazione sul nostro sito Web, il modulo di contatto, i moduli di registrazione, l'iscrizione alla newsletter o l'invio di e-mail saranno trattati da CIFP CESAR MANRIQUE e che detto trattamento è gestito da CIFP CESAR MANRIQUE in conformità con le disposizioni del GDPR.</p>
+          <p>CIFP CESAR MANRIQUE informa l'utente che le informazioni fornite dall'utente stesso attraverso la navigazione sul nostro sito Web, il modulo di contatto, i moduli di registrazione, l'iscrizione alla newsletter o l'invio di e-mail saranno trattati da CIFP CESAR MANRIQUE e che tale processo è gestito da CIFP CESAR MANRIQUE in conformità con le disposizioni del GDPR.</p>
 
           <h3>2. Per che cosa si utilizzano i vostri dati?</h3>
           <p>Accettando la nostra politica sulla privacy su www.talentedeurope.eu, l'utente ci autorizza ad utilizzare ed elaborare i dati personali forniti per i seguenti scopi:</p>
           <ul>
             <li>Inviare le informazioni e fornire i servizi richiesti attraverso i vari moduli disponibili sul nostro sito web.</li>
             <li>Fornire informazioni sulle offerte, i prodotti e i servizi richiesti.</li>
-            <li>Occasionalmente, CIFP CESAR MANRIQUE può utilizzare i vostri dati personali per inviare notifiche via email. Queste notifiche saranno fatte per informare sui cambiamenti nei nostri servizi o prodotti o nelle nostre regole sulle condizioni legali.</li>
-            <li>Inviare la newsletter a cui siete iscritti, con l'offerta, attività e promozione di CIFP CESAR MANRIQUE e un settore che potrebbe essere di vostro interesse.</li>
-            <li>Inviare comunicazioni commerciali su offerte, attività e promozioni di CIFP CESAR MANRIQUE e del settore che potrebbero essere di vostro interesse con mezzi convenzionali o elettronici se avete selezionato la casella appropriata per indicare che desiderate ricevere queste informazioni.</li>
+            <li>Occasionalmente, CIFP CESAR MANRIQUE può utilizzare i vostri dati personali per inviare notifiche via email. Queste notifiche saranno fatte per informare su eventuali cambiamenti nei nostri servizi, prodotti o nelle regole sulle condizioni legali.</li>
+            <li>Inviare la newsletter a cui siete iscritti, con le offerte, attività e promozioni di CIFP CESAR MANRIQUE è un settore che potrebbe essere di vostro interesse.</li>
+            <li>Inviare comunicazioni commerciali su offerte, attività e promozioni di CIFP CESAR MANRIQUE e del settore che potrebbe essere di vostro interesse con mezzi convenzionali o elettronici se avete selezionato la casella appropriata per indicare il consenso a ricevere queste informazioni.</li>
           </ul>
-          <p>Sito www.talentedeurope.eu raccoglie anche informazioni dagli utenti del sito web non fornite direttamente da loro tramite i cookie. I dati raccolti tramite cookie e altri dispositivi verranno utilizzati per studi statistici e analisi del profilo al fine di fornire un servizio migliore attraverso il nostro sito web. L'applicazione GOOGLE ANALYTICS, lo strumento di Google, sarà utilizzato dai proprietari dei siti web per analizzare in che modo i visitatori comunicano con le caratteristiche del sito. Per ulteriori informazioni sulla loro politica sulla privacy, visitare il sito <a href="https://www.google.es/intl/es_ALL/analytics/learn/privacy.html" target="_blank">https://www.google.es/intl/es_ALL/analytics/learn/privacy.html</a>.</p>
+          <p>Il sito www.talentedeurope.eu raccoglie tramite i cookie anche informazioni dagli utenti del sito web non fornite direttamente da loro. I dati raccolti tramite cookie e altri dispositivi verranno utilizzati per studi statistici e analisi del profilo al fine di fornire un servizio migliore attraverso il nostro sito web. L'applicazione GOOGLE ANALYTICS, strumento di Google, sarà utilizzato dai proprietari dei siti web per analizzare in che modo i visitatori comunicano con le caratteristiche del sito. Per ulteriori informazioni sulla loro politica sulla privacy, visitare il sito <a href="https://www.google.es/intl/es_ALL/analytics/learn/privacy.html" target="_blank">https://www.google.es/intl/es_ALL/analytics/learn/privacy.html</a>.</p>
           <p>GOOGLE ADWORDS è lo strumento che usiamo per la pubblicità e la prospezione commerciale Per ulteriori informazioni sulla politica sulla privacy, visitare il sito <a href="https://policies.google.com/privacy?hl=en" target="_blank">https://policies.google.com/privacy?hl=en</a>.</p>
           <p>L'azienda Google, compresi tutti i suoi strumenti, è conforme al quadro per lo scudo della privacy UE-USA, in conformità con le disposizioni del Dipartimento del commercio degli Stati Uniti in merito alla raccolta, all'uso e alla conservazione delle informazioni personali dei paesi membri dell'Unione europea.</p>
-          <p>Il sito www.talentedeurope.eu continuerà a cercare di stabilire meccanismi adeguati per ottenere il consenso dell'utente per l'installazione dei cookie che lo richiedono. Quando un utente accede al nostro sito web, viene visualizzata una finestra pop-up che informa l'esistenza dei cookie e che se si continua a navigare nel nostro sito web, l'utente acconsente all'installazione dei cookie. L'accettazione dell'installazione dei cookie implica l'accettazione della conservazione dell'indirizzo IP nei registri di www.talentedeurope.eu, insieme alla data di accettazione, per un periodo di un anno, al fine di dimostrare il consenso dato. Per ulteriori informazioni, visitare la nostra "Informativa sui cookie".</p>
+          <p>Il sito www.talentedeurope.eu continuerà a cercare di stabilire meccanismi adeguati per ottenere il consenso dell'utente per l'installazione dei cookie. Quando un utente accede al nostro sito web, viene visualizzata una finestra pop-up che informa l'esistenza dei cookie e che se si continua a navigare nel nostro sito web, l'utente acconsente all'installazione degli stessi. L’accettazione dell'installazione dei cookie implica quella alla conservazione dell'indirizzo IP nei registri di www.talentedeurope.eu, insieme alla data di accettazione, per un periodo di un anno, al fine di dimostrare il consenso dato. Per ulteriori informazioni, visitare la nostra "Informativa sui cookie".</p>
 
           <h3>3. Qual è la legittimazione per il trattamento dei tuoi dati?</h3>
           <p>La legittimazione per il trattamento dei tuoi dati da parte di CIFP CESAR MANRIQUE si basa su seguenti principi:</p>
           <ul>
-            <li>Nell'esecuzione di un pre-contratto / contratto per inviare le informazioni e fornire il servizio richiesto per registrarsi come utente registrato, e questo non può essere fatto nel modo opposto.</li>
-            <li>Nel consenso dell'utente a inviare la newsletter e le comunicazioni commerciali delle offerte, attività e promozioni di CIFP CESAR MANRIQUE e del settore che potrebbe essere di loro interesse. L'utente può revocare il consenso dato in qualsiasi momento.</li>
+            <li>•	Nell'esecuzione di un pre-contratto/contratto al fine di inviare le informazioni e fornire il servizio richiesto come utente registrato, e questo non può essere fatto senza registrarsi.</li>
+            <li>Nel consenso dell'utente a inviare la newsletter e le comunicazioni commerciali delle offerte, attività e promozioni di CIFP CESAR MANRIQUE e del settore che potrebbe essere di loro interesse. L'utente può revocare il consenso dato in qualsiasi momento.</li>
           </ul>
 
           <h3>4. Qual è il tempo di conservazione dei vostri dati?</h3>
-          <p>I dati con il consenso a inviare le informazioni o fornire il servizio richiesto tramite i vari moduli disponibili sul nostro sito web, e la vostra registrazione come utente saranno conservati durante il periodo in cui il rapporto contrattuale è in vigore, e una volta completato durante il limite legale periodo.</p>
-          <p>I dati elaborati per inviare la newsletter, per inviare comunicazioni commerciali su offerte, attività e promozioni di CIFP CESAR MANRIQUE e del settore che potrebbe essere di vostro interesse, verranno conservati finchè l'utente non revoca il consenso dato.</p>
-          <p>L'indirizzo IP ottenuto tramite i cookie sarà valido per 1 anno al fine di dimostrare il consenso dell'utente.</p>
-          <p>Per quanto riguarda il termine di conservazione dei cookie, è possibile ottenere maggiori informazioni sul nostro sito web nella sezione "Politica dei cookie".</p>
+          <p>I dati con il consenso a inviare le informazioni o fornire il servizio richiesto tramite i vari moduli disponibili sul nostro sito web, e la vostra registrazione come utente saranno conservati durante il periodo in cui il rapporto contrattuale è in vigore, e una volta completato durante il limite legale di suddetto periodo.</p>
+          <p>I dati elaborati per inviare la newsletter, per inviare comunicazioni commerciali su offerte, attività e promozioni di CIFP CESAR MANRIQUE e del settore che potrebbe essere di vostro interesse, verranno conservati finché l'utente non revoca il consenso dato.</p>
+          <p>L'indirizzo IP ottenuto tramite i cookie sarà valido per 1 anno al fine di dimostrare il consenso dell'utente.</p>
+          <p>Per quanto riguarda il termine di conservazione dei cookie, è possibile ottenere maggiori informazioni sul nostro sito web nella sezione "Politica dei cookie".</p>
 
-          <h3>5. Con quale tipo di dati dagli nostri utenti lavoriamo?</h3>
+          <h3>5. Con quale tipo di dati dei nostri utenti lavoriamo?</h3>
           <p>CIFP CESAR MANRIQUE tratta le seguenti categorie dei dati:</p>
           <ol type="a">
             <li>
@@ -483,20 +483,20 @@
               <br/>
               I dati personali richiesti da CIFP CESAR MANRIQUE includono:
               <ul>
-                <li><strong>Dati identificativi:</strong> nome e cognome / cognomi, telefono, indirizzo postale ed indirizzo e-mail</li>
+                <li><strong>Dati identificativi:</strong> I dati degli utenti iscritti alla newsletter che vogliono ottenere informazioni sulla comunicazione commerciale:</li>
                 <li><strong>Dati relativi all'applicazione</strong></li>
               </ul>
             </li>
             <li>
-              <strong>I dati degli utenti iscritti alla newsletter / vogliono ottenere informazioni sulla comunicazione commerciale:</strong>
+              <strong>I dati degli utenti iscritti alla newsletter ottenere informazioni sulla comunicazione commerciale:</strong>
               <ul>
-                <li><strong>Dati identificativi:</strong> nome e cognome / cognomi, indirizzo e-mail.</li>
+                <li><strong>Dati identificativi:</strong> nome e cognome, indirizzo e-mail.</li>
               </ul>
             </li>
             <li>
               <strong>Dati degli utenti registrati nella nostra piattaforma:</strong>
               <ul>
-                <li><strong>Dati identificativi:</strong> nome e cognome / cognomi, indirizzo postale ed indirizzo e-mail, telefono</li>
+                <li><strong>Dati identificativi:</strong> nome e cognome, indirizzo postale ed indirizzo e-mail, telefono</li>
               </ul>
             </li>
             <li><strong>Dati degli utenti che navigano nel nostro sito web: dati forniti dai cookie e da Google Analytics.</strong></li>
@@ -506,7 +506,7 @@
           <p>L'utente garantisce l'autenticità e la tempestività di tutti i dati comunicati a CIFP CESAR MANRIQUE e dichiara di avere più di 16 anni e sarà l'unico responsabile di qualsiasi dichiarazione falsa o inesatta.</p>
           <p>I dati personali trattati da CIFP CESAR MANRIQUE possono essere obbligatori o volontari.</p>
           <p>Le informazioni volontarie sono quelle che l'utente non è obbligato a fornire.</p>
-          <p>I campi contrassegnati con un asterisco (*) o con la parola "richiesto" nei nostri moduli sono obbligatori, il rifiuto di fornirli renderà impossibile fornire il servizio o soddisfare vostra richiesta.</p>
+          <p>I campi contrassegnati con un asterisco (*) o con la parola "richiesto" nei nostri moduli sono obbligatori, il rifiuto di fornirli renderà impossibile fornire il servizio o soddisfare la vostra richiesta di registrazione.</p>
           <p>Se ci fornite informazioni da terzi, l'utente riconosce di essere autorizzato a farlo e accetta di trasferire le informazioni contenute in questa clausola, mentre CIFP CESAR MANRIQUE sarà esente da qualsiasi tipo di impegno. CIFP CESAR MANRIQUE può, tuttavia, effettuare verifiche per verificare che la terza parte sia stata informata, utilizzando le misure di controllo previste dai regolamenti sulla protezione dei dati.</p>
 
           <h3>6. A chi saranno comunicati i vostri dati?</h3>
@@ -518,14 +518,14 @@
           <ol type="a">
             <li>Avere accesso ai propri dati personali.</li>
             <li>Correggere i dati se sono inesatti o incompleti.</li>
-            <li>Richiedere la cancellazione o l'annullamento dei dati quando, tra le altre ragioni, non sono più necessari per gli scopi per cui sono stati raccolti.</li>
+            <li>Richiedere la cancellazione o l'annullamento dei dati quando, per altre ragioni, non sono più necessari agli scopi per cui sono stati raccolti.</li>
             <li>Opporsi al trattamento dei propri dati.</li>
             <li>Richiedere la limitazione del trattamento dei propri dati quando è soddisfatta una delle condizioni previste dai regolamenti.</li>
             <li>Richiedere la portabilità dei propri dati nei casi previsti dai regolamenti.</li>
             <li>Opporsi ad essere soggetti a decisioni automatizzate.</li>
             <li>Revocare i consensi concessi.</li>
           </ol>
-          <p>L'utente di esercitare i propri diritti, deve inviare una lettera che indica il diritto che si desidera esercitare, e allegare un documento che comprova la propria identità e l'indirizzo postale o elettronico a fini di notifica. Questa domanda può essere inviata per posta a: CIFP CESAR MANRIQUE Avenida Príncipes de España no5, 38010 - Santa Cruz de Tenerife, Spagna, o al seguente indirizzo e-mail: info@talentedeurope.org.</p>
+          <p>L'utente al fine di esercitare i propri diritti, deve inviare una lettera che indica il diritto che si desidera esercitare, e allegare un documento che comprova la propria identità e l'indirizzo postale o elettronico a fini di notifica. Questa domanda può essere inviata per posta a: CIFP CESAR MANRIQUE Avenida Príncipes de España no5, 38010 - Santa Cruz de Tenerife, Spagna, o al seguente indirizzo e-mail: info@talentedeurope.org.</p>
           <p>CIFP CESAR MANRIQUE deve rispondere alla richiesta di esercizio dei diritti entro un mese dal ricevimento della richiesta. Questo periodo può essere prolungato, se necessario, di altri due mesi, tenendo conto della complessità e del numero di domande. Vi informeremo di qualsiasi estensione entro un mese dal ricevimento della richiesta indicando i motivi del ritardo.</p>
           <p>Inoltre, le parti interessate hanno il diritto di presentare reclamo all'autorità di controllo competente (Agenzia spagnola per la protezione dei dati) quando ritengono che CIFP CESAR MANRIQUE abbia violato i diritti stabiliti nelle norme sulla protezione dei dati all'indirizzo <a href="https://www.aepd.es/" target="_blank">www.aepd.es</a>.</p>
 

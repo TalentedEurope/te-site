@@ -74,6 +74,8 @@ Route::group(['prefix' => 'validators'], function () {
 
     // Invitations
     Route::post('/add', 'ValidatorController@add')->name('add_validator');
+    Route::post('/upload', 'ValidatorController@process')->name('add_validator_file');
+
     Route::get('cancel/{id}', 'ValidatorController@deleteInvite')
         ->name('delete_invite');
     Route::get('confirm/{id}', 'ValidatorController@confirmInvite')
@@ -113,3 +115,9 @@ Route::get('auth/{provider}', 'Auth\RegisterController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\RegisterController@handleProviderCallback');
 Route::get('setup', 'Auth\RegisterController@getSetup')->name('getSetup');
 Route::post('setup', 'Auth\RegisterController@postSetup');
+
+Route::get('/test', function() {
+    $user = App\Models\User::where("email", "like", "ereguero%")->first();
+    $user->notify(new App\Notifications\MobileValidationPending($user));
+    echo "Done";
+});

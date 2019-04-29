@@ -637,4 +637,12 @@ dati).',
     
         'portal_check_it_out' => 'Controlla',
     
+        'contact_email' => 'e-mail contatto pubblico',
+    
+        'load_excel' => 'inviti di carico caricamento di un file excel',
+    
+        'download_template' => 'template scaricare',
+    
+        'send_invitations' => 'inviare inviti',
+    
 ];

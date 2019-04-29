@@ -41,7 +41,7 @@ return [
     
         'this_student_is' => 'This student is',
     
-        'finish_validation' => 'Finish_validation',
+        'finish_validation' => 'Finish validation',
     
         'give_us_explanation_of_student_is_not_valid' => 'Please give us an explanation of the reason the student is not valid.',
     

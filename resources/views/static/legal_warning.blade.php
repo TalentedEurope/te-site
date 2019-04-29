@@ -179,16 +179,16 @@
         </div>
 
       @elseif (App::getLocale() == 'it')
-        <h2 class="page-title">Avviso legale</h2>
+        <h2 class="page-title">La nota legale</h2>
         <div class="well">
           <h3 class="mt-0">1. Scopo e accettazione</h3>
           <p>Questo avviso legale regola l'uso del sito web: <a href="https://www.talentedeurope.eu/">www.talentedeurope.eu</a></p>
-          <p>Il sito web www.talentedeurope.eu fornisce servizi il cui obiettivo principale è quello di consentire il contatto tra gli utenti e l'azienda, sia per contattarci o per richiedere budget.</p>
-          <p>La navigazione della pagina www.talentedeurope.eu è attribuita alla condizione dell'utente, implica piena accettazione e accesso a tutte le foto incluse in questo Avviso Legale, che possono essere modificate.</p>
-          <p>L'utente si impegna a utilizzare correttamente il sito in conformità con la legge, buona fede, ordine pubblico, uso operativo e avviso legale. L'utente risponde a CIFP CESAR MANRIQUE e a terzi contro i danni che possono essere causati a seguito della violazione di questo obbligo.</p>
+          <p>Il sito web www.talentedeurope.eu fornisce servizi il cui obiettivo principale è quello di consentire un riscontro tra gli utenti e l'azienda, sia per contattarci sia per richiedere budget.</p>
+          <p>La navigazione della pagina www.talentedeurope.eu è attribuita alla condizione dell'utente, implica piena accettazione e accesso a tutti gli allegati inclusi in questo Avviso Legale, che possono essere modificati.</p>
+          <p>L'utente si impegna a utilizzare correttamente il sito in conformità con la legge, in buona fede, ordine pubblico, uso operativo e avviso legale. L'utente risponde a CIFP CESAR MANRIQUE e a terzi contro i danni che possono essere causati a seguito della violazione di questo obbligo.</p>
 
-          <h3>2. Proprietà del sito web e identificazione di un fornitore di servizi della società dell'informazione</h3>
-          <p>Al fine di rispettare il principio di informazioni generali richiesto dall'articolo 10 della Legge 34/2002, dell'11 luglio, servizi della società dell'informazione e commercio elettronico, informiamo i nostri utenti che questo sito web appartiene a CIFP CESAR MANRIQUE con CIF S3511001D.</p>
+          <h3>2. Proprietà del sito web e identificazione della società d’informazione fornitrice del servizio</h3>
+          <p>Al fine di rispettare il principio di informazioni generali richiesto dall'articolo 10 della Legge 34/2002, dell'11 luglio, servizi della società dell'informazione e commercio elettronico, informiamo i nostri utenti che questo sito web appartiene a CIFP CESAR MANRIQUE con CIF S3511001D.</p>
           <table class="table table-bordered">
             <tr>
               <td><strong>Indirizzo</strong></td>
@@ -205,8 +205,8 @@
           </table>
 
           <h3>3. Condizioni generali di accesso e utilizzo</h3>
-          <p>Il sito web ed i suoi servizi sono accessibili e gratuiti, sebbene l'uso di determinate aree o servizi sia condizionato dalle forme di raccolta dei dati stampate.</p>
-          <p>Webová stránka a jej služby sú prístupné a zadarmo, hoci použitie určitých oblastí alebo služieb je podmienené tlačenými formami zhromažďovania údajov. Solo le persone di età superiore ai 18 anni possono fornire dati tramite il nostro sito web e i minori di 16 anni non possono fornirli senza il consenso di genitori o tutori legali.</p>
+          <p>Il sito web ed i suoi servizi sono accessibili e gratuiti, sebbene l'uso di determinate aree o servizi sia condizionato dalle forme prescritte di raccolta dei dati.</p>
+          <p>Solo le persone di età superiore ai 18 anni possono fornire dati tramite il nostro sito web e i minori di 16 anni non possono fornirli senza il consenso di genitori o tutori legali.</p>
           <p>www.talentedeurope.eu ha i seguenti tipi di utenti:</p>
           <ul>
             <li>Utenti che forniscono dati in uno qualsiasi dei moduli disponibili: I dati personali richiesti da CIFP CESAR MANRIQUE includono il nome e l'indirizzo e-mail, nonché le informazioni fornite dall'utente durante la compilazione dei moduli.</li>
@@ -214,13 +214,13 @@
             <li>Utenti registrati: inclusi nome utente e password.</li>
           </ul>
 
-          <h4>3.1. Norme e divieti per gli utenti dei nostri servizi</h4>
+          <h4>3.1. Norme e divieti per i fruitori dei nostri servizi</h4>
           <p>L'utente accetta espressamente l'uso adeguato del contenuto offerto e non lo utilizza per:</p>
           <ul>
             <li>La diffusione di contenuti criminosi, violenti, pornografici, razzisti, xenofobi, offensivi, difensori del terrorismo o generalmente contrari alla legge o all'ordine pubblico.</li>
             <li>Avvio di virus informatici nella rete o esecuzione dell'attività che possono alterare, danneggiare, interrompere o generare errori o danni a documenti elettronici, dati o sistemi fisici e logici di CIFP CESAR MANRIQUE o di terzi; così come ostacolare l'accesso di altri utenti al sito web e ai suoi servizi.</li>
-            <li>Un tentativo di accedere ai sistemi informatici CIFP CESAR MANRIQUE vietati dal CIFP o da terzi e, se del caso, per ottenere informazioni.</li>
-            <li>Violazione dei diritti di proprietà intellettuale o industriale, nonché violazione della riservatezza delle informazioni di CISP MANUEL CIF o di terzi.</li>
+            <li>Tentativo di accedere ai sistemi informatici CIFP CESAR MANRIQUE vietati dal CIFP o da terzi e, se del caso, per ottenere informazioni.</li>
+            <li>Violazione dei diritti di proprietà intellettuale o industriale, nonché violazione della riservatezza delle informazioni di CIFP CESAR MANRIQUE  o di terzi.</li>
             <li>Impersonare l'identità di un altro utente, delle pubbliche amministrazioni o di una terza parte.</li>
             <li>Riprodurre, copiare, distribuire o modificare i contenuti a meno che tu non abbia diritto del proprietario del copyright o che non sia legalmente consentito.</li>
             <li>Raccolta dei dati per scopi pubblicitari e inviare pubblicità di qualsiasi tipo e comunicazioni con vendite o altre multe commerciali senza la vostra richiesta di consenso.</li>
@@ -230,20 +230,20 @@
           <p>Nel caso in cui l'utente ritenga che vi sia un fatto o circostanze che rivelano la natura illegale dell'uso di un contenuto del sito web, è necessario inviare una notifica a CIFP CESAR MANRIQUE, con idonea identificazione, e indicare le presunte infrazioni e dichiararle espressamente e sotto la sua responsabilità che le informazioni fornite nella notifica sono precise.</p>
 
           <h3>4. Informativa sulla privacy</h3>
-          <p>L'utente può consultare come CIFP CESAR MANRIQUE utilizza i suoi dati e implementate <a href="/privacy-policy">"misure di sicurezza"</a>.</p>
+          <p>L'utente può consultare come CIFP CESAR MANRIQUE utilizza i suoi dati e le sue misure di sicurezza al link: <a href="/privacy-policy">"misure di sicurezza"</a>.</p>
 
           <h3>5. Regole dei cookies</h3>
           <p>CIFP CESAR MANRIQUE installa i cookie sul computer dell'utente. Per ulteriori informazioni sui cookie sul nostro sito web, visitare il seguente link: <a href="/cookies">"cookie policy"</a>.</p>
 
           <h3>6. Notifiche</h3>
-          <p>Tutte le notifiche e le comunicazioni tra gli utenti e CIFP CESAR MANRIQUE sono considerate efficaci a tutti gli effetti se effettuate per posta, e-mail o telefono. Gli utenti devono contattare CIFP CESAR MANRIQUE con seguente modo:</p>
+          <p>Tutte le notifiche e le comunicazioni tra gli utenti e CIFP CESAR MANRIQUE sono considerate efficaci a tutti gli effetti se effettuate per posta, e-mail o telefono. Gli utenti possono contattare CIFP CESAR MANRIQUE tramite le seguenti modalità:</p>
           <ul>
             <li>Inviare per posta al seguente indirizzo: CIFP CESAR MANRIQUE - Avenida Príncipes de España no5, 38010 - Santa Cruz De Tenerife. Spagna</li>
             <li>Inviare e-mail al seguente indirizzo: info@talentedeurope.org</li>
           </ul>
 
           <h3>7. Proprietà industriale e proprietà intellettuale</h3>
-          <p>Tutto il contenuto del sito web, come testi, fotografie, grafica, immagini, icone, tecnologia, software, nonché grafica e codici sorgente, è un lavoro di proprietà di CIFP CESAR MANRIQUE, senza il quale l'utente può essere considerato la persona che trasferisce diritti dell'utente oltre a quelli necessari per il corretto utilizzo del sito.</p>
+          <p>Tutto il contenuto del sito web, come testi, fotografie, grafica, immagini, icone, tecnologia, software, nonché grafica e codici sorgente, è un lavoro di proprietà di CIFP CESAR MANRIQUE, senza il quale l'Utente può essere considerato perdente dei diritti di sfruttamento su di essi oltre a quanto strettamente necessario per il corretto utilizzo del Web.</p>
           <p>In breve, gli utenti che accedono a questo sito Web possono visualizzare il contenuto e possibilmente effettuare copie private autorizzate, a condizione che gli elementi riprodotti non vengano successivamente trasferiti a terzi né installati su server connessi a reti o soggetti a qualsiasi tipo di utilizzo e solo per la durata di questo servizio.</p>
           <p>Allo stesso modo, tutti i marchi, nomi commerciali o segni distintivi di qualsiasi tipo che appaiono sul sito web sono di proprietà di CIFP CESAR MANRIQUE, senza che si intenda che l'uso o l'accesso degli stessi conferisce all'Utente qualsiasi diritto su di essi.</p>
           <p>La distribuzione, la modifica, il trasferimento o la comunicazione pubblica dei contenuti e qualsiasi altro atto che non sia stato espressamente autorizzato da CIFP CESAR MANRIQUE è vietato. In caso di mancato rispetto, CIFP CESAR MANRIQUE adotterà le opportune azioni legali.</p>

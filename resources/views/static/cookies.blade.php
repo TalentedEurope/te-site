@@ -296,8 +296,8 @@
       @elseif (App::getLocale() == 'it')
         <h2 class="page-title">Politica sui cookie</h2>
         <div class="well">
-          <h3 class="mt-0">1. Cosa sono i cookie?</h3>
-          <p>Un cookie è un file di testo che un server web può salvare sul disco rigido del tuo computer per memorizzare un certo tipo di informazioni su di te come utente. I cookie vengono utilizzati per scopi quali la memorizzazione dei dati per le visite future, il riconoscimento dell'utente e l'evitamento dei requisiti per la nuova autenticazione, la conoscenza delle pagine visitate o il salvataggio delle preferenze in aree personalizzabili.... Normalmente, i siti web utilizzano i cookie per ottenere informazioni statistiche sulle loro pagine web e per analizzare il comportamento dei loro clienti.</p>
+          <h3 class="mt-0">1. Che cosa sono i cookie?</h3>
+          <p>Un cookie è un file di testo che un server web può salvare sul disco rigido del tuo computer per memorizzare un certo tipo di informazioni su di te come utente. I cookie vengono utilizzati per scopi quali la memorizzazione dei dati al fine di agevolare le visite future, il riconoscimento dell'utente e la non richiesta dei requisiti per la nuova autenticazione, la conoscenza delle pagine visitate o il salvataggio delle preferenze in aree personalizzabili. Normalmente, i siti web utilizzano i cookie per ottenere informazioni statistiche sulle loro pagine web e per analizzare il comportamento dei loro clienti.</p>
 
           <h3>2. Tipi di cookie</h3>
           <p>I cookie possono essere classificati secondo i seguenti criteri:</p>
@@ -306,16 +306,16 @@
             <li><strong>Propri cookie:</strong> Sono quelli che vengono inviati all'apparecchiatura terminale dell'utente da un computer o dominio gestito dall'editor stesso e da cui viene fornito il servizio richiesto dall'utente.</li>
             <li><strong>Cookie di terze parti:</strong> Vengono inviati all'apparecchiatura terminale dell'utente da un computer o dominio gestito da noi o da una terza parte, ma le informazioni raccolte dai cookie sono gestite da terze parti diverse dal proprietario del sito web.</li>
           </ul>
-          <p>A seconda data della scadenza:</p>
+          <p>A seconda della data di scadenza:</p>
           <ul>
             <li><strong>Cookie / sessioni temporanee:</strong> File che durano fino a quando l'utente visualizza la pagina Web e verranno rimossi dopo la navigazione.</li>
-            <li><strong>Cookie persistenti:</strong> Vengono memorizzati nel terminale dell'utente per un periodo più lungo, facilitando così il controllo delle preferenze scelte senza dover ripetere i parametri ogni volta che si visita il sito.</li>
+            <li><strong>Cookie persistenti:</strong> Vengono memorizzati nel terminale dell'utente per un periodo più lungo, facilitando così il controllo delle preferenze scelte senza dover ripetere i parametri ogni volta che si visita il sito.</li>
           </ul>
           <p>A seconda dello scopo:</p>
           <ul>
-            <li><strong>Cookie tecnici:</strong> I cookie tecnici sono essenziali e strettamente necessari per il corretto funzionamento di un sito web e l'uso delle varie opzioni e servizi offerti, ad es. attività di manutenzione della sessione, quelle che utilizzano elementi di sicurezza, condividono il contenuto con i social network, ecc.</li>
+            <li><strong>Cookie tecnici:</strong> I cookie tecnici sono essenziali e strettamente necessari per il corretto funzionamento di un sito web e l'uso delle varie opzioni e servizi offerti, ad es. attività di manutenzione della sessione, quelle che utilizzano elementi di sicurezza, condividono il contenuto con i social network, ecc.</li>
             <li><strong>Cookie personalizzati:</strong> Consente agli utenti di selezionare o personalizzare le proprietà del sito web come lingua, regione o tipo di browser.</li>
-            <li><strong>Cookie analitici:</strong> Utilizzano i loro siti web per creare profili di navigazione e riconoscere le preferenze dell'utente finale al fine di migliorare la gamma di prodotti e servizi. Consentono di gestire aree geografiche di maggiore interesse per l'utente, informazioni più ampie sul sito, ecc.</li>
+            <li><strong>Cookie analitici:</strong> Utilizzano i loro siti web per creare profili di navigazione e riconoscere le preferenze dell'utente al fine di migliorare la gamma di prodotti e servizi. Consentono di gestire aree geografiche di maggiore interesse per l'utente, informazioni più ampie sul sito, ecc.</li>
             <li><strong>Cookie pubblicitari:</strong> Consentono la gestione degli spazi pubblicitari in base a criteri specifici, come frequenza di connessione, contenuto modificato, ecc. I cookie pubblicitari consentono di comunicare abitudini, esplorare l'accesso e creare un profilo di preferenze utente per pubblicare annunci correlati ai loro interessi di profilo.</li>
           </ul>
 
@@ -394,15 +394,15 @@
           </div>
 
           <p>Questo sito web, come la maggior parte dei siti web, contiene funzionalità fornite da terze parti.</p>
-          <p>Il nostro sito Web è un sito web in diretta e nuovi design o servizi di terze parti possono essere inclusi. Questo può occasionalmente alterare la configurazione e l'aspetto dei cookie, che non sono dettagliati in queste regole.</p>
+          <p>Il nostro sito Web è un sito web simultaneo e nuovi design o servizi di terze parti possono essere inclusi. Questo può occasionalmente alterare la configurazione e l'aspetto dei cookie, il cui aspetto non subisce delle regole predefinite.</p>
           <p>Il nostro sito non gestisce i cookie utilizzati da queste terze parti. Per ulteriori informazioni sui cookie dei social o altri siti web di terze parti, vi invitiamo a leggere la vostra politica sui cookie.</p>
 
           <h3>4. Informazioni e ottenimento del consenso per l'installazione</h3>
-          <p>www.talentedeurope.eu cercherà sempre di creare meccanismi appropriati per ottenere il consenso dell'utente all'installazione dei cookie che lo richiedono. Quando un utente accede al nostro sito web, viene visualizzata una finestra popup che indica l'esistenza di cookie e, se si continua a navigare nei nostri siti, si accetta di installare i cookie.</p>
+          <p>www.talentedeurope.eu cercherà sempre di creare meccanismi appropriati per ottenere il consenso dell'utente all'installazione dei cookie che vengono richiesti. Quando un utente accede al nostro sito web, viene visualizzata una finestra popup che indica l'esistenza di cookie e, se si continua a navigare nei nostri siti, si accetta di installare i cookie.</p>
 
           <h3>5. Come impedire l'installazione dei cookie ?</h3>
-          <p>L'utente può configurare il proprio browser per accettare o meno i cookie che ricevono o il browser per avvisarlo quando il server vuole salvare il cookie. Se alcuni cookie tecnici sono disabilitati, alcuni degli strumenti del sito non sono garantiti per funzionare correttamente.</p>
-          <p>L'utente può escludere che i cookie "analitici e pubblicitari" di Google Analytics siano memorizzati sul proprio terminale utilizzando i <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">sistemi di esclusione forniti da Google Analytics</a>.</p>
+          <p>L'utente può configurare il proprio browser per accettare o meno  la ricezione dei cookie, o il browser per avvisarlo quando il server vuole salvare il cookie. Se alcuni cookie tecnici sono disabilitati, alcuni degli strumenti del sito non sono garantiti al corretto funzionamento.</p>
+          <p>L'utente può escludere che i cookie "analitici e pubblicitari" di Google Analytics siano memorizzati sul proprio terminale utilizzando i<a href="https://tools.google.com/dlpage/gaoptout" target="_blank">sistemi di esclusione forniti da Google Analytics</a>.</p>
           <p>Ecco alcuni esempi su come disattivare i cookie:</p>
           <ol type="a">
             <li>

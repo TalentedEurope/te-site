@@ -633,4 +633,12 @@ return [
     
         'portal_check_it_out' => 'Echale un vistazo',
     
+        'contact_email' => 'Dirección de email publica para contacto',
+    
+        'load_excel' => 'Cargar invitaciones subiendo un fichero de excel',
+    
+        'download_template' => 'Descarga la plantilla',
+    
+        'send_invitations' => 'Enviar invitaciones',
+    
 ];

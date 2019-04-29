@@ -642,4 +642,12 @@ Sur',
     
         'portal_check_it_out' => 'Vérifiez-le',
     
+        'contact_email' => 'e-mail de contact public',
+    
+        'load_excel' => 'invitations Charger un fichier Excel téléchargeant',
+    
+        'download_template' => 'Télécharger le kit graphique',
+    
+        'send_invitations' => 'Envoyer des invitations',
+    
 ];
