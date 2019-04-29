@@ -39,9 +39,9 @@ class User extends Authenticatable
                         'notify_me' => 'sometimes|required|boolean',
                         'name' => 'sometimes|required',
                         'phone' => 'regex:/^[\pN\s\d\+\-\(\)\.]+$/u' ,
-                        'facebook' => 'active_url' ,
-                        'twitter' => 'active_url' ,
-                        'linkedin' => 'active_url' ,
+                        'facebook' => 'url',
+                        'twitter' => 'url',
+                        'linkedin' => 'url',
                         'address' => 'max:300',
                         'postal_code' => 'max:12',
                         'password' => 'sometimes|required|min:8|same:password_confirm',
@@ -189,7 +189,7 @@ class User extends Authenticatable
        $res=parent::delete();
        if($res==true)
        {
-                $userable = $this->userable; 
+                $userable = $this->userable;
                 $userable->delete();
         }
     }

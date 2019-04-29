@@ -633,4 +633,12 @@ return [
     
         'portal_check_it_out' => 'Hör zu',
     
+        'contact_email' => 'Öffentlicher Kontakt E-Mail',
+    
+        'load_excel' => 'Laden Einladungen eine Excel-Datei hochladen',
+    
+        'download_template' => 'Vorlage herunterladen',
+    
+        'send_invitations' => 'Einladungen verschicken',
+    
 ];

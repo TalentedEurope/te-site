@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "prod": "gulp --production",
+    "trans": "gulp translate",
     "dev": "gulp watch"
   },
   "devDependencies": {

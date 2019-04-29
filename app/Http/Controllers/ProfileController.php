@@ -246,16 +246,29 @@ class ProfileController extends Controller
         if (isset($values['twitter']) && starts_with($values['twitter'], '@')) {
             $values['twitter'] = str_replace('@', "http://twitter.com/", $values['twitter']);
         }
+
+        if (in_array("facebook", array_keys($values)) && $values['facebook'] == null) {
+            $values['facebook'] = "";
+        }
+        if (in_array("facebook", array_keys($values)) && $values['twitter'] == null) {
+            $values['twitter'] = "";
+        }
+        if (in_array("facebook", array_keys($values)) && $values['linkedin'] == null) {
+            $values['linkedin'] = "";
+        }
+
         $v = Validator::make($values, User::rules(false, false, $user));
         $v->setAttributeNames(User::niceNames());
 
         $errors = $errors->merge($v);
+
         foreach ($v->valid() as $key => $value) {
-            if ($key != 'email' && array_has($user['attributes'], $key) && !$request->has('validate')) {
+            if ($key != 'email' && array_has($user->getAttributes(), $key) && !$request->has('validate')) {
                 $user->$key = $value;
+
             }
         }
-
+        
         // Password reset.
         // Unlike the other fields we only check them if they're passed
         if ($request->has('password') || $request->has('password_confirm')) {
@@ -295,7 +308,7 @@ class ProfileController extends Controller
                 $img->resizeCanvas(User::$photoWidth, User::$photoHeight, "center", false, "ffffff")->save($fname);
             }
             $user->image = basename($fname);
-        }        
+        }
 
         if (!$request->has('validate') && $request->has('deletePhoto')) {
             $file = public_path() . User::$photoPath . $user->image;
@@ -327,7 +340,7 @@ class ProfileController extends Controller
         $v->setAttributeNames(Company::niceNames());
 
         foreach ($v->valid() as $key => $value) {
-            if (array_has($company['attributes'], $key) && !$request->has('validate')) {
+            if (array_has($company->getAttributes(), $key) && !$request->has('validate')) {
                 $company->$key = $value;
             }
         }
@@ -379,7 +392,7 @@ class ProfileController extends Controller
         $offers = $request->input('offers');
         $remove = $request->input('remove_offers');
         $v = Validator::make($request->input(), Company::Rules($user->userable, "job_offers_url"));
-        $errors->merge($v);            
+        $errors->merge($v);
         if ($v->valid()) {
             $company->job_offers_url = $request->input("job_offers_url");
             $company->save();
@@ -389,27 +402,27 @@ class ProfileController extends Controller
                 $v = Validator::make($offer, Company::rulesRelated('offers'));
                 $v->setAttributeNames(Company::relatedNiceNames('offers'));
                 if ($v->valid()) {
-                    $o = new JobOffer();                
+                    $o = new JobOffer();
                     if (isset($offer["id"])) {
-                        $o = JobOffer::find($offer["id"]);                        
+                        $o = JobOffer::find($offer["id"]);
                         if (!$o || $o->company_id != $company->id) continue;
                     }
                     $o->title = filter_var($offer["title"], FILTER_SANITIZE_STRING);
                     $o->description = filter_var($offer["description"], FILTER_SANITIZE_STRING);
                     $o->company_id = $company->id;
                     $o->save();
-                } 
-                $errors->merge($v);            
+                }
+                $errors->merge($v);
             }
         }
         if ($remove) {
             foreach ($remove as $offer) {
-                $o = JobOffer::find($offer);                                
+                $o = JobOffer::find($offer);
                 if (!$o || $o->company_id != $company->id) continue;
                 $o->delete();
-            }    
-        }        
-        
+            }
+        }
+
         return $errors;
     }
 
@@ -434,7 +447,7 @@ class ProfileController extends Controller
                 $file = $fname . $extension;
                 $value->move(public_path() . Institution::$certificatePath, basename($file));
                 $institution->$key = basename($file);
-            } elseif (array_has($institution['attributes'], $key) && !$request->has('validate')) {
+            } elseif (array_has($institution->getAttributes(), $key) && !$request->has('validate')) {
                 $institution->$key = $value;
             }
         }
@@ -471,7 +484,7 @@ class ProfileController extends Controller
         $v = Validator::make($request->all(), \App\Models\Validator::rules($validator));
         $v->setAttributeNames(\App\Models\Validator::niceNames());
         foreach ($v->valid() as $key => $value) {
-            if (array_has($validator['attributes'], $key) && !$request->has('validate')) {
+            if (array_has($validator->getAttributes(), $key) && !$request->has('validate')) {
                 $validator->$key = $value;
             }
         }
@@ -585,7 +598,7 @@ class ProfileController extends Controller
         $errors = $errors->merge($v);
 
         foreach ($v->valid() as $key => $value) {
-            if (!is_array($value) && array_has($student['attributes'], $key) && !$request->has('validate')) {
+            if (!is_array($value) && array_has($student->getAttributes(), $key) && !$request->has('validate')) {
                 $student->$key = $value;
             }
         }
@@ -914,7 +927,7 @@ class ProfileController extends Controller
         $studyFields = array();
         $languageLevels = array();
         $languages = array();
-        $nationalities = array();        
+        $nationalities = array();
         foreach (StudentLanguage::$languages as $key => $item) {
             $languages[$key] = $item['name'];
         }

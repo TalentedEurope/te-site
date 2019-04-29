@@ -634,4 +634,12 @@ Obchodná a poradenská činnosť',
     
         'portal_check_it_out' => 'Skontrolovať to',
     
+        'contact_email' => 'Verejné kontaktný email',
+    
+        'load_excel' => 'Zaťaženie pozvánky nahratí súboru Excel',
+    
+        'download_template' => 'Stiahnuť šablónu',
+    
+        'send_invitations' => 'odoslať pozvánky',
+    
 ];

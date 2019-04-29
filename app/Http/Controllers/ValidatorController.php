@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Auth;
 use Bouncer;
 use App;
@@ -14,8 +13,10 @@ use App\Notifications\InstitutionRemoved;
 use App\Notifications\InviteCreated;
 use App\Notifications\ReverseInviteCreated;
 use App\Notifications\ChangeInstitution;
-use Validator;
+use Illuminate\Http\Request;
+use PhpOffice\PhpSpreadsheet\IOFactory;
 use Response;
+use Validator;
 
 class ValidatorController extends Controller
 {
@@ -134,6 +135,58 @@ class ValidatorController extends Controller
             return back()->withInput()->withErrors($v->errors());
         }
     }
+
+    public function process(Request $request)
+    {
+        $v=Validator::make($request->all(),[
+               'validators_file'=>'required|max:50000|mimes:xlsx,xls'
+        ]);
+        if ($v->fails()) {
+            return back()->withErrors($v);
+        }
+
+        $this->institutionOnly();
+        $file = $request->file('validators_file');
+        $inputFileName = $file->getRealPath();
+        $spreadsheet = IOFactory::load($inputFileName);
+        $sheetData = $spreadsheet->getActiveSheet()->toArray(null, true, true, true);
+        if ($sheetData[1]["A"] == "Email") {
+            $flashMessage = "";
+            $flashErrors = "";
+            $errors = null;
+            for ($i=2; $i < sizeOf($sheetData); $i++) {
+                Validator::extend(
+                    'can_be_validator',
+                    function ($attribute, $value, $parameters, $validator) {
+                        $exists = User::where('email', $value)->first();
+                        if ($exists && $exists->userable_type != \App\Models\Validator::class) {
+                            return false;
+                        }
+                        if (ValidatorInvite::where('email', $value)->where('institution_id', Auth::user()->userable->id)->first()) {
+                            return false;
+                        }
+
+                        return true;
+                    },
+                    array(
+                        trans('validators.cannot_invite')
+                    )
+                );
+                $vv = Validator::make(array("email" => $sheetData[$i]["A"]) , ValidatorInvite::rules());
+                if ($vv->passes()) {
+                    $this->addValidator($sheetData[$i]["A"], Auth::user()->userable->id);
+                    $flashMessage .= sprintf(trans('validators.send_invitation_to'), $sheetData[$i]["A"]) . "<br/>";
+                } else {
+                    $flashErrors .= $sheetData[$i]["A"] . ": " . trans('validators.cannot_invite') . "<br/>";
+                }
+            }
+            if ($flashMessage) $request->session()->flash('success_message', $flashMessage);
+            if ($flashErrors) $request->session()->flash('error_message', $flashErrors);
+            return back()->withInput();
+        }
+        return back();
+    }
+
 
     public function addValidator($email, $institution_id, $reverse = false, $silent = false)
     {

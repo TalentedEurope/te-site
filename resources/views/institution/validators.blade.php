@@ -45,6 +45,25 @@
               </button>
               </p>
           </form>
+          <form enctype='multipart/form-data'  class="well form-vertical" role="form" method="POST" action="{{ route('add_validator_file') }}" >
+             {{ csrf_field() }}
+             {!! trans('reg-profile.load_excel')  !!} <a href="{{ asset('/docs/add_validators.xlsx')  }} ">{!! trans('reg-profile.download_template') !!} </a>
+             <input type="file" name="validators_file">
+             @if($errors->has('email'))
+              {{ $errors->first('email') }}
+             @endif
+
+
+
+              <p class="text-right">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                  {!! trans('reg-profile.send_invitations') !!}
+                </button>
+              </p>
+          </form>
+
+
+
       </div>
       <div class="col-sm-6 sm-no-padding-right">
         <h2>{!! trans('validators.invites_pending') !!}</h2>

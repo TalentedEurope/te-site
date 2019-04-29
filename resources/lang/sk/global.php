@@ -109,6 +109,8 @@ return [
     
         'blog' => 'projekt',
     
+        'web' => 'webové stránky',
+    
         'cookies' => 'Informácie o cookies',
     
         'privacy_policy' => 'Ochrana súkromia',

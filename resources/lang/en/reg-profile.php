@@ -633,4 +633,12 @@ return [
     
         'portal_check_it_out' => 'Check it out',
     
+        'contact_email' => 'Public contact email',
+    
+        'load_excel' => 'Load invitations uploading a excel file',
+    
+        'download_template' => 'Download template',
+    
+        'send_invitations' => 'Send invitations',
+    
 ];

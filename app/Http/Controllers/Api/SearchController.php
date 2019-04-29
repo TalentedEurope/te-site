@@ -16,6 +16,7 @@ use App\Models\StudentTraining;
 use App\Models\StudyKeyword;
 use App\Models\Institution;
 use App\Models\Alert;
+use App\Models\JobOffer;
 use App\Models\ProfessionalSkill;
 use App\Http\Requests;
 use JWTAuth;
@@ -251,8 +252,12 @@ class SearchController extends SiteSearchController
             if (in_array("has-job-portal", $offerOptions)) {
                 $results->where('job_offers_url', "!=", "");
             }
-
         }
+
+        $companyOffers = JobOffer::select("company_id")->groupBy("company_id")->limit(env('PAGINATE_ENTRIES', 10) * 10)->get();
+        $companyOffers = $companyOffers->map(function ($item, $key) { return $item["company_id"]; })->toArray();
+        $results = $results->orderByRaw('FIELD (id, ' . implode(', ', $companyOffers) . ') DESC');
+
 
         // Lets take a look at the text query
         $userIds = array();
@@ -284,11 +289,8 @@ class SearchController extends SiteSearchController
         $maxAlerts = 0;
         if ($user && $user->isA('student')) {
             $alerts = array_flatten(Alert::where('origin_id', $user->id)->whereDate('created_at', '>', Carbon::now()->subDays(env("MIN_ALERT_DAYS", 1)))->select('target_id')->get()->toArray());
-
             $maxAlerts = env('MAX_ALERTS', 3) - Alert::where("origin_id", $user->id)->whereDate('created_at', Carbon::today())->count();
         }
-
-
 
         $companies = array();
         foreach ($results as $company) {
@@ -520,6 +522,11 @@ class SearchController extends SiteSearchController
             );
         }
 
+        $data[] = array(            'id' => 'job_offers',            'title' => trans('reg-profile.job_offers'),
+            'items' => array(array( "id" => "has-offers", "name" => trans('reg-profile.has_job_offers')),
+                        array( "id" => "has-job-portal", "name" => trans('reg-profile.has_job_portal')))
+        );
+
 
         $data[] = array(
             'id' => 'activities',
@@ -531,13 +538,6 @@ class SearchController extends SiteSearchController
             'id' => 'countries',
             'title' => trans('reg-profile.countries'),
             'items' => $countries
-        );
-
-        $data[] = array(
-            'id' => 'job_offers',
-            'title' => trans('reg-profile.job_offers'),
-            'items' => array(array( "id" => "has-offers", "name" => trans('reg-profile.has_job_offers')),
-                        array( "id" => "has-job-portal", "name" => trans('reg-profile.has_job_portal')))            
         );
 
         return $data;
