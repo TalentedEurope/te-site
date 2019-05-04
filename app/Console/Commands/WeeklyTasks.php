@@ -40,11 +40,6 @@ class WeeklyTasks extends Command
      */
     public function handle()
     {
-        $fillAlerts = User::where('is_filled', false)->where('notify_me', true)->get();
 
-        foreach ($fillAlerts as $fal) {
-            $fal->notify(new ProfileNotFilled($fal));
-        }
-        //User::where('has_logged_in',false)->where('created_at', '<', Carbon::now()->subDays(env("MIN_DELETE_DAYS", 7)))->delete();
     }
 }

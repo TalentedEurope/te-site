@@ -11,4 +11,8 @@ return [
     
         'student_alerted_company_body' => 'Student %s sent you an alert',
     
+        'new_validation_subject' => 'Pending refeeral',
+    
+        'new_validation_body' => 'You have pending one or more student refeeral',
+    
 ];

@@ -28,13 +28,12 @@ class MobileValidationPending extends Notification
     public function toOneSignal($notifiable)
     {
         \App\Http\Middleware\Language::setMailLang($this->referee);
-        $subject = "Funciona???"; // trans('notification.student_alerted_company_subject');
-        $body = "Dime por slack si te ha llegado xfa"; //sprintf(trans('notification.student_alerted_company_body'), $this->student->fullName);
+        $subject = trans('notification.new_validation_subject');
+        $body = trans('notification.new_validation_body');
         App::setLocale($this->oldLocale);
 
         return OneSignalMessage::create()
             ->subject($subject)
             ->body($body);
-
     }
 }

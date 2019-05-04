@@ -9,6 +9,7 @@ use App\Models\Company;
 use App\Models\User;
 use App\Models\Validator;
 use App\Models\Alert;
+use App\Notifications\MobileValidationPending;
 use App\Notifications\NewAlerts;
 use App\Notifications\ProfileNotFilled;
 use App\Notifications\ValidationsPending;
@@ -61,8 +62,10 @@ class Cleanup extends Command
         });
 
         foreach ($validators as $val) {
-            if ($val->user && $val->user->notify == 1 && $val->user->enabled == 1)
+            if ($val->user && $val->user->notify == 1 && $val->user->enabled == 1) {
                 $val->user->notify(new ValidationsPending($val->user));
+                $val->user->notify(new MobileValidationPending($val->user));
+            }
         }
 
         foreach ($alerts as $al) {

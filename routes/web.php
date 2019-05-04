@@ -115,9 +115,3 @@ Route::get('auth/{provider}', 'Auth\RegisterController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\RegisterController@handleProviderCallback');
 Route::get('setup', 'Auth\RegisterController@getSetup')->name('getSetup');
 Route::post('setup', 'Auth\RegisterController@postSetup');
-
-Route::get('/test', function() {
-    $user = App\Models\User::where("email", "like", "ereguero%")->first();
-    $user->notify(new App\Notifications\MobileValidationPending($user));
-    echo "Done";
-});

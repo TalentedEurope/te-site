@@ -11,4 +11,8 @@ return [
     
         'student_alerted_company_body' => 'Student %s sent you an alert',
     
+        'new_validation_subject' => 'čaká na refeeral',
+    
+        'new_validation_body' => 'Ste čaká na jednu alebo viac študentov refeeral',
+    
 ];

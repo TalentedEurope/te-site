@@ -11,4 +11,8 @@ return [
     
         'student_alerted_company_body' => 'El estudiante %s te ha enviado una alerta',
     
+        'new_validation_subject' => 'Validación pendiente',
+    
+        'new_validation_body' => 'Tienes pendiente una o varias validaciones',
+    
 ];

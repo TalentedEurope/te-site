@@ -17,6 +17,7 @@ use App\Models\PersonalSkill;
 use App\Models\ProfessionalSkill;
 use App\Notifications\ValidatorRequested;
 use App\Notifications\StudentVisited;
+use App\Notifications\MobileValidationPending;
 use App\Models\Alert;
 use Carbon\Carbon;
 use App\Http\Controllers\Api\LoginController;
@@ -268,7 +269,7 @@ class ProfileController extends Controller
 
             }
         }
-        
+
         // Password reset.
         // Unlike the other fields we only check them if they're passed
         if ($request->has('password') || $request->has('password_confirm')) {
@@ -1126,6 +1127,7 @@ class ProfileController extends Controller
                 'student_id' => Auth::user()->userable->id,
                 'validator_id' => $val->id
             ]);
+            $val->user->notify(new MobileValidationPending($val->user));
         } else {
             $ins = Institution::find($request->input('institution'));
             if (!$ins) {

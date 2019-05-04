@@ -11,4 +11,8 @@ return [
     
         'student_alerted_company_body' => 'Student %s sent you an alert',
     
+        'new_validation_subject' => 'Schwebende refeeral',
+    
+        'new_validation_body' => 'Sie haben anhängig einen oder mehrere Schüler refeeral',
+    
 ];
