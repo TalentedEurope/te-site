@@ -650,4 +650,6 @@ Sur',
     
         'send_invitations' => 'Envoyer des invitations',
     
+        'public_email' => 'email public',
+    
 ];

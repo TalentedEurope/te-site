@@ -90,7 +90,7 @@ class RegisterController extends Controller
             'type' => 'required|in:company,validator,institution,student',
             'terms' => 'required',
             'institution_name' => 'required_if:invite_institution,invite',
-            'institution_email' => 'email|required_if:invite_institution,invite|unique:users,email'
+            'institution_email' => 'required_if:invite_institution,invite|unique:users,email'
         ]);
         $val->setAttributeNames(User::niceNames());
         return $val;
@@ -251,9 +251,9 @@ class RegisterController extends Controller
         }
         if ($user->verified != true) {
             UserVerification::generate($user);
-            $user->notify(new AccountActivated($user));                    
+            $user->notify(new AccountActivated($user));
         }
-        
+
         return $user;
     }
 

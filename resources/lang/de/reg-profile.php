@@ -641,4 +641,6 @@ return [
     
         'send_invitations' => 'Einladungen verschicken',
     
+        'public_email' => 'öffentliche E-Mail',
+    
 ];

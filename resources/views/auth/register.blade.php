@@ -50,6 +50,11 @@
         @if ($errors->count())
           <div class="alert alert-danger" role="alert">
             {!! trans('register.there_have_been_some_errors') !!}
+            <ul>
+              @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+              @endforeach
+            </ul>
           </div>
         @endif
         <div>

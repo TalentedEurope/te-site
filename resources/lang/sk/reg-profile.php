@@ -642,4 +642,6 @@ Obchodná a poradenská činnosť',
     
         'send_invitations' => 'odoslať pozvánky',
     
+        'public_email' => 'verejný email',
+    
 ];

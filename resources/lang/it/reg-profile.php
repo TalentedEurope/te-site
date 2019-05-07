@@ -645,4 +645,6 @@ dati).',
     
         'send_invitations' => 'inviare inviti',
     
+        'public_email' => 'e-mail pubblica',
+    
 ];

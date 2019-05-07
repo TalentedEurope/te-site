@@ -3,7 +3,7 @@
 
 return [
     
-        'reset_password' => 'Reiniciar la contraseña',
+        'reset_password' => 'Recuperar contraseña',
     
         'send_password_reset' => 'Enviar un enlace para reiniciar la contraseña',
     

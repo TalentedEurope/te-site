@@ -641,4 +641,6 @@ return [
     
         'send_invitations' => 'Send invitations',
     
+        'public_email' => 'Public email ',
+    
 ];
