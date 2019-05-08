@@ -91,7 +91,8 @@ class ProfileController extends SiteProfileController
             $students = array();
             foreach ($user->userable->validationRequest as $request) {
                 if ($request->student->valid == "validated") {
-                    $students[] = array('name' => $request->student->user->fullName, 'id' => $request->student->user->id);
+                    $s = Student::find($request->student->id);
+                    $students[] = array('name' => $s->user->fullName, 'id' => $s->user->id);
                 }
             }
             $user->students = $students;

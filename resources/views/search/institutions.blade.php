@@ -29,7 +29,7 @@
     <ul class="results list-unstyled">
 
     @foreach ($institutions as $institution)
-      <li class="well profile clearfix institution-item">
+      <li class="well profile clearfix institution-item {{ $institution->country }} {{ $institution->userable->type }}">
               <div class="col-xs-12 col-sm-8 col-md-9">
                   <h2 class="title">{{ $institution->name }}</h2>
                   <p><em class="h4">{{ trans('reg-profile.institution_' . strtolower($institution->userable->type)) }} </em></p>
@@ -100,14 +100,14 @@
 	$grid.isotope( )
         clearInterval(interval);
       });
-   
+
 
       // use value of search field to filter
       var $quicksearch = $('.quicksearch-btn').click(function() {
         qsRegex = new RegExp( $( '.quicksearch' ).val(), 'gi' );
         $grid.isotope();
         setTimeout(() => {
-            jQuery(".total-institutions").text(jQuery(".institution-item:visible").length);          
+            jQuery(".total-institutions").text(jQuery(".institution-item:visible").length);
           }, 500);
       }  );
 
@@ -116,7 +116,7 @@
           qsRegex = new RegExp( $( '.quicksearch' ).val(), 'gi' );
           $grid.isotope();
           setTimeout(() => {
-            jQuery(".total-institutions").text(jQuery(".institution-item:visible").length);          
+            jQuery(".total-institutions").text(jQuery(".institution-item:visible").length);
           }, 500);
         }
       });
