@@ -61,8 +61,10 @@ class Cleanup extends Command
             return $item->validator;
         });
 
+        $validators = $validators->unique();
+
         foreach ($validators as $val) {
-            if ($val && $val->user && $val->user->notify_me == 1 && $val->user->enabled == 1) {
+            if ($val && $val->user && $val->user->notify_me == 1 && $val->user->userable->enabled == 1) {
                 $val->user->notify(new ValidationsPending($val->user));
                 $val->user->notify(new MobileValidationPending($val->user));
             }

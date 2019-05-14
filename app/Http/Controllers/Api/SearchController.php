@@ -133,7 +133,7 @@ class SearchController extends SiteSearchController
         }
 
         $results->orderBy(DB::raw("FIELD(valid, 'validated','pending','denied')"));
-        $results->orderBy('created_at', 'desc');
+        $results->orderBy('updated_at', 'desc');
         $results = $results->paginate(env('PAGINATE_ENTRIES', 10));
 
         $students = array();
@@ -531,7 +531,7 @@ class SearchController extends SiteSearchController
         $data[] = array(
             'id' => 'activities',
             'title' => trans('reg-profile.company_activity'),
-            'items' => $companySectors            
+            'items' => $companySectors
         );
 
         $data[] = array(

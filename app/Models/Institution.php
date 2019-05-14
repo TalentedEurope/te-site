@@ -96,7 +96,7 @@ class Institution extends Model
 
     public static function getRandom()
     {
-        $items = \App\Models\User::where('userable_type', \App\Models\Institution::class)->inRandomOrder()->where('is_filled', 1)->where('visible', 1)->where('image', '!=', 'a')->limit(18)->select('userable_id')->get()->map(function ($item, $key) {
+        $items = \App\Models\User::where('userable_type', \App\Models\Institution::class)->inRandomOrder()->where('is_filled', 1)->where('visible', 1)->where('image', '!=', '')->limit(18)->select('userable_id')->get()->map(function ($item, $key) {
             return $item->userable_id;
         })->toArray();
         return \App\Models\Institution::whereIn('id', $items)->get();
