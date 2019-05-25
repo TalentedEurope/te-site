@@ -110,8 +110,22 @@ class RegisterController extends Controller
         event(new Registered($user = $this->create($request->all())));
         $data = $request->all();
 
-        return view('auth.register-success', $data);
+        $request->session()->flash('reg-success', true);
+        $request->session()->flash('reg-data', $data);
+
+        return redirect()->route('get_success');
     }
+
+
+    public function getSuccess(Request $request)
+    {
+        if ($request->session()->get('reg-success')) {
+            $data = $request->session()->get('reg-data');
+            return view('auth.register-success', $data);
+        }
+        return redirect()->route('register');
+    }
+
 
     /**
      * Redirect the user to the OAuth Provider.

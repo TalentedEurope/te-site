@@ -26,6 +26,10 @@ Route::post('gdpr',  'StaticController@postGdpr')->name('post_gdpr');
 
 // Auth related
 Auth::routes();
+Route::get('/register/thanks', 'Auth\RegisterController@getSuccess')
+        ->name('get_success');
+
+
 Route::get('email-verification/error', 'Auth\RegisterController@getVerificationError')
         ->name('email-verification.error');
 Route::get('email-verification/check/{token}', 'Auth\RegisterController@getVerification')
@@ -115,3 +119,6 @@ Route::get('auth/{provider}', 'Auth\RegisterController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\RegisterController@handleProviderCallback');
 Route::get('setup', 'Auth\RegisterController@getSetup')->name('getSetup');
 Route::post('setup', 'Auth\RegisterController@postSetup');
+
+
+
