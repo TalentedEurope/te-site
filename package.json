@@ -24,7 +24,7 @@
     "laravel-elixir-vue": "^0.1.4",
     "laravel-elixir-webpack-official": "^1.0.8",
     "lodash": "^4.16.4",
-    "moment": "2.19.3",
+    "moment": "2.29.2",
     "node-sass": "^3.10.0",
     "sass-loader": "^4.0.2",
     "slick-carousel": "^1.6.0",
